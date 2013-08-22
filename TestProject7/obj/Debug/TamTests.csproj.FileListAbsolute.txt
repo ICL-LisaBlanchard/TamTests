@@ -1,0 +1,25 @@
+C:\Users\pez\documents\visual studio 2010\Projects\TestProject7\TestProject7\bin\Debug\TestProject7.dll
+C:\Users\pez\documents\visual studio 2010\Projects\TestProject7\TestProject7\bin\Debug\TestProject7.pdb
+C:\Users\pez\documents\visual studio 2010\Projects\TestProject7\TestProject7\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\pez\documents\visual studio 2010\Projects\TestProject7\TestProject7\obj\Debug\TestProject7.dll
+C:\Users\pez\documents\visual studio 2010\Projects\TestProject7\TestProject7\obj\Debug\TestProject7.pdb
+C:\Users\pez\Documents\Visual Studio 2010\Projects\TestProject7\TestProject7\bin\Debug\OrderedTest1.orderedtest
+C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\bin\Debug\OrderedTest1.orderedtest
+C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\bin\Debug\TestProject7.dll
+C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\bin\Debug\TestProject7.pdb
+C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\obj\Debug\TestProject7.dll
+C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\obj\Debug\TestProject7.pdb
+C:\TestProject7\TestProject7\obj\Debug\ResolveAssemblyReference.cache
+C:\TestProject7\TestProject7\bin\Debug\Ver1.dll
+C:\TestProject7\TestProject7\bin\Debug\Ver1.pdb
+C:\TestProject7\TestProject7\obj\Debug\Ver1.dll
+C:\TestProject7\TestProject7\obj\Debug\Ver1.pdb
+C:\AutotestTam1205\TestProject7\bin\Debug\Ver1.dll
+C:\AutotestTam1205\TestProject7\bin\Debug\Ver1.pdb
+C:\AutotestTam1205\TestProject7\obj\Debug\ResolveAssemblyReference.cache
+C:\AutotestTam1205\TestProject7\obj\Debug\Ver1.dll
+C:\AutotestTam1205\TestProject7\obj\Debug\Ver1.pdb
+C:\AutotestTam1205\TestProject7\bin\Debug\CookComputing.XmlRpcV2.dll
+C:\AutotestTam1205\TestProject7\bin\Debug\TestLinkAPI.dll
+C:\AutotestTam1205\TestProject7\bin\Debug\TestLinkFixture.dll

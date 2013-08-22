@@ -1,0 +1,5 @@
+c:\users\pez\documents\visual studio 2010\Projects\TestProject7\TestProject7\bin\Debug\TestProject7.dll
+c:\users\pez\documents\visual studio 2010\Projects\TestProject7\TestProject7\bin\Debug\TestProject7.pdb
+c:\users\pez\documents\visual studio 2010\Projects\TestProject7\TestProject7\obj\Debug\ResolveAssemblyReference.cache
+c:\users\pez\documents\visual studio 2010\Projects\TestProject7\TestProject7\obj\Debug\TestProject7.dll
+c:\users\pez\documents\visual studio 2010\Projects\TestProject7\TestProject7\obj\Debug\TestProject7.pdb

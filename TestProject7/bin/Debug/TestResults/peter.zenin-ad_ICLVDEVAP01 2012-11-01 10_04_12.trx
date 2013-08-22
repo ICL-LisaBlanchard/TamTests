@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="78e75ae6-e124-4f1c-b7c7-9c2cad4563e4" name="peter.zenin-ad@ICLVDEVAP01 2012-11-01 10:04:12" runUser="INSUR-E\peter.zenin-ad" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="614da599-c02f-4504-8df0-62d01432dc80">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="peter.zenin-ad_ICLVDEVAP01 2012-11-01 10_04_12" />
+  </TestSettings>
+  <Times creation="2012-11-01T10:04:12.0789621+00:00" queuing="2012-11-01T10:04:12.5400543+00:00" start="2012-11-01T10:04:12.6100683+00:00" finish="2012-11-01T10:04:54.3504147+00:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="MotoTest3" storage="testproject7.dll" id="450e4b2d-ad88-da3f-6d50-5c9a0ae1aa51">
+      <Execution id="bd80d440-7309-4184-8067-f84d21d22cc3" />
+      <TestMethod codeBase="C:/Users/peter.zenin-ad/Desktop/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest3" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="450e4b2d-ad88-da3f-6d50-5c9a0ae1aa51" executionId="bd80d440-7309-4184-8067-f84d21d22cc3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="bd80d440-7309-4184-8067-f84d21d22cc3" testId="450e4b2d-ad88-da3f-6d50-5c9a0ae1aa51" testName="MotoTest3" computerName="ICLVDEVAP01" duration="00:00:41.3948707" startTime="2012-11-01T10:04:12.6100683+00:00" endTime="2012-11-01T10:04:54.3104067+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bd80d440-7309-4184-8067-f84d21d22cc3">
+      <Output>
+        <DebugTrace>W, 2848, 13, 2012/11/01, 10:04:13.221, 33635684028, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 2848, 13, 2012/11/01, 10:04:14.110, 33648415635, QTAgent32.exe, &lt;a class=success&gt;Playback - {1} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2848, 13, 2012/11/01, 10:04:14.306, 33651220038, QTAgent32.exe, &lt;a class=success&gt;Playback - {2} [SUCCESS] SendKeys "[*]" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2848, 13, 2012/11/01, 10:04:15.000, 33661166420, QTAgent32.exe, &lt;a class=success&gt;Playback - {3} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2848, 13, 2012/11/01, 10:04:15.572, 33669345874, QTAgent32.exe, &lt;a class=success&gt;Playback - {4} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2848, 13, 2012/11/01, 10:04:16.045, 33676120714, QTAgent32.exe, &lt;a class=success&gt;Playback - {5} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Clients &amp; Files'"
+\0&lt;/a&gt;
+W, 2848, 13, 2012/11/01, 10:04:16.347, 33680449726, QTAgent32.exe, &lt;a class=success&gt;Playback - {6} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Clients &amp; Files'"
+\0&lt;/a&gt;
+W, 2848, 13, 2012/11/01, 10:04:16.931, 33688809608, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 2848, 13, 2012/11/01, 10:04:16.931, 33688812724, QTAgent32.exe, &lt;a class=failure&gt;Playback - {7} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2848, 13, 2012/11/01, 10:04:17.045, 33690440375, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPFE54F.png
+\0
+W, 2848, 13, 2012/11/01, 10:04:17.045, 33690442501, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2848, 13, 2012/11/01, 10:04:17.045, 33690445856, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 543 ms. Expected it to take maximum 500 ms.
+W, 2848, 13, 2012/11/01, 10:04:35.127, 33949303831, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 2848, 13, 2012/11/01, 10:04:35.127, 33949306663, QTAgent32.exe, &lt;a class=failure&gt;Playback - {8} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2848, 13, 2012/11/01, 10:04:35.241, 33950938224, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF2C6E.png
+\0
+W, 2848, 13, 2012/11/01, 10:04:35.241, 33950940356, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2848, 13, 2012/11/01, 10:04:35.242, 33950943507, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 18192 ms. Expected it to take maximum 500 ms.
+W, 2848, 13, 2012/11/01, 10:04:35.949, 33961072866, QTAgent32.exe, Playback - [WARNING] Internal warning: Window with Class "ThunderRT6MDIForm" and Title "Customer: txt1 tdsfs" was not found, so similar window with Class "ThunderRT6MDIForm" and Title "Customer: autotest" was accepted
+\0
+W, 2848, 13, 2012/11/01, 10:04:35.949, 33961076723, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 707 ms. Expected it to take maximum 500 ms.
+W, 2848, 13, 2012/11/01, 10:04:37.254, 33979760289, QTAgent32.exe, Playback - [WARNING] Internal warning: Incorrect flag set for InvokeProgrammaticAction\0
+W, 2848, 13, 2012/11/01, 10:04:37.375, 33981471105, QTAgent32.exe, &lt;a class=success&gt;Playback - {9} [SUCCESS] SetValueAsComboBox "Customers" - "[MSAA, VisibleOnly]ControlType='ComboBox'"  &lt; SetValueAsComboBox, set by clicking on the item in the list box &gt;
+\0&lt;/a&gt;
+W, 2848, 13, 2012/11/01, 10:04:38.007, 33990527746, QTAgent32.exe, &lt;a class=success&gt;Playback - {10} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Add'"
+\0&lt;/a&gt;
+W, 2848, 13, 2012/11/01, 10:04:38.315, 33994933236, QTAgent32.exe, &lt;a class=success&gt;Playback - {11} [SUCCESS] SendKeys "autotest" - "[MSAA, VisibleOnly]ControlType='RadioButton' &amp;&amp; Name='Personal Lines'"
+\0&lt;/a&gt;
+E, 2848, 13, 2012/11/01, 10:04:38.440, 33996724381, QTAgent32.exe, LoadLibrary() : Unable to find the resource 37382 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 2848, 13, 2012/11/01, 10:04:38.440, 33996730181, QTAgent32.exe, LoadLibrary() : Unable to find the resource 41728 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 2848, 13, 2012/11/01, 10:04:38.440, 33996732794, QTAgent32.exe, LoadLibrary() : Unable to find the resource 8131 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 2848, 13, 2012/11/01, 10:04:38.441, 33996735311, QTAgent32.exe, LoadLibrary() : Unable to find the resource 8131 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 2848, 13, 2012/11/01, 10:04:38.441, 33996739510, QTAgent32.exe, LoadLibrary() : Unable to find the resource 8131 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 2848, 13, 2012/11/01, 10:04:38.441, 33996744586, QTAgent32.exe, LoadLibrary() : Unable to find the resource 803 from assembly C:\Windows\system32\en-US\user32.dll.mui: Error1814
+W, 2848, 13, 2012/11/01, 10:04:38.703, 34000493153, QTAgent32.exe, &lt;a class=success&gt;Playback - {12} [SUCCESS] SetValueAsEditBox "autotest" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2848, 13, 2012/11/01, 10:04:38.969, 34004299491, QTAgent32.exe, &lt;a class=success&gt;Playback - {13} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2848, 13, 2012/11/01, 10:04:39.192, 34007492254, QTAgent32.exe, &lt;a class=success&gt;Playback - {14} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Yes'"
+\0&lt;/a&gt;
+W, 2848, 13, 2012/11/01, 10:04:40.794, 34030430985, QTAgent32.exe, Playback - [WARNING] Internal warning: Element "[MSAA, VisibleOnly]ControlType='Window' &amp;&amp; ControlId='32769'" was not found, so all intermediate elements were ignored. To improve performance replace this element Id with another Id or exclude it from QueryId. If this element is the target element, replace or remove intermediate elements
+\0
+W, 2848, 13, 2012/11/01, 10:04:41.317, 34037924253, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 2024 ms. Expected it to take maximum 500 ms.
+E, 2848, 13, 2012/11/01, 10:04:44.241, 34079776122, QTAgent32.exe, AL: Playback Error: Microsoft.VisualStudio.TestTools.UITest.Extension.PlaybackFailureException: Cannot perform 'SetProperty of Text with value "1"' on the control. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Edit'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IScreenElement.SetFocus()
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.SetValueAsEditBox(String value, Boolean isEncoded)
+   at Microsoft.VisualStudio.TestTools.UITesting.WinPropertyProvider.SetEditProperty(String propertyName, Object value)
+   at Microsoft.VisualStudio.TestTools.UITesting.WinPropertyProvider.SetPropertyValue(UITestControl uiControl, String propertyName, Object value)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.SetPropertyValueWrapper(UITestControl uiControl, String propertyName, Object value)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetPropertyValue(String propertyName, Object propertyValue)
+   --- End of inner exception stack trace ---
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowComException(COMException innerException, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String actionName, UITestControl uiControl)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String actionName, Object parameterValue, UITestControl uiControl)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetPropertyValue(String propertyName, Object propertyValue)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty(String propertyName, Object value)
+W, 2848, 13, 2012/11/01, 10:04:45.839, 34102655900, QTAgent32.exe, Playback - [WARNING] Internal warning: Element "[MSAA, VisibleOnly]ControlType='Window' &amp;&amp; ControlId='32770'" was not found, so all intermediate elements were ignored. To improve performance replace this element Id with another Id or exclude it from QueryId. If this element is the target element, replace or remove intermediate elements
+\0
+W, 2848, 13, 2012/11/01, 10:04:46.360, 34110123614, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 2023 ms. Expected it to take maximum 500 ms.
+W, 2848, 13, 2012/11/01, 10:04:46.480, 34111833167, QTAgent32.exe, &lt;a class=success&gt;Playback - {15} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Cancel'"
+\0&lt;/a&gt;
+W, 2848, 13, 2012/11/01, 10:04:48.086, 34134814817, QTAgent32.exe, Playback - [WARNING] Internal warning: Element "[MSAA, VisibleOnly]ControlType='Window' &amp;&amp; ControlId='32769'" was not found, so all intermediate elements were ignored. To improve performance replace this element Id with another Id or exclude it from QueryId. If this element is the target element, replace or remove intermediate elements
+\0
+W, 2848, 13, 2012/11/01, 10:04:48.608, 34142290311, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 2026 ms. Expected it to take maximum 500 ms.
+W, 2848, 13, 2012/11/01, 10:04:48.713, 34143793836, QTAgent32.exe, &lt;a class=success&gt;Playback - {16} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Cancel'"
+\0&lt;/a&gt;
+W, 2848, 13, 2012/11/01, 10:04:49.303, 34152241883, QTAgent32.exe, &lt;a class=success&gt;Playback - {17} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Cancel'"
+\0&lt;/a&gt;
+W, 2848, 13, 2012/11/01, 10:04:50.174, 34164723129, QTAgent32.exe, &lt;a class=success&gt;Playback - {18} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Close'"
+\0&lt;/a&gt;
+W, 2848, 13, 2012/11/01, 10:04:54.297, 34223735848, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 2848, 13, 2012/11/01, 10:04:54.297, 34223737315, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 2848, 13, 2012/11/01, 10:04:54.297, 34223743035, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method TestProject7.TamAutotest.MotoTest3 threw exception: 
+Microsoft.VisualStudio.TestTools.UITest.Extension.PlaybackFailureException: Cannot perform 'SetProperty of Text with value "1"' on the control. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Edit'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IScreenElement.SetFocus()
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.SetValueAsEditBox(String value, Boolean isEncoded)
+   at Microsoft.VisualStudio.TestTools.UITesting.WinPropertyProvider.SetEditProperty(String propertyName, Object value)
+   at Microsoft.VisualStudio.TestTools.UITesting.WinPropertyProvider.SetPropertyValue(UITestControl uiControl, String propertyName, Object value)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.SetPropertyValueWrapper(UITestControl uiControl, String propertyName, Object value)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetPropertyValue(String propertyName, Object propertyValue)
+ --- End of inner exception stack trace ---
+    at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowComException(COMException innerException, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String actionName, UITestControl uiControl)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String actionName, Object parameterValue, UITestControl uiControl)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetPropertyValue(String propertyName, Object propertyValue)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty(String propertyName, Object value)
+   at Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinEdit.set_Text(String value)
+   at TestProject7.UIMap.AddPolicy() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\UIMap.Designer.cs:line 103
+   at TestProject7.TamAutotest.MotoTest3() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\CodedUITest1.cs:line 151
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="ICLVDEVAP01\MotoTest3.png" />
+      </ResultFiles>
+      <ExtensionResult>Exception has been thrown by the target of an invocation.</ExtensionResult>
+    </UnitTestResult>
+  </Results>
+</TestRun>

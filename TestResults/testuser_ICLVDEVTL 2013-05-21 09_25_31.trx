@@ -1,0 +1,783 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="30905a15-9778-4f46-b85f-c9379fa45fa1" name="testuser@ICLVDEVTL 2013-05-21 09:25:31" runUser="ICLVDEVTL\testuser" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="RemoteSetting" id="5c3ed885-967b-4862-a1a8-8a2764ec6e39">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="C:\AutotestTam1205\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="testuser_ICLVDEVTL 2013-05-21 09_25_31">
+      <DeploymentItem filename="C:\TestLinkFixture.dll" />
+      <DeploymentItem filename="C:\CookComputing.XmlRpcV2.dll" />
+      <DeploymentItem filename="C:\TestLinkAPI.dll" />
+    </Deployment>
+    <RemoteController name="ICLVDEVTL" />
+    <Execution location="Remote">
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+      </TestTypeSpecific>
+      <AgentRule name="New role 1">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-05-21T09:25:31.2542072+01:00" queuing="2013-05-21T09:25:31.8602678+01:00" start="2013-05-21T09:25:32.2913109+01:00" finish="2013-05-21T09:30:07.1557946+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="HouseSaveQuoteWithoutPremium" storage="c:\autotesttam1205\testproject7\bin\debug\ver1.dll" id="f613b012-21a1-0866-908e-8b12c2d22d2b">
+      <Execution id="3329d886-4fea-4aa6-9a68-13e03e6a46f0" />
+      <TestMethod codeBase="C:/AutotestTam1205/TestProject7/bin/Debug/Ver1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Ver1.CodedUITest2, Ver1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseSaveQuoteWithoutPremium" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="f613b012-21a1-0866-908e-8b12c2d22d2b" executionId="3329d886-4fea-4aa6-9a68-13e03e6a46f0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="3329d886-4fea-4aa6-9a68-13e03e6a46f0" testId="f613b012-21a1-0866-908e-8b12c2d22d2b" testName="HouseSaveQuoteWithoutPremium" computerName="ICDVDEVTM01" duration="00:04:33.9355297" startTime="2013-05-21T09:29:56.3926611+01:00" endTime="2013-05-21T09:34:30.6229840+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3329d886-4fea-4aa6-9a68-13e03e6a46f0">
+      <Output>
+        <DebugTrace>W, 2072, 40, 2013/05/21, 09:30:01.400, 55584137257, QTAgent32.exe, &lt;a class=success&gt;Playback - {1} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:01.599, 55586993339, QTAgent32.exe, &lt;a class=success&gt;Playback - {2} [SUCCESS] SendKeys "[*]" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:02.187, 55595403944, QTAgent32.exe, &lt;a class=success&gt;Playback - {3} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:30:02.333, 55597499067, QTAgent32.exe, LoadLibrary() : Unable to find the resource 37382 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 2072, 40, 2013/05/21, 09:30:02.333, 55597505244, QTAgent32.exe, LoadLibrary() : Unable to find the resource 41728 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 2072, 40, 2013/05/21, 09:30:02.333, 55597507488, QTAgent32.exe, LoadLibrary() : Unable to find the resource 8131 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 2072, 40, 2013/05/21, 09:30:02.334, 55597510673, QTAgent32.exe, LoadLibrary() : Unable to find the resource 8131 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 2072, 40, 2013/05/21, 09:30:02.334, 55597514570, QTAgent32.exe, LoadLibrary() : Unable to find the resource 8131 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 2072, 40, 2013/05/21, 09:30:02.334, 55597519867, QTAgent32.exe, LoadLibrary() : Unable to find the resource 803 from assembly C:\Windows\system32\en-US\user32.dll.mui: Error1814
+W, 2072, 40, 2013/05/21, 09:30:02.391, 55598327593, QTAgent32.exe, &lt;a class=success&gt;Playback - {4} [SUCCESS] SendKeys "^{HOME}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:30:02.393, 55598354802, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 2072, 40, 2013/05/21, 09:30:02.452, 55599201314, QTAgent32.exe, &lt;a class=success&gt;Playback - {5} [SUCCESS] SendKeys "^+{END}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:30:02.452, 55599202744, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 2072, 40, 2013/05/21, 09:30:02.464, 55599380483, QTAgent32.exe, &lt;a class=success&gt;Playback - {6} [SUCCESS] SendKeys "{DELETE}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:02.673, 55602369093, QTAgent32.exe, &lt;a class=success&gt;Playback - {7} [SUCCESS] SetValueAsEditBox "21/05/2013" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:02.940, 55606200120, QTAgent32.exe, Playback - [WARNING] Internal warning: Incorrect flag set for InvokeProgrammaticAction\0
+W, 2072, 40, 2013/05/21, 09:30:03.059, 55607887134, QTAgent32.exe, &lt;a class=success&gt;Playback - {8} [SUCCESS] SetValueAsComboBox "May" - "[MSAA, VisibleOnly]ControlType='ComboBox'"  &lt; SetValueAsComboBox, set by clicking on the item in the list box &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:03.217, 55610155750, QTAgent32.exe, &lt;a class=success&gt;Playback - {9} [SUCCESS] SendKeys "^{HOME}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:30:03.217, 55610157386, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 2072, 40, 2013/05/21, 09:30:03.282, 55611079210, QTAgent32.exe, &lt;a class=success&gt;Playback - {10} [SUCCESS] SendKeys "^+{END}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:30:03.282, 55611080627, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 2072, 40, 2013/05/21, 09:30:03.294, 55611258627, QTAgent32.exe, &lt;a class=success&gt;Playback - {11} [SUCCESS] SendKeys "{DELETE}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:03.382, 55612521624, QTAgent32.exe, &lt;a class=success&gt;Playback - {12} [SUCCESS] SetValueAsEditBox "2013" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:03.899, 55619915318, QTAgent32.exe, &lt;a class=success&gt;Playback - {13} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:04.267, 55625187309, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Warning' &amp;&amp; ClassName='#32770'
+\0
+E, 2072, 40, 2013/05/21, 09:30:04.267, 55625189475, QTAgent32.exe, &lt;a class=failure&gt;Playback - {14} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Warning' &amp;&amp; ClassName='#32770') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:30:04.307, 55625758627, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPF468D.png
+\0
+W, 2072, 40, 2013/05/21, 09:30:04.307, 55625760291, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2072, 40, 2013/05/21, 09:30:22.308, 55883502045, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Warning' &amp;&amp; ClassName='#32770'
+\0
+E, 2072, 40, 2013/05/21, 09:30:22.308, 55883504323, QTAgent32.exe, &lt;a class=failure&gt;Playback - {15} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Warning' &amp;&amp; ClassName='#32770') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:30:22.348, 55884084098, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPF8D0F.png
+\0
+W, 2072, 40, 2013/05/21, 09:30:22.348, 55884085652, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2072, 40, 2013/05/21, 09:30:22.349, 55884090858, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 18041 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:30:22.779, 55890240481, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:22.916, 55892202582, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:23.053, 55894162092, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:23.188, 55896108434, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:23.325, 55898064523, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:23.460, 55900003003, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:23.596, 55901946439, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:23.731, 55903872664, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:23.866, 55905804320, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:24.001, 55907739180, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:24.136, 55909682428, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:24.272, 55911625794, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:24.408, 55913573700, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:24.543, 55915511656, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:24.678, 55917443937, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:24.814, 55919382899, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:24.949, 55921312873, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:25.084, 55923249816, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:25.221, 55925209818, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:25.356, 55927141595, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:30:25.386, 55927573902, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Warning' &amp;&amp; ClassName='#32770'
+\0
+E, 2072, 40, 2013/05/21, 09:30:25.386, 55927575423, QTAgent32.exe, &lt;a class=failure&gt;Playback - {16} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Warning' &amp;&amp; ClassName='#32770') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:30:25.425, 55928142851, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPF9911.png
+\0
+W, 2072, 40, 2013/05/21, 09:30:25.426, 55928144611, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2072, 40, 2013/05/21, 09:30:25.426, 55928147075, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 3076 ms. Expected it to take maximum 500 ms.
+E, 2072, 40, 2013/05/21, 09:30:25.427, 55928160713, QTAgent32.exe, Exception: System.Runtime.InteropServices.COMException
+	Message: Error HRESULT E_FAIL has been returned from a call to a COM component.
+	Stack Trace:    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+	BaseExceptionMessage: Error HRESULT E_FAIL has been returned from a call to a COM component.
+
+E, 2072, 40, 2013/05/21, 09:30:25.559, 55930048445, QTAgent32.exe, AL: Playback Error: Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotFoundException: The playback failed to find the control with the given search properties. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Window'
+Name:  'Warning'
+ClassName:  '#32770'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindFromPartialQueryId(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+   --- End of inner exception stack trace ---
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapControlNotFoundException(COMException ex, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowComException(COMException innerException, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.SearchTopLevelWindow(ISearchArgument topLevelSearchArg, String topLevelElementQueryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTitleUpdatedTopLevelWindow(ISearchArgument topLevelSearchArg, String queryId, IList`1 windowTitles)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTopLevelElement(Boolean useCache, Boolean useCacheOnly, ISearchArgument searchArg, IList`1 windowTitles, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetElement(Boolean useCache, ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.Search(ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindInternal()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindControlIfNecessary()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+W, 2072, 40, 2013/05/21, 09:30:25.559, 55930050711, QTAgent32.exe, PlaybackErrorHandler: Ignoring exception as ContinueOnError is set.
+W, 2072, 40, 2013/05/21, 09:30:25.598, 55930615057, QTAgent32.exe, &lt;a class=success&gt;Playback - {17} [SUCCESS] TypeString "#(R)"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:30:26.095, 55937731427, QTAgent32.exe, Exception: System.ArgumentException
+	Message: Value does not fall within the expected range.
+	Stack Trace:    at Accessibility.IAccessible.get_accRole(Object varChild)
+   at Microsoft.VisualStudio.TestTools.UITest.Extension.Msaa.AccWrapper.get_RoleInt()
+	BaseExceptionMessage: Value does not fall within the expected range.
+
+E, 2072, 40, 2013/05/21, 09:30:26.099, 55937788654, QTAgent32.exe, Exception: System.ArgumentException
+	Message: Value does not fall within the expected range.
+	Stack Trace:    at Accessibility.IAccessible.get_accRole(Object varChild)
+   at Microsoft.VisualStudio.TestTools.UITest.Extension.Msaa.AccWrapper.get_RoleInt()
+	BaseExceptionMessage: Value does not fall within the expected range.
+
+W, 2072, 40, 2013/05/21, 09:30:26.307, 55940762984, QTAgent32.exe, &lt;a class=success&gt;Playback - {18} [SUCCESS] LeftButtonClick  &lt; Mouse cursor location (87, 908) &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:27.025, 55951046834, QTAgent32.exe, &lt;a class=success&gt;Playback - {19} [SUCCESS] SetValueAsEditBox "c:\TestProject7\office.reg"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:27.026, 55951048722, QTAgent32.exe, &lt;a class=success&gt;Playback - {20} [SUCCESS] SetValueAsComboBox "c:\TestProject7\office.reg" - "[MSAA, VisibleOnly]ControlType='ComboBox' &amp;&amp; Name='Open:'"  &lt; Set via SetValueAsEditBox &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:27.253, 55954310821, QTAgent32.exe, &lt;a class=success&gt;Playback - {21} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:27.761, 55961574842, QTAgent32.exe, &lt;a class=success&gt;Playback - {22} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Yes'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:30.044, 55994267552, QTAgent32.exe, &lt;a class=success&gt;Playback - {23} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:30.316, 55998172458, QTAgent32.exe, &lt;a class=success&gt;Playback - {24} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Clients &amp; Files'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:31.226, 56011195601, QTAgent32.exe, Playback - [WARNING] Internal warning: Incorrect flag set for InvokeProgrammaticAction\0
+W, 2072, 40, 2013/05/21, 09:30:31.364, 56013170836, QTAgent32.exe, &lt;a class=success&gt;Playback - {25} [SUCCESS] SetValueAsComboBox "Customers" - "[MSAA, VisibleOnly]ControlType='ComboBox'"  &lt; SetValueAsComboBox, set by clicking on the item in the list box &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:31.925, 56021195207, QTAgent32.exe, &lt;a class=success&gt;Playback - {26} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Add'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:32.220, 56025429022, QTAgent32.exe, &lt;a class=success&gt;Playback - {27} [SUCCESS] SendKeys "autotest" - "[MSAA, VisibleOnly]ControlType='RadioButton' &amp;&amp; Name='Personal Lines'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:32.554, 56030206502, QTAgent32.exe, &lt;a class=success&gt;Playback - {28} [SUCCESS] SetValueAsEditBox "autotest" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:32.895, 56035087452, QTAgent32.exe, &lt;a class=success&gt;Playback - {29} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:33.285, 56040674452, QTAgent32.exe, &lt;a class=success&gt;Playback - {30} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Yes'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:33.464, 56043242650, QTAgent32.exe, &lt;a class=success&gt;Playback - {31} [SUCCESS] SendKeys "^{HOME}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:30:33.464, 56043244490, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 2072, 40, 2013/05/21, 09:30:33.529, 56044173227, QTAgent32.exe, &lt;a class=success&gt;Playback - {32} [SUCCESS] SendKeys "^+{END}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:30:33.529, 56044174548, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 2072, 40, 2013/05/21, 09:30:33.541, 56044345824, QTAgent32.exe, &lt;a class=success&gt;Playback - {33} [SUCCESS] SendKeys "{DELETE}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:33.587, 56045006355, QTAgent32.exe, &lt;a class=success&gt;Playback - {34} [SUCCESS] SetValueAsEditBox "1" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:33.781, 56047774900, QTAgent32.exe, &lt;a class=success&gt;Playback - {35} [SUCCESS] SendKeys "^{HOME}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:30:33.781, 56047776787, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 2072, 40, 2013/05/21, 09:30:33.833, 56048520985, QTAgent32.exe, &lt;a class=success&gt;Playback - {36} [SUCCESS] SendKeys "^+{END}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:30:33.833, 56048523284, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 2072, 40, 2013/05/21, 09:30:33.845, 56048698972, QTAgent32.exe, &lt;a class=success&gt;Playback - {37} [SUCCESS] SendKeys "{DELETE}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:33.896, 56049424120, QTAgent32.exe, &lt;a class=success&gt;Playback - {38} [SUCCESS] SetValueAsEditBox "1" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:35.514, 56072582566, QTAgent32.exe, Playback - [WARNING] Internal warning: Target element "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'" was not found, so all intermediate elements were ignored. An incorrect element that matches target element Id can be found as the result.  Verify that all intermediate elements in QueryId have valid and unique Ids
+\0
+W, 2072, 40, 2013/05/21, 09:30:36.039, 56080102794, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 2029 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:30:36.328, 56084238811, QTAgent32.exe, &lt;a class=success&gt;Playback - {39} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:36.665, 56089067318, QTAgent32.exe, &lt;a class=success&gt;Playback - {40} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:36.976, 56093521632, QTAgent32.exe, &lt;a class=success&gt;Playback - {41} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Add'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:37.299, 56098157408, QTAgent32.exe, &lt;a class=success&gt;Playback - {42} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:39.549, 56130358464, QTAgent32.exe, &lt;a class=success&gt;Playback - {43} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly,Window]ControlType='Window' &amp;&amp; ClassName='ThunderRT6TextBox'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:39.807, 56134055630, QTAgent32.exe, &lt;a class=success&gt;Playback - {44} [SUCCESS] SetValueAsEditBox "HOME" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:40.132, 56138705845, QTAgent32.exe, &lt;a class=success&gt;Playback - {45} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:40.367, 56142070883, QTAgent32.exe, &lt;a class=success&gt;Playback - {46} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Options'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:40.471, 56143572499, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 2072, 40, 2013/05/21, 09:30:40.623, 56145745135, QTAgent32.exe, &lt;a class=success&gt;Playback - {47} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='Links'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:40.724, 56147184655, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 2072, 40, 2013/05/21, 09:30:40.883, 56149461558, QTAgent32.exe, &lt;a class=success&gt;Playback - {48} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='3rd Party Integration'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:40.983, 56150897961, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 2072, 40, 2013/05/21, 09:30:41.136, 56153091156, QTAgent32.exe, &lt;a class=success&gt;Playback - {49} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='Quote Select List'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:42.426, 56171550409, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 1186 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:30:42.648, 56174735696, QTAgent32.exe, &lt;a class=success&gt;Playback - {50} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:44.676, 56203770224, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 1920 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:30:44.906, 56207065919, QTAgent32.exe, &lt;a class=success&gt;Playback - {51} [SUCCESS] SetValueAsEditBox "test1" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:45.168, 56210817425, QTAgent32.exe, &lt;a class=success&gt;Playback - {52} [SUCCESS] SetValueAsEditBox "test" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:45.343, 56213328138, QTAgent32.exe, &lt;a class=success&gt;Playback - {53} [SUCCESS] SendKeys "^{HOME}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:30:45.343, 56213329993, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 2072, 40, 2013/05/21, 09:30:45.395, 56214073436, QTAgent32.exe, &lt;a class=success&gt;Playback - {54} [SUCCESS] SendKeys "^+{END}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:30:45.395, 56214074921, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 2072, 40, 2013/05/21, 09:30:45.408, 56214252258, QTAgent32.exe, &lt;a class=success&gt;Playback - {55} [SUCCESS] SendKeys "{DELETE}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:45.518, 56215830236, QTAgent32.exe, &lt;a class=success&gt;Playback - {56} [SUCCESS] SetValueAsEditBox "test" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:45.834, 56220361871, QTAgent32.exe, Playback - [WARNING] Internal warning: Incorrect flag set for InvokeProgrammaticAction\0
+W, 2072, 40, 2013/05/21, 09:30:45.952, 56222048063, QTAgent32.exe, &lt;a class=success&gt;Playback - {57} [SUCCESS] SetValueAsComboBox "Account Director" - "[MSAA, VisibleOnly]ControlType='ComboBox'"  &lt; SetValueAsComboBox, set by clicking on the item in the list box &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:46.277, 56226701576, QTAgent32.exe, Playback - [WARNING] Internal warning: Incorrect flag set for InvokeProgrammaticAction\0
+W, 2072, 40, 2013/05/21, 09:30:46.396, 56228391629, QTAgent32.exe, &lt;a class=success&gt;Playback - {58} [SUCCESS] SetValueAsComboBox "Advertising" - "[MSAA, VisibleOnly]ControlType='ComboBox'"  &lt; SetValueAsComboBox, set by clicking on the item in the list box &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:46.703, 56232798952, QTAgent32.exe, &lt;a class=success&gt;Playback - {59} [SUCCESS] SetValueAsEditBox "160589" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:46.933, 56236093090, QTAgent32.exe, &lt;a class=success&gt;Playback - {60} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:47.229, 56240331507, QTAgent32.exe, &lt;a class=success&gt;Playback - {61} [SUCCESS] SetValueAsEditBox "B338TH" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:49.450, 56272133354, QTAgent32.exe, &lt;a class=success&gt;Playback - {62} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Lookup...'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:49.709, 56275844459, QTAgent32.exe, &lt;a class=success&gt;Playback - {63} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:50.036, 56280518724, QTAgent32.exe, &lt;a class=success&gt;Playback - {64} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:50.338, 56284837573, QTAgent32.exe, &lt;a class=success&gt;Playback - {65} [SUCCESS] SetValueAsEditBox "1989" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:50.607, 56288685762, QTAgent32.exe, &lt;a class=success&gt;Playback - {66} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:50.828, 56291850248, QTAgent32.exe, &lt;a class=success&gt;Playback - {67} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:51.056, 56295120408, QTAgent32.exe, &lt;a class=success&gt;Playback - {68} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:51.354, 56299387255, QTAgent32.exe, &lt;a class=success&gt;Playback - {69} [SUCCESS] SetValueAsEditBox "2345" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:51.658, 56303747148, QTAgent32.exe, &lt;a class=success&gt;Playback - {70} [SUCCESS] SetValueAsEditBox "2000" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:51.958, 56308043095, QTAgent32.exe, &lt;a class=success&gt;Playback - {71} [SUCCESS] SetValueAsEditBox "2000" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:52.194, 56311418616, QTAgent32.exe, &lt;a class=success&gt;Playback - {72} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:52.490, 56315654142, QTAgent32.exe, &lt;a class=success&gt;Playback - {73} [SUCCESS] SetValueAsEditBox "2345" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:52.738, 56319203544, QTAgent32.exe, &lt;a class=success&gt;Playback - {74} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:52.976, 56322611884, QTAgent32.exe, &lt;a class=success&gt;Playback - {75} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:53.283, 56327011312, QTAgent32.exe, &lt;a class=success&gt;Playback - {76} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Quote'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:53.525, 56330479680, QTAgent32.exe, &lt;a class=success&gt;Playback - {77} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='No'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:30:53.912, 56336024099, QTAgent32.exe, &lt;a class=success&gt;Playback - {78} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:01.455, 56444022087, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 7438 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:31:01.586, 56445893079, QTAgent32.exe, &lt;a class=success&gt;Playback - {79} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Exit'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:01.959, 56451242693, QTAgent32.exe, &lt;a class=success&gt;Playback - {80} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Yes'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:02.451, 56458276335, QTAgent32.exe, &lt;a class=success&gt;Playback - {81} [SUCCESS] Uncheck - "[MSAA, VisibleOnly]ControlType='CheckBox' &amp;&amp; Name='Add Activity'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:02.817, 56463512700, QTAgent32.exe, &lt;a class=success&gt;Playback - {82} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:03.440, 56472440233, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 519 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:31:04.138, 56482438417, QTAgent32.exe, &lt;a class=success&gt;Playback - {83} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:06.393, 56514713892, QTAgent32.exe, &lt;a class=success&gt;Playback - {84} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:06.638, 56518227923, QTAgent32.exe, &lt;a class=success&gt;Playback - {85} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Cancel'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:06.976, 56523073681, QTAgent32.exe, &lt;a class=success&gt;Playback - {86} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:07.357, 56528524575, QTAgent32.exe, &lt;a class=success&gt;Playback - {87} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Detail'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:07.584, 56531772085, QTAgent32.exe, &lt;a class=success&gt;Playback - {88} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:07.877, 56535967612, QTAgent32.exe, &lt;a class=success&gt;Playback - {89} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Cancel'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:08.106, 56539249397, QTAgent32.exe, &lt;a class=success&gt;Playback - {90} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Options'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:08.207, 56540688427, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 2072, 40, 2013/05/21, 09:31:08.213, 56540785562, QTAgent32.exe, Playback - [WARNING] Internal failure: Method GetBoundingRectangle failed (HRESULT = 0x1, "Incorrect function.") for Name = "Quote Select List" ," ControlType = "MenuItem"
+\0
+W, 2072, 40, 2013/05/21, 09:31:08.213, 56540786503, QTAgent32.exe, Playback - [WARNING] Internal failure: Couldn't get clickable point for ScreenUIElement - GetClickablePoint failed
+\0
+W, 2072, 40, 2013/05/21, 09:31:08.214, 56540788816, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 2072, 40, 2013/05/21, 09:31:08.215, 56540814826, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 2072, 40, 2013/05/21, 09:31:08.337, 56542553730, QTAgent32.exe, &lt;a class=success&gt;Playback - {91} [SUCCESS] LeftButtonClick - "[MSAA, VisibleOnly]ControlType='MenuBar' &amp;&amp; Name='Application'"  &lt; Mouse cursor location (960, 31) &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:08.444, 56544085406, QTAgent32.exe, &lt;a class=success&gt;Playback - {92} [SUCCESS] LeftButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='Options'"  &lt; Mouse cursor location (94, 31) &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:08.606, 56546411139, QTAgent32.exe, &lt;a class=success&gt;Playback - {93} [SUCCESS] LeftButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='Links'"  &lt; Mouse cursor location (174, 319) &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:08.758, 56548581236, QTAgent32.exe, &lt;a class=success&gt;Playback - {94} [SUCCESS] LeftButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='3rd Party Integration'"  &lt; Mouse cursor location (375, 319) &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:08.913, 56550807198, QTAgent32.exe, &lt;a class=success&gt;Playback - {95} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='Quote Select List'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:10.166, 56568746741, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 1151 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:31:10.391, 56571965126, QTAgent32.exe, &lt;a class=success&gt;Playback - {96} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:12.486, 56601968688, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 1992 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:31:12.811, 56606613013, QTAgent32.exe, &lt;a class=success&gt;Playback - {97} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:13.064, 56610236113, QTAgent32.exe, &lt;a class=success&gt;Playback - {98} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:13.290, 56613470319, QTAgent32.exe, &lt;a class=success&gt;Playback - {99} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:13.517, 56616722006, QTAgent32.exe, &lt;a class=success&gt;Playback - {100} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:13.742, 56619955865, QTAgent32.exe, &lt;a class=success&gt;Playback - {101} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:13.968, 56623175976, QTAgent32.exe, &lt;a class=success&gt;Playback - {102} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:14.212, 56626677918, QTAgent32.exe, &lt;a class=success&gt;Playback - {103} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:14.520, 56631077111, QTAgent32.exe, &lt;a class=success&gt;Playback - {104} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Quote'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:14.764, 56634581775, QTAgent32.exe, &lt;a class=success&gt;Playback - {105} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='No'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:15.151, 56640120779, QTAgent32.exe, &lt;a class=success&gt;Playback - {106} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:28.085, 56825307504, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 12833 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:31:28.208, 56827070093, QTAgent32.exe, &lt;a class=success&gt;Playback - {107} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Client'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:29.752, 56849170510, QTAgent32.exe, &lt;a class=success&gt;Playback - {108} [SUCCESS] SendKeys "{Home}" - "[MSAA, VisibleOnly]ControlType='Client'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:30.049, 56853431814, QTAgent32.exe, &lt;a class=success&gt;Playback - {109} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Exit'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:30.412, 56858626606, QTAgent32.exe, &lt;a class=success&gt;Playback - {110} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Yes'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:30.513, 56860067531, QTAgent32.exe, Playback - [WARNING] Internal warning: Thread state based WFR - Requested element has invalid HWND
+\0
+W, 2072, 40, 2013/05/21, 09:31:30.513, 56860068723, QTAgent32.exe, Playback - [WARNING] Internal warning: process performance counters based WFR - Requested element has invalid HWND
+\0
+E, 2072, 40, 2013/05/21, 09:31:30.514, 56860087265, QTAgent32.exe, EnsureValid called via EnsureValid call for same element
+E, 2072, 40, 2013/05/21, 09:31:30.514, 56860092548, QTAgent32.exe, EnsureValid called via EnsureValid call for same element
+E, 2072, 40, 2013/05/21, 09:31:30.514, 56860093850, QTAgent32.exe, EnsureValid called via EnsureValid call for same element
+E, 2072, 40, 2013/05/21, 09:31:30.515, 56860098771, QTAgent32.exe, Window 2491694 not responding. Last Win32 error 1400
+E, 2072, 40, 2013/05/21, 09:31:30.515, 56860099587, QTAgent32.exe, GetClassName for handle 2491694 failed
+W, 2072, 40, 2013/05/21, 09:31:30.903, 56865652962, QTAgent32.exe, &lt;a class=success&gt;Playback - {111} [SUCCESS] Uncheck - "[MSAA, VisibleOnly]ControlType='CheckBox' &amp;&amp; Name='Add Activity'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:31.255, 56870703631, QTAgent32.exe, &lt;a class=success&gt;Playback - {112} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:33.618, 56904537108, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Select Tam insurer for insurer code ' &amp;&amp; ClassName='TfSelectItem'
+\0
+E, 2072, 40, 2013/05/21, 09:31:33.619, 56904539625, QTAgent32.exe, &lt;a class=failure&gt;Playback - {113} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Select Tam insurer for insurer code ' &amp;&amp; ClassName='TfSelectItem') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:31:33.687, 56905514261, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPFA39D.png
+\0
+W, 2072, 40, 2013/05/21, 09:31:33.687, 56905515837, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2072, 40, 2013/05/21, 09:31:33.687, 56905518261, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 2331 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:31:51.910, 57166449615, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Select Tam insurer for insurer code ' &amp;&amp; ClassName='TfSelectItem'
+\0
+E, 2072, 40, 2013/05/21, 09:31:51.911, 57166452220, QTAgent32.exe, &lt;a class=failure&gt;Playback - {114} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Select Tam insurer for insurer code ' &amp;&amp; ClassName='TfSelectItem') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:31:51.953, 57167056022, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPFEB09.png
+\0
+W, 2072, 40, 2013/05/21, 09:31:51.953, 57167057662, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2072, 40, 2013/05/21, 09:31:51.953, 57167060278, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 18266 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:31:52.933, 57181093887, QTAgent32.exe, Playback - [WARNING] Internal warning: Window with Class "TfSelectItem" and Title "Select Tam insurer for insurer code " was not found, so similar window with Class "TfSelectItem" and Title "Select Tam insurer for insurer code AB" was accepted
+\0
+W, 2072, 40, 2013/05/21, 09:31:52.933, 57181098174, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 980 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:31:54.069, 57197355088, QTAgent32.exe, &lt;a class=success&gt;Playback - {115} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:56.318, 57229560764, QTAgent32.exe, &lt;a class=success&gt;Playback - {116} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:56.562, 57233048363, QTAgent32.exe, &lt;a class=success&gt;Playback - {117} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Cancel'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:56.894, 57237813419, QTAgent32.exe, &lt;a class=success&gt;Playback - {118} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:57.275, 57243261553, QTAgent32.exe, &lt;a class=success&gt;Playback - {119} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Detail'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:57.502, 57246504928, QTAgent32.exe, &lt;a class=success&gt;Playback - {120} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:57.602, 57247939708, QTAgent32.exe, Playback - [WARNING] Internal warning: Thread state based WFR - Requested element has invalid HWND
+\0
+W, 2072, 40, 2013/05/21, 09:31:57.602, 57247941100, QTAgent32.exe, Playback - [WARNING] Internal warning: process performance counters based WFR - Requested element has invalid HWND
+\0
+E, 2072, 40, 2013/05/21, 09:31:57.602, 57247943760, QTAgent32.exe, EnsureValid called via EnsureValid call for same element
+E, 2072, 40, 2013/05/21, 09:31:57.602, 57247945326, QTAgent32.exe, EnsureValid called via EnsureValid call for same element
+E, 2072, 40, 2013/05/21, 09:31:57.603, 57247946728, QTAgent32.exe, EnsureValid called via EnsureValid call for same element
+E, 2072, 40, 2013/05/21, 09:31:57.603, 57247949532, QTAgent32.exe, Window 2491846 not responding. Last Win32 error 0
+E, 2072, 40, 2013/05/21, 09:31:57.603, 57247951373, QTAgent32.exe, GetClassName for handle 2491846 failed
+W, 2072, 40, 2013/05/21, 09:31:57.831, 57251222575, QTAgent32.exe, &lt;a class=success&gt;Playback - {121} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Cancel'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:31:57.931, 57252653386, QTAgent32.exe, GetClassName for handle 2949750 failed
+W, 2072, 40, 2013/05/21, 09:31:58.061, 57254512049, QTAgent32.exe, &lt;a class=success&gt;Playback - {122} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Options'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:58.161, 57255948772, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 2072, 40, 2013/05/21, 09:31:58.309, 57258058033, QTAgent32.exe, &lt;a class=success&gt;Playback - {123} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='Links'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:58.409, 57259493989, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 2072, 40, 2013/05/21, 09:31:58.567, 57261753773, QTAgent32.exe, &lt;a class=success&gt;Playback - {124} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='3rd Party Integration'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:31:58.667, 57263189185, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 2072, 40, 2013/05/21, 09:31:58.819, 57265370028, QTAgent32.exe, &lt;a class=success&gt;Playback - {125} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='Quote Select List'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:31:58.920, 57266819156, QTAgent32.exe, GetClassName for handle 2032432 failed
+W, 2072, 40, 2013/05/21, 09:31:59.921, 57281151265, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 986 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:32:00.146, 57284369181, QTAgent32.exe, &lt;a class=success&gt;Playback - {126} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:32:00.249, 57285845546, QTAgent32.exe, GetClassName for handle 3212592 failed
+W, 2072, 40, 2013/05/21, 09:32:02.330, 57315630314, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 2079 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:32:02.504, 57318130868, QTAgent32.exe, &lt;a class=success&gt;Playback - {127} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:32:02.604, 57319563944, QTAgent32.exe, GetClassName for handle 2425746 failed
+W, 2072, 40, 2013/05/21, 09:32:02.755, 57321728389, QTAgent32.exe, &lt;a class=success&gt;Playback - {128} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:32:02.855, 57323157392, QTAgent32.exe, GetClassName for handle 3081464 failed
+W, 2072, 40, 2013/05/21, 09:32:02.976, 57324889559, QTAgent32.exe, &lt;a class=success&gt;Playback - {129} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:32:03.076, 57326322893, QTAgent32.exe, GetClassName for handle 2622960 failed
+W, 2072, 40, 2013/05/21, 09:32:03.225, 57328457204, QTAgent32.exe, &lt;a class=success&gt;Playback - {130} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:32:03.325, 57329888065, QTAgent32.exe, GetClassName for handle 3474412 failed
+W, 2072, 40, 2013/05/21, 09:32:03.452, 57331703414, QTAgent32.exe, &lt;a class=success&gt;Playback - {131} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:32:03.552, 57333138408, QTAgent32.exe, GetClassName for handle 2229134 failed
+W, 2072, 40, 2013/05/21, 09:32:03.676, 57334916264, QTAgent32.exe, &lt;a class=success&gt;Playback - {132} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:32:03.776, 57336346869, QTAgent32.exe, GetClassName for handle 2032940 failed
+W, 2072, 40, 2013/05/21, 09:32:03.905, 57338185779, QTAgent32.exe, &lt;a class=success&gt;Playback - {133} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:32:04.005, 57339618969, QTAgent32.exe, GetClassName for handle 3605750 failed
+W, 2072, 40, 2013/05/21, 09:32:04.219, 57342683977, QTAgent32.exe, &lt;a class=success&gt;Playback - {134} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Quote'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:32:04.319, 57344114939, QTAgent32.exe, GetClassName for handle 2557254 failed
+W, 2072, 40, 2013/05/21, 09:32:04.464, 57346195797, QTAgent32.exe, &lt;a class=success&gt;Playback - {135} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='No'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:32:04.564, 57347630751, QTAgent32.exe, GetClassName for handle 2163466 failed
+W, 2072, 40, 2013/05/21, 09:32:04.868, 57351985512, QTAgent32.exe, &lt;a class=success&gt;Playback - {136} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:32:12.305, 57458458000, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 7336 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:32:12.435, 57460329173, QTAgent32.exe, &lt;a class=success&gt;Playback - {137} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Client'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:32:13.957, 57482114004, QTAgent32.exe, &lt;a class=success&gt;Playback - {138} [SUCCESS] SendKeys "{End}" - "[MSAA, VisibleOnly]ControlType='Client'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:32:15.576, 57505301234, QTAgent32.exe, &lt;a class=success&gt;Playback - {139} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Print Quote..'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:32:16.947, 57524928744, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 1264 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:32:17.912, 57538736948, QTAgent32.exe, IEDOM : MatchSecondaryCondition : Match Found Based on Instance
+W, 2072, 40, 2013/05/21, 09:32:18.800, 57551457262, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 869 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:32:19.237, 57557714199, QTAgent32.exe, &lt;a class=success&gt;Playback - {140} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:32:21.460, 57589544337, QTAgent32.exe, &lt;a class=success&gt;Playback - {141} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Demands &amp; Needs'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:32:28.022, 57683506897, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 6461 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:32:32.171, 57742911853, QTAgent32.exe, &lt;a class=success&gt;Playback - {142} [SUCCESS] SendKeys "%({F4})" - "[MSAA, VisibleOnly]ControlType='Client' &amp;&amp; Name=&gt;'Demands&amp;Needs('"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:32:32.425, 57746541085, QTAgent32.exe, &lt;a class=success&gt;Playback - {143} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Accept'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:32:32.525, 57747975183, QTAgent32.exe, GetClassName for handle 2032610 failed
+W, 2072, 40, 2013/05/21, 09:32:32.721, 57750781660, QTAgent32.exe, &lt;a class=success&gt;Playback - {144} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Yes'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:32:42.132, 57885528889, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Save the file as' &amp;&amp; ClassName='#32770'
+\0
+E, 2072, 40, 2013/05/21, 09:32:42.132, 57885531482, QTAgent32.exe, &lt;a class=failure&gt;Playback - {145} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Save the file as' &amp;&amp; ClassName='#32770') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:32:42.175, 57886151348, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPFAF43.png
+\0
+W, 2072, 40, 2013/05/21, 09:32:42.176, 57886153235, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2072, 40, 2013/05/21, 09:32:42.176, 57886155750, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 9353 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:33:01.283, 58159742501, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Save the file as' &amp;&amp; ClassName='#32770'
+\0
+E, 2072, 40, 2013/05/21, 09:33:01.284, 58159745014, QTAgent32.exe, &lt;a class=failure&gt;Playback - {146} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Save the file as' &amp;&amp; ClassName='#32770') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:33:01.326, 58160350365, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPFFA09.png
+\0
+W, 2072, 40, 2013/05/21, 09:33:01.326, 58160352175, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2072, 40, 2013/05/21, 09:33:01.326, 58160354715, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 19150 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:33:04.619, 58207493782, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:33:06.037, 58227804808, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Save the file as' &amp;&amp; ClassName='#32770'
+\0
+E, 2072, 40, 2013/05/21, 09:33:06.037, 58227807107, QTAgent32.exe, &lt;a class=failure&gt;Playback - {147} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Save the file as' &amp;&amp; ClassName='#32770') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:33:06.078, 58228399422, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPFCA0.png
+\0
+W, 2072, 40, 2013/05/21, 09:33:06.079, 58228401593, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2072, 40, 2013/05/21, 09:33:06.079, 58228404266, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 4752 ms. Expected it to take maximum 500 ms.
+E, 2072, 40, 2013/05/21, 09:33:06.079, 58228405917, QTAgent32.exe, Exception: System.Runtime.InteropServices.COMException
+	Message: Error HRESULT E_FAIL has been returned from a call to a COM component.
+	Stack Trace:    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+	BaseExceptionMessage: Error HRESULT E_FAIL has been returned from a call to a COM component.
+
+E, 2072, 40, 2013/05/21, 09:33:06.179, 58229846466, QTAgent32.exe, AL: Playback Error: Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotFoundException: The playback failed to find the control with the given search properties. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Window'
+Name:  'Save the file as'
+ClassName:  '#32770'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindFromPartialQueryId(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+   --- End of inner exception stack trace ---
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapControlNotFoundException(COMException ex, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowComException(COMException innerException, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.SearchTopLevelWindow(ISearchArgument topLevelSearchArg, String topLevelElementQueryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTitleUpdatedTopLevelWindow(ISearchArgument topLevelSearchArg, String queryId, IList`1 windowTitles)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTopLevelElement(Boolean useCache, Boolean useCacheOnly, ISearchArgument searchArg, IList`1 windowTitles, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetElement(Boolean useCache, ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.Search(ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindInternal()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindControlIfNecessary()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+W, 2072, 40, 2013/05/21, 09:33:06.180, 58229848495, QTAgent32.exe, PlaybackErrorHandler: Ignoring exception as ContinueOnError is set.
+W, 2072, 40, 2013/05/21, 09:33:06.508, 58234551208, QTAgent32.exe, &lt;a class=success&gt;Playback - {148} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:33:11.616, 58307683759, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 5007 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:33:11.832, 58310780850, QTAgent32.exe, &lt;a class=success&gt;Playback - {149} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:33:12.109, 58314739133, QTAgent32.exe, &lt;a class=success&gt;Playback - {150} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:33:12.602, 58321800865, QTAgent32.exe, &lt;a class=success&gt;Playback - {151} [SUCCESS] SetValueAsEditBox "B338TH" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:33:14.825, 58353631425, QTAgent32.exe, &lt;a class=success&gt;Playback - {152} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Lookup...'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:33:15.093, 58357469438, QTAgent32.exe, &lt;a class=success&gt;Playback - {153} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:33:15.432, 58362330693, QTAgent32.exe, &lt;a class=success&gt;Playback - {154} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Confirm'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:33:34.887, 58640887422, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Personal Lines' &amp;&amp; ClassName='#32770'
+\0
+E, 2072, 40, 2013/05/21, 09:33:34.887, 58640889880, QTAgent32.exe, &lt;a class=failure&gt;Playback - {155} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Personal Lines' &amp;&amp; ClassName='#32770') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:33:34.929, 58641491918, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPF7D4E.png
+\0
+W, 2072, 40, 2013/05/21, 09:33:34.929, 58641493507, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2072, 40, 2013/05/21, 09:33:34.929, 58641495964, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 19397 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:33:53.740, 58910826449, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Personal Lines' &amp;&amp; ClassName='#32770'
+\0
+E, 2072, 40, 2013/05/21, 09:33:53.740, 58910829026, QTAgent32.exe, &lt;a class=failure&gt;Playback - {156} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Personal Lines' &amp;&amp; ClassName='#32770') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:33:53.782, 58911432420, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPFC6FB.png
+\0
+W, 2072, 40, 2013/05/21, 09:33:53.782, 58911433936, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2072, 40, 2013/05/21, 09:33:53.783, 58911436605, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 18852 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:33:56.677, 58952871478, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:33:57.893, 58970297985, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Personal Lines' &amp;&amp; ClassName='#32770'
+\0
+E, 2072, 40, 2013/05/21, 09:33:57.894, 58970300626, QTAgent32.exe, &lt;a class=failure&gt;Playback - {157} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Personal Lines' &amp;&amp; ClassName='#32770') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:33:57.935, 58970894372, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPFD732.png
+\0
+W, 2072, 40, 2013/05/21, 09:33:57.935, 58970895956, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2072, 40, 2013/05/21, 09:33:57.935, 58970898391, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 4152 ms. Expected it to take maximum 500 ms.
+E, 2072, 40, 2013/05/21, 09:33:57.936, 58970900180, QTAgent32.exe, Exception: System.Runtime.InteropServices.COMException
+	Message: Error HRESULT E_FAIL has been returned from a call to a COM component.
+	Stack Trace:    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+	BaseExceptionMessage: Error HRESULT E_FAIL has been returned from a call to a COM component.
+
+E, 2072, 40, 2013/05/21, 09:33:57.936, 58970902637, QTAgent32.exe, Window 2753772 not responding. Last Win32 error 0
+E, 2072, 40, 2013/05/21, 09:33:57.936, 58970903572, QTAgent32.exe, GetClassName for handle 2753772 failed
+E, 2072, 40, 2013/05/21, 09:33:58.037, 58972347378, QTAgent32.exe, AL: Playback Error: Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotAvailableException: The control is not available or not valid. Additional Details: 
+TechnologyName:  'MSAA'
+Name:  'Personal Lines'
+ClassName:  '#32770'
+ControlType:  'Window'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindFromPartialQueryId(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.EnsureValid(Boolean waitForReady, Boolean refetch)
+   --- End of inner exception stack trace ---
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.EnsureValid(Boolean waitForReady, Boolean refetch)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindFirstDescendant(String queryId, Int32 maxDepth, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetElement(Boolean useCache, ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.Search(ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindInternal()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindControlIfNecessary()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+W, 2072, 40, 2013/05/21, 09:33:58.037, 58972348894, QTAgent32.exe, PlaybackErrorHandler: Ignoring exception as ContinueOnError is set.
+W, 2072, 40, 2013/05/21, 09:33:58.171, 58974271799, QTAgent32.exe, &lt;a class=success&gt;Playback - {158} [SUCCESS] Check - "[MSAA, VisibleOnly]ControlType='CheckBox' &amp;&amp; Name='Defer Printing?'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:33:58.759, 58982699003, QTAgent32.exe, &lt;a class=success&gt;Playback - {159} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:33:58.860, 58984133687, QTAgent32.exe, Playback - [WARNING] Internal warning: Thread state based WFR - Requested element has invalid HWND
+\0
+W, 2072, 40, 2013/05/21, 09:33:58.860, 58984135152, QTAgent32.exe, Playback - [WARNING] Internal warning: process performance counters based WFR - Requested element has invalid HWND
+\0
+E, 2072, 40, 2013/05/21, 09:33:58.860, 58984137844, QTAgent32.exe, EnsureValid called via EnsureValid call for same element
+E, 2072, 40, 2013/05/21, 09:33:58.860, 58984140948, QTAgent32.exe, GetClassName for handle 2687994 failed
+E, 2072, 40, 2013/05/21, 09:33:58.860, 58984143097, QTAgent32.exe, EnsureValid called via EnsureValid call for same element
+E, 2072, 40, 2013/05/21, 09:33:58.860, 58984144279, QTAgent32.exe, EnsureValid called via EnsureValid call for same element
+E, 2072, 40, 2013/05/21, 09:33:58.861, 58984158441, QTAgent32.exe, Window 2687994 not responding. Last Win32 error 0
+E, 2072, 40, 2013/05/21, 09:33:58.862, 58984160528, QTAgent32.exe, GetClassName for handle 2687994 failed
+W, 2072, 40, 2013/05/21, 09:33:59.734, 58996647281, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 871 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:33:59.871, 58998615467, QTAgent32.exe, &lt;a class=success&gt;Playback - {160} [SUCCESS] Uncheck - "[MSAA, VisibleOnly]ControlType='CheckBox' &amp;&amp; Name='Add Activity'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:34:00.072, 59001483464, QTAgent32.exe, GetClassName for handle 2884650 failed
+W, 2072, 40, 2013/05/21, 09:34:00.303, 59004790370, QTAgent32.exe, &lt;a class=success&gt;Playback - {161} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:34:00.555, 59008401343, QTAgent32.exe, &lt;a class=success&gt;Playback - {162} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:34:05.393, 59077675244, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Transaction to insert' &amp;&amp; ClassName='TfSelectItem'
+\0
+E, 2072, 40, 2013/05/21, 09:34:05.393, 59077677845, QTAgent32.exe, &lt;a class=failure&gt;Playback - {163} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Transaction to insert' &amp;&amp; ClassName='TfSelectItem') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:34:05.435, 59078284155, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPFF482.png
+\0
+W, 2072, 40, 2013/05/21, 09:34:05.436, 59078285814, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2072, 40, 2013/05/21, 09:34:05.436, 59078288278, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 4781 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:34:23.622, 59338679618, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Transaction to insert' &amp;&amp; ClassName='TfSelectItem'
+\0
+E, 2072, 40, 2013/05/21, 09:34:23.622, 59338682537, QTAgent32.exe, &lt;a class=failure&gt;Playback - {164} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Transaction to insert' &amp;&amp; ClassName='TfSelectItem') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:34:23.667, 59339319075, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPF3BB0.png
+\0
+W, 2072, 40, 2013/05/21, 09:34:23.667, 59339320663, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2072, 40, 2013/05/21, 09:34:23.667, 59339323327, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 18230 ms. Expected it to take maximum 500 ms.
+W, 2072, 40, 2013/05/21, 09:34:24.386, 59349614256, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:34:24.951, 59357704620, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:34:25.514, 59365773685, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:34:26.082, 59373906470, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:34:26.645, 59381969396, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 2072, 40, 2013/05/21, 09:34:26.906, 59385706571, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Transaction to insert' &amp;&amp; ClassName='TfSelectItem'
+\0
+E, 2072, 40, 2013/05/21, 09:34:26.907, 59385709299, QTAgent32.exe, &lt;a class=failure&gt;Playback - {165} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Transaction to insert' &amp;&amp; ClassName='TfSelectItem') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:34:26.950, 59386336009, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPF488D.png
+\0
+W, 2072, 40, 2013/05/21, 09:34:26.951, 59386338014, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2072, 40, 2013/05/21, 09:34:26.951, 59386340560, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 3283 ms. Expected it to take maximum 500 ms.
+E, 2072, 40, 2013/05/21, 09:34:26.951, 59386342176, QTAgent32.exe, Exception: System.Runtime.InteropServices.COMException
+	Message: Error HRESULT E_FAIL has been returned from a call to a COM component.
+	Stack Trace:    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+	BaseExceptionMessage: Error HRESULT E_FAIL has been returned from a call to a COM component.
+
+E, 2072, 40, 2013/05/21, 09:34:26.951, 59386345276, QTAgent32.exe, Window 2163462 not responding. Last Win32 error 0
+E, 2072, 40, 2013/05/21, 09:34:26.951, 59386346175, QTAgent32.exe, GetClassName for handle 2163462 failed
+E, 2072, 40, 2013/05/21, 09:34:26.951, 59386350024, QTAgent32.exe, Window 329322 not responding. Last Win32 error 1400
+E, 2072, 40, 2013/05/21, 09:34:26.951, 59386350832, QTAgent32.exe, GetClassName for handle 329322 failed
+E, 2072, 40, 2013/05/21, 09:34:27.052, 59387788588, QTAgent32.exe, AL: Playback Error: Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotAvailableException: The control is not available or not valid. Additional Details: 
+TechnologyName:  'MSAA'
+Name:  'Ok'
+ControlType:  'Button'
+ ---&gt; Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotAvailableException: The control is not available or not valid. Additional Details: 
+TechnologyName:  'MSAA'
+Name:  'Transaction to insert'
+ClassName:  'TfSelectItem'
+ControlType:  'Window'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindFromPartialQueryId(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.EnsureValid(Boolean waitForReady, Boolean refetch)
+   --- End of inner exception stack trace ---
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.EnsureValid(Boolean waitForReady, Boolean refetch)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindFirstDescendant(String queryId, Int32 maxDepth, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindFirstDescendant(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.EnsureValid(Boolean waitForReady, Boolean refetch)
+   --- End of inner exception stack trace ---
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.EnsureValid(Boolean waitForReady, Boolean refetch)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+W, 2072, 40, 2013/05/21, 09:34:27.052, 59387789929, QTAgent32.exe, PlaybackErrorHandler: Ignoring exception as ContinueOnError is set.
+E, 2072, 40, 2013/05/21, 09:34:27.052, 59387792268, QTAgent32.exe, GetClassName for handle 3146448 failed
+W, 2072, 40, 2013/05/21, 09:34:29.206, 59418630843, QTAgent32.exe, &lt;a class=success&gt;Playback - {166} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:34:29.306, 59420067100, QTAgent32.exe, GetClassName for handle 2688426 failed
+W, 2072, 40, 2013/05/21, 09:34:29.479, 59422546366, QTAgent32.exe, &lt;a class=success&gt;Playback - {167} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Cancel'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:34:29.826, 59427516965, QTAgent32.exe, &lt;a class=success&gt;Playback - {168} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:34:30.260, 59433728028, QTAgent32.exe, &lt;a class=success&gt;Playback - {169} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Detail'"
+\0&lt;/a&gt;
+E, 2072, 40, 2013/05/21, 09:34:30.360, 59435164363, QTAgent32.exe, GetClassName for handle 3080892 failed
+W, 2072, 40, 2013/05/21, 09:34:30.486, 59436970739, QTAgent32.exe, &lt;a class=success&gt;Playback - {170} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2072, 40, 2013/05/21, 09:34:30.602, 59438624297, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 2072, 40, 2013/05/21, 09:34:30.602, 59438625227, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -1,0 +1,979 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="5a7183da-3a13-4866-b854-0d13f4661fc2" name="peter.zenin-ad@ICLVDEVAP01 2012-11-02 15:47:30" runUser="INSUR-E\peter.zenin-ad" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="64cc729a-f7a4-4a7c-bdaf-e78a320bd50d">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="peter.zenin-ad_ICLVDEVAP01 2012-11-02 15_47_30" />
+  </TestSettings>
+  <Times creation="2012-11-02T15:47:30.5160868+00:00" queuing="2012-11-02T15:47:30.9373057+00:00" start="2012-11-02T15:47:30.9997085+00:00" finish="2012-11-02T15:49:54.2609366+00:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="23" executed="23" error="0" failed="23" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="HouseTest4" storage="testproject7.dll" id="ff0c96a1-2fee-7235-6d80-2186de4b80b7">
+      <Execution id="d2201019-3e64-4eea-8d54-a1dc8b293f59" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest4" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest2" storage="testproject7.dll" id="6a41f98c-60c7-3333-a5a3-d5d87b5c35c7">
+      <Execution id="611ea9e0-a130-4354-a63c-feb8be302c42" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest2" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest3" storage="testproject7.dll" id="aa9bc056-c0ff-30da-3884-b0617a17e15e">
+      <Execution id="d96efa60-a915-4282-8463-c3441193c06b" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest3" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest4" storage="testproject7.dll" id="4e743fde-a814-86c0-27fd-8728ac2cb692">
+      <Execution id="ed4bc333-e914-42d8-84bf-394b97d1f39d" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest4" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest7" storage="testproject7.dll" id="e022376f-b2fb-4981-6140-b019eeaa6c94">
+      <Execution id="70c3b5d4-99fe-40dc-ac81-2127897ea0ac" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest7" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest6" storage="testproject7.dll" id="b7f68495-37f9-58f0-5c9b-6e190b9adaa8">
+      <Execution id="62eafc8b-8ccb-4646-892b-7119e9b2580c" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest6" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest5" storage="testproject7.dll" id="10042bab-44aa-7cea-8ac0-06cc3b3adbb3">
+      <Execution id="e9fe7fec-bb6a-471a-8565-9ef0c85b4c24" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest5" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest5" storage="testproject7.dll" id="99f569ef-86f3-fa96-82c3-e9993245d049">
+      <Execution id="c8b0c949-1390-42dd-afe5-480c98f82a95" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest5" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest2" storage="testproject7.dll" id="8f5b1340-58a6-e129-3b7d-c88835b7065d">
+      <Execution id="2e5df5a4-c764-441a-a8e8-aedeb8ce60f1" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest2" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest1" storage="testproject7.dll" id="9e6b6d54-b79f-e7d9-2609-a84c350c12a1">
+      <Execution id="9328b642-d025-4f5f-b0e1-5ec345f75d6b" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest1" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest1" storage="testproject7.dll" id="64ea79e0-cb1d-9a10-db69-a15b7769e7d8">
+      <Execution id="47d9b265-ba0c-452f-9eed-1327f6973ae4" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest1" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest7" storage="testproject7.dll" id="cad41ea6-4986-f170-1def-22ab50e0fb0a">
+      <Execution id="78dd7919-3927-4e9d-bb19-bc66e78e8863" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest7" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest3" storage="testproject7.dll" id="450e4b2d-ad88-da3f-6d50-5c9a0ae1aa51">
+      <Execution id="24bd47ca-f68a-46a2-82b2-c41693af15fb" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest3" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest12" storage="testproject7.dll" id="614f56be-e9c0-f1e7-ad65-1f0b7d6a0f1c">
+      <Execution id="255d83db-d910-4583-b2de-024426d992b2" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest12" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest6" storage="testproject7.dll" id="aa8325da-50fe-092e-bd85-bbb5f1ac650a">
+      <Execution id="605660fb-fe32-46bf-8786-e1ceaa4c5b49" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest6" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest11" storage="testproject7.dll" id="0f4d10f2-7035-3d68-762a-b62c4853fb8a">
+      <Execution id="2f7fa8e3-51aa-4a71-bd6b-bd0ee5b1e784" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest11" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest8" storage="testproject7.dll" id="07cf762e-0596-8be3-6b38-ed80b9a02463">
+      <Execution id="e6655792-ea08-4f79-8be7-5b6e3c3d4487" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest8" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest10" storage="testproject7.dll" id="98368514-c48e-be24-398b-d9342dd6b274">
+      <Execution id="a8d25fd7-5dbf-4b7d-956b-67d14245c80f" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest10" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest10" storage="testproject7.dll" id="8efed318-945d-2a9d-e29d-a71a05da5660">
+      <Execution id="16f45fef-696e-484a-a2ef-134bf22c703d" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest10" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest9" storage="testproject7.dll" id="1820a643-3d71-abad-9636-2b810c74ae19">
+      <Execution id="f8076cee-b58d-4c49-a0a7-d4a49f51f572" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest9" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest11" storage="testproject7.dll" id="1f5cea9c-51f4-0379-9851-579f986f33b2">
+      <Execution id="34836fac-d02e-411e-a451-fed9cd1dfbc1" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest11" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest9" storage="testproject7.dll" id="b4c07ca4-d489-a213-d4df-1c267d591a59">
+      <Execution id="1195d74a-75d4-4aee-afd0-b69abe543876" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest9" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest8" storage="testproject7.dll" id="f90b30ce-fb72-514e-f606-6c0b8cb3f354">
+      <Execution id="31f07c1f-fac5-429f-aa8a-f32e6db3b136" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest8" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="64ea79e0-cb1d-9a10-db69-a15b7769e7d8" executionId="47d9b265-ba0c-452f-9eed-1327f6973ae4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="98368514-c48e-be24-398b-d9342dd6b274" executionId="a8d25fd7-5dbf-4b7d-956b-67d14245c80f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1f5cea9c-51f4-0379-9851-579f986f33b2" executionId="34836fac-d02e-411e-a451-fed9cd1dfbc1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8f5b1340-58a6-e129-3b7d-c88835b7065d" executionId="2e5df5a4-c764-441a-a8e8-aedeb8ce60f1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aa9bc056-c0ff-30da-3884-b0617a17e15e" executionId="d96efa60-a915-4282-8463-c3441193c06b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ff0c96a1-2fee-7235-6d80-2186de4b80b7" executionId="d2201019-3e64-4eea-8d54-a1dc8b293f59" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="99f569ef-86f3-fa96-82c3-e9993245d049" executionId="c8b0c949-1390-42dd-afe5-480c98f82a95" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aa8325da-50fe-092e-bd85-bbb5f1ac650a" executionId="605660fb-fe32-46bf-8786-e1ceaa4c5b49" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cad41ea6-4986-f170-1def-22ab50e0fb0a" executionId="78dd7919-3927-4e9d-bb19-bc66e78e8863" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f90b30ce-fb72-514e-f606-6c0b8cb3f354" executionId="31f07c1f-fac5-429f-aa8a-f32e6db3b136" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b4c07ca4-d489-a213-d4df-1c267d591a59" executionId="1195d74a-75d4-4aee-afd0-b69abe543876" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9e6b6d54-b79f-e7d9-2609-a84c350c12a1" executionId="9328b642-d025-4f5f-b0e1-5ec345f75d6b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8efed318-945d-2a9d-e29d-a71a05da5660" executionId="16f45fef-696e-484a-a2ef-134bf22c703d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0f4d10f2-7035-3d68-762a-b62c4853fb8a" executionId="2f7fa8e3-51aa-4a71-bd6b-bd0ee5b1e784" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="614f56be-e9c0-f1e7-ad65-1f0b7d6a0f1c" executionId="255d83db-d910-4583-b2de-024426d992b2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a41f98c-60c7-3333-a5a3-d5d87b5c35c7" executionId="611ea9e0-a130-4354-a63c-feb8be302c42" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="450e4b2d-ad88-da3f-6d50-5c9a0ae1aa51" executionId="24bd47ca-f68a-46a2-82b2-c41693af15fb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4e743fde-a814-86c0-27fd-8728ac2cb692" executionId="ed4bc333-e914-42d8-84bf-394b97d1f39d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="10042bab-44aa-7cea-8ac0-06cc3b3adbb3" executionId="e9fe7fec-bb6a-471a-8565-9ef0c85b4c24" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b7f68495-37f9-58f0-5c9b-6e190b9adaa8" executionId="62eafc8b-8ccb-4646-892b-7119e9b2580c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e022376f-b2fb-4981-6140-b019eeaa6c94" executionId="70c3b5d4-99fe-40dc-ac81-2127897ea0ac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="07cf762e-0596-8be3-6b38-ed80b9a02463" executionId="e6655792-ea08-4f79-8be7-5b6e3c3d4487" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1820a643-3d71-abad-9636-2b810c74ae19" executionId="f8076cee-b58d-4c49-a0a7-d4a49f51f572" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="47d9b265-ba0c-452f-9eed-1327f6973ae4" testId="64ea79e0-cb1d-9a10-db69-a15b7769e7d8" testName="HouseTest1" computerName="ICLVDEVAP01" duration="00:01:33.5725521" startTime="2012-11-02T15:47:30.9997085+00:00" endTime="2012-11-02T15:49:04.8847211+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="47d9b265-ba0c-452f-9eed-1327f6973ae4">
+      <Output>
+        <DebugTrace>W, 484, 13, 2012/11/02, 15:47:31.592, 1570004148534, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 13, 2012/11/02, 15:47:32.684, 1570019739201, QTAgent32.exe, &lt;a class=success&gt;Playback - {1} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:47:32.949, 1570023534531, QTAgent32.exe, &lt;a class=success&gt;Playback - {2} [SUCCESS] SendKeys "[*]" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:47:33.839, 1570036344754, QTAgent32.exe, &lt;a class=success&gt;Playback - {3} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:47:34.603, 1570047375845, QTAgent32.exe, &lt;a class=success&gt;Playback - {4} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:47:35.040, 1570053601982, QTAgent32.exe, &lt;a class=success&gt;Playback - {5} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Clients &amp; Files'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:47:35.492, 1570059997751, QTAgent32.exe, &lt;a class=success&gt;Playback - {6} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Clients &amp; Files'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:47:35.882, 1570065654308, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 484, 13, 2012/11/02, 15:47:35.882, 1570065657475, QTAgent32.exe, &lt;a class=failure&gt;Playback - {7} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 484, 13, 2012/11/02, 15:47:35.976, 1570066983727, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF8142.png
+\0
+W, 484, 13, 2012/11/02, 15:47:35.976, 1570066985776, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 484, 13, 2012/11/02, 15:47:54.073, 1570326097377, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 484, 13, 2012/11/02, 15:47:54.073, 1570326100203, QTAgent32.exe, &lt;a class=failure&gt;Playback - {8} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 484, 13, 2012/11/02, 15:47:54.166, 1570327402719, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPFC850.png
+\0
+W, 484, 13, 2012/11/02, 15:47:54.166, 1570327404794, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 484, 13, 2012/11/02, 15:47:54.166, 1570327407726, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 18186 ms. Expected it to take maximum 500 ms.
+W, 484, 13, 2012/11/02, 15:47:54.697, 1570335032249, QTAgent32.exe, Playback - [WARNING] Internal warning: Window with Class "ThunderRT6MDIForm" and Title "Customer: txt1 tdsfs" was not found, so similar window with Class "ThunderRT6MDIForm" and Title "Customer: autotest" was accepted
+\0
+W, 484, 13, 2012/11/02, 15:47:54.697, 1570335036377, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 532 ms. Expected it to take maximum 500 ms.
+W, 484, 13, 2012/11/02, 15:47:56.288, 1570357780994, QTAgent32.exe, Playback - [WARNING] Internal warning: Incorrect flag set for InvokeProgrammaticAction\0
+W, 484, 13, 2012/11/02, 15:47:56.616, 1570362398073, QTAgent32.exe, &lt;a class=success&gt;Playback - {9} [SUCCESS] SetValueAsComboBox "Customers" - "[MSAA, VisibleOnly]ControlType='ComboBox'"  &lt; SetValueAsComboBox, set by clicking on the item in the list box &gt;
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:47:57.302, 1570372306149, QTAgent32.exe, &lt;a class=success&gt;Playback - {10} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Add'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:47:57.708, 1570378012592, QTAgent32.exe, &lt;a class=success&gt;Playback - {11} [SUCCESS] SendKeys "autotest" - "[MSAA, VisibleOnly]ControlType='RadioButton' &amp;&amp; Name='Personal Lines'"
+\0&lt;/a&gt;
+E, 484, 13, 2012/11/02, 15:47:57.848, 1570380139001, QTAgent32.exe, LoadLibrary() : Unable to find the resource 37382 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 484, 13, 2012/11/02, 15:47:57.848, 1570380144838, QTAgent32.exe, LoadLibrary() : Unable to find the resource 41728 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 484, 13, 2012/11/02, 15:47:57.848, 1570380147218, QTAgent32.exe, LoadLibrary() : Unable to find the resource 8131 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 484, 13, 2012/11/02, 15:47:57.848, 1570380149693, QTAgent32.exe, LoadLibrary() : Unable to find the resource 8131 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 484, 13, 2012/11/02, 15:47:57.848, 1570380153399, QTAgent32.exe, LoadLibrary() : Unable to find the resource 8131 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 484, 13, 2012/11/02, 15:47:57.848, 1570380158209, QTAgent32.exe, LoadLibrary() : Unable to find the resource 803 from assembly C:\Windows\system32\en-US\user32.dll.mui: Error1814
+W, 484, 13, 2012/11/02, 15:47:58.269, 1570386058923, QTAgent32.exe, &lt;a class=success&gt;Playback - {12} [SUCCESS] SetValueAsEditBox "autotest" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:47:58.846, 1570394437376, QTAgent32.exe, &lt;a class=success&gt;Playback - {13} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:47:59.455, 1570403146436, QTAgent32.exe, &lt;a class=success&gt;Playback - {14} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Yes'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:47:59.689, 1570406379754, QTAgent32.exe, &lt;a class=success&gt;Playback - {15} [SUCCESS] SendKeys "^{HOME}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 484, 13, 2012/11/02, 15:47:59.689, 1570406409123, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 484, 13, 2012/11/02, 15:47:59.767, 1570407496364, QTAgent32.exe, &lt;a class=success&gt;Playback - {16} [SUCCESS] SendKeys "^+{END}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 484, 13, 2012/11/02, 15:47:59.767, 1570407499123, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 484, 13, 2012/11/02, 15:47:59.783, 1570407720547, QTAgent32.exe, &lt;a class=success&gt;Playback - {17} [SUCCESS] SendKeys "{DELETE}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:47:59.861, 1570408842042, QTAgent32.exe, &lt;a class=success&gt;Playback - {18} [SUCCESS] SetValueAsEditBox "1" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:00.095, 1570412187911, QTAgent32.exe, &lt;a class=success&gt;Playback - {19} [SUCCESS] SendKeys "^{HOME}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 484, 13, 2012/11/02, 15:48:00.095, 1570412190720, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 484, 13, 2012/11/02, 15:48:00.188, 1570413528238, QTAgent32.exe, &lt;a class=success&gt;Playback - {20} [SUCCESS] SendKeys "^+{END}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 484, 13, 2012/11/02, 15:48:00.188, 1570413531078, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 484, 13, 2012/11/02, 15:48:00.204, 1570413751134, QTAgent32.exe, &lt;a class=success&gt;Playback - {21} [SUCCESS] SendKeys "{DELETE}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:00.282, 1570414870630, QTAgent32.exe, &lt;a class=success&gt;Playback - {22} [SUCCESS] SetValueAsEditBox "1" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:00.906, 1570423823821, QTAgent32.exe, &lt;a class=success&gt;Playback - {23} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:01.467, 1570431912941, QTAgent32.exe, &lt;a class=success&gt;Playback - {24} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:01.982, 1570439274335, QTAgent32.exe, &lt;a class=success&gt;Playback - {25} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Add'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:02.481, 1570446537902, QTAgent32.exe, &lt;a class=success&gt;Playback - {26} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:05.165, 1570484779966, QTAgent32.exe, &lt;a class=success&gt;Playback - {27} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly,Window]ControlType='Window' &amp;&amp; ClassName='ThunderRT6TextBox'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:05.508, 1570489699273, QTAgent32.exe, &lt;a class=success&gt;Playback - {28} [SUCCESS] SetValueAsEditBox "HOME" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:06.226, 1570500149407, QTAgent32.exe, &lt;a class=success&gt;Playback - {29} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:06.678, 1570506516587, QTAgent32.exe, &lt;a class=success&gt;Playback - {30} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Options'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:06.865, 1570509194510, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 484, 13, 2012/11/02, 15:48:07.099, 1570512476778, QTAgent32.exe, &lt;a class=success&gt;Playback - {31} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='Links'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:07.208, 1570514045688, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 484, 13, 2012/11/02, 15:48:07.396, 1570516721208, QTAgent32.exe, &lt;a class=success&gt;Playback - {32} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='3rd Party Integration'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:07.505, 1570518291368, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 484, 13, 2012/11/02, 15:48:07.708, 1570521219226, QTAgent32.exe, &lt;a class=success&gt;Playback - {33} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='Quote Select List'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:09.923, 1570552910605, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 2105 ms. Expected it to take maximum 500 ms.
+W, 484, 13, 2012/11/02, 15:48:10.609, 1570562935335, QTAgent32.exe, &lt;a class=success&gt;Playback - {34} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:14.962, 1570625067869, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 4220 ms. Expected it to take maximum 500 ms.
+W, 484, 13, 2012/11/02, 15:48:15.243, 1570629079697, QTAgent32.exe, &lt;a class=success&gt;Playback - {35} [SUCCESS] SetValueAsEditBox "test1" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:15.633, 1570634665687, QTAgent32.exe, &lt;a class=success&gt;Playback - {36} [SUCCESS] SetValueAsEditBox "test" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:15.851, 1570637785536, QTAgent32.exe, &lt;a class=success&gt;Playback - {37} [SUCCESS] SendKeys "^{HOME}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 484, 13, 2012/11/02, 15:48:15.851, 1570637788378, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 484, 13, 2012/11/02, 15:48:15.929, 1570638902398, QTAgent32.exe, &lt;a class=success&gt;Playback - {38} [SUCCESS] SendKeys "^+{END}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 484, 13, 2012/11/02, 15:48:15.929, 1570638905203, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 484, 13, 2012/11/02, 15:48:15.945, 1570639131060, QTAgent32.exe, &lt;a class=success&gt;Playback - {39} [SUCCESS] SendKeys "{DELETE}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:16.116, 1570641587083, QTAgent32.exe, &lt;a class=success&gt;Playback - {40} [SUCCESS] SetValueAsEditBox "test" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:16.694, 1570650007290, QTAgent32.exe, Playback - [WARNING] Internal warning: Incorrect flag set for InvokeProgrammaticAction\0
+W, 484, 13, 2012/11/02, 15:48:17.021, 1570654550761, QTAgent32.exe, &lt;a class=success&gt;Playback - {41} [SUCCESS] SetValueAsComboBox "Account Director" - "[MSAA, VisibleOnly]ControlType='ComboBox'"  &lt; SetValueAsComboBox, set by clicking on the item in the list box &gt;
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:17.598, 1570662806469, QTAgent32.exe, Playback - [WARNING] Internal warning: Incorrect flag set for InvokeProgrammaticAction\0
+W, 484, 13, 2012/11/02, 15:48:17.926, 1570667505554, QTAgent32.exe, &lt;a class=success&gt;Playback - {42} [SUCCESS] SetValueAsComboBox "Advertising" - "[MSAA, VisibleOnly]ControlType='ComboBox'"  &lt; SetValueAsComboBox, set by clicking on the item in the list box &gt;
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:18.332, 1570673305274, QTAgent32.exe, &lt;a class=success&gt;Playback - {43} [SUCCESS] SetValueAsEditBox "160589" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:18.769, 1570679557425, QTAgent32.exe, &lt;a class=success&gt;Playback - {44} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:19.205, 1570685811391, QTAgent32.exe, &lt;a class=success&gt;Playback - {45} [SUCCESS] SetValueAsEditBox "B338TH" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:21.623, 1570720429753, QTAgent32.exe, &lt;a class=success&gt;Playback - {46} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Lookup...'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:22.076, 1570727043004, QTAgent32.exe, &lt;a class=success&gt;Playback - {47} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:23.870, 1570752594546, QTAgent32.exe, Playback - [WARNING] Internal warning: Element "[MSAA, VisibleOnly]ControlType='Window' &amp;&amp; ControlId='32770'" was not found, so all intermediate elements were ignored. To improve performance replace this element Id with another Id or exclude it from QueryId. If this element is the target element, replace or remove intermediate elements
+\0
+W, 484, 13, 2012/11/02, 15:48:24.400, 1570760361938, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 2075 ms. Expected it to take maximum 500 ms.
+W, 484, 13, 2012/11/02, 15:48:25.368, 1570774102582, QTAgent32.exe, &lt;a class=success&gt;Playback - {48} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Cancel'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:27.037, 1570797936454, QTAgent32.exe, Playback - [WARNING] Internal warning: Element "[MSAA, VisibleOnly]ControlType='Window' &amp;&amp; ControlId='32769'" was not found, so all intermediate elements were ignored. To improve performance replace this element Id with another Id or exclude it from QueryId. If this element is the target element, replace or remove intermediate elements
+\0
+W, 484, 13, 2012/11/02, 15:48:27.567, 1570805632234, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 2080 ms. Expected it to take maximum 500 ms.
+W, 484, 13, 2012/11/02, 15:48:27.895, 1570810229024, QTAgent32.exe, &lt;a class=success&gt;Playback - {49} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Cancel'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:48:37.053, 1570941341280, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 484, 13, 2012/11/02, 15:48:37.053, 1570941344219, QTAgent32.exe, &lt;a class=failure&gt;Playback - {50} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 484, 13, 2012/11/02, 15:48:37.162, 1570942958537, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF7033.png
+\0
+W, 484, 13, 2012/11/02, 15:48:37.162, 1570942960728, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 484, 13, 2012/11/02, 15:48:37.162, 1570942963705, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 9159 ms. Expected it to take maximum 500 ms.
+W, 484, 13, 2012/11/02, 15:48:39.283, 1570973283133, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 484, 13, 2012/11/02, 15:48:39.283, 1570973286010, QTAgent32.exe, &lt;a class=failure&gt;Playback - {51} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 484, 13, 2012/11/02, 15:48:39.393, 1570974938100, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF78EB.png
+\0
+W, 484, 13, 2012/11/02, 15:48:39.393, 1570974940270, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 484, 13, 2012/11/02, 15:48:39.393, 1570974943288, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 2233 ms. Expected it to take maximum 500 ms.
+W, 484, 13, 2012/11/02, 15:48:43.808, 1571038057226, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 484, 13, 2012/11/02, 15:48:43.808, 1571038060179, QTAgent32.exe, &lt;a class=failure&gt;Playback - {52} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 484, 13, 2012/11/02, 15:48:43.917, 1571039687827, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF8A98.png
+\0
+W, 484, 13, 2012/11/02, 15:48:43.917, 1571039690045, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 484, 13, 2012/11/02, 15:48:43.917, 1571039693047, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 4522 ms. Expected it to take maximum 500 ms.
+E, 484, 13, 2012/11/02, 15:48:43.917, 1571039707241, QTAgent32.exe, Exception: System.Runtime.InteropServices.COMException
+	Message: Error HRESULT E_FAIL has been returned from a call to a COM component.
+	Stack Trace:    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+	BaseExceptionMessage: Error HRESULT E_FAIL has been returned from a call to a COM component.
+
+E, 484, 13, 2012/11/02, 15:48:43.917, 1571039802053, QTAgent32.exe, Window 8324454 not responding. Last Win32 error 0
+E, 484, 13, 2012/11/02, 15:48:43.917, 1571039809445, QTAgent32.exe, GetClassName for handle 8324454 failed
+E, 484, 13, 2012/11/02, 15:48:43.932, 1571039837548, QTAgent32.exe, Window 8324454 not responding. Last Win32 error 1400
+E, 484, 13, 2012/11/02, 15:48:43.964, 1571040505864, QTAgent32.exe, Window 8324454 not responding. Last Win32 error 2
+E, 484, 13, 2012/11/02, 15:48:43.979, 1571040510331, QTAgent32.exe, GetClassName for handle 8324454 failed
+E, 484, 13, 2012/11/02, 15:48:43.979, 1571040511244, QTAgent32.exe, GetClassName for handle 8324454 failed
+W, 484, 13, 2012/11/02, 15:48:53.028, 1571170065932, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: autotest autotest' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 484, 13, 2012/11/02, 15:48:53.028, 1571170069055, QTAgent32.exe, &lt;a class=failure&gt;Playback - {53} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: autotest autotest' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 484, 13, 2012/11/02, 15:48:53.137, 1571171726526, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPFAE9D.png
+\0
+W, 484, 13, 2012/11/02, 15:48:53.137, 1571171728726, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 484, 13, 2012/11/02, 15:48:53.137, 1571171731720, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 9161 ms. Expected it to take maximum 500 ms.
+W, 484, 13, 2012/11/02, 15:48:55.259, 1571202006568, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: autotest autotest' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 484, 13, 2012/11/02, 15:48:55.259, 1571202009488, QTAgent32.exe, &lt;a class=failure&gt;Playback - {54} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: autotest autotest' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 484, 13, 2012/11/02, 15:48:55.352, 1571203478156, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPFB755.png
+\0
+W, 484, 13, 2012/11/02, 15:48:55.352, 1571203480346, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 484, 13, 2012/11/02, 15:48:55.352, 1571203483301, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 2217 ms. Expected it to take maximum 500 ms.
+W, 484, 13, 2012/11/02, 15:48:59.783, 1571266782527, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: autotest autotest' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 484, 13, 2012/11/02, 15:48:59.783, 1571266785576, QTAgent32.exe, &lt;a class=failure&gt;Playback - {55} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: autotest autotest' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 484, 13, 2012/11/02, 15:48:59.861, 1571268030958, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPFC902.png
+\0
+W, 484, 13, 2012/11/02, 15:48:59.861, 1571268033024, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 484, 13, 2012/11/02, 15:48:59.861, 1571268035948, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 4508 ms. Expected it to take maximum 500 ms.
+E, 484, 13, 2012/11/02, 15:48:59.861, 1571268037709, QTAgent32.exe, Exception: System.Runtime.InteropServices.COMException
+	Message: Error HRESULT E_FAIL has been returned from a call to a COM component.
+	Stack Trace:    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+	BaseExceptionMessage: Error HRESULT E_FAIL has been returned from a call to a COM component.
+
+E, 484, 13, 2012/11/02, 15:48:59.861, 1571268042531, QTAgent32.exe, Window 8324454 not responding. Last Win32 error 0
+E, 484, 13, 2012/11/02, 15:48:59.861, 1571268046498, QTAgent32.exe, Window 8324454 not responding. Last Win32 error 1400
+E, 484, 13, 2012/11/02, 15:48:59.861, 1571268051888, QTAgent32.exe, Window 8324454 not responding. Last Win32 error 1400
+E, 484, 13, 2012/11/02, 15:48:59.861, 1571268053104, QTAgent32.exe, GetClassName for handle 8324454 failed
+E, 484, 13, 2012/11/02, 15:48:59.861, 1571268053919, QTAgent32.exe, GetClassName for handle 8324454 failed
+E, 484, 13, 2012/11/02, 15:48:59.970, 1571269485359, QTAgent32.exe, AL: Playback Error: Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotFoundException: Unable to find the top level element of the control ---&gt; Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotFoundException: The playback failed to find the control with the given search properties. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Window'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindFromPartialQueryId(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+   --- End of inner exception stack trace ---
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapControlNotFoundException(COMException ex, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowComException(COMException innerException, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.SearchTopLevelWindow(ISearchArgument topLevelSearchArg, String topLevelElementQueryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.SearchUsingMultipleTitles(ISearchArgument topLevelSearchArg, QueryId topLevelQueryId, IList`1 windowTitles)
+   --- End of inner exception stack trace ---
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.SearchUsingMultipleTitles(ISearchArgument topLevelSearchArg, QueryId topLevelQueryId, IList`1 windowTitles)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTitleUpdatedTopLevelWindow(ISearchArgument topLevelSearchArg, String queryId, IList`1 windowTitles)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTopLevelElement(Boolean useCache, Boolean useCacheOnly, ISearchArgument searchArg, IList`1 windowTitles, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetElement(Boolean useCache, ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.Search(ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindInternal()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindControlIfNecessary()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+W, 484, 13, 2012/11/02, 15:48:59.970, 1571269488108, QTAgent32.exe, PlaybackErrorHandler: Ignoring exception as ContinueOnError is set.
+W, 484, 13, 2012/11/02, 15:49:00.313, 1571274440901, QTAgent32.exe, &lt;a class=success&gt;Playback - {56} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Close'"
+\0&lt;/a&gt;
+W, 484, 13, 2012/11/02, 15:49:04.869, 1571339603817, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 13, 2012/11/02, 15:49:04.869, 1571339605237, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 13, 2012/11/02, 15:49:04.869, 1571339610943, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;533 Yardley Green Road&gt;. Actual:&lt;Red House&gt;. </Message>
+          <StackTrace>   at TestProject7.UIMap.HomeAddressLookup() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 716
+   at TestProject7.TamAutotest.HouseTest1() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 590
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="ICLVDEVAP01\HouseTest1.png" />
+      </ResultFiles>
+      <ExtensionResult>Exception has been thrown by the target of an invocation.</ExtensionResult>
+    </UnitTestResult>
+    <UnitTestResult executionId="a8d25fd7-5dbf-4b7d-956b-67d14245c80f" testId="98368514-c48e-be24-398b-d9342dd6b274" testName="HouseTest10" computerName="ICLVDEVAP01" duration="00:00:37.9218490" startTime="2012-11-02T15:49:04.8847211+00:00" endTime="2012-11-02T15:49:42.8100228+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8d25fd7-5dbf-4b7d-956b-67d14245c80f">
+      <Output>
+        <DebugTrace>W, 484, 23, 2012/11/02, 15:49:04.900, 1571340080027, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 23, 2012/11/02, 15:49:14.525, 1571477860359, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='The Agency Manager Signon' &amp;&amp; ClassName='ThunderRT6FormDC'
+\0
+E, 484, 23, 2012/11/02, 15:49:14.525, 1571477863335, QTAgent32.exe, &lt;a class=failure&gt;Playback - {1} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='The Agency Manager Signon' &amp;&amp; ClassName='ThunderRT6FormDC') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 484, 23, 2012/11/02, 15:49:14.744, 1571481000904, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF299.png
+\0
+W, 484, 23, 2012/11/02, 15:49:14.744, 1571481003156, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 484, 23, 2012/11/02, 15:49:14.744, 1571481006197, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 9310 ms. Expected it to take maximum 500 ms.
+W, 484, 23, 2012/11/02, 15:49:32.950, 1571741654185, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='The Agency Manager Signon' &amp;&amp; ClassName='ThunderRT6FormDC'
+\0
+E, 484, 23, 2012/11/02, 15:49:32.950, 1571741657229, QTAgent32.exe, &lt;a class=failure&gt;Playback - {2} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='The Agency Manager Signon' &amp;&amp; ClassName='ThunderRT6FormDC') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 484, 23, 2012/11/02, 15:49:33.293, 1571746633126, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF4A92.png
+\0
+W, 484, 23, 2012/11/02, 15:49:33.293, 1571746635297, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 484, 23, 2012/11/02, 15:49:33.293, 1571746638217, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 18551 ms. Expected it to take maximum 500 ms.
+W, 484, 23, 2012/11/02, 15:49:37.802, 1571811119282, QTAgent32.exe, Playback - [WARNING] Internal warning: Window with Class "ThunderRT6FormDC" and Title "The Agency Manager Signon" was not found, so similar window with Class "ThunderRT6FormDC" and Title "The Agency Manager" was accepted
+\0
+W, 484, 23, 2012/11/02, 15:49:37.802, 1571811123985, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 4503 ms. Expected it to take maximum 500 ms.
+W, 484, 23, 2012/11/02, 15:49:39.346, 1571833229610, QTAgent32.exe, Playback - [WARNING] Internal warning: Element "[MSAA, VisibleOnly]ControlType='Window' &amp;&amp; ControlId='7'" was not found, so all intermediate elements were ignored. To improve performance replace this element Id with another Id or exclude it from QueryId. If this element is the target element, replace or remove intermediate elements
+\0
+W, 484, 23, 2012/11/02, 15:49:39.861, 1571840728501, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 2066 ms. Expected it to take maximum 500 ms.
+W, 484, 23, 2012/11/02, 15:49:40.220, 1571845739247, QTAgent32.exe, &lt;a class=success&gt;Playback - {3} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 484, 23, 2012/11/02, 15:49:42.810, 1571882896749, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 23, 2012/11/02, 15:49:42.810, 1571882898152, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 23, 2012/11/02, 15:49:42.810, 1571882898836, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. System.ArgumentException: System.ArgumentException: The encoded string can only be used for a password..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.SendKeys(String keys, ModifierKeys modifierKeys, Boolean isEncoded, Boolean isUnicode)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SendKeys(String text, ModifierKeys modifierKeys, Boolean isEncoded, Boolean isUnicode)
+   at Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeysImplementation(UITestControl control, String text, ModifierKeys modifierKeys, Boolean isEncoded, Boolean isUnicode)
+   at Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeysImplementationWrapper(UITestControl control, String text, ModifierKeys modifierKeys, Boolean isEncoded, Boolean isUnicode)
+   at Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys(UITestControl control, String text, Boolean isEncoded)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1968
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="34836fac-d02e-411e-a451-fed9cd1dfbc1" testId="1f5cea9c-51f4-0379-9851-579f986f33b2" testName="HouseTest11" computerName="ICLVDEVAP01" duration="00:00:00.6284052" startTime="2012-11-02T15:49:42.8256235+00:00" endTime="2012-11-02T15:49:43.4496515+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="34836fac-d02e-411e-a451-fed9cd1dfbc1">
+      <Output>
+        <DebugTrace>W, 484, 29, 2012/11/02, 15:49:42.825, 1571883161917, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 29, 2012/11/02, 15:49:42.841, 1571883368715, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 29, 2012/11/02, 15:49:42.841, 1571883378231, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 29, 2012/11/02, 15:49:43.449, 1571892111017, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 29, 2012/11/02, 15:49:43.449, 1571892112459, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 29, 2012/11/02, 15:49:43.449, 1571892113179, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2e5df5a4-c764-441a-a8e8-aedeb8ce60f1" testId="8f5b1340-58a6-e129-3b7d-c88835b7065d" testName="HouseTest2" computerName="ICLVDEVAP01" duration="00:00:00.7021615" startTime="2012-11-02T15:49:43.4652522+00:00" endTime="2012-11-02T15:49:44.1672837+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2e5df5a4-c764-441a-a8e8-aedeb8ce60f1">
+      <Output>
+        <DebugTrace>W, 484, 35, 2012/11/02, 15:49:43.480, 1571892470261, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 35, 2012/11/02, 15:49:43.527, 1571893129509, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 35, 2012/11/02, 15:49:43.527, 1571893133826, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 35, 2012/11/02, 15:49:44.167, 1571902274518, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 35, 2012/11/02, 15:49:44.167, 1571902275754, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 35, 2012/11/02, 15:49:44.167, 1571902276527, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d96efa60-a915-4282-8463-c3441193c06b" testId="aa9bc056-c0ff-30da-3884-b0617a17e15e" testName="HouseTest3" computerName="ICLVDEVAP01" duration="00:00:00.5179551" startTime="2012-11-02T15:49:44.1672837+00:00" endTime="2012-11-02T15:49:44.6977075+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d96efa60-a915-4282-8463-c3441193c06b">
+      <Output>
+        <DebugTrace>W, 484, 41, 2012/11/02, 15:49:44.182, 1571902513313, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 41, 2012/11/02, 15:49:44.182, 1571902640305, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 41, 2012/11/02, 15:49:44.182, 1571902644034, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 41, 2012/11/02, 15:49:44.697, 1571909878656, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 41, 2012/11/02, 15:49:44.697, 1571909879892, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 41, 2012/11/02, 15:49:44.697, 1571909880585, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d2201019-3e64-4eea-8d54-a1dc8b293f59" testId="ff0c96a1-2fee-7235-6d80-2186de4b80b7" testName="HouseTest4" computerName="ICLVDEVAP01" duration="00:00:00.5179865" startTime="2012-11-02T15:49:44.6977075+00:00" endTime="2012-11-02T15:49:45.2281313+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2201019-3e64-4eea-8d54-a1dc8b293f59">
+      <Output>
+        <DebugTrace>W, 484, 33, 2012/11/02, 15:49:44.713, 1571910101363, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 33, 2012/11/02, 15:49:44.713, 1571910218626, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 33, 2012/11/02, 15:49:44.713, 1571910222209, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 33, 2012/11/02, 15:49:45.228, 1571917471281, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 33, 2012/11/02, 15:49:45.228, 1571917472689, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 33, 2012/11/02, 15:49:45.228, 1571917473468, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c8b0c949-1390-42dd-afe5-480c98f82a95" testId="99f569ef-86f3-fa96-82c3-e9993245d049" testName="HouseTest5" computerName="ICLVDEVAP01" duration="00:00:00.5239239" startTime="2012-11-02T15:49:45.2281313+00:00" endTime="2012-11-02T15:49:45.7585551+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c8b0c949-1390-42dd-afe5-480c98f82a95">
+      <Output>
+        <DebugTrace>W, 484, 27, 2012/11/02, 15:49:45.228, 1571917609593, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 27, 2012/11/02, 15:49:45.243, 1571917727870, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 27, 2012/11/02, 15:49:45.243, 1571917731478, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 27, 2012/11/02, 15:49:45.758, 1571925067218, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 27, 2012/11/02, 15:49:45.758, 1571925068467, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 27, 2012/11/02, 15:49:45.758, 1571925069159, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="605660fb-fe32-46bf-8786-e1ceaa4c5b49" testId="aa8325da-50fe-092e-bd85-bbb5f1ac650a" testName="HouseTest6" computerName="ICLVDEVAP01" duration="00:00:00.5234640" startTime="2012-11-02T15:49:45.7585551+00:00" endTime="2012-11-02T15:49:46.2889789+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="605660fb-fe32-46bf-8786-e1ceaa4c5b49">
+      <Output>
+        <DebugTrace>W, 484, 22, 2012/11/02, 15:49:45.758, 1571925207264, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 22, 2012/11/02, 15:49:45.774, 1571925324175, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 22, 2012/11/02, 15:49:45.774, 1571925328432, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 22, 2012/11/02, 15:49:46.288, 1571932659503, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 22, 2012/11/02, 15:49:46.288, 1571932660831, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 22, 2012/11/02, 15:49:46.288, 1571932661528, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="78dd7919-3927-4e9d-bb19-bc66e78e8863" testId="cad41ea6-4986-f170-1def-22ab50e0fb0a" testName="HouseTest7" computerName="ICLVDEVAP01" duration="00:00:00.5235340" startTime="2012-11-02T15:49:46.2889789+00:00" endTime="2012-11-02T15:49:46.8194027+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="78dd7919-3927-4e9d-bb19-bc66e78e8863">
+      <Output>
+        <DebugTrace>W, 484, 47, 2012/11/02, 15:49:46.288, 1571932801279, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 47, 2012/11/02, 15:49:46.304, 1571932920221, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 47, 2012/11/02, 15:49:46.304, 1571932923840, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 47, 2012/11/02, 15:49:46.819, 1571940253590, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 47, 2012/11/02, 15:49:46.819, 1571940254892, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 47, 2012/11/02, 15:49:46.819, 1571940255626, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="31f07c1f-fac5-429f-aa8a-f32e6db3b136" testId="f90b30ce-fb72-514e-f606-6c0b8cb3f354" testName="HouseTest8" computerName="ICLVDEVAP01" duration="00:00:00.5233620" startTime="2012-11-02T15:49:46.8194027+00:00" endTime="2012-11-02T15:49:47.3498265+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="31f07c1f-fac5-429f-aa8a-f32e6db3b136">
+      <Output>
+        <DebugTrace>W, 484, 53, 2012/11/02, 15:49:46.819, 1571940398709, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 53, 2012/11/02, 15:49:46.835, 1571940520521, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 53, 2012/11/02, 15:49:46.835, 1571940524213, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 53, 2012/11/02, 15:49:47.349, 1571947847212, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 53, 2012/11/02, 15:49:47.349, 1571947848445, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 53, 2012/11/02, 15:49:47.349, 1571947849152, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1195d74a-75d4-4aee-afd0-b69abe543876" testId="b4c07ca4-d489-a213-d4df-1c267d591a59" testName="HouseTest9" computerName="ICLVDEVAP01" duration="00:00:00.5238603" startTime="2012-11-02T15:49:47.3498265+00:00" endTime="2012-11-02T15:49:47.8802503+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1195d74a-75d4-4aee-afd0-b69abe543876">
+      <Output>
+        <DebugTrace>W, 484, 59, 2012/11/02, 15:49:47.349, 1571947985666, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 59, 2012/11/02, 15:49:47.365, 1571948101574, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 59, 2012/11/02, 15:49:47.365, 1571948105158, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 59, 2012/11/02, 15:49:47.880, 1571955443022, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 59, 2012/11/02, 15:49:47.880, 1571955444239, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 59, 2012/11/02, 15:49:47.880, 1571955444910, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9328b642-d025-4f5f-b0e1-5ec345f75d6b" testId="9e6b6d54-b79f-e7d9-2609-a84c350c12a1" testName="MotoTest1" computerName="ICLVDEVAP01" duration="00:00:00.5237741" startTime="2012-11-02T15:49:47.8802503+00:00" endTime="2012-11-02T15:49:48.4106741+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9328b642-d025-4f5f-b0e1-5ec345f75d6b">
+      <Output>
+        <DebugTrace>W, 484, 65, 2012/11/02, 15:49:47.880, 1571955580333, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 65, 2012/11/02, 15:49:47.895, 1571955698862, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 65, 2012/11/02, 15:49:47.895, 1571955702384, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 65, 2012/11/02, 15:49:48.410, 1571963037154, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 65, 2012/11/02, 15:49:48.410, 1571963038397, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 65, 2012/11/02, 15:49:48.410, 1571963039088, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="16f45fef-696e-484a-a2ef-134bf22c703d" testId="8efed318-945d-2a9d-e29d-a71a05da5660" testName="MotoTest10" computerName="ICLVDEVAP01" duration="00:00:00.5238253" startTime="2012-11-02T15:49:48.4106741+00:00" endTime="2012-11-02T15:49:48.9410979+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="16f45fef-696e-484a-a2ef-134bf22c703d">
+      <Output>
+        <DebugTrace>W, 484, 71, 2012/11/02, 15:49:48.410, 1571963177156, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 71, 2012/11/02, 15:49:48.426, 1571963298247, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 71, 2012/11/02, 15:49:48.426, 1571963301805, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 71, 2012/11/02, 15:49:48.941, 1571970632567, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 71, 2012/11/02, 15:49:48.941, 1571970633969, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 71, 2012/11/02, 15:49:48.941, 1571970635164, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2f7fa8e3-51aa-4a71-bd6b-bd0ee5b1e784" testId="0f4d10f2-7035-3d68-762a-b62c4853fb8a" testName="MotoTest11" computerName="ICLVDEVAP01" duration="00:00:00.5233996" startTime="2012-11-02T15:49:48.9410979+00:00" endTime="2012-11-02T15:49:49.4715217+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2f7fa8e3-51aa-4a71-bd6b-bd0ee5b1e784">
+      <Output>
+        <DebugTrace>W, 484, 77, 2012/11/02, 15:49:48.941, 1571970775859, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 77, 2012/11/02, 15:49:48.956, 1571970896045, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 77, 2012/11/02, 15:49:48.956, 1571970899653, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 77, 2012/11/02, 15:49:49.471, 1571978226625, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 77, 2012/11/02, 15:49:49.471, 1571978227871, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 77, 2012/11/02, 15:49:49.471, 1571978228567, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="255d83db-d910-4583-b2de-024426d992b2" testId="614f56be-e9c0-f1e7-ad65-1f0b7d6a0f1c" testName="MotoTest12" computerName="ICLVDEVAP01" duration="00:00:00.5237297" startTime="2012-11-02T15:49:49.4715217+00:00" endTime="2012-11-02T15:49:50.0019455+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="255d83db-d910-4583-b2de-024426d992b2">
+      <Output>
+        <DebugTrace>W, 484, 83, 2012/11/02, 15:49:49.471, 1571978368953, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 83, 2012/11/02, 15:49:49.487, 1571978491352, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 83, 2012/11/02, 15:49:49.487, 1571978494940, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 83, 2012/11/02, 15:49:50.001, 1571985822964, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 83, 2012/11/02, 15:49:50.001, 1571985824263, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 83, 2012/11/02, 15:49:50.001, 1571985824970, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="611ea9e0-a130-4354-a63c-feb8be302c42" testId="6a41f98c-60c7-3333-a5a3-d5d87b5c35c7" testName="MotoTest2" computerName="ICLVDEVAP01" duration="00:00:00.5239323" startTime="2012-11-02T15:49:50.0019455+00:00" endTime="2012-11-02T15:49:50.5323693+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="611ea9e0-a130-4354-a63c-feb8be302c42">
+      <Output>
+        <DebugTrace>W, 484, 89, 2012/11/02, 15:49:50.001, 1571985965265, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 89, 2012/11/02, 15:49:50.017, 1571986087193, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 89, 2012/11/02, 15:49:50.017, 1571986090810, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 89, 2012/11/02, 15:49:50.532, 1571993423279, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 89, 2012/11/02, 15:49:50.532, 1571993424574, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 89, 2012/11/02, 15:49:50.532, 1571993425261, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="24bd47ca-f68a-46a2-82b2-c41693af15fb" testId="450e4b2d-ad88-da3f-6d50-5c9a0ae1aa51" testName="MotoTest3" computerName="ICLVDEVAP01" duration="00:00:00.5228742" startTime="2012-11-02T15:49:50.5323693+00:00" endTime="2012-11-02T15:49:51.0627931+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24bd47ca-f68a-46a2-82b2-c41693af15fb">
+      <Output>
+        <DebugTrace>W, 484, 95, 2012/11/02, 15:49:50.532, 1571993568018, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 95, 2012/11/02, 15:49:50.547, 1571993689456, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 95, 2012/11/02, 15:49:50.547, 1571993693115, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 95, 2012/11/02, 15:49:51.062, 1572001010325, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 95, 2012/11/02, 15:49:51.062, 1572001011564, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 95, 2012/11/02, 15:49:51.062, 1572001012264, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ed4bc333-e914-42d8-84bf-394b97d1f39d" testId="4e743fde-a814-86c0-27fd-8728ac2cb692" testName="MotoTest4" computerName="ICLVDEVAP01" duration="00:00:00.5208492" startTime="2012-11-02T15:49:51.0627931+00:00" endTime="2012-11-02T15:49:51.5932169+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed4bc333-e914-42d8-84bf-394b97d1f39d">
+      <Output>
+        <DebugTrace>W, 484, 101, 2012/11/02, 15:49:51.078, 1572001196423, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 101, 2012/11/02, 15:49:51.078, 1572001314547, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 101, 2012/11/02, 15:49:51.078, 1572001318100, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 101, 2012/11/02, 15:49:51.593, 1572008604914, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 101, 2012/11/02, 15:49:51.593, 1572008606368, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 101, 2012/11/02, 15:49:51.593, 1572008607039, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e9fe7fec-bb6a-471a-8565-9ef0c85b4c24" testId="10042bab-44aa-7cea-8ac0-06cc3b3adbb3" testName="MotoTest5" computerName="ICLVDEVAP01" duration="00:00:00.5227595" startTime="2012-11-02T15:49:51.5932169+00:00" endTime="2012-11-02T15:49:52.1236407+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e9fe7fec-bb6a-471a-8565-9ef0c85b4c24">
+      <Output>
+        <DebugTrace>W, 484, 93, 2012/11/02, 15:49:51.593, 1572008760359, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 93, 2012/11/02, 15:49:51.608, 1572008881937, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 93, 2012/11/02, 15:49:51.608, 1572008885534, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 93, 2012/11/02, 15:49:52.123, 1572016196896, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 93, 2012/11/02, 15:49:52.123, 1572016198162, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 93, 2012/11/02, 15:49:52.123, 1572016198873, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="62eafc8b-8ccb-4646-892b-7119e9b2580c" testId="b7f68495-37f9-58f0-5c9b-6e190b9adaa8" testName="MotoTest6" computerName="ICLVDEVAP01" duration="00:00:00.5235969" startTime="2012-11-02T15:49:52.1236407+00:00" endTime="2012-11-02T15:49:52.6540645+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="62eafc8b-8ccb-4646-892b-7119e9b2580c">
+      <Output>
+        <DebugTrace>W, 484, 87, 2012/11/02, 15:49:52.123, 1572016338376, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 87, 2012/11/02, 15:49:52.139, 1572016461278, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 87, 2012/11/02, 15:49:52.139, 1572016464847, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 87, 2012/11/02, 15:49:52.654, 1572023792364, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 87, 2012/11/02, 15:49:52.654, 1572023793625, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 87, 2012/11/02, 15:49:52.654, 1572023794318, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="70c3b5d4-99fe-40dc-ac81-2127897ea0ac" testId="e022376f-b2fb-4981-6140-b019eeaa6c94" testName="MotoTest7" computerName="ICLVDEVAP01" duration="00:00:00.5235902" startTime="2012-11-02T15:49:52.6540645+00:00" endTime="2012-11-02T15:49:53.1844883+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="70c3b5d4-99fe-40dc-ac81-2127897ea0ac">
+      <Output>
+        <DebugTrace>W, 484, 81, 2012/11/02, 15:49:52.654, 1572023934771, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 81, 2012/11/02, 15:49:52.669, 1572024062176, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 81, 2012/11/02, 15:49:52.669, 1572024065810, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 81, 2012/11/02, 15:49:53.184, 1572031387356, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 81, 2012/11/02, 15:49:53.184, 1572031388602, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 81, 2012/11/02, 15:49:53.184, 1572031389261, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e6655792-ea08-4f79-8be7-5b6e3c3d4487" testId="07cf762e-0596-8be3-6b38-ed80b9a02463" testName="MotoTest8" computerName="ICLVDEVAP01" duration="00:00:00.5238281" startTime="2012-11-02T15:49:53.1844883+00:00" endTime="2012-11-02T15:49:53.7149121+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6655792-ea08-4f79-8be7-5b6e3c3d4487">
+      <Output>
+        <DebugTrace>W, 484, 75, 2012/11/02, 15:49:53.184, 1572031523919, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 75, 2012/11/02, 15:49:53.200, 1572031644257, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 75, 2012/11/02, 15:49:53.200, 1572031647803, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 75, 2012/11/02, 15:49:53.714, 1572038981315, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 75, 2012/11/02, 15:49:53.714, 1572038982578, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 75, 2012/11/02, 15:49:53.714, 1572038983267, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f8076cee-b58d-4c49-a0a7-d4a49f51f572" testId="1820a643-3d71-abad-9636-2b810c74ae19" testName="MotoTest9" computerName="ICLVDEVAP01" duration="00:00:00.5236126" startTime="2012-11-02T15:49:53.7149121+00:00" endTime="2012-11-02T15:49:54.2453359+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f8076cee-b58d-4c49-a0a7-d4a49f51f572">
+      <Output>
+        <DebugTrace>W, 484, 69, 2012/11/02, 15:49:53.714, 1572039122654, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 484, 69, 2012/11/02, 15:49:53.730, 1572039245036, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 484, 69, 2012/11/02, 15:49:53.730, 1572039248586, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 484, 69, 2012/11/02, 15:49:54.245, 1572046576270, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 484, 69, 2012/11/02, 15:49:54.245, 1572046577495, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 484, 69, 2012/11/02, 15:49:54.245, 1572046578204, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\TestProject7\TestProject7\UIMap.Designer.cs:line 1962
+   at TestProject7.TamAutotest.StartTest() in C:\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

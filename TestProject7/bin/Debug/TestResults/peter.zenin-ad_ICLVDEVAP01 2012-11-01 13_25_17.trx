@@ -1,0 +1,747 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="10e5439d-f119-4c69-bf3f-83bb0a92da17" name="peter.zenin-ad@ICLVDEVAP01 2012-11-01 13:25:17" runUser="INSUR-E\peter.zenin-ad" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="2f1501f1-31b5-427f-adb5-c123e8d3db24">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="peter.zenin-ad_ICLVDEVAP01 2012-11-01 13_25_17" />
+  </TestSettings>
+  <Times creation="2012-11-01T13:25:17.6346162+00:00" queuing="2012-11-01T13:25:17.9376465+00:00" start="2012-11-01T13:25:18.0076535+00:00" finish="2012-11-01T13:28:14.7223232+00:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="11" executed="11" error="0" failed="11" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="HouseTest5" storage="testproject7.dll" id="99f569ef-86f3-fa96-82c3-e9993245d049">
+      <Execution id="7a0a9dc6-1c28-4640-8108-0e70f0da337c" />
+      <TestMethod codeBase="C:/Users/peter.zenin-ad/Desktop/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest5" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest6" storage="testproject7.dll" id="aa8325da-50fe-092e-bd85-bbb5f1ac650a">
+      <Execution id="1ce31074-1d48-4e0a-8a08-dfa4d1d95543" />
+      <TestMethod codeBase="C:/Users/peter.zenin-ad/Desktop/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest6" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest3" storage="testproject7.dll" id="aa9bc056-c0ff-30da-3884-b0617a17e15e">
+      <Execution id="d5e03ee9-da4e-4ae9-95bc-c1bb75891c86" />
+      <TestMethod codeBase="C:/Users/peter.zenin-ad/Desktop/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest3" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest10" storage="testproject7.dll" id="98368514-c48e-be24-398b-d9342dd6b274">
+      <Execution id="362a3ad0-bc56-4a2a-92a1-2e95390437d1" />
+      <TestMethod codeBase="C:/Users/peter.zenin-ad/Desktop/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest10" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest7" storage="testproject7.dll" id="cad41ea6-4986-f170-1def-22ab50e0fb0a">
+      <Execution id="d8acac4a-72e3-446a-ad05-d8e2e34c6e63" />
+      <TestMethod codeBase="C:/Users/peter.zenin-ad/Desktop/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest7" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest8" storage="testproject7.dll" id="f90b30ce-fb72-514e-f606-6c0b8cb3f354">
+      <Execution id="c1a5e379-e5a9-48bb-88b1-a34bdafe8656" />
+      <TestMethod codeBase="C:/Users/peter.zenin-ad/Desktop/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest8" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest4" storage="testproject7.dll" id="ff0c96a1-2fee-7235-6d80-2186de4b80b7">
+      <Execution id="78231901-984b-4ce0-93cc-92895de20236" />
+      <TestMethod codeBase="C:/Users/peter.zenin-ad/Desktop/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest4" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest9" storage="testproject7.dll" id="b4c07ca4-d489-a213-d4df-1c267d591a59">
+      <Execution id="c3297c30-0820-4ced-86d0-06092056d56d" />
+      <TestMethod codeBase="C:/Users/peter.zenin-ad/Desktop/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest9" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest11" storage="testproject7.dll" id="1f5cea9c-51f4-0379-9851-579f986f33b2">
+      <Execution id="73e58cbc-bcb0-4716-8aa4-284d1bb9df0a" />
+      <TestMethod codeBase="C:/Users/peter.zenin-ad/Desktop/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest11" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest1" storage="testproject7.dll" id="64ea79e0-cb1d-9a10-db69-a15b7769e7d8">
+      <Execution id="1a7d527c-2da1-413e-833a-440f2ed34c01" />
+      <TestMethod codeBase="C:/Users/peter.zenin-ad/Desktop/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest1" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseTest2" storage="testproject7.dll" id="8f5b1340-58a6-e129-3b7d-c88835b7065d">
+      <Execution id="96972c2d-40ec-4509-afa2-fcc2424df190" />
+      <TestMethod codeBase="C:/Users/peter.zenin-ad/Desktop/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseTest2" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="64ea79e0-cb1d-9a10-db69-a15b7769e7d8" executionId="1a7d527c-2da1-413e-833a-440f2ed34c01" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="98368514-c48e-be24-398b-d9342dd6b274" executionId="362a3ad0-bc56-4a2a-92a1-2e95390437d1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1f5cea9c-51f4-0379-9851-579f986f33b2" executionId="73e58cbc-bcb0-4716-8aa4-284d1bb9df0a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8f5b1340-58a6-e129-3b7d-c88835b7065d" executionId="96972c2d-40ec-4509-afa2-fcc2424df190" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aa9bc056-c0ff-30da-3884-b0617a17e15e" executionId="d5e03ee9-da4e-4ae9-95bc-c1bb75891c86" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ff0c96a1-2fee-7235-6d80-2186de4b80b7" executionId="78231901-984b-4ce0-93cc-92895de20236" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="99f569ef-86f3-fa96-82c3-e9993245d049" executionId="7a0a9dc6-1c28-4640-8108-0e70f0da337c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aa8325da-50fe-092e-bd85-bbb5f1ac650a" executionId="1ce31074-1d48-4e0a-8a08-dfa4d1d95543" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cad41ea6-4986-f170-1def-22ab50e0fb0a" executionId="d8acac4a-72e3-446a-ad05-d8e2e34c6e63" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f90b30ce-fb72-514e-f606-6c0b8cb3f354" executionId="c1a5e379-e5a9-48bb-88b1-a34bdafe8656" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b4c07ca4-d489-a213-d4df-1c267d591a59" executionId="c3297c30-0820-4ced-86d0-06092056d56d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="1a7d527c-2da1-413e-833a-440f2ed34c01" testId="64ea79e0-cb1d-9a10-db69-a15b7769e7d8" testName="HouseTest1" computerName="ICLVDEVAP01" duration="00:02:16.4367538" startTime="2012-11-01T13:25:18.0086536+00:00" endTime="2012-11-01T13:27:34.7643278+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1a7d527c-2da1-413e-833a-440f2ed34c01">
+      <Output>
+        <DebugTrace>W, 4032, 13, 2012/11/01, 13:25:18.613, 206382023040, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 4032, 13, 2012/11/01, 13:25:19.501, 206394730616, QTAgent32.exe, &lt;a class=success&gt;Playback - {1} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:19.735, 206398077125, QTAgent32.exe, &lt;a class=success&gt;Playback - {2} [SUCCESS] SendKeys "[*]" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:20.435, 206408103046, QTAgent32.exe, &lt;a class=success&gt;Playback - {3} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:20.673, 206411514288, QTAgent32.exe, &lt;a class=success&gt;Playback - {4} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:21.196, 206418998300, QTAgent32.exe, &lt;a class=success&gt;Playback - {5} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Clients &amp; Files'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:21.429, 206422340826, QTAgent32.exe, &lt;a class=success&gt;Playback - {6} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Clients &amp; Files'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:22.079, 206431629845, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 4032, 13, 2012/11/01, 13:25:22.079, 206431632718, QTAgent32.exe, &lt;a class=failure&gt;Playback - {7} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:25:22.201, 206433375653, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPFFC9A.png
+\0
+W, 4032, 13, 2012/11/01, 13:25:22.201, 206433377673, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 4032, 13, 2012/11/01, 13:25:22.201, 206433380928, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 670 ms. Expected it to take maximum 500 ms.
+W, 4032, 13, 2012/11/01, 13:25:40.296, 206692466977, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 4032, 13, 2012/11/01, 13:25:40.296, 206692470014, QTAgent32.exe, &lt;a class=failure&gt;Playback - {8} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:25:40.408, 206694072829, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF43C8.png
+\0
+W, 4032, 13, 2012/11/01, 13:25:40.408, 206694074842, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 4032, 13, 2012/11/01, 13:25:40.408, 206694077675, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 18206 ms. Expected it to take maximum 500 ms.
+W, 4032, 13, 2012/11/01, 13:25:40.894, 206701025113, QTAgent32.exe, Playback - [WARNING] Internal warning: Window with Class "ThunderRT6MDIForm" and Title "Customer: txt1 tdsfs" was not found, so similar window with Class "ThunderRT6MDIForm" and Title "Customer: autotest" was accepted
+\0
+W, 4032, 13, 2012/11/01, 13:25:42.189, 206719552868, QTAgent32.exe, Playback - [WARNING] Internal warning: Incorrect flag set for InvokeProgrammaticAction\0
+W, 4032, 13, 2012/11/01, 13:25:42.307, 206721248256, QTAgent32.exe, &lt;a class=success&gt;Playback - {9} [SUCCESS] SetValueAsComboBox "Customers" - "[MSAA, VisibleOnly]ControlType='ComboBox'"  &lt; SetValueAsComboBox, set by clicking on the item in the list box &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:42.747, 206727544607, QTAgent32.exe, &lt;a class=success&gt;Playback - {10} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Add'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:43.045, 206731812070, QTAgent32.exe, &lt;a class=success&gt;Playback - {11} [SUCCESS] SendKeys "autotest" - "[MSAA, VisibleOnly]ControlType='RadioButton' &amp;&amp; Name='Personal Lines'"
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:25:43.172, 206733638682, QTAgent32.exe, LoadLibrary() : Unable to find the resource 37382 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 4032, 13, 2012/11/01, 13:25:43.173, 206733644579, QTAgent32.exe, LoadLibrary() : Unable to find the resource 41728 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 4032, 13, 2012/11/01, 13:25:43.173, 206733646835, QTAgent32.exe, LoadLibrary() : Unable to find the resource 8131 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 4032, 13, 2012/11/01, 13:25:43.173, 206733649051, QTAgent32.exe, LoadLibrary() : Unable to find the resource 8131 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 4032, 13, 2012/11/01, 13:25:43.173, 206733652877, QTAgent32.exe, LoadLibrary() : Unable to find the resource 8131 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 4032, 13, 2012/11/01, 13:25:43.174, 206733657714, QTAgent32.exe, LoadLibrary() : Unable to find the resource 803 from assembly C:\Windows\system32\en-US\user32.dll.mui: Error1814
+W, 4032, 13, 2012/11/01, 13:25:43.426, 206737271861, QTAgent32.exe, &lt;a class=success&gt;Playback - {12} [SUCCESS] SetValueAsEditBox "autotest" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:43.707, 206741299543, QTAgent32.exe, &lt;a class=success&gt;Playback - {13} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:44.074, 206746545710, QTAgent32.exe, &lt;a class=success&gt;Playback - {14} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Yes'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:44.260, 206749208921, QTAgent32.exe, &lt;a class=success&gt;Playback - {15} [SUCCESS] SendKeys "^{HOME}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:25:44.262, 206749236960, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 4032, 13, 2012/11/01, 13:25:44.326, 206750154046, QTAgent32.exe, &lt;a class=success&gt;Playback - {16} [SUCCESS] SendKeys "^+{END}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:25:44.326, 206750156462, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 4032, 13, 2012/11/01, 13:25:44.339, 206750340622, QTAgent32.exe, &lt;a class=success&gt;Playback - {17} [SUCCESS] SendKeys "{DELETE}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:44.392, 206751103056, QTAgent32.exe, &lt;a class=success&gt;Playback - {18} [SUCCESS] SetValueAsEditBox "1" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:44.577, 206753748241, QTAgent32.exe, &lt;a class=success&gt;Playback - {19} [SUCCESS] SendKeys "^{HOME}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:25:44.577, 206753750859, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 4032, 13, 2012/11/01, 13:25:44.630, 206754506854, QTAgent32.exe, &lt;a class=success&gt;Playback - {20} [SUCCESS] SendKeys "^+{END}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:25:44.630, 206754508898, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 4032, 13, 2012/11/01, 13:25:44.643, 206754693525, QTAgent32.exe, &lt;a class=success&gt;Playback - {21} [SUCCESS] SendKeys "{DELETE}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:44.700, 206755512913, QTAgent32.exe, &lt;a class=success&gt;Playback - {22} [SUCCESS] SetValueAsEditBox "1" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:45.007, 206759907535, QTAgent32.exe, &lt;a class=success&gt;Playback - {23} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:45.315, 206764320949, QTAgent32.exe, &lt;a class=success&gt;Playback - {24} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:45.675, 206769477147, QTAgent32.exe, &lt;a class=success&gt;Playback - {25} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Add'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:45.982, 206773872140, QTAgent32.exe, &lt;a class=success&gt;Playback - {26} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:48.210, 206805769003, QTAgent32.exe, &lt;a class=success&gt;Playback - {27} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly,Window]ControlType='Window' &amp;&amp; ClassName='ThunderRT6TextBox'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:48.486, 206809725015, QTAgent32.exe, &lt;a class=success&gt;Playback - {28} [SUCCESS] SetValueAsEditBox "HOME" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:48.790, 206814076044, QTAgent32.exe, &lt;a class=success&gt;Playback - {29} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:49.021, 206817391406, QTAgent32.exe, &lt;a class=success&gt;Playback - {30} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Options'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:49.142, 206819119595, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 4032, 13, 2012/11/01, 13:25:49.319, 206821648214, QTAgent32.exe, &lt;a class=success&gt;Playback - {31} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='Links'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:49.419, 206823085017, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 4032, 13, 2012/11/01, 13:25:49.591, 206825543608, QTAgent32.exe, &lt;a class=success&gt;Playback - {32} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='3rd Party Integration'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:49.691, 206826980716, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 4032, 13, 2012/11/01, 13:25:49.853, 206829296597, QTAgent32.exe, &lt;a class=success&gt;Playback - {33} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='Quote Select List'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:51.776, 206856814197, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 1783 ms. Expected it to take maximum 500 ms.
+W, 4032, 13, 2012/11/01, 13:25:52.266, 206863842097, QTAgent32.exe, &lt;a class=success&gt;Playback - {34} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:55.772, 206914033793, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 3368 ms. Expected it to take maximum 500 ms.
+W, 4032, 13, 2012/11/01, 13:25:55.967, 206916832925, QTAgent32.exe, &lt;a class=success&gt;Playback - {35} [SUCCESS] SetValueAsEditBox "test1" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:56.250, 206920883614, QTAgent32.exe, &lt;a class=success&gt;Playback - {36} [SUCCESS] SetValueAsEditBox "test" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:56.428, 206923427520, QTAgent32.exe, &lt;a class=success&gt;Playback - {37} [SUCCESS] SendKeys "^{HOME}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:25:56.428, 206923430021, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 4032, 13, 2012/11/01, 13:25:56.482, 206924201179, QTAgent32.exe, &lt;a class=success&gt;Playback - {38} [SUCCESS] SendKeys "^+{END}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:25:56.482, 206924203390, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 4032, 13, 2012/11/01, 13:25:56.495, 206924388160, QTAgent32.exe, &lt;a class=success&gt;Playback - {39} [SUCCESS] SendKeys "{DELETE}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:56.617, 206926139758, QTAgent32.exe, &lt;a class=success&gt;Playback - {40} [SUCCESS] SetValueAsEditBox "test" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:56.942, 206930797245, QTAgent32.exe, Playback - [WARNING] Internal warning: Incorrect flag set for InvokeProgrammaticAction\0
+W, 4032, 13, 2012/11/01, 13:25:57.061, 206932490927, QTAgent32.exe, &lt;a class=success&gt;Playback - {41} [SUCCESS] SetValueAsComboBox "Account Director" - "[MSAA, VisibleOnly]ControlType='ComboBox'"  &lt; SetValueAsComboBox, set by clicking on the item in the list box &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:57.382, 206937098995, QTAgent32.exe, Playback - [WARNING] Internal warning: Incorrect flag set for InvokeProgrammaticAction\0
+W, 4032, 13, 2012/11/01, 13:25:57.501, 206938790710, QTAgent32.exe, &lt;a class=success&gt;Playback - {42} [SUCCESS] SetValueAsComboBox "Advertising" - "[MSAA, VisibleOnly]ControlType='ComboBox'"  &lt; SetValueAsComboBox, set by clicking on the item in the list box &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:57.824, 206943421641, QTAgent32.exe, &lt;a class=success&gt;Playback - {43} [SUCCESS] SetValueAsEditBox "160589" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:58.057, 206946756266, QTAgent32.exe, &lt;a class=success&gt;Playback - {44} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:25:58.377, 206951339460, QTAgent32.exe, &lt;a class=success&gt;Playback - {45} [SUCCESS] SetValueAsEditBox "B338TH" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:00.602, 206983195846, QTAgent32.exe, &lt;a class=success&gt;Playback - {46} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Lookup...'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:00.855, 206986818911, QTAgent32.exe, &lt;a class=success&gt;Playback - {47} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:01.170, 206991326681, QTAgent32.exe, &lt;a class=success&gt;Playback - {48} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:01.525, 206996402021, QTAgent32.exe, &lt;a class=success&gt;Playback - {49} [SUCCESS] SetValueAsEditBox "1989" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:01.792, 207000220654, QTAgent32.exe, &lt;a class=success&gt;Playback - {50} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:02.013, 207003390232, QTAgent32.exe, &lt;a class=success&gt;Playback - {51} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:02.247, 207006741994, QTAgent32.exe, &lt;a class=success&gt;Playback - {52} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:02.593, 207011694482, QTAgent32.exe, &lt;a class=success&gt;Playback - {53} [SUCCESS] SetValueAsEditBox "2345" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:02.945, 207016734838, QTAgent32.exe, &lt;a class=success&gt;Playback - {54} [SUCCESS] SetValueAsEditBox "2000" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:03.303, 207021861078, QTAgent32.exe, &lt;a class=success&gt;Playback - {55} [SUCCESS] SetValueAsEditBox "2000" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:03.530, 207025108805, QTAgent32.exe, &lt;a class=success&gt;Playback - {56} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:03.892, 207030295612, QTAgent32.exe, &lt;a class=success&gt;Playback - {57} [SUCCESS] SetValueAsEditBox "2345" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:04.140, 207033844612, QTAgent32.exe, &lt;a class=success&gt;Playback - {58} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:04.380, 207037278221, QTAgent32.exe, &lt;a class=success&gt;Playback - {59} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Next &gt;'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:04.681, 207041588974, QTAgent32.exe, &lt;a class=success&gt;Playback - {60} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Quote'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:05.104, 207047655133, QTAgent32.exe, &lt;a class=success&gt;Playback - {61} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='No'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:11.564, 207140129501, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 6357 ms. Expected it to take maximum 500 ms.
+W, 4032, 13, 2012/11/01, 13:26:11.692, 207141965565, QTAgent32.exe, &lt;a class=success&gt;Playback - {62} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Client'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:13.379, 207166122757, QTAgent32.exe, &lt;a class=success&gt;Playback - {63} [SUCCESS] SendKeys "{End}" - "[MSAA, VisibleOnly]ControlType='Client'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:14.719, 207185312292, QTAgent32.exe, Msaa.MsaaElement() took more time. Total time taken 215 ms for element 2360692
+W, 4032, 13, 2012/11/01, 13:26:14.851, 207187204183, QTAgent32.exe, &lt;a class=success&gt;Playback - {64} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Accept'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:15.105, 207190839744, QTAgent32.exe, &lt;a class=success&gt;Playback - {65} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Yes'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:17.104, 207219467686, QTAgent32.exe, &lt;a class=success&gt;Playback - {66} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:28.792, 207386808772, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Save the file as' &amp;&amp; ClassName='#32770'
+\0
+E, 4032, 13, 2012/11/01, 13:26:28.792, 207386811686, QTAgent32.exe, &lt;a class=failure&gt;Playback - {67} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Save the file as' &amp;&amp; ClassName='#32770') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:26:28.893, 207388258952, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF12E.png
+\0
+W, 4032, 13, 2012/11/01, 13:26:28.893, 207388261112, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 4032, 13, 2012/11/01, 13:26:28.894, 207388264306, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 11687 ms. Expected it to take maximum 500 ms.
+W, 4032, 13, 2012/11/01, 13:26:47.948, 207661073804, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Save the file as' &amp;&amp; ClassName='#32770'
+\0
+E, 4032, 13, 2012/11/01, 13:26:47.948, 207661076474, QTAgent32.exe, &lt;a class=failure&gt;Playback - {68} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Save the file as' &amp;&amp; ClassName='#32770') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:26:48.048, 207662509580, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF4C04.png
+\0
+W, 4032, 13, 2012/11/01, 13:26:48.048, 207662511618, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 4032, 13, 2012/11/01, 13:26:48.048, 207662514383, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 19153 ms. Expected it to take maximum 500 ms.
+W, 4032, 13, 2012/11/01, 13:26:51.284, 207708844115, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 4032, 13, 2012/11/01, 13:26:52.702, 207729132836, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Save the file as' &amp;&amp; ClassName='#32770'
+\0
+E, 4032, 13, 2012/11/01, 13:26:52.702, 207729135794, QTAgent32.exe, &lt;a class=failure&gt;Playback - {69} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Save the file as' &amp;&amp; ClassName='#32770') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:26:52.802, 207730570252, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF5E9B.png
+\0
+W, 4032, 13, 2012/11/01, 13:26:52.802, 207730572332, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 4032, 13, 2012/11/01, 13:26:52.803, 207730575743, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 4753 ms. Expected it to take maximum 500 ms.
+E, 4032, 13, 2012/11/01, 13:26:52.804, 207730589857, QTAgent32.exe, Exception: System.Runtime.InteropServices.COMException
+	Message: Error HRESULT E_FAIL has been returned from a call to a COM component.
+	Stack Trace:    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+	BaseExceptionMessage: Error HRESULT E_FAIL has been returned from a call to a COM component.
+
+E, 4032, 13, 2012/11/01, 13:26:52.955, 207732750408, QTAgent32.exe, AL: Playback Error: Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotFoundException: The playback failed to find the control with the given search properties. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Window'
+Name:  'Save the file as'
+ClassName:  '#32770'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindFromPartialQueryId(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+   --- End of inner exception stack trace ---
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapControlNotFoundException(COMException ex, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowComException(COMException innerException, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.SearchTopLevelWindow(ISearchArgument topLevelSearchArg, String topLevelElementQueryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTitleUpdatedTopLevelWindow(ISearchArgument topLevelSearchArg, String queryId, IList`1 windowTitles)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTopLevelElement(Boolean useCache, Boolean useCacheOnly, ISearchArgument searchArg, IList`1 windowTitles, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetElement(Boolean useCache, ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.Search(ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindInternal()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindControlIfNecessary()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+W, 4032, 13, 2012/11/01, 13:26:54.568, 207755849613, QTAgent32.exe, Playback - [WARNING] Internal warning: Element "[MSAA, VisibleOnly]ControlType='Window' &amp;&amp; ControlId='32770'" was not found, so all intermediate elements were ignored. To improve performance replace this element Id with another Id or exclude it from QueryId. If this element is the target element, replace or remove intermediate elements
+\0
+W, 4032, 13, 2012/11/01, 13:26:55.115, 207763679818, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 2048 ms. Expected it to take maximum 500 ms.
+W, 4032, 13, 2012/11/01, 13:26:55.281, 207766067160, QTAgent32.exe, &lt;a class=success&gt;Playback - {70} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Cancel'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:26:56.884, 207789011825, QTAgent32.exe, Playback - [WARNING] Internal warning: Element "[MSAA, VisibleOnly]ControlType='Window' &amp;&amp; ControlId='32769'" was not found, so all intermediate elements were ignored. To improve performance replace this element Id with another Id or exclude it from QueryId. If this element is the target element, replace or remove intermediate elements
+\0
+W, 4032, 13, 2012/11/01, 13:26:57.407, 207796508005, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 2025 ms. Expected it to take maximum 500 ms.
+W, 4032, 13, 2012/11/01, 13:26:57.531, 207798281394, QTAgent32.exe, &lt;a class=success&gt;Playback - {71} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Cancel'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:27:06.797, 207930944623, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 4032, 13, 2012/11/01, 13:27:06.797, 207930947488, QTAgent32.exe, &lt;a class=failure&gt;Playback - {72} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:27:06.899, 207932411650, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF95A3.png
+\0
+W, 4032, 13, 2012/11/01, 13:27:06.900, 207932414137, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 4032, 13, 2012/11/01, 13:27:06.900, 207932418007, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 9266 ms. Expected it to take maximum 500 ms.
+W, 4032, 13, 2012/11/01, 13:27:09.140, 207964493557, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 4032, 13, 2012/11/01, 13:27:09.140, 207964497159, QTAgent32.exe, &lt;a class=failure&gt;Playback - {73} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:27:09.242, 207965952155, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF9ED8.png
+\0
+W, 4032, 13, 2012/11/01, 13:27:09.242, 207965954315, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 4032, 13, 2012/11/01, 13:27:09.242, 207965957228, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 2342 ms. Expected it to take maximum 500 ms.
+W, 4032, 13, 2012/11/01, 13:27:13.876, 208032295658, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 4032, 13, 2012/11/01, 13:27:13.876, 208032298641, QTAgent32.exe, &lt;a class=failure&gt;Playback - {74} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:27:13.980, 208033791826, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPFB150.png
+\0
+W, 4032, 13, 2012/11/01, 13:27:13.981, 208033794083, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 4032, 13, 2012/11/01, 13:27:13.981, 208033796914, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 4737 ms. Expected it to take maximum 500 ms.
+E, 4032, 13, 2012/11/01, 13:27:13.981, 208033798648, QTAgent32.exe, Exception: System.Runtime.InteropServices.COMException
+	Message: Error HRESULT E_FAIL has been returned from a call to a COM component.
+	Stack Trace:    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+	BaseExceptionMessage: Error HRESULT E_FAIL has been returned from a call to a COM component.
+
+E, 4032, 13, 2012/11/01, 13:27:13.981, 208033803704, QTAgent32.exe, Window 2622138 not responding. Last Win32 error 0
+E, 4032, 13, 2012/11/01, 13:27:13.982, 208033809637, QTAgent32.exe, GetClassName for handle 2622138 failed
+E, 4032, 13, 2012/11/01, 13:27:13.982, 208033817452, QTAgent32.exe, Window 2622138 not responding. Last Win32 error 1400
+E, 4032, 13, 2012/11/01, 13:27:13.984, 208033839028, QTAgent32.exe, Window 2622138 not responding. Last Win32 error 1400
+E, 4032, 13, 2012/11/01, 13:27:13.984, 208033840165, QTAgent32.exe, GetClassName for handle 2622138 failed
+E, 4032, 13, 2012/11/01, 13:27:13.984, 208033840958, QTAgent32.exe, GetClassName for handle 2622138 failed
+W, 4032, 13, 2012/11/01, 13:27:23.215, 208166005639, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: autotest autotest' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 4032, 13, 2012/11/01, 13:27:23.215, 208166008513, QTAgent32.exe, &lt;a class=failure&gt;Playback - {75} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: autotest autotest' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:27:23.315, 208167440044, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPFD5D1.png
+\0
+W, 4032, 13, 2012/11/01, 13:27:23.315, 208167442189, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 4032, 13, 2012/11/01, 13:27:23.315, 208167445125, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 9330 ms. Expected it to take maximum 500 ms.
+W, 4032, 13, 2012/11/01, 13:27:25.549, 208199426010, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: autotest autotest' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 4032, 13, 2012/11/01, 13:27:25.549, 208199428995, QTAgent32.exe, &lt;a class=failure&gt;Playback - {76} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: autotest autotest' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:27:25.649, 208200860041, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPFDEE6.png
+\0
+W, 4032, 13, 2012/11/01, 13:27:25.649, 208200862196, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 4032, 13, 2012/11/01, 13:27:25.649, 208200865198, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 2333 ms. Expected it to take maximum 500 ms.
+W, 4032, 13, 2012/11/01, 13:27:30.286, 208267255482, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: autotest autotest' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 4032, 13, 2012/11/01, 13:27:30.286, 208267258352, QTAgent32.exe, &lt;a class=failure&gt;Playback - {77} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: autotest autotest' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 4032, 13, 2012/11/01, 13:27:30.384, 208268659046, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPFF16E.png
+\0
+W, 4032, 13, 2012/11/01, 13:27:30.384, 208268661156, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 4032, 13, 2012/11/01, 13:27:30.384, 208268664109, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 4734 ms. Expected it to take maximum 500 ms.
+E, 4032, 13, 2012/11/01, 13:27:30.384, 208268665867, QTAgent32.exe, Exception: System.Runtime.InteropServices.COMException
+	Message: Error HRESULT E_FAIL has been returned from a call to a COM component.
+	Stack Trace:    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+	BaseExceptionMessage: Error HRESULT E_FAIL has been returned from a call to a COM component.
+
+E, 4032, 13, 2012/11/01, 13:27:30.385, 208268670580, QTAgent32.exe, Window 2622138 not responding. Last Win32 error 0
+E, 4032, 13, 2012/11/01, 13:27:30.385, 208268674415, QTAgent32.exe, Window 2622138 not responding. Last Win32 error 1400
+E, 4032, 13, 2012/11/01, 13:27:30.385, 208268679044, QTAgent32.exe, Window 2622138 not responding. Last Win32 error 1400
+E, 4032, 13, 2012/11/01, 13:27:30.385, 208268680210, QTAgent32.exe, GetClassName for handle 2622138 failed
+E, 4032, 13, 2012/11/01, 13:27:30.386, 208268681217, QTAgent32.exe, GetClassName for handle 2622138 failed
+E, 4032, 13, 2012/11/01, 13:27:30.486, 208270122320, QTAgent32.exe, AL: Playback Error: Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotFoundException: Unable to find the top level element of the control ---&gt; Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotFoundException: The playback failed to find the control with the given search properties. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Window'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindFromPartialQueryId(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+   --- End of inner exception stack trace ---
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapControlNotFoundException(COMException ex, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowComException(COMException innerException, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.SearchTopLevelWindow(ISearchArgument topLevelSearchArg, String topLevelElementQueryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.SearchUsingMultipleTitles(ISearchArgument topLevelSearchArg, QueryId topLevelQueryId, IList`1 windowTitles)
+   --- End of inner exception stack trace ---
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.SearchUsingMultipleTitles(ISearchArgument topLevelSearchArg, QueryId topLevelQueryId, IList`1 windowTitles)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTitleUpdatedTopLevelWindow(ISearchArgument topLevelSearchArg, String queryId, IList`1 windowTitles)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTopLevelElement(Boolean useCache, Boolean useCacheOnly, ISearchArgument searchArg, IList`1 windowTitles, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetElement(Boolean useCache, ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.Search(ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindInternal()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindControlIfNecessary()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+W, 4032, 13, 2012/11/01, 13:27:30.486, 208270124196, QTAgent32.exe, PlaybackErrorHandler: Ignoring exception as ContinueOnError is set.
+W, 4032, 13, 2012/11/01, 13:27:30.631, 208272195500, QTAgent32.exe, &lt;a class=success&gt;Playback - {78} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Close'"
+\0&lt;/a&gt;
+W, 4032, 13, 2012/11/01, 13:27:34.746, 208331106113, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 4032, 13, 2012/11/01, 13:27:34.746, 208331107313, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 4032, 13, 2012/11/01, 13:27:34.747, 208331113452, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method TestProject7.TamAutotest.HouseTest1 threw exception: 
+Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotFoundException: The playback failed to find the control with the given search properties. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Window'
+Name:  'Save the file as'
+ClassName:  '#32770'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindFromPartialQueryId(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+ --- End of inner exception stack trace ---
+    at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapControlNotFoundException(COMException ex, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowComException(COMException innerException, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.SearchTopLevelWindow(ISearchArgument topLevelSearchArg, String topLevelElementQueryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTitleUpdatedTopLevelWindow(ISearchArgument topLevelSearchArg, String queryId, IList`1 windowTitles)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTopLevelElement(Boolean useCache, Boolean useCacheOnly, ISearchArgument searchArg, IList`1 windowTitles, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetElement(Boolean useCache, ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.Search(ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindInternal()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindControlIfNecessary()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click(UITestControl control, Point relativeCoordinate)
+   at TestProject7.UIMap.HomeAcceptPolicy() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\UIMap.Designer.cs:line 577
+   at TestProject7.TamAutotest.HouseTest1() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\CodedUITest1.cs:line 554
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="ICLVDEVAP01\HouseTest1.png" />
+      </ResultFiles>
+      <ExtensionResult>Exception has been thrown by the target of an invocation.</ExtensionResult>
+    </UnitTestResult>
+    <UnitTestResult executionId="362a3ad0-bc56-4a2a-92a1-2e95390437d1" testId="98368514-c48e-be24-398b-d9342dd6b274" testName="HouseTest10" computerName="ICLVDEVAP01" duration="00:00:35.2065814" startTime="2012-11-01T13:27:34.7753289+00:00" endTime="2012-11-01T13:28:09.9868497+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="362a3ad0-bc56-4a2a-92a1-2e95390437d1">
+      <Output>
+        <DebugTrace>W, 4032, 22, 2012/11/01, 13:27:34.780, 208331594544, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 4032, 22, 2012/11/01, 13:27:44.511, 208470913242, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='The Agency Manager Signon' &amp;&amp; ClassName='ThunderRT6FormDC'
+\0
+E, 4032, 22, 2012/11/01, 13:27:44.511, 208470916155, QTAgent32.exe, &lt;a class=failure&gt;Playback - {1} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='The Agency Manager Signon' &amp;&amp; ClassName='ThunderRT6FormDC') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 4032, 22, 2012/11/01, 13:27:44.619, 208472459216, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF2902.png
+\0
+W, 4032, 22, 2012/11/01, 13:27:44.619, 208472461307, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 4032, 22, 2012/11/01, 13:27:44.619, 208472464355, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 9328 ms. Expected it to take maximum 500 ms.
+W, 4032, 22, 2012/11/01, 13:28:02.945, 208734841076, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='The Agency Manager Signon' &amp;&amp; ClassName='ThunderRT6FormDC'
+\0
+E, 4032, 22, 2012/11/01, 13:28:02.945, 208734844157, QTAgent32.exe, &lt;a class=failure&gt;Playback - {2} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='The Agency Manager Signon' &amp;&amp; ClassName='ThunderRT6FormDC') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 4032, 22, 2012/11/01, 13:28:03.054, 208736410645, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF70FB.png
+\0
+W, 4032, 22, 2012/11/01, 13:28:03.055, 208736413010, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 4032, 22, 2012/11/01, 13:28:03.055, 208736415959, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 18434 ms. Expected it to take maximum 500 ms.
+W, 4032, 22, 2012/11/01, 13:28:07.577, 208801166589, QTAgent32.exe, Playback - [WARNING] Internal warning: Window with Class "ThunderRT6FormDC" and Title "The Agency Manager Signon" was not found, so similar window with Class "ThunderRT6FormDC" and Title "The Agency Manager" was accepted
+\0
+W, 4032, 22, 2012/11/01, 13:28:07.577, 208801171351, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 4522 ms. Expected it to take maximum 500 ms.
+W, 4032, 22, 2012/11/01, 13:28:09.080, 208822687279, QTAgent32.exe, Playback - [WARNING] Internal warning: Element "[MSAA, VisibleOnly]ControlType='Window' &amp;&amp; ControlId='7'" was not found, so all intermediate elements were ignored. To improve performance replace this element Id with another Id or exclude it from QueryId. If this element is the target element, replace or remove intermediate elements
+\0
+W, 4032, 22, 2012/11/01, 13:28:09.588, 208829971279, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 2010 ms. Expected it to take maximum 500 ms.
+W, 4032, 22, 2012/11/01, 13:28:09.709, 208831694914, QTAgent32.exe, &lt;a class=success&gt;Playback - {3} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 4032, 22, 2012/11/01, 13:28:09.977, 208835536644, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 4032, 22, 2012/11/01, 13:28:09.977, 208835537856, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 4032, 22, 2012/11/01, 13:28:09.977, 208835539002, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. System.ArgumentException: System.ArgumentException: The encoded string can only be used for a password..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.SendKeys(String keys, ModifierKeys modifierKeys, Boolean isEncoded, Boolean isUnicode)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SendKeys(String text, ModifierKeys modifierKeys, Boolean isEncoded, Boolean isUnicode)
+   at Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeysImplementation(UITestControl control, String text, ModifierKeys modifierKeys, Boolean isEncoded, Boolean isUnicode)
+   at Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeysImplementationWrapper(UITestControl control, String text, ModifierKeys modifierKeys, Boolean isEncoded, Boolean isUnicode)
+   at Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys(UITestControl control, String text, Boolean isEncoded)
+   at TestProject7.UIMap.Login_new() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\UIMap.Designer.cs:line 1961
+   at TestProject7.TamAutotest.StartTest() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="73e58cbc-bcb0-4716-8aa4-284d1bb9df0a" testId="1f5cea9c-51f4-0379-9851-579f986f33b2" testName="HouseTest11" computerName="ICLVDEVAP01" duration="00:00:00.5142295" startTime="2012-11-01T13:28:09.9918502+00:00" endTime="2012-11-01T13:28:10.5099020+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="73e58cbc-bcb0-4716-8aa4-284d1bb9df0a">
+      <Output>
+        <DebugTrace>W, 4032, 28, 2012/11/01, 13:28:09.996, 208835806971, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 4032, 28, 2012/11/01, 13:28:10.002, 208835885850, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 4032, 28, 2012/11/01, 13:28:10.002, 208835889376, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 4032, 28, 2012/11/01, 13:28:10.507, 208843120090, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 4032, 28, 2012/11/01, 13:28:10.507, 208843121370, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 4032, 28, 2012/11/01, 13:28:10.507, 208843122402, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\UIMap.Designer.cs:line 1955
+   at TestProject7.TamAutotest.StartTest() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="96972c2d-40ec-4509-afa2-fcc2424df190" testId="8f5b1340-58a6-e129-3b7d-c88835b7065d" testName="HouseTest2" computerName="ICLVDEVAP01" duration="00:00:00.5289681" startTime="2012-11-01T13:28:10.5149025+00:00" endTime="2012-11-01T13:28:11.0469557+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="96972c2d-40ec-4509-afa2-fcc2424df190">
+      <Output>
+        <DebugTrace>W, 4032, 34, 2012/11/01, 13:28:10.518, 208843284741, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 4032, 34, 2012/11/01, 13:28:10.523, 208843358061, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 4032, 34, 2012/11/01, 13:28:10.524, 208843362056, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 4032, 34, 2012/11/01, 13:28:11.044, 208850808417, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 4032, 34, 2012/11/01, 13:28:11.044, 208850809579, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 4032, 34, 2012/11/01, 13:28:11.044, 208850810236, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\UIMap.Designer.cs:line 1955
+   at TestProject7.TamAutotest.StartTest() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d5e03ee9-da4e-4ae9-95bc-c1bb75891c86" testId="aa9bc056-c0ff-30da-3884-b0617a17e15e" testName="HouseTest3" computerName="ICLVDEVAP01" duration="00:00:00.5124687" startTime="2012-11-01T13:28:11.0499560+00:00" endTime="2012-11-01T13:28:11.5660076+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d5e03ee9-da4e-4ae9-95bc-c1bb75891c86">
+      <Output>
+        <DebugTrace>W, 4032, 31, 2012/11/01, 13:28:11.054, 208850950459, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 4032, 31, 2012/11/01, 13:28:11.059, 208851021232, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 4032, 31, 2012/11/01, 13:28:11.059, 208851025139, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 4032, 31, 2012/11/01, 13:28:11.564, 208858244251, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 4032, 31, 2012/11/01, 13:28:11.564, 208858245583, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 4032, 31, 2012/11/01, 13:28:11.564, 208858246284, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\UIMap.Designer.cs:line 1955
+   at TestProject7.TamAutotest.StartTest() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="78231901-984b-4ce0-93cc-92895de20236" testId="ff0c96a1-2fee-7235-6d80-2186de4b80b7" testName="HouseTest4" computerName="ICLVDEVAP01" duration="00:00:00.5124533" startTime="2012-11-01T13:28:11.5700080+00:00" endTime="2012-11-01T13:28:12.0860596+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="78231901-984b-4ce0-93cc-92895de20236">
+      <Output>
+        <DebugTrace>W, 4032, 24, 2012/11/01, 13:28:11.575, 208858402148, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 4032, 24, 2012/11/01, 13:28:11.580, 208858476059, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 4032, 24, 2012/11/01, 13:28:11.580, 208858479723, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 4032, 24, 2012/11/01, 13:28:12.084, 208865691709, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 4032, 24, 2012/11/01, 13:28:12.084, 208865693059, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 4032, 24, 2012/11/01, 13:28:12.084, 208865693785, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\UIMap.Designer.cs:line 1955
+   at TestProject7.TamAutotest.StartTest() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7a0a9dc6-1c28-4640-8108-0e70f0da337c" testId="99f569ef-86f3-fa96-82c3-e9993245d049" testName="HouseTest5" computerName="ICLVDEVAP01" duration="00:00:00.5118873" startTime="2012-11-01T13:28:12.0950605+00:00" endTime="2012-11-01T13:28:12.6111121+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7a0a9dc6-1c28-4640-8108-0e70f0da337c">
+      <Output>
+        <DebugTrace>W, 4032, 41, 2012/11/01, 13:28:12.101, 208865928111, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 4032, 41, 2012/11/01, 13:28:12.106, 208866002115, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 4032, 41, 2012/11/01, 13:28:12.106, 208866005500, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 4032, 41, 2012/11/01, 13:28:12.609, 208873209504, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 4032, 41, 2012/11/01, 13:28:12.609, 208873210799, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 4032, 41, 2012/11/01, 13:28:12.609, 208873211525, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\UIMap.Designer.cs:line 1955
+   at TestProject7.TamAutotest.StartTest() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1ce31074-1d48-4e0a-8a08-dfa4d1d95543" testId="aa8325da-50fe-092e-bd85-bbb5f1ac650a" testName="HouseTest6" computerName="ICLVDEVAP01" duration="00:00:00.5128096" startTime="2012-11-01T13:28:12.6151125+00:00" endTime="2012-11-01T13:28:13.1311641+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1ce31074-1d48-4e0a-8a08-dfa4d1d95543">
+      <Output>
+        <DebugTrace>W, 4032, 47, 2012/11/01, 13:28:12.620, 208873364195, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 4032, 47, 2012/11/01, 13:28:12.625, 208873437201, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 4032, 47, 2012/11/01, 13:28:12.625, 208873440584, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 4032, 47, 2012/11/01, 13:28:13.129, 208880660613, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 4032, 47, 2012/11/01, 13:28:13.130, 208880661998, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 4032, 47, 2012/11/01, 13:28:13.130, 208880662719, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\UIMap.Designer.cs:line 1955
+   at TestProject7.TamAutotest.StartTest() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d8acac4a-72e3-446a-ad05-d8e2e34c6e63" testId="cad41ea6-4986-f170-1def-22ab50e0fb0a" testName="HouseTest7" computerName="ICLVDEVAP01" duration="00:00:00.5115450" startTime="2012-11-01T13:28:13.1361646+00:00" endTime="2012-11-01T13:28:13.6502160+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d8acac4a-72e3-446a-ad05-d8e2e34c6e63">
+      <Output>
+        <DebugTrace>W, 4032, 53, 2012/11/01, 13:28:13.140, 208880807871, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 4032, 53, 2012/11/01, 13:28:13.145, 208880878908, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 4032, 53, 2012/11/01, 13:28:13.145, 208880882212, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 4032, 53, 2012/11/01, 13:28:13.648, 208888086066, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 4032, 53, 2012/11/01, 13:28:13.648, 208888087399, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 4032, 53, 2012/11/01, 13:28:13.648, 208888088103, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\UIMap.Designer.cs:line 1955
+   at TestProject7.TamAutotest.StartTest() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c1a5e379-e5a9-48bb-88b1-a34bdafe8656" testId="f90b30ce-fb72-514e-f606-6c0b8cb3f354" testName="HouseTest8" computerName="ICLVDEVAP01" duration="00:00:00.5122980" startTime="2012-11-01T13:28:13.6542164+00:00" endTime="2012-11-01T13:28:14.1702680+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c1a5e379-e5a9-48bb-88b1-a34bdafe8656">
+      <Output>
+        <DebugTrace>W, 4032, 59, 2012/11/01, 13:28:13.659, 208888240388, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 4032, 59, 2012/11/01, 13:28:13.664, 208888313234, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 4032, 59, 2012/11/01, 13:28:13.664, 208888317035, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 4032, 59, 2012/11/01, 13:28:14.168, 208895531053, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 4032, 59, 2012/11/01, 13:28:14.168, 208895532314, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 4032, 59, 2012/11/01, 13:28:14.168, 208895532998, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\UIMap.Designer.cs:line 1955
+   at TestProject7.TamAutotest.StartTest() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c3297c30-0820-4ced-86d0-06092056d56d" testId="b4c07ca4-d489-a213-d4df-1c267d591a59" testName="HouseTest9" computerName="ICLVDEVAP01" duration="00:00:00.5120901" startTime="2012-11-01T13:28:14.1742684+00:00" endTime="2012-11-01T13:28:14.6893199+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c3297c30-0820-4ced-86d0-06092056d56d">
+      <Output>
+        <DebugTrace>W, 4032, 65, 2012/11/01, 13:28:14.178, 208895676155, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 4032, 65, 2012/11/01, 13:28:14.183, 208895750520, QTAgent32.exe, SLPlugin: Port 4503 already in use
+W, 4032, 65, 2012/11/01, 13:28:14.184, 208895754387, QTAgent32.exe, SLPlugin: Port 943 already in use
+W, 4032, 65, 2012/11/01, 13:28:14.687, 208902964454, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 4032, 65, 2012/11/01, 13:28:14.687, 208902965755, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+W, 4032, 65, 2012/11/01, 13:28:14.687, 208902966479, QTAgent32.exe, SLPlugin : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method TestProject7.TamAutotest.StartTest threw exception. Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: Microsoft.VisualStudio.TestTools.UITest.Extension.FailedToLaunchApplicationException: "The application cannot be started. This could be due to one of the following reasons:
+1) Another instance of the application is already running and only one instance can be running at a time.
+2) The application started another process and has now stopped. You may need to launch the process directly.
+3) You do not have sufficient privileges for this application." File: C:\APPLIED\WINTAM\HOMEBASE.EXE..</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.ThrowIfProcessNotValid(Process process)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Start(ProcessStartInfo startInfo)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest..ctor(String fileName, String alternateFileName, String arguments)
+   at Microsoft.VisualStudio.TestTools.UITesting.ApplicationUnderTest.Launch(String fileName, String alternateFileName)
+   at TestProject7.UIMap.Login_new() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\UIMap.Designer.cs:line 1955
+   at TestProject7.TamAutotest.StartTest() in C:\Users\peter.zenin-ad\Desktop\TestProject7\TestProject7\CodedUITest1.cs:line 30
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

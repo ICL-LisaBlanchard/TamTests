@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="c96a14a9-4d18-4e9d-b011-ee14ab9f65f1" name="testuser@ICLVDEVTL 2013-08-21 15:25:59" runUser="ICLVDEVTL\testuser" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="RemoteSetting" id="5c3ed885-967b-4862-a1a8-8a2764ec6e39">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment runDeploymentRoot="testuser_ICLVDEVTL 2013-08-21 15_25_59">
+      <DeploymentItem filename="C:\TestLinkFixture.dll" />
+      <DeploymentItem filename="C:\CookComputing.XmlRpcV2.dll" />
+      <DeploymentItem filename="C:\TestLinkAPI.dll" />
+    </Deployment>
+    <RemoteController name="ICLVDEVTL" />
+    <Execution location="Remote">
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+      </TestTypeSpecific>
+      <AgentRule name="New role 1">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-08-21T15:25:59.7812420+01:00" queuing="2013-08-21T15:26:12.6485286+01:00" start="2013-08-21T15:26:24.3186955+01:00" finish="2013-08-21T15:26:29.3311967+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="MotoCreateQuote" storage="c:\autotesttam1205\testproject7\bin\debug\ver1.dll" id="12cf66b2-123a-0bfa-9bf6-51ee204d7b79">
+      <Execution id="35c65f54-28de-463a-b3e1-ff507da64c9c" />
+      <TestMethod codeBase="C:/AutotestTam1205/TestProject7/bin/Debug/Ver1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Ver1.CodedUITest2, Ver1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCreateQuote" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="12cf66b2-123a-0bfa-9bf6-51ee204d7b79" executionId="35c65f54-28de-463a-b3e1-ff507da64c9c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="35c65f54-28de-463a-b3e1-ff507da64c9c" testId="12cf66b2-123a-0bfa-9bf6-51ee204d7b79" testName="MotoCreateQuote" computerName="ICLVDEVTM02" duration="00:00:00.8765989" startTime="2013-08-21T15:11:12.9091398+01:00" endTime="2013-08-21T15:11:15.6279850+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="35c65f54-28de-463a-b3e1-ff507da64c9c">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class Ver1.CodedUITest2: Microsoft.VisualStudio.TestTools.UITest.Extension.UITestException: Automation engine is unable to playback the test because it is not able to interact with the desktop.  This could happen if the computer running the test is locked or it’s remote session window is minimized.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITesting.Playback.ThrowIfScreenLockedOrRemoteSessionMinimized()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+   at Microsoft.VisualStudio.TestTools.UITesting.CodedUITestExtensionExecution.BeforeTestInitialize(Object sender, BeforeTestInitializeEventArgs e)
+   at Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecution.RaiseBeforeTestInitialize(BeforeTestInitializeEventArgs args)
+   at Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.RunInitializeMethod()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

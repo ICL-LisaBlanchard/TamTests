@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="f02aae5a-dd2c-41ac-bb77-368e040f985b" name="testuser@ICLVDEVTL 2013-08-21 15:33:41" runUser="ICLVDEVTL\testuser" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="RemoteSetting" id="5c3ed885-967b-4862-a1a8-8a2764ec6e39">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment runDeploymentRoot="testuser_ICLVDEVTL 2013-08-21 15_33_41">
+      <DeploymentItem filename="C:\TestLinkFixture.dll" />
+      <DeploymentItem filename="C:\CookComputing.XmlRpcV2.dll" />
+      <DeploymentItem filename="C:\TestLinkAPI.dll" />
+    </Deployment>
+    <RemoteController name="ICLVDEVTL" />
+    <Execution location="Remote">
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+      </TestTypeSpecific>
+      <AgentRule name="New role 1">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-08-21T15:33:41.8434436+01:00" queuing="2013-08-21T15:33:44.9147507+01:00" start="2013-08-21T15:33:47.0879680+01:00" finish="2013-08-21T15:33:51.4984090+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="MotoCreateQuote" storage="c:\autotesttam1205\testproject7\bin\debug\ver1.dll" id="12cf66b2-123a-0bfa-9bf6-51ee204d7b79">
+      <Execution id="98d32799-fac5-4cd7-9238-334cf3f686ba" />
+      <TestMethod codeBase="C:/AutotestTam1205/TestProject7/bin/Debug/Ver1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Ver1.CodedUITest2, Ver1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCreateQuote" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="12cf66b2-123a-0bfa-9bf6-51ee204d7b79" executionId="98d32799-fac5-4cd7-9238-334cf3f686ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="98d32799-fac5-4cd7-9238-334cf3f686ba" testId="12cf66b2-123a-0bfa-9bf6-51ee204d7b79" testName="MotoCreateQuote" computerName="ICLVDEVTM02" duration="00:00:00.2295880" startTime="2013-08-21T15:18:37.3975827+01:00" endTime="2013-08-21T15:18:37.9666549+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="98d32799-fac5-4cd7-9238-334cf3f686ba">
+      <Output>
+        <DebugTrace>W, 7992, 38, 2013/08/21, 15:18:37.924, 114068794025626, QTAgent32.exe, Playback - [WARNING] Internal warning: Playback engine is already initialized and SkipStepThreadEvent has been created. Cannot change the name of event after its is created.
+\0
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class Ver1.CodedUITest2: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

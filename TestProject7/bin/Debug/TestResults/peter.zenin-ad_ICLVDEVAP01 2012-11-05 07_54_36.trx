@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="1e09075c-82fd-4536-8cad-60ea08709d08" name="peter.zenin-ad@ICLVDEVAP01 2012-11-05 07:54:36" runUser="INSUR-E\peter.zenin-ad" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="3eb5e96b-2f53-4dca-87bf-6cb328d167ed">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="peter.zenin-ad_ICLVDEVAP01 2012-11-05 07_54_36" />
+  </TestSettings>
+  <Times creation="2012-11-05T07:54:36.8791331+00:00" queuing="2012-11-05T07:54:37.1599385+00:00" start="2012-11-05T07:54:37.2223397+00:00" finish="2012-11-05T07:56:05.1144299+00:00" />
+  <ResultSummary outcome="Aborted">
+    <Counters total="12" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="11" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="MotoTest11" storage="testproject7.dll" id="0f4d10f2-7035-3d68-762a-b62c4853fb8a">
+      <Execution id="3b18501f-fa8f-43d5-9aeb-b4337e375e50" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest11" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest8" storage="testproject7.dll" id="07cf762e-0596-8be3-6b38-ed80b9a02463">
+      <Execution id="637c2198-e508-4796-8821-8a9431c73d72" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest8" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest3" storage="testproject7.dll" id="450e4b2d-ad88-da3f-6d50-5c9a0ae1aa51">
+      <Execution id="18bfae6f-8ab7-46c9-9705-434e9f5c15e8" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest3" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest7" storage="testproject7.dll" id="e022376f-b2fb-4981-6140-b019eeaa6c94">
+      <Execution id="30fb2f3d-ad3d-4c70-810d-b0fbf9317730" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest7" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest12" storage="testproject7.dll" id="614f56be-e9c0-f1e7-ad65-1f0b7d6a0f1c">
+      <Execution id="c9684df4-7779-4f12-a282-1bafbd409300" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest12" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest5" storage="testproject7.dll" id="10042bab-44aa-7cea-8ac0-06cc3b3adbb3">
+      <Execution id="6dbfb896-2b3d-4015-a2fa-3c4f19e5565a" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest5" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest4" storage="testproject7.dll" id="4e743fde-a814-86c0-27fd-8728ac2cb692">
+      <Execution id="49b6ff6d-210d-42ac-96b1-416b5fa47c0a" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest4" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest2" storage="testproject7.dll" id="6a41f98c-60c7-3333-a5a3-d5d87b5c35c7">
+      <Execution id="3943cbff-cefc-42bf-89aa-87287883a1b9" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest2" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest6" storage="testproject7.dll" id="b7f68495-37f9-58f0-5c9b-6e190b9adaa8">
+      <Execution id="0411aefa-c473-47f2-9fee-a11db9b28ca6" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest6" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest10" storage="testproject7.dll" id="8efed318-945d-2a9d-e29d-a71a05da5660">
+      <Execution id="902543fe-c68e-43b9-b2ed-14751724ba0a" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest10" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest1" storage="testproject7.dll" id="9e6b6d54-b79f-e7d9-2609-a84c350c12a1">
+      <Execution id="3b74c5ee-deef-4b2e-bbed-0f18132b5a9d" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest1" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoTest9" storage="testproject7.dll" id="1820a643-3d71-abad-9636-2b810c74ae19">
+      <Execution id="95099b05-4850-4eca-9a2f-d7d4e7eab700" />
+      <TestMethod codeBase="C:/TestProject7/TestProject7/bin/Debug/TestProject7.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject7.TamAutotest, TestProject7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoTest9" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="9e6b6d54-b79f-e7d9-2609-a84c350c12a1" executionId="3b74c5ee-deef-4b2e-bbed-0f18132b5a9d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8efed318-945d-2a9d-e29d-a71a05da5660" executionId="902543fe-c68e-43b9-b2ed-14751724ba0a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0f4d10f2-7035-3d68-762a-b62c4853fb8a" executionId="3b18501f-fa8f-43d5-9aeb-b4337e375e50" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="614f56be-e9c0-f1e7-ad65-1f0b7d6a0f1c" executionId="c9684df4-7779-4f12-a282-1bafbd409300" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a41f98c-60c7-3333-a5a3-d5d87b5c35c7" executionId="3943cbff-cefc-42bf-89aa-87287883a1b9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="450e4b2d-ad88-da3f-6d50-5c9a0ae1aa51" executionId="18bfae6f-8ab7-46c9-9705-434e9f5c15e8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4e743fde-a814-86c0-27fd-8728ac2cb692" executionId="49b6ff6d-210d-42ac-96b1-416b5fa47c0a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="10042bab-44aa-7cea-8ac0-06cc3b3adbb3" executionId="6dbfb896-2b3d-4015-a2fa-3c4f19e5565a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b7f68495-37f9-58f0-5c9b-6e190b9adaa8" executionId="0411aefa-c473-47f2-9fee-a11db9b28ca6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e022376f-b2fb-4981-6140-b019eeaa6c94" executionId="30fb2f3d-ad3d-4c70-810d-b0fbf9317730" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="07cf762e-0596-8be3-6b38-ed80b9a02463" executionId="637c2198-e508-4796-8821-8a9431c73d72" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1820a643-3d71-abad-9636-2b810c74ae19" executionId="95099b05-4850-4eca-9a2f-d7d4e7eab700" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="3b74c5ee-deef-4b2e-bbed-0f18132b5a9d" testId="9e6b6d54-b79f-e7d9-2609-a84c350c12a1" testName="MotoTest1" computerName="ICLVDEVAP01" duration="00:01:06.1296717" startTime="2012-11-05T07:54:37.2223397+00:00" endTime="2012-11-05T07:55:43.3520114+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3b74c5ee-deef-4b2e-bbed-0f18132b5a9d">
+      <Output>
+        <DebugTrace>W, 2876, 13, 2012/11/05, 07:54:37.893, 4888747462788, QTAgent32.exe, ExtensionFramework : A Technology Manager with name Web is already registered.
+W, 2876, 13, 2012/11/05, 07:54:39.031, 4888763755458, QTAgent32.exe, &lt;a class=success&gt;Playback - {1} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:54:39.281, 4888767327234, QTAgent32.exe, &lt;a class=success&gt;Playback - {2} [SUCCESS] SendKeys "[*]" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:54:40.170, 4888780238525, QTAgent32.exe, &lt;a class=success&gt;Playback - {3} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:54:40.545, 4888785425487, QTAgent32.exe, &lt;a class=success&gt;Playback - {4} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:54:41.278, 4888796014781, QTAgent32.exe, &lt;a class=success&gt;Playback - {5} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Clients &amp; Files'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:54:41.730, 4888802497645, QTAgent32.exe, &lt;a class=success&gt;Playback - {6} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Clients &amp; Files'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:54:42.198, 4888809235059, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 2876, 13, 2012/11/05, 07:54:42.198, 4888809238434, QTAgent32.exe, &lt;a class=failure&gt;Playback - {7} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2876, 13, 2012/11/05, 07:54:42.354, 4888811522807, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPF79BB.png
+\0
+W, 2876, 13, 2012/11/05, 07:54:42.354, 4888811524917, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2876, 13, 2012/11/05, 07:54:42.354, 4888811528221, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 504 ms. Expected it to take maximum 500 ms.
+W, 2876, 13, 2012/11/05, 07:55:00.451, 4889070575162, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm'
+\0
+E, 2876, 13, 2012/11/05, 07:55:00.451, 4889070578321, QTAgent32.exe, &lt;a class=failure&gt;Playback - {8} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Customer: txt1 tdsfs' &amp;&amp; ClassName='ThunderRT6MDIForm') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 2876, 13, 2012/11/05, 07:55:00.638, 4889073230213, QTAgent32.exe, Playback - [IMAGE] C:\Users\peter.zenin-ad\AppData\Local\Temp\UITestLogs\LastRun\RPFC108.png
+\0
+W, 2876, 13, 2012/11/05, 07:55:00.638, 4889073232281, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 2876, 13, 2012/11/05, 07:55:00.638, 4889073235208, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 18276 ms. Expected it to take maximum 500 ms.
+W, 2876, 13, 2012/11/05, 07:55:01.184, 4889081131858, QTAgent32.exe, Playback - [WARNING] Internal warning: Window with Class "ThunderRT6MDIForm" and Title "Customer: txt1 tdsfs" was not found, so similar window with Class "ThunderRT6MDIForm" and Title "Customer: autotest" was accepted
+\0
+W, 2876, 13, 2012/11/05, 07:55:01.184, 4889081135723, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 551 ms. Expected it to take maximum 500 ms.
+W, 2876, 13, 2012/11/05, 07:55:02.791, 4889104021893, QTAgent32.exe, Playback - [WARNING] Internal warning: Incorrect flag set for InvokeProgrammaticAction\0
+W, 2876, 13, 2012/11/05, 07:55:03.118, 4889108647616, QTAgent32.exe, &lt;a class=success&gt;Playback - {9} [SUCCESS] SetValueAsComboBox "Customers" - "[MSAA, VisibleOnly]ControlType='ComboBox'"  &lt; SetValueAsComboBox, set by clicking on the item in the list box &gt;
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:03.774, 4889118126984, QTAgent32.exe, &lt;a class=success&gt;Playback - {10} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Add'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:04.179, 4889123816609, QTAgent32.exe, &lt;a class=success&gt;Playback - {11} [SUCCESS] SendKeys "autotest" - "[MSAA, VisibleOnly]ControlType='RadioButton' &amp;&amp; Name='Personal Lines'"
+\0&lt;/a&gt;
+E, 2876, 13, 2012/11/05, 07:55:04.304, 4889125738994, QTAgent32.exe, LoadLibrary() : Unable to find the resource 37382 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 2876, 13, 2012/11/05, 07:55:04.304, 4889125744746, QTAgent32.exe, LoadLibrary() : Unable to find the resource 41728 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 2876, 13, 2012/11/05, 07:55:04.304, 4889125747277, QTAgent32.exe, LoadLibrary() : Unable to find the resource 8131 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 2876, 13, 2012/11/05, 07:55:04.304, 4889125749580, QTAgent32.exe, LoadLibrary() : Unable to find the resource 8131 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 2876, 13, 2012/11/05, 07:55:04.304, 4889125753371, QTAgent32.exe, LoadLibrary() : Unable to find the resource 8131 from assembly C:\Windows\system32\en-US\ieframe.dll.mui: Error1814
+E, 2876, 13, 2012/11/05, 07:55:04.304, 4889125757931, QTAgent32.exe, LoadLibrary() : Unable to find the resource 803 from assembly C:\Windows\system32\en-US\user32.dll.mui: Error1814
+W, 2876, 13, 2012/11/05, 07:55:04.678, 4889130968768, QTAgent32.exe, &lt;a class=success&gt;Playback - {12} [SUCCESS] SetValueAsEditBox "autotest" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:05.178, 4889138290038, QTAgent32.exe, &lt;a class=success&gt;Playback - {13} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:05.755, 4889146506393, QTAgent32.exe, &lt;a class=success&gt;Playback - {14} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Yes'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:05.989, 4889149727543, QTAgent32.exe, &lt;a class=success&gt;Playback - {15} [SUCCESS] SendKeys "^{HOME}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 2876, 13, 2012/11/05, 07:55:05.989, 4889149754960, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 2876, 13, 2012/11/05, 07:55:06.067, 4889150844872, QTAgent32.exe, &lt;a class=success&gt;Playback - {16} [SUCCESS] SendKeys "^+{END}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 2876, 13, 2012/11/05, 07:55:06.067, 4889150847596, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 2876, 13, 2012/11/05, 07:55:06.082, 4889151067883, QTAgent32.exe, &lt;a class=success&gt;Playback - {17} [SUCCESS] SendKeys "{DELETE}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:06.160, 4889152187558, QTAgent32.exe, &lt;a class=success&gt;Playback - {18} [SUCCESS] SetValueAsEditBox "1" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:06.379, 4889155311416, QTAgent32.exe, &lt;a class=success&gt;Playback - {19} [SUCCESS] SendKeys "^{HOME}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 2876, 13, 2012/11/05, 07:55:06.379, 4889155313904, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 2876, 13, 2012/11/05, 07:55:06.472, 4889156651359, QTAgent32.exe, &lt;a class=success&gt;Playback - {20} [SUCCESS] SendKeys "^+{END}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+E, 2876, 13, 2012/11/05, 07:55:06.472, 4889156654076, QTAgent32.exe, Msaa.GetFocusedElement: could not find accessible object of foreground window
+W, 2876, 13, 2012/11/05, 07:55:06.488, 4889156876625, QTAgent32.exe, &lt;a class=success&gt;Playback - {21} [SUCCESS] SendKeys "{DELETE}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:06.566, 4889157994793, QTAgent32.exe, &lt;a class=success&gt;Playback - {22} [SUCCESS] SetValueAsEditBox "1" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:07.112, 4889165807238, QTAgent32.exe, &lt;a class=success&gt;Playback - {23} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:07.611, 4889172989541, QTAgent32.exe, &lt;a class=success&gt;Playback - {24} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:08.126, 4889180334477, QTAgent32.exe, &lt;a class=success&gt;Playback - {25} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Add'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:08.641, 4889187723790, QTAgent32.exe, &lt;a class=success&gt;Playback - {26} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:11.106, 4889222990274, QTAgent32.exe, &lt;a class=success&gt;Playback - {27} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly,Window]ControlType='Window' &amp;&amp; ClassName='ThunderRT6TextBox'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:11.464, 4889228132433, QTAgent32.exe, &lt;a class=success&gt;Playback - {28} [SUCCESS] SetValueAsEditBox "MOTO" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:11.964, 4889235439418, QTAgent32.exe, &lt;a class=success&gt;Playback - {29} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:12.416, 4889241825797, QTAgent32.exe, &lt;a class=success&gt;Playback - {30} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Options'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:12.525, 4889243383742, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 2876, 13, 2012/11/05, 07:55:12.713, 4889245995859, QTAgent32.exe, &lt;a class=success&gt;Playback - {31} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='Links'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:12.822, 4889247564968, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 2876, 13, 2012/11/05, 07:55:13.009, 4889250240063, QTAgent32.exe, &lt;a class=success&gt;Playback - {32} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='3rd Party Integration'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:13.118, 4889251810263, QTAgent32.exe, FindScreenElementInSinglePass : Attempting to find control in one pass of search. Failures can occur.
+W, 2876, 13, 2012/11/05, 07:55:13.305, 4889254511893, QTAgent32.exe, &lt;a class=success&gt;Playback - {33} [SUCCESS] MouseButtonClick - "[MSAA]ControlType='MenuItem' &amp;&amp; Name='Quote Select List'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:15.037, 4889279282707, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 1621 ms. Expected it to take maximum 500 ms.
+W, 2876, 13, 2012/11/05, 07:55:17.003, 4889307521067, QTAgent32.exe, &lt;a class=success&gt;Playback - {34} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:18.500, 4889328895699, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 1382 ms. Expected it to take maximum 500 ms.
+W, 2876, 13, 2012/11/05, 07:55:18.937, 4889335130025, QTAgent32.exe, &lt;a class=success&gt;Playback - {35} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:19.280, 4889340038736, QTAgent32.exe, &lt;a class=success&gt;Playback - {36} [SUCCESS] SetValueAsEditBox "Test" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:19.467, 4889342715172, QTAgent32.exe, &lt;a class=success&gt;Playback - {37} [SUCCESS] SendKeys "{Tab}" - "[MSAA, VisibleOnly]ControlType='Edit'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:19.826, 4889347855165, QTAgent32.exe, &lt;a class=success&gt;Playback - {38} [SUCCESS] SetValueAsEditBox "test" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:20.232, 4889353662376, QTAgent32.exe, &lt;a class=success&gt;Playback - {39} [SUCCESS] SetValueAsEditBox "160485" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:20.653, 4889359692202, QTAgent32.exe, &lt;a class=success&gt;Playback - {40} [SUCCESS] SetValueAsEditBox "B338TH" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:23.134, 4889395203252, QTAgent32.exe, &lt;a class=success&gt;Playback - {41} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Lookup...'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:23.570, 4889401602436, QTAgent32.exe, &lt;a class=success&gt;Playback - {42} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Ok'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:25.770, 4889433079477, QTAgent32.exe, &lt;a class=success&gt;Playback - {43} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:26.410, 4889442329105, QTAgent32.exe, Playback - [WARNING] Internal warning: Incorrect flag set for InvokeProgrammaticAction\0
+W, 2876, 13, 2012/11/05, 07:55:26.753, 4889447037292, QTAgent32.exe, &lt;a class=success&gt;Playback - {44} [SUCCESS] SetValueAsComboBox "Account Executive" - "[MSAA, VisibleOnly]ControlType='ComboBox'"  &lt; SetValueAsComboBox, set by clicking on the item in the list box &gt;
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:27.392, 4889456192868, QTAgent32.exe, Playback - [WARNING] Internal warning: Incorrect flag set for InvokeProgrammaticAction\0
+W, 2876, 13, 2012/11/05, 07:55:27.720, 4889460888236, QTAgent32.exe, &lt;a class=success&gt;Playback - {45} [SUCCESS] SetValueAsComboBox "Acupuncture" - "[MSAA, VisibleOnly]ControlType='ComboBox'"  &lt; SetValueAsComboBox, set by clicking on the item in the list box &gt;
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:28.204, 4889467803410, QTAgent32.exe, &lt;a class=success&gt;Playback - {46} [SUCCESS] SetValueAsEditBox "151101" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:29.904, 4889492228370, QTAgent32.exe, &lt;a class=success&gt;Playback - {47} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:30.544, 4889501306407, QTAgent32.exe, &lt;a class=success&gt;Playback - {48} [SUCCESS] SetValueAsEditBox "RF53OXL" - "[MSAA, VisibleOnly]ControlType='Edit'"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:32.993, 4889536369148, QTAgent32.exe, &lt;a class=success&gt;Playback - {49} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Filter'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:33.679, 4889546197100, QTAgent32.exe, &lt;a class=success&gt;Playback - {50} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='OK'"
+\0&lt;/a&gt;
+E, 2876, 13, 2012/11/05, 07:55:37.923, 4889606954926, QTAgent32.exe, AL: Playback Error: Microsoft.VisualStudio.TestTools.UITest.Extension.PlaybackFailureException: Cannot perform 'SetProperty of Text with value "1000"' on the control. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Edit'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IScreenElement.SetFocus()
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.SetValueAsEditBox(String value, Boolean isEncoded)
+   at Microsoft.VisualStudio.TestTools.UITesting.WinPropertyProvider.SetEditProperty(String propertyName, Object value)
+   at Microsoft.VisualStudio.TestTools.UITesting.WinPropertyProvider.SetPropertyValue(UITestControl uiControl, String propertyName, Object value)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.SetPropertyValueWrapper(UITestControl uiControl, String propertyName, Object value)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetPropertyValue(String propertyName, Object propertyValue)
+   --- End of inner exception stack trace ---
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowComException(COMException innerException, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String actionName, UITestControl uiControl)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String actionName, Object parameterValue, UITestControl uiControl)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetPropertyValue(String propertyName, Object propertyValue)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty(String propertyName, Object value)
+W, 2876, 13, 2012/11/05, 07:55:39.561, 4889630406524, QTAgent32.exe, Playback - [WARNING] Internal warning: Element "[MSAA, VisibleOnly]ControlType='Window' &amp;&amp; ControlId='32770'" was not found, so all intermediate elements were ignored. To improve performance replace this element Id with another Id or exclude it from QueryId. If this element is the target element, replace or remove intermediate elements
+\0
+W, 2876, 13, 2012/11/05, 07:55:40.122, 4889638445069, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 2104 ms. Expected it to take maximum 500 ms.
+W, 2876, 13, 2012/11/05, 07:55:41.058, 4889651902442, QTAgent32.exe, &lt;a class=success&gt;Playback - {51} [SUCCESS] MouseButtonClick - "[MSAA, VisibleOnly]ControlType='Button' &amp;&amp; Name='Cancel'"
+\0&lt;/a&gt;
+W, 2876, 13, 2012/11/05, 07:55:42.712, 4889675543559, QTAgent32.exe, Playback - [WARNING] Internal warning: Element "[MSAA, VisibleOnly]ControlType='Window' &amp;&amp; ControlId='32769'" was not found, so all intermediate elements were ignored. To improve performance replace this element Id with another Id or exclude it from QueryId. If this element is the target element, replace or remove intermediate elements
+\0
+W, 2876, 13, 2012/11/05, 07:55:43.258, 4889683549141, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 2103 ms. Expected it to take maximum 500 ms.
+</DebugTrace>
+        <ErrorInfo>
+          <Message>User aborted test run.</Message>
+        </ErrorInfo>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="ICLVDEVAP01\MotoTest1.png" />
+      </ResultFiles>
+    </UnitTestResult>
+    <UnitTestResult executionId="902543fe-c68e-43b9-b2ed-14751724ba0a" testId="8efed318-945d-2a9d-e29d-a71a05da5660" testName="MotoTest10" computerName="ICLVDEVAP01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="902543fe-c68e-43b9-b2ed-14751724ba0a">
+    </UnitTestResult>
+    <UnitTestResult executionId="3b18501f-fa8f-43d5-9aeb-b4337e375e50" testId="0f4d10f2-7035-3d68-762a-b62c4853fb8a" testName="MotoTest11" computerName="ICLVDEVAP01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3b18501f-fa8f-43d5-9aeb-b4337e375e50">
+    </UnitTestResult>
+    <UnitTestResult executionId="c9684df4-7779-4f12-a282-1bafbd409300" testId="614f56be-e9c0-f1e7-ad65-1f0b7d6a0f1c" testName="MotoTest12" computerName="ICLVDEVAP01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c9684df4-7779-4f12-a282-1bafbd409300">
+    </UnitTestResult>
+    <UnitTestResult executionId="3943cbff-cefc-42bf-89aa-87287883a1b9" testId="6a41f98c-60c7-3333-a5a3-d5d87b5c35c7" testName="MotoTest2" computerName="ICLVDEVAP01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3943cbff-cefc-42bf-89aa-87287883a1b9">
+    </UnitTestResult>
+    <UnitTestResult executionId="18bfae6f-8ab7-46c9-9705-434e9f5c15e8" testId="450e4b2d-ad88-da3f-6d50-5c9a0ae1aa51" testName="MotoTest3" computerName="ICLVDEVAP01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="18bfae6f-8ab7-46c9-9705-434e9f5c15e8">
+    </UnitTestResult>
+    <UnitTestResult executionId="49b6ff6d-210d-42ac-96b1-416b5fa47c0a" testId="4e743fde-a814-86c0-27fd-8728ac2cb692" testName="MotoTest4" computerName="ICLVDEVAP01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="49b6ff6d-210d-42ac-96b1-416b5fa47c0a">
+    </UnitTestResult>
+    <UnitTestResult executionId="6dbfb896-2b3d-4015-a2fa-3c4f19e5565a" testId="10042bab-44aa-7cea-8ac0-06cc3b3adbb3" testName="MotoTest5" computerName="ICLVDEVAP01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6dbfb896-2b3d-4015-a2fa-3c4f19e5565a">
+    </UnitTestResult>
+    <UnitTestResult executionId="0411aefa-c473-47f2-9fee-a11db9b28ca6" testId="b7f68495-37f9-58f0-5c9b-6e190b9adaa8" testName="MotoTest6" computerName="ICLVDEVAP01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0411aefa-c473-47f2-9fee-a11db9b28ca6">
+    </UnitTestResult>
+    <UnitTestResult executionId="30fb2f3d-ad3d-4c70-810d-b0fbf9317730" testId="e022376f-b2fb-4981-6140-b019eeaa6c94" testName="MotoTest7" computerName="ICLVDEVAP01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="30fb2f3d-ad3d-4c70-810d-b0fbf9317730">
+    </UnitTestResult>
+    <UnitTestResult executionId="637c2198-e508-4796-8821-8a9431c73d72" testId="07cf762e-0596-8be3-6b38-ed80b9a02463" testName="MotoTest8" computerName="ICLVDEVAP01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="637c2198-e508-4796-8821-8a9431c73d72">
+    </UnitTestResult>
+    <UnitTestResult executionId="95099b05-4850-4eca-9a2f-d7d4e7eab700" testId="1820a643-3d71-abad-9636-2b810c74ae19" testName="MotoTest9" computerName="ICLVDEVAP01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="95099b05-4850-4eca-9a2f-d7d4e7eab700">
+    </UnitTestResult>
+  </Results>
+</TestRun>
