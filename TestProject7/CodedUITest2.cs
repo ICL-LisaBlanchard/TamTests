@@ -1,2049 +1,1931 @@
-﻿using System;
-using System.Threading;
-using System.Diagnostics;  
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using System.Windows.Input;
-using System.Windows.Forms;
-using System.Drawing;
-using Microsoft.VisualStudio.TestTools.UITesting;
-using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UITest.Extension;
-using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
-using System.Linq;
-using Meyn.TestLink;
-
-namespace Ver1
+﻿namespace AppliedSystems.Tam.Ui.Tests
 {
+    using System;
+
+    using Microsoft.VisualStudio.TestTools.UITesting;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     /// <summary>
     /// Summary description for CodedUITest2
     /// </summary>
     [CodedUITest]
-    public class CodedUITest2
+    public class CodedUITest2 : BaseUiTest
     {
-        private const string PlanName = "Ver. 12.05";
-        private const string ProjectName = "TAM";
-
-        //private static string buildName = DateTime.Now.Date.ToShortDateString();
-        private static string buildName = "InsureTam.exe v4.0.8 May";
-
-        //private const int PlatformId = 3;  // WIN XP
-        //private const int PlatformId = 4;   // Win7 32
-        private const int PlatformId = 5;   // Win7 64
-        private static TestLink tl;
-        private static int testPlanId;
-        private static int buildId;
-        public string TestName;
-
-        public CodedUITest2()
-        {
-        }
-
-        [TestInitialize]
-        public void StartTest()
-        {
-            TestName = TestContext.TestName;
-            TestLinkInitialize();
-            UIMap.Login_newParams.UIItemEditSendKeys = Playback.EncryptText("PLUS");
-            UIMap.Login_new();
-            // can check if pass is incorrect then use another one 
-            //WinWindow controls = new WinWindow();
-            //controls.SearchProperties[WinWindow.PropertyNames.Name] = "Signon Error";
-            //bool t = controls.Exists;
-            //if (t)
-            //{
-            //    UIMap.CloseLogin();
-            //    Playback.Wait(2000);
-            //    UIMap.Login_newParams.UIItemEditSendKeys = Playback.EncryptText("PSWD");
-            //    UIMap.Login_new();
-            //}
-            UIMap.LoginEnterDateParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
-            UIMap.LoginEnterDateParams.UIItemEditText1 = DateTime.Now.ToString("yyyy");
-            UIMap.LoginEnterDateParams.UIItemComboBoxSelectedItem = DateTime.Now.ToString("MMMM");
-            UIMap.LoginEnterDate();
-            UIMap.WarningOk();
-            UIMap.App_startedExpectedValues.UITheAgencyManagerWindow1Name = "The Agency Manager";
-        }
-
-       [TestCleanup]
-        public void FinishTest()
-        {
-            try
-            {
-                if (TestContext.CurrentTestOutcome != UnitTestOutcome.Passed)
-                {
-                    PostTestResult(TestCaseResultStatus.Fail);
-                }
-                else
-                {
-                    PostTestResult(TestCaseResultStatus.Pass);
-                }
-            }
-            catch (Exception)
-            {
-                // do nothing
-            }
-            CloseProcess("TamXML7");
-            CloseProcess("InsureTam");
-            CloseProcess("clntfile");
-            CloseProcess("Homebase");
-        }
-
-        //[TestMethod]
-        public void test1()
-        {
-            UIMap.HighlightCustomer();
-            string customerCode = UIMap.GetCustomerCode();
-
-        }
-
         [TestMethod]
         public void MotoCreateQuote()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPolicyPerson();
-            UIMap.PostcodeLookup();
-            UIMap.QuoteResults();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.AssertSelectPolicyForm();
-            UIMap.SelectPolicyQuote();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RecordedMethod1();
-            UIMap.AssertMethod1();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPolicyPerson();
+            this.UiMap.PostcodeLookup();
+            this.UiMap.QuoteResults();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.AssertSelectPolicyForm();
+            this.UiMap.SelectPolicyQuote();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RecordedMethod1();
+            this.UiMap.AssertMethod1();
         }
 
         [TestMethod]
         public void MotoSaveQuoteWithoutPremium()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPolicyPerson();
-            UIMap.PostcodeLookup();
-            UIMap.QuoteResults();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.SaveWithoutPremium();
-            UIMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPolicyPerson();
+            this.UiMap.PostcodeLookup();
+            this.UiMap.QuoteResults();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.SaveWithoutPremium();
+            this.UiMap.MotoCloseAndOpenPolicyList();
             //check premium
-            UIMap.RecordedMethod1();
-            UIMap.AssertMethod2();
-            UIMap.RecordedMethod4();
-            UIMap.SelectMenu();
-            UIMap.RecordedMethod4_1();
-            UIMap.AssertMethod3();
-            UIMap.Calculate();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.SelectPolicyQuote();
-            UIMap.ExitEnabled();
-            UIMap.Exit1();
+            this.UiMap.RecordedMethod1();
+            this.UiMap.AssertMethod2();
+            this.UiMap.RecordedMethod4();
+            this.UiMap.SelectMenu();
+            this.UiMap.RecordedMethod4_1();
+            this.UiMap.AssertMethod3();
+            this.UiMap.Calculate();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.SelectPolicyQuote();
+            this.UiMap.ExitEnabled();
+            this.UiMap.Exit1();
             //check premium
-            UIMap.RecordedMethod1();
-            UIMap.AssertMethod1();
-            UIMap.RecordedMethod4();
-            UIMap.SelectMenu();
-            UIMap.RecordedMethod4_1();
-            UIMap.AssertMethod3();
-            UIMap.Calculate();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.SelectPolicyQuote();
-            UIMap.PrintQuote();
-            UIMap.CheckAutoPrint();
-            UIMap.DemandsAndNeeds();
+            this.UiMap.RecordedMethod1();
+            this.UiMap.AssertMethod1();
+            this.UiMap.RecordedMethod4();
+            this.UiMap.SelectMenu();
+            this.UiMap.RecordedMethod4_1();
+            this.UiMap.AssertMethod3();
+            this.UiMap.Calculate();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.SelectPolicyQuote();
+            this.UiMap.PrintQuote();
+            this.UiMap.CheckAutoPrint();
+            this.UiMap.DemandsAndNeeds();
             Playback.Wait(3000);
-            UIMap.CloseDemandsMoto();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RecordedMethod1();
-            UIMap.AssertMethod1();
+            this.UiMap.CloseDemandsMoto();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RecordedMethod1();
+            this.UiMap.AssertMethod1();
         }
 
         [TestMethod]
         public void MotoAWAP()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPolicyPerson();
-            UIMap.PostcodeLookup();
-            UIMap.QuoteResults();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.MotoAWAP();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RecordedMethod1();
-            UIMap.MotoCheckAWAPpremium();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPolicyPerson();
+            this.UiMap.PostcodeLookup();
+            this.UiMap.QuoteResults();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.MotoAWAP();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RecordedMethod1();
+            this.UiMap.MotoCheckAWAPpremium();
         }
 
         [TestMethod]
         public void MotoOverridePremium()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPolicyPerson();
-            UIMap.PostcodeLookup();
-            UIMap.QuoteResults();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.AssertSelectPolicyForm();
-            UIMap.SelectPolicyQuote();
-            UIMap.ChangePremium();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RecordedMethod1();
-            UIMap.MotoCheckChangedPremium();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPolicyPerson();
+            this.UiMap.PostcodeLookup();
+            this.UiMap.QuoteResults();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.AssertSelectPolicyForm();
+            this.UiMap.SelectPolicyQuote();
+            this.UiMap.ChangePremium();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RecordedMethod1();
+            this.UiMap.MotoCheckChangedPremium();
         }
 
         [TestMethod]
         public void MotoCopyRiskNew()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPolicyPerson();
-            UIMap.PostcodeLookup();
-            UIMap.QuoteResults();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.SelectPolicyQuote();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoCopyFinishedRisk();
-            UIMap.MotoCopyCheckProposer();
-            UIMap.MotoCopyRiskProposerOk();
-            UIMap.MotoCopyCheckCar();
-            UIMap.MotoCopyRiskExit();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPolicyPerson();
+            this.UiMap.PostcodeLookup();
+            this.UiMap.QuoteResults();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.SelectPolicyQuote();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoCopyFinishedRisk();
+            this.UiMap.MotoCopyCheckProposer();
+            this.UiMap.MotoCopyRiskProposerOk();
+            this.UiMap.MotoCopyCheckCar();
+            this.UiMap.MotoCopyRiskExit();
         }
 
         [TestMethod]
         public void MotoCopyRiskQTE()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPolicyPerson();
-            UIMap.PostcodeLookup();
-            UIMap.QuoteResults();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.SaveWithoutPremium();
-            UIMap.MotoCopyFinishedRisk();
-            UIMap.MotoCopyCheckProposer();
-            UIMap.MotoCopyRiskProposerOk();
-            UIMap.MotoCopyCheckCar();
-            UIMap.MotoCopyRiskExit();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPolicyPerson();
+            this.UiMap.PostcodeLookup();
+            this.UiMap.QuoteResults();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.SaveWithoutPremium();
+            this.UiMap.MotoCopyFinishedRisk();
+            this.UiMap.MotoCopyCheckProposer();
+            this.UiMap.MotoCopyRiskProposerOk();
+            this.UiMap.MotoCopyCheckCar();
+            this.UiMap.MotoCopyRiskExit();
         }
 
         [TestMethod]
         public void MotoMTAExit()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPolicyPerson();
-            UIMap.PostcodeLookup();
-            UIMap.QuoteResults();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.SelectPolicyQuote();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoMTA();
-            UIMap.MotoMTANoSave();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RecordedMethod1();
-            UIMap.AssertMethod1();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPolicyPerson();
+            this.UiMap.PostcodeLookup();
+            this.UiMap.QuoteResults();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.SelectPolicyQuote();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoMTA();
+            this.UiMap.MotoMTANoSave();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RecordedMethod1();
+            this.UiMap.AssertMethod1();
         }
 
         [TestMethod]
         public void MotoMTAAccept()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPolicyPerson();
-            UIMap.PostcodeLookup();
-            UIMap.QuoteResults();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.SelectPolicyQuote();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoMTA();
-            UIMap.MotoMTAAccept();
-            UIMap.MotoMTAConfirmDate();
-            UIMap.MotoMTAConfirmPolicy();
-            UIMap.MotoMTAConfirmPolicy_1();
-            UIMap.MotoMTAOpenQuote();
-            UIMap.MotoMTACheckNewValue();
-            UIMap.MotoExitMTA();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPolicyPerson();
+            this.UiMap.PostcodeLookup();
+            this.UiMap.QuoteResults();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.SelectPolicyQuote();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoMTA();
+            this.UiMap.MotoMTAAccept();
+            this.UiMap.MotoMTAConfirmDate();
+            this.UiMap.MotoMTAConfirmPolicy();
+            this.UiMap.MotoMTAConfirmPolicy_1();
+            this.UiMap.MotoMTAOpenQuote();
+            this.UiMap.MotoMTACheckNewValue();
+            this.UiMap.MotoExitMTA();
         }
 
         [TestMethod]
         public void MotoCopyMTA()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPolicyPerson();
-            UIMap.PostcodeLookup();
-            UIMap.QuoteResults();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.SelectPolicyQuote();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoMTA();
-            UIMap.MotoMTAAccept();
-            UIMap.MotoMTAConfirmDate();
-            UIMap.MotoMTAConfirmPolicy();
-            UIMap.MotoMTAConfirmPolicy_1();
-            UIMap.MotoMTA();
-            UIMap.MotoMTAAccept();
-            UIMap.MotoMTAConfirmDate();
-            UIMap.MotoMTAConfirmPolicy();
-            UIMap.MotoMTAConfirmPolicy_1();
-            UIMap.MotoCopyFinishedRisk();
-            UIMap.MotoCopyCheckProposer();
-            UIMap.MotoCopyRiskProposerOk();
-            UIMap.MotoMTACheckCar();
-            UIMap.MotoCopyRiskExit();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPolicyPerson();
+            this.UiMap.PostcodeLookup();
+            this.UiMap.QuoteResults();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.SelectPolicyQuote();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoMTA();
+            this.UiMap.MotoMTAAccept();
+            this.UiMap.MotoMTAConfirmDate();
+            this.UiMap.MotoMTAConfirmPolicy();
+            this.UiMap.MotoMTAConfirmPolicy_1();
+            this.UiMap.MotoMTA();
+            this.UiMap.MotoMTAAccept();
+            this.UiMap.MotoMTAConfirmDate();
+            this.UiMap.MotoMTAConfirmPolicy();
+            this.UiMap.MotoMTAConfirmPolicy_1();
+            this.UiMap.MotoCopyFinishedRisk();
+            this.UiMap.MotoCopyCheckProposer();
+            this.UiMap.MotoCopyRiskProposerOk();
+            this.UiMap.MotoMTACheckCar();
+            this.UiMap.MotoCopyRiskExit();
         }
 
         [TestMethod]
         public void MotoMTAtoMTA()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPolicyPerson();
-            UIMap.PostcodeLookup();
-            UIMap.QuoteResults();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.SelectPolicyQuote();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoMTA();
-            UIMap.MotoMTAAcceptParams.UIItemEditText = "2500";
-            UIMap.MotoMTAAccept();
-            UIMap.MTAEffectiveDateParams.UIItemEditText = "13/10/12";
-            UIMap.MTAEffectiveDate();
-            UIMap.MotoMTAConfirmDate();
-            UIMap.CoverDateBackCheck();
-            UIMap.MotoMTACloseMessage();
-            UIMap.MTAEffectiveDateParams.UIItemEditText = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
-            UIMap.MTAEffectiveDate();
-            UIMap.MotoMTAConfirmDate();
-            UIMap.MotoMTAConfirmPolicy();
-            UIMap.MotoMTAConfirmPolicy_1();
-            UIMap.MotoMTAOpenQuote();
-            UIMap.MotoMTACheckNewValueExpectedValues.UIItemEditText = "2500";
-            UIMap.MotoMTACheckNewValue();
-            UIMap.MotoExitMTA();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPolicyPerson();
+            this.UiMap.PostcodeLookup();
+            this.UiMap.QuoteResults();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.SelectPolicyQuote();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoMTA();
+            this.UiMap.MotoMTAAcceptParams.UIItemEditText = "2500";
+            this.UiMap.MotoMTAAccept();
+            this.UiMap.MTAEffectiveDateParams.UIItemEditText = "13/10/12";
+            this.UiMap.MTAEffectiveDate();
+            this.UiMap.MotoMTAConfirmDate();
+            this.UiMap.CoverDateBackCheck();
+            this.UiMap.MotoMTACloseMessage();
+            this.UiMap.MTAEffectiveDateParams.UIItemEditText = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
+            this.UiMap.MTAEffectiveDate();
+            this.UiMap.MotoMTAConfirmDate();
+            this.UiMap.MotoMTAConfirmPolicy();
+            this.UiMap.MotoMTAConfirmPolicy_1();
+            this.UiMap.MotoMTAOpenQuote();
+            this.UiMap.MotoMTACheckNewValueExpectedValues.UIItemEditText = "2500";
+            this.UiMap.MotoMTACheckNewValue();
+            this.UiMap.MotoExitMTA();
         }
 
         [TestMethod]
         public void MotoCancelExit()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
             //create policy
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPolicyPerson();
-            UIMap.PostcodeLookup();
-            UIMap.QuoteResults();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.AssertSelectPolicyForm();
-            UIMap.SelectPolicyQuote();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.MotoCloseDetails();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPolicyPerson();
+            this.UiMap.PostcodeLookup();
+            this.UiMap.QuoteResults();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.AssertSelectPolicyForm();
+            this.UiMap.SelectPolicyQuote();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.MotoCloseDetails();
             //Cancel policy
-            UIMap.MotoMTA();
-            UIMap.MotoCancelPolicy();
-            UIMap.MTAEffectiveDateParams.UIItemEditText = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
-            UIMap.MTAEffectiveDate();
-            UIMap.MotoCancelPolicy_1();
-            UIMap.MotoCancelExit();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.MotoCheckPolicyStatusExpectedValues.UIItemEditText = "NEW";
-            UIMap.MotoCheckPolicyStatus();
+            this.UiMap.MotoMTA();
+            this.UiMap.MotoCancelPolicy();
+            this.UiMap.MTAEffectiveDateParams.UIItemEditText = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
+            this.UiMap.MTAEffectiveDate();
+            this.UiMap.MotoCancelPolicy_1();
+            this.UiMap.MotoCancelExit();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.MotoCheckPolicyStatusExpectedValues.UIItemEditText = "NEW";
+            this.UiMap.MotoCheckPolicyStatus();
         }
+
         [TestMethod]
         public void MotoCancelAccept()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPolicyPerson();
-            UIMap.PostcodeLookup();
-            UIMap.QuoteResults();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.AssertSelectPolicyForm();
-            UIMap.SelectPolicyQuote();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.MotoCloseDetails();
-            UIMap.MotoMTA();
-            UIMap.MotoCancelPolicy();
-            UIMap.MTAEffectiveDateParams.UIItemEditText = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
-            UIMap.MTAEffectiveDate();
-            UIMap.MotoCancelPolicy_1();
-            UIMap.MotoMTAConfirmPolicy();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.MotoCheckPolicyStatusExpectedValues.UIItemEditText = "CAN";
-            UIMap.MotoCheckPolicyStatus();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPolicyPerson();
+            this.UiMap.PostcodeLookup();
+            this.UiMap.QuoteResults();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.AssertSelectPolicyForm();
+            this.UiMap.SelectPolicyQuote();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.MotoCloseDetails();
+            this.UiMap.MotoMTA();
+            this.UiMap.MotoCancelPolicy();
+            this.UiMap.MTAEffectiveDateParams.UIItemEditText = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
+            this.UiMap.MTAEffectiveDate();
+            this.UiMap.MotoCancelPolicy_1();
+            this.UiMap.MotoMTAConfirmPolicy();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.MotoCheckPolicyStatusExpectedValues.UIItemEditText = "CAN";
+            this.UiMap.MotoCheckPolicyStatus();
         }
 
         [TestMethod]
         public void MotoRenewalBefore()
         {
             // change registry to ourhighway
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
+            this.UiMap.RegistryHighway();
             // add policy
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPostcodeLookup();
-            UIMap.MotoSearchCar();
-            UIMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.MotoInceptionDate();
-            UIMap.MotoCalculate();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.MotoSelectHighwayPolicy();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoCloseAndOpenPolicyList();
-            string policyNumber = UIMap.MotoGetPolicyNumber();
-            UIMap.OpenBrowser2();
-            UIMap.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            UIMap.MotoCreateSiteRenewal();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.ChangeDatePolicy();
-            UIMap.HighlightCustomer();
-            string customerCode = UIMap.GetCustomerCode();
-            UIMap.MotoRegressAppParams.UIItemEditText = customerCode;
-            UIMap.MotoRegressApp();
-            UIMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.RegressAppDate();
-            UIMap.MotoRegressAppFinish();
-            UIMap.CloseRegressApp();
-            UIMap.RenewalLoaderOpen();
-           UIMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy"); 
-            UIMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
-            UIMap.RenewalLoaderRun();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.RenewalLoaderClose();
-            UIMap.RenewalModuleEDI(); UIMap.RenewalModuleConfirm(); UIMap.RenewalModuleEDI_1();
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMoto();
-            UIMap.RenewalModuleDisplay();
-            UIMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            UIMap.MotoRenewalCheckRecord();
-            UIMap.RenewalModuleInvite();
-            UIMap.RenewConfirmInvite();
-            UIMap.RenewalModuleInvite_1();
-            UIMap.RenewalModuleRenew(); UIMap.RetrieveResponse(); UIMap.RenewalModuleRenew_1();
-            UIMap.RenewalModuleClose();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RenewalCheckStatus();
-            UIMap.ClosePolicy();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPostcodeLookup();
+            this.UiMap.MotoSearchCar();
+            this.UiMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.MotoInceptionDate();
+            this.UiMap.MotoCalculate();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.MotoSelectHighwayPolicy();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            string policyNumber = this.UiMap.MotoGetPolicyNumber();
+            this.UiMap.OpenBrowser2();
+            this.UiMap.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
+            this.UiMap.MotoCreateSiteRenewal();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.ChangeDatePolicy();
+            this.UiMap.HighlightCustomer();
+            string customerCode = this.UiMap.GetCustomerCode();
+            this.UiMap.MotoRegressAppParams.UIItemEditText = customerCode;
+            this.UiMap.MotoRegressApp();
+            this.UiMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.RegressAppDate();
+            this.UiMap.MotoRegressAppFinish();
+            this.UiMap.CloseRegressApp();
+            this.UiMap.RenewalLoaderOpen();
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRun();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.RenewalLoaderClose();
+            this.UiMap.RenewalModuleEDI();
+            this.UiMap.RenewalModuleConfirm();
+            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMoto();
+            this.UiMap.RenewalModuleDisplay();
+            this.UiMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
+            this.UiMap.MotoRenewalCheckRecord();
+            this.UiMap.RenewalModuleInvite();
+            this.UiMap.RenewConfirmInvite();
+            this.UiMap.RenewalModuleInvite_1();
+            this.UiMap.RenewalModuleRenew();
+            this.UiMap.RetrieveResponse();
+            this.UiMap.RenewalModuleRenew_1();
+            this.UiMap.RenewalModuleClose();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RenewalCheckStatus();
+            this.UiMap.ClosePolicy();
             //mta1
-            UIMap.SelectMenu();
-            UIMap.MotoMTABefore();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MotoMTABeforeAccept();
-            UIMap.MotoMTAMessageCancelled();
-            UIMap.MotoMTABeforeFinish();
+            this.UiMap.SelectMenu();
+            this.UiMap.MotoMTABefore();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MotoMTABeforeAccept();
+            this.UiMap.MotoMTAMessageCancelled();
+            this.UiMap.MotoMTABeforeFinish();
             //mta2
-            UIMap.SelectMenu();
-            UIMap.MotoMTABefore2();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MTAMessageBeforeCurrent();
-            UIMap.MTACloseMessageBefore();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(10).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MotoMTAMessageAfterDate();
-            UIMap.MTACloseMessageAfter();
-            UIMap.MTACancel();
+            this.UiMap.SelectMenu();
+            this.UiMap.MotoMTABefore2();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MTAMessageBeforeCurrent();
+            this.UiMap.MTACloseMessageBefore();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(10).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MotoMTAMessageAfterDate();
+            this.UiMap.MTACloseMessageAfter();
+            this.UiMap.MTACancel();
         }
 
         [TestMethod]
         public void MotoRenewalAfter()
         {
             // change registry to ourhighway
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
+            this.UiMap.RegistryHighway();
             // add policy
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPostcodeLookup();
-            UIMap.MotoSearchCar();
-            UIMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.MotoInceptionDate();
-            UIMap.MotoCalculate();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.MotoSelectHighwayPolicy();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoCloseAndOpenPolicyList();
-            string policyNumber = UIMap.MotoGetPolicyNumber();
-            UIMap.OpenBrowser2();
-            UIMap.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            UIMap.MotoCreateSiteRenewal();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.ChangeDatePolicy();
-            UIMap.HighlightCustomer();
-            string customerCode = UIMap.GetCustomerCode();
-            UIMap.MotoRegressAppParams.UIItemEditText = customerCode;
-            UIMap.MotoRegressApp();
-            UIMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.RegressAppDate();
-            UIMap.MotoRegressAppFinish();
-            UIMap.CloseRegressApp();
-            UIMap.RenewalLoaderOpen();
-            UIMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy"); 
-            UIMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
-            UIMap.RenewalLoaderRun();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.RenewalLoaderClose();
-            UIMap.RenewalModuleEDI(); UIMap.RenewalModuleConfirm(); UIMap.RenewalModuleEDI_1();
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMoto();
-            UIMap.RenewalModuleDisplay();
-            UIMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            UIMap.MotoRenewalCheckRecord();
-            UIMap.RenewalModuleInvite();
-            UIMap.RenewConfirmInvite();
-            UIMap.RenewalModuleInvite_1();
-            UIMap.RenewalModuleRenew(); UIMap.RetrieveResponse(); UIMap.RenewalModuleRenew_1();
-            UIMap.RenewalModuleClose();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RenewalCheckStatus();
-            UIMap.ClosePolicy();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPostcodeLookup();
+            this.UiMap.MotoSearchCar();
+            this.UiMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.MotoInceptionDate();
+            this.UiMap.MotoCalculate();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.MotoSelectHighwayPolicy();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            string policyNumber = this.UiMap.MotoGetPolicyNumber();
+            this.UiMap.OpenBrowser2();
+            this.UiMap.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
+            this.UiMap.MotoCreateSiteRenewal();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.ChangeDatePolicy();
+            this.UiMap.HighlightCustomer();
+            string customerCode = this.UiMap.GetCustomerCode();
+            this.UiMap.MotoRegressAppParams.UIItemEditText = customerCode;
+            this.UiMap.MotoRegressApp();
+            this.UiMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.RegressAppDate();
+            this.UiMap.MotoRegressAppFinish();
+            this.UiMap.CloseRegressApp();
+            this.UiMap.RenewalLoaderOpen();
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRun();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.RenewalLoaderClose();
+            this.UiMap.RenewalModuleEDI();
+            this.UiMap.RenewalModuleConfirm();
+            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMoto();
+            this.UiMap.RenewalModuleDisplay();
+            this.UiMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
+            this.UiMap.MotoRenewalCheckRecord();
+            this.UiMap.RenewalModuleInvite();
+            this.UiMap.RenewConfirmInvite();
+            this.UiMap.RenewalModuleInvite_1();
+            this.UiMap.RenewalModuleRenew();
+            this.UiMap.RetrieveResponse();
+            this.UiMap.RenewalModuleRenew_1();
+            this.UiMap.RenewalModuleClose();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RenewalCheckStatus();
+            this.UiMap.ClosePolicy();
             ////MTA1
-            UIMap.SelectMenu();
-            UIMap.RenewalAfterMTA1();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(14).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MotoFinishMTA();
+            this.UiMap.SelectMenu();
+            this.UiMap.RenewalAfterMTA1();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(14).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MotoFinishMTA();
             //MTA2
-            UIMap.SelectMenu();
-            UIMap.RenewalAfterMTA1();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(13).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MTAMessageBeforeCurrent();
-            UIMap.MTACloseMessageBefore();
-            UIMap.MTACancel();
+            this.UiMap.SelectMenu();
+            this.UiMap.RenewalAfterMTA1();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(13).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MTAMessageBeforeCurrent();
+            this.UiMap.MTACloseMessageBefore();
+            this.UiMap.MTACancel();
             //MTA3
-            UIMap.SelectMenu();
-            UIMap.MotoMTABefore();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(9).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MotoMTAMessageAfterDate();
-            UIMap.MTACloseMessageAfter();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MotoMTABeforeAccept();
-            UIMap.MotoMTABeforeFinish();
+            this.UiMap.SelectMenu();
+            this.UiMap.MotoMTABefore();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(9).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MotoMTAMessageAfterDate();
+            this.UiMap.MTACloseMessageAfter();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MotoMTABeforeAccept();
+            this.UiMap.MotoMTABeforeFinish();
             //mta4
-            UIMap.SelectMenu();
-            UIMap.MotoMTABefore2();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MTAMessageBeforeCurrent();
-            UIMap.MTACloseMessageBefore();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(11).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MotoMTAMessageAfterDate();
-            UIMap.MTACloseMessageAfter();
-            UIMap.MTACancel();
+            this.UiMap.SelectMenu();
+            this.UiMap.MotoMTABefore2();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MTAMessageBeforeCurrent();
+            this.UiMap.MTACloseMessageBefore();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(11).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MotoMTAMessageAfterDate();
+            this.UiMap.MTACloseMessageAfter();
+            this.UiMap.MTACancel();
         }
 
         [TestMethod]
         public void MotoAmendRiskExistingScheme()
         {
             //change registry to ourhighway
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
+            this.UiMap.RegistryHighway();
             // add policy
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPostcodeLookup();
-            UIMap.MotoSearchCar();
-            UIMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.MotoInceptionDate();
-            UIMap.MotoCalculate();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.MotoSelectHighwayPolicy();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoCloseAndOpenPolicyList();
-            string policyNumber = UIMap.MotoGetPolicyNumber();
-            UIMap.OpenBrowser2();
-            UIMap.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            UIMap.MotoCreateSiteRenewal();
-            Playback.Wait(6000);UIMap.CloseBrowser();
-            UIMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.ChangeDatePolicy();
-            UIMap.HighlightCustomer();
-            string customerCode = UIMap.GetCustomerCode();
-            UIMap.MotoRegressAppParams.UIItemEditText = customerCode;
-            UIMap.MotoRegressApp();
-            UIMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.RegressAppDate();
-            UIMap.MotoRegressAppFinish();
-            UIMap.CloseRegressApp();
-            UIMap.RenewalLoaderOpen();
-            UIMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy"); 
-            UIMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
-            UIMap.RenewalLoaderRun();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.RenewalLoaderClose();
-            UIMap.RenewalModuleEDI(); UIMap.RenewalModuleConfirm(); UIMap.RenewalModuleEDI_1();
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMoto();
-            UIMap.RenewalModuleDisplay();
-            UIMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            UIMap.MotoRenewalCheckRecord();
-            UIMap.MotoAmendRisk();
-            UIMap.PublicCreditCheckOk();
-            UIMap.QuoteSelectListCancel();
-            UIMap.AmendSelectQuote();
-            UIMap.MotoAmendRiskRenew();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RenewalCheckStatus();
-            UIMap.ClosePolicy();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPostcodeLookup();
+            this.UiMap.MotoSearchCar();
+            this.UiMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.MotoInceptionDate();
+            this.UiMap.MotoCalculate();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.MotoSelectHighwayPolicy();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            string policyNumber = this.UiMap.MotoGetPolicyNumber();
+            this.UiMap.OpenBrowser2();
+            this.UiMap.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
+            this.UiMap.MotoCreateSiteRenewal();
+            Playback.Wait(6000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.ChangeDatePolicy();
+            this.UiMap.HighlightCustomer();
+            string customerCode = this.UiMap.GetCustomerCode();
+            this.UiMap.MotoRegressAppParams.UIItemEditText = customerCode;
+            this.UiMap.MotoRegressApp();
+            this.UiMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.RegressAppDate();
+            this.UiMap.MotoRegressAppFinish();
+            this.UiMap.CloseRegressApp();
+            this.UiMap.RenewalLoaderOpen();
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRun();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.RenewalLoaderClose();
+            this.UiMap.RenewalModuleEDI();
+            this.UiMap.RenewalModuleConfirm();
+            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMoto();
+            this.UiMap.RenewalModuleDisplay();
+            this.UiMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
+            this.UiMap.MotoRenewalCheckRecord();
+            this.UiMap.MotoAmendRisk();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.QuoteSelectListCancel();
+            this.UiMap.AmendSelectQuote();
+            this.UiMap.MotoAmendRiskRenew();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RenewalCheckStatus();
+            this.UiMap.ClosePolicy();
         }
 
         [TestMethod]
         public void MotoAmendRiskNewScheme()
         {
             //change registry to ourhighway
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
+            this.UiMap.RegistryHighway();
             // add policy
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPostcodeLookup();
-            UIMap.MotoSearchCar();
-            UIMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.MotoInceptionDate();
-            UIMap.MotoCalculate();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.MotoSelectHighwayPolicy();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoCloseAndOpenPolicyList();
-            string policyNumber = UIMap.MotoGetPolicyNumber();
-            UIMap.OpenBrowser2();
-            UIMap.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            UIMap.MotoCreateSiteRenewal();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.ChangeDatePolicy();
-            UIMap.HighlightCustomer();
-            string customerCode = UIMap.GetCustomerCode();
-            UIMap.MotoRegressAppParams.UIItemEditText = customerCode;
-            UIMap.MotoRegressApp();
-            UIMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.RegressAppDate();
-            UIMap.MotoRegressAppFinish();
-            UIMap.CloseRegressApp();
-            UIMap.RenewalLoaderOpen();
-            UIMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy"); 
-            UIMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
-            UIMap.RenewalLoaderRun();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.RenewalLoaderClose();
-            UIMap.RenewalModuleEDI(); UIMap.RenewalModuleConfirm(); UIMap.RenewalModuleEDI_1();
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMoto();
-            UIMap.RenewalModuleDisplay();
-            UIMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            UIMap.MotoRenewalCheckRecord();
-            UIMap.MotoAmendRisk();
-            UIMap.PublicCreditCheckOk();
-            UIMap.AmendSelectQuoteParams.UIAmendRiskResultsClientSendKeys = "{End}";
-            UIMap.AmendSelectQuote();
-            UIMap.MotoAmendRiskNew();
-            UIMap.RetrieveResponse();
-            UIMap.MotoAmendRiskNew_1();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
-            UIMap.RenewalCheckStatus();
-            UIMap.ClosePolicy();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPostcodeLookup();
+            this.UiMap.MotoSearchCar();
+            this.UiMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.MotoInceptionDate();
+            this.UiMap.MotoCalculate();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.MotoSelectHighwayPolicy();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            string policyNumber = this.UiMap.MotoGetPolicyNumber();
+            this.UiMap.OpenBrowser2();
+            this.UiMap.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
+            this.UiMap.MotoCreateSiteRenewal();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.ChangeDatePolicy();
+            this.UiMap.HighlightCustomer();
+            string customerCode = this.UiMap.GetCustomerCode();
+            this.UiMap.MotoRegressAppParams.UIItemEditText = customerCode;
+            this.UiMap.MotoRegressApp();
+            this.UiMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.RegressAppDate();
+            this.UiMap.MotoRegressAppFinish();
+            this.UiMap.CloseRegressApp();
+            this.UiMap.RenewalLoaderOpen();
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRun();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.RenewalLoaderClose();
+            this.UiMap.RenewalModuleEDI();
+            this.UiMap.RenewalModuleConfirm();
+            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMoto();
+            this.UiMap.RenewalModuleDisplay();
+            this.UiMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
+            this.UiMap.MotoRenewalCheckRecord();
+            this.UiMap.MotoAmendRisk();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.AmendSelectQuoteParams.UIAmendRiskResultsClientSendKeys = "{End}";
+            this.UiMap.AmendSelectQuote();
+            this.UiMap.MotoAmendRiskNew();
+            this.UiMap.RetrieveResponse();
+            this.UiMap.MotoAmendRiskNew_1();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
+            this.UiMap.RenewalCheckStatus();
+            this.UiMap.ClosePolicy();
             //mta1
-            UIMap.MotoMTA();
-            UIMap.MotoMTAAccept();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(5).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.AmendDateBeforeMessage();
-            UIMap.MTACloseMessageBefore();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(12).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MotoFinishMTA();
+            this.UiMap.MotoMTA();
+            this.UiMap.MotoMTAAccept();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(5).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.AmendDateBeforeMessage();
+            this.UiMap.MTACloseMessageBefore();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(12).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MotoFinishMTA();
             //mta2
-            UIMap.MotoMTA();
-            UIMap.MotoMTAAccept();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(9).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MTAMessageBeforeCurrent();
-            UIMap.MTACloseMessageBefore();
-            UIMap.MTACancel();
+            this.UiMap.MotoMTA();
+            this.UiMap.MotoMTAAccept();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(9).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MTAMessageBeforeCurrent();
+            this.UiMap.MTACloseMessageBefore();
+            this.UiMap.MTACancel();
         }
 
         [TestMethod]
         public void MotoRebrokeRenewCurrent()
         {
             //change registry to ourhighway
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
+            this.UiMap.RegistryHighway();
             // add policy
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPostcodeLookup();
-            UIMap.MotoSearchCar();
-            UIMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.MotoInceptionDate();
-            UIMap.MotoCalculate();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.MotoSelectHighwayPolicy();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoCloseAndOpenPolicyList();
-            string policyNumber = UIMap.MotoGetPolicyNumber();
-            UIMap.OpenBrowser2();
-            UIMap.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            UIMap.MotoCreateSiteRenewal();
-            Playback.Wait(5000); UIMap.CloseBrowser();
-            UIMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.ChangeDatePolicy();
-            UIMap.HighlightCustomer();
-            string customerCode = UIMap.GetCustomerCode();
-            UIMap.MotoRegressAppParams.UIItemEditText = customerCode;
-            UIMap.MotoRegressApp();
-            UIMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.RegressAppDate();
-            UIMap.MotoRegressAppFinish();
-            UIMap.CloseRegressApp();
-            UIMap.RenewalLoaderOpen();
-            UIMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
-            UIMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
-            UIMap.RenewalLoaderRun();
-            Playback.Wait(5000); UIMap.CloseBrowser();
-            UIMap.RenewalLoaderClose();
-            UIMap.RenewalModuleEDI(); UIMap.RenewalModuleConfirm(); UIMap.RenewalModuleEDI_1();
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMoto();
-            UIMap.RenewalModuleDisplay();
-            UIMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            UIMap.MotoRenewalCheckRecord();
-            UIMap.MotoRebroke();
-            UIMap.PublicCreditCheckOk();
-            UIMap.MotoRebrokeCurrent();
-            UIMap.RenewalModuleInvite();
-            UIMap.RenewConfirmInvite();
-            UIMap.RenewalModuleInvite_1();
-            UIMap.RenewalModuleRenew(); UIMap.RetrieveResponse(); UIMap.RenewalModuleRenew_1();
-            UIMap.RenewalModuleClose();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RenewalCheckStatus();
-            UIMap.ClosePolicy();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPostcodeLookup();
+            this.UiMap.MotoSearchCar();
+            this.UiMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.MotoInceptionDate();
+            this.UiMap.MotoCalculate();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.MotoSelectHighwayPolicy();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            string policyNumber = this.UiMap.MotoGetPolicyNumber();
+            this.UiMap.OpenBrowser2();
+            this.UiMap.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
+            this.UiMap.MotoCreateSiteRenewal();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.ChangeDatePolicy();
+            this.UiMap.HighlightCustomer();
+            string customerCode = this.UiMap.GetCustomerCode();
+            this.UiMap.MotoRegressAppParams.UIItemEditText = customerCode;
+            this.UiMap.MotoRegressApp();
+            this.UiMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.RegressAppDate();
+            this.UiMap.MotoRegressAppFinish();
+            this.UiMap.CloseRegressApp();
+            this.UiMap.RenewalLoaderOpen();
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRun();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.RenewalLoaderClose();
+            this.UiMap.RenewalModuleEDI();
+            this.UiMap.RenewalModuleConfirm();
+            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMoto();
+            this.UiMap.RenewalModuleDisplay();
+            this.UiMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
+            this.UiMap.MotoRenewalCheckRecord();
+            this.UiMap.MotoRebroke();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.MotoRebrokeCurrent();
+            this.UiMap.RenewalModuleInvite();
+            this.UiMap.RenewConfirmInvite();
+            this.UiMap.RenewalModuleInvite_1();
+            this.UiMap.RenewalModuleRenew();
+            this.UiMap.RetrieveResponse();
+            this.UiMap.RenewalModuleRenew_1();
+            this.UiMap.RenewalModuleClose();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RenewalCheckStatus();
+            this.UiMap.ClosePolicy();
         }
 
         [TestMethod]
         public void MotoRebrokeRenewExistingScheme()
         {
             //change registry to ourhighway
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
+            this.UiMap.RegistryHighway();
             // add policy
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPostcodeLookup();
-            UIMap.MotoSearchCar();
-            UIMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.MotoInceptionDate();
-            UIMap.MotoCalculate();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.MotoSelectHighwayPolicy();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoCloseAndOpenPolicyList();
-            string policyNumber = UIMap.MotoGetPolicyNumber();
-            UIMap.OpenBrowser2();
-            UIMap.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            UIMap.MotoCreateSiteRenewal();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.ChangeDatePolicy();
-            UIMap.HighlightCustomer();
-            string customerCode = UIMap.GetCustomerCode();
-            UIMap.MotoRegressAppParams.UIItemEditText = customerCode;
-            UIMap.MotoRegressApp();
-            UIMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.RegressAppDate();
-            UIMap.MotoRegressAppFinish();
-            UIMap.CloseRegressApp();
-            UIMap.RenewalLoaderOpen();
-            UIMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy"); 
-            UIMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
-            UIMap.RenewalLoaderRun();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.RenewalLoaderClose();
-            UIMap.RenewalModuleEDI(); UIMap.RenewalModuleConfirm(); UIMap.RenewalModuleEDI_1();
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMoto();
-            UIMap.RenewalModuleDisplay();
-            UIMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            UIMap.MotoRenewalCheckRecord();
-            UIMap.MotoRebroke();
-            UIMap.PublicCreditCheckOk();
-            UIMap.MotoRebrokeSelectScheme();
-            UIMap.RebrokeSelectAlternative();
-            UIMap.MotoRebrokeCurrent();
-            UIMap.RenewalModuleInvite();
-            UIMap.RenewConfirmInvite();
-            UIMap.RenewalModuleInvite_1();
-            UIMap.RebrokeAlternativeFinish();
-            UIMap.RetrieveResponse();
-            UIMap.CancelPrint();
-            UIMap.RebrokeAlternativeFinish_1();
-            UIMap.RenewalModuleClose();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
-            UIMap.RenewalCheckStatus();
-            UIMap.ClosePolicy();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPostcodeLookup();
+            this.UiMap.MotoSearchCar();
+            this.UiMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.MotoInceptionDate();
+            this.UiMap.MotoCalculate();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.MotoSelectHighwayPolicy();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            string policyNumber = this.UiMap.MotoGetPolicyNumber();
+            this.UiMap.OpenBrowser2();
+            this.UiMap.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
+            this.UiMap.MotoCreateSiteRenewal();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.ChangeDatePolicy();
+            this.UiMap.HighlightCustomer();
+            string customerCode = this.UiMap.GetCustomerCode();
+            this.UiMap.MotoRegressAppParams.UIItemEditText = customerCode;
+            this.UiMap.MotoRegressApp();
+            this.UiMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.RegressAppDate();
+            this.UiMap.MotoRegressAppFinish();
+            this.UiMap.CloseRegressApp();
+            this.UiMap.RenewalLoaderOpen();
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRun();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.RenewalLoaderClose();
+            this.UiMap.RenewalModuleEDI();
+            this.UiMap.RenewalModuleConfirm();
+            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMoto();
+            this.UiMap.RenewalModuleDisplay();
+            this.UiMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
+            this.UiMap.MotoRenewalCheckRecord();
+            this.UiMap.MotoRebroke();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.MotoRebrokeSelectScheme();
+            this.UiMap.RebrokeSelectAlternative();
+            this.UiMap.MotoRebrokeCurrent();
+            this.UiMap.RenewalModuleInvite();
+            this.UiMap.RenewConfirmInvite();
+            this.UiMap.RenewalModuleInvite_1();
+            this.UiMap.RebrokeAlternativeFinish();
+            this.UiMap.RetrieveResponse();
+            this.UiMap.CancelPrint();
+            this.UiMap.RebrokeAlternativeFinish_1();
+            this.UiMap.RenewalModuleClose();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
+            this.UiMap.RenewalCheckStatus();
+            this.UiMap.ClosePolicy();
         }
 
         [TestMethod]
         public void MotoRebrokeRenewNewScheme()
         {
             //change registry to ourhighway
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
+            this.UiMap.RegistryHighway();
             // add policy
-            UIMap.AddPolicy();
-            UIMap.SelectMotoPolicy();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.MotoPostcodeLookup();
-            UIMap.MotoSearchCar();
-            UIMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.MotoInceptionDate();
-            UIMap.MotoCalculate();
-            UIMap.CancelFilter();
-            UIMap.QuoteResults_1();
-            UIMap.PublicCreditCheckOk();
-            UIMap.MotoSelectHighwayPolicy();
-            UIMap.AcceptQuote();
-            UIMap.FinishQuote();
-            UIMap.CancelPrint();
-            UIMap.FinishQuote1();
-            UIMap.MotoCloseAndOpenPolicyList();
-            string policyNumber = UIMap.MotoGetPolicyNumber();
-            UIMap.OpenBrowser2();
-            UIMap.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            UIMap.MotoCreateSiteRenewal();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.ChangeDatePolicy();
-            UIMap.HighlightCustomer();
-            string customerCode = UIMap.GetCustomerCode();
-            UIMap.MotoRegressAppParams.UIItemEditText = customerCode;
-            UIMap.MotoRegressApp();
-            UIMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.RegressAppDate();
-            UIMap.MotoRegressAppFinish();
-            UIMap.CloseRegressApp();
-            UIMap.RenewalLoaderOpen();
-            UIMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy"); 
-            UIMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
-            UIMap.RenewalLoaderRun();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.RenewalLoaderClose();
-            UIMap.RenewalModuleEDI(); UIMap.RenewalModuleConfirm(); UIMap.RenewalModuleEDI_1();
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMoto();
-            UIMap.RenewalModuleSort();
-            UIMap.RenewalModuleSort();
-            UIMap.RenewalModuleDisplay();
-            UIMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            UIMap.MotoRenewalCheckRecord();
-            UIMap.MotoRebroke();
-            UIMap.PublicCreditCheckOk();
-            UIMap.MotoRebrokeSelectSchemeParams.UIItemClientSendKeys = "{End}";
-            UIMap.MotoRebrokeSelectScheme();
-            UIMap.RebrokeSelectAlternative();
-            UIMap.MotoRebrokeCurrent();
-            UIMap.RenewalModuleInvite();
-            UIMap.RenewConfirmInvite();
-            UIMap.RenewalModuleInvite_1();
-            UIMap.RebrokeAlternativeFinish();
-            UIMap.RetrieveResponse();
-            UIMap.CancelPrint();
-            UIMap.RebrokeAlternativeFinish_1();
-            UIMap.RenewalModuleClose();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
-            UIMap.RenewalCheckStatus();
-            UIMap.ClosePolicy();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.MotoPostcodeLookup();
+            this.UiMap.MotoSearchCar();
+            this.UiMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.MotoInceptionDate();
+            this.UiMap.MotoCalculate();
+            this.UiMap.CancelFilter();
+            this.UiMap.QuoteResults_1();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.MotoSelectHighwayPolicy();
+            this.UiMap.AcceptQuote();
+            this.UiMap.FinishQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.FinishQuote1();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            string policyNumber = this.UiMap.MotoGetPolicyNumber();
+            this.UiMap.OpenBrowser2();
+            this.UiMap.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
+            this.UiMap.MotoCreateSiteRenewal();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.ChangeDatePolicy();
+            this.UiMap.HighlightCustomer();
+            string customerCode = this.UiMap.GetCustomerCode();
+            this.UiMap.MotoRegressAppParams.UIItemEditText = customerCode;
+            this.UiMap.MotoRegressApp();
+            this.UiMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.RegressAppDate();
+            this.UiMap.MotoRegressAppFinish();
+            this.UiMap.CloseRegressApp();
+            this.UiMap.RenewalLoaderOpen();
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRun();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.RenewalLoaderClose();
+            this.UiMap.RenewalModuleEDI();
+            this.UiMap.RenewalModuleConfirm();
+            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMoto();
+            this.UiMap.RenewalModuleSort();
+            this.UiMap.RenewalModuleSort();
+            this.UiMap.RenewalModuleDisplay();
+            this.UiMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
+            this.UiMap.MotoRenewalCheckRecord();
+            this.UiMap.MotoRebroke();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.MotoRebrokeSelectSchemeParams.UIItemClientSendKeys = "{End}";
+            this.UiMap.MotoRebrokeSelectScheme();
+            this.UiMap.RebrokeSelectAlternative();
+            this.UiMap.MotoRebrokeCurrent();
+            this.UiMap.RenewalModuleInvite();
+            this.UiMap.RenewConfirmInvite();
+            this.UiMap.RenewalModuleInvite_1();
+            this.UiMap.RebrokeAlternativeFinish();
+            this.UiMap.RetrieveResponse();
+            this.UiMap.CancelPrint();
+            this.UiMap.RebrokeAlternativeFinish_1();
+            this.UiMap.RenewalModuleClose();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
+            this.UiMap.RenewalCheckStatus();
+            this.UiMap.ClosePolicy();
         }
 
         [TestMethod]
         public void HouseCreateQuote()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeProposer();
-            UIMap.HomeAddressLookup();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeOpenPolicy();
-            UIMap.HomeCheckPolicyPremium();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeAddressLookup();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeOpenPolicy();
+            this.UiMap.HomeCheckPolicyPremium();
         }
 
         [TestMethod]
         public void HouseSaveQuoteWithoutPremium()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeProposer();
-            UIMap.HomeAddressLookup();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk();
-            UIMap.HomeExitWithoutPolicy();
-            UIMap.HomeCloseOpenPolicy();
-            UIMap.HomeClickPremium();
-            UIMap.HomeCheckZeroPremium();
-            UIMap.HomeExitWithPolicy();
-            UIMap.HomeCheckPremium();
-            UIMap.HomePrintQuote();
-            UIMap.SelectMenu();
-            UIMap.HomePrintQuote_1();
-            UIMap.HomeCheckPrint();
-            UIMap.HomeDemands();
-            UIMap.CloseDemandsMoto();
-            UIMap.HomeAcceptQuote();
-            UIMap.CancelPrint();
-            UIMap.HomeAcceptQuote_1();
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeOpenPolicy();
-            UIMap.HomeCheckPolicyPremium();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeAddressLookup();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeExitWithoutPolicy();
+            this.UiMap.HomeCloseOpenPolicy();
+            this.UiMap.HomeClickPremium();
+            this.UiMap.HomeCheckZeroPremium();
+            this.UiMap.HomeExitWithPolicy();
+            this.UiMap.HomeCheckPremium();
+            this.UiMap.HomePrintQuote();
+            this.UiMap.SelectMenu();
+            this.UiMap.HomePrintQuote_1();
+            this.UiMap.HomeCheckPrint();
+            this.UiMap.HomeDemands();
+            this.UiMap.CloseDemandsMoto();
+            this.UiMap.HomeAcceptQuote();
+            this.UiMap.CancelPrint();
+            this.UiMap.HomeAcceptQuote_1();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeOpenPolicy();
+            this.UiMap.HomeCheckPolicyPremium();
         }
 
         [TestMethod]
         public void HouseOverridePremium()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeProposer();
-            UIMap.HomeAddressLookup();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy();
-            UIMap.HomeChangePremium();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeOpenPolicy();
-            UIMap.HomeCheckNewPremium();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeAddressLookup();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy();
+            this.UiMap.HomeChangePremium();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeOpenPolicy();
+            this.UiMap.HomeCheckNewPremium();
         }
 
         [TestMethod]
         public void HouseCopyRiskNew()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeProposer();
-            UIMap.HomeAddressLookup();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeCopyRisk();
-            UIMap.HomeCopyCheckData();
-            UIMap.HomeCancelCopy();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeAddressLookup();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeCopyRisk();
+            this.UiMap.HomeCopyCheckData();
+            this.UiMap.HomeCancelCopy();
         }
 
         [TestMethod]
         public void HouseCopyRiskQTE()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeProposer();
-            UIMap.HomeAddressLookup();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk();
-            UIMap.HomeExitWithoutPolicy();
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeCopyRisk();
-            UIMap.HomeCopyCheckData();
-            UIMap.HomeCancelCopy();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeAddressLookup();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeExitWithoutPolicy();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeCopyRisk();
+            this.UiMap.HomeCopyCheckData();
+            this.UiMap.HomeCancelCopy();
         }
 
         [TestMethod]
         public void HouseMTAExit()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeProposer();
-            UIMap.HomeAddressLookup();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeOpenQuote();
-            UIMap.HomeMTAChange();
-            UIMap.HomeMTACancel();
-            UIMap.HomeOpenQuote();
-            UIMap.HomeMTACheckCancelled();
-            UIMap.HomeClosePilicy();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeAddressLookup();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeMTAChange();
+            this.UiMap.HomeMTACancel();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeMTACheckCancelled();
+            this.UiMap.HomeClosePilicy();
         }
 
         [TestMethod]
         public void HouseMTAAccept()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeProposer();
-            UIMap.HomeAddressLookup();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeOpenQuote();
-            UIMap.HomeMTAChange();
-            UIMap.HomeMTAAccept();
-            UIMap.HomeMTACoverDate();
-            UIMap.HomeMTASelectQuote();
-            UIMap.HomeOpenQuote();
-            UIMap.HomeMTACheckChanged();
-            UIMap.HomeClosePilicy();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeAddressLookup();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeMTAChange();
+            this.UiMap.HomeMTAAccept();
+            this.UiMap.HomeMTACoverDate();
+            this.UiMap.HomeMTASelectQuote();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeMTACheckChanged();
+            this.UiMap.HomeClosePilicy();
         }
 
         [TestMethod]
         public void HouseCopyMTA()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeProposer();
-            UIMap.HomeAddressLookup();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeOpenQuote();
-            UIMap.HomeMTAChange();
-            UIMap.HomeMTAAccept();
-            UIMap.HomeMTACoverDate();
-            UIMap.HomeMTASelectQuote();
-            UIMap.HomeCopyRisk();
-            UIMap.HomeMTACopyCheck();
-            UIMap.HomeCancelCopy();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeAddressLookup();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeMTAChange();
+            this.UiMap.HomeMTAAccept();
+            this.UiMap.HomeMTACoverDate();
+            this.UiMap.HomeMTASelectQuote();
+            this.UiMap.HomeCopyRisk();
+            this.UiMap.HomeMTACopyCheck();
+            this.UiMap.HomeCancelCopy();
         }
 
         [TestMethod]
         public void HouseMTAtoMTA()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
             // create new policy
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeProposer();
-            UIMap.HomeAddressLookup();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeAddressLookup();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
             //MTA
-            UIMap.HomeOpenQuote();
-            UIMap.HomeMTAChange();
-            UIMap.HomeMTAAccept();
-            UIMap.HomeMTACoverDate();
-            UIMap.HomeMTASelectQuote();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeMTAChange();
+            this.UiMap.HomeMTAAccept();
+            this.UiMap.HomeMTACoverDate();
+            this.UiMap.HomeMTASelectQuote();
             //new MTA
-            UIMap.HomeOpenQuote();
-            UIMap.HomeMTAChangeParams.UIItemEditText = "NewestMTA";
-            UIMap.HomeMTAChange();
-            UIMap.HomeMTAAccept();
-            UIMap.HomeMTAEnterDateParams.UIItemEditText = "30/09/12";
-            UIMap.HomeMTAEnterDate();
-            UIMap.HomeMTACoverDate();
-            UIMap.HomeMTACheckMessage();
-            UIMap.HomeMTACloseMessage();
-            UIMap.HomeMTAEnterDateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
-            UIMap.HomeMTAEnterDate();
-            UIMap.HomeMTACoverDate();
-            UIMap.HomeMTASelectQuote();
-            UIMap.HomeOpenQuote();
-            UIMap.HomeMTACheckChangedExpectedValues.UIItemEditText = "NewestMTA";
-            UIMap.HomeMTACheckChanged();
-            UIMap.HomeClosePilicy();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeMTAChangeParams.UIItemEditText = "NewestMTA";
+            this.UiMap.HomeMTAChange();
+            this.UiMap.HomeMTAAccept();
+            this.UiMap.HomeMTAEnterDateParams.UIItemEditText = "30/09/12";
+            this.UiMap.HomeMTAEnterDate();
+            this.UiMap.HomeMTACoverDate();
+            this.UiMap.HomeMTACheckMessage();
+            this.UiMap.HomeMTACloseMessage();
+            this.UiMap.HomeMTAEnterDateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
+            this.UiMap.HomeMTAEnterDate();
+            this.UiMap.HomeMTACoverDate();
+            this.UiMap.HomeMTASelectQuote();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeMTACheckChangedExpectedValues.UIItemEditText = "NewestMTA";
+            this.UiMap.HomeMTACheckChanged();
+            this.UiMap.HomeClosePilicy();
         }
 
         [TestMethod]
         public void HouseCancelExit()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
             //create policy
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeProposer();
-            UIMap.HomeAddressLookup();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeAddressLookup();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
             //cancel policy
-            UIMap.HomeOpenQuote();
-            UIMap.HomeCancelPolicy();
-            UIMap.HomeCancelPolicyQuote();
-            UIMap.HomeMTAEnterDateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
-            UIMap.HomeMTAEnterDate();
-            UIMap.HomeCancelPolicyQuote_1();
-            UIMap.HomeCancelPolicyExit();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeCancelPolicy();
+            this.UiMap.HomeCancelPolicyQuote();
+            this.UiMap.HomeMTAEnterDateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
+            this.UiMap.HomeMTAEnterDate();
+            this.UiMap.HomeCancelPolicyQuote_1();
+            this.UiMap.HomeCancelPolicyExit();
             //check status
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeOpenPolicy();
-            UIMap.HomeCheckStatusExpectedValues.UIItemEditText = "NEW";
-            UIMap.HomeCheckStatus();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeOpenPolicy();
+            this.UiMap.HomeCheckStatusExpectedValues.UIItemEditText = "NEW";
+            this.UiMap.HomeCheckStatus();
         }
 
         [TestMethod]
         public void HouseCancelAccept()
         {
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
+            this.UiMap.RegistryHighway();
             //add policy
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeProposer();
-            UIMap.HomeAddressLookup();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeAddressLookup();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
             //cancel policy
-            UIMap.HomeOpenQuote();
-            UIMap.HomeCancelPolicy();
-            UIMap.HomeCancelPolicyQuote();
-            UIMap.HomeMTAEnterDateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
-            UIMap.HomeMTAEnterDate();
-            UIMap.HomeCancelPolicyQuote_1();
-            UIMap.HomeCancelPolicyAccept();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeCancelPolicy();
+            this.UiMap.HomeCancelPolicyQuote();
+            this.UiMap.HomeMTAEnterDateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
+            this.UiMap.HomeMTAEnterDate();
+            this.UiMap.HomeCancelPolicyQuote_1();
+            this.UiMap.HomeCancelPolicyAccept();
             //check status
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeOpenPolicy();
-            UIMap.HomeCheckStatusExpectedValues.UIItemEditText = "CAN";
-            UIMap.HomeCheckStatus();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeOpenPolicy();
+            this.UiMap.HomeCheckStatusExpectedValues.UIItemEditText = "CAN";
+            this.UiMap.HomeCheckStatus();
         }
 
         [TestMethod]
         public void HouseRenewalBefore()
         {
             // change registry to ourhighway
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
+            this.UiMap.RegistryHighway();
             //add policy
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.HomeStartDate();
-            UIMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
-            UIMap.HomeProposer();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy1();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeOpenPolicy();
-            string policyNumber = UIMap.MotoGetPolicyNumber();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.HomeStartDate();
+            this.UiMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy1();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeOpenPolicy();
+            string policyNumber = this.UiMap.MotoGetPolicyNumber();
             //site for renewal
-            UIMap.OpenBrowser2();
-            UIMap.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            UIMap.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.HomeSiteRenewal();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.ChangeDatePolicy();
+            this.UiMap.OpenBrowser2();
+            this.UiMap.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
+            this.UiMap.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.HomeSiteRenewal();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.ChangeDatePolicy();
             //regress app
-            UIMap.HighlightCustomer();
-            string customerCode = UIMap.GetCustomerCode();
-            UIMap.MotoRegressAppParams.UIItemEditText = customerCode;
-            UIMap.MotoRegressApp();
-            UIMap.HouseRegressApp();
-            UIMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.RegressAppDate();
-            UIMap.MotoRegressAppFinish();
-            UIMap.CloseRegressApp();
+            this.UiMap.HighlightCustomer();
+            string customerCode = this.UiMap.GetCustomerCode();
+            this.UiMap.MotoRegressAppParams.UIItemEditText = customerCode;
+            this.UiMap.MotoRegressApp();
+            this.UiMap.HouseRegressApp();
+            this.UiMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.RegressAppDate();
+            this.UiMap.MotoRegressAppFinish();
+            this.UiMap.CloseRegressApp();
             //renewal loader
-            UIMap.RenewalLoaderOpen();
-            UIMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy"); 
-            UIMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
-            UIMap.RenewalLoaderRun();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.RenewalLoaderClose();
-           //  renewal module
-            UIMap.RenewalModuleEDI(); 
-            UIMap.RenewalModuleConfirm(); 
-            UIMap.RenewalModuleEDI_1();
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
-            UIMap.RenewalModuleFilterMoto();
-            UIMap.RenewalModuleSort();
-            UIMap.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
-            UIMap.RenewalModuleDisplay();
-            UIMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            UIMap.MotoRenewalCheckRecord();
-            UIMap.RenewalModuleInvite();
-            UIMap.RenewConfirmInvite();
-            UIMap.RenewalModuleInvite_1();
-            UIMap.RenewalModuleRenew(); 
-            UIMap.RetrieveResponse(); 
-            UIMap.RenewalModuleRenew_1();
-            UIMap.RenewalModuleClose();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RenewalCheckStatus();
-            UIMap.ClosePolicy();
+            this.UiMap.RenewalLoaderOpen();
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRun();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.RenewalLoaderClose();
+            //  renewal module
+            this.UiMap.RenewalModuleEDI();
+            this.UiMap.RenewalModuleConfirm();
+            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
+            this.UiMap.RenewalModuleFilterMoto();
+            this.UiMap.RenewalModuleSort();
+            this.UiMap.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
+            this.UiMap.RenewalModuleDisplay();
+            this.UiMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
+            this.UiMap.MotoRenewalCheckRecord();
+            this.UiMap.RenewalModuleInvite();
+            this.UiMap.RenewConfirmInvite();
+            this.UiMap.RenewalModuleInvite_1();
+            this.UiMap.RenewalModuleRenew();
+            this.UiMap.RetrieveResponse();
+            this.UiMap.RenewalModuleRenew_1();
+            this.UiMap.RenewalModuleClose();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RenewalCheckStatus();
+            this.UiMap.ClosePolicy();
             //mta1
-            UIMap.HomeOpenQuote();
-            UIMap.HomeMTABefore();
-            UIMap.HomeMTAChange();
-            UIMap.HomeMTAAccept();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.HomeRenewalBeforeAccept();
-            UIMap.HomeRenewalCancelledCheck();
-            UIMap.HomeRenewalBeforeFinish();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeMTABefore();
+            this.UiMap.HomeMTAChange();
+            this.UiMap.HomeMTAAccept();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.HomeRenewalBeforeAccept();
+            this.UiMap.HomeRenewalCancelledCheck();
+            this.UiMap.HomeRenewalBeforeFinish();
             ////mta2
-            UIMap.HomeOpenQuote();
-            UIMap.HomeRenewalConfirm();
-            UIMap.HomeMTAChange();
-            UIMap.HomeMTAAccept();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MTAMessageBeforeCurrent();
-            UIMap.MTACloseMessageBefore();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(10).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MotoMTAMessageAfterDate();
-            UIMap.MTACloseMessageAfter();
-            UIMap.MTAEffectiveDatesCancel();
-            UIMap.HomeMTACancel1();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeRenewalConfirm();
+            this.UiMap.HomeMTAChange();
+            this.UiMap.HomeMTAAccept();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MTAMessageBeforeCurrent();
+            this.UiMap.MTACloseMessageBefore();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(10).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MotoMTAMessageAfterDate();
+            this.UiMap.MTACloseMessageAfter();
+            this.UiMap.MTAEffectiveDatesCancel();
+            this.UiMap.HomeMTACancel1();
         }
 
         [TestMethod]
         public void HouseRenewalAfter()
         {
             // change registry to ourhighway
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
+            this.UiMap.RegistryHighway();
             //add policy
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.HomeStartDate();
-            UIMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
-            UIMap.HomeProposer();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy1();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeOpenPolicy();
-            string policyNumber = UIMap.MotoGetPolicyNumber();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.HomeStartDate();
+            this.UiMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy1();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeOpenPolicy();
+            string policyNumber = this.UiMap.MotoGetPolicyNumber();
             //site for renewal
-            UIMap.OpenBrowser2();
-            UIMap.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            UIMap.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.HomeSiteRenewal();
+            this.UiMap.OpenBrowser2();
+            this.UiMap.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
+            this.UiMap.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.HomeSiteRenewal();
             Playback.Wait(5000);
-            UIMap.CloseBrowser();
-            UIMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.ChangeDatePolicy();
+            this.UiMap.CloseBrowser();
+            this.UiMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.ChangeDatePolicy();
             //regress app
-            UIMap.HighlightCustomer();
-            string customerCode = UIMap.GetCustomerCode();
-            UIMap.MotoRegressAppParams.UIItemEditText = customerCode;
-            UIMap.MotoRegressApp();
-            UIMap.HouseRegressApp();
-            UIMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.RegressAppDate();
-            UIMap.MotoRegressAppFinish();
-            UIMap.CloseRegressApp();
+            this.UiMap.HighlightCustomer();
+            string customerCode = this.UiMap.GetCustomerCode();
+            this.UiMap.MotoRegressAppParams.UIItemEditText = customerCode;
+            this.UiMap.MotoRegressApp();
+            this.UiMap.HouseRegressApp();
+            this.UiMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.RegressAppDate();
+            this.UiMap.MotoRegressAppFinish();
+            this.UiMap.CloseRegressApp();
             //renewal loader
-            UIMap.RenewalLoaderOpen();
-            UIMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy"); 
-            UIMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
-            UIMap.RenewalLoaderRun();
+            this.UiMap.RenewalLoaderOpen();
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRun();
             Playback.Wait(5000);
-            UIMap.CloseBrowser();
-            UIMap.RenewalLoaderClose();
+            this.UiMap.CloseBrowser();
+            this.UiMap.RenewalLoaderClose();
             // renewal module
-            UIMap.RenewalModuleEDI(); UIMap.RenewalModuleConfirm(); UIMap.RenewalModuleEDI_1();
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
-            UIMap.RenewalModuleFilterMoto();
-            UIMap.RenewalModuleSort();
-            UIMap.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
-            UIMap.RenewalModuleDisplay();
-            UIMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            UIMap.MotoRenewalCheckRecord();
-            UIMap.RenewalModuleInvite();
-            UIMap.RenewConfirmInvite();
-            UIMap.RenewalModuleInvite_1();
-            UIMap.RenewalModuleRenew(); 
-            UIMap.RetrieveResponse(); 
-            UIMap.RenewalModuleRenew_1();
-            UIMap.RenewalModuleClose();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RenewalCheckStatus();
-            UIMap.ClosePolicy();
+            this.UiMap.RenewalModuleEDI();
+            this.UiMap.RenewalModuleConfirm();
+            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
+            this.UiMap.RenewalModuleFilterMoto();
+            this.UiMap.RenewalModuleSort();
+            this.UiMap.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
+            this.UiMap.RenewalModuleDisplay();
+            this.UiMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
+            this.UiMap.MotoRenewalCheckRecord();
+            this.UiMap.RenewalModuleInvite();
+            this.UiMap.RenewConfirmInvite();
+            this.UiMap.RenewalModuleInvite_1();
+            this.UiMap.RenewalModuleRenew();
+            this.UiMap.RetrieveResponse();
+            this.UiMap.RenewalModuleRenew_1();
+            this.UiMap.RenewalModuleClose();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RenewalCheckStatus();
+            this.UiMap.ClosePolicy();
             ////MTA1
-            UIMap.HomeOpenQuote();
-            UIMap.HomeMTAAfter();
-            UIMap.HomeMTAChange();
-            UIMap.HomeMTAAccept();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(14).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.HomeMTASelectQuote();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeMTAAfter();
+            this.UiMap.HomeMTAChange();
+            this.UiMap.HomeMTAAccept();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(14).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.HomeMTASelectQuote();
             //MTA2
-            UIMap.HomeOpenQuote();
-            UIMap.HomeMTAAfter();
-            UIMap.HomeMTAChange();
-            UIMap.HomeMTAAccept();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(13).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MTAMessageBeforeCurrent();
-            UIMap.MTACloseMessageBefore();
-            UIMap.MTAEffectiveDatesCancel();
-            UIMap.HomeMTACancel1();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeMTAAfter();
+            this.UiMap.HomeMTAChange();
+            this.UiMap.HomeMTAAccept();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(13).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MTAMessageBeforeCurrent();
+            this.UiMap.MTACloseMessageBefore();
+            this.UiMap.MTAEffectiveDatesCancel();
+            this.UiMap.HomeMTACancel1();
             //MTA3
-            UIMap.HomeOpenQuote();
-            UIMap.HomeMTABefore();
-            UIMap.HomeMTAChange();
-            UIMap.HomeMTAAccept();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(9).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MotoMTAMessageAfterDate();
-            UIMap.MTACloseMessageAfter();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.HomeRenewalBeforeAccept();
-            UIMap.HomeRenewalBeforeFinish();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeMTABefore();
+            this.UiMap.HomeMTAChange();
+            this.UiMap.HomeMTAAccept();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(9).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MotoMTAMessageAfterDate();
+            this.UiMap.MTACloseMessageAfter();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.HomeRenewalBeforeAccept();
+            this.UiMap.HomeRenewalBeforeFinish();
             //mta4
-            UIMap.HomeOpenQuote();
-            UIMap.HomeRenewalConfirm();
-            UIMap.HomeMTAChange();
-            UIMap.HomeMTAAccept();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MTAMessageBeforeCurrent();
-            UIMap.MTACloseMessageBefore();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(11).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MotoMTAMessageAfterDate();
-            UIMap.MTACloseMessageAfter();
-            UIMap.MTAEffectiveDatesCancel();
-            UIMap.HomeMTACancel1();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeRenewalConfirm();
+            this.UiMap.HomeMTAChange();
+            this.UiMap.HomeMTAAccept();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MTAMessageBeforeCurrent();
+            this.UiMap.MTACloseMessageBefore();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(11).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MotoMTAMessageAfterDate();
+            this.UiMap.MTACloseMessageAfter();
+            this.UiMap.MTAEffectiveDatesCancel();
+            this.UiMap.HomeMTACancel1();
         }
 
         [TestMethod]
         public void HouseAmendRiskExistingScheme()
         {
             // change registry to ourhighway
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
+            this.UiMap.RegistryHighway();
             //add policy
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.HomeStartDate();
-            UIMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
-            UIMap.HomeProposer();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy1();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeOpenPolicy();
-            string policyNumber = UIMap.MotoGetPolicyNumber();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.HomeStartDate();
+            this.UiMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy1();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeOpenPolicy();
+            string policyNumber = this.UiMap.MotoGetPolicyNumber();
             //site for renewal
-            UIMap.OpenBrowser2();
-            UIMap.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            UIMap.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.HomeSiteRenewal();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.ChangeDatePolicy();
-            //regress app
-            UIMap.HighlightCustomer();
-            string customerCode = UIMap.GetCustomerCode();
-            UIMap.MotoRegressAppParams.UIItemEditText = customerCode;
-            UIMap.MotoRegressApp();
-            UIMap.HouseRegressApp();
-            UIMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.RegressAppDate();
-            UIMap.MotoRegressAppFinish();
-            UIMap.CloseRegressApp();
-            //renewal loader
-            UIMap.RenewalLoaderOpen();
-            UIMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy"); 
-            UIMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
-            UIMap.RenewalLoaderRun();
+            this.UiMap.OpenBrowser2();
+            this.UiMap.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
+            this.UiMap.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.HomeSiteRenewal();
             Playback.Wait(5000);
-            UIMap.CloseBrowser();
-            UIMap.RenewalLoaderClose();
+            this.UiMap.CloseBrowser();
+            this.UiMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.ChangeDatePolicy();
+            //regress app
+            this.UiMap.HighlightCustomer();
+            string customerCode = this.UiMap.GetCustomerCode();
+            this.UiMap.MotoRegressAppParams.UIItemEditText = customerCode;
+            this.UiMap.MotoRegressApp();
+            this.UiMap.HouseRegressApp();
+            this.UiMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.RegressAppDate();
+            this.UiMap.MotoRegressAppFinish();
+            this.UiMap.CloseRegressApp();
+            //renewal loader
+            this.UiMap.RenewalLoaderOpen();
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRun();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.RenewalLoaderClose();
             // renewal module
-            UIMap.RenewalModuleEDI(); 
-            UIMap.RenewalModuleConfirm(); 
-            UIMap.RenewalModuleEDI_1();
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
-            UIMap.RenewalModuleFilterMoto();
-            UIMap.RenewalModuleSort();
-            UIMap.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
-            UIMap.RenewalModuleDisplay();
-            UIMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            UIMap.MotoRenewalCheckRecord();
-            UIMap.HomeAmendRisk();
-            UIMap.PublicCreditCheckOk();
-            UIMap.HomeAmendSelecPolicy();
-            UIMap.HomeAmendRenew();
-            UIMap.RenewalModuleClose();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RenewalCheckStatus();
-            UIMap.ClosePolicy();
+            this.UiMap.RenewalModuleEDI();
+            this.UiMap.RenewalModuleConfirm();
+            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
+            this.UiMap.RenewalModuleFilterMoto();
+            this.UiMap.RenewalModuleSort();
+            this.UiMap.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
+            this.UiMap.RenewalModuleDisplay();
+            this.UiMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
+            this.UiMap.MotoRenewalCheckRecord();
+            this.UiMap.HomeAmendRisk();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeAmendSelecPolicy();
+            this.UiMap.HomeAmendRenew();
+            this.UiMap.RenewalModuleClose();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RenewalCheckStatus();
+            this.UiMap.ClosePolicy();
         }
 
         [TestMethod]
         public void HouseAmendRiskNewScheme()
         {
             // change registry to ourhighway
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
+            this.UiMap.RegistryHighway();
             //add policy
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.HomeStartDate();
-            UIMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
-            UIMap.HomeProposer();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy1();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeOpenPolicy();
-            string policyNumber = UIMap.MotoGetPolicyNumber();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.HomeStartDate();
+            this.UiMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy1();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeOpenPolicy();
+            string policyNumber = this.UiMap.MotoGetPolicyNumber();
             //site for renewal
-            UIMap.OpenBrowser2();
-            UIMap.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            UIMap.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.HomeSiteRenewal();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.ChangeDatePolicy();
-            //regress app
-            UIMap.HighlightCustomer();
-            string customerCode = UIMap.GetCustomerCode();
-            UIMap.MotoRegressAppParams.UIItemEditText = customerCode;
-            UIMap.MotoRegressApp();
-            UIMap.HouseRegressApp();
-            UIMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.RegressAppDate();
-            UIMap.MotoRegressAppFinish();
-            UIMap.CloseRegressApp();
-            //renewal loader
-            UIMap.RenewalLoaderOpen();
-            UIMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy"); 
-            UIMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
-            UIMap.RenewalLoaderRun();
+            this.UiMap.OpenBrowser2();
+            this.UiMap.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
+            this.UiMap.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.HomeSiteRenewal();
             Playback.Wait(5000);
-            UIMap.CloseBrowser();
-            UIMap.RenewalLoaderClose();
+            this.UiMap.CloseBrowser();
+            this.UiMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.ChangeDatePolicy();
+            //regress app
+            this.UiMap.HighlightCustomer();
+            string customerCode = this.UiMap.GetCustomerCode();
+            this.UiMap.MotoRegressAppParams.UIItemEditText = customerCode;
+            this.UiMap.MotoRegressApp();
+            this.UiMap.HouseRegressApp();
+            this.UiMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.RegressAppDate();
+            this.UiMap.MotoRegressAppFinish();
+            this.UiMap.CloseRegressApp();
+            //renewal loader
+            this.UiMap.RenewalLoaderOpen();
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRun();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.RenewalLoaderClose();
             // renewal module
-            UIMap.RenewalModuleEDI(); UIMap.RenewalModuleConfirm(); UIMap.RenewalModuleEDI_1();
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
-            UIMap.RenewalModuleFilterMoto();
-            UIMap.RenewalModuleSort();
-            UIMap.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
-            UIMap.RenewalModuleDisplay();
-            UIMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            UIMap.MotoRenewalCheckRecord();
-            UIMap.HomeAmendRisk();
-            UIMap.PublicCreditCheckOk();
-            UIMap.HomeAmendSelecPolicyParams.UIHouseholdRenewalsAmeClientSendKeys = "{End}";
-            UIMap.HomeAmendSelecPolicy();
-            UIMap.HomeAmendRenewFinish();
-            UIMap.etam_ok();
-            UIMap.ConfirmDocuments();
-            UIMap.RetrieveResponse();
-            UIMap.HomeAmendRenewFinish_1();
-            UIMap.etam_ok();
-            UIMap.RenewalModuleClose();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
-            UIMap.RenewalCheckStatus();
-            UIMap.ClosePolicy();
+            this.UiMap.RenewalModuleEDI();
+            this.UiMap.RenewalModuleConfirm();
+            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
+            this.UiMap.RenewalModuleFilterMoto();
+            this.UiMap.RenewalModuleSort();
+            this.UiMap.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
+            this.UiMap.RenewalModuleDisplay();
+            this.UiMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
+            this.UiMap.MotoRenewalCheckRecord();
+            this.UiMap.HomeAmendRisk();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeAmendSelecPolicyParams.UIHouseholdRenewalsAmeClientSendKeys = "{End}";
+            this.UiMap.HomeAmendSelecPolicy();
+            this.UiMap.HomeAmendRenewFinish();
+            this.UiMap.etam_ok();
+            this.UiMap.ConfirmDocuments();
+            this.UiMap.RetrieveResponse();
+            this.UiMap.HomeAmendRenewFinish_1();
+            this.UiMap.etam_ok();
+            this.UiMap.RenewalModuleClose();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
+            this.UiMap.RenewalCheckStatus();
+            this.UiMap.ClosePolicy();
             //MTA1
-            UIMap.HomeOpenQuote();
-            UIMap.HomeMTAChange();
-            UIMap.HomeMTAAccept();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.AmendDateBeforeMessage();
-            UIMap.MTACloseMessageBefore();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(14).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.HomeMTASelectQuote();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeMTAChange();
+            this.UiMap.HomeMTAAccept();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.AmendDateBeforeMessage();
+            this.UiMap.MTACloseMessageBefore();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(14).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.HomeMTASelectQuote();
             //MTA2
-            UIMap.HomeOpenQuote();
-            UIMap.HomeMTAChange();
-            UIMap.HomeMTAAccept();
-            UIMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(13).ToString("dd/MM/yy");
-            UIMap.MTADate();
-            UIMap.MTAMessageBeforeCurrent();
-            UIMap.MTACloseMessageBefore();
-            UIMap.MTAEffectiveDatesCancel();
-            UIMap.HomeMTACancel1();
+            this.UiMap.HomeOpenQuote();
+            this.UiMap.HomeMTAChange();
+            this.UiMap.HomeMTAAccept();
+            this.UiMap.MTADateParams.UIItemEditText = DateTime.Now.AddDays(13).ToString("dd/MM/yy");
+            this.UiMap.MTADate();
+            this.UiMap.MTAMessageBeforeCurrent();
+            this.UiMap.MTACloseMessageBefore();
+            this.UiMap.MTAEffectiveDatesCancel();
+            this.UiMap.HomeMTACancel1();
         }
 
         [TestMethod]
         public void HouseRebrokeRenewCurrent()
         {
             // change registry to ourhighway
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
+            this.UiMap.RegistryHighway();
             //add policy
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.HomeStartDate();
-            UIMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
-            UIMap.HomeProposer();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy1();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeOpenPolicy();
-            string policyNumber = UIMap.MotoGetPolicyNumber();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.HomeStartDate();
+            this.UiMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy1();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeOpenPolicy();
+            string policyNumber = this.UiMap.MotoGetPolicyNumber();
             //site for renewal
-            UIMap.OpenBrowser2();
-            UIMap.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            UIMap.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.HomeSiteRenewal();
+            this.UiMap.OpenBrowser2();
+            this.UiMap.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
+            this.UiMap.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.HomeSiteRenewal();
             Playback.Wait(5000);
-            UIMap.CloseBrowser();
-            UIMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.ChangeDatePolicy();
+            this.UiMap.CloseBrowser();
+            this.UiMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.ChangeDatePolicy();
             //regress app
-            UIMap.HighlightCustomer();
-            string customerCode = UIMap.GetCustomerCode();
-            UIMap.MotoRegressAppParams.UIItemEditText = customerCode;
-            UIMap.MotoRegressApp();
-            UIMap.HouseRegressApp();
-            UIMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.RegressAppDate();
-            UIMap.MotoRegressAppFinish();
-            UIMap.CloseRegressApp();
+            this.UiMap.HighlightCustomer();
+            string customerCode = this.UiMap.GetCustomerCode();
+            this.UiMap.MotoRegressAppParams.UIItemEditText = customerCode;
+            this.UiMap.MotoRegressApp();
+            this.UiMap.HouseRegressApp();
+            this.UiMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.RegressAppDate();
+            this.UiMap.MotoRegressAppFinish();
+            this.UiMap.CloseRegressApp();
             //renewal loader
-            UIMap.RenewalLoaderOpen();
-            UIMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy"); 
-            UIMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
-            UIMap.RenewalLoaderRun();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.RenewalLoaderClose();
+            this.UiMap.RenewalLoaderOpen();
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRun();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.RenewalLoaderClose();
             // renewal module
-            UIMap.RenewalModuleEDI(); UIMap.RenewalModuleConfirm(); UIMap.RenewalModuleEDI_1();
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
-            UIMap.RenewalModuleFilterMoto();
-            UIMap.RenewalModuleSort();
-            UIMap.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
-            UIMap.RenewalModuleDisplay();
-            UIMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            UIMap.MotoRenewalCheckRecord();
-            UIMap.HomeRebroke();
-            UIMap.PublicCreditCheckOk();
-            UIMap.HomeRebrokeCurrent();
-            UIMap.RenewalModuleInvite();
-            UIMap.RenewConfirmInvite();
-            UIMap.RenewalModuleInvite_1();
-            UIMap.RenewalModuleRenew(); UIMap.RetrieveResponse(); UIMap.RenewalModuleRenew_1();
-            UIMap.RenewalModuleClose();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RenewalCheckStatus();
-            UIMap.ClosePolicy();
+            this.UiMap.RenewalModuleEDI();
+            this.UiMap.RenewalModuleConfirm();
+            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
+            this.UiMap.RenewalModuleFilterMoto();
+            this.UiMap.RenewalModuleSort();
+            this.UiMap.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
+            this.UiMap.RenewalModuleDisplay();
+            this.UiMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
+            this.UiMap.MotoRenewalCheckRecord();
+            this.UiMap.HomeRebroke();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeRebrokeCurrent();
+            this.UiMap.RenewalModuleInvite();
+            this.UiMap.RenewConfirmInvite();
+            this.UiMap.RenewalModuleInvite_1();
+            this.UiMap.RenewalModuleRenew();
+            this.UiMap.RetrieveResponse();
+            this.UiMap.RenewalModuleRenew_1();
+            this.UiMap.RenewalModuleClose();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RenewalCheckStatus();
+            this.UiMap.ClosePolicy();
         }
 
         [TestMethod]
         public void HouseRebrokeRenewExistingScheme()
         {
             // change registry to ourhighway
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
+            this.UiMap.RegistryHighway();
             //add policy
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.HomeStartDate();
-            UIMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
-            UIMap.HomeProposer();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy1();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeOpenPolicy();
-            string policyNumber = UIMap.MotoGetPolicyNumber();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.HomeStartDate();
+            this.UiMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy1();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeOpenPolicy();
+            string policyNumber = this.UiMap.MotoGetPolicyNumber();
             //site for renewal
-            UIMap.OpenBrowser2();
-            UIMap.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            UIMap.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.HomeSiteRenewal();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.ChangeDatePolicy();
-            //regress app
-            UIMap.HighlightCustomer();
-            string customerCode = UIMap.GetCustomerCode();
-            UIMap.MotoRegressAppParams.UIItemEditText = customerCode;
-            UIMap.MotoRegressApp();
-            UIMap.HouseRegressApp();
-            UIMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.RegressAppDate();
-            UIMap.MotoRegressAppFinish();
-            UIMap.CloseRegressApp();
-            //renewal loader
-            UIMap.RenewalLoaderOpen();
-            UIMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy"); 
-            UIMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
-            UIMap.RenewalLoaderRun();
+            this.UiMap.OpenBrowser2();
+            this.UiMap.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
+            this.UiMap.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.HomeSiteRenewal();
             Playback.Wait(5000);
-            UIMap.CloseBrowser();
-            UIMap.RenewalLoaderClose();
+            this.UiMap.CloseBrowser();
+            this.UiMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.ChangeDatePolicy();
+            //regress app
+            this.UiMap.HighlightCustomer();
+            string customerCode = this.UiMap.GetCustomerCode();
+            this.UiMap.MotoRegressAppParams.UIItemEditText = customerCode;
+            this.UiMap.MotoRegressApp();
+            this.UiMap.HouseRegressApp();
+            this.UiMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.RegressAppDate();
+            this.UiMap.MotoRegressAppFinish();
+            this.UiMap.CloseRegressApp();
+            //renewal loader
+            this.UiMap.RenewalLoaderOpen();
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRun();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.RenewalLoaderClose();
             // renewal module
-            UIMap.RenewalModuleEDI(); UIMap.RenewalModuleConfirm(); UIMap.RenewalModuleEDI_1();
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
-            UIMap.RenewalModuleFilterMoto();
-            UIMap.RenewalModuleSort();
-            UIMap.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
-            UIMap.RenewalModuleDisplay();
-            UIMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            UIMap.MotoRenewalCheckRecord();
-            UIMap.HomeRebroke();
-            UIMap.PublicCreditCheckOk();
-            UIMap.HomeRebrokeSelectPolicy();
-            UIMap.HomeRebrokeSelectAlternative();
-            UIMap.HomeRebrokeFinish();
-            UIMap.RenewalModuleInvite();
-            UIMap.RenewConfirmInvite();
-            UIMap.RenewalModuleInvite_1();
-            UIMap.RebrokeAlternativeRenew();
-            UIMap.etam_ok();
-            UIMap.etam_yes();
-            UIMap.ConfirmDocuments();
-            UIMap.RetrieveResponse();
-            UIMap.RebrokeAlternativeRenew_1();
-            UIMap.RenewalModuleClose();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
-            UIMap.RenewalCheckStatus();
-            UIMap.ClosePolicy();
+            this.UiMap.RenewalModuleEDI();
+            this.UiMap.RenewalModuleConfirm();
+            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
+            this.UiMap.RenewalModuleFilterMoto();
+            this.UiMap.RenewalModuleSort();
+            this.UiMap.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
+            this.UiMap.RenewalModuleDisplay();
+            this.UiMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
+            this.UiMap.MotoRenewalCheckRecord();
+            this.UiMap.HomeRebroke();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeRebrokeSelectPolicy();
+            this.UiMap.HomeRebrokeSelectAlternative();
+            this.UiMap.HomeRebrokeFinish();
+            this.UiMap.RenewalModuleInvite();
+            this.UiMap.RenewConfirmInvite();
+            this.UiMap.RenewalModuleInvite_1();
+            this.UiMap.RebrokeAlternativeRenew();
+            this.UiMap.etam_ok();
+            this.UiMap.etam_yes();
+            this.UiMap.ConfirmDocuments();
+            this.UiMap.RetrieveResponse();
+            this.UiMap.RebrokeAlternativeRenew_1();
+            this.UiMap.RenewalModuleClose();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
+            this.UiMap.RenewalCheckStatus();
+            this.UiMap.ClosePolicy();
         }
 
         [TestMethod]
         public void HouseRebrokeRenewNewScheme()
         {
             // change registry to ourhighway
-            UIMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
-            UIMap.RegistryHighway();
+            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
+            this.UiMap.RegistryHighway();
             //add policy
-            UIMap.AddPolicy();
-            UIMap.SelectHomeType();
-            UIMap.SelectMenu();
-            UIMap.Links_1();
-            UIMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.HomeStartDate();
-            UIMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
-            UIMap.HomeProposer();
-            UIMap.HomeCreatePolicy();
-            UIMap.PublicCreditCheckOk(); UIMap.HomeSelectPolicy1();
-            UIMap.HomeAcceptPolicy();
-            UIMap.HomeFinishQuote();
-            UIMap.HomeCloseOpenPolicyList();
-            UIMap.HomeOpenPolicy();
-            string policyNumber = UIMap.MotoGetPolicyNumber();
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectHomeType();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links_1();
+            this.UiMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.HomeStartDate();
+            this.UiMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
+            this.UiMap.HomeProposer();
+            this.UiMap.HomeCreatePolicy();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeSelectPolicy1();
+            this.UiMap.HomeAcceptPolicy();
+            this.UiMap.HomeFinishQuote();
+            this.UiMap.HomeCloseOpenPolicyList();
+            this.UiMap.HomeOpenPolicy();
+            string policyNumber = this.UiMap.MotoGetPolicyNumber();
             //site for renewal
-            UIMap.OpenBrowser2();
-            UIMap.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            UIMap.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.HomeSiteRenewal();
-            Playback.Wait(5000);UIMap.CloseBrowser();
-            UIMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.ChangeDatePolicy();
-            //regress app
-            UIMap.HighlightCustomer();
-            string customerCode = UIMap.GetCustomerCode();
-            UIMap.MotoRegressAppParams.UIItemEditText = customerCode;
-            UIMap.MotoRegressApp();
-            UIMap.HouseRegressApp();
-            UIMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
-            UIMap.RegressAppDate();
-            UIMap.MotoRegressAppFinish();
-            UIMap.CloseRegressApp();
-            //renewal loader
-            UIMap.RenewalLoaderOpen();
-            UIMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy"); 
-            UIMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
-            UIMap.RenewalLoaderRun();
+            this.UiMap.OpenBrowser2();
+            this.UiMap.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
+            this.UiMap.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.HomeSiteRenewal();
             Playback.Wait(5000);
-            UIMap.CloseBrowser();
-            UIMap.RenewalLoaderClose();
+            this.UiMap.CloseBrowser();
+            this.UiMap.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.ChangeDatePolicy();
+            //regress app
+            this.UiMap.HighlightCustomer();
+            string customerCode = this.UiMap.GetCustomerCode();
+            this.UiMap.MotoRegressAppParams.UIItemEditText = customerCode;
+            this.UiMap.MotoRegressApp();
+            this.UiMap.HouseRegressApp();
+            this.UiMap.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.UiMap.RegressAppDate();
+            this.UiMap.MotoRegressAppFinish();
+            this.UiMap.CloseRegressApp();
+            //renewal loader
+            this.UiMap.RenewalLoaderOpen();
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            this.UiMap.RenewalLoaderRun();
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.RenewalLoaderClose();
             // renewal module
-            UIMap.RenewalModuleEDI(); UIMap.RenewalModuleConfirm(); UIMap.RenewalModuleEDI_1();
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            UIMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
-            UIMap.RenewalModuleFilterMoto();
-            UIMap.RenewalModuleSort();
-            UIMap.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
-            UIMap.RenewalModuleDisplay();
-            UIMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            UIMap.MotoRenewalCheckRecord();
-            UIMap.HomeRebroke();
-            UIMap.PublicCreditCheckOk();
-            UIMap.HomeRebrokeSelectPolicyParams.UIHouseholdRebrokeResuClientSendKeys = "{END}";
-            UIMap.HomeRebrokeSelectPolicy();
-            UIMap.HomeRebrokeSelectAlternative();
-            UIMap.HomeRebrokeFinish();
-            UIMap.RenewalModuleInvite();
-            UIMap.RenewConfirmInvite();
-            UIMap.RenewalModuleInvite_1();
-            UIMap.RebrokeAlternativeRenew();
-            UIMap.etam_ok();
-            UIMap.etam_yes();
-            UIMap.ConfirmDocuments();
-            UIMap.RetrieveResponse();
-            UIMap.RebrokeAlternativeRenew_1();
-            UIMap.RenewalModuleClose();
-            UIMap.MotoCloseAndOpenPolicyList();
-            UIMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
-            UIMap.ClosePolicy();
+            this.UiMap.RenewalModuleEDI();
+            this.UiMap.RenewalModuleConfirm();
+            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+            this.UiMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
+            this.UiMap.RenewalModuleFilterMoto();
+            this.UiMap.RenewalModuleSort();
+            this.UiMap.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
+            this.UiMap.RenewalModuleDisplay();
+            this.UiMap.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
+            this.UiMap.MotoRenewalCheckRecord();
+            this.UiMap.HomeRebroke();
+            this.UiMap.PublicCreditCheckOk();
+            this.UiMap.HomeRebrokeSelectPolicyParams.UIHouseholdRebrokeResuClientSendKeys = "{END}";
+            this.UiMap.HomeRebrokeSelectPolicy();
+            this.UiMap.HomeRebrokeSelectAlternative();
+            this.UiMap.HomeRebrokeFinish();
+            this.UiMap.RenewalModuleInvite();
+            this.UiMap.RenewConfirmInvite();
+            this.UiMap.RenewalModuleInvite_1();
+            this.UiMap.RebrokeAlternativeRenew();
+            this.UiMap.etam_ok();
+            this.UiMap.etam_yes();
+            this.UiMap.ConfirmDocuments();
+            this.UiMap.RetrieveResponse();
+            this.UiMap.RebrokeAlternativeRenew_1();
+            this.UiMap.RenewalModuleClose();
+            this.UiMap.MotoCloseAndOpenPolicyList();
+            this.UiMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
+            this.UiMap.ClosePolicy();
         }
-
-        #region Additional test attributes
-
-        // You can use the following additional attributes as you write your tests:
-
-        ////Use TestInitialize to run code before running each test 
-        //[TestInitialize()]
-        //public void MyTestInitialize()
-        //{        
-        //    // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-        //    // For more information on generated code, see http://go.microsoft.com/fwlink/?LinkId=179463
-        //}
-
-        ////Use TestCleanup to run code after each test has run
-        //[TestCleanup()]
-        //public void MyTestCleanup()
-        //{        
-        //    // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-        //    // For more information on generated code, see http://go.microsoft.com/fwlink/?LinkId=179463
-        //}
-
-        #endregion
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-        private TestContext testContextInstance;
-
-        protected void PostTestResult(TestCaseResultStatus status)
-        {
-            try
-            {
-                tl.ReportTCResult(
-                    tl.GetTestCaseIDByName(TestName)[0].id,
-                    testPlanId,
-                    status,
-                    PlatformId,
-                    buildid: buildId); // it posts result for testcase.
-            }
-            catch (Exception ex)
-            {
-                //
-            }
-        }
-
-        protected void TestLinkInitialize()
-        {
-            try
-            {
-                tl = new TestLink("f71e80e4c23bba99dfedf1b442bb42f5", "http://172.30.2.44/testlink/lib/api/xmlrpc.php");
-                testPlanId = tl.getTestPlanByName(ProjectName, PlanName).id;
-
-                if (tl.GetBuildsForTestPlan(testPlanId).FirstOrDefault(x => x.name == buildName) == null)
-                {
-                    tl.CreateBuild(testPlanId, buildName, "Build created by script");
-                }
-
-                buildId = tl.GetBuildsForTestPlan(testPlanId).FirstOrDefault(x => x.name == buildName).id;
-            }
-            catch (Exception ex)
-            {
-                //
-            }
-        }
-
-        public static void CloseProcess(string name)
-        {
-            Process[] processes = Process.GetProcessesByName(name);
-            foreach (Process process in processes)
-            {
-                process.Kill();
-                process.WaitForExit();
-            }
-        }  
-
-        public UIMap UIMap
-        {
-            get
-            {
-                if ((this.map == null))
-                {
-                    this.map = new UIMap();
-                }
-
-                return this.map;
-            }
-        }
-
-        private UIMap map;
     }
 }

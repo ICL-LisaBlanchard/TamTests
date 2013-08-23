@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Meyn.TestLink;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace Ver1
+﻿namespace AppliedSystems.Tam.Ui.Tests
 {
+    using System;
+    using System.Linq;
+
+    using Meyn.TestLink;
+
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     [TestClass]
     public class Setup
     {
@@ -28,13 +28,13 @@ namespace Ver1
         {
             try
             {
-                if (TestContext.CurrentTestOutcome != UnitTestOutcome.Passed)
+                if (this.TestContext.CurrentTestOutcome != UnitTestOutcome.Passed)
                 {
-                    PostTestResult(TestCaseResultStatus.Fail);
+                    this.PostTestResult(TestCaseResultStatus.Fail);
                 }
                 else
                 {
-                    PostTestResult(TestCaseResultStatus.Pass);
+                    this.PostTestResult(TestCaseResultStatus.Pass);
                 }
             }
             catch (Exception)
@@ -48,7 +48,7 @@ namespace Ver1
             try
             {
                 tl.ReportTCResult(
-                    tl.GetTestCaseIDByName(TestName)[0].id,
+                    tl.GetTestCaseIDByName(this.TestName)[0].id,
                     testPlanId,
                     status,
                     buildid: buildId); // it posts result for testcase.
