@@ -16,7 +16,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeProposer();
             this.UiMap.HomeAddressLookup();
             this.UiMap.HomeCreatePolicy();
@@ -37,7 +37,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeProposer();
             this.UiMap.HomeAddressLookup();
             this.UiMap.HomeCreatePolicy();
@@ -50,13 +50,13 @@
             this.UiMap.HomeCheckPremium();
             this.UiMap.HomePrintQuote();
             this.UiMap.SelectMenu();
-            this.UiMap.HomePrintQuote_1();
+            this.UiMap.HomePrintQuote1();
             this.UiMap.HomeCheckPrint();
             this.UiMap.HomeDemands();
             this.UiMap.CloseDemandsMoto();
             this.UiMap.HomeAcceptQuote();
             this.UiMap.CancelPrint();
-            this.UiMap.HomeAcceptQuote_1();
+            this.UiMap.HomeAcceptQuote1();
             this.UiMap.HomeCloseOpenPolicyList();
             this.UiMap.HomeOpenPolicy();
             this.UiMap.HomeCheckPolicyPremium();
@@ -70,7 +70,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeProposer();
             this.UiMap.HomeAddressLookup();
             this.UiMap.HomeCreatePolicy();
@@ -92,7 +92,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeProposer();
             this.UiMap.HomeAddressLookup();
             this.UiMap.HomeCreatePolicy();
@@ -114,7 +114,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeProposer();
             this.UiMap.HomeAddressLookup();
             this.UiMap.HomeCreatePolicy();
@@ -134,7 +134,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeProposer();
             this.UiMap.HomeAddressLookup();
             this.UiMap.HomeCreatePolicy();
@@ -159,7 +159,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeProposer();
             this.UiMap.HomeAddressLookup();
             this.UiMap.HomeCreatePolicy();
@@ -186,7 +186,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeProposer();
             this.UiMap.HomeAddressLookup();
             this.UiMap.HomeCreatePolicy();
@@ -214,7 +214,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeProposer();
             this.UiMap.HomeAddressLookup();
             this.UiMap.HomeCreatePolicy();
@@ -258,7 +258,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeProposer();
             this.UiMap.HomeAddressLookup();
             this.UiMap.HomeCreatePolicy();
@@ -273,7 +273,7 @@
             this.UiMap.HomeCancelPolicyQuote();
             this.UiMap.HomeMTAEnterDateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
             this.UiMap.HomeMTAEnterDate();
-            this.UiMap.HomeCancelPolicyQuote_1();
+            this.UiMap.HomeCancelPolicyQuote1();
             this.UiMap.HomeCancelPolicyExit();
             //check status
             this.UiMap.HomeCloseOpenPolicyList();
@@ -291,7 +291,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeProposer();
             this.UiMap.HomeAddressLookup();
             this.UiMap.HomeCreatePolicy();
@@ -306,7 +306,7 @@
             this.UiMap.HomeCancelPolicyQuote();
             this.UiMap.HomeMTAEnterDateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
             this.UiMap.HomeMTAEnterDate();
-            this.UiMap.HomeCancelPolicyQuote_1();
+            this.UiMap.HomeCancelPolicyQuote1();
             this.UiMap.HomeCancelPolicyAccept();
             //check status
             this.UiMap.HomeCloseOpenPolicyList();
@@ -325,7 +325,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.HomeStartDate();
             this.UiMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
@@ -369,7 +369,7 @@
             //  renewal module
             this.UiMap.RenewalModuleEDI();
             this.UiMap.RenewalModuleConfirm();
-            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleEdi1();
             this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
@@ -381,10 +381,10 @@
             this.UiMap.MotoRenewalCheckRecord();
             this.UiMap.RenewalModuleInvite();
             this.UiMap.RenewConfirmInvite();
-            this.UiMap.RenewalModuleInvite_1();
+            this.UiMap.RenewalModuleInvite1();
             this.UiMap.RenewalModuleRenew();
             this.UiMap.RetrieveResponse();
-            this.UiMap.RenewalModuleRenew_1();
+            this.UiMap.RenewalModuleRenew1();
             this.UiMap.RenewalModuleClose();
             this.UiMap.MotoCloseAndOpenPolicyList();
             this.UiMap.RenewalCheckStatus();
@@ -426,7 +426,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.HomeStartDate();
             this.UiMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
@@ -470,7 +470,7 @@
             // renewal module
             this.UiMap.RenewalModuleEDI();
             this.UiMap.RenewalModuleConfirm();
-            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleEdi1();
             this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
@@ -482,10 +482,10 @@
             this.UiMap.MotoRenewalCheckRecord();
             this.UiMap.RenewalModuleInvite();
             this.UiMap.RenewConfirmInvite();
-            this.UiMap.RenewalModuleInvite_1();
+            this.UiMap.RenewalModuleInvite1();
             this.UiMap.RenewalModuleRenew();
             this.UiMap.RetrieveResponse();
-            this.UiMap.RenewalModuleRenew_1();
+            this.UiMap.RenewalModuleRenew1();
             this.UiMap.RenewalModuleClose();
             this.UiMap.MotoCloseAndOpenPolicyList();
             this.UiMap.RenewalCheckStatus();
@@ -549,7 +549,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.HomeStartDate();
             this.UiMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
@@ -593,7 +593,7 @@
             // renewal module
             this.UiMap.RenewalModuleEDI();
             this.UiMap.RenewalModuleConfirm();
-            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleEdi1();
             this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
@@ -623,7 +623,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.HomeStartDate();
             this.UiMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
@@ -667,7 +667,7 @@
             // renewal module
             this.UiMap.RenewalModuleEDI();
             this.UiMap.RenewalModuleConfirm();
-            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleEdi1();
             this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
@@ -682,11 +682,11 @@
             this.UiMap.HomeAmendSelecPolicyParams.UIHouseholdRenewalsAmeClientSendKeys = "{End}";
             this.UiMap.HomeAmendSelecPolicy();
             this.UiMap.HomeAmendRenewFinish();
-            this.UiMap.etam_ok();
+            this.UiMap.EtamOk();
             this.UiMap.ConfirmDocuments();
             this.UiMap.RetrieveResponse();
-            this.UiMap.HomeAmendRenewFinish_1();
-            this.UiMap.etam_ok();
+            this.UiMap.HomeAmendRenewFinish1();
+            this.UiMap.EtamOk();
             this.UiMap.RenewalModuleClose();
             this.UiMap.MotoCloseAndOpenPolicyList();
             this.UiMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
@@ -725,7 +725,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.HomeStartDate();
             this.UiMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
@@ -769,7 +769,7 @@
             // renewal module
             this.UiMap.RenewalModuleEDI();
             this.UiMap.RenewalModuleConfirm();
-            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleEdi1();
             this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
@@ -784,10 +784,10 @@
             this.UiMap.HomeRebrokeCurrent();
             this.UiMap.RenewalModuleInvite();
             this.UiMap.RenewConfirmInvite();
-            this.UiMap.RenewalModuleInvite_1();
+            this.UiMap.RenewalModuleInvite1();
             this.UiMap.RenewalModuleRenew();
             this.UiMap.RetrieveResponse();
-            this.UiMap.RenewalModuleRenew_1();
+            this.UiMap.RenewalModuleRenew1();
             this.UiMap.RenewalModuleClose();
             this.UiMap.MotoCloseAndOpenPolicyList();
             this.UiMap.RenewalCheckStatus();
@@ -804,7 +804,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.HomeStartDate();
             this.UiMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
@@ -848,7 +848,7 @@
             // renewal module
             this.UiMap.RenewalModuleEDI();
             this.UiMap.RenewalModuleConfirm();
-            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleEdi1();
             this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
@@ -865,13 +865,13 @@
             this.UiMap.HomeRebrokeFinish();
             this.UiMap.RenewalModuleInvite();
             this.UiMap.RenewConfirmInvite();
-            this.UiMap.RenewalModuleInvite_1();
+            this.UiMap.RenewalModuleInvite1();
             this.UiMap.RebrokeAlternativeRenew();
-            this.UiMap.etam_ok();
-            this.UiMap.etam_yes();
+            this.UiMap.EtamOk();
+            this.UiMap.EtamYes();
             this.UiMap.ConfirmDocuments();
             this.UiMap.RetrieveResponse();
-            this.UiMap.RebrokeAlternativeRenew_1();
+            this.UiMap.RebrokeAlternativeRenew1();
             this.UiMap.RenewalModuleClose();
             this.UiMap.MotoCloseAndOpenPolicyList();
             this.UiMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
@@ -889,7 +889,7 @@
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
-            this.UiMap.Links_1();
+            this.UiMap.Links1();
             this.UiMap.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.HomeStartDate();
             this.UiMap.HomeProposerParams.UIItemEditText4 = "BN16BN";
@@ -933,7 +933,7 @@
             // renewal module
             this.UiMap.RenewalModuleEDI();
             this.UiMap.RenewalModuleConfirm();
-            this.UiMap.RenewalModuleEDI_1();
+            this.UiMap.RenewalModuleEdi1();
             this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.UiMap.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
@@ -951,13 +951,13 @@
             this.UiMap.HomeRebrokeFinish();
             this.UiMap.RenewalModuleInvite();
             this.UiMap.RenewConfirmInvite();
-            this.UiMap.RenewalModuleInvite_1();
+            this.UiMap.RenewalModuleInvite1();
             this.UiMap.RebrokeAlternativeRenew();
-            this.UiMap.etam_ok();
-            this.UiMap.etam_yes();
+            this.UiMap.EtamOk();
+            this.UiMap.EtamYes();
             this.UiMap.ConfirmDocuments();
             this.UiMap.RetrieveResponse();
-            this.UiMap.RebrokeAlternativeRenew_1();
+            this.UiMap.RebrokeAlternativeRenew1();
             this.UiMap.RenewalModuleClose();
             this.UiMap.MotoCloseAndOpenPolicyList();
             this.UiMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";

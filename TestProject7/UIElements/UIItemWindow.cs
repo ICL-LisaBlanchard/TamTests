@@ -8,35 +8,97 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIItemWindow : WinWindow
     {
-        
-        public UIItemWindow(UITestControl searchLimitContainer) : 
-            base(searchLimitContainer)
+        public UIItemWindow(UITestControl searchLimitContainer, string windowTitle, string controlId = "", string instance = "")
+            : base(searchLimitContainer)
         {
             #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "7";
-            this.WindowTitles.Add("The Agency Manager Signon");
+
+            if (!string.IsNullOrEmpty(controlId))
+            {
+                this.SearchProperties[WinControl.PropertyNames.ControlId] = controlId;
+            }
+
+            if (!string.IsNullOrEmpty(instance))
+            {
+                this.SearchProperties[UITestControl.PropertyNames.Instance] = instance;
+            }
+
+            this.WindowTitles.Add(windowTitle);
+
+            this.WindowName = windowTitle;
+
             #endregion
         }
-        
+
         #region Properties
+
         public WinEdit UIItemEdit
         {
             get
             {
-                if ((this.mUIItemEdit == null))
+                if ((this.mUiItemEdit == null))
                 {
-                    this.mUIItemEdit = new WinEdit(this);
+                    this.mUiItemEdit = new WinEdit(this);
+
                     #region Search Criteria
-                    this.mUIItemEdit.WindowTitles.Add("The Agency Manager Signon");
+
+                    this.mUiItemEdit.WindowTitles.Add(this.WindowName);
+
                     #endregion
                 }
-                return this.mUIItemEdit;
+                return this.mUiItemEdit;
             }
         }
+
+        public WinComboBox UiItemComboBox
+        {
+            get
+            {
+                if ((this.mUiItemComboBox == null))
+                {
+                    this.mUiItemComboBox = new WinComboBox(this);
+
+                    #region Search Criteria
+
+                    this.mUiItemComboBox.WindowTitles.Add(this.WindowName);
+
+                    #endregion
+                }
+                return this.mUiItemComboBox;
+            }
+        }
+
+        public WinButton UIOKButton
+        {
+            get
+            {
+                if ((this.mUIOKButton == null))
+                {
+                    this.mUIOKButton = new WinButton(this);
+
+                    #region Search Criteria
+
+                    this.mUIOKButton.SearchProperties[UITestControl.PropertyNames.Name] = "OK";
+                    this.mUIOKButton.WindowTitles.Add(this.WindowName);
+
+                    #endregion
+                }
+                return this.mUIOKButton;
+            }
+        }
+
         #endregion
-        
+
         #region Fields
-        private WinEdit mUIItemEdit;
+
+        private WinEdit mUiItemEdit;
+
+        private WinComboBox mUiItemComboBox;
+
+        private WinButton mUIOKButton;
+
         #endregion
+
+        public string WindowName { get; set; }
     }
 }

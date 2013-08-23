@@ -67,13 +67,18 @@
             this.TestLinkInitialize();
 
             var login = new Login();
-            login.LoginParamsNew.TabKey = Playback.EncryptText("PLUS");
-            login.LoginParamsNew.ExePath = "J:\\WINTAM\\HOMEBASE.EXE";
-            login.LoginParamsNew.AlternateExePath = "J:\\WINTAM\\HOMEBASE.EXE";
+            login.LoginParams.TabKey = Playback.EncryptText("PLUS");
+            login.LoginParams.ExePath = "J:\\WINTAM\\HOMEBASE.EXE";
+            login.LoginParams.AlternateExePath = "J:\\WINTAM\\HOMEBASE.EXE";
             login.DoLogin();
             login.LoginEnterDate();
             login.WarningOk();
             this.UiMap.App_startedExpectedValues.UITheAgencyManagerWindow1Name = "The Agency Manager";
+        }
+
+        [TestMethod]
+        public void LoginTest()
+        {
         }
 
         [TestCleanup]

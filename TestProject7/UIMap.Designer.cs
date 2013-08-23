@@ -838,18 +838,6 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UICustomerggggggggggggWindow UICustomerggggggggggggWindow
-        {
-            get
-            {
-                if ((this.mUICustomerggggggggggggWindow == null))
-                {
-                    this.mUICustomerggggggggggggWindow = new UICustomerggggggggggggWindow();
-                }
-                return this.mUICustomerggggggggggggWindow;
-            }
-        }
-        
         public UIFilterRenewalRecordsWindow UIFilterRenewalRecordsWindow
         {
             get
@@ -1321,8 +1309,6 @@ namespace AppliedSystems.Tam.Ui.Tests
         private UIPoliciesAutoRenewedAWindow mUIPoliciesAutoRenewedAWindow;
         
         private UIRenewalSearchWindow mUIRenewalSearchWindow;
-        
-        private UICustomerggggggggggggWindow mUICustomerggggggggggggWindow;
         
         private UIFilterRenewalRecordsWindow mUIFilterRenewalRecordsWindow;
         

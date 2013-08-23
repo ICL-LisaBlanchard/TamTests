@@ -2,106 +2,114 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 {
     using System.CodeDom.Compiler;
 
+    using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UITheAgencyManagerSignWindow : WinWindow
     {
-        
+        private const string WindowName = "The Agency Manager Signon";
+
         public UITheAgencyManagerSignWindow()
         {
             #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "ThunderRT6FormDC";
+
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
             this.WindowTitles.Add("The Agency Manager Signon");
+
             #endregion
         }
-        
+
         #region Properties
-        public UIItemWindow UIItemWindow
+
+        public UIItemWindow TbxPassword
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((this.mTbxPassword == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this);
+                    this.mTbxPassword = new UIItemWindow(this, WindowName, "7");
                 }
-                return this.mUIItemWindow;
+                return this.mTbxPassword;
             }
         }
-        
-        public UIOKWindow UIOKWindow
+
+        public UIItemWindow TbxUsername
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((this.mTbxUsername == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow(this);
+                    this.mTbxUsername = new UIItemWindow(this, WindowName, "1");
                 }
-                return this.mUIOKWindow;
+                return this.mTbxUsername;
             }
         }
-        
-        public UIOKWindow1 UIOKWindow1
+
+        public UIItemWindow BtnOk1
         {
             get
             {
-                if ((this.mUIOKWindow1 == null))
+                if ((this.mBtnOk1 == null))
                 {
-                    this.mUIOKWindow1 = new UIOKWindow1(this);
+                    this.mBtnOk1 = new UIItemWindow(this, WindowName, "2");
                 }
-                return this.mUIOKWindow1;
+                return this.mBtnOk1;
             }
         }
-        
-        public UIOKWindow2 UIOKWindow2
+
+        public UIItemWindow BtnOk2
         {
             get
             {
-                if ((this.mUIOKWindow2 == null))
+                if ((this.mBtnOk2 == null))
                 {
-                    this.mUIOKWindow2 = new UIOKWindow2(this);
+                    this.mBtnOk2 = new UIItemWindow(this, WindowName, "2");
                 }
-                return this.mUIOKWindow2;
+                return this.mBtnOk2;
             }
         }
-        
-        public UIItemWindow1 UIItemWindow1
+
+        public UIItemWindow TbxMonth
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((this.mTbxMonth == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow1(this);
+                    this.mTbxMonth = new UIItemWindow(this, WindowName, "2", "2");
                 }
-                return this.mUIItemWindow1;
+                return this.mTbxMonth;
             }
         }
-        
-        public UIItemWindow2 UIItemWindow2
+
+        public UIItemWindow TbxYear
         {
             get
             {
-                if ((this.mUIItemWindow2 == null))
+                if ((this.mTbxYear == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow2(this);
+                    this.mTbxYear = new UIItemWindow(this, WindowName, "1");
                 }
-                return this.mUIItemWindow2;
+                return this.mTbxYear;
             }
         }
+
         #endregion
-        
+
         #region Fields
-        private UIItemWindow mUIItemWindow;
-        
-        private UIOKWindow mUIOKWindow;
-        
-        private UIOKWindow1 mUIOKWindow1;
-        
-        private UIOKWindow2 mUIOKWindow2;
-        
-        private UIItemWindow1 mUIItemWindow1;
-        
-        private UIItemWindow2 mUIItemWindow2;
+
+        private UIItemWindow mTbxPassword;
+
+        private UIItemWindow mTbxUsername;
+
+        private UIItemWindow mBtnOk1;
+
+        private UIItemWindow mBtnOk2;
+
+        private UIItemWindow mTbxMonth;
+
+        private UIItemWindow mTbxYear;
+
         #endregion
     }
 }

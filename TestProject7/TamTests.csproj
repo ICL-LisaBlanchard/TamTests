@@ -130,7 +130,6 @@
     <Compile Include="Params\HouseRegressAppParams.cs" />
     <Compile Include="Params\LoginEnterDateParams.cs" />
     <Compile Include="Params\LoginParams.cs" />
-    <Compile Include="Params\LoginParamsNew.cs" />
     <Compile Include="Params\MotoAmendRiskNew_1Params.cs" />
     <Compile Include="Params\MotoAmendRiskParams.cs" />
     <Compile Include="Params\MotoAmendRiskRenewParams.cs" />
@@ -262,7 +261,6 @@
     <Compile Include="UIElements\UICreditCheckWindow.cs" />
     <Compile Include="UIElements\UICurrentOrFutureClient.cs" />
     <Compile Include="UIElements\UICurrentOrFutureWindow.cs" />
-    <Compile Include="UIElements\UICustomerggggggggggggWindow.cs" />
     <Compile Include="UIElements\UICUSTOMERSWindow.cs" />
     <Compile Include="UIElements\UICUSTOMERSWindow1.cs" />
     <Compile Include="UIElements\UICUSTOMERSWindow2.cs" />
@@ -338,7 +336,6 @@
     <Compile Include="UIElements\UIItemTable.cs" />
     <Compile Include="UIElements\UIItemTable1.cs" />
     <Compile Include="UIElements\UIItemWindow.cs" />
-    <Compile Include="UIElements\UIItemWindow1.cs" />
     <Compile Include="UIElements\UIItemWindow10.cs" />
     <Compile Include="UIElements\UIItemWindow101.cs" />
     <Compile Include="UIElements\UIItemWindow11.cs" />
@@ -371,7 +368,6 @@
     <Compile Include="UIElements\UIItemWindow17.cs" />
     <Compile Include="UIElements\UIItemWindow18.cs" />
     <Compile Include="UIElements\UIItemWindow19.cs" />
-    <Compile Include="UIElements\UIItemWindow2.cs" />
     <Compile Include="UIElements\UIItemWindow20.cs" />
     <Compile Include="UIElements\UIItemWindow21.cs" />
     <Compile Include="UIElements\UIItemWindow210.cs" />

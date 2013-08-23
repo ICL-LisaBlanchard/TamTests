@@ -38,8 +38,6 @@
 
         private HomeAcceptPolicyParams mHomeAcceptPolicyParams;
 
-        private AcceptEnabledExpectedValues mAcceptEnabledExpectedValues;
-
         private AddPolicyParams mAddPolicyParams;
 
         private AddressLookupHomeExpectedValues mAddressLookupHomeExpectedValues;
@@ -74,7 +72,7 @@
 
         private HomeAddressLookupExpectedValues mHomeAddressLookupExpectedValues;
 
-        private HomeAcceptQuote_1Params mHomeAcceptQuote_1Params;
+        private HomeAcceptQuote_1Params mHomeAcceptQuote1Params;
 
         private ExitEnabledExpectedValues mExitEnabledExpectedValues;
 
@@ -86,8 +84,6 @@
 
         private CheckQuoteMessageExpectedValues mCheckQuoteMessageExpectedValues;
 
-        private CheckDemandsDocExpectedValues mCheckDemandsDocExpectedValues;
-
         private CheckBillingScreenExpectedValues mCheckBillingScreenExpectedValues;
 
         private CheckAutoPrintExpectedValues mCheckAutoPrintExpectedValues;
@@ -98,17 +94,13 @@
 
         private AssertSelectPolicyFormExpectedValues mAssertSelectPolicyFormExpectedValues;
 
-        private AssertMethod5ExpectedValues mAssertMethod5ExpectedValues;
-
-        private AssertMethod4ExpectedValues mAssertMethod4ExpectedValues;
-
         private AssertMethod3ExpectedValues mAssertMethod3ExpectedValues;
 
         private AssertMethod2ExpectedValues mAssertMethod2ExpectedValues;
 
         private AssertMethod1ExpectedValues mAssertMethod1ExpectedValues;
 
-        private App_startedExpectedValues mApp_startedExpectedValues;
+        private App_startedExpectedValues mAppStartedExpectedValues;
 
         private AmendSelectQuoteParams mAmendSelectQuoteParams;
 
@@ -122,8 +114,6 @@
 
         private HomeCheckNewPremiumExpectedValues mHomeCheckNewPremiumExpectedValues;
 
-        private HomeCheckDemandsExpectedValues mHomeCheckDemandsExpectedValues;
-
         private HomeChangePremiumParams mHomeChangePremiumParams;
 
         private HomeCancelPolicyAcceptParams mHomeCancelPolicyAcceptParams;
@@ -134,11 +124,9 @@
 
         private HomeAmendRiskParams mHomeAmendRiskParams;
 
-        private HomeAmendRenewFinish_1Params mHomeAmendRenewFinish_1Params;
+        private HomeAmendRenewFinish_1Params mHomeAmendRenewFinish1Params;
 
         private HomeAmendRenewParams mHomeAmendRenewParams;
-
-        private MotoCopyFinishParams mMotoCopyFinishParams;
 
         private MotoCopyCheckProposerExpectedValues mMotoCopyCheckProposerExpectedValues;
 
@@ -160,8 +148,6 @@
 
         private HouseRegressAppParams mHouseRegressAppParams;
 
-        private HouseProposerParams mHouseProposerParams;
-
         private HomeStartDateParams mHomeStartDateParams;
 
         private HomeSiteRenewalParams mHomeSiteRenewalParams;
@@ -178,11 +164,7 @@
 
         private HomeRebrokeSelectPolicyParams mHomeRebrokeSelectPolicyParams;
 
-        private testPrintParams mtestPrintParams;
-
         private SelectPolicyQuoteParams mSelectPolicyQuoteParams;
-
-        private SelectNextTransactionParams mSelectNextTransactionParams;
 
         private SelectMotoPolicyParams mSelectMotoPolicyParams;
 
@@ -190,7 +172,7 @@
 
         private SaveWithoutPremiumParams mSaveWithoutPremiumParams;
 
-        private RenewalModuleRenew_1Params mRenewalModuleRenew_1Params;
+        private RenewalModuleRenew_1Params mRenewalModuleRenew1Params;
 
         private RenewalModuleFilterMotoParams mRenewalModuleFilterMotoParams;
 
@@ -202,33 +184,23 @@
 
         private RenewalCheckStatusExpectedValues mRenewalCheckStatusExpectedValues;
 
-        private RenewalCheckInvitedExpectedValues mRenewalCheckInvitedExpectedValues;
-
         private RenewalAfterMTA1Params mRenewalAfterMTA1Params;
 
         private RegressAppDateParams mRegressAppDateParams;
 
         private RegistryHighwayParams mRegistryHighwayParams;
 
-        private RecordedMethod5Params mRecordedMethod5Params;
-
-        private RecordedMethod3Params mRecordedMethod3Params;
-
-        private RecordedMethod2Params mRecordedMethod2Params;
-
-        private RebrokeAlternativeRenew_1Params mRebrokeAlternativeRenew_1Params;
+        private RebrokeAlternativeRenew_1Params mRebrokeAlternativeRenew1Params;
 
         private RebrokeAlternativeRenewParams mRebrokeAlternativeRenewParams;
 
-        private RebrokeAlternativeFinish_1Params mRebrokeAlternativeFinish_1Params;
+        private RebrokeAlternativeFinish_1Params mRebrokeAlternativeFinish1Params;
 
         private RebrokeAlternativeFinishParams mRebrokeAlternativeFinishParams;
 
         private QuoteResultsParams mQuoteResultsParams;
 
         private PostcodeLookupExpectedValues mPostcodeLookupExpectedValues;
-
-        private OpenSiteForRenewalParams mOpenSiteForRenewalParams;
 
         private MTAMessageBeforeCurrentExpectedValues mMTAMessageBeforeCurrentExpectedValues;
 
@@ -346,7 +318,7 @@
             }
         }
 
-        public virtual MotoAmendRiskNew_1Params MotoAmendRiskNew_1Params
+        public virtual MotoAmendRiskNew_1Params MotoAmendRiskNew1Params
         {
             get
             {
@@ -358,7 +330,7 @@
             }
         }
 
-        public virtual RenewalModuleInvite_1Params RenewalModuleInvite_1Params
+        public virtual RenewalModuleInvite_1Params RenewalModuleInvite1Params
         {
             get
             {
@@ -370,7 +342,7 @@
             }
         }
 
-        public virtual HomePrintQuote_1Params HomePrintQuote_1Params
+        public virtual HomePrintQuote_1Params HomePrintQuote1Params
         {
             get
             {
@@ -403,18 +375,6 @@
                     this.mHomeAcceptPolicyParams = new HomeAcceptPolicyParams();
                 }
                 return this.mHomeAcceptPolicyParams;
-            }
-        }
-
-        public virtual AcceptEnabledExpectedValues AcceptEnabledExpectedValues
-        {
-            get
-            {
-                if ((this.mAcceptEnabledExpectedValues == null))
-                {
-                    this.mAcceptEnabledExpectedValues = new AcceptEnabledExpectedValues();
-                }
-                return this.mAcceptEnabledExpectedValues;
             }
         }
 
@@ -622,15 +582,15 @@
             }
         }
 
-        public virtual HomeAcceptQuote_1Params HomeAcceptQuote_1Params
+        public virtual HomeAcceptQuote_1Params HomeAcceptQuote1Params
         {
             get
             {
-                if ((this.mHomeAcceptQuote_1Params == null))
+                if ((this.mHomeAcceptQuote1Params == null))
                 {
-                    this.mHomeAcceptQuote_1Params = new HomeAcceptQuote_1Params();
+                    this.mHomeAcceptQuote1Params = new HomeAcceptQuote_1Params();
                 }
-                return this.mHomeAcceptQuote_1Params;
+                return this.mHomeAcceptQuote1Params;
             }
         }
 
@@ -694,18 +654,6 @@
             }
         }
 
-        public virtual CheckDemandsDocExpectedValues CheckDemandsDocExpectedValues
-        {
-            get
-            {
-                if ((this.mCheckDemandsDocExpectedValues == null))
-                {
-                    this.mCheckDemandsDocExpectedValues = new CheckDemandsDocExpectedValues();
-                }
-                return this.mCheckDemandsDocExpectedValues;
-            }
-        }
-
         public virtual CheckBillingScreenExpectedValues CheckBillingScreenExpectedValues
         {
             get
@@ -766,30 +714,6 @@
             }
         }
 
-        public virtual AssertMethod5ExpectedValues AssertMethod5ExpectedValues
-        {
-            get
-            {
-                if ((this.mAssertMethod5ExpectedValues == null))
-                {
-                    this.mAssertMethod5ExpectedValues = new AssertMethod5ExpectedValues();
-                }
-                return this.mAssertMethod5ExpectedValues;
-            }
-        }
-
-        public virtual AssertMethod4ExpectedValues AssertMethod4ExpectedValues
-        {
-            get
-            {
-                if ((this.mAssertMethod4ExpectedValues == null))
-                {
-                    this.mAssertMethod4ExpectedValues = new AssertMethod4ExpectedValues();
-                }
-                return this.mAssertMethod4ExpectedValues;
-            }
-        }
-
         public virtual AssertMethod3ExpectedValues AssertMethod3ExpectedValues
         {
             get
@@ -830,11 +754,11 @@
         {
             get
             {
-                if ((this.mApp_startedExpectedValues == null))
+                if ((this.mAppStartedExpectedValues == null))
                 {
-                    this.mApp_startedExpectedValues = new App_startedExpectedValues();
+                    this.mAppStartedExpectedValues = new App_startedExpectedValues();
                 }
-                return this.mApp_startedExpectedValues;
+                return this.mAppStartedExpectedValues;
             }
         }
 
@@ -910,18 +834,6 @@
             }
         }
 
-        public virtual HomeCheckDemandsExpectedValues HomeCheckDemandsExpectedValues
-        {
-            get
-            {
-                if ((this.mHomeCheckDemandsExpectedValues == null))
-                {
-                    this.mHomeCheckDemandsExpectedValues = new HomeCheckDemandsExpectedValues();
-                }
-                return this.mHomeCheckDemandsExpectedValues;
-            }
-        }
-
         public virtual HomeChangePremiumParams HomeChangePremiumParams
         {
             get
@@ -982,15 +894,15 @@
             }
         }
 
-        public virtual HomeAmendRenewFinish_1Params HomeAmendRenewFinish_1Params
+        public virtual HomeAmendRenewFinish_1Params HomeAmendRenewFinish1Params
         {
             get
             {
-                if ((this.mHomeAmendRenewFinish_1Params == null))
+                if ((this.mHomeAmendRenewFinish1Params == null))
                 {
-                    this.mHomeAmendRenewFinish_1Params = new HomeAmendRenewFinish_1Params();
+                    this.mHomeAmendRenewFinish1Params = new HomeAmendRenewFinish_1Params();
                 }
-                return this.mHomeAmendRenewFinish_1Params;
+                return this.mHomeAmendRenewFinish1Params;
             }
         }
 
@@ -1003,18 +915,6 @@
                     this.mHomeAmendRenewParams = new HomeAmendRenewParams();
                 }
                 return this.mHomeAmendRenewParams;
-            }
-        }
-
-        public virtual MotoCopyFinishParams MotoCopyFinishParams
-        {
-            get
-            {
-                if ((this.mMotoCopyFinishParams == null))
-                {
-                    this.mMotoCopyFinishParams = new MotoCopyFinishParams();
-                }
-                return this.mMotoCopyFinishParams;
             }
         }
 
@@ -1138,18 +1038,6 @@
             }
         }
 
-        public virtual HouseProposerParams HouseProposerParams
-        {
-            get
-            {
-                if ((this.mHouseProposerParams == null))
-                {
-                    this.mHouseProposerParams = new HouseProposerParams();
-                }
-                return this.mHouseProposerParams;
-            }
-        }
-
         public virtual HomeStartDateParams HomeStartDateParams
         {
             get
@@ -1246,18 +1134,6 @@
             }
         }
 
-        public virtual testPrintParams testPrintParams
-        {
-            get
-            {
-                if ((this.mtestPrintParams == null))
-                {
-                    this.mtestPrintParams = new testPrintParams();
-                }
-                return this.mtestPrintParams;
-            }
-        }
-
         public virtual SelectPolicyQuoteParams SelectPolicyQuoteParams
         {
             get
@@ -1267,18 +1143,6 @@
                     this.mSelectPolicyQuoteParams = new SelectPolicyQuoteParams();
                 }
                 return this.mSelectPolicyQuoteParams;
-            }
-        }
-
-        public virtual SelectNextTransactionParams SelectNextTransactionParams
-        {
-            get
-            {
-                if ((this.mSelectNextTransactionParams == null))
-                {
-                    this.mSelectNextTransactionParams = new SelectNextTransactionParams();
-                }
-                return this.mSelectNextTransactionParams;
             }
         }
 
@@ -1318,15 +1182,15 @@
             }
         }
 
-        public virtual RenewalModuleRenew_1Params RenewalModuleRenew_1Params
+        public virtual RenewalModuleRenew_1Params RenewalModuleRenew1Params
         {
             get
             {
-                if ((this.mRenewalModuleRenew_1Params == null))
+                if ((this.mRenewalModuleRenew1Params == null))
                 {
-                    this.mRenewalModuleRenew_1Params = new RenewalModuleRenew_1Params();
+                    this.mRenewalModuleRenew1Params = new RenewalModuleRenew_1Params();
                 }
-                return this.mRenewalModuleRenew_1Params;
+                return this.mRenewalModuleRenew1Params;
             }
         }
 
@@ -1390,18 +1254,6 @@
             }
         }
 
-        public virtual RenewalCheckInvitedExpectedValues RenewalCheckInvitedExpectedValues
-        {
-            get
-            {
-                if ((this.mRenewalCheckInvitedExpectedValues == null))
-                {
-                    this.mRenewalCheckInvitedExpectedValues = new RenewalCheckInvitedExpectedValues();
-                }
-                return this.mRenewalCheckInvitedExpectedValues;
-            }
-        }
-
         public virtual RenewalAfterMTA1Params RenewalAfterMTA1Params
         {
             get
@@ -1438,51 +1290,15 @@
             }
         }
 
-        public virtual RecordedMethod5Params RecordedMethod5Params
+        public virtual RebrokeAlternativeRenew_1Params RebrokeAlternativeRenew1Params
         {
             get
             {
-                if ((this.mRecordedMethod5Params == null))
+                if ((this.mRebrokeAlternativeRenew1Params == null))
                 {
-                    this.mRecordedMethod5Params = new RecordedMethod5Params();
+                    this.mRebrokeAlternativeRenew1Params = new RebrokeAlternativeRenew_1Params();
                 }
-                return this.mRecordedMethod5Params;
-            }
-        }
-
-        public virtual RecordedMethod3Params RecordedMethod3Params
-        {
-            get
-            {
-                if ((this.mRecordedMethod3Params == null))
-                {
-                    this.mRecordedMethod3Params = new RecordedMethod3Params();
-                }
-                return this.mRecordedMethod3Params;
-            }
-        }
-
-        public virtual RecordedMethod2Params RecordedMethod2Params
-        {
-            get
-            {
-                if ((this.mRecordedMethod2Params == null))
-                {
-                    this.mRecordedMethod2Params = new RecordedMethod2Params();
-                }
-                return this.mRecordedMethod2Params;
-            }
-        }
-
-        public virtual RebrokeAlternativeRenew_1Params RebrokeAlternativeRenew_1Params
-        {
-            get
-            {
-                if ((this.mRebrokeAlternativeRenew_1Params == null))
-                {
-                    this.mRebrokeAlternativeRenew_1Params = new RebrokeAlternativeRenew_1Params();
-                }
-                return this.mRebrokeAlternativeRenew_1Params;
+                return this.mRebrokeAlternativeRenew1Params;
             }
         }
 
@@ -1498,15 +1314,15 @@
             }
         }
 
-        public virtual RebrokeAlternativeFinish_1Params RebrokeAlternativeFinish_1Params
+        public virtual RebrokeAlternativeFinish_1Params RebrokeAlternativeFinish1Params
         {
             get
             {
-                if ((this.mRebrokeAlternativeFinish_1Params == null))
+                if ((this.mRebrokeAlternativeFinish1Params == null))
                 {
-                    this.mRebrokeAlternativeFinish_1Params = new RebrokeAlternativeFinish_1Params();
+                    this.mRebrokeAlternativeFinish1Params = new RebrokeAlternativeFinish_1Params();
                 }
-                return this.mRebrokeAlternativeFinish_1Params;
+                return this.mRebrokeAlternativeFinish1Params;
             }
         }
 
@@ -1543,18 +1359,6 @@
                     this.mPostcodeLookupExpectedValues = new PostcodeLookupExpectedValues();
                 }
                 return this.mPostcodeLookupExpectedValues;
-            }
-        }
-
-        public virtual OpenSiteForRenewalParams OpenSiteForRenewalParams
-        {
-            get
-            {
-                if ((this.mOpenSiteForRenewalParams == null))
-                {
-                    this.mOpenSiteForRenewalParams = new OpenSiteForRenewalParams();
-                }
-                return this.mOpenSiteForRenewalParams;
             }
         }
 
@@ -1825,7 +1629,7 @@
         /// <summary>
         ///     MTAEffectiveDate - Use 'MTAEffectiveDateParams' to pass parameters into this method.
         /// </summary>
-        public void MTAEffectiveDate()
+        public void MtaEffectiveDate()
         {
             #region Variable Declarations
 
@@ -1932,7 +1736,7 @@
             Playback.PlaybackSettings.ContinueOnError = false;
         }
 
-        public void etam_ok()
+        public void EtamOk()
         {
             WinButton uIOKButton1 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             Playback.PlaybackSettings.ContinueOnError = true;
@@ -2084,7 +1888,7 @@
         /// <summary>
         ///     MotoAWAP - Use 'MotoAWAPParams' to pass parameters into this method.
         /// </summary>
-        public void MotoAWAP()
+        public void MotoAwap()
         {
             #region Variable Declarations
 
@@ -2226,7 +2030,7 @@
         /// <summary>
         ///     MotoAmendRiskNew_1 - Use 'MotoAmendRiskNew_1Params' to pass parameters into this method.
         /// </summary>
-        public void MotoAmendRiskNew_1()
+        public void MotoAmendRiskNew1()
         {
             #region Variable Declarations
 
@@ -2248,7 +2052,7 @@
             Playback.PlaybackSettings.ContinueOnError = true;
 
             // Select '&Defer Printing?' check box
-            uIDeferPrintingCheckBox.Checked = this.MotoAmendRiskNew_1Params.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.MotoAmendRiskNew1Params.UIDeferPrintingCheckBoxChecked;
 
             // Click 'Ok' button
             Mouse.Click(uIOKButton, new Point(59, 11));
@@ -2263,7 +2067,7 @@
             Playback.PlaybackSettings.ContinueOnError = false;
 
             // Clear 'Add Activity' check box
-            uIAddActivityCheckBox.Checked = this.MotoAmendRiskNew_1Params.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.MotoAmendRiskNew1Params.UIAddActivityCheckBoxChecked;
 
             // Click 'Ok' button
             Mouse.Click(uIOKButton2, new Point(47, 13));
@@ -2272,7 +2076,7 @@
             Mouse.Click(uIOKButton3, new Point(55, 14));
 
             // Select 'AG Administrator General' in 'Unknown Name' list box
-            uIItemList.SelectedItemsAsString = this.MotoAmendRiskNew_1Params.UIItemListSelectedItemsAsString;
+            uIItemList.SelectedItemsAsString = this.MotoAmendRiskNew1Params.UIItemListSelectedItemsAsString;
 
             // Click '&Ok' button
             Mouse.Click(uIOKButton4, new Point(56, 11));
@@ -2280,7 +2084,7 @@
             // Click 'OK' button
             Mouse.Click(uIOKButton5, new Point(48, 12));
 
-            this.etam_ok();
+            this.EtamOk();
 
             // Click 'E&xit' button
             Mouse.Click(uIExitButton, new Point(47, 18));
@@ -2292,7 +2096,7 @@
         /// <summary>
         ///     RenewalModuleInvite_1 - Use 'RenewalModuleInvite_1Params' to pass parameters into this method.
         /// </summary>
-        public void RenewalModuleInvite_1()
+        public void RenewalModuleInvite1()
         {
             #region Variable Declarations
 
@@ -2311,7 +2115,7 @@
             this.RetrieveResponse();
 
             // Select '&Defer Printing?' check box
-            uIDeferPrintingCheckBox.Checked = this.RenewalModuleInvite_1Params.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.RenewalModuleInvite1Params.UIDeferPrintingCheckBoxChecked;
 
             // Click 'Ok' button
             Mouse.Click(uIOKButton1, new Point(72, 10));
@@ -2319,7 +2123,7 @@
             // The recording for the application under test '\\Pc-pez\J-Drive\TamXML\TamXML7.exe' may not be correct as it is located on a network share. Please install the application on a local path.
 
             // Clear 'Add Activity' check box
-            uIAddActivityCheckBox.Checked = this.RenewalModuleInvite_1Params.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.RenewalModuleInvite1Params.UIAddActivityCheckBoxChecked;
 
             // Click 'Ok' button
             Mouse.Click(uIOKButton2, new Point(24, 12));
@@ -2335,19 +2139,19 @@
         {
             #region Variable Declarations
 
-            WinClient uICUSTOMERSClient = this.UIPolicyautotestWindow.UICUSTOMERSWindow.UIItemWindow1.UICUSTOMERSClient;
+            WinClient uIcustomersClient = this.UIPolicyautotestWindow.UICUSTOMERSWindow.UIItemWindow1.UICUSTOMERSClient;
 
             #endregion
 
             // Click 'CUSTOMERS' client
-            Mouse.Click(uICUSTOMERSClient, new Point(31, 25));
-            Mouse.Click(uICUSTOMERSClient, new Point(31, 25));
+            Mouse.Click(uIcustomersClient, new Point(31, 25));
+            Mouse.Click(uIcustomersClient, new Point(31, 25));
         }
 
         /// <summary>
         ///     HomePrintQuote_1 - Use 'HomePrintQuote_1Params' to pass parameters into this method.
         /// </summary>
-        public void HomePrintQuote_1()
+        public void HomePrintQuote1()
         {
             #region Variable Declarations
 
@@ -2402,7 +2206,7 @@
             Mouse.Click(uIQuotesResultsClient, new Point(526, 161));
 
             // Type '{End}' in 'Quotes Results' client
-            Keyboard.SendKeys(uIQuotesResultsClient, this.HomePrintQuote_1Params.UIQuotesResultsClientSendKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIQuotesResultsClient, this.HomePrintQuote1Params.UIQuotesResultsClientSendKeys, ModifierKeys.None);
 
             // Click '&Print Quote..' button
             Mouse.Click(uIPrintQuoteButton, new Point(65, 11));
@@ -2563,7 +2367,7 @@
 
             Playback.PlaybackSettings.ContinueOnError = false;
 
-            this.etam_ok();
+            this.EtamOk();
 
             // Click '&Ok' button
             Mouse.Click(uIOKButton1, new Point(47, 22));
@@ -2573,25 +2377,6 @@
 
             // Type 'B338TH' in 'Unknown Name' text box
             uIItemEdit.Text = this.HomeAcceptPolicyParams.UIItemEditText;
-        }
-
-        /// <summary>
-        ///     CloseLogin
-        /// </summary>
-        public void CloseLogin()
-        {
-            #region Variable Declarations
-
-            WinButton uIOKButton = this.UISignonErrorWindow.UIOKWindow.UIOKButton;
-            WinButton uICancelButton = this.UITheAgencyManagerSignWindow.UIOKWindow.UICancelButton;
-
-            #endregion
-
-            // Click 'OK' button
-            Mouse.Click(uIOKButton, new Point(36, 11));
-
-            // Click '&Cancel' button
-            Mouse.Click(uICancelButton, new Point(50, 13));
         }
 
         /// <summary>
@@ -2805,7 +2590,7 @@
             #region Variable Declarations
 
             WinButton uICloseButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICancelWindow.UICloseButton;
-            WinButton uIOKButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinButton uIokButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -2819,7 +2604,7 @@
             // The recording for the application under test '\\Pc-pez\J-Drive\TamXML\TamXML7.exe' may not be correct as it is located on a network share. Please install the application on a local path.
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton, new Point(36, 14));
+            Mouse.Click(uIokButton, new Point(36, 14));
         }
 
         /// <summary>
@@ -2908,13 +2693,13 @@
         {
             #region Variable Declarations
 
-            WinButton uIOKButton = this.UIViewQuoteDetailsWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton = this.UIViewQuoteDetailsWindow.UIOKWindow.UIOKButton;
             WinButton uIDemandsNeedsButton = this.UIQuotesResultsWindow.UIDemandsNeedsWindow.UIDemandsNeedsButton;
 
             #endregion
 
             // Click '&Ok' button
-            Mouse.Click(uIOKButton, new Point(36, 9));
+            Mouse.Click(uIokButton, new Point(36, 9));
 
             // Click 'Demands && Needs' button
             Mouse.Click(uIDemandsNeedsButton, new Point(59, 13));
@@ -3245,7 +3030,7 @@
         /// <summary>
         ///     HomeAcceptQuote_1 - Use 'HomeAcceptQuote_1Params' to pass parameters into this method.
         /// </summary>
-        public void HomeAcceptQuote_1()
+        public void HomeAcceptQuote1()
         {
             #region Variable Declarations
 
@@ -3282,7 +3067,7 @@
             Mouse.Click(uIOKButton2, new Point(29, 10));
 
             // Type 'B338TH' in text box
-            uIItemEdit.Text = this.HomeAcceptQuote_1Params.UIItemEditText;
+            uIItemEdit.Text = this.HomeAcceptQuote1Params.UIItemEditText;
 
             // Click '&Lookup...' button
             Mouse.Click(uILookupButton, new Point(25, 13));
@@ -3303,13 +3088,13 @@
             Playback.PlaybackSettings.ContinueOnError = false;
 
             // Select '&Defer Printing?' check box
-            uIDeferPrintingCheckBox.Checked = this.HomeAcceptQuote_1Params.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.HomeAcceptQuote1Params.UIDeferPrintingCheckBoxChecked;
 
             // Click 'Ok' button
             Mouse.Click(uIOKButton5, new Point(60, 10));
 
             // Clear 'Add Activity' check box
-            uIAddActivityCheckBox.Checked = this.HomeAcceptQuote_1Params.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.HomeAcceptQuote1Params.UIAddActivityCheckBoxChecked;
 
             // Click 'Ok' button
             Mouse.Click(uIOKButton6, new Point(40, 8));
@@ -3455,7 +3240,7 @@
         /// <summary>
         ///     etam_yes
         /// </summary>
-        public void etam_yes()
+        public void EtamYes()
         {
             #region Variable Declarations
 
@@ -3778,12 +3563,12 @@
         {
             #region Variable Declarations
 
-            WinButton uIOKButton = this.UIHouseholdRebrokeResuWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton = this.UIHouseholdRebrokeResuWindow.UIOKWindow.UIOKButton;
 
             #endregion
 
             // Click '&OK' button
-            Mouse.Click(uIOKButton, new Point(36, 13));
+            Mouse.Click(uIokButton, new Point(36, 13));
         }
 
         /// <summary>
@@ -3793,13 +3578,13 @@
         {
             #region Variable Declarations
 
-            WinButton uIOKButton = this.UIHouseholdRebrokeResuWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton = this.UIHouseholdRebrokeResuWindow.UIOKWindow.UIOKButton;
             WinButton uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
 
             #endregion
 
             // Click '&OK' button
-            Mouse.Click(uIOKButton, new Point(60, 9));
+            Mouse.Click(uIokButton, new Point(60, 9));
 
             // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(63, 11));
@@ -3846,7 +3631,7 @@
             WinEdit uIItemEdit2 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow4.UIItemEdit;
             WinEdit uIItemEdit3 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow5.UIItemEdit;
             WinButton uILookupButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UILookupWindow.UILookupButton;
-            WinButton uIOKButton = this.UISearchResultForB338TWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton = this.UISearchResultForB338TWindow.UIOKWindow.UIOKButton;
 
             #endregion
 
@@ -3880,7 +3665,7 @@
             Mouse.Click(uILookupButton, new Point(28, 13));
 
             // Click '&Ok' button
-            Mouse.Click(uIOKButton, new Point(43, 7));
+            Mouse.Click(uIokButton, new Point(43, 7));
         }
 
         /// <summary>
@@ -3908,7 +3693,7 @@
             WinButton uIOptionsButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UIOptionsWindow.UIOptionsButton;
             WinMenuItem uIQuoteSelectListMenuItem =
                 this.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3rdPartyIntegratMenuItem.UIQuoteSelectListMenuItem;
-            WinButton uIOKButton = this.UICurrentOrFutureWindow.UICurrentOrFutureClient.UIOKButton;
+            WinButton uIokButton = this.UICurrentOrFutureWindow.UICurrentOrFutureClient.UIOKButton;
 
             #endregion
 
@@ -3919,7 +3704,7 @@
             Mouse.Click(uIQuoteSelectListMenuItem, new Point(123, 7));
 
             // Click '&Ok' button
-            Mouse.Click(uIOKButton, new Point(44, 13));
+            Mouse.Click(uIokButton, new Point(44, 13));
         }
 
         /// <summary>
@@ -3951,14 +3736,14 @@
             WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow1.UIQuotesResultsClient;
             WinClient uIQuotesResultsClient1 = this.UIQuotesResultsWindow.UIItemWindow2.UIQuotesResultsClient;
             WinButton uIAcceptButton = this.UIQuotesResultsWindow.UIAcceptWindow.UIAcceptButton;
-            WinButton uIOKButton = this.UIConfirmMTAWindow.UIOKWindow.UIOKButton;
-            WinButton uIOKButton1 = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
-            WinButton uIOKButton2 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
+            WinButton uIokButton = this.UIConfirmMTAWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton1 = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton2 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             WinCheckBox uIDeferPrintingCheckBox = this.UIPointOfSaleWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
-            WinButton uIOKButton3 = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton3 = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
-            WinButton uIOKButton4 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinButton uIOKButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinButton uIokButton4 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
+            WinButton uIokButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -3972,19 +3757,19 @@
             Mouse.Click(uIAcceptButton, new Point(64, 11));
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton, new Point(37, 8));
+            Mouse.Click(uIokButton, new Point(37, 8));
 
             // Click 'Ok' button
-            Mouse.Click(uIOKButton1, new Point(39, 16));
+            Mouse.Click(uIokButton1, new Point(39, 16));
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton2, new Point(58, 15));
+            Mouse.Click(uIokButton2, new Point(58, 15));
 
             // Select '&Defer Printing?' check box
             uIDeferPrintingCheckBox.Checked = this.HomeMTASelectQuoteParams.UIDeferPrintingCheckBoxChecked;
 
             // Click 'Ok' button
-            Mouse.Click(uIOKButton3, new Point(50, 8));
+            Mouse.Click(uIokButton3, new Point(50, 8));
 
             // The recording for the application under test '\\Pc-pez\J-Drive\TamXML\TamXML7.exe' may not be correct as it is located on a network share. Please install the application on a local path.
 
@@ -3992,13 +3777,13 @@
             uIAddActivityCheckBox.Checked = this.HomeMTASelectQuoteParams.UIAddActivityCheckBoxChecked;
 
             // Click 'Ok' button
-            Mouse.Click(uIOKButton4, new Point(29, 19));
+            Mouse.Click(uIokButton4, new Point(29, 19));
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton5, new Point(33, 12));
+            Mouse.Click(uIokButton5, new Point(33, 12));
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton5, new Point(39, 13));
+            Mouse.Click(uIokButton5, new Point(39, 13));
         }
 
         /// <summary>
@@ -4027,12 +3812,12 @@
         {
             #region Variable Declarations
 
-            WinButton uIOKButton = this.UIMTAEffectiveDatesWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton = this.UIMTAEffectiveDatesWindow.UIOKWindow.UIOKButton;
 
             #endregion
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton, new Point(46, 8));
+            Mouse.Click(uIokButton, new Point(46, 8));
         }
 
         /// <summary>
@@ -4055,7 +3840,7 @@
             WinButton uINextButton5 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow5.UINextButton;
             WinButton uINextButton6 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow6.UINextButton;
             WinButton uIQuoteButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIQuoteWindow.UIQuoteButton;
-            WinButton uINOButton = this.UICreditCheckWindow.UINOWindow.UINOButton;
+            WinButton uInoButton = this.UICreditCheckWindow.UINOWindow.UINOButton;
 
             #endregion
 
@@ -4099,7 +3884,7 @@
             Mouse.Click(uIQuoteButton, new Point(31, 11));
 
             // Click '&No' button
-            Mouse.Click(uINOButton, new Point(56, 12));
+            Mouse.Click(uInoButton, new Point(56, 12));
         }
 
         /// <summary>
@@ -4118,21 +3903,6 @@
         }
 
         /// <summary>
-        ///     HomeCheckDemands - Use 'HomeCheckDemandsExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void HomeCheckDemands()
-        {
-            #region Variable Declarations
-
-            WinClient uIDemandsNeedsHouseholClient = this.UIDemandsNeedsHouseholWindow.UIDemandsNeedsHouseholClient;
-
-            #endregion
-
-            // Verify that the 'Name' property of 'Demands&Needs(HouseholdBuildings&Contents) [Compat...' client contains 'DemandsNeeds(HouseholdBuildings&Contents)'
-            StringAssert.Contains(uIDemandsNeedsHouseholClient.Name, this.HomeCheckDemandsExpectedValues.UIDemandsNeedsHouseholClientName);
-        }
-
-        /// <summary>
         ///     HomeChangePremium - Use 'HomeChangePremiumParams' to pass parameters into this method.
         /// </summary>
         public void HomeChangePremium()
@@ -4142,7 +3912,7 @@
             WinButton uIPremiumButton = this.UIQuotesResultsWindow.UIPremiumWindow.UIPremiumButton;
             WinEdit uIItemEdit = this.UIOverridePremiumWindow.UIItemWindow.UIItemEdit;
             WinEdit uIItemEdit1 = this.UIOverridePremiumWindow.UIItemWindow1.UIItemEdit;
-            WinButton uIOKButton = this.UIOverridePremiumWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton = this.UIOverridePremiumWindow.UIOKWindow.UIOKButton;
 
             #endregion
 
@@ -4158,26 +3928,26 @@
             uIItemEdit1.Text = this.HomeChangePremiumParams.UIItemEditText1;
 
             // Click '&OK' button
-            Mouse.Click(uIOKButton, new Point(52, 15));
+            Mouse.Click(uIokButton, new Point(52, 15));
         }
 
         /// <summary>
         ///     HomeCancelPolicyQuote_1
         /// </summary>
-        public void HomeCancelPolicyQuote_1()
+        public void HomeCancelPolicyQuote1()
         {
             #region Variable Declarations
 
-            WinButton uIOKButton = this.UIMTAEffectiveDatesWindow.UIOKWindow.UIOKButton;
-            WinButton uINOButton = this.UIClaimsWindow.UINOWindow.UINOButton;
+            WinButton uIokButton = this.UIMTAEffectiveDatesWindow.UIOKWindow.UIOKButton;
+            WinButton uInoButton = this.UIClaimsWindow.UINOWindow.UINOButton;
 
             #endregion
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton, new Point(52, 9));
+            Mouse.Click(uIokButton, new Point(52, 9));
 
             // Click '&No' button
-            Mouse.Click(uINOButton, new Point(43, 18));
+            Mouse.Click(uInoButton, new Point(43, 18));
         }
 
         /// <summary>
@@ -4203,7 +3973,7 @@
             #region Variable Declarations
 
             WinButton uIExitButton = this.UIQuotesResultsWindow.UIExitWindow.UIExitButton;
-            WinButton uIOKButton = this.UIInsurEtamWindow1.UIOKWindow1.UIOKButton;
+            WinButton uIokButton = this.UIInsurEtamWindow1.UIOKWindow1.UIOKButton;
             WinButton uICancelButton = this.UIOpenWindow.UICancelWindow.UICancelButton;
 
             #endregion
@@ -4212,7 +3982,7 @@
             Mouse.Click(uIExitButton, new Point(58, 11));
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton, new Point(40, 10));
+            Mouse.Click(uIokButton, new Point(40, 10));
 
             // Click 'Cancel' button
             Mouse.Click(uICancelButton, new Point(54, 12));
@@ -4227,14 +3997,14 @@
 
             WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow1.UIQuotesResultsClient;
             WinButton uIAcceptButton = this.UIQuotesResultsWindow.UIAcceptWindow.UIAcceptButton;
-            WinButton uIOKButton = this.UIConfirmMTAWindow.UIOKWindow.UIOKButton;
-            WinButton uIOKButton1 = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
-            WinButton uIOKButton2 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
+            WinButton uIokButton = this.UIConfirmMTAWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton1 = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton2 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             WinCheckBox uIDeferPrintingCheckBox = this.UIPointOfSaleWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
-            WinButton uIOKButton3 = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton3 = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
-            WinButton uIOKButton4 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinButton uIOKButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinButton uIokButton4 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
+            WinButton uIokButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -4250,19 +4020,19 @@
             Mouse.Click(uIAcceptButton, new Point(85, 15));
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton, new Point(65, 9));
+            Mouse.Click(uIokButton, new Point(65, 9));
 
             // Click 'Ok' button
-            Mouse.Click(uIOKButton1, new Point(39, 10));
+            Mouse.Click(uIokButton1, new Point(39, 10));
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton2, new Point(47, 13));
+            Mouse.Click(uIokButton2, new Point(47, 13));
 
             // Select '&Defer Printing?' check box
             uIDeferPrintingCheckBox.Checked = this.HomeCancelPolicyAcceptParams.UIDeferPrintingCheckBoxChecked;
 
             // Click 'Ok' button
-            Mouse.Click(uIOKButton3, new Point(68, 12));
+            Mouse.Click(uIokButton3, new Point(68, 12));
 
             // The recording for the application under test '\\Pc-pez\J-Drive\TamXML\TamXML7.exe' may not be correct as it is located on a network share. Please install the application on a local path.
 
@@ -4270,10 +4040,10 @@
             uIAddActivityCheckBox.Checked = this.HomeCancelPolicyAcceptParams.UIAddActivityCheckBoxChecked;
 
             // Click 'Ok' button
-            Mouse.Click(uIOKButton4, new Point(42, 12));
+            Mouse.Click(uIokButton4, new Point(42, 12));
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton5, new Point(23, 5));
+            Mouse.Click(uIokButton5, new Point(23, 5));
         }
 
         /// <summary>
@@ -4405,57 +4175,57 @@
         /// <summary>
         ///     HomeAmendRenewFinish_1 - Use 'HomeAmendRenewFinish_1Params' to pass parameters into this method.
         /// </summary>
-        public void HomeAmendRenewFinish_1()
+        public void HomeAmendRenewFinish1()
         {
             #region Variable Declarations
 
             WinCheckBox uIDeferPrintingCheckBox = this.UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
-            WinButton uIOKButton = this.UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
-            WinButton uIOKButton1 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
+            WinButton uIokButton = this.UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton1 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
-            WinButton uIOKButton2 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinButton uIOKButton3 = this.UITransactiontoinsertWindow.UIItemWindow.UITransactiontoinsertClient.UIOKButton;
+            WinButton uIokButton2 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
+            WinButton uIokButton3 = this.UITransactiontoinsertWindow.UIItemWindow.UITransactiontoinsertClient.UIOKButton;
             WinList uIItemList = this.UIPleaseselectWHOtofolWindow.UIItemWindow1.UIItemList;
-            WinButton uIOKButton4 = this.UIPleaseselectWHOtofolWindow.UIItemWindow.UIPleaseselectWHOtofolClient.UIOKButton;
-            WinButton uIOKButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinButton uIokButton4 = this.UIPleaseselectWHOtofolWindow.UIItemWindow.UIPleaseselectWHOtofolClient.UIOKButton;
+            WinButton uIokButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
             // Select '&Defer Printing?' check box
-            uIDeferPrintingCheckBox.Checked = this.HomeAmendRenewFinish_1Params.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.HomeAmendRenewFinish1Params.UIDeferPrintingCheckBoxChecked;
 
             // Click 'Ok' button
-            Mouse.Click(uIOKButton, new Point(74, 12));
+            Mouse.Click(uIokButton, new Point(74, 12));
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton1, new Point(47, 12));
+            Mouse.Click(uIokButton1, new Point(47, 12));
 
             // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
             Playback.PlaybackSettings.ContinueOnError = true;
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton1, new Point(54, 13));
+            Mouse.Click(uIokButton1, new Point(54, 13));
 
             // Reset flag to ensure that play back stops if there is an error.
             Playback.PlaybackSettings.ContinueOnError = false;
 
             // Clear 'Add Activity' check box
-            uIAddActivityCheckBox.Checked = this.HomeAmendRenewFinish_1Params.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.HomeAmendRenewFinish1Params.UIAddActivityCheckBoxChecked;
 
             // Click 'Ok' button
-            Mouse.Click(uIOKButton2, new Point(48, 9));
+            Mouse.Click(uIokButton2, new Point(48, 9));
 
             // Click '&Ok' button
-            Mouse.Click(uIOKButton3, new Point(19, 12));
+            Mouse.Click(uIokButton3, new Point(19, 12));
 
             // Select 'AG Administrator General' in list box
-            uIItemList.SelectedItemsAsString = this.HomeAmendRenewFinish_1Params.UIItemListSelectedItemsAsString;
+            uIItemList.SelectedItemsAsString = this.HomeAmendRenewFinish1Params.UIItemListSelectedItemsAsString;
 
             // Click '&Ok' button
-            Mouse.Click(uIOKButton4, new Point(13, 16));
+            Mouse.Click(uIokButton4, new Point(13, 16));
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton5, new Point(46, 16));
+            Mouse.Click(uIokButton5, new Point(46, 16));
         }
 
         /// <summary>
@@ -4496,16 +4266,16 @@
 
             WinButton uIRenewPolicyButton = this.UIHouseholdRenewalsAmeWindow1.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinButton uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
-            WinButton uIOKButton = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIDeferPrintingCheckBox = this.UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
-            WinButton uIOKButton1 = this.UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
-            WinButton uIOKButton2 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
+            WinButton uIokButton1 = this.UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton2 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
-            WinButton uIOKButton3 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinButton uIOKButton4 = this.UITransactiontoinsertWindow.UIItemWindow.UITransactiontoinsertClient.UIOKButton;
+            WinButton uIokButton3 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
+            WinButton uIokButton4 = this.UITransactiontoinsertWindow.UIItemWindow.UITransactiontoinsertClient.UIOKButton;
             WinList uIItemList = this.UIPleaseselectWHOtofolWindow.UIItemWindow1.UIItemList;
-            WinButton uIOKButton5 = this.UIPleaseselectWHOtofolWindow.UIItemWindow.UIPleaseselectWHOtofolClient.UIOKButton;
-            WinButton uIOKButton6 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinButton uIokButton5 = this.UIPleaseselectWHOtofolWindow.UIItemWindow.UIPleaseselectWHOtofolClient.UIOKButton;
+            WinButton uIokButton6 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -4519,16 +4289,16 @@
             Mouse.Click(uIYesButton, new Point(65, 18));
 
             // Click 'Ok' button
-            Mouse.Click(uIOKButton, new Point(26, 16));
+            Mouse.Click(uIokButton, new Point(26, 16));
 
             // Select '&Defer Printing?' check box
             uIDeferPrintingCheckBox.Checked = this.HomeAmendRenewParams.UIDeferPrintingCheckBoxChecked;
 
             // Click 'Ok' button
-            Mouse.Click(uIOKButton1, new Point(74, 19));
+            Mouse.Click(uIokButton1, new Point(74, 19));
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton2, new Point(64, 14));
+            Mouse.Click(uIokButton2, new Point(64, 14));
 
             // The recording for the application under test '\\Pc-pez\J-Drive\TamXML\TamXML7.exe' may not be correct as it is located on a network share. Please install the application on a local path.
 
@@ -4536,19 +4306,19 @@
             uIAddActivityCheckBox.Checked = this.HomeAmendRenewParams.UIAddActivityCheckBoxChecked;
 
             // Click 'Ok' button
-            Mouse.Click(uIOKButton3, new Point(60, 17));
+            Mouse.Click(uIokButton3, new Point(60, 17));
 
             // Click '&Ok' button
-            Mouse.Click(uIOKButton4, new Point(21, 8));
+            Mouse.Click(uIokButton4, new Point(21, 8));
 
             // Select 'AG Administrator General' in list box
             uIItemList.SelectedItemsAsString = this.HomeAmendRenewParams.UIItemListSelectedItemsAsString;
 
             // Click '&Ok' button
-            Mouse.Click(uIOKButton5, new Point(60, 14));
+            Mouse.Click(uIokButton5, new Point(60, 14));
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton6, new Point(30, 15));
+            Mouse.Click(uIokButton6, new Point(30, 15));
         }
 
         /// <summary>
@@ -4568,106 +4338,6 @@
 
             // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(39, 13));
-        }
-
-        /// <summary>
-        ///     MotoCopyFinish - Use 'MotoCopyFinishParams' to pass parameters into this method.
-        /// </summary>
-        public void MotoCopyFinish()
-        {
-            #region Variable Declarations
-
-            WinButton uICalculateQuoteButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
-            WinButton uICancelButton = this.UIQuoteSelectListWindow.UICancelWindow.UICancelButton;
-            WinButton uINOButton = this.UICreditCheckWindow.UINOWindow.UINOButton;
-            WinClient uIQuoteResultsClient = this.UIQuoteResultsWindow.UIItemWindow.UIQuoteResultsClient;
-            WinButton uIAcceptButton = this.UIQuoteResultsWindow.UIAcceptWindow.UIAcceptButton;
-            WinButton uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
-            WinButton uIOKButton = this.UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
-            WinButton uIOKButton1 = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
-            WinButton uIConfirmButton = this.UIPolicyDateTimeWindow.UIConfirmWindow.UIConfirmButton;
-            WinButton uICancelButton1 = this.UISavethefileasWindow.UICancelWindow.UICancelButton;
-            WinCheckBox uIDeferPrintingCheckBox = this.UIPointOfSaleWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
-            WinButton uIOKButton2 = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
-            WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
-            WinButton uIOKButton3 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinButton uIOKButton4 = this.UITamXMLImportCustomerWindow.UIItemWindow.UITamXMLImportCustomerClient.UIOKButton;
-            WinButton uIOKButton5 = this.UITransactiontoinsertWindow.UIItemWindow.UITransactiontoinsertClient.UIOKButton;
-            WinButton uIOKButton6 = this.UIPleaseselectWHOtofolWindow.UIItemWindow.UIPleaseselectWHOtofolClient.UIOKButton;
-            WinButton uIOKButton7 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
-            WinList uIItemList = this.UIPleaseselectWHOtofolWindow.UIItemWindow1.UIItemList;
-            WinButton uICancelButton2 = this.UIPolicyautotestWindow.UIPolicyListWindow.UICancelWindow.UICancelButton;
-
-            #endregion
-
-            // Click 'Calculate &Quote' button
-            Mouse.Click(uICalculateQuoteButton, new Point(91, 8));
-
-            // Click '&Cancel' button
-            Mouse.Click(uICancelButton, new Point(46, 7));
-
-            // Click '&No' button
-            Mouse.Click(uINOButton, new Point(33, 11));
-
-            // Click 'Quote Results' client
-            Mouse.Click(uIQuoteResultsClient, new Point(456, 148));
-
-            // Type '{Home}' in 'Quote Results' client
-            Keyboard.SendKeys(uIQuoteResultsClient, this.MotoCopyFinishParams.UIQuoteResultsClientSendKeys, ModifierKeys.None);
-
-            // Click 'A&ccept' button
-            Mouse.Click(uIAcceptButton, new Point(58, 14));
-
-            // Click '&Yes' button
-            Mouse.Click(uIYesButton, new Point(52, 6));
-
-            // Click '&Ok' button
-            Mouse.Click(uIOKButton, new Point(25, 19));
-
-            // Click 'Ok' button
-            Mouse.Click(uIOKButton1, new Point(48, 11));
-
-            // Click '&Confirm' button
-            Mouse.Click(uIConfirmButton, new Point(20, 7));
-
-            // Click 'Cancel' button
-            Mouse.Click(uICancelButton1, new Point(39, 12));
-
-            // Select '&Defer Printing?' check box
-            uIDeferPrintingCheckBox.Checked = this.MotoCopyFinishParams.UIDeferPrintingCheckBoxChecked;
-
-            // Click 'Ok' button
-            Mouse.Click(uIOKButton2, new Point(54, 8));
-
-            // Clear 'Add Activity' check box
-            uIAddActivityCheckBox.Checked = this.MotoCopyFinishParams.UIAddActivityCheckBoxChecked;
-
-            // Click 'Ok' button
-            Mouse.Click(uIOKButton3, new Point(23, 12));
-
-            // Click '&Ok' button
-            Mouse.Click(uIOKButton4, new Point(54, 8));
-
-            // Click '&Ok' button
-            Mouse.Click(uIOKButton5, new Point(40, 14));
-
-            // Click '&Ok' button
-            Mouse.Click(uIOKButton6, new Point(40, 14));
-
-            // Click 'OK' button
-            Mouse.Click(uIOKButton7, new Point(43, 21));
-
-            // Select 'AG Administrator General' in list box
-            uIItemList.SelectedItemsAsString = this.MotoCopyFinishParams.UIItemListSelectedItemsAsString;
-
-            // Click '&Ok' button
-            Mouse.Click(uIOKButton6, new Point(42, 8));
-
-            // Click 'OK' button
-            Mouse.Click(uIOKButton7, new Point(43, 6));
-
-            // Click 'Cancel' button
-            Mouse.Click(uICancelButton2, new Point(39, 13));
         }
 
         /// <summary>
@@ -4804,7 +4474,7 @@
         /// <summary>
         ///     MotoCancelPolicy_1
         /// </summary>
-        public void MotoCancelPolicy_1()
+        public void MotoCancelPolicy1()
         {
             #region Variable Declarations
 
@@ -4879,36 +4549,6 @@
 
             // Click 'Calculate &Quote' button
             Mouse.Click(uICalculateQuoteButton, new Point(69, 13));
-        }
-
-        /// <summary>
-        ///     MotoAWAPCheckTAX - Use 'MotoAWAPCheckTAXExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void MotoAWAPCheckTAX()
-        {
-            #region Variable Declarations
-
-            WinEdit uILblBalanceEdit = this.UITransactionListWindow.UILblBalanceWindow.UILblBalanceEdit;
-
-            #endregion
-
-            // Verify that the 'Text' property of 'lblBalance' text box equals '600.00'
-            Assert.AreEqual(this.MotoAWAPCheckTAXExpectedValues.UILblBalanceEditText, uILblBalanceEdit.Text);
-        }
-
-        /// <summary>
-        ///     MotoAWAPCheckNEW - Use 'MotoAWAPCheckNEWExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void MotoAWAPCheckNEW()
-        {
-            #region Variable Declarations
-
-            WinEdit uILblBalanceEdit = this.UITransactionListWindow.UILblBalanceWindow.UILblBalanceEdit;
-
-            #endregion
-
-            // Verify that the 'Text' property of 'lblBalance' text box equals '10,000.00'
-            Assert.AreEqual(this.MotoAWAPCheckNEWExpectedValues.UILblBalanceEditText, uILblBalanceEdit.Text);
         }
 
         /// <summary>
@@ -4996,7 +4636,7 @@
         /// <summary>
         ///     Links_1
         /// </summary>
-        public void Links_1()
+        public void Links1()
         {
             #region Variable Declarations
 
@@ -5021,61 +4661,6 @@
 
             // Select 'Household' in combo box
             uIItemComboBox.SelectedItem = this.HouseRegressAppParams.UIItemComboBoxSelectedItem;
-        }
-
-        /// <summary>
-        ///     HouseProposer - Use 'HouseProposerParams' to pass parameters into this method.
-        /// </summary>
-        public void HouseProposer()
-        {
-            #region Variable Declarations
-
-            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow2.UIItemEdit;
-            WinEdit uIItemEdit1 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow11.UIItemEdit;
-            WinEdit uIItemEdit2 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow3.UIItemEdit;
-            WinComboBox uIItemComboBox = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow21.UIItemComboBox;
-            WinComboBox uIItemComboBox1 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow31.UIItemComboBox;
-            WinEdit uIItemEdit3 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow4.UIItemEdit;
-            WinEdit uIItemEdit4 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow5.UIItemEdit;
-            WinEdit uIItemEdit5 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow51.UIItemEdit;
-            WinButton uILookupButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UILookupWindow.UILookupButton;
-            WinButton uIOKButton = this.UISearchResultForB338TWindow.UIOKWindow.UIOKButton;
-
-            #endregion
-
-            // The recording for the application under test '\\Pc-pez\APPLIED\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // The recording for the application under test '\\Pc-pez\APPLIED\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Type 'test1' in text box
-            uIItemEdit.Text = this.HouseProposerParams.UIItemEditText;
-
-            // Type 'test' in text box
-            uIItemEdit1.Text = this.HouseProposerParams.UIItemEditText1;
-
-            // Type 'test' in text box
-            uIItemEdit2.Text = this.HouseProposerParams.UIItemEditText2;
-
-            // Select 'Advertising Buyer' in combo box
-            uIItemComboBox.SelectedItem = this.HouseProposerParams.UIItemComboBoxSelectedItem;
-
-            // Select 'Addressing/Circularising Services' in combo box
-            uIItemComboBox1.SelectedItem = this.HouseProposerParams.UIItemComboBoxSelectedItem1;
-
-            // Type '151065' in text box
-            uIItemEdit3.Text = this.HouseProposerParams.UIItemEditText3;
-
-            // Click text box
-            Mouse.Click(uIItemEdit4, new Point(16, 7));
-
-            // Type 'B338TH' in text box
-            uIItemEdit5.Text = this.HouseProposerParams.UIItemEditText4;
-
-            // Click '&Lookup...' button
-            Mouse.Click(uILookupButton, new Point(31, 15));
-
-            // Click '&Ok' button
-            Mouse.Click(uIOKButton, new Point(28, 22));
         }
 
         /// <summary>
@@ -5268,9 +4853,9 @@
 
             WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow1.UIQuotesResultsClient;
             WinButton uIAcceptButton = this.UIQuotesResultsWindow.UIAcceptWindow.UIAcceptButton;
-            WinButton uIOKButton = this.UIConfirmMTAWindow.UIOKWindow.UIOKButton;
-            WinButton uIOKButton1 = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
-            WinButton uIOKButton2 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
+            WinButton uIokButton = this.UIConfirmMTAWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton1 = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
+            WinButton uIokButton2 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
 
             #endregion
 
@@ -5288,13 +4873,13 @@
             Mouse.Click(uIAcceptButton, new Point(75, 10));
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton, new Point(36, 16));
+            Mouse.Click(uIokButton, new Point(36, 16));
 
             // Click 'Ok' button
-            Mouse.Click(uIOKButton1, new Point(37, 19));
+            Mouse.Click(uIokButton1, new Point(37, 19));
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton2, new Point(48, 14));
+            Mouse.Click(uIokButton2, new Point(48, 14));
         }
 
         /// <summary>
@@ -5318,39 +4903,6 @@
         }
 
         /// <summary>
-        ///     testPrint - Use 'testPrintParams' to pass parameters into this method.
-        /// </summary>
-        public void testPrint()
-        {
-            #region Variable Declarations
-
-            WinButton uIPolicySummaryButton = this.UIQuoteResultsWindow.UIPolicySummaryWindow.UIPolicySummaryButton;
-            WinComboBox uIFilenameComboBox = this.UISavethefileasWindow.UIDetailsPanePane.UIFilenameComboBox;
-            WinButton uISaveButton = this.UISavethefileasWindow.UISaveWindow.UISaveButton;
-            WinButton uIYesButton = this.UIConfirmSaveAsWindow.UIConfirmSaveAsPane.UIYesButton;
-
-            #endregion
-
-            // Click 'Policy &Summary' button
-            Mouse.Click(uIPolicySummaryButton, new Point(61, 12));
-
-            // Select 'test_print' in 'File name:' combo box
-            uIFilenameComboBox.EditableItem = this.testPrintParams.UIFilenameComboBoxEditableItem;
-
-            // Click '&Save' button
-            Mouse.Click(uISaveButton, new Point(59, 8));
-
-            // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
-            Playback.PlaybackSettings.ContinueOnError = true;
-
-            // Click '&Yes' button
-            Mouse.Click(uIYesButton, new Point(38, 6));
-
-            // Reset flag to ensure that play back stops if there is an error.
-            Playback.PlaybackSettings.ContinueOnError = false;
-        }
-
-        /// <summary>
         ///     SelectPolicyQuote - Use 'SelectPolicyQuoteParams' to pass parameters into this method.
         /// </summary>
         public void SelectPolicyQuote()
@@ -5368,44 +4920,6 @@
 
             // Type '{Home}' in 'Quote Results' client
             Keyboard.SendKeys(uIQuoteResultsClient, this.SelectPolicyQuoteParams.UIQuoteResultsClientSendKeys, ModifierKeys.None);
-        }
-
-        /// <summary>
-        ///     SelectPolicy
-        /// </summary>
-        public void SelectPolicy()
-        {
-            #region Variable Declarations
-
-            WinTitleBar uIQuoteResultsTitleBar = this.UIQuoteResultsWindow.UIQuoteResultsTitleBar;
-            WinClient uIQuoteResultsClient = this.UIQuoteResultsWindow.UIQuoteResultsClient;
-
-            #endregion
-
-            // Wait for 2 seconds for user delay between actions; Click 'Quote Results' title bar
-            Playback.Wait(2000);
-            Mouse.Click(uIQuoteResultsTitleBar, new Point(736, 10));
-
-            // Click 'Quote Results' client
-            Mouse.Click(uIQuoteResultsClient, new Point(728, 84));
-        }
-
-        /// <summary>
-        ///     SelectNextTransaction - Use 'SelectNextTransactionParams' to pass parameters into this method.
-        /// </summary>
-        public void SelectNextTransaction()
-        {
-            #region Variable Declarations
-
-            WinList uILvwVListList = this.UITransactionListWindow.UILvwVListWindow.UILvwVListList;
-
-            #endregion
-
-            // Select '381' in 'lvwVList' list box
-            uILvwVListList.SelectedItemsAsString = this.SelectNextTransactionParams.UILvwVListListSelectedItemsAsString;
-
-            // Select '381' in 'lvwVList' list box
-            uILvwVListList.SelectedItemsAsString = this.SelectNextTransactionParams.UILvwVListListSelectedItemsAsString1;
         }
 
         /// <summary>
@@ -5453,22 +4967,6 @@
 
             // Click 'Options' -> 'Links' -> '3rd Party Integration' -> 'Quote Select List' menu item
             Mouse.Click(uIQuoteSelectListMenuItem, new Point(101, 9));
-        }
-
-        /// <summary>
-        ///     SelectInsurer
-        /// </summary>
-        public void SelectInsurer()
-        {
-            #region Variable Declarations
-
-            WinClient uIQuoteResultsClient = this.UIQuoteResultsWindow.UIItemWindow.UIQuoteResultsClient;
-
-            #endregion
-
-            // Wait for 2 seconds for user delay between actions; Click 'Quote Results' client
-            Playback.Wait(2000);
-            Mouse.Click(uIQuoteResultsClient, new Point(353, 27));
         }
 
         /// <summary>
@@ -5527,27 +5025,6 @@
 
             // Click 'OK' button
             Mouse.Click(uIOKButton2, new Point(44, 15));
-        }
-
-        /// <summary>
-        ///     RewiseRecord
-        /// </summary>
-        public void RewiseRecord()
-        {
-            #region Variable Declarations
-
-            WinButton uIYesButton = this.UIPolicyWindow.UIYesWindow.UIYesButton;
-
-            #endregion
-
-            // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
-            Playback.PlaybackSettings.ContinueOnError = true;
-
-            // Click '&Yes' button
-            Mouse.Click(uIYesButton, new Point(52, 16));
-
-            // Reset flag to ensure that play back stops if there is an error.
-            Playback.PlaybackSettings.ContinueOnError = false;
         }
 
         /// <summary>
@@ -5616,7 +5093,7 @@
         /// <summary>
         ///     RenewalModuleRenew_1 - Use 'RenewalModuleRenew_1Params' to pass parameters into this method.
         /// </summary>
-        public void RenewalModuleRenew_1()
+        public void RenewalModuleRenew1()
         {
             #region Variable Declarations
 
@@ -5633,7 +5110,7 @@
             #endregion
 
             // Select '&Defer Printing?' check box
-            uIDeferPrintingCheckBox.Checked = this.RenewalModuleRenew_1Params.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.RenewalModuleRenew1Params.UIDeferPrintingCheckBoxChecked;
 
             // Click 'Ok' button
             Mouse.Click(uIOKButton, new Point(76, 10));
@@ -5644,7 +5121,7 @@
             // The recording for the application under test '\\Pc-pez\J-Drive\TamXML\TamXML7.exe' may not be correct as it is located on a network share. Please install the application on a local path.
 
             // Clear 'Add Activity' check box
-            uIAddActivityCheckBox.Checked = this.RenewalModuleRenew_1Params.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.RenewalModuleRenew1Params.UIAddActivityCheckBoxChecked;
 
             // Click 'Ok' button
             Mouse.Click(uIOKButton2, new Point(46, 16));
@@ -5653,7 +5130,7 @@
             Mouse.Click(uIOKButton3, new Point(47, 24));
 
             // Select 'AG Administrator General' in list box
-            uIItemList.SelectedItemsAsString = this.RenewalModuleRenew_1Params.UIItemListSelectedItemsAsString;
+            uIItemList.SelectedItemsAsString = this.RenewalModuleRenew1Params.UIItemListSelectedItemsAsString;
 
             // Click '&Ok' button
             Mouse.Click(uIOKButton4, new Point(46, 4));
@@ -5734,7 +5211,7 @@
         /// <summary>
         ///     RenewalModuleEDI_1
         /// </summary>
-        public void RenewalModuleEDI_1()
+        public void RenewalModuleEdi1()
         {
             #region Variable Declarations
 
@@ -5978,21 +5455,6 @@
         }
 
         /// <summary>
-        ///     RenewalCheckInvited - Use 'RenewalCheckInvitedExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void RenewalCheckInvited()
-        {
-            #region Variable Declarations
-
-            WinEdit uIItemEdit = this.UIAUTO1871001Window.UIItemWindow.UIItemEdit;
-
-            #endregion
-
-            // Verify that the 'Text' property of text box equals 'Invited'
-            Assert.AreEqual(this.RenewalCheckInvitedExpectedValues.UIItemEditText, uIItemEdit.Text);
-        }
-
-        /// <summary>
         ///     RenewalAfterMTA1 - Use 'RenewalAfterMTA1Params' to pass parameters into this method.
         /// </summary>
         public void RenewalAfterMTA1()
@@ -6083,49 +5545,9 @@
         }
 
         /// <summary>
-        ///     RecordedMethod6
-        /// </summary>
-        public void RecordedMethod6()
-        {
-            #region Variable Declarations
-
-            WinListItem uITestProject7ListItem = this.UIProgramManagerWindow.UIDesktopList.UITestProject7ListItem;
-
-            #endregion
-
-            // Click 'TestProject7' list item
-            Mouse.Click(uITestProject7ListItem, new Point(28, 16));
-        }
-
-        /// <summary>
-        ///     RecordedMethod5 - Use 'RecordedMethod5Params' to pass parameters into this method.
-        /// </summary>
-        public void RecordedMethod5()
-        {
-            #region Variable Declarations
-
-            WinButton uIPolicySummaryButton = this.UIQuoteResultsWindow.UIPolicySummaryWindow.UIPolicySummaryButton;
-            WinComboBox uIFilenameComboBox = this.UISavethefileasWindow.UIDetailsPanePane.UIFilenameComboBox;
-            WinButton uISaveButton = this.UISavethefileasWindow.UISaveWindow.UISaveButton;
-
-            #endregion
-
-            // Click 'Policy &Summary' button
-            Mouse.Click(uIPolicySummaryButton, new Point(46, 14));
-
-            // Last mouse action was not recorded.
-
-            // Select '⁬test_print' in 'File name:' combo box
-            uIFilenameComboBox.EditableItem = this.RecordedMethod5Params.UIFilenameComboBoxEditableItem;
-
-            // Click '&Save' button
-            Mouse.Click(uISaveButton, new Point(38, 12));
-        }
-
-        /// <summary>
         ///     RecordedMethod4_1
         /// </summary>
-        public void RecordedMethod4_1()
+        public void ClickOkButton()
         {
             #region Variable Declarations
 
@@ -6150,54 +5572,6 @@
 
             // Click 'Cancel' button
             Mouse.Click(uICancelButton, new Point(40, 13));
-        }
-
-        /// <summary>
-        ///     RecordedMethod3 - Use 'RecordedMethod3Params' to pass parameters into this method.
-        /// </summary>
-        public void RecordedMethod3()
-        {
-            #region Variable Declarations
-
-            WinEdit uIItemEdit = this.UIPolicyrtyertWindow.UIBillingScreenMOTOTESWindow.UIItemWindow.UIItemEdit;
-
-            #endregion
-
-            // The recording for the application under test '\\Pc-pez\APPLIED\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Type '8711.32' in text box
-            uIItemEdit.Text = this.RecordedMethod3Params.UIItemEditText;
-        }
-
-        /// <summary>
-        ///     RecordedMethod2 - Use 'RecordedMethod2Params' to pass parameters into this method.
-        /// </summary>
-        public void RecordedMethod2()
-        {
-            #region Variable Declarations
-
-            WinClient uIQuoteResultsClient = this.UIQuoteResultsWindow.UIItemWindow.UIQuoteResultsClient;
-            WinRadioButton uIComprehensiveRadioButton = this.UIQuoteResultsWindow.UIComprehensiveWindow.UIComprehensiveRadioButton;
-            WinButton uIPrintQuoteButton = this.UIQuoteResultsWindow.UIPrintQuoteWindow.UIPrintQuoteButton;
-            WinButton uIOKButton = this.UIViewQuoteDetailsWindow.UIOKWindow.UIOKButton;
-
-            #endregion
-
-            // The recording for the application under test '\\Pc-pez\APPLIED\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // The recording for the application under test '\\Pc-pez\APPLIED\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click 'Quote Results' client
-            Mouse.Click(uIQuoteResultsClient, new Point(188, 25));
-
-            // Type '{Space}' in 'Comprehensive' radio button
-            Keyboard.SendKeys(uIComprehensiveRadioButton, this.RecordedMethod2Params.UIComprehensiveRadioButtonSendKeys, ModifierKeys.None);
-
-            // Click '&Print Quote...' button
-            Mouse.Click(uIPrintQuoteButton, new Point(43, 11));
-
-            // Click '&Ok' button
-            Mouse.Click(uIOKButton, new Point(97, 10));
         }
 
         /// <summary>
@@ -6237,7 +5611,7 @@
         /// <summary>
         ///     RebrokeAlternativeRenew_1 - Use 'RebrokeAlternativeRenew_1Params' to pass parameters into this method.
         /// </summary>
-        public void RebrokeAlternativeRenew_1()
+        public void RebrokeAlternativeRenew1()
         {
             #region Variable Declarations
 
@@ -6254,7 +5628,7 @@
             #endregion
 
             // Select '&Defer Printing?' check box
-            uIDeferPrintingCheckBox.Checked = this.RebrokeAlternativeRenew_1Params.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.RebrokeAlternativeRenew1Params.UIDeferPrintingCheckBoxChecked;
 
             // Click 'Ok' button
             Mouse.Click(uIOKButton, new Point(63, 21));
@@ -6266,7 +5640,7 @@
             Mouse.Click(uIOKButton1, new Point(62, 14));
 
             // Clear 'Add Activity' check box
-            uIAddActivityCheckBox.Checked = this.RebrokeAlternativeRenew_1Params.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.RebrokeAlternativeRenew1Params.UIAddActivityCheckBoxChecked;
 
             // Click 'Ok' button
             Mouse.Click(uIOKButton2, new Point(44, 7));
@@ -6275,7 +5649,7 @@
             Mouse.Click(uIOKButton3, new Point(54, 7));
 
             // Select 'AG Administrator General' in list box
-            uIItemList.SelectedItemsAsString = this.RebrokeAlternativeRenew_1Params.UIItemListSelectedItemsAsString;
+            uIItemList.SelectedItemsAsString = this.RebrokeAlternativeRenew1Params.UIItemListSelectedItemsAsString;
 
             // Click '&Ok' button
             Mouse.Click(uIOKButton4, new Point(59, 13));
@@ -6332,7 +5706,7 @@
         /// <summary>
         ///     RebrokeAlternativeFinish_1 - Use 'RebrokeAlternativeFinish_1Params' to pass parameters into this method.
         /// </summary>
-        public void RebrokeAlternativeFinish_1()
+        public void RebrokeAlternativeFinish1()
         {
             #region Variable Declarations
 
@@ -6349,7 +5723,7 @@
             #endregion
 
             // Select '&Defer Printing?' check box
-            uIDeferPrintingCheckBox.Checked = this.RebrokeAlternativeFinish_1Params.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.RebrokeAlternativeFinish1Params.UIDeferPrintingCheckBoxChecked;
 
             // Click 'Ok' button
             Mouse.Click(uIOKButton, new Point(75, 12));
@@ -6363,7 +5737,7 @@
             // The recording for the application under test '\\Pc-pez\J-Drive\TamXML\TamXML7.exe' may not be correct as it is located on a network share. Please install the application on a local path.
 
             // Clear 'Add Activity' check box
-            uIAddActivityCheckBox.Checked = this.RebrokeAlternativeFinish_1Params.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.RebrokeAlternativeFinish1Params.UIAddActivityCheckBoxChecked;
 
             // Click 'Ok' button
             Mouse.Click(uIOKButton2, new Point(46, 14));
@@ -6372,7 +5746,7 @@
             Mouse.Click(uIOKButton3, new Point(49, 7));
 
             // Select 'AG Administrator General' in list box
-            uIItemList.SelectedItemsAsString = this.RebrokeAlternativeFinish_1Params.UIItemListSelectedItemsAsString;
+            uIItemList.SelectedItemsAsString = this.RebrokeAlternativeFinish1Params.UIItemListSelectedItemsAsString;
 
             // Click '&Ok' button
             Mouse.Click(uIOKButton4, new Point(55, 12));
@@ -6453,7 +5827,7 @@
         /// <summary>
         ///     QuoteResults_1
         /// </summary>
-        public void QuoteResults_1()
+        public void QuoteResults1()
         {
             #region Variable Declarations
 
@@ -6564,114 +5938,6 @@
 
             // Verify that the 'Text' property of text box equals 'BIRMINGHAM'
             Assert.AreEqual(this.PostcodeLookupExpectedValues.UIItemEditText1, uIItemEdit1.Text);
-        }
-
-        /// <summary>
-        ///     Options
-        /// </summary>
-        public void Options()
-        {
-            #region Variable Declarations
-
-            WinButton uIOptionsButton = this.UICustomertxt1tdsfsWindow.UIPolicyListWindow.UIOptionsWindow.UIOptionsButton;
-
-            #endregion
-
-            // Click 'Options' button
-            Mouse.Click(uIOptionsButton, new Point(29, 11));
-        }
-
-        /// <summary>
-        ///     OpenTransactions
-        /// </summary>
-        public void OpenTransactions()
-        {
-            #region Variable Declarations
-
-            WinButton uICancelButton = this.UIPolicyautotestWindow.UIBillingScreenMOTOWindow.UICancelWindow.UICancelButton;
-            WinButton uIItemButton = this.UIPolicyautotestWindow.UIItemWindow1.UIItemButton;
-            WinButton uIDetailButton = this.UIPolicyautotestWindow.UIBillingScreenHOMEWindow1.UIDetailWindow.UIDetailButton;
-            WinButton uICancelButton1 = this.UIUpdateGeneralTransacWindow.UICancelWindow.UICancelButton;
-
-            #endregion
-
-            // The recording for the application under test '\\Pc-pez\J-Drive\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click 'Cancel' button
-            Mouse.Click(uICancelButton, new Point(30, 10));
-
-            // Click button
-            Mouse.Click(uIItemButton, new Point(8, 13));
-
-            // Click 'Detail' button
-            Mouse.Click(uIDetailButton, new Point(42, 17));
-
-            // Click 'Cance&l' button
-            Mouse.Click(uICancelButton1, new Point(37, 11));
-        }
-
-        /// <summary>
-        ///     OpenSiteForRenewal - Use 'OpenSiteForRenewalParams' to pass parameters into this method.
-        /// </summary>
-        public void OpenSiteForRenewal()
-        {
-            #region Variable Declarations
-
-            WinEdit uIUsernameEdit = this.UIWindowsSecurityWindow.UIItemListItem.UIUsernameEdit;
-            WinWindow uIItemWindow = this.UIWindowsSecurityWindow.UIItemListItem.UIItemWindow;
-            WinEdit uIPasswordEdit = this.UIWindowsSecurityWindow.UIItemListItem.UIPasswordEdit;
-            WinButton uIOKButton = this.UIWindowsSecurityWindow.UIWindowsSecurityPane.UIOKButton;
-            HtmlHyperlink uIRenewalsMaintenanceHyperlink = this.UIInsurEcomSystemMaintWindow.UILeftbarFrame.UIInsurEcomLeftbarDocument.UIRenewalsMaintenanceHyperlink;
-
-            #endregion
-
-            // Go to web page 'https://www.insur-econnect.com/sysmaint/default.asp?mode=1' using new browser instance
-            this.UIBlankPageMicrosoftInWindow.LaunchUrl(new Uri(this.OpenSiteForRenewalParams.UIBlankPageMicrosoftInWindowUrl));
-
-            // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
-            Playback.PlaybackSettings.ContinueOnError = true;
-
-            // Click 'User name' text box
-            Mouse.Click(uIUsernameEdit, new Point(92, 7));
-
-            // Type 'Bus sys' in window
-            Keyboard.SendKeys(uIItemWindow, this.OpenSiteForRenewalParams.UIItemWindowSendKeys, ModifierKeys.None);
-
-            // Click 'Password' text box
-            Mouse.Click(uIPasswordEdit, new Point(90, 0));
-
-            // Type '********' in 'Password' text box
-            Keyboard.SendKeys(uIPasswordEdit, this.OpenSiteForRenewalParams.UIPasswordEditSendKeys, true);
-
-            // Click 'OK' button
-            Mouse.Click(uIOKButton, new Point(43, 19));
-
-            // Reset flag to ensure that play back stops if there is an error.
-            Playback.PlaybackSettings.ContinueOnError = false;
-
-            // Click 'Renewals Maintenance' link
-            Mouse.Click(uIRenewalsMaintenanceHyperlink, new Point(40, 13));
-        }
-
-        /// <summary>
-        ///     OpenPolicyAttachments
-        /// </summary>
-        public void OpenPolicyAttachments()
-        {
-            #region Variable Declarations
-
-            WinButton uICancelButton = this.UIPolicyautotestWindow.UIBillingScreenMOTOWindow.UICancelWindow.UICancelButton;
-            WinClient uIItemClient = this.UIPolicyautotestWindow.UIPolicyListWindow.UIItemWindow.UIItemClient;
-
-            #endregion
-
-            // The recording for the application under test '\\Pc-pez\APPLIED\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click 'Cancel' button
-            Mouse.Click(uICancelButton, new Point(35, 12));
-
-            // Double-Click client
-            Mouse.DoubleClick(uIItemClient, new Point(16, 10));
         }
 
         /// <summary>
@@ -7171,7 +6437,7 @@
         /// <summary>
         ///     MotoMTAConfirmPolicy_1
         /// </summary>
-        public void MotoMTAConfirmPolicy_1()
+        public void MotoMTAConfirmPolicy1()
         {
             #region Variable Declarations
 
