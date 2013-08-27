@@ -188,8 +188,6 @@
 
         private RegressAppDateParams mRegressAppDateParams;
 
-        private RegistryHighwayParams mRegistryHighwayParams;
-
         private RebrokeAlternativeRenew_1Params mRebrokeAlternativeRenew1Params;
 
         private RebrokeAlternativeRenewParams mRebrokeAlternativeRenewParams;
@@ -1275,18 +1273,6 @@
                     this.mRegressAppDateParams = new RegressAppDateParams();
                 }
                 return this.mRegressAppDateParams;
-            }
-        }
-
-        public virtual RegistryHighwayParams RegistryHighwayParams
-        {
-            get
-            {
-                if ((this.mRegistryHighwayParams == null))
-                {
-                    this.mRegistryHighwayParams = new RegistryHighwayParams();
-                }
-                return this.mRegistryHighwayParams;
             }
         }
 
@@ -5512,36 +5498,6 @@
 
             // Type '10/11/2011' in text box
             uIItemEdit.Text = this.RegressAppDateParams.UIItemEditText;
-        }
-
-        /// <summary>
-        ///     RegistryHighway - Use 'RegistryHighwayParams' to pass parameters into this method.
-        /// </summary>
-        public void RegistryHighway()
-        {
-            #region Variable Declarations
-
-            WinComboBox uIOpenComboBox = this.UIRunWindow.UIItemWindow1.UIOpenComboBox;
-            WinButton uIOKButton = this.UIRunWindow.UIOKWindow.UIOKButton;
-            WinButton uIYesButton = this.UIRegistryEditorWindow.UIRegistryEditorPane.UIYesButton;
-            WinButton uIOKButton1 = this.UIRegistryEditorWindow.UIRegistryEditorPane.UIOKButton;
-
-            #endregion
-
-            // Press keyboard shortcut keys 'Windows + R'
-            Keyboard.SendKeys(this.RegistryHighwayParams.SendKeys, ModifierKeys.Windows);
-
-            // Select 'c:\TestProject7\ourhighway.reg' in 'Open:' combo box
-            uIOpenComboBox.EditableItem = this.RegistryHighwayParams.UIOpenComboBoxEditableItem;
-
-            // Click 'OK' button
-            Mouse.Click(uIOKButton, new Point(49, 16));
-
-            // Click '&Yes' button
-            Mouse.Click(uIYesButton, new Point(41, 10));
-
-            // Click 'OK' button
-            Mouse.Click(uIOKButton1, new Point(16, 10));
         }
 
         /// <summary>

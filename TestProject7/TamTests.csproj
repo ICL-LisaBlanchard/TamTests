@@ -162,7 +162,6 @@
     <Compile Include="Params\RecordedMethod2Params.cs" />
     <Compile Include="Params\RecordedMethod3Params.cs" />
     <Compile Include="Params\RecordedMethod5Params.cs" />
-    <Compile Include="Params\RegistryHighwayParams.cs" />
     <Compile Include="Params\RegressAppDateParams.cs" />
     <Compile Include="Params\RenewalAfterMTA1Params.cs" />
     <Compile Include="Params\RenewalLoaderRunParams.cs" />
@@ -178,6 +177,7 @@
     <Compile Include="Params\SelectPolicyQuoteParams.cs" />
     <Compile Include="Params\testPrintParams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrySettings.cs" />
     <Compile Include="UIElements\MotoAWAPCheckNEWExpectedValues.cs" />
     <Compile Include="UIElements\MotoAWAPCheckTAXExpectedValues.cs" />
     <Compile Include="UIElements\MotoCheckAWAPpremiumExpectedValues.cs" />
@@ -492,8 +492,6 @@
     <Compile Include="UIElements\UINOWindow.cs" />
     <Compile Include="UIElements\UINOWindow1.cs" />
     <Compile Include="UIElements\UINOWindow2.cs" />
-    <Compile Include="UIElements\UIOKWindow.cs" />
-    <Compile Include="UIElements\UIOKWindow1.cs" />
     <Compile Include="UIElements\UIOKWindow10.cs" />
     <Compile Include="UIElements\UIOKWindow11.cs" />
     <Compile Include="UIElements\UIOKWindow110.cs" />
@@ -505,7 +503,6 @@
     <Compile Include="UIElements\UIOKWindow17.cs" />
     <Compile Include="UIElements\UIOKWindow18.cs" />
     <Compile Include="UIElements\UIOKWindow19.cs" />
-    <Compile Include="UIElements\UIOKWindow2.cs" />
     <Compile Include="UIElements\UIOKWindow20.cs" />
     <Compile Include="UIElements\UIOKWindow21.cs" />
     <Compile Include="UIElements\UIOKWindow22.cs" />
@@ -526,7 +523,6 @@
     <Compile Include="UIElements\UIOKWindow36.cs" />
     <Compile Include="UIElements\UIOKWindow37.cs" />
     <Compile Include="UIElements\UIOKWindow38.cs" />
-    <Compile Include="UIElements\UIOKWindow39.cs" />
     <Compile Include="UIElements\UIOKWindow4.cs" />
     <Compile Include="UIElements\UIOKWindow40.cs" />
     <Compile Include="UIElements\UIOKWindow5.cs" />
@@ -649,7 +645,9 @@
     <None Include="App.config" />
     <None Include="UIMap.uitest" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="RegistrySettings\" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

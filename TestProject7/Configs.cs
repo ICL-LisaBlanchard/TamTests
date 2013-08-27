@@ -1,6 +1,7 @@
-﻿namespace Applied.TAM.Ui.Tests
+﻿namespace AppliedSystems.Tam.Ui.Tests
 {
     using System.Configuration;
+    using System.IO;
 
     public class Configs
     {
@@ -27,6 +28,30 @@
             get
             {
                 return (string)Reader.GetValue("ExePath", typeof(string));
+            }
+        }
+
+        public static string OurHighWayPath
+        {
+            get
+            {
+                return Directory.GetCurrentDirectory() + "/" + (string)Reader.GetValue("OurHighwayPath", typeof(string));
+            }
+        }
+
+        public static string OurMMaReg
+        {
+            get
+            {
+                return Directory.GetCurrentDirectory() + "/" + (string)Reader.GetValue("OurMMaPath", typeof(string));
+            }
+        }
+
+        public static string OfficePath
+        {
+            get
+            {
+                return Directory.GetCurrentDirectory() + "/" + (string)Reader.GetValue("OfficePath", typeof(string));
             }
         }
     }

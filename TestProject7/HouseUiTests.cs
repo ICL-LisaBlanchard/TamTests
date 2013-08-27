@@ -11,8 +11,7 @@
         [TestMethod]
         public void HouseCreateQuote()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOfficeRegKeys();
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
@@ -32,8 +31,7 @@
         [TestMethod]
         public void HouseSaveQuoteWithoutPremium()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOfficeRegKeys();
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
@@ -65,8 +63,7 @@
         [TestMethod]
         public void HouseOverridePremium()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOfficeRegKeys();
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
@@ -87,8 +84,7 @@
         [TestMethod]
         public void HouseCopyRiskNew()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOfficeRegKeys();
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
@@ -109,8 +105,7 @@
         [TestMethod]
         public void HouseCopyRiskQTE()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOfficeRegKeys();
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
@@ -129,8 +124,7 @@
         [TestMethod]
         public void HouseMTAExit()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOfficeRegKeys();
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
@@ -154,8 +148,7 @@
         [TestMethod]
         public void HouseMTAAccept()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOfficeRegKeys();
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
@@ -181,8 +174,7 @@
         [TestMethod]
         public void HouseCopyMTA()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOfficeRegKeys();
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
             this.UiMap.SelectMenu();
@@ -208,8 +200,7 @@
         [TestMethod]
         public void HouseMTAtoMTA()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOfficeRegKeys();
             // create new policy
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
@@ -252,8 +243,7 @@
         [TestMethod]
         public void HouseCancelExit()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOfficeRegKeys();
             //create policy
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
@@ -285,8 +275,7 @@
         [TestMethod]
         public void HouseCancelAccept()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOfficeRegKeys();
             //add policy
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
@@ -318,9 +307,7 @@
         [TestMethod]
         public void HouseRenewalBefore()
         {
-            // change registry to ourhighway
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOurMMaRegKeys();
             //add policy
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
@@ -420,8 +407,7 @@
         public void HouseRenewalAfter()
         {
             // change registry to ourhighway
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOurMMaRegKeys();
             //add policy
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
@@ -543,8 +529,7 @@
         public void HouseAmendRiskExistingScheme()
         {
             // change registry to ourhighway
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOurMMaRegKeys();
             //add policy
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
@@ -617,8 +602,7 @@
         public void HouseAmendRiskNewScheme()
         {
             // change registry to ourhighway
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOurMMaRegKeys();
             //add policy
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
@@ -719,8 +703,7 @@
         public void HouseRebrokeRenewCurrent()
         {
             // change registry to ourhighway
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOurMMaRegKeys();
             //add policy
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
@@ -798,8 +781,7 @@
         public void HouseRebrokeRenewExistingScheme()
         {
             // change registry to ourhighway
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOurMMaRegKeys();
             //add policy
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();
@@ -883,8 +865,7 @@
         public void HouseRebrokeRenewNewScheme()
         {
             // change registry to ourhighway
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourmma.reg";
-            this.UiMap.RegistryHighway();
+            this.SetOurMMaRegKeys();
             //add policy
             this.UiMap.AddPolicy();
             this.UiMap.SelectHomeType();

@@ -61,6 +61,7 @@
         }
 
         [TestInitialize]
+        [DeploymentItem(@"RegistrySettings")]
         public void StartTest()
         {
             this.TestName = this.TestContext.TestName;
@@ -79,6 +80,7 @@
         [TestMethod]
         public void LoginTest()
         {
+            this.SetOurHighwayRegKeys();
         }
 
         [TestCleanup]
@@ -96,6 +98,24 @@
             CloseProcess("InsureTam");
             CloseProcess("clntfile");
             CloseProcess("Homebase");
+        }
+
+        public void SetOurHighwayRegKeys()
+        {
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ourhighway");
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ourhighway");
+        }
+
+        public void SetOurMMaRegKeys()
+        {
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ourmma");
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ourmma");
+        }
+
+        public void SetOfficeRegKeys()
+        {
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ourhighway");
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ourhighway");
         }
 
         public static void CloseProcess(string name)

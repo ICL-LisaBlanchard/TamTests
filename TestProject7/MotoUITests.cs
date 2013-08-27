@@ -11,12 +11,8 @@
         [TestMethod]
         public void MotoCreateQuote()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOfficeRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPolicyPerson();
             this.UiMap.PostcodeLookup();
             this.UiMap.QuoteResults();
@@ -37,12 +33,8 @@
         [TestMethod]
         public void MotoSaveQuoteWithoutPremium()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOfficeRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPolicyPerson();
             this.UiMap.PostcodeLookup();
             this.UiMap.QuoteResults();
@@ -94,12 +86,8 @@
         [TestMethod]
         public void MotoAWAP()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOfficeRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPolicyPerson();
             this.UiMap.PostcodeLookup();
             this.UiMap.QuoteResults();
@@ -115,12 +103,8 @@
         [TestMethod]
         public void MotoOverridePremium()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOfficeRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPolicyPerson();
             this.UiMap.PostcodeLookup();
             this.UiMap.QuoteResults();
@@ -142,12 +126,8 @@
         [TestMethod]
         public void MotoCopyRiskNew()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOfficeRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPolicyPerson();
             this.UiMap.PostcodeLookup();
             this.UiMap.QuoteResults();
@@ -167,14 +147,10 @@
         }
 
         [TestMethod]
-        public void MotoCopyRiskQTE()
+        public void MotoCopyRiskQte()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOfficeRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPolicyPerson();
             this.UiMap.PostcodeLookup();
             this.UiMap.QuoteResults();
@@ -192,12 +168,8 @@
         [TestMethod]
         public void MotoMTAExit()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOfficeRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPolicyPerson();
             this.UiMap.PostcodeLookup();
             this.UiMap.QuoteResults();
@@ -219,12 +191,8 @@
         [TestMethod]
         public void MotoMTAAccept()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOfficeRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPolicyPerson();
             this.UiMap.PostcodeLookup();
             this.UiMap.QuoteResults();
@@ -249,12 +217,8 @@
         [TestMethod]
         public void MotoCopyMTA()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOfficeRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPolicyPerson();
             this.UiMap.PostcodeLookup();
             this.UiMap.QuoteResults();
@@ -286,12 +250,8 @@
         [TestMethod]
         public void MotoMTAtoMTA()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOfficeRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPolicyPerson();
             this.UiMap.PostcodeLookup();
             this.UiMap.QuoteResults();
@@ -325,13 +285,8 @@
         [TestMethod]
         public void MotoCancelExit()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
-            //create policy
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOfficeRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPolicyPerson();
             this.UiMap.PostcodeLookup();
             this.UiMap.QuoteResults();
@@ -361,12 +316,8 @@
         [TestMethod]
         public void MotoCancelAccept()
         {
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\office.reg";
-            this.UiMap.RegistryHighway();
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOfficeRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPolicyPerson();
             this.UiMap.PostcodeLookup();
             this.UiMap.QuoteResults();
@@ -395,14 +346,8 @@
         [TestMethod]
         public void MotoRenewalBefore()
         {
-            // change registry to ourhighway
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
-            this.UiMap.RegistryHighway();
-            // add policy
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOurHighwayRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPostcodeLookup();
             this.UiMap.MotoSearchCar();
             this.UiMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
@@ -484,14 +429,8 @@
         [TestMethod]
         public void MotoRenewalAfter()
         {
-            // change registry to ourhighway
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
-            this.UiMap.RegistryHighway();
-            // add policy
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOurHighwayRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPostcodeLookup();
             this.UiMap.MotoSearchCar();
             this.UiMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
@@ -590,14 +529,8 @@
         [TestMethod]
         public void MotoAmendRiskExistingScheme()
         {
-            //change registry to ourhighway
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
-            this.UiMap.RegistryHighway();
-            // add policy
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOurHighwayRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPostcodeLookup();
             this.UiMap.MotoSearchCar();
             this.UiMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
@@ -657,14 +590,8 @@
         [TestMethod]
         public void MotoAmendRiskNewScheme()
         {
-            //change registry to ourhighway
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
-            this.UiMap.RegistryHighway();
-            // add policy
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOurHighwayRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPostcodeLookup();
             this.UiMap.MotoSearchCar();
             this.UiMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
@@ -745,14 +672,8 @@
         [TestMethod]
         public void MotoRebrokeRenewCurrent()
         {
-            //change registry to ourhighway
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
-            this.UiMap.RegistryHighway();
-            // add policy
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOurHighwayRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPostcodeLookup();
             this.UiMap.MotoSearchCar();
             this.UiMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
@@ -817,14 +738,8 @@
         [TestMethod]
         public void MotoRebrokeRenewExistingScheme()
         {
-            //change registry to ourhighway
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
-            this.UiMap.RegistryHighway();
-            // add policy
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOurHighwayRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPostcodeLookup();
             this.UiMap.MotoSearchCar();
             this.UiMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
@@ -893,14 +808,8 @@
         [TestMethod]
         public void MotoRebrokeRenewNewScheme()
         {
-            //change registry to ourhighway
-            this.UiMap.RegistryHighwayParams.UIOpenComboBoxEditableItem = "c:\\TestProject7\\ourhighway.reg";
-            this.UiMap.RegistryHighway();
-            // add policy
-            this.UiMap.AddPolicy();
-            this.UiMap.SelectMotoPolicy();
-            this.UiMap.SelectMenu();
-            this.UiMap.Links1();
+            this.SetOurHighwayRegKeys();
+            this.TAMMotorSteps();
             this.UiMap.MotoPostcodeLookup();
             this.UiMap.MotoSearchCar();
             this.UiMap.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
@@ -967,6 +876,14 @@
             this.UiMap.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
             this.UiMap.RenewalCheckStatus();
             this.UiMap.ClosePolicy();
+        }
+
+        private void TAMMotorSteps()
+        {
+            this.UiMap.AddPolicy();
+            this.UiMap.SelectMotoPolicy();
+            this.UiMap.SelectMenu();
+            this.UiMap.Links1();
         }
     }
 }
