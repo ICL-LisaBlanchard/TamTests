@@ -39,7 +39,7 @@
             }
         }
 
-        public WinWindow UIItemWindow
+        public WinWindow UIUsernameEditEdit
         {
             get
             {

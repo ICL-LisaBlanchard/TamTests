@@ -21,25 +21,25 @@
 
         #region Properties
 
-        public UIAlternativeWindow UIAlternativeWindow
+        public UIItemWindow UIAlternativeWindow
         {
             get
             {
                 if ((this.mUIAlternativeWindow == null))
                 {
-                    this.mUIAlternativeWindow = new UIAlternativeWindow(this);
+                    this.mUIAlternativeWindow = new UIItemWindow(this, "1");
                 }
                 return this.mUIAlternativeWindow;
             }
         }
 
-        public UIOKWindow35 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow35(this);
+                    this.mUIOKWindow = new UIItemWindow(this, "4");
                 }
                 return this.mUIOKWindow;
             }
@@ -49,9 +49,9 @@
 
         #region Fields
 
-        private UIAlternativeWindow mUIAlternativeWindow;
+        private UIItemWindow mUIAlternativeWindow;
 
-        private UIOKWindow35 mUIOKWindow;
+        private UIItemWindow mUIOKWindow;
 
         #endregion
     }

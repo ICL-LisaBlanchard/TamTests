@@ -12,58 +12,59 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Filter Renewal Records";
+            this.windowName = "Filter Renewal Records";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Filter Renewal Records");
+            this.WindowTitles.Add(this.windowName);
 
             #endregion
         }
 
         #region Properties
 
-        public UIItemWindow65 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow65(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "2");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIItemWindow127 UIItemWindow1
+        public UIItemWindow UIItemWindow1
         {
             get
             {
                 if ((this.mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow127(this);
+                    this.mUIItemWindow1 = new UIItemWindow(this, controlId: "1", instance: "3");
                 }
                 return this.mUIItemWindow1;
             }
         }
 
-        public UIItemWindow215 UIItemWindow2
+        public UIItemWindow UIItemWindow2
         {
             get
             {
                 if ((this.mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow215(this);
+                    this.mUIItemWindow2 = new UIItemWindow(this, controlId: "16");
                 }
                 return this.mUIItemWindow2;
             }
         }
 
-        public UIOKWindow30 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow30(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "7");
                 }
                 return this.mUIOKWindow;
             }
@@ -73,13 +74,15 @@
 
         #region Fields
 
-        private UIItemWindow65 mUIItemWindow;
+        private readonly string windowName;
 
-        private UIItemWindow127 mUIItemWindow1;
+        private UIItemWindow mUIItemWindow;
 
-        private UIItemWindow215 mUIItemWindow2;
+        private UIItemWindow mUIItemWindow1;
 
-        private UIOKWindow30 mUIOKWindow;
+        private UIItemWindow mUIItemWindow2;
+
+        private UIItemWindow mUIOKWindow;
 
         #endregion
     }

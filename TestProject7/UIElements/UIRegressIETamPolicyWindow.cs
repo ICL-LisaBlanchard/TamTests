@@ -12,94 +12,83 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Regress IETam Policy";
+            this.windowName = "Regress IETam Policy";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Regress IETam Policy");
+            this.WindowTitles.Add(this.windowName);
 
             #endregion
         }
 
         #region Properties
 
-        public UIItemWindow62 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow62(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "8");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIItemWindow214 UIItemWindow2
+        public UIItemWindow UIItemWindow2
         {
             get
             {
                 if ((this.mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow214(this);
+                    this.mUIItemWindow2 = new UIItemWindow(this, controlId: "11");
                 }
                 return this.mUIItemWindow2;
             }
         }
 
-        public UIRegressWindow UIRegressWindow
+        public UIItemWindow UIRegressWindow
         {
             get
             {
                 if ((this.mUIRegressWindow == null))
                 {
-                    this.mUIRegressWindow = new UIRegressWindow(this);
+                    this.mUIRegressWindow = new UIItemWindow(this, controlId: "10");
                 }
                 return this.mUIRegressWindow;
             }
         }
 
-        public UIItemWindow126 UIItemWindow1
-        {
-            get
-            {
-                if ((this.mUIItemWindow1 == null))
-                {
-                    this.mUIItemWindow1 = new UIItemWindow126(this);
-                }
-                return this.mUIItemWindow1;
-            }
-        }
-
-        public UIExitWindow4 UIExitWindow
+        public UIItemWindow UIExitWindow
         {
             get
             {
                 if ((this.mUIExitWindow == null))
                 {
-                    this.mUIExitWindow = new UIExitWindow4(this);
+                    this.mUIExitWindow = new UIItemWindow(this, controlId: "12");
                 }
                 return this.mUIExitWindow;
             }
         }
 
-        public UIItemWindow312 UIItemWindow3
+        public UIItemWindow UIItemWindow3
         {
             get
             {
                 if ((this.mUIItemWindow3 == null))
                 {
-                    this.mUIItemWindow3 = new UIItemWindow312(this);
+                    this.mUIItemWindow3 = new UIItemWindow(this, controlId: "10");
                 }
                 return this.mUIItemWindow3;
             }
         }
 
-        public UIItemWindow410 UIItemWindow4
+        public UIItemWindow UIItemWindow4
         {
             get
             {
                 if ((this.mUIItemWindow4 == null))
                 {
-                    this.mUIItemWindow4 = new UIItemWindow410(this);
+                    this.mUIItemWindow4 = new UIItemWindow(this, controlId: "3");
                 }
                 return this.mUIItemWindow4;
             }
@@ -109,19 +98,21 @@
 
         #region Fields
 
-        private UIItemWindow62 mUIItemWindow;
+        private readonly string windowName;
 
-        private UIItemWindow214 mUIItemWindow2;
+        private UIItemWindow mUIItemWindow;
 
-        private UIRegressWindow mUIRegressWindow;
+        private UIItemWindow mUIItemWindow2;
 
-        private UIItemWindow126 mUIItemWindow1;
+        private UIItemWindow mUIRegressWindow;
 
-        private UIExitWindow4 mUIExitWindow;
+        private UIItemWindow mUIItemWindow1;
 
-        private UIItemWindow312 mUIItemWindow3;
+        private UIItemWindow mUIExitWindow;
 
-        private UIItemWindow410 mUIItemWindow4;
+        private UIItemWindow mUIItemWindow3;
+
+        private UIItemWindow mUIItemWindow4;
 
         #endregion
     }

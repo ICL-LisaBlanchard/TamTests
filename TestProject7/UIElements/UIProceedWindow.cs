@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UIProceedButton
+        public WinButton UIProceedButton 
         {
             get
             {

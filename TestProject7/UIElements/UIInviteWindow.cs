@@ -20,7 +20,7 @@
 
         #region Properties
 
-        public WinButton UIInviteButton
+        public WinButton UIInviteButton 
         {
             get
             {

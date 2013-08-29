@@ -21,25 +21,25 @@
 
         #region Properties
 
-        public UIMTAsuccessfullyproceWindow UIMTAsuccessfullyproceWindow
+        public UIItemWindow UIMtaSuccessfullyProcessedWindow
         {
             get
             {
-                if ((this.mUIMTAsuccessfullyproceWindow == null))
+                if ((this.mUIMtaSuccessfullyProcessedWindow == null))
                 {
-                    this.mUIMTAsuccessfullyproceWindow = new UIMTAsuccessfullyproceWindow(this);
+                    this.mUIMtaSuccessfullyProcessedWindow = new UIItemWindow(this, "65535");
                 }
-                return this.mUIMTAsuccessfullyproceWindow;
+                return this.mUIMtaSuccessfullyProcessedWindow;
             }
         }
 
-        public UIOKWindow33 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow33(this);
+                    this.mUIOKWindow = new UIItemWindow(this, "2");
                 }
                 return this.mUIOKWindow;
             }
@@ -49,9 +49,9 @@
 
         #region Fields
 
-        private UIMTAsuccessfullyproceWindow mUIMTAsuccessfullyproceWindow;
+        private UIItemWindow mUIMtaSuccessfullyProcessedWindow;
 
-        private UIOKWindow33 mUIOKWindow;
+        private UIItemWindow mUIOKWindow;
 
         #endregion
     }

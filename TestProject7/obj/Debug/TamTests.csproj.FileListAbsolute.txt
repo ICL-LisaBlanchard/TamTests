@@ -23,11 +23,9 @@ C:\AutotestTam1205\TestProject7\obj\Debug\Ver1.pdb
 C:\AutotestTam1205\TestProject7\bin\Debug\CookComputing.XmlRpcV2.dll
 C:\AutotestTam1205\TestProject7\bin\Debug\TestLinkAPI.dll
 C:\AutotestTam1205\TestProject7\bin\Debug\TestLinkFixture.dll
-S:\TamTests\TestProject7\obj\Debug\TamTests.csprojResolveAssemblyReference.cache
 S:\TamTests\TestProject7\bin\Debug\AppliedSystems.Tam.Ui.Tests.dll.config
 S:\TamTests\TestProject7\bin\Debug\AppliedSystems.Tam.Ui.Tests.dll
 S:\TamTests\TestProject7\bin\Debug\AppliedSystems.Tam.Ui.Tests.pdb
 S:\TamTests\TestProject7\obj\Debug\AppliedSystems.Tam.Ui.Tests.dll
 S:\TamTests\TestProject7\obj\Debug\AppliedSystems.Tam.Ui.Tests.pdb
-S:\TamTests\TestProject7\bin\Debug\CookComputing.XmlRpcV2.dll
-S:\TamTests\TestProject7\bin\Debug\TestLinkFixture.dll
+S:\TamTests\TestProject7\obj\Debug\TamTests.csprojResolveAssemblyReference.cache

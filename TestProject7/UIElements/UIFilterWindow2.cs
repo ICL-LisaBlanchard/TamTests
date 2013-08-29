@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UIFilterButton
+        public WinButton UIFilterButton 
         {
             get
             {

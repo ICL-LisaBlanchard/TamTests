@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UISelectAlternativeButton
+        public WinButton UISelectAlternativeButton 
         {
             get
             {

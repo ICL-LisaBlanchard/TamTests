@@ -6,40 +6,41 @@
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
-    public class UIPleaseselectWHOtofolWindow : WinWindow
+    public class UIPleaseSelectWhoToFolWindow : WinWindow
     {
-        public UIPleaseselectWHOtofolWindow()
+        public UIPleaseSelectWhoToFolWindow()
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Please select WHO to follow up";
+            this.windowName = "Please select WHO to follow up";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
-            this.WindowTitles.Add("Please select WHO to follow up");
+            this.WindowTitles.Add(this.windowName);
 
             #endregion
         }
 
         #region Properties
 
-        public UIItemWindow54 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow54(this);
+                    this.mUIItemWindow = new UIItemWindow(this, className: "TPanel");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIItemWindow123 UIItemWindow1
+        public UIItemWindow UIItemWindow1
         {
             get
             {
                 if ((this.mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow123(this);
+                    this.mUIItemWindow1 = new UIItemWindow(this, className: "TListBox");
                 }
                 return this.mUIItemWindow1;
             }
@@ -49,9 +50,11 @@
 
         #region Fields
 
-        private UIItemWindow54 mUIItemWindow;
+        private readonly string windowName;
 
-        private UIItemWindow123 mUIItemWindow1;
+        private UIItemWindow mUIItemWindow;
+
+        private UIItemWindow mUIItemWindow1;
 
         #endregion
     }

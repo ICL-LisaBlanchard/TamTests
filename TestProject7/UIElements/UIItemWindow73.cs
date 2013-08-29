@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinClient UIHouseholdRenewalsAmeClient
+        public WinClient UIClient
         {
             get
             {

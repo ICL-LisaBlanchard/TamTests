@@ -54,13 +54,13 @@
             }
         }
 
-        public UILinksMenuItem11 UILinksMenuItem1
+        public UILinksMenuLinks UILinksMenuItem1
         {
             get
             {
                 if ((this.mUILinksMenuItem1 == null))
                 {
-                    this.mUILinksMenuItem1 = new UILinksMenuItem11(this);
+                    this.mUILinksMenuItem1 = new UILinksMenuLinks(this);
                 }
                 return this.mUILinksMenuItem1;
             }
@@ -86,7 +86,7 @@
 
         private WinMenuItem mUIPrintaBarcodeMenuItem;
 
-        private UILinksMenuItem11 mUILinksMenuItem1;
+        private UILinksMenuLinks mUILinksMenuItem1;
 
         private UILinksMenuItem2 mUILinksMenuItem2;
 

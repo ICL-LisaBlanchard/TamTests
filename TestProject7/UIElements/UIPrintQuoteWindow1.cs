@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UIPrintQuoteButton
+        public WinButton UIPrintQuoteButton 
         {
             get
             {

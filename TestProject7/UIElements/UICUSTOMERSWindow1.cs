@@ -6,39 +6,31 @@
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
-    public class UICUSTOMERSWindow1 : WinWindow
+    public class UICustomersWindow1 : WinWindow
     {
-        public UICUSTOMERSWindow1(UITestControl searchLimitContainer)
-            : base(searchLimitContainer)
-        {
-            #region Search Criteria
-
-            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32768";
-
-            #endregion
-        }
+        private const string WindowName = "Customer: autotest";
 
         #region Properties
 
-        public UIItemWindow37 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow37(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "17");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIItemWindow116 UIItemWindow1
+        public UIItemWindow UIItemWindow1
         {
             get
             {
                 if ((this.mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow116(this);
+                    this.mUIItemWindow1 = new UIItemWindow(this, className: "ListView20WndClass");
                 }
                 return this.mUIItemWindow1;
             }
@@ -48,10 +40,20 @@
 
         #region Fields
 
-        private UIItemWindow37 mUIItemWindow;
+        private UIItemWindow mUIItemWindow;
 
-        private UIItemWindow116 mUIItemWindow1;
+        private UIItemWindow mUIItemWindow1;
 
         #endregion
+
+        public UICustomersWindow1(UITestControl searchLimitContainer)
+            : base(searchLimitContainer)
+        {
+            #region Search Criteria
+
+            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32768";
+
+            #endregion
+        }
     }
 }

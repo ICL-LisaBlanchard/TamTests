@@ -21,13 +21,13 @@
 
         #region Properties
 
-        public UIOKWindow36 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow36(this);
+                    this.mUIOKWindow = new UIItemWindow(this, "2");
                 }
                 return this.mUIOKWindow;
             }
@@ -37,7 +37,7 @@
 
         #region Fields
 
-        private UIOKWindow36 mUIOKWindow;
+        private UIItemWindow mUIOKWindow;
 
         #endregion
     }

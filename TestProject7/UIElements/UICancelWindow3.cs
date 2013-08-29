@@ -40,7 +40,7 @@
             }
         }
 
-        public WinButton UICloseButton
+        public WinButton UICloseButton 
         {
             get
             {

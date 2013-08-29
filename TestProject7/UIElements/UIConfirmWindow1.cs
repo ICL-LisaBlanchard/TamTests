@@ -22,7 +22,7 @@
 
         #region Properties
 
-        public WinButton UIConfirmButton
+        public WinButton UIConfirmButton 
         {
             get
             {

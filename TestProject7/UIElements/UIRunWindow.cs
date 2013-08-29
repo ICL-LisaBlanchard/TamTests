@@ -12,46 +12,47 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Run";
+            this.windowName = "Run";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add("Run");
+            this.WindowTitles.Add(this.windowName);
 
             #endregion
         }
 
         #region Properties
 
-        public UIItemWindow60 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow60(this);
+                    this.mUIItemWindow = new UIItemWindow(this, this.windowName, "1001");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIOKWindow27 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow27(this);
+                    this.mUIOKWindow = new UIItemWindow(this, windowName, "1");
                 }
                 return this.mUIOKWindow;
             }
         }
 
-        public UIItemWindow125 UIItemWindow1
+        public UIItemWindow UIItemWindow1
         {
             get
             {
                 if ((this.mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow125(this);
+                    this.mUIItemWindow1 = new UIItemWindow(this, windowName, "12298");
                 }
                 return this.mUIItemWindow1;
             }
@@ -61,11 +62,13 @@
 
         #region Fields
 
-        private UIItemWindow60 mUIItemWindow;
+        private readonly string windowName;
 
-        private UIOKWindow27 mUIOKWindow;
+        private UIItemWindow mUIItemWindow;
 
-        private UIItemWindow125 mUIItemWindow1;
+        private UIItemWindow mUIOKWindow;
+
+        private UIItemWindow mUIItemWindow1;
 
         #endregion
     }

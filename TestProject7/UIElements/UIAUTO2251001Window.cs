@@ -21,13 +21,13 @@
 
         #region Properties
 
-        public UIAmendRiskWindow2 UIAmendRiskWindow
+        public UIItemWindow UIAmendRiskWindow
         {
             get
             {
                 if ((this.mUIAmendRiskWindow == null))
                 {
-                    this.mUIAmendRiskWindow = new UIAmendRiskWindow2(this);
+                    this.mUIAmendRiskWindow = new UIItemWindow(this, "29");
                 }
                 return this.mUIAmendRiskWindow;
             }
@@ -37,7 +37,7 @@
 
         #region Fields
 
-        private UIAmendRiskWindow2 mUIAmendRiskWindow;
+        private UIItemWindow mUIAmendRiskWindow;
 
         #endregion
     }

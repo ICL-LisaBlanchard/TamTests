@@ -12,106 +12,107 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Quotes Results";
+            this.windowName = "Quotes Results";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Quotes Results");
+            this.WindowTitles.Add(this.windowName);
 
             #endregion
         }
 
         #region Properties
 
-        public UIItemWindow43 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow43(this);
+                    this.mUIItemWindow = new UIItemWindow(this, instance: "2", className: "ListView20WndClass");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIAcceptWindow1 UIAcceptWindow
+        public UIItemWindow UIAcceptWindow
         {
             get
             {
                 if ((this.mUIAcceptWindow == null))
                 {
-                    this.mUIAcceptWindow = new UIAcceptWindow1(this);
+                    this.mUIAcceptWindow = new UIItemWindow(this, controlId: "2");
                 }
                 return this.mUIAcceptWindow;
             }
         }
 
-        public UIExitWindow3 UIExitWindow
+        public UIItemWindow UIExitWindow
         {
             get
             {
                 if ((this.mUIExitWindow == null))
                 {
-                    this.mUIExitWindow = new UIExitWindow3(this);
+                    this.mUIExitWindow = new UIItemWindow(this, controlId: "6");
                 }
                 return this.mUIExitWindow;
             }
         }
 
-        public UIPrintQuoteWindow1 UIPrintQuoteWindow
+        public UIItemWindow UIPrintQuoteWindow
         {
             get
             {
                 if ((this.mUIPrintQuoteWindow == null))
                 {
-                    this.mUIPrintQuoteWindow = new UIPrintQuoteWindow1(this);
+                    this.mUIPrintQuoteWindow = new UIItemWindow(this, controlId: "4");
                 }
                 return this.mUIPrintQuoteWindow;
             }
         }
 
-        public UIDemandsNeedsWindow1 UIDemandsNeedsWindow
+        public UIItemWindow UIDemandsNeedsWindow
         {
             get
             {
                 if ((this.mUIDemandsNeedsWindow == null))
                 {
-                    this.mUIDemandsNeedsWindow = new UIDemandsNeedsWindow1(this);
+                    this.mUIDemandsNeedsWindow = new UIItemWindow(this, controlId: "8");
                 }
                 return this.mUIDemandsNeedsWindow;
             }
         }
 
-        public UIPremiumWindow1 UIPremiumWindow
+        public UIItemWindow UIPremiumWindow
         {
             get
             {
                 if ((this.mUIPremiumWindow == null))
                 {
-                    this.mUIPremiumWindow = new UIPremiumWindow1(this);
+                    this.mUIPremiumWindow = new UIItemWindow(this, controlId: "16");
                 }
                 return this.mUIPremiumWindow;
             }
         }
 
-        public UIItemWindow118 UIItemWindow1
+        public UIItemWindow UIItemWindow1
         {
             get
             {
                 if ((this.mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow118(this);
+                    this.mUIItemWindow1 = new UIItemWindow(this, className: "ListView20WndClass");
                 }
                 return this.mUIItemWindow1;
             }
         }
 
-        public UIItemWindow212 UIItemWindow2
+        public UIItemWindow UIItemWindow2
         {
             get
             {
                 if ((this.mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow212(this);
+                    this.mUIItemWindow2 = new UIItemWindow(this, className: "ListView20WndClass");
                 }
                 return this.mUIItemWindow2;
             }
@@ -121,21 +122,23 @@
 
         #region Fields
 
-        private UIItemWindow43 mUIItemWindow;
+        private readonly string windowName;
 
-        private UIAcceptWindow1 mUIAcceptWindow;
+        private UIItemWindow mUIItemWindow;
 
-        private UIExitWindow3 mUIExitWindow;
+        private UIItemWindow mUIAcceptWindow;
 
-        private UIPrintQuoteWindow1 mUIPrintQuoteWindow;
+        private UIItemWindow mUIExitWindow;
 
-        private UIDemandsNeedsWindow1 mUIDemandsNeedsWindow;
+        private UIItemWindow mUIPrintQuoteWindow;
 
-        private UIPremiumWindow1 mUIPremiumWindow;
+        private UIItemWindow mUIDemandsNeedsWindow;
 
-        private UIItemWindow118 mUIItemWindow1;
+        private UIItemWindow mUIPremiumWindow;
 
-        private UIItemWindow212 mUIItemWindow2;
+        private UIItemWindow mUIItemWindow1;
+
+        private UIItemWindow mUIItemWindow2;
 
         #endregion
     }

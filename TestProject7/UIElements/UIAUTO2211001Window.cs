@@ -12,22 +12,23 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "AUTO221-1001";
+            this.windowTitle = "AUTO221-1001";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("AUTO221-1001");
+            this.WindowTitles.Add(this.windowTitle);
 
             #endregion
         }
 
         #region Properties
 
-        public UIRenewPolicyWindow2 UIRenewPolicyWindow
+        public UIItemWindow UIRenewPolicyWindow
         {
             get
             {
                 if ((this.mUIRenewPolicyWindow == null))
                 {
-                    this.mUIRenewPolicyWindow = new UIRenewPolicyWindow2(this);
+                    this.mUIRenewPolicyWindow = new UIItemWindow(this, controlId: "10");
                 }
                 return this.mUIRenewPolicyWindow;
             }
@@ -37,7 +38,9 @@
 
         #region Fields
 
-        private UIRenewPolicyWindow2 mUIRenewPolicyWindow;
+        private readonly string windowTitle;
+
+        private UIItemWindow mUIRenewPolicyWindow;
 
         #endregion
     }

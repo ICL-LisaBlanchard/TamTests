@@ -28,7 +28,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             {
                 if ((this.mTbxPassword == null))
                 {
-                    this.mTbxPassword = new UIItemWindow(this, WindowName, "7");
+                    this.mTbxPassword = new UIItemWindow(this, controlId: "7");
                 }
                 return this.mTbxPassword;
             }
@@ -40,7 +40,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             {
                 if ((this.mTbxUsername == null))
                 {
-                    this.mTbxUsername = new UIItemWindow(this, WindowName, "1");
+                    this.mTbxUsername = new UIItemWindow(this, controlId: "1");
                 }
                 return this.mTbxUsername;
             }
@@ -52,7 +52,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             {
                 if ((this.mBtnOk1 == null))
                 {
-                    this.mBtnOk1 = new UIItemWindow(this, WindowName, "2");
+                    this.mBtnOk1 = new UIItemWindow(this, controlId: "2");
                 }
                 return this.mBtnOk1;
             }
@@ -64,7 +64,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             {
                 if ((this.mBtnOk2 == null))
                 {
-                    this.mBtnOk2 = new UIItemWindow(this, WindowName, "2");
+                    this.mBtnOk2 = new UIItemWindow(this, controlId: "2");
                 }
                 return this.mBtnOk2;
             }
@@ -76,7 +76,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             {
                 if ((this.mTbxMonth == null))
                 {
-                    this.mTbxMonth = new UIItemWindow(this, WindowName, "2", "2");
+                    this.mTbxMonth = new UIItemWindow(this, controlId: "2", instance: "2");
                 }
                 return this.mTbxMonth;
             }
@@ -88,7 +88,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             {
                 if ((this.mTbxYear == null))
                 {
-                    this.mTbxYear = new UIItemWindow(this, WindowName, "1");
+                    this.mTbxYear = new UIItemWindow(this, controlId: "1");
                 }
                 return this.mTbxYear;
             }

@@ -6,28 +6,29 @@
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
-    public class UIBillingScreenHOMETESWindow : WinWindow
+    public class UIBillingScreenMotoTestWindow : WinWindow
     {
-        public UIBillingScreenHOMETESWindow(UITestControl searchLimitContainer)
+        public UIBillingScreenMotoTestWindow(UITestControl searchLimitContainer)
             : base(searchLimitContainer)
         {
             #region Search Criteria
 
             this.SearchProperties[WinControl.PropertyNames.ControlId] = "32770";
-            this.WindowTitles.Add("Policy: gdfhdf dfghgdf");
+            this.windowName = "Policy: rty ert";
+            this.WindowTitles.Add(this.windowName);
 
             #endregion
         }
 
         #region Properties
 
-        public UIItemWindow57 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow57(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "25");
                 }
                 return this.mUIItemWindow;
             }
@@ -37,7 +38,9 @@
 
         #region Fields
 
-        private UIItemWindow57 mUIItemWindow;
+        private readonly string windowName;
+
+        private UIItemWindow mUIItemWindow;
 
         #endregion
     }

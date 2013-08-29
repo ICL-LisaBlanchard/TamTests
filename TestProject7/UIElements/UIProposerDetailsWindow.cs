@@ -8,110 +8,101 @@
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIProposerDetailsWindow : WinWindow
     {
-        public UIProposerDetailsWindow()
-        {
-            #region Search Criteria
-
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Proposer Details";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Proposer Details");
-
-            #endregion
-        }
+        private const string WindowName = "Proposer Details";
 
         #region Properties
 
-        public UIItemWindow8 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow8(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "2");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIItemWindow13 UIItemWindow1
+        public UIItemWindow UIItemWindow1
         {
             get
             {
                 if ((this.mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow13(this);
+                    this.mUIItemWindow1 = new UIItemWindow(this, controlId: "2", instance: "2");
                 }
                 return this.mUIItemWindow1;
             }
         }
 
-        public UIItemWindow22 UIItemWindow2
+        public UIItemWindow UIItemWindow2
         {
             get
             {
                 if ((this.mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow22(this);
+                    this.mUIItemWindow2 = new UIItemWindow(this, controlId: "1", instance: "4");
                 }
                 return this.mUIItemWindow2;
             }
         }
 
-        public UIItemWindow31 UIItemWindow3
+        public UIItemWindow UIItemWindow3
         {
             get
             {
                 if ((this.mUIItemWindow3 == null))
                 {
-                    this.mUIItemWindow3 = new UIItemWindow31(this);
+                    this.mUIItemWindow3 = new UIItemWindow(this, controlId: "1");
                 }
                 return this.mUIItemWindow3;
             }
         }
 
-        public UILookupWindow UILookupWindow
+        public UIItemWindow UILookupWindow
         {
             get
             {
                 if ((this.mUILookupWindow == null))
                 {
-                    this.mUILookupWindow = new UILookupWindow(this);
+                    this.mUILookupWindow = new UIItemWindow(this, controlId: "8");
                 }
                 return this.mUILookupWindow;
             }
         }
 
-        public UIItemWindow41 UIItemWindow4
+        public UIItemWindow UIItemWindow4
         {
             get
             {
                 if ((this.mUIItemWindow4 == null))
                 {
-                    this.mUIItemWindow4 = new UIItemWindow41(this);
+                    this.mUIItemWindow4 = new UIItemWindow(this, controlId: "7");
                 }
                 return this.mUIItemWindow4;
             }
         }
 
-        public UIItemWindow51 UIItemWindow5
+        public UIItemWindow UIItemWindow5
         {
             get
             {
                 if ((this.mUIItemWindow5 == null))
                 {
-                    this.mUIItemWindow5 = new UIItemWindow51(this);
+                    this.mUIItemWindow5 = new UIItemWindow(this, controlId: "5");
                 }
                 return this.mUIItemWindow5;
             }
         }
 
-        public UIOKWindow8 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow8(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "12");
                 }
                 return this.mUIOKWindow;
             }
@@ -121,22 +112,33 @@
 
         #region Fields
 
-        private UIItemWindow8 mUIItemWindow;
+        private UIItemWindow mUIItemWindow;
 
-        private UIItemWindow13 mUIItemWindow1;
+        private UIItemWindow mUIItemWindow1;
 
-        private UIItemWindow22 mUIItemWindow2;
+        private UIItemWindow mUIItemWindow2;
 
-        private UIItemWindow31 mUIItemWindow3;
+        private UIItemWindow mUIItemWindow3;
 
-        private UILookupWindow mUILookupWindow;
+        private UIItemWindow mUILookupWindow;
 
-        private UIItemWindow41 mUIItemWindow4;
+        private UIItemWindow mUIItemWindow4;
 
-        private UIItemWindow51 mUIItemWindow5;
+        private UIItemWindow mUIItemWindow5;
 
-        private UIOKWindow8 mUIOKWindow;
+        private UIItemWindow mUIOKWindow;
 
         #endregion
+
+        public UIProposerDetailsWindow()
+        {
+            #region Search Criteria
+
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "Proposer Details";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            this.WindowTitles.Add(WindowName);
+
+            #endregion
+        }
     }
 }

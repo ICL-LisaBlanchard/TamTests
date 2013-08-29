@@ -74,13 +74,7 @@
             login.DoLogin();
             login.LoginEnterDate();
             login.WarningOk();
-            this.UiMap.App_startedExpectedValues.UITheAgencyManagerWindow1Name = "The Agency Manager";
-        }
-
-        [TestMethod]
-        public void LoginTest()
-        {
-            this.SetOurHighwayRegKeys();
+            this.UiMap.AppStartedExpectedValues.UITheAgencyManagerWindow1Name = "The Agency Manager";
         }
 
         [TestCleanup]
@@ -114,8 +108,8 @@
 
         public void SetOfficeRegKeys()
         {
-            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ourhighway");
-            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ourhighway");
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "office");
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "office");
         }
 
         public static void CloseProcess(string name)

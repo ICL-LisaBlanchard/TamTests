@@ -12,60 +12,37 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Mid Term Adjustments ";
+            this.windowName = "Mid Term Adjustments ";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Mid Term Adjustments ");
+            this.WindowTitles.Add(this.windowName);
 
             #endregion
         }
 
         #region Properties
 
-        public UIItemWindow55 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow55(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIOKWindow23 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow23(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "2");
                 }
                 return this.mUIOKWindow;
-            }
-        }
-
-        public UIOKWindow110 UIOKWindow1
-        {
-            get
-            {
-                if ((this.mUIOKWindow1 == null))
-                {
-                    this.mUIOKWindow1 = new UIOKWindow110(this);
-                }
-                return this.mUIOKWindow1;
-            }
-        }
-
-        public UIItemWindow124 UIItemWindow1
-        {
-            get
-            {
-                if ((this.mUIItemWindow1 == null))
-                {
-                    this.mUIItemWindow1 = new UIItemWindow124(this);
-                }
-                return this.mUIItemWindow1;
             }
         }
 
@@ -73,13 +50,11 @@
 
         #region Fields
 
-        private UIItemWindow55 mUIItemWindow;
+        private readonly string windowName;
 
-        private UIOKWindow23 mUIOKWindow;
+        private UIItemWindow mUIItemWindow;
 
-        private UIOKWindow110 mUIOKWindow1;
-
-        private UIItemWindow124 mUIItemWindow1;
+        private UIItemWindow mUIOKWindow;
 
         #endregion
     }

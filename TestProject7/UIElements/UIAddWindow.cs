@@ -8,19 +8,21 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIAddWindow : WinWindow
     {
-        
-        public UIAddWindow(UITestControl searchLimitContainer) : 
-            base(searchLimitContainer)
+        public UIAddWindow(UITestControl searchLimitContainer)
+            : base(searchLimitContainer)
         {
             #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "14";
-            this.SearchProperties[WinWindow.PropertyNames.Instance] = "2";
-            this.WindowTitles.Add("Customer: txt1 tdsfs");
-            this.WindowTitles.Add("Policy: autotest autotest");
+
+            this.SearchProperties[WinControl.PropertyNames.ControlId] = "14";
+            this.SearchProperties[UITestControl.PropertyNames.Instance] = "2";
+            //this.WindowTitles.Add("Customer: txt1 tdsfs");
+            //this.WindowTitles.Add("Policy: autotest autotest");
+
             #endregion
         }
-        
+
         #region Properties
+
         public WinButton UIAddButton
         {
             get
@@ -28,19 +30,25 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 if ((this.mUIAddButton == null))
                 {
                     this.mUIAddButton = new WinButton(this);
+
                     #region Search Criteria
-                    this.mUIAddButton.SearchProperties[WinButton.PropertyNames.Name] = "Add";
+
+                    this.mUIAddButton.SearchProperties[UITestControl.PropertyNames.Name] = "Add";
                     this.mUIAddButton.WindowTitles.Add("Customer: txt1 tdsfs");
                     this.mUIAddButton.WindowTitles.Add("Policy: autotest autotest");
+
                     #endregion
                 }
                 return this.mUIAddButton;
             }
         }
+
         #endregion
-        
+
         #region Fields
+
         private WinButton mUIAddButton;
+
         #endregion
     }
 }

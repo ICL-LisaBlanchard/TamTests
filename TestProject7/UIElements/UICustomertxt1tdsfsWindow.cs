@@ -2,44 +2,47 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 {
     using System.CodeDom.Compiler;
 
+    using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
-    public class UICustomertxt1tdsfsWindow : WinWindow
+    public class UICustomertxt1TdsfsWindow : WinWindow
     {
-        
-        public UICustomertxt1tdsfsWindow()
+        public UICustomertxt1TdsfsWindow()
         {
             #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "ThunderRT6MDIForm";
+
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6MDIForm";
+
             #endregion
         }
-        
+
         #region Properties
-        public UICUSTOMERSWindow UICUSTOMERSWindow
+
+        public UIItemWindow UICustomersWindow
         {
             get
             {
-                if ((this.mUICUSTOMERSWindow == null))
+                if ((this.mUICustomersWindow == null))
                 {
-                    this.mUICUSTOMERSWindow = new UICUSTOMERSWindow(this);
+                    this.mUICustomersWindow = new UIItemWindow(this, controlId: "32768");
                 }
-                return this.mUICUSTOMERSWindow;
+                return this.mUICustomersWindow;
             }
         }
-        
-        public UIAddWindow UIAddWindow
+
+        public UIItemWindow UIAddWindow
         {
             get
             {
                 if ((this.mUIAddWindow == null))
                 {
-                    this.mUIAddWindow = new UIAddWindow(this);
+                    this.mUIAddWindow = new UIItemWindow(this, controlId: "14", instance: "2");
                 }
                 return this.mUIAddWindow;
             }
         }
-        
+
         public UINewCustomerDetailWindow UINewCustomerDetailWindow
         {
             get
@@ -51,19 +54,19 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUINewCustomerDetailWindow;
             }
         }
-        
-        public UIItemWindow5 UIItemWindow
+
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow5(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "32");
                 }
                 return this.mUIItemWindow;
             }
         }
-        
+
         public UINewPolicyDetailWindow UINewPolicyDetailWindow
         {
             get
@@ -75,7 +78,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUINewPolicyDetailWindow;
             }
         }
-        
+
         public UIPolicyListWindow UIPolicyListWindow
         {
             get
@@ -87,7 +90,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUIPolicyListWindow;
             }
         }
-        
+
         public UIApplicationMenuBar UIApplicationMenuBar
         {
             get
@@ -99,22 +102,25 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUIApplicationMenuBar;
             }
         }
+
         #endregion
-        
+
         #region Fields
-        private UICUSTOMERSWindow mUICUSTOMERSWindow;
-        
-        private UIAddWindow mUIAddWindow;
-        
+
+        private UIItemWindow mUICustomersWindow;
+
+        private UIItemWindow mUIAddWindow;
+
         private UINewCustomerDetailWindow mUINewCustomerDetailWindow;
-        
-        private UIItemWindow5 mUIItemWindow;
-        
+
+        private UIItemWindow mUIItemWindow;
+
         private UINewPolicyDetailWindow mUINewPolicyDetailWindow;
-        
+
         private UIPolicyListWindow mUIPolicyListWindow;
-        
+
         private UIApplicationMenuBar mUIApplicationMenuBar;
+
         #endregion
     }
 }

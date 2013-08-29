@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UILogandClearButton
+        public WinButton UILogandClearButton 
         {
             get
             {

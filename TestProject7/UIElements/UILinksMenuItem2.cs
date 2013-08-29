@@ -9,6 +9,30 @@
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UILinksMenuItem2 : WinMenuItem
     {
+        private const string WindowName = "Policy: autotest";
+
+        #region Properties
+
+        public UIMenuListItem UIItem3RdPartyIntegratMenuItem
+        {
+            get
+            {
+                if ((this.mUIItem3rdPartyIntegratMenuItem == null))
+                {
+                    this.mUIItem3rdPartyIntegratMenuItem = new UIMenuListItem(this, "3rd Party Integration");
+                }
+                return this.mUIItem3rdPartyIntegratMenuItem;
+            }
+        }
+
+        #endregion
+
+        #region Fields
+
+        private UIMenuListItem mUIItem3rdPartyIntegratMenuItem;
+
+        #endregion
+
         public UILinksMenuItem2(UITestControl searchLimitContainer)
             : base(searchLimitContainer)
         {
@@ -20,27 +44,5 @@
 
             #endregion
         }
-
-        #region Properties
-
-        public UIItem3rdPartyIntegratMenuItem3 UIItem3rdPartyIntegratMenuItem
-        {
-            get
-            {
-                if ((this.mUIItem3rdPartyIntegratMenuItem == null))
-                {
-                    this.mUIItem3rdPartyIntegratMenuItem = new UIItem3rdPartyIntegratMenuItem3(this);
-                }
-                return this.mUIItem3rdPartyIntegratMenuItem;
-            }
-        }
-
-        #endregion
-
-        #region Fields
-
-        private UIItem3rdPartyIntegratMenuItem3 mUIItem3rdPartyIntegratMenuItem;
-
-        #endregion
     }
 }

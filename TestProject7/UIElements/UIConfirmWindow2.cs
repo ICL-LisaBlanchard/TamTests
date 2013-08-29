@@ -12,34 +12,35 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Confirm";
+            this.windowTitle = "Confirm";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add("Confirm");
+            this.WindowTitles.Add(this.windowTitle);
 
             #endregion
         }
 
         #region Properties
 
-        public UIYesWindow3 UIYesWindow
+        public UIItemWindow UIYesWindow
         {
             get
             {
                 if ((this.mUIYesWindow == null))
                 {
-                    this.mUIYesWindow = new UIYesWindow3(this);
+                    this.mUIYesWindow = new UIItemWindow(this, "6");
                 }
                 return this.mUIYesWindow;
             }
         }
 
-        public UIOKWindow32 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow32(this);
+                    this.mUIOKWindow = new UIItemWindow(this, "1");
                 }
                 return this.mUIOKWindow;
             }
@@ -49,9 +50,11 @@
 
         #region Fields
 
-        private UIYesWindow3 mUIYesWindow;
+        private readonly string windowTitle;
 
-        private UIOKWindow32 mUIOKWindow;
+        private UIItemWindow mUIYesWindow;
+
+        private UIItemWindow mUIOKWindow;
 
         #endregion
     }

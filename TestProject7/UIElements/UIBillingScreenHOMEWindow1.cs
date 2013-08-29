@@ -6,41 +6,43 @@
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
-    public class UIBillingScreenHOMEWindow1 : WinWindow
+    public class UIBillingScreenHomeWindow1 : WinWindow
     {
-        public UIBillingScreenHOMEWindow1(UITestControl searchLimitContainer)
+        public UIBillingScreenHomeWindow1(UITestControl searchLimitContainer)
             : base(searchLimitContainer)
         {
             #region Search Criteria
 
             this.SearchProperties[WinControl.PropertyNames.ControlId] = "32770";
-            this.WindowTitles.Add("Policy: autotest");
-            this.WindowTitles.Add("Transaction: autotest");
+            this.windowName1 = "Policy: autotest";
+            this.WindowTitles.Add(this.windowName1);
+            this.windowName2 = "Transaction: autotest";
+            this.WindowTitles.Add(this.windowName2);
 
             #endregion
         }
 
         #region Properties
 
-        public UIItemWindow36 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow36(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "25");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIDetailWindow3 UIDetailWindow
+        public UIItemWindow UIDetailWindow
         {
             get
             {
                 if ((this.mUIDetailWindow == null))
                 {
-                    this.mUIDetailWindow = new UIDetailWindow3(this);
+                    this.mUIDetailWindow = new UIItemWindow(this, controlId: "6");
                 }
                 return this.mUIDetailWindow;
             }
@@ -50,9 +52,13 @@
 
         #region Fields
 
-        private UIItemWindow36 mUIItemWindow;
+        private readonly string windowName1;
 
-        private UIDetailWindow3 mUIDetailWindow;
+        private readonly string windowName2;
+
+        private UIItemWindow mUIItemWindow;
+
+        private UIItemWindow mUIDetailWindow;
 
         #endregion
     }

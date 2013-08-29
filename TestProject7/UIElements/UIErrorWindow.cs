@@ -19,13 +19,13 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         #region Properties
 
-        public UIOKWindow40 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow40(this);
+                    this.mUIOKWindow = new UIItemWindow(this, "2");
                 }
                 return this.mUIOKWindow;
             }
@@ -35,7 +35,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         #region Fields
 
-        private UIOKWindow40 mUIOKWindow;
+        private UIItemWindow mUIOKWindow;
 
         #endregion
     }

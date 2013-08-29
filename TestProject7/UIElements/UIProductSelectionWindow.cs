@@ -12,34 +12,35 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Product Selection";
+            this.windowTitle = "Product Selection";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Product Selection");
+            this.WindowTitles.Add(this.windowTitle);
 
             #endregion
         }
 
         #region Properties
 
-        public UIOKWindow22 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow22(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "1");
                 }
                 return this.mUIOKWindow;
             }
         }
 
-        public UIHouseholdWindow UIHouseholdWindow
+        public UIItemWindow UIHouseholdWindow
         {
             get
             {
                 if ((this.mUIHouseholdWindow == null))
                 {
-                    this.mUIHouseholdWindow = new UIHouseholdWindow(this);
+                    this.mUIHouseholdWindow = new UIItemWindow(this, controlId: "7");
                 }
                 return this.mUIHouseholdWindow;
             }
@@ -49,9 +50,11 @@
 
         #region Fields
 
-        private UIOKWindow22 mUIOKWindow;
+        private readonly string windowTitle;
 
-        private UIHouseholdWindow mUIHouseholdWindow;
+        private UIItemWindow mUIOKWindow;
+
+        private UIItemWindow mUIHouseholdWindow;
 
         #endregion
     }

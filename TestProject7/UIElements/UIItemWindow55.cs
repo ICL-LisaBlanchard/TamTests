@@ -39,7 +39,7 @@
             }
         }
 
-        public WinButton UIBeforeButton
+        public WinButton UIBeforeButton 
         {
             get
             {

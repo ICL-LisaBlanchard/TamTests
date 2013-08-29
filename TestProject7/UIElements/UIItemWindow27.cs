@@ -15,7 +15,7 @@
 
             this.SearchProperties[WinControl.PropertyNames.ControlId] = "1";
             this.SearchProperties[UITestControl.PropertyNames.Instance] = "25";
-            this.WindowTitles.Add("Policy: rty ert");
+            this.WindowTitles.Add(this.windowName);
 
             #endregion
         }
@@ -32,7 +32,7 @@
 
                     #region Search Criteria
 
-                    this.mUIItemEdit.WindowTitles.Add("Policy: rty ert");
+                    this.mUIItemEdit.WindowTitles.Add(this.windowName);
 
                     #endregion
                 }
@@ -45,6 +45,8 @@
         #region Fields
 
         private WinEdit mUIItemEdit;
+
+        private string windowName = "Policy: rty ert";
 
         #endregion
     }

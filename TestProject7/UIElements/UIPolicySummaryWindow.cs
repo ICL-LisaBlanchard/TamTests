@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UIPolicySummaryButton
+        public WinButton UIPolicySummaryButton 
         {
             get
             {

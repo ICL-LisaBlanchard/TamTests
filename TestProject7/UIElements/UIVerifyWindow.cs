@@ -16,15 +16,16 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             this.WindowTitles.Add("Verify");
             #endregion
         }
-        
+
+        private const string WindowName = "Verify";
         #region Properties
-        public UIYesWindow UIYesWindow
+        public UIItemWindow UIYesWindow
         {
             get
             {
                 if ((this.mUIYesWindow == null))
                 {
-                    this.mUIYesWindow = new UIYesWindow(this);
+                    this.mUIYesWindow = new UIItemWindow(this, controlId: "6");
                 }
                 return this.mUIYesWindow;
             }
@@ -32,7 +33,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         #endregion
         
         #region Fields
-        private UIYesWindow mUIYesWindow;
+        private UIItemWindow mUIYesWindow;
         #endregion
     }
 }

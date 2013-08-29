@@ -12,22 +12,23 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Confirm MTA";
+            this.windowTitle = "Confirm MTA";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add("Confirm MTA");
+            this.WindowTitles.Add(this.windowTitle);
 
             #endregion
         }
 
         #region Properties
 
-        public UIOKWindow25 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow25(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "1");
                 }
                 return this.mUIOKWindow;
             }
@@ -37,7 +38,9 @@
 
         #region Fields
 
-        private UIOKWindow25 mUIOKWindow;
+        private readonly string windowTitle;
+
+        private UIItemWindow mUIOKWindow;
 
         #endregion
     }

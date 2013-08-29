@@ -14,44 +14,45 @@
 
             this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "AUTO", PropertyExpressionOperator.Contains));
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("AUTO187-1001");
+            this.windowTitle = "AUTO187-1001";
+            this.WindowTitles.Add(this.windowTitle);
 
             #endregion
         }
 
         #region Properties
 
-        public UIInviteWindow UIInviteWindow
+        public UIItemWindow UIInviteWindow
         {
             get
             {
                 if ((this.mUIInviteWindow == null))
                 {
-                    this.mUIInviteWindow = new UIInviteWindow(this);
+                    this.mUIInviteWindow = new UIItemWindow(this, name: "&Invite");
                 }
                 return this.mUIInviteWindow;
             }
         }
 
-        public UIItemWindow66 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow66(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "17");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIRenewPolicyWindow UIRenewPolicyWindow
+        public UIItemWindow UIRenewPolicyWindow
         {
             get
             {
                 if ((this.mUIRenewPolicyWindow == null))
                 {
-                    this.mUIRenewPolicyWindow = new UIRenewPolicyWindow(this);
+                    this.mUIRenewPolicyWindow = new UIItemWindow(this, controlId: "10");
                 }
                 return this.mUIRenewPolicyWindow;
             }
@@ -61,11 +62,13 @@
 
         #region Fields
 
-        private UIInviteWindow mUIInviteWindow;
+        private readonly string windowTitle;
 
-        private UIItemWindow66 mUIItemWindow;
+        private UIItemWindow mUIInviteWindow;
 
-        private UIRenewPolicyWindow mUIRenewPolicyWindow;
+        private UIItemWindow mUIItemWindow;
+
+        private UIItemWindow mUIRenewPolicyWindow;
 
         #endregion
     }

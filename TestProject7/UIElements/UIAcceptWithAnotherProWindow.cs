@@ -14,80 +14,82 @@
 
             this.SearchProperties[UITestControl.PropertyNames.Name] = "Accept With Another Product";
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Accept With Another Product");
+            this.WindowTitles.Add(WindowName);
 
             #endregion
         }
 
         #region Properties
 
-        public UIItemWindow47 UIItemWindow
+        private const string WindowName = "Accept With Another Product";
+
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow47(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "2");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIItemWindow119 UIItemWindow1
+        public UIItemWindow UIItemWindow1
         {
             get
             {
                 if ((this.mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow119(this);
+                    this.mUIItemWindow1 = new UIItemWindow(this, controlId: "3");
                 }
                 return this.mUIItemWindow1;
             }
         }
 
-        public UIItemWindow213 UIItemWindow2
+        public UIItemWindow UIItemWindow2
         {
             get
             {
                 if ((this.mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow213(this);
+                    this.mUIItemWindow2 = new UIItemWindow(this, controlId: "1");
                 }
                 return this.mUIItemWindow2;
             }
         }
 
-        public UIItemWindow310 UIItemWindow3
+        public UIItemWindow UIItemWindow3
         {
             get
             {
                 if ((this.mUIItemWindow3 == null))
                 {
-                    this.mUIItemWindow3 = new UIItemWindow310(this);
+                    this.mUIItemWindow3 = new UIItemWindow(this, controlId: "1", instance: "2");
                 }
                 return this.mUIItemWindow3;
             }
         }
 
-        public UIItemWindow48 UIItemWindow4
+        public UIItemWindow UIItemWindow4
         {
             get
             {
                 if ((this.mUIItemWindow4 == null))
                 {
-                    this.mUIItemWindow4 = new UIItemWindow48(this);
+                    this.mUIItemWindow4 = new UIItemWindow(this, controlId: "1", instance: "3");
                 }
                 return this.mUIItemWindow4;
             }
         }
 
-        public UIOKWindow20 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow20(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "5");
                 }
                 return this.mUIOKWindow;
             }
@@ -97,17 +99,17 @@
 
         #region Fields
 
-        private UIItemWindow47 mUIItemWindow;
+        private UIItemWindow mUIItemWindow;
 
-        private UIItemWindow119 mUIItemWindow1;
+        private UIItemWindow mUIItemWindow1;
 
-        private UIItemWindow213 mUIItemWindow2;
+        private UIItemWindow mUIItemWindow2;
 
-        private UIItemWindow310 mUIItemWindow3;
+        private UIItemWindow mUIItemWindow3;
 
-        private UIItemWindow48 mUIItemWindow4;
+        private UIItemWindow mUIItemWindow4;
 
-        private UIOKWindow20 mUIOKWindow;
+        private UIItemWindow mUIOKWindow;
 
         #endregion
     }

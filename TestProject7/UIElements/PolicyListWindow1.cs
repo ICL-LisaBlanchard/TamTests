@@ -6,64 +6,55 @@
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
-    public class UIPolicyListWindow1 : WinWindow
+    public class PolicyListWindow1 : WinWindow
     {
-        public UIPolicyListWindow1(UITestControl searchLimitContainer)
-            : base(searchLimitContainer)
-        {
-            #region Search Criteria
-
-            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32769";
-            this.WindowTitles.Add("Policy: autotest");
-
-            #endregion
-        }
+        private const string WindowTitle = "Policy: autotest";
 
         #region Properties
 
-        public UICancelWindow5 UICancelWindow
+        public UIItemWindow UICancelWindow
         {
             get
             {
                 if ((this.mUICancelWindow == null))
                 {
-                    this.mUICancelWindow = new UICancelWindow5(this);
+                    this.mUICancelWindow = new UIItemWindow(this, controlId: "8");
                 }
                 return this.mUICancelWindow;
             }
         }
 
-        public UIOptionsWindow1 UIOptionsWindow
+        public UIItemWindow UIOptionsWindow
         {
             get
             {
                 if ((this.mUIOptionsWindow == null))
                 {
-                    this.mUIOptionsWindow = new UIOptionsWindow1(this);
+                    this.mUIOptionsWindow = new UIItemWindow(this, controlId: "7");
                 }
                 return this.mUIOptionsWindow;
             }
         }
 
-        public UIItemWindow29 UIItemWindow
+        public UITestControl UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow29(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "2");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIDetailWindow1 UIDetailWindow
+        public UIItemWindow UIDetailWindow
         {
             get
             {
                 if ((this.mUIDetailWindow == null))
                 {
-                    this.mUIDetailWindow = new UIDetailWindow1(this);
+                    this.mUIDetailWindow = new UIItemWindow(this, controlId: "6");
                 }
                 return this.mUIDetailWindow;
             }
@@ -73,14 +64,25 @@
 
         #region Fields
 
-        private UICancelWindow5 mUICancelWindow;
+        private UIItemWindow mUICancelWindow;
 
-        private UIOptionsWindow1 mUIOptionsWindow;
+        private UIItemWindow mUIOptionsWindow;
 
-        private UIItemWindow29 mUIItemWindow;
+        private UITestControl mUIItemWindow;
 
-        private UIDetailWindow1 mUIDetailWindow;
+        private UIItemWindow mUIDetailWindow;
 
         #endregion
+
+        public PolicyListWindow1(UITestControl searchLimitContainer)
+            : base(searchLimitContainer)
+        {
+            #region Search Criteria
+
+            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32769";
+            this.WindowTitles.Add(WindowTitle);
+
+            #endregion
+        }
     }
 }

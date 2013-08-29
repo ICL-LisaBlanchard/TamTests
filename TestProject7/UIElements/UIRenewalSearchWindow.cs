@@ -12,22 +12,23 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Renewal Search";
+            this.windowTitle = "Renewal Search";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Renewal Search");
+            this.WindowTitles.Add(this.windowTitle);
 
             #endregion
         }
 
         #region Properties
 
-        public UIOKWindow29 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow29(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "7");
                 }
                 return this.mUIOKWindow;
             }
@@ -37,7 +38,9 @@
 
         #region Fields
 
-        private UIOKWindow29 mUIOKWindow;
+        private readonly string windowTitle;
+
+        private UIItemWindow mUIOKWindow;
 
         #endregion
     }

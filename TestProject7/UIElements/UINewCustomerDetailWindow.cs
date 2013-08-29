@@ -8,75 +8,80 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UINewCustomerDetailWindow : WinWindow
     {
-        
-        public UINewCustomerDetailWindow(UITestControl searchLimitContainer) : 
-            base(searchLimitContainer)
+        public UINewCustomerDetailWindow(UITestControl searchLimitContainer)
+            : base(searchLimitContainer)
         {
             #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "32769";
+
+            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32769";
             this.WindowTitles.Add("New Customer: AUTOAU1");
             this.WindowTitles.Add("Policy: autotest autotest");
+
             #endregion
         }
-        
+
         #region Properties
-        public UIItemWindow4 UIItemWindow
+
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow4(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "14");
                 }
                 return this.mUIItemWindow;
             }
         }
-        
-        public UIItemWindow11 UIItemWindow1
+
+        public UIItemWindow UIItemWindow1
         {
             get
             {
                 if ((this.mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow11(this);
+                    this.mUIItemWindow1 = new UIItemWindow(this, controlId: "1", instance: "15");
                 }
                 return this.mUIItemWindow1;
             }
         }
-        
-        public UIOKWindow3 UIOKWindow
+
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow3(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "23");
                 }
                 return this.mUIOKWindow;
             }
         }
-        
-        public UICancelWindow1 UICancelWindow
+
+        public UIItemWindow UICancelWindow
         {
             get
             {
                 if ((this.mUICancelWindow == null))
                 {
-                    this.mUICancelWindow = new UICancelWindow1(this);
+                    this.mUICancelWindow = new UIItemWindow(this, controlId: "8");
                 }
                 return this.mUICancelWindow;
             }
         }
+
         #endregion
-        
+
         #region Fields
-        private UIItemWindow4 mUIItemWindow;
-        
-        private UIItemWindow11 mUIItemWindow1;
-        
-        private UIOKWindow3 mUIOKWindow;
-        
-        private UICancelWindow1 mUICancelWindow;
+
+        private UIItemWindow mUIItemWindow;
+
+        private UIItemWindow mUIItemWindow1;
+
+        private UIItemWindow mUIOKWindow;
+
+        private UIItemWindow mUICancelWindow;
+
         #endregion
     }
 }

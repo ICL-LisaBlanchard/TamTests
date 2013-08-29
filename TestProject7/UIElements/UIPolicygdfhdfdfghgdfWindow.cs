@@ -21,15 +21,15 @@
 
         #region Properties
 
-        public UIBillingScreenHOMETESWindow UIBillingScreenHOMETESWindow
+        public UIBillingScreenHomeTestWindow UIBillingScreenHomeTestWindow
         {
             get
             {
-                if ((this.mUIBillingScreenHOMETESWindow == null))
+                if ((this.mUIBillingScreenHomeTestWindow == null))
                 {
-                    this.mUIBillingScreenHOMETESWindow = new UIBillingScreenHOMETESWindow(this);
+                    this.mUIBillingScreenHomeTestWindow = new UIBillingScreenHomeTestWindow(this);
                 }
-                return this.mUIBillingScreenHOMETESWindow;
+                return this.mUIBillingScreenHomeTestWindow;
             }
         }
 
@@ -37,7 +37,7 @@
 
         #region Fields
 
-        private UIBillingScreenHOMETESWindow mUIBillingScreenHOMETESWindow;
+        private UIBillingScreenHomeTestWindow mUIBillingScreenHomeTestWindow;
 
         #endregion
     }

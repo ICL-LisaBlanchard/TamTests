@@ -2,37 +2,45 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 {
     using System.CodeDom.Compiler;
 
+    using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UISelectaPolicyNumberWindow : WinWindow
     {
-        
-        public UISelectaPolicyNumberWindow()
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.Name] = "Select a Policy Number";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Select a Policy Number");
-            #endregion
-        }
-        
+        private const string WindowTitle = "Select a Policy Number";
+
         #region Properties
-        public UIOKWindow6 UIOKWindow
+
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow6(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "2");
                 }
                 return this.mUIOKWindow;
             }
         }
+
         #endregion
-        
+
         #region Fields
-        private UIOKWindow6 mUIOKWindow;
+
+        private UIItemWindow mUIOKWindow;
+
         #endregion
+
+        public UISelectaPolicyNumberWindow()
+        {
+            #region Search Criteria
+
+            this.SearchProperties[UITestControl.PropertyNames.Name] = WindowTitle;
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            this.WindowTitles.Add("Select a Policy Number");
+
+            #endregion
+        }
     }
 }

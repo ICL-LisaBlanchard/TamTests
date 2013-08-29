@@ -8,50 +8,41 @@
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIMTAEffectiveDatesWindow : WinWindow
     {
-        public UIMTAEffectiveDatesWindow()
-        {
-            #region Search Criteria
-
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "MTA Effective Dates ";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("MTA Effective Dates ");
-
-            #endregion
-        }
+        private const string WindowName = "MTA Effective Dates ";
 
         #region Properties
 
-        public UIOKWindow24 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow24(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "1");
                 }
                 return this.mUIOKWindow;
             }
         }
 
-        public UIItemWindow56 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow56(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "2");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UICancelWindow10 UICancelWindow
+        public UIItemWindow UICancelWindow
         {
             get
             {
                 if ((this.mUICancelWindow == null))
                 {
-                    this.mUICancelWindow = new UICancelWindow10(this);
+                    this.mUICancelWindow = new UIItemWindow(this, controlId: "2");
                 }
                 return this.mUICancelWindow;
             }
@@ -61,12 +52,23 @@
 
         #region Fields
 
-        private UIOKWindow24 mUIOKWindow;
+        private UIItemWindow mUIOKWindow;
 
-        private UIItemWindow56 mUIItemWindow;
+        private UIItemWindow mUIItemWindow;
 
-        private UICancelWindow10 mUICancelWindow;
+        private UIItemWindow mUICancelWindow;
 
         #endregion
+
+        public UIMTAEffectiveDatesWindow()
+        {
+            #region Search Criteria
+
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "MTA Effective Dates ";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            this.WindowTitles.Add(WindowName);
+
+            #endregion
+        }
     }
 }

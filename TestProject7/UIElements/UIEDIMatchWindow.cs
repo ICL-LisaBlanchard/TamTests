@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UIEDIMatchButton
+        public WinButton UIEDIMatchButton 
         {
             get
             {

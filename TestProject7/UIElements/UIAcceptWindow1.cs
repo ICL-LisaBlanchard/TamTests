@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UIAcceptButton
+        public WinButton UIAcceptButton 
         {
             get
             {

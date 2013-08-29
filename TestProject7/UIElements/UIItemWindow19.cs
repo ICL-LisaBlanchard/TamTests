@@ -21,24 +21,6 @@
 
         #region Properties
 
-        public WinClient UIQuoteResultsClient
-        {
-            get
-            {
-                if ((this.mUIQuoteResultsClient == null))
-                {
-                    this.mUIQuoteResultsClient = new WinClient(this);
-
-                    #region Search Criteria
-
-                    this.mUIQuoteResultsClient.WindowTitles.Add("Quote Results");
-
-                    #endregion
-                }
-                return this.mUIQuoteResultsClient;
-            }
-        }
-
         #endregion
 
         #region Fields

@@ -23,15 +23,17 @@
 
         #region Properties
 
-        public UIItem3rdPartyIntegratMenuItem1 UIItem3rdPartyIntegratMenuItem
+        private const string WindowName = "Policy: autotest";
+
+        public UIMenuListItem UIItem3RdPartyIntegrateMenuItem
         {
             get
             {
-                if ((this.mUIItem3rdPartyIntegratMenuItem == null))
+                if ((this.mUIItem3RdPartyIntegrateMenuItem == null))
                 {
-                    this.mUIItem3rdPartyIntegratMenuItem = new UIItem3rdPartyIntegratMenuItem1(this);
+                    this.mUIItem3RdPartyIntegrateMenuItem = new UIMenuListItem(this, "3rd Party Integration");
                 }
-                return this.mUIItem3rdPartyIntegratMenuItem;
+                return this.mUIItem3RdPartyIntegrateMenuItem;
             }
         }
 
@@ -39,7 +41,7 @@
 
         #region Fields
 
-        private UIItem3rdPartyIntegratMenuItem1 mUIItem3rdPartyIntegratMenuItem;
+        private UIMenuListItem mUIItem3RdPartyIntegrateMenuItem;
 
         #endregion
     }

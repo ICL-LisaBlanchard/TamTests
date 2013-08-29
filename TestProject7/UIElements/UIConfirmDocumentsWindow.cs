@@ -12,22 +12,23 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Confirm Documents";
+            this.windowTitle = "Confirm Documents";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Confirm Documents");
+            this.WindowTitles.Add(this.windowTitle);
 
             #endregion
         }
 
         #region Properties
 
-        public UIOKWindow15 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow15(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "6");
                 }
                 return this.mUIOKWindow;
             }
@@ -37,7 +38,9 @@
 
         #region Fields
 
-        private UIOKWindow15 mUIOKWindow;
+        private readonly string windowTitle;
+
+        private UIItemWindow mUIOKWindow;
 
         #endregion
     }

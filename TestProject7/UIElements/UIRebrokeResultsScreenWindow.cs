@@ -12,70 +12,59 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Rebroke Results Screen";
+            this.windowName = "Rebroke Results Screen";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Rebroke Results Screen");
+            this.WindowTitles.Add(this.windowName);
 
             #endregion
         }
 
         #region Properties
 
-        public UIItemWindow67 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow67(this);
+                    this.mUIItemWindow = new UIItemWindow(this, instance: "8", className: "msvb_lib_header");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIOKWindow34 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow34(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "8");
                 }
                 return this.mUIOKWindow;
             }
         }
 
-        public UIItemWindow128 UIItemWindow1
+        public UIItemWindow UIItemWindow1
         {
             get
             {
                 if ((this.mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow128(this);
+                    this.mUIItemWindow1 = new UIItemWindow(this, instance: "8", className: "ListView20WndClass");
                 }
                 return this.mUIItemWindow1;
             }
         }
 
-        public UIItemWindow216 UIItemWindow2
-        {
-            get
-            {
-                if ((this.mUIItemWindow2 == null))
-                {
-                    this.mUIItemWindow2 = new UIItemWindow216(this);
-                }
-                return this.mUIItemWindow2;
-            }
-        }
-
-        public UISelectAlternativeWindow UISelectAlternativeWindow
+        public UIItemWindow UISelectAlternativeWindow
         {
             get
             {
                 if ((this.mUISelectAlternativeWindow == null))
                 {
-                    this.mUISelectAlternativeWindow = new UISelectAlternativeWindow(this);
+                    this.mUISelectAlternativeWindow = new UIItemWindow(this, controlId: "6");
                 }
                 return this.mUISelectAlternativeWindow;
             }
@@ -85,15 +74,15 @@
 
         #region Fields
 
-        private UIItemWindow67 mUIItemWindow;
+        private readonly string windowName;
 
-        private UIOKWindow34 mUIOKWindow;
+        private UIItemWindow mUIItemWindow;
 
-        private UIItemWindow128 mUIItemWindow1;
+        private UIItemWindow mUIOKWindow;
 
-        private UIItemWindow216 mUIItemWindow2;
+        private UIItemWindow mUIItemWindow1;
 
-        private UISelectAlternativeWindow mUISelectAlternativeWindow;
+        private UIItemWindow mUISelectAlternativeWindow;
 
         #endregion
     }

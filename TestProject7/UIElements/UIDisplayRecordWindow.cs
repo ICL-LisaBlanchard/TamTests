@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UIDisplayRecordButton
+        public WinButton UIDisplayRecordButton 
         {
             get
             {

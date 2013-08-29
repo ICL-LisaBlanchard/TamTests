@@ -12,46 +12,47 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Save the file as";
+            this.windowName = "Save the file as";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add("Save the file as");
+            this.WindowTitles.Add(this.windowName);
 
             #endregion
         }
 
         #region Properties
 
-        public UICancelWindow4 UICancelWindow
+        public UIItemWindow UICancelWindow
         {
             get
             {
                 if ((this.mUICancelWindow == null))
                 {
-                    this.mUICancelWindow = new UICancelWindow4(this);
+                    this.mUICancelWindow = new UIItemWindow(this, controlId: "2");
                 }
                 return this.mUICancelWindow;
             }
         }
 
-        public UIItemWindow20 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow20(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1001");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UISaveWindow UISaveWindow
+        public UIItemWindow UISaveWindow
         {
             get
             {
                 if ((this.mUISaveWindow == null))
                 {
-                    this.mUISaveWindow = new UISaveWindow(this);
+                    this.mUISaveWindow = new UIItemWindow(this, controlId: "1");
                 }
                 return this.mUISaveWindow;
             }
@@ -73,13 +74,15 @@
 
         #region Fields
 
-        private UICancelWindow4 mUICancelWindow;
+        private UIItemWindow mUICancelWindow;
 
-        private UIItemWindow20 mUIItemWindow;
+        private UIItemWindow mUIItemWindow;
 
-        private UISaveWindow mUISaveWindow;
+        private UIItemWindow mUISaveWindow;
 
         private UIDetailsPanePane mUIDetailsPanePane;
+
+        private readonly string windowName;
 
         #endregion
     }

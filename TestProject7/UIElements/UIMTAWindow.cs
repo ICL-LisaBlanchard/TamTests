@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UIMTAButton
+        public WinButton UIMTAButton 
         {
             get
             {

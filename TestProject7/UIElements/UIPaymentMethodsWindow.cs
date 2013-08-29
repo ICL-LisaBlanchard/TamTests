@@ -12,22 +12,23 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Payment Methods";
+            this.windowTitle = "Payment Methods";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Payment Methods");
+            this.WindowTitles.Add(this.windowTitle);
 
             #endregion
         }
 
         #region Properties
 
-        public UIOKWindow14 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow14(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "2");
                 }
                 return this.mUIOKWindow;
             }
@@ -37,7 +38,9 @@
 
         #region Fields
 
-        private UIOKWindow14 mUIOKWindow;
+        private UIItemWindow mUIOKWindow;
+
+        private string windowTitle;
 
         #endregion
     }

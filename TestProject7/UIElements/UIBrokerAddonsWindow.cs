@@ -12,22 +12,23 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Broker Add-ons";
+            this.windowTitle = "Broker Add-ons";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Broker Add-ons");
+            this.WindowTitles.Add(this.windowTitle);
 
             #endregion
         }
 
         #region Properties
 
-        public UIOKWindow19 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow19(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "4");
                 }
                 return this.mUIOKWindow;
             }
@@ -37,7 +38,9 @@
 
         #region Fields
 
-        private UIOKWindow19 mUIOKWindow;
+        private readonly string windowTitle;
+
+        private UIItemWindow mUIOKWindow;
 
         #endregion
     }

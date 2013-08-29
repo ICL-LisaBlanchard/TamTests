@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinClient UIQuotesResultsClient
+        public WinClient UIClient
         {
             get
             {

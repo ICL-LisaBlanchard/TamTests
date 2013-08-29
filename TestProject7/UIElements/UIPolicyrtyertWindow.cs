@@ -21,15 +21,15 @@
 
         #region Properties
 
-        public UIBillingScreenMOTOTESWindow UIBillingScreenMOTOTESWindow
+        public UIBillingScreenMotoTestWindow UIBillingScreenMotoTestWindow
         {
             get
             {
-                if ((this.mUIBillingScreenMOTOTESWindow == null))
+                if ((this.mUIBillingScreenMotoTestWindow == null))
                 {
-                    this.mUIBillingScreenMOTOTESWindow = new UIBillingScreenMOTOTESWindow(this);
+                    this.mUIBillingScreenMotoTestWindow = new UIBillingScreenMotoTestWindow(this);
                 }
-                return this.mUIBillingScreenMOTOTESWindow;
+                return this.mUIBillingScreenMotoTestWindow;
             }
         }
 
@@ -37,7 +37,7 @@
 
         #region Fields
 
-        private UIBillingScreenMOTOTESWindow mUIBillingScreenMOTOTESWindow;
+        private UIBillingScreenMotoTestWindow mUIBillingScreenMotoTestWindow;
 
         #endregion
     }

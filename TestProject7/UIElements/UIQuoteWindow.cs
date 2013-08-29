@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UIQuoteButton
+        public WinButton UIQuoteButton 
         {
             get
             {

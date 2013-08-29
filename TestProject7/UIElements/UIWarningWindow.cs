@@ -27,7 +27,7 @@
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, "Warning", "1");
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "1");
                 }
                 return this.mUIOKWindow;
             }

@@ -21,13 +21,13 @@
 
         #region Properties
 
-        public UITransactiontoinsertClient UITransactiontoinsertClient
+        public UIClient UIClient
         {
             get
             {
                 if ((this.mUITransactiontoinsertClient == null))
                 {
-                    this.mUITransactiontoinsertClient = new UITransactiontoinsertClient(this);
+                    this.mUITransactiontoinsertClient = new UIClient(this,);
                 }
                 return this.mUITransactiontoinsertClient;
             }
@@ -37,7 +37,7 @@
 
         #region Fields
 
-        private UITransactiontoinsertClient mUITransactiontoinsertClient;
+        private UIClient mUITransactiontoinsertClient;
 
         #endregion
     }

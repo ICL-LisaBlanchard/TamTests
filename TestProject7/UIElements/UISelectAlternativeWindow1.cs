@@ -19,7 +19,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         }
         
         #region Properties
-        public WinButton UISelectAlternativeButton
+        public WinControl UISelectAlternativeButton
         {
             get
             {

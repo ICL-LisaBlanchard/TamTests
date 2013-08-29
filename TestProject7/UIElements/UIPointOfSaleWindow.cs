@@ -12,34 +12,34 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Point Of Sale";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Point Of Sale");
+            this.WindowTitles.Add(this.windowTitle);
 
             #endregion
         }
 
         #region Properties
 
-        public UIDeferPrintingWindow UIDeferPrintingWindow
+        public UIItemWindow UIDeferPrintingWindow
         {
             get
             {
                 if ((this.mUIDeferPrintingWindow == null))
                 {
-                    this.mUIDeferPrintingWindow = new UIDeferPrintingWindow(this);
+                    this.mUIDeferPrintingWindow = new UIItemWindow(this, controlId: "3");
                 }
                 return this.mUIDeferPrintingWindow;
             }
         }
 
-        public UIOKWindow16 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow16(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "6");
                 }
                 return this.mUIOKWindow;
             }
@@ -55,8 +55,8 @@
 
                     #region Search Criteria
 
-                    this.mUIPointOfSaleClient.SearchProperties[UITestControl.PropertyNames.Name] = "Point Of Sale";
-                    this.mUIPointOfSaleClient.WindowTitles.Add("Point Of Sale");
+                    this.mUIPointOfSaleClient.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
+                    this.mUIPointOfSaleClient.WindowTitles.Add(this.windowTitle);
 
                     #endregion
                 }
@@ -68,11 +68,13 @@
 
         #region Fields
 
-        private UIDeferPrintingWindow mUIDeferPrintingWindow;
+        private UIItemWindow mUIDeferPrintingWindow;
 
-        private UIOKWindow16 mUIOKWindow;
+        private UIItemWindow mUIOKWindow;
 
         private WinClient mUIPointOfSaleClient;
+
+        private string windowTitle = "Point Of Sale";
 
         #endregion
     }

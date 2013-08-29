@@ -8,36 +8,31 @@
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIPolicyautotestWindow : WinWindow
     {
-        public UIPolicyautotestWindow()
-        {
-            #region Search Criteria
+        private const string WindowTitle = "Customer: autotest";
 
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6MDIForm";
-
-            #endregion
-        }
+        private const string WindowTitle2 = "Policy: autotest";
 
         #region Properties
 
-        public UIPolicyListWindow1 UIPolicyListWindow
+        public PolicyListWindow1 PolicyListWindow
         {
             get
             {
-                if ((this.mUIPolicyListWindow == null))
+                if ((this.mPolicyListWindow == null))
                 {
-                    this.mUIPolicyListWindow = new UIPolicyListWindow1(this);
+                    this.mPolicyListWindow = new PolicyListWindow1(this);
                 }
-                return this.mUIPolicyListWindow;
+                return this.mPolicyListWindow;
             }
         }
 
-        public UIItemWindow30 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow30(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "32");
                 }
                 return this.mUIItemWindow;
             }
@@ -55,13 +50,13 @@
             }
         }
 
-        public UIBillingScreenMOTOWindow UIBillingScreenMOTOWindow
+        public UIBillingScreenMotoWindow UIBillingScreenMotoWindow
         {
             get
             {
                 if ((this.mUIBillingScreenMOTOWindow == null))
                 {
-                    this.mUIBillingScreenMOTOWindow = new UIBillingScreenMOTOWindow(this);
+                    this.mUIBillingScreenMOTOWindow = new UIBillingScreenMotoWindow(this);
                 }
                 return this.mUIBillingScreenMOTOWindow;
             }
@@ -109,39 +104,39 @@
             }
         }
 
-        public UIBillingScreenHOMEWindow1 UIBillingScreenHOMEWindow1
+        public UIBillingScreenHomeWindow1 UIBillingScreenHomeWindow1
         {
             get
             {
                 if ((this.mUIBillingScreenHOMEWindow1 == null))
                 {
-                    this.mUIBillingScreenHOMEWindow1 = new UIBillingScreenHOMEWindow1(this);
+                    this.mUIBillingScreenHOMEWindow1 = new UIBillingScreenHomeWindow1(this);
                 }
                 return this.mUIBillingScreenHOMEWindow1;
             }
         }
 
-        public UIItemWindow115 UIItemWindow1
+        public UIItemWindow UIItemWindow1
         {
             get
             {
                 if ((this.mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow115(this);
+                    this.mUIItemWindow1 = new UIItemWindow(this, controlId: "26");
                 }
                 return this.mUIItemWindow1;
             }
         }
 
-        public UICUSTOMERSWindow1 UICUSTOMERSWindow
+        public UICustomersWindow1 UICustomersWindow
         {
             get
             {
-                if ((this.mUICUSTOMERSWindow == null))
+                if ((this.mUICustomersWindow == null))
                 {
-                    this.mUICUSTOMERSWindow = new UICUSTOMERSWindow1(this);
+                    this.mUICustomersWindow = new UICustomersWindow1(this);
                 }
-                return this.mUICUSTOMERSWindow;
+                return this.mUICustomersWindow;
             }
         }
 
@@ -149,13 +144,13 @@
 
         #region Fields
 
-        private UIPolicyListWindow1 mUIPolicyListWindow;
+        private PolicyListWindow1 mPolicyListWindow;
 
-        private UIItemWindow30 mUIItemWindow;
+        private UIItemWindow mUIItemWindow;
 
         private UIPolicyListWindow11 mUIPolicyListWindow1;
 
-        private UIBillingScreenMOTOWindow mUIBillingScreenMOTOWindow;
+        private UIBillingScreenMotoWindow mUIBillingScreenMOTOWindow;
 
         private UIApplicationMenuBar1 mUIApplicationMenuBar;
 
@@ -163,12 +158,21 @@
 
         private UIWorkspaceClient mUIWorkspaceClient;
 
-        private UIBillingScreenHOMEWindow1 mUIBillingScreenHOMEWindow1;
+        private UIBillingScreenHomeWindow1 mUIBillingScreenHOMEWindow1;
 
-        private UIItemWindow115 mUIItemWindow1;
+        private UIItemWindow mUIItemWindow1;
 
-        private UICUSTOMERSWindow1 mUICUSTOMERSWindow;
+        private UICustomersWindow1 mUICustomersWindow;
 
         #endregion
+
+        public UIPolicyautotestWindow()
+        {
+            #region Search Criteria
+
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6MDIForm";
+
+            #endregion
+        }
     }
 }

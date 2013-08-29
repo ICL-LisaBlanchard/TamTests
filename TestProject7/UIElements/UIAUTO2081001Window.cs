@@ -21,25 +21,25 @@
 
         #region Properties
 
-        public UIRebrokeWindow UIRebrokeWindow
+        public UIItemWindow UIRebrokeWindow
         {
             get
             {
                 if ((this.mUIRebrokeWindow == null))
                 {
-                    this.mUIRebrokeWindow = new UIRebrokeWindow(this);
+                    this.mUIRebrokeWindow = new UIItemWindow(this, "5");
                 }
                 return this.mUIRebrokeWindow;
             }
         }
 
-        public UIAmendRiskWindow UIAmendRiskWindow
+        public UIItemWindow UIAmendRiskWindow
         {
             get
             {
                 if ((this.mUIAmendRiskWindow == null))
                 {
-                    this.mUIAmendRiskWindow = new UIAmendRiskWindow(this);
+                    this.mUIAmendRiskWindow = new UIItemWindow(this, "6");
                 }
                 return this.mUIAmendRiskWindow;
             }
@@ -49,9 +49,9 @@
 
         #region Fields
 
-        private UIRebrokeWindow mUIRebrokeWindow;
+        private UIItemWindow mUIRebrokeWindow;
 
-        private UIAmendRiskWindow mUIAmendRiskWindow;
+        private UIItemWindow mUIAmendRiskWindow;
 
         #endregion
     }

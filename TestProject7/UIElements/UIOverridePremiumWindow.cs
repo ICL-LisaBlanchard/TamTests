@@ -12,46 +12,47 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Override Premium";
+            this.windowName = "Override Premium";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Override Premium");
+            this.WindowTitles.Add(this.windowName);
 
             #endregion
         }
 
         #region Properties
 
-        public UIItemWindow49 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow49(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "3");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIOKWindow21 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow21(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "4");
                 }
                 return this.mUIOKWindow;
             }
         }
 
-        public UIItemWindow120 UIItemWindow1
+        public UIItemWindow UIItemWindow1
         {
             get
             {
                 if ((this.mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow120(this);
+                    this.mUIItemWindow1 = new UIItemWindow(this, controlId: "1");
                 }
                 return this.mUIItemWindow1;
             }
@@ -61,11 +62,13 @@
 
         #region Fields
 
-        private UIItemWindow49 mUIItemWindow;
+        private UIItemWindow mUIItemWindow;
 
-        private UIOKWindow21 mUIOKWindow;
+        private UIItemWindow mUIOKWindow;
 
-        private UIItemWindow120 mUIItemWindow1;
+        private UIItemWindow mUIItemWindow1;
+
+        private string windowName;
 
         #endregion
     }

@@ -20,7 +20,7 @@
 
         #region Properties
 
-        public WinClient UICUSTOMERSClient
+        public WinClient UIClient
         {
             get
             {

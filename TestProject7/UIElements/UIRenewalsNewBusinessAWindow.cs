@@ -12,34 +12,35 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Renewals : New Business Accept";
+            this.windowTitle = "Renewals : New Business Accept";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Renewals : New Business Accept");
+            this.WindowTitles.Add(this.windowTitle);
 
             #endregion
         }
 
         #region Properties
 
-        public UIItemWindow70 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow70(this);
+                    this.mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIAcceptWindow2 UIAcceptWindow
+        public UIItemWindow UIAcceptWindow
         {
             get
             {
                 if ((this.mUIAcceptWindow == null))
                 {
-                    this.mUIAcceptWindow = new UIAcceptWindow2(this);
+                    this.mUIAcceptWindow = new UIItemWindow(this, controlId: "6");
                 }
                 return this.mUIAcceptWindow;
             }
@@ -49,9 +50,11 @@
 
         #region Fields
 
-        private UIItemWindow70 mUIItemWindow;
+        private readonly string windowTitle;
 
-        private UIAcceptWindow2 mUIAcceptWindow;
+        private UIItemWindow mUIItemWindow;
+
+        private UIItemWindow mUIAcceptWindow;
 
         #endregion
     }

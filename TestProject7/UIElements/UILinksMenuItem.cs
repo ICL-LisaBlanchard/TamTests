@@ -9,18 +9,20 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UILinksMenuItem : WinMenuItem
     {
-        
-        public UILinksMenuItem(UITestControl searchLimitContainer) : 
-            base(searchLimitContainer)
+        public UILinksMenuItem(UITestControl searchLimitContainer)
+            : base(searchLimitContainer)
         {
             #region Search Criteria
-            this.SearchProperties[WinMenuItem.PropertyNames.Name] = "Links";
+
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "Links";
             this.SearchConfigurations.Add(SearchConfiguration.ExpandWhileSearching);
             this.WindowTitles.Add("Policy: autotest autotest");
+
             #endregion
         }
-        
+
         #region Properties
+
         public UIItem3rdPartyIntegratMenuItem UIItem3rdPartyIntegratMenuItem
         {
             get
@@ -32,10 +34,13 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUIItem3rdPartyIntegratMenuItem;
             }
         }
+
         #endregion
-        
+
         #region Fields
+
         private UIItem3rdPartyIntegratMenuItem mUIItem3rdPartyIntegratMenuItem;
+
         #endregion
     }
 }

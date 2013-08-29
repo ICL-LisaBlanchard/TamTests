@@ -12,46 +12,47 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Household Rebroke Results";
+            this.windowTitle = "Household Rebroke Results";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Household Rebroke Results");
+            this.WindowTitles.Add(this.windowTitle);
 
             #endregion
         }
 
         #region Properties
 
-        public UIOKWindow37 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow37(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "10");
                 }
                 return this.mUIOKWindow;
             }
         }
 
-        public UIItemWindow74 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow74(this);
+                    this.mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UISelectAlternativeWindow1 UISelectAlternativeWindow
+        public UIItemWindow UISelectAlternativeWindow
         {
             get
             {
                 if ((this.mUISelectAlternativeWindow == null))
                 {
-                    this.mUISelectAlternativeWindow = new UISelectAlternativeWindow1(this);
+                    this.mUISelectAlternativeWindow = new UIItemWindow(this, controlId: "12");
                 }
                 return this.mUISelectAlternativeWindow;
             }
@@ -61,11 +62,13 @@
 
         #region Fields
 
-        private UIOKWindow37 mUIOKWindow;
+        private readonly string windowTitle;
 
-        private UIItemWindow74 mUIItemWindow;
+        private UIItemWindow mUIOKWindow;
 
-        private UISelectAlternativeWindow1 mUISelectAlternativeWindow;
+        private UIItemWindow mUIItemWindow;
+
+        private UIItemWindow mUISelectAlternativeWindow;
 
         #endregion
     }

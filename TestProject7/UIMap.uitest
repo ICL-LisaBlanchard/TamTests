@@ -7620,7 +7620,7 @@ insurE-com Household Quotation For R</PropertyCondition>
               </AndCondition>
               <SupportLevel>0</SupportLevel>
               <Descendants>
-                <UIObject ControlType="Client" Id="UIPleaseselectWHOtofolClient" FriendlyName="Please select WHO to follow up" SpecialControlType="None">
+                <UIObject ControlType="Client" Id="UIClient" FriendlyName="Please select WHO to follow up" SpecialControlType="None">
                   <TechnologyName>MSAA</TechnologyName>
                   <WindowTitles>
                     <WindowTitle>Please select WHO to follow up</WindowTitle>

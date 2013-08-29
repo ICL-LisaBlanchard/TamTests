@@ -20,13 +20,13 @@
 
         #region Properties
 
-        public UIItemListItem UIItemListItem
+        public UIItemUserDetails UIItemListItem
         {
             get
             {
                 if ((this.mUIItemListItem == null))
                 {
-                    this.mUIItemListItem = new UIItemListItem(this);
+                    this.mUIItemListItem = new UIItemUserDetails(this);
                 }
                 return this.mUIItemListItem;
             }
@@ -48,7 +48,7 @@
 
         #region Fields
 
-        private UIItemListItem mUIItemListItem;
+        private UIItemUserDetails mUIItemListItem;
 
         private UIWindowsSecurityPane mUIWindowsSecurityPane;
 

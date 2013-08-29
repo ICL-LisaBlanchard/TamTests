@@ -19,25 +19,25 @@
 
         #region Properties
 
-        public UIItemListItem1 UIItemListItem
+        public UIItemUserDetails UIItemListItem
         {
             get
             {
                 if ((this.mUIItemListItem == null))
                 {
-                    this.mUIItemListItem = new UIItemListItem1(this);
+                    this.mUIItemListItem = new UIItemUserDetails(this);
                 }
                 return this.mUIItemListItem;
             }
         }
 
-        public UIWindowsSecurityPane1 UIWindowsSecurityPane
+        public UIPane UIWindowsSecurityPane
         {
             get
             {
                 if ((this.mUIWindowsSecurityPane == null))
                 {
-                    this.mUIWindowsSecurityPane = new UIWindowsSecurityPane1(this);
+                    this.mUIWindowsSecurityPane = new UIPane(this, "Connect to www.insur-econnect.com");
                 }
                 return this.mUIWindowsSecurityPane;
             }
@@ -47,9 +47,9 @@
 
         #region Fields
 
-        private UIItemListItem1 mUIItemListItem;
+        private UIItemUserDetails mUIItemListItem;
 
-        private UIWindowsSecurityPane1 mUIWindowsSecurityPane;
+        private UIPane mUIWindowsSecurityPane;
 
         #endregion
     }

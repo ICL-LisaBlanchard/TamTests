@@ -8,209 +8,103 @@
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIQuoteResultsWindow : WinWindow
     {
-        public UIQuoteResultsWindow()
-        {
-            #region Search Criteria
-
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Quote Results";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Quote Results");
-
-            #endregion
-        }
+        private const string WindowName = "Quote Results";
 
         #region Properties
 
-        public UIItemWindow18 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow18(this);
+                    this.mUIItemWindow = new UIItemWindow(this, instance: "11", className: "ListView20WndClass");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UIAcceptWindow UIAcceptWindow
+        public UIItemWindow UIAcceptWindow
         {
             get
             {
                 if ((this.mUIAcceptWindow == null))
                 {
-                    this.mUIAcceptWindow = new UIAcceptWindow(this);
+                    this.mUIAcceptWindow = new UIItemWindow(this, controlId: "5");
                 }
                 return this.mUIAcceptWindow;
             }
         }
 
-        public WinTitleBar UIQuoteResultsTitleBar
-        {
-            get
-            {
-                if ((this.mUIQuoteResultsTitleBar == null))
-                {
-                    this.mUIQuoteResultsTitleBar = new WinTitleBar(this);
-
-                    #region Search Criteria
-
-                    this.mUIQuoteResultsTitleBar.WindowTitles.Add("Quote Results");
-
-                    #endregion
-                }
-                return this.mUIQuoteResultsTitleBar;
-            }
-        }
-
-        public WinClient UIQuoteResultsClient
-        {
-            get
-            {
-                if ((this.mUIQuoteResultsClient == null))
-                {
-                    this.mUIQuoteResultsClient = new WinClient(this);
-
-                    #region Search Criteria
-
-                    this.mUIQuoteResultsClient.SearchProperties[UITestControl.PropertyNames.Name] = "Quote Results";
-                    this.mUIQuoteResultsClient.WindowTitles.Add("Quote Results");
-
-                    #endregion
-                }
-                return this.mUIQuoteResultsClient;
-            }
-        }
-
-        public UIExitWindow2 UIExitWindow
+        public UIItemWindow UIExitWindow
         {
             get
             {
                 if ((this.mUIExitWindow == null))
                 {
-                    this.mUIExitWindow = new UIExitWindow2(this);
+                    this.mUIExitWindow = new UIItemWindow(this, controlId: "4");
                 }
                 return this.mUIExitWindow;
             }
         }
 
-        public UIQuoteDetailsWindow UIQuoteDetailsWindow
-        {
-            get
-            {
-                if ((this.mUIQuoteDetailsWindow == null))
-                {
-                    this.mUIQuoteDetailsWindow = new UIQuoteDetailsWindow(this);
-                }
-                return this.mUIQuoteDetailsWindow;
-            }
-        }
-
-        public UIPrintQuoteWindow UIPrintQuoteWindow
+        public UIItemWindow UIPrintQuoteWindow
         {
             get
             {
                 if ((this.mUIPrintQuoteWindow == null))
                 {
-                    this.mUIPrintQuoteWindow = new UIPrintQuoteWindow(this);
+                    this.mUIPrintQuoteWindow = new UIItemWindow(this, controlId: "6");
                 }
                 return this.mUIPrintQuoteWindow;
             }
         }
 
-        public UIDemandsNeedsWindow UIDemandsNeedsWindow
+        public UIItemWindow UIDemandsNeedsWindow
         {
             get
             {
                 if ((this.mUIDemandsNeedsWindow == null))
                 {
-                    this.mUIDemandsNeedsWindow = new UIDemandsNeedsWindow(this);
+                    this.mUIDemandsNeedsWindow = new UIItemWindow(this, controlId: "8");
                 }
                 return this.mUIDemandsNeedsWindow;
             }
         }
 
-        public UIPolicySummaryWindow UIPolicySummaryWindow
-        {
-            get
-            {
-                if ((this.mUIPolicySummaryWindow == null))
-                {
-                    this.mUIPolicySummaryWindow = new UIPolicySummaryWindow(this);
-                }
-                return this.mUIPolicySummaryWindow;
-            }
-        }
-
-        public UIComprehensiveWindow UIComprehensiveWindow
-        {
-            get
-            {
-                if ((this.mUIComprehensiveWindow == null))
-                {
-                    this.mUIComprehensiveWindow = new UIComprehensiveWindow(this);
-                }
-                return this.mUIComprehensiveWindow;
-            }
-        }
-
-        public UIItemWindow19 UIItemWindow1
-        {
-            get
-            {
-                if ((this.mUIItemWindow1 == null))
-                {
-                    this.mUIItemWindow1 = new UIItemWindow19(this);
-                }
-                return this.mUIItemWindow1;
-            }
-        }
-
-        public UIAWAPWindow UIAWAPWindow
+        public UIItemWindow UIAWAPWindow
         {
             get
             {
                 if ((this.mUIAWAPWindow == null))
                 {
-                    this.mUIAWAPWindow = new UIAWAPWindow(this);
+                    this.mUIAWAPWindow = new UIItemWindow(this, controlId: "3");
                 }
                 return this.mUIAWAPWindow;
             }
         }
 
-        public UIPremiumWindow UIPremiumWindow
+        public UIItemWindow UIPremiumWindow
         {
             get
             {
                 if ((this.mUIPremiumWindow == null))
                 {
-                    this.mUIPremiumWindow = new UIPremiumWindow(this);
+                    this.mUIPremiumWindow = new UIItemWindow(this, controlId: "15");
                 }
                 return this.mUIPremiumWindow;
             }
         }
 
-        public UIItemWindow25 UIItemWindow2
+        public UIItemWindow UIItemWindow2
         {
             get
             {
                 if ((this.mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow25(this);
+                    this.mUIItemWindow2 = new UIItemWindow(this, instance: "10", className: "ListView20WndClass");
                 }
                 return this.mUIItemWindow2;
-            }
-        }
-
-        public UIItemWindow33 UIItemWindow3
-        {
-            get
-            {
-                if ((this.mUIItemWindow3 == null))
-                {
-                    this.mUIItemWindow3 = new UIItemWindow33(this);
-                }
-                return this.mUIItemWindow3;
             }
         }
 
@@ -218,36 +112,33 @@
 
         #region Fields
 
-        private UIItemWindow18 mUIItemWindow;
+        private UIItemWindow mUIItemWindow;
 
-        private UIAcceptWindow mUIAcceptWindow;
+        private UIItemWindow mUIAcceptWindow;
 
-        private WinTitleBar mUIQuoteResultsTitleBar;
+        private UIItemWindow mUIExitWindow;
 
-        private WinClient mUIQuoteResultsClient;
+        private UIItemWindow mUIPrintQuoteWindow;
 
-        private UIExitWindow2 mUIExitWindow;
+        private UIItemWindow mUIDemandsNeedsWindow;
 
-        private UIQuoteDetailsWindow mUIQuoteDetailsWindow;
+        private UIItemWindow mUIAWAPWindow;
 
-        private UIPrintQuoteWindow mUIPrintQuoteWindow;
+        private UIItemWindow mUIPremiumWindow;
 
-        private UIDemandsNeedsWindow mUIDemandsNeedsWindow;
-
-        private UIPolicySummaryWindow mUIPolicySummaryWindow;
-
-        private UIComprehensiveWindow mUIComprehensiveWindow;
-
-        private UIItemWindow19 mUIItemWindow1;
-
-        private UIAWAPWindow mUIAWAPWindow;
-
-        private UIPremiumWindow mUIPremiumWindow;
-
-        private UIItemWindow25 mUIItemWindow2;
-
-        private UIItemWindow33 mUIItemWindow3;
+        private UIItemWindow mUIItemWindow2;
 
         #endregion
+
+        public UIQuoteResultsWindow()
+        {
+            #region Search Criteria
+
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "Quote Results";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            this.WindowTitles.Add(WindowName);
+
+            #endregion
+        }
     }
 }

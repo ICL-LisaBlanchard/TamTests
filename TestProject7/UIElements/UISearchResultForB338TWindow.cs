@@ -8,31 +8,36 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UISearchResultForB338TWindow : WinWindow
     {
-        
         public UISearchResultForB338TWindow()
         {
             #region Search Criteria
-            this.SearchProperties.Add(new PropertyExpression(WinWindow.PropertyNames.Name, "Search Result For", PropertyExpressionOperator.Contains));
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "ThunderRT6FormDC";
+
+            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Search Result For", PropertyExpressionOperator.Contains));
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+
             #endregion
         }
-        
+
         #region Properties
-        public UIOKWindow9 UIOKWindow
+
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow9(this);
+                    this.mUIOKWindow = new UIItemWindow(this, "3");
                 }
                 return this.mUIOKWindow;
             }
         }
+
         #endregion
-        
+
         #region Fields
-        private UIOKWindow9 mUIOKWindow;
+
+        private UIItemWindow mUIOKWindow;
+
         #endregion
     }
 }

@@ -12,10 +12,12 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[PropertyNames.Name] = "insurE-com System Maintenance";
+            this.windowName1 = "insurE-com System Maintenance";
+            this.SearchProperties[PropertyNames.Name] = this.windowName1;
             this.SearchProperties[PropertyNames.ClassName] = "IEFrame";
-            this.WindowTitles.Add("insurE-com System Maintenance");
-            this.WindowTitles.Add("Blank Page");
+            this.WindowTitles.Add(this.windowName1);
+            this.windowName2 = "Blank Page";
+            this.WindowTitles.Add(this.windowName2);
 
             #endregion
         }
@@ -63,13 +65,13 @@
             }
         }
 
-        public UIItemWindow59 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow59(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "41477");
                 }
                 return this.mUIItemWindow;
             }
@@ -79,13 +81,17 @@
 
         #region Fields
 
+        private readonly string windowName1;
+
+        private readonly string windowName2;
+
         private UILeftbarFrame mUILeftbarFrame;
 
         private UIContentFrame mUIContentFrame;
 
         private UIInsurEcomSystemMaintTitleBar mUIInsurEcomSystemMaintTitleBar;
 
-        private UIItemWindow59 mUIItemWindow;
+        private UIItemWindow mUIItemWindow;
 
         #endregion
     }

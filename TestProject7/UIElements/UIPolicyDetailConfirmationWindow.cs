@@ -6,52 +6,53 @@
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
-    public class UIPolicyDetailConfirmaWindow : WinWindow
+    public class UIPolicyDetailConfirmationWindow : WinWindow
     {
-        public UIPolicyDetailConfirmaWindow()
+        public UIPolicyDetailConfirmationWindow()
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Policy Detail Confirmation";
+            this.windowName = "Policy Detail Confirmation";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Policy Detail Confirmation");
+            this.WindowTitles.Add(this.windowName);
 
             #endregion
         }
 
         #region Properties
 
-        public UIItemWindow44 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow44(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "2");
                 }
                 return this.mUIItemWindow;
             }
         }
 
-        public UILookupWindow2 UILookupWindow
+        public UIItemWindow UILookupWindow
         {
             get
             {
                 if ((this.mUILookupWindow == null))
                 {
-                    this.mUILookupWindow = new UILookupWindow2(this);
+                    this.mUILookupWindow = new UIItemWindow(this, controlId: "8");
                 }
                 return this.mUILookupWindow;
             }
         }
 
-        public UIConfirmWindow1 UIConfirmWindow
+        public UIItemWindow UIConfirmWindow
         {
             get
             {
                 if ((this.mUIConfirmWindow == null))
                 {
-                    this.mUIConfirmWindow = new UIConfirmWindow1(this);
+                    this.mUIConfirmWindow = new UIItemWindow(this, controlId: "5", instance: "2");
                 }
                 return this.mUIConfirmWindow;
             }
@@ -61,11 +62,13 @@
 
         #region Fields
 
-        private UIItemWindow44 mUIItemWindow;
+        private readonly string windowName;
 
-        private UILookupWindow2 mUILookupWindow;
+        private UIItemWindow mUIItemWindow;
 
-        private UIConfirmWindow1 mUIConfirmWindow;
+        private UIItemWindow mUILookupWindow;
+
+        private UIItemWindow mUIConfirmWindow;
 
         #endregion
     }

@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UIPremiumButton
+        public WinButton UIPremiumButton 
         {
             get
             {

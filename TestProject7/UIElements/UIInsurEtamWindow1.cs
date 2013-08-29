@@ -14,7 +14,7 @@
 
             this.SearchProperties[UITestControl.PropertyNames.Name] = "Personal Lines";
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add("insur-E.tam");
+            this.WindowTitles.Add(this.windowTitle);
 
             #endregion
         }
@@ -33,39 +33,51 @@
             }
         }
 
-        public UIYesWindow1 UIYesWindow
+        public UIItemWindow UIYesWindow
         {
             get
             {
                 if ((this.mUIYesWindow == null))
                 {
-                    this.mUIYesWindow = new UIYesWindow1(this);
+                    this.mUIYesWindow = new UIItemWindow(this, controlId: "6");
                 }
                 return this.mUIYesWindow;
             }
         }
 
-        public UIOKWindow12 UIOKWindow
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow12(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "2");
                 }
                 return this.mUIOKWindow;
             }
         }
 
-        public UINOWindow1 UINOWindow
+        public UIItemWindow UINoWindow
         {
             get
             {
-                if ((this.mUINOWindow == null))
+                if ((this.mUINoWindow == null))
                 {
-                    this.mUINOWindow = new UINOWindow1(this);
+                    this.mUINoWindow = new UIItemWindow(this, controlId: "7");
                 }
-                return this.mUINOWindow;
+                return this.mUINoWindow;
+            }
+        }
+
+        public UIItemWindow UIOKWindow1
+        {
+            get
+            {
+                if ((this.mUIOKWindow1 == null))
+                {
+                    this.mUIOKWindow1 = new UIItemWindow(this, controlId: "1");
+                }
+                return this.mUIOKWindow1;
             }
         }
 
@@ -79,25 +91,13 @@
 
                     #region Search Criteria
 
-                    this.mUIInsurEtamDialog.SearchProperties[UITestControl.PropertyNames.Name] = "insur-E.tam";
+                    this.mUIInsurEtamDialog.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
                     this.mUIInsurEtamDialog.SearchProperties[UITestControl.PropertyNames.ControlType] = "Dialog";
-                    this.mUIInsurEtamDialog.WindowTitles.Add("insur-E.tam");
+                    this.mUIInsurEtamDialog.WindowTitles.Add(this.windowTitle);
 
                     #endregion
                 }
                 return this.mUIInsurEtamDialog;
-            }
-        }
-
-        public UIOKWindow13 UIOKWindow1
-        {
-            get
-            {
-                if ((this.mUIOKWindow1 == null))
-                {
-                    this.mUIOKWindow1 = new UIOKWindow13(this);
-                }
-                return this.mUIOKWindow1;
             }
         }
 
@@ -107,15 +107,17 @@
 
         private UIAcceptthisquoteNotOvWindow mUIAcceptthisquoteNotOvWindow;
 
-        private UIYesWindow1 mUIYesWindow;
+        private UIItemWindow mUIYesWindow;
 
-        private UIOKWindow12 mUIOKWindow;
+        private UIItemWindow mUIOKWindow;
 
-        private UINOWindow1 mUINOWindow;
+        private UIItemWindow mUINoWindow;
 
         private WinControl mUIInsurEtamDialog;
 
-        private UIOKWindow13 mUIOKWindow1;
+        private UIItemWindow mUIOKWindow1;
+
+        private string windowTitle = "insur-E.tam";
 
         #endregion
     }

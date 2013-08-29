@@ -39,13 +39,13 @@
             }
         }
 
-        public UIItemWindow38 UIItemWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow38(this);
+                    this.mUIItemWindow = new UIItemWindow(this, className: "NetUIHWND", accessible: "Ribbon");
                 }
                 return this.mUIItemWindow;
             }
@@ -55,9 +55,11 @@
 
         #region Fields
 
+        private readonly string windowName = "Demands&Needs(Motor) [Compatibility Mode] - Microsoft Word";
+
         private WinClient mUIDemandsNeedsMotorComClient;
 
-        private UIItemWindow38 mUIItemWindow;
+        private UIItemWindow mUIItemWindow;
 
         #endregion
     }

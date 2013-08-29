@@ -14,20 +14,22 @@
             #region Search Criteria
 
             this.SearchProperties[WinControl.PropertyNames.ControlId] = "32769";
-            this.WindowTitles.Add("Policy: autotest");
+            this.WindowTitles.Add(WindowTitle);
 
             #endregion
         }
 
+        private const string WindowTitle = "Policy: autotest";
+
         #region Properties
 
-        public UIDetailWindow2 UIDetailWindow
+        public UIItemWindow UIDetailWindow
         {
             get
             {
                 if ((this.mUIDetailWindow == null))
                 {
-                    this.mUIDetailWindow = new UIDetailWindow2(this);
+                    this.mUIDetailWindow = new UIItemWindow(this, controlId: "6");
                 }
                 return this.mUIDetailWindow;
             }
@@ -37,7 +39,7 @@
 
         #region Fields
 
-        private UIDetailWindow2 mUIDetailWindow;
+        private UIItemWindow mUIDetailWindow;
 
         #endregion
     }

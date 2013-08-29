@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UIRegressButton
+        public WinButton UIRegressButton 
         {
             get
             {

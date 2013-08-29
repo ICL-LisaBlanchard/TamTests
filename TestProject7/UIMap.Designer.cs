@@ -46,18 +46,7 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UITheAgencyManagerWindow UITheAgencyManagerWindow
-        {
-            get
-            {
-                if ((this.mUITheAgencyManagerWindow == null))
-                {
-                    this.mUITheAgencyManagerWindow = new UITheAgencyManagerWindow();
-                }
-                return this.mUITheAgencyManagerWindow;
-            }
-        }
-        
+
         public UITheAgencyManagerWindow1 UITheAgencyManagerWindow1
         {
             get
@@ -70,13 +59,13 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UICustomertxt1tdsfsWindow UICustomertxt1tdsfsWindow
+        public UICustomertxt1TdsfsWindow UICustomertxt1tdsfsWindow
         {
             get
             {
                 if ((this.mUICustomertxt1tdsfsWindow == null))
                 {
-                    this.mUICustomertxt1tdsfsWindow = new UICustomertxt1tdsfsWindow();
+                    this.mUICustomertxt1tdsfsWindow = new UICustomertxt1TdsfsWindow();
                 }
                 return this.mUICustomertxt1tdsfsWindow;
             }
@@ -86,11 +75,8 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIAssignClientNumberWindow == null))
-                {
-                    this.mUIAssignClientNumberWindow = new UIAssignClientNumberWindow();
-                }
-                return this.mUIAssignClientNumberWindow;
+                return new UIAssignClientNumberWindow();
+     
             }
         }
         
@@ -393,43 +379,7 @@ namespace AppliedSystems.Tam.Ui.Tests
                 return this.mUIDemandsNeedsMotorComWindow;
             }
         }
-        
-        public UIItemWindow39 UIItemWindow
-        {
-            get
-            {
-                if ((this.mUIItemWindow == null))
-                {
-                    this.mUIItemWindow = new UIItemWindow39();
-                }
-                return this.mUIItemWindow;
-            }
-        }
-        
-        public UIItemWindow117 UIItemWindow1
-        {
-            get
-            {
-                if ((this.mUIItemWindow1 == null))
-                {
-                    this.mUIItemWindow1 = new UIItemWindow117();
-                }
-                return this.mUIItemWindow1;
-            }
-        }
-        
-        public UIConfirmSaveAsWindow UIConfirmSaveAsWindow
-        {
-            get
-            {
-                if ((this.mUIConfirmSaveAsWindow == null))
-                {
-                    this.mUIConfirmSaveAsWindow = new UIConfirmSaveAsWindow();
-                }
-                return this.mUIConfirmSaveAsWindow;
-            }
-        }
-        
+
         public UIQuotesResultsWindow UIQuotesResultsWindow
         {
             get
@@ -454,63 +404,15 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UIPolicyDetailConfirmaWindow UIPolicyDetailConfirmaWindow
+        public UIPolicyDetailConfirmationWindow UIPolicyDetailConfirmationWindow
         {
             get
             {
-                if ((this.mUIPolicyDetailConfirmaWindow == null))
+                if ((this.mUIPolicyDetailConfirmationWindow == null))
                 {
-                    this.mUIPolicyDetailConfirmaWindow = new UIPolicyDetailConfirmaWindow();
+                    this.mUIPolicyDetailConfirmationWindow = new UIPolicyDetailConfirmationWindow();
                 }
-                return this.mUIPolicyDetailConfirmaWindow;
-            }
-        }
-        
-        public UIKV31Window UIKV31Window
-        {
-            get
-            {
-                if ((this.mUIKV31Window == null))
-                {
-                    this.mUIKV31Window = new UIKV31Window();
-                }
-                return this.mUIKV31Window;
-            }
-        }
-        
-        public UIBarcodePrinterWindow UIBarcodePrinterWindow
-        {
-            get
-            {
-                if ((this.mUIBarcodePrinterWindow == null))
-                {
-                    this.mUIBarcodePrinterWindow = new UIBarcodePrinterWindow();
-                }
-                return this.mUIBarcodePrinterWindow;
-            }
-        }
-        
-        public UIDemandsNeedsHouseholWindow UIDemandsNeedsHouseholWindow
-        {
-            get
-            {
-                if ((this.mUIDemandsNeedsHouseholWindow == null))
-                {
-                    this.mUIDemandsNeedsHouseholWindow = new UIDemandsNeedsHouseholWindow();
-                }
-                return this.mUIDemandsNeedsHouseholWindow;
-            }
-        }
-        
-        public UIPolicyWindow UIPolicyWindow
-        {
-            get
-            {
-                if ((this.mUIPolicyWindow == null))
-                {
-                    this.mUIPolicyWindow = new UIPolicyWindow();
-                }
-                return this.mUIPolicyWindow;
+                return this.mUIPolicyDetailConfirmationWindow;
             }
         }
         
@@ -537,31 +439,7 @@ namespace AppliedSystems.Tam.Ui.Tests
                 return this.mUIQuoteSelectListWindow;
             }
         }
-        
-        public UIUpdateGeneralTransacWindow UIUpdateGeneralTransacWindow
-        {
-            get
-            {
-                if ((this.mUIUpdateGeneralTransacWindow == null))
-                {
-                    this.mUIUpdateGeneralTransacWindow = new UIUpdateGeneralTransacWindow();
-                }
-                return this.mUIUpdateGeneralTransacWindow;
-            }
-        }
-        
-        public UITransactionListWindow UITransactionListWindow
-        {
-            get
-            {
-                if ((this.mUITransactionListWindow == null))
-                {
-                    this.mUITransactionListWindow = new UITransactionListWindow();
-                }
-                return this.mUITransactionListWindow;
-            }
-        }
-        
+
         public UIOverridePremiumWindow UIOverridePremiumWindow
         {
             get
@@ -597,28 +475,16 @@ namespace AppliedSystems.Tam.Ui.Tests
                 return this.mUIProductSelectionWindow;
             }
         }
-        
-        public UITamXMLImportCustomerWindow UITamXMLImportCustomerWindow
+
+        public UIPleaseSelectWhoToFolWindow UIPleaseSelectWhoToFolWindow
         {
             get
             {
-                if ((this.mUITamXMLImportCustomerWindow == null))
+                if ((this.mUIPleaseSelectWhoToFolWindow == null))
                 {
-                    this.mUITamXMLImportCustomerWindow = new UITamXMLImportCustomerWindow();
+                    this.mUIPleaseSelectWhoToFolWindow = new UIPleaseSelectWhoToFolWindow();
                 }
-                return this.mUITamXMLImportCustomerWindow;
-            }
-        }
-        
-        public UIPleaseselectWHOtofolWindow UIPleaseselectWHOtofolWindow
-        {
-            get
-            {
-                if ((this.mUIPleaseselectWHOtofolWindow == null))
-                {
-                    this.mUIPleaseselectWHOtofolWindow = new UIPleaseselectWHOtofolWindow();
-                }
-                return this.mUIPleaseselectWHOtofolWindow;
+                return this.mUIPleaseSelectWhoToFolWindow;
             }
         }
         
@@ -694,30 +560,6 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UITestProject7Window UITestProject7Window
-        {
-            get
-            {
-                if ((this.mUITestProject7Window == null))
-                {
-                    this.mUITestProject7Window = new UITestProject7Window();
-                }
-                return this.mUITestProject7Window;
-            }
-        }
-        
-        public UIRegistryEditorWindow UIRegistryEditorWindow
-        {
-            get
-            {
-                if ((this.mUIRegistryEditorWindow == null))
-                {
-                    this.mUIRegistryEditorWindow = new UIRegistryEditorWindow();
-                }
-                return this.mUIRegistryEditorWindow;
-            }
-        }
-        
         public UIBlankPageMicrosoftInWindow UIBlankPageMicrosoftInWindow
         {
             get
@@ -763,18 +605,6 @@ namespace AppliedSystems.Tam.Ui.Tests
                     this.mUISearchResultForBN16BWindow = new UISearchResultForBN16BWindow();
                 }
                 return this.mUISearchResultForBN16BWindow;
-            }
-        }
-        
-        public UIRunWindow UIRunWindow
-        {
-            get
-            {
-                if ((this.mUIRunWindow == null))
-                {
-                    this.mUIRunWindow = new UIRunWindow();
-                }
-                return this.mUIRunWindow;
             }
         }
         
@@ -1090,54 +920,6 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UISignonErrorWindow UISignonErrorWindow
-        {
-            get
-            {
-                if ((this.mUISignonErrorWindow == null))
-                {
-                    this.mUISignonErrorWindow = new UISignonErrorWindow();
-                }
-                return this.mUISignonErrorWindow;
-            }
-        }
-        
-        public UINewCustomerDAFS001Window UINewCustomerDAFS001Window
-        {
-            get
-            {
-                if ((this.mUINewCustomerDAFS001Window == null))
-                {
-                    this.mUINewCustomerDAFS001Window = new UINewCustomerDAFS001Window();
-                }
-                return this.mUINewCustomerDAFS001Window;
-            }
-        }
-        
-        public UIProgramManagerWindow UIProgramManagerWindow
-        {
-            get
-            {
-                if ((this.mUIProgramManagerWindow == null))
-                {
-                    this.mUIProgramManagerWindow = new UIProgramManagerWindow();
-                }
-                return this.mUIProgramManagerWindow;
-            }
-        }
-        
-        public UIMicrosoftWordViewerWindow UIMicrosoftWordViewerWindow
-        {
-            get
-            {
-                if ((this.mUIMicrosoftWordViewerWindow == null))
-                {
-                    this.mUIMicrosoftWordViewerWindow = new UIMicrosoftWordViewerWindow();
-                }
-                return this.mUIMicrosoftWordViewerWindow;
-            }
-        }
-        
         public UIWindowsSecurityWindow1 UIWindowsSecurityWindow1
         {
             get
@@ -1178,14 +960,10 @@ namespace AppliedSystems.Tam.Ui.Tests
         #region Fields
         private UITheAgencyManagerSignWindow mUITheAgencyManagerSignWindow;
         
-        private UITheAgencyManagerWindow mUITheAgencyManagerWindow;
-        
         private UITheAgencyManagerWindow1 mUITheAgencyManagerWindow1;
         
-        private UICustomertxt1tdsfsWindow mUICustomertxt1tdsfsWindow;
-        
-        private UIAssignClientNumberWindow mUIAssignClientNumberWindow;
-        
+        private UICustomertxt1TdsfsWindow mUICustomertxt1tdsfsWindow;
+               
         private UIVerifyWindow mUIVerifyWindow;
         
         private UISelectaPolicyNumberWindow mUISelectaPolicyNumberWindow;
@@ -1236,43 +1014,23 @@ namespace AppliedSystems.Tam.Ui.Tests
         
         private UIDemandsNeedsMotorComWindow mUIDemandsNeedsMotorComWindow;
         
-        private UIItemWindow39 mUIItemWindow;
-        
-        private UIItemWindow117 mUIItemWindow1;
-        
-        private UIConfirmSaveAsWindow mUIConfirmSaveAsWindow;
-        
         private UIQuotesResultsWindow mUIQuotesResultsWindow;
         
         private UIBrokerAddonsWindow mUIBrokerAddonsWindow;
         
-        private UIPolicyDetailConfirmaWindow mUIPolicyDetailConfirmaWindow;
-        
-        private UIKV31Window mUIKV31Window;
-        
-        private UIBarcodePrinterWindow mUIBarcodePrinterWindow;
-        
-        private UIDemandsNeedsHouseholWindow mUIDemandsNeedsHouseholWindow;
-        
-        private UIPolicyWindow mUIPolicyWindow;
+        private UIPolicyDetailConfirmationWindow mUIPolicyDetailConfirmationWindow;
         
         private UIAcceptWithAnotherProWindow mUIAcceptWithAnotherProWindow;
         
         private UIQuoteSelectListWindow mUIQuoteSelectListWindow;
-        
-        private UIUpdateGeneralTransacWindow mUIUpdateGeneralTransacWindow;
-        
-        private UITransactionListWindow mUITransactionListWindow;
         
         private UIOverridePremiumWindow mUIOverridePremiumWindow;
         
         private UIWhichpolicywouldyoulWindow mUIWhichpolicywouldyoulWindow;
         
         private UIProductSelectionWindow mUIProductSelectionWindow;
-        
-        private UITamXMLImportCustomerWindow mUITamXMLImportCustomerWindow;
-        
-        private UIPleaseselectWHOtofolWindow mUIPleaseselectWHOtofolWindow;
+               
+        private UIPleaseSelectWhoToFolWindow mUIPleaseSelectWhoToFolWindow;
         
         private UIMidTermAdjustmentsWindow mUIMidTermAdjustmentsWindow;
         
@@ -1286,10 +1044,6 @@ namespace AppliedSystems.Tam.Ui.Tests
         
         private UIOpenWindow mUIOpenWindow;
         
-        private UITestProject7Window mUITestProject7Window;
-        
-        private UIRegistryEditorWindow mUIRegistryEditorWindow;
-        
         private UIBlankPageMicrosoftInWindow mUIBlankPageMicrosoftInWindow;
         
         private UIWindowsSecurityWindow mUIWindowsSecurityWindow;
@@ -1297,8 +1051,6 @@ namespace AppliedSystems.Tam.Ui.Tests
         private UIInsurEcomSystemMaintWindow mUIInsurEcomSystemMaintWindow;
         
         private UISearchResultForBN16BWindow mUISearchResultForBN16BWindow;
-        
-        private UIRunWindow mUIRunWindow;
         
         private UIRegressIETamPolicyWindow mUIRegressIETamPolicyWindow;
         
@@ -1351,14 +1103,6 @@ namespace AppliedSystems.Tam.Ui.Tests
         private UIAUTO2311001Window mUIAUTO2311001Window;
         
         private UIRenewalsNewBusinessAWindow1 mUIRenewalsNewBusinessAWindow1;
-        
-        private UISignonErrorWindow mUISignonErrorWindow;
-        
-        private UINewCustomerDAFS001Window mUINewCustomerDAFS001Window;
-        
-        private UIProgramManagerWindow mUIProgramManagerWindow;
-        
-        private UIMicrosoftWordViewerWindow mUIMicrosoftWordViewerWindow;
         
         private UIWindowsSecurityWindow1 mUIWindowsSecurityWindow1;
         

@@ -22,7 +22,7 @@
 
         #region Properties
 
-        public WinButton UICloseButton
+        public WinButton UICloseButton 
         {
             get
             {

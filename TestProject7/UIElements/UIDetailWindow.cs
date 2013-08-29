@@ -8,17 +8,19 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIDetailWindow : WinWindow
     {
-        
-        public UIDetailWindow(UITestControl searchLimitContainer) : 
-            base(searchLimitContainer)
+        public UIDetailWindow(UITestControl searchLimitContainer)
+            : base(searchLimitContainer)
         {
             #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "6";
+
+            this.SearchProperties[WinControl.PropertyNames.ControlId] = "6";
             this.WindowTitles.Add("Policy: autotest autotest");
+
             #endregion
         }
-        
+
         #region Properties
+
         public WinButton UIDetailButton
         {
             get
@@ -26,18 +28,24 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 if ((this.mUIDetailButton == null))
                 {
                     this.mUIDetailButton = new WinButton(this);
+
                     #region Search Criteria
-                    this.mUIDetailButton.SearchProperties[WinButton.PropertyNames.Name] = "Detail";
+
+                    this.mUIDetailButton.SearchProperties[UITestControl.PropertyNames.Name] = "Detail";
                     this.mUIDetailButton.WindowTitles.Add("Policy: autotest autotest");
+
                     #endregion
                 }
                 return this.mUIDetailButton;
             }
         }
+
         #endregion
-        
+
         #region Fields
+
         private WinButton mUIDetailButton;
+
         #endregion
     }
 }

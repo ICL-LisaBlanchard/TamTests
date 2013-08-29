@@ -8,316 +8,296 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIMotorQuotesWindow : WinWindow
     {
-        
-        public UIMotorQuotesWindow(UITestControl searchLimitContainer) : 
-            base(searchLimitContainer)
+        public UIMotorQuotesWindow(UITestControl searchLimitContainer)
+            : base(searchLimitContainer)
         {
             #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "32768";
+
+            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32768";
+
             #endregion
         }
-        
+
         #region Properties
-        public UIItemWindow16 UIItemWindow
+
+        private const string WindowTitle = "insur-E.tam";
+
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow16(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "2", instance: "3");
                 }
                 return this.mUIItemWindow;
             }
         }
-        
-        public UICalculateQuoteWindow UICalculateQuoteWindow
+
+        public UIItemWindow UICalculateQuoteWindow
         {
             get
             {
                 if ((this.mUICalculateQuoteWindow == null))
                 {
-                    this.mUICalculateQuoteWindow = new UICalculateQuoteWindow(this);
+                    this.mUICalculateQuoteWindow = new UIItemWindow(this, controlId: "21");
                 }
                 return this.mUICalculateQuoteWindow;
             }
         }
-        
-        public UIItemWindow17 UIItemWindow1
+
+        public UIItemWindow UIItemWindow1
         {
             get
             {
                 if ((this.mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow17(this);
+                    this.mUIItemWindow1 = new UIItemWindow(this, controlId: "32");
                 }
                 return this.mUIItemWindow1;
             }
         }
-        
-        public UIItemWindow24 UIItemWindow2
+
+        public UIItemWindow UIItemWindow2
         {
             get
             {
                 if ((this.mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow24(this);
+                    this.mUIItemWindow2 = new UIItemWindow(this, controlId: "102");
                 }
                 return this.mUIItemWindow2;
             }
         }
-        
-        public UIItemWindow113 UIItemWindow11
+
+        public UIItemWindow UIItemWindow11
         {
             get
             {
                 if ((this.mUIItemWindow11 == null))
                 {
-                    this.mUIItemWindow11 = new UIItemWindow113(this);
+                    this.mUIItemWindow11 = new UIItemWindow(this, controlId: "101");
                 }
                 return this.mUIItemWindow11;
             }
         }
-        
-        public UIItemWindow32 UIItemWindow3
-        {
-            get
-            {
-                if ((this.mUIItemWindow3 == null))
-                {
-                    this.mUIItemWindow3 = new UIItemWindow32(this);
-                }
-                return this.mUIItemWindow3;
-            }
-        }
-        
-        public UIItemWindow211 UIItemWindow21
+
+        public UIItemWindow UIItemWindow21
         {
             get
             {
                 if ((this.mUIItemWindow21 == null))
                 {
-                    this.mUIItemWindow21 = new UIItemWindow211(this);
+                    this.mUIItemWindow21 = new UIItemWindow(this, controlId: "96");
                 }
                 return this.mUIItemWindow21;
             }
         }
-        
-        public UIItemWindow311 UIItemWindow31
+
+        public UIItemWindow UIItemWindow31
         {
             get
             {
                 if ((this.mUIItemWindow31 == null))
                 {
-                    this.mUIItemWindow31 = new UIItemWindow311(this);
+                    this.mUIItemWindow31 = new UIItemWindow(this, controlId: "96");
                 }
                 return this.mUIItemWindow31;
             }
         }
-        
-        public UIItemWindow42 UIItemWindow4
+
+        public UIItemWindow UIItemWindow4
         {
             get
             {
                 if ((this.mUIItemWindow4 == null))
                 {
-                    this.mUIItemWindow4 = new UIItemWindow42(this);
+                    this.mUIItemWindow4 = new UIItemWindow(this, controlId: "1", instance: "2");
                 }
                 return this.mUIItemWindow4;
             }
         }
-        
-        public UIItemWindow52 UIItemWindow5
+
+        public UIItemWindow UIItemWindow5
         {
             get
             {
                 if ((this.mUIItemWindow5 == null))
                 {
-                    this.mUIItemWindow5 = new UIItemWindow52(this);
+                    this.mUIItemWindow5 = new UIItemWindow(this, controlId: "1", instance: "3");
                 }
                 return this.mUIItemWindow5;
             }
         }
-        
-        public UIItemWindow511 UIItemWindow51
-        {
-            get
-            {
-                if ((this.mUIItemWindow51 == null))
-                {
-                    this.mUIItemWindow51 = new UIItemWindow511(this);
-                }
-                return this.mUIItemWindow51;
-            }
-        }
-        
-        public UILookupWindow1 UILookupWindow
+
+        public UIItemWindow UILookupWindow
         {
             get
             {
                 if ((this.mUILookupWindow == null))
                 {
-                    this.mUILookupWindow = new UILookupWindow1(this);
+                    this.mUILookupWindow = new UIItemWindow(this, controlId: "8", instance: "2");
                 }
                 return this.mUILookupWindow;
             }
         }
-        
-        public UIItemWindow61 UIItemWindow6
+
+        public UIItemWindow UIItemWindow6
         {
             get
             {
                 if ((this.mUIItemWindow6 == null))
                 {
-                    this.mUIItemWindow6 = new UIItemWindow61(this);
+                    this.mUIItemWindow6 = new UIItemWindow(this, controlId: "7", instance: "2");
                 }
                 return this.mUIItemWindow6;
             }
         }
-        
-        public UIItemWindow71 UIItemWindow7
+
+        public UIItemWindow UIItemWindow7
         {
             get
             {
                 if ((this.mUIItemWindow7 == null))
                 {
-                    this.mUIItemWindow7 = new UIItemWindow71(this);
+                    this.mUIItemWindow7 = new UIItemWindow(this, controlId: "5", instance: "2");
                 }
                 return this.mUIItemWindow7;
             }
         }
-        
-        public UINextWindow UINextWindow
+
+        public UIItemWindow UINextWindow
         {
             get
             {
                 if ((this.mUINextWindow == null))
                 {
-                    this.mUINextWindow = new UINextWindow(this);
+                    this.mUINextWindow = new UIItemWindow(this, controlId: "82");
                 }
                 return this.mUINextWindow;
             }
         }
-        
-        public UIItemWindow81 UIItemWindow8
+
+        public UIItemWindow UIItemWindow8
         {
             get
             {
                 if ((this.mUIItemWindow8 == null))
                 {
-                    this.mUIItemWindow8 = new UIItemWindow81(this);
+                    this.mUIItemWindow8 = new UIItemWindow(this, controlId: "1", instance: "4");
                 }
                 return this.mUIItemWindow8;
             }
         }
-        
-        public UINextWindow1 UINextWindow1
+
+        public UIItemWindow UINextWindow1
         {
             get
             {
                 if ((this.mUINextWindow1 == null))
                 {
-                    this.mUINextWindow1 = new UINextWindow1(this);
+                    this.mUINextWindow1 = new UIItemWindow(this, controlId: "136");
                 }
                 return this.mUINextWindow1;
             }
         }
-        
-        public UINextWindow2 UINextWindow2
+
+        public UIItemWindow UINextWindow2
         {
             get
             {
                 if ((this.mUINextWindow2 == null))
                 {
-                    this.mUINextWindow2 = new UINextWindow2(this);
+                    this.mUINextWindow2 = new UIItemWindow(this, controlId: "135");
                 }
                 return this.mUINextWindow2;
             }
         }
-        
-        public UINextWindow3 UINextWindow3
+
+        public UIItemWindow UINextWindow3
         {
             get
             {
                 if ((this.mUINextWindow3 == null))
                 {
-                    this.mUINextWindow3 = new UINextWindow3(this);
+                    this.mUINextWindow3 = new UIItemWindow(this, controlId: "117");
                 }
                 return this.mUINextWindow3;
             }
         }
-        
-        public UIItemWindow221 UIItemWindow22
+
+        public UIItemWindow UIItemWindow22
         {
             get
             {
                 if ((this.mUIItemWindow22 == null))
                 {
-                    this.mUIItemWindow22 = new UIItemWindow221(this);
+                    this.mUIItemWindow22 = new UIItemWindow(this, controlId: "2", instance: "6");
                 }
                 return this.mUIItemWindow22;
             }
         }
-        
-        public UIItemWindow321 UIItemWindow32
+
+        public UIItemWindow UIItemWindow32
         {
             get
             {
                 if ((this.mUIItemWindow32 == null))
                 {
-                    this.mUIItemWindow32 = new UIItemWindow321(this);
+                    this.mUIItemWindow32 = new UIItemWindow(this, controlId: "2", instance: "6");
                 }
                 return this.mUIItemWindow32;
             }
         }
-        
-        public UINextWindow4 UINextWindow4
+
+        public UIItemWindow UINextWindow4
         {
             get
             {
                 if ((this.mUINextWindow4 == null))
                 {
-                    this.mUINextWindow4 = new UINextWindow4(this);
+                    this.mUINextWindow4 = new UIItemWindow(this, controlId: "110");
                 }
                 return this.mUINextWindow4;
             }
         }
-        
-        public UIItemWindow411 UIItemWindow41
+
+        public UIItemWindow UIItemWindow41
         {
             get
             {
                 if ((this.mUIItemWindow41 == null))
                 {
-                    this.mUIItemWindow41 = new UIItemWindow411(this);
+                    this.mUIItemWindow41 = new UIItemWindow(this, controlId: "2", instance: "8");
                 }
                 return this.mUIItemWindow41;
             }
         }
-        
-        public UINextWindow5 UINextWindow5
+
+        public UIItemWindow UINextWindow5
         {
             get
             {
                 if ((this.mUINextWindow5 == null))
                 {
-                    this.mUINextWindow5 = new UINextWindow5(this);
+                    this.mUINextWindow5 = new UIItemWindow(this, controlId: "77");
                 }
                 return this.mUINextWindow5;
             }
         }
-        
-        public UINextWindow6 UINextWindow6
+
+        public UIItemWindow UINextWindow6
         {
             get
             {
                 if ((this.mUINextWindow6 == null))
                 {
-                    this.mUINextWindow6 = new UINextWindow6(this);
+                    this.mUINextWindow6 = new UIItemWindow(this, controlId: "78");
                 }
                 return this.mUINextWindow6;
             }
         }
-        
+
         public UIQuoteWindow UIQuoteWindow
         {
             get
@@ -329,7 +309,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUIQuoteWindow;
             }
         }
-        
+
         public UIExitWindow UIExitWindow
         {
             get
@@ -341,7 +321,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUIExitWindow;
             }
         }
-        
+
         public UIMTAWindow UIMTAWindow
         {
             get
@@ -353,7 +333,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUIMTAWindow;
             }
         }
-        
+
         public UICancelWindow3 UICancelWindow
         {
             get
@@ -365,7 +345,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUICancelWindow;
             }
         }
-        
+
         public UIMTAWindow1 UIMTAWindow1
         {
             get
@@ -377,19 +357,19 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUIMTAWindow1;
             }
         }
-        
-        public UIItemWindow91 UIItemWindow9
+
+        public UITestControl UIItemWindow9
         {
             get
             {
                 if ((this.mUIItemWindow9 == null))
                 {
-                    this.mUIItemWindow9 = new UIItemWindow91(this);
+                    this.mUIItemWindow9 = new UIItemWindow(this, className: "SSTabCtlWndClass");
                 }
                 return this.mUIItemWindow9;
             }
         }
-        
+
         public UIEDIMatchWindow UIEDIMatchWindow
         {
             get
@@ -401,7 +381,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUIEDIMatchWindow;
             }
         }
-        
+
         public UILogandClearWindow UILogandClearWindow
         {
             get
@@ -413,19 +393,19 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUILogandClearWindow;
             }
         }
-        
-        public UIItemWindow101 UIItemWindow10
+
+        public UIItemWindow UIItemWindow10
         {
             get
             {
                 if ((this.mUIItemWindow10 == null))
                 {
-                    this.mUIItemWindow10 = new UIItemWindow101(this);
+                    this.mUIItemWindow10 = new UIItemWindow(this, className: "ListView20WndClass");
                 }
                 return this.mUIItemWindow10;
             }
         }
-        
+
         public UIDisplayRecordWindow UIDisplayRecordWindow
         {
             get
@@ -437,7 +417,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUIDisplayRecordWindow;
             }
         }
-        
+
         public UIFilterWindow2 UIFilterWindow
         {
             get
@@ -449,19 +429,19 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUIFilterWindow;
             }
         }
-        
-        public UIItemWindow122 UIItemWindow12
+
+        public UIItemWindow UIItemWindow12
         {
             get
             {
                 if ((this.mUIItemWindow12 == null))
                 {
-                    this.mUIItemWindow12 = new UIItemWindow122(this);
+                    this.mUIItemWindow12 = new UIItemWindow(this, className: "msvb_lib_header");
                 }
                 return this.mUIItemWindow12;
             }
         }
-        
+
         public UIExitWindow1 UIExitWindow1
         {
             get
@@ -473,19 +453,19 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUIExitWindow1;
             }
         }
-        
-        public UIItemWindow131 UIItemWindow13
+
+        public UIItemWindow UIItemWindow13
         {
             get
             {
                 if ((this.mUIItemWindow13 == null))
                 {
-                    this.mUIItemWindow13 = new UIItemWindow131(this);
+                    this.mUIItemWindow13 = new UIItemWindow(this, controlId: "1");
                 }
                 return this.mUIItemWindow13;
             }
         }
-        
+
         public UICancelWindow11 UICancelWindow1
         {
             get
@@ -497,7 +477,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUICancelWindow1;
             }
         }
-        
+
         public UICancelWindow21 UICancelWindow2
         {
             get
@@ -509,90 +489,89 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUICancelWindow2;
             }
         }
+
         #endregion
-        
+
         #region Fields
-        private UIItemWindow16 mUIItemWindow;
-        
-        private UICalculateQuoteWindow mUICalculateQuoteWindow;
-        
-        private UIItemWindow17 mUIItemWindow1;
-        
-        private UIItemWindow24 mUIItemWindow2;
-        
-        private UIItemWindow113 mUIItemWindow11;
-        
-        private UIItemWindow32 mUIItemWindow3;
-        
-        private UIItemWindow211 mUIItemWindow21;
-        
-        private UIItemWindow311 mUIItemWindow31;
-        
-        private UIItemWindow42 mUIItemWindow4;
-        
-        private UIItemWindow52 mUIItemWindow5;
-        
-        private UIItemWindow511 mUIItemWindow51;
-        
-        private UILookupWindow1 mUILookupWindow;
-        
-        private UIItemWindow61 mUIItemWindow6;
-        
-        private UIItemWindow71 mUIItemWindow7;
-        
-        private UINextWindow mUINextWindow;
-        
-        private UIItemWindow81 mUIItemWindow8;
-        
-        private UINextWindow1 mUINextWindow1;
-        
-        private UINextWindow2 mUINextWindow2;
-        
-        private UINextWindow3 mUINextWindow3;
-        
-        private UIItemWindow221 mUIItemWindow22;
-        
-        private UIItemWindow321 mUIItemWindow32;
-        
-        private UINextWindow4 mUINextWindow4;
-        
-        private UIItemWindow411 mUIItemWindow41;
-        
-        private UINextWindow5 mUINextWindow5;
-        
-        private UINextWindow6 mUINextWindow6;
-        
+
+        private UIItemWindow mUIItemWindow;
+
+        private UIItemWindow mUICalculateQuoteWindow;
+
+        private UIItemWindow mUIItemWindow1;
+
+        private UIItemWindow mUIItemWindow2;
+
+        private UIItemWindow mUIItemWindow11;
+
+        private UIItemWindow mUIItemWindow21;
+
+        private UIItemWindow mUIItemWindow31;
+
+        private UIItemWindow mUIItemWindow4;
+
+        private UIItemWindow mUIItemWindow5;
+
+        private UIItemWindow mUILookupWindow;
+
+        private UIItemWindow mUIItemWindow6;
+
+        private UIItemWindow mUIItemWindow7;
+
+        private UIItemWindow mUINextWindow;
+
+        private UIItemWindow mUIItemWindow8;
+
+        private UIItemWindow mUINextWindow1;
+
+        private UIItemWindow mUINextWindow2;
+
+        private UIItemWindow mUINextWindow3;
+
+        private UIItemWindow mUIItemWindow22;
+
+        private UIItemWindow mUIItemWindow32;
+
+        private UIItemWindow mUINextWindow4;
+
+        private UIItemWindow mUIItemWindow41;
+
+        private UIItemWindow mUINextWindow5;
+
+        private UIItemWindow mUINextWindow6;
+
         private UIQuoteWindow mUIQuoteWindow;
-        
+
         private UIExitWindow mUIExitWindow;
-        
+
         private UIMTAWindow mUIMTAWindow;
-        
+
         private UICancelWindow3 mUICancelWindow;
-        
+
         private UIMTAWindow1 mUIMTAWindow1;
-        
-        private UIItemWindow91 mUIItemWindow9;
-        
+
+        private UITestControl mUIItemWindow9;
+
         private UIEDIMatchWindow mUIEDIMatchWindow;
-        
+
         private UILogandClearWindow mUILogandClearWindow;
-        
-        private UIItemWindow101 mUIItemWindow10;
-        
+
+        private UIItemWindow mUIItemWindow10;
+
         private UIDisplayRecordWindow mUIDisplayRecordWindow;
-        
+
         private UIFilterWindow2 mUIFilterWindow;
-        
-        private UIItemWindow122 mUIItemWindow12;
-        
+
+        private UIItemWindow mUIItemWindow12;
+
         private UIExitWindow1 mUIExitWindow1;
-        
-        private UIItemWindow131 mUIItemWindow13;
-        
+
+        private UIItemWindow mUIItemWindow13;
+
         private UICancelWindow11 mUICancelWindow1;
-        
+
         private UICancelWindow21 mUICancelWindow2;
+
         #endregion
     }
 }

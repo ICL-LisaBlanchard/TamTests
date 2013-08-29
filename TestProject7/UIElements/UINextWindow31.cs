@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UINextButton
+        public WinButton UINextButton 
         {
             get
             {

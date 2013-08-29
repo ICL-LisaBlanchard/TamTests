@@ -16,14 +16,14 @@
         public string UIItemComboBoxSelectedItem = "Customers";
 
         /// <summary>
-        /// Type 'autotest' in '&Personal Lines' radio button
+        /// Type 'autotest' in text box
         /// </summary>
-        public string UIPersonalLinesRadioButtonSendKeys = "autotest";
+        public string LastName = "Blanchard";
 
         /// <summary>
         /// Type 'autotest' in text box
         /// </summary>
-        public string UIItemEditText = "autotest";
+        public string FirstName = "Lisa";
 
         /// <summary>
         /// Type '1' in text box

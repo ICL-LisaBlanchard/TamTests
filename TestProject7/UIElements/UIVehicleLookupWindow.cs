@@ -2,107 +2,115 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 {
     using System.CodeDom.Compiler;
 
+    using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIVehicleLookupWindow : WinWindow
     {
-        
         public UIVehicleLookupWindow()
         {
             #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.Name] = "Vehicle Lookup";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Vehicle Lookup");
+
+            this.SearchProperties[UITestControl.PropertyNames.Name] = WindowName;
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            this.WindowTitles.Add(WindowName);
+
             #endregion
         }
-        
+
         #region Properties
-        public UIItemWindow10 UIItemWindow
+
+        private const string WindowName = "Vehicle Lookup";
+
+        public UIItemWindow UIItemWindow
         {
             get
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow10(this);
+                    this.mUIItemWindow = new UIItemWindow(this, controlId: "3");
                 }
                 return this.mUIItemWindow;
             }
         }
-        
-        public UIFilterWindow UIFilterWindow
+
+        public UIItemWindow UIFilterWindow
         {
             get
             {
                 if ((this.mUIFilterWindow == null))
                 {
-                    this.mUIFilterWindow = new UIFilterWindow(this);
+                    this.mUIFilterWindow = new UIItemWindow(this, controlId: "2");
                 }
                 return this.mUIFilterWindow;
             }
         }
-        
-        public UIOKWindow11 UIOKWindow
+
+        public UIItemWindow UIOKWindow
         {
             get
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIOKWindow11(this);
+                    this.mUIOKWindow = new UIItemWindow(this, controlId: "18");
                 }
                 return this.mUIOKWindow;
             }
         }
-        
-        public UIItemWindow15 UIItemWindow1
+
+        public UIItemWindow UIItemWindow1
         {
             get
             {
                 if ((this.mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow15(this);
+                    this.mUIItemWindow1 = new UIItemWindow(this, controlId: "9");
                 }
                 return this.mUIItemWindow1;
             }
         }
-        
-        public UIItemWindow112 UIItemWindow11
+
+        public UIItemWindow UIItemWindow11
         {
             get
             {
                 if ((this.mUIItemWindow11 == null))
                 {
-                    this.mUIItemWindow11 = new UIItemWindow112(this);
+                    this.mUIItemWindow11 = new UIItemWindow(this, controlId: "10");
                 }
                 return this.mUIItemWindow11;
             }
         }
-        
-        public UIFilterWindow1 UIFilterWindow1
+
+        public UIItemWindow UIFilterWindow1
         {
             get
             {
                 if ((this.mUIFilterWindow1 == null))
                 {
-                    this.mUIFilterWindow1 = new UIFilterWindow1(this);
+                    this.mUIFilterWindow1 = new UIItemWindow(this, controlId: "8");
                 }
                 return this.mUIFilterWindow1;
             }
         }
+
         #endregion
-        
+
         #region Fields
-        private UIItemWindow10 mUIItemWindow;
-        
-        private UIFilterWindow mUIFilterWindow;
-        
-        private UIOKWindow11 mUIOKWindow;
-        
-        private UIItemWindow15 mUIItemWindow1;
-        
-        private UIItemWindow112 mUIItemWindow11;
-        
-        private UIFilterWindow1 mUIFilterWindow1;
+
+        private UIItemWindow mUIItemWindow;
+
+        private UIItemWindow mUIFilterWindow;
+
+        private UIItemWindow mUIOKWindow;
+
+        private UIItemWindow mUIItemWindow1;
+
+        private UIItemWindow mUIItemWindow11;
+
+        private UIItemWindow mUIFilterWindow1;
+
         #endregion
     }
 }

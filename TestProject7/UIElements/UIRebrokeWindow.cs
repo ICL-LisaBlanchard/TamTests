@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UIRebrokeButton
+        public WinButton UIRebrokeButton 
         {
             get
             {

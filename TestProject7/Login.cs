@@ -46,7 +46,7 @@
 
             WinEdit tbxPassword = this.map.UITheAgencyManagerSignWindow.TbxPassword.UIItemEdit;
             WinEdit tbxUserName = this.map.UITheAgencyManagerSignWindow.TbxUsername.UIItemEdit;
-            WinButton btnOk = this.map.UITheAgencyManagerSignWindow.BtnOk1.UIOKButton;
+            WinControl btnOk = this.map.UITheAgencyManagerSignWindow.BtnOk1.UIOKButton;
 
             #endregion
 
@@ -62,9 +62,9 @@
         {
             #region Variable Declarations
 
-            WinComboBox tbxMonth = this.map.UITheAgencyManagerSignWindow.TbxMonth.UiItemComboBox;
+            WinComboBox tbxMonth = this.map.UITheAgencyManagerSignWindow.TbxMonth.UIItemComboBox;
             WinEdit tbxYear = this.map.UITheAgencyManagerSignWindow.TbxYear.UIItemEdit;
-            WinButton btnOk = this.map.UITheAgencyManagerSignWindow.BtnOk2.UIOKButton;
+            WinControl btnOk = this.map.UITheAgencyManagerSignWindow.BtnOk2.UIOKButton;
 
             #endregion
 
@@ -83,20 +83,20 @@
         /// </summary>
         public void WarningOk()
         {
-            #region Variable Declarations
+            //#region Variable Declarations
 
-            WinButton uIokButton = this.map.UIWarningWindow.UIOKWindow.UIOKButton;
+            //WinControl uIokButton = this.map.UIWarningWindow.UIOKWindow.UIOKButton;
 
-            #endregion
+            //#endregion
 
-            // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
-            Playback.PlaybackSettings.ContinueOnError = true;
+            //// Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
+            //Playback.PlaybackSettings.ContinueOnError = true;
 
-            // Click 'OK' button
-            Mouse.Click(uIokButton, new Point(50, 10));
+            //// Click 'OK' button
+            //Mouse.Click(uIokButton, new Point(50, 10));
 
-            // Reset flag to ensure that play back stops if there is an error.
-            Playback.PlaybackSettings.ContinueOnError = false;
+            //// Reset flag to ensure that play back stops if there is an error.
+            //Playback.PlaybackSettings.ContinueOnError = false;
         }
     }
 }

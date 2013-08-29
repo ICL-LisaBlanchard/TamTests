@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public UIWhichpolicywouldyoulClient UIWhichpolicywouldyoulClient
+        public UIClient UIClient
         {
             get
             {

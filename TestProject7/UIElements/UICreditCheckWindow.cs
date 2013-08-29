@@ -12,24 +12,25 @@
         {
             #region Search Criteria
 
-            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Credit Check", PropertyExpressionOperator.Contains));
+            this.windowTitle = "Credit Check";
+            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, this.windowTitle, PropertyExpressionOperator.Contains));
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Credit Check");
+            this.WindowTitles.Add(this.windowTitle);
 
             #endregion
         }
 
         #region Properties
 
-        public UINOWindow UINOWindow
+        public UIItemWindow UINoWindow
         {
             get
             {
-                if ((this.mUINOWindow == null))
+                if ((this.mUINoWindow == null))
                 {
-                    this.mUINOWindow = new UINOWindow(this);
+                    this.mUINoWindow = new UIItemWindow(this, controlId: "1");
                 }
-                return this.mUINOWindow;
+                return this.mUINoWindow;
             }
         }
 
@@ -37,7 +38,9 @@
 
         #region Fields
 
-        private UINOWindow mUINOWindow;
+        private readonly string windowTitle;
+
+        private UIItemWindow mUINoWindow;
 
         #endregion
     }

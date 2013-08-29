@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UIAWAPButton
+        public WinButton UIAWAPButton 
         {
             get
             {

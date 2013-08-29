@@ -21,7 +21,7 @@
 
         #region Properties
 
-        public WinButton UILookupButton
+        public WinButton UILookupButton 
         {
             get
             {
