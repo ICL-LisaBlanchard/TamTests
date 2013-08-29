@@ -35,19 +35,19 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UIRenewalLoaderTitleBar UIRenewalLoaderTitleBar
+        public UITitleBar UIRenewalLoaderTitleBar
         {
             get
             {
                 if ((this.mUIRenewalLoaderTitleBar == null))
                 {
-                    this.mUIRenewalLoaderTitleBar = new UIRenewalLoaderTitleBar(this);
+                    this.mUIRenewalLoaderTitleBar = new UITitleBar(this);
                 }
                 return this.mUIRenewalLoaderTitleBar;
             }
         }
 
-        public UIItemWindow UIItem1Window
+        public UITestControl UIItem1Window
         {
             get
             {
@@ -89,9 +89,9 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         private UIClient mUIRenewalLoaderClient;
 
-        private UIRenewalLoaderTitleBar mUIRenewalLoaderTitleBar;
+        private UITitleBar mUIRenewalLoaderTitleBar;
 
-        private UIItemWindow mUIItem1Window;
+        private UITestControl mUIItem1Window;
 
         private UIItemWindow mUIItemWindow;
 

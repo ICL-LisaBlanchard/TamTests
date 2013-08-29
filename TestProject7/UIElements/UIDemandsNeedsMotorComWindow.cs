@@ -26,22 +26,11 @@
         {
             get
             {
-                if ((this.mUIDemandsNeedsMotorComClient == null))
-                {
-                    this.mUIDemandsNeedsMotorComClient = new WinClient(this);
-
-                    #region Search Criteria
-
-                    this.mUIDemandsNeedsMotorComClient.SearchProperties.Add(
-                        new PropertyExpression(UITestControl.PropertyNames.Name, "Demands&Needs(", PropertyExpressionOperator.Contains));
-
-                    #endregion
-                }
-                return this.mUIDemandsNeedsMotorComClient;
+                return new UIClient(this, "Demands&Needs(");
             }
         }
 
-        public UIItemWindow UIItemWindow
+        public UITestControl UIItemWindow
         {
             get
             {
@@ -57,11 +46,7 @@
 
         #region Fields
 
-        private readonly string windowName = "Demands&Needs(Motor) [Compatibility Mode] - Microsoft Word";
-
-        private WinClient mUIDemandsNeedsMotorComClient;
-
-        private UIItemWindow mUIItemWindow;
+        private UITestControl mUIItemWindow;
 
         #endregion
     }

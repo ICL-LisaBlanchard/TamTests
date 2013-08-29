@@ -24,7 +24,7 @@
 
         #region Properties
 
-        public UIItemWindow UIItemWindow
+        public UITestControl UIItemWindow
         {
             get
             {
@@ -78,7 +78,7 @@
 
         private readonly string windowName;
 
-        private UIItemWindow mUIItemWindow;
+        private UITestControl mUIItemWindow;
 
         private UIItemWindow mUIOKWindow;
 

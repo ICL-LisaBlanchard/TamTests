@@ -464,7 +464,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIRadioButton(this, "Comprehensive", this.WindowName);
+                return new UIRadioButton(this, "Comprehensive");
             }
         }
 
@@ -472,7 +472,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIRadioButton(this, "Personal Lines", this.WindowName);
+                return new UIRadioButton(this, "Personal Lines");
             }
         }
 
@@ -480,7 +480,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIRadioButton(this, "Mr.", this.WindowName);
+                return new UIRadioButton(this, "Mr.");
             }
         }
 
@@ -488,7 +488,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIRadioButton(this, "Jr.", this.WindowName);
+                return new UIRadioButton(this, "Jr.");
             }
         }
 
@@ -496,7 +496,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIRadioButton(this, "Household", this.WindowName);
+                return new UIRadioButton(this, "Household");
             }
         }
 
@@ -504,7 +504,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIRadioButton(this, "Alternative", this.WindowName);
+                return new UIRadioButton(this, "Alternative");
             }
         }
 
@@ -601,7 +601,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UICheckBox(this, this.WindowName, "Defer Printing?");
+                return new UICheckBox(this, "Defer Printing?");
             }
         }
 

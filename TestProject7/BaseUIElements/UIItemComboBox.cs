@@ -5,14 +5,14 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
 
     public class UIItemComboBox : WinComboBox
     {
-        public UIItemComboBox(UIItemWindow uiItemWindow, string name = "")
+        public UIItemComboBox(UITestControl uiItemWindow, string name = "")
             : base(uiItemWindow)
         {
             if (!string.IsNullOrEmpty(name))
             {
                 this.SearchProperties[UITestControl.PropertyNames.Name] = name;
             }
-            this.WindowTitles.Add(uiItemWindow.WindowName);
+            this.WindowTitles.Add(uiItemWindow.WindowTitles[0]);
         }
     }
 }

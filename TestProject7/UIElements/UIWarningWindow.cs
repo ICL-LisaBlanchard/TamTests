@@ -23,7 +23,7 @@
 
         #region Properties
 
-        public UIItemWindow UIOKWindow
+        public UITestControl UIOKWindow
         {
             get
             {
@@ -39,7 +39,7 @@
 
         #region Fields
 
-        private UIItemWindow mUIOKWindow;
+        private UITestControl mUIOKWindow;
 
         #endregion
     }

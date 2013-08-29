@@ -2,6 +2,8 @@
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
@@ -21,37 +23,37 @@
 
         #region Properties
 
-        public UIImportOptionsClient UIImportOptionsClient
+        public UIClient UIImportOptionsClient
         {
             get
             {
                 if ((this.mUIImportOptionsClient == null))
                 {
-                    this.mUIImportOptionsClient = new UIImportOptionsClient(this);
+                    this.mUIImportOptionsClient = new UIClient(this, "Import Options");
                 }
                 return this.mUIImportOptionsClient;
             }
         }
 
-        public UIImporttoTAMClient UIImporttoTAMClient
+        public UIClient UIImporttoTAMClient
         {
             get
             {
                 if ((this.mUIImporttoTAMClient == null))
                 {
-                    this.mUIImporttoTAMClient = new UIImporttoTAMClient(this);
+                    this.mUIImporttoTAMClient = new UIClient(this, "Import to TAM");
                 }
                 return this.mUIImporttoTAMClient;
             }
         }
 
-        public UIPanel1Client UIPanel1Client
+        public UIClient UIPanel1Client
         {
             get
             {
                 if ((this.mUIPanel1Client == null))
                 {
-                    this.mUIPanel1Client = new UIPanel1Client(this);
+                    this.mUIPanel1Client = new UIClient(this, "Panel1");
                 }
                 return this.mUIPanel1Client;
             }
@@ -61,11 +63,11 @@
 
         #region Fields
 
-        private UIImportOptionsClient mUIImportOptionsClient;
+        private UIClient mUIImportOptionsClient;
 
-        private UIImporttoTAMClient mUIImporttoTAMClient;
+        private UIClient mUIImporttoTAMClient;
 
-        private UIPanel1Client mUIPanel1Client;
+        private UIClient mUIPanel1Client;
 
         #endregion
     }

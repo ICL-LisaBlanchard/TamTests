@@ -2,6 +2,8 @@
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
@@ -25,26 +27,9 @@
         {
             get
             {
-                if ((this.mUIFilenameComboBox == null))
-                {
-                    this.mUIFilenameComboBox = new WinComboBox(this);
-
-                    #region Search Criteria
-
-                    this.mUIFilenameComboBox.SearchProperties[UITestControl.PropertyNames.Name] = "File name:";
-                    this.mUIFilenameComboBox.WindowTitles.Add("Save the file as");
-
-                    #endregion
-                }
-                return this.mUIFilenameComboBox;
+                return new UIItemComboBox(this, "File name:");
             }
         }
-
-        #endregion
-
-        #region Fields
-
-        private WinComboBox mUIFilenameComboBox;
 
         #endregion
     }

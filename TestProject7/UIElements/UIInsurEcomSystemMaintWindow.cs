@@ -55,19 +55,19 @@
             }
         }
 
-        public UIInsurEcomSystemMaintTitleBar UIInsurEcomSystemMaintTitleBar
+        public UITitleBar UIInsurEcomSystemMaintTitleBar
         {
             get
             {
                 if ((this.mUIInsurEcomSystemMaintTitleBar == null))
                 {
-                    this.mUIInsurEcomSystemMaintTitleBar = new UIInsurEcomSystemMaintTitleBar(this);
+                    this.mUIInsurEcomSystemMaintTitleBar = new UITitleBar(this);
                 }
                 return this.mUIInsurEcomSystemMaintTitleBar;
             }
         }
 
-        public UIItemWindow UIItemWindow
+        public UITestControl UIItemWindow
         {
             get
             {
@@ -91,9 +91,9 @@
 
         private UIContentFrame mUIContentFrame;
 
-        private UIInsurEcomSystemMaintTitleBar mUIInsurEcomSystemMaintTitleBar;
+        private UITitleBar mUIInsurEcomSystemMaintTitleBar;
 
-        private UIItemWindow mUIItemWindow;
+        private UITestControl mUIItemWindow;
 
         #endregion
     }

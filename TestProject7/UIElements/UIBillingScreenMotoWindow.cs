@@ -104,7 +104,7 @@
 
         private UIItemWindow mUIItemWindow;
 
-        private UIItemWindow mUICancelWindow1;
+        private UITestControl mUICancelWindow1;
 
         private UIItemWindow mUIItemWindow1;
 

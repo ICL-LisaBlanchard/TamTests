@@ -38,7 +38,7 @@
             }
         }
 
-        public UIItemWindow UIDetailWindow
+        public UITestControl UIDetailWindow
         {
             get
             {
@@ -60,7 +60,7 @@
 
         private UIItemWindow mUIItemWindow;
 
-        private UIItemWindow mUIDetailWindow;
+        private UITestControl mUIDetailWindow;
 
         #endregion
     }

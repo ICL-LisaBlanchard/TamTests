@@ -5,7 +5,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
 
     internal class UIRadioButton : WinRadioButton
     {
-        public UIRadioButton(UITestControl uiItemWindow, string name, string windowName)
+        public UIRadioButton(UITestControl uiItemWindow, string name)
             : base(uiItemWindow)
         {
             if (!string.IsNullOrEmpty(name))
@@ -13,9 +13,9 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
                 this.SearchProperties[UITestControl.PropertyNames.Name] = name;
             }
 
-            this.WindowTitles.Add(windowName);
+            this.WindowTitles.Add(uiItemWindow.WindowTitles[0]);
         }
 
-        public UIItemWindow Type { get; set; }
+        public UITestControl Type { get; set; }
     }
 }

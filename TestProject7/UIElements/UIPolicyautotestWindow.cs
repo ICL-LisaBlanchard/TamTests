@@ -106,7 +106,7 @@
             }
         }
 
-        public UIItemWindow UIItemWindow1
+        public UITestControl UIItemWindow1
         {
             get
             {
@@ -148,7 +148,7 @@
 
         private UIBillingScreenHomeWindow mUIBillingScreenHomeWindow;
 
-        private UIItemWindow mUIItemWindow1;
+        private UITestControl mUIItemWindow1;
 
         private UICustomersWindow mUICustomersWindow;
 

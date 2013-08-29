@@ -36,7 +36,7 @@
             }
         }
 
-        public UIItemWindow UIItemWindow
+        public UITestControl UIItemWindow
         {
             get
             {
@@ -68,7 +68,7 @@
 
         private UIItemWindow mUIInviteWindow;
 
-        private UIItemWindow mUIItemWindow;
+        private UITestControl mUIItemWindow;
 
         private UIItemWindow mUIRenewPolicyWindow;
 

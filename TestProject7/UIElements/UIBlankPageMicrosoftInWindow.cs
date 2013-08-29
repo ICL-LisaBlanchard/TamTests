@@ -3,6 +3,8 @@
     using System;
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
@@ -24,13 +26,13 @@
 
         #region Properties
 
-        public UIBlankPageWindowsInteTitleBar UIBlankPageWindowsInteTitleBar
+        public UITitleBar UIBlankPageWindowsInteTitleBar
         {
             get
             {
                 if ((this.mUIBlankPageWindowsInteTitleBar == null))
                 {
-                    this.mUIBlankPageWindowsInteTitleBar = new UIBlankPageWindowsInteTitleBar(this);
+                    this.mUIBlankPageWindowsInteTitleBar = new UITitleBar(this);
                 }
                 return this.mUIBlankPageWindowsInteTitleBar;
             }
@@ -40,7 +42,7 @@
 
         #region Fields
 
-        private UIBlankPageWindowsInteTitleBar mUIBlankPageWindowsInteTitleBar;
+        private UITitleBar mUIBlankPageWindowsInteTitleBar;
 
         #endregion
     }

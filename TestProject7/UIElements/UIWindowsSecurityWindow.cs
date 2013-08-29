@@ -2,6 +2,8 @@
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
@@ -32,13 +34,13 @@
             }
         }
 
-        public UIWindowsSecurityPane UIWindowsSecurityPane
+        public UIPane UIWindowsSecurityPane
         {
             get
             {
                 if ((this.mUIWindowsSecurityPane == null))
                 {
-                    this.mUIWindowsSecurityPane = new UIWindowsSecurityPane(this);
+                    this.mUIWindowsSecurityPane = new UIPane(this, "Windows Security");
                 }
                 return this.mUIWindowsSecurityPane;
             }
@@ -50,7 +52,7 @@
 
         private UIItemUserDetails mUIItemListItem;
 
-        private UIWindowsSecurityPane mUIWindowsSecurityPane;
+        private UIPane mUIWindowsSecurityPane;
 
         #endregion
     }

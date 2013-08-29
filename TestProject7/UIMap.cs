@@ -26,8 +26,6 @@
 
         private AddPolicyParams mAddPolicyParams;
 
-        private AddressLookupHomeExpectedValues mAddressLookupHomeExpectedValues;
-
         private AmendDateBeforeMessageExpectedValues mAmendDateBeforeMessageExpectedValues;
 
         private ExitEnabledExpectedValues mExitEnabledExpectedValues;
@@ -37,10 +35,6 @@
         private Exit1Params mExit1Params;
 
         private CoverDateBackCheckExpectedValues mCoverDateBackCheckExpectedValues;
-
-        private CheckQuoteMessageExpectedValues mCheckQuoteMessageExpectedValues;
-
-        private CheckBillingScreenExpectedValues mCheckBillingScreenExpectedValues;
 
         private CheckAutoPrintExpectedValues mCheckAutoPrintExpectedValues;
 
@@ -172,18 +166,6 @@
             }
         }
 
-        public virtual AddressLookupHomeExpectedValues AddressLookupHomeExpectedValues
-        {
-            get
-            {
-                if ((this.mAddressLookupHomeExpectedValues == null))
-                {
-                    this.mAddressLookupHomeExpectedValues = new AddressLookupHomeExpectedValues();
-                }
-                return this.mAddressLookupHomeExpectedValues;
-            }
-        }
-
         public virtual AmendDateBeforeMessageExpectedValues AmendDateBeforeMessageExpectedValues
         {
             get
@@ -241,30 +223,6 @@
                     this.mCoverDateBackCheckExpectedValues = new CoverDateBackCheckExpectedValues();
                 }
                 return this.mCoverDateBackCheckExpectedValues;
-            }
-        }
-
-        public virtual CheckQuoteMessageExpectedValues CheckQuoteMessageExpectedValues
-        {
-            get
-            {
-                if ((this.mCheckQuoteMessageExpectedValues == null))
-                {
-                    this.mCheckQuoteMessageExpectedValues = new CheckQuoteMessageExpectedValues();
-                }
-                return this.mCheckQuoteMessageExpectedValues;
-            }
-        }
-
-        public virtual CheckBillingScreenExpectedValues CheckBillingScreenExpectedValues
-        {
-            get
-            {
-                if ((this.mCheckBillingScreenExpectedValues == null))
-                {
-                    this.mCheckBillingScreenExpectedValues = new CheckBillingScreenExpectedValues();
-                }
-                return this.mCheckBillingScreenExpectedValues;
             }
         }
 

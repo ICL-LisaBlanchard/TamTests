@@ -36,7 +36,7 @@
             }
         }
 
-        public UIItemWindow UIItemWindow
+        public UITestControl UIItemWindow
         {
             get
             {
@@ -48,7 +48,7 @@
             }
         }
 
-        public UIItemWindow UISaveWindow
+        public UITestControl UISaveWindow
         {
             get
             {
@@ -78,9 +78,9 @@
 
         private UIItemWindow mUICancelWindow;
 
-        private UIItemWindow mUIItemWindow;
+        private UITestControl mUIItemWindow;
 
-        private UIItemWindow mUISaveWindow;
+        private UITestControl mUISaveWindow;
 
         private UIDetailsPanePane mUIDetailsPanePane;
 

@@ -14,7 +14,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         #region Properties
 
-        public UIItemWindow UIPersonalLinesWindow
+        public UITestControl UIPersonalLinesWindow
         {
             get
             {
@@ -58,7 +58,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UIItemWindow Title
+        public UITestControl Title
         {
             get
             {
@@ -66,7 +66,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UIItemWindow Suffix
+        public UITestControl Suffix
         {
             get
             {
@@ -90,7 +90,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         #region Fields
 
-        private UIItemWindow mUIPersonalLinesWindow;
+        private UITestControl mUIPersonalLinesWindow;
 
         private UIItemWindow mUIItemWindow;
 

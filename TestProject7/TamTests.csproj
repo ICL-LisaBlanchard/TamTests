@@ -60,23 +60,15 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assertions\AcceptEnabledExpectedValues.cs" />
-    <Compile Include="Assertions\AddressLookupHomeExpectedValues.cs" />
     <Compile Include="Assertions\AmendDateBeforeMessageExpectedValues.cs" />
     <Compile Include="Assertions\AssertMethod1ExpectedValues.cs" />
     <Compile Include="Assertions\AssertMethod2ExpectedValues.cs" />
     <Compile Include="Assertions\AssertMethod3ExpectedValues.cs" />
-    <Compile Include="Assertions\AssertMethod4ExpectedValues.cs" />
-    <Compile Include="Assertions\AssertMethod5ExpectedValues.cs" />
     <Compile Include="Assertions\AssertSelectPolicyFormExpectedValues.cs" />
     <Compile Include="Assertions\CheckAutoPrintExpectedValues.cs" />
-    <Compile Include="Assertions\CheckBillingScreenExpectedValues.cs" />
-    <Compile Include="Assertions\CheckDemandsDocExpectedValues.cs" />
-    <Compile Include="Assertions\CheckQuoteMessageExpectedValues.cs" />
     <Compile Include="Assertions\CoverDateBackCheckExpectedValues.cs" />
     <Compile Include="Assertions\ExitEnabledExpectedValues.cs" />
     <Compile Include="Assertions\HomeAddressLookupExpectedValues.cs" />
-    <Compile Include="Assertions\HomeCheckDemandsExpectedValues.cs" />
     <Compile Include="Assertions\HomeCheckNewPremiumExpectedValues.cs" />
     <Compile Include="Assertions\HomeCheckPolicyPremiumExpectedValues.cs" />
     <Compile Include="Assertions\HomeCheckPremiumExpectedValues.cs" />
@@ -101,7 +93,6 @@
     <Compile Include="Assertions\MotoRenewalCheckRecordExpectedValues.cs" />
     <Compile Include="Assertions\MTAMessageBeforeCurrentExpectedValues.cs" />
     <Compile Include="Assertions\PostcodeLookupExpectedValues.cs" />
-    <Compile Include="Assertions\RenewalCheckInvitedExpectedValues.cs" />
     <Compile Include="Assertions\RenewalCheckStatusExpectedValues.cs" />
     <Compile Include="BaseUIElements\UIButton.cs" />
     <Compile Include="BaseUIElements\UICheckBox.cs" />
@@ -115,6 +106,7 @@
     <Compile Include="BaseUIElements\UIPane.cs" />
     <Compile Include="BaseUIElements\UIRadioButton.cs" />
     <Compile Include="BaseUIElements\UIText.cs" />
+    <Compile Include="BaseUIElements\UITitleBar.cs" />
     <Compile Include="Configs.cs" />
     <Compile Include="CustomerActions.cs" />
     <Compile Include="HomeActions.cs" />
@@ -155,7 +147,6 @@
     <Compile Include="Params\HomeSelectPolicyParams.cs" />
     <Compile Include="Params\HomeSiteRenewalParams.cs" />
     <Compile Include="Params\HomeStartDateParams.cs" />
-    <Compile Include="Params\HouseProposerParams.cs" />
     <Compile Include="Params\HouseRegressAppParams.cs" />
     <Compile Include="Params\LoginEnterDateParams.cs" />
     <Compile Include="Params\LoginParams.cs" />
@@ -164,7 +155,6 @@
     <Compile Include="Params\MotoAmendRiskRenewParams.cs" />
     <Compile Include="Params\MotoAWAPParams.cs" />
     <Compile Include="Params\MotoCancelPolicyParams.cs" />
-    <Compile Include="Params\MotoCopyFinishParams.cs" />
     <Compile Include="Params\MotoCreateSiteRenewalParams.cs" />
     <Compile Include="Params\MotoFinishMTAParams.cs" />
     <Compile Include="Params\MotoInceptionDateParams.cs" />
@@ -184,15 +174,11 @@
     <Compile Include="Params\MTADateParams.cs" />
     <Compile Include="Params\MTAEffectiveDateParams.cs" />
     <Compile Include="Params\OpenBrowser2Params.cs" />
-    <Compile Include="Params\OpenSiteForRenewalParams.cs" />
     <Compile Include="Params\QuoteResultsParams.cs" />
     <Compile Include="Params\RebrokeAlternativeFinishParams.cs" />
     <Compile Include="Params\RebrokeAlternativeFinish_1Params.cs" />
     <Compile Include="Params\RebrokeAlternativeRenewParams.cs" />
     <Compile Include="Params\RebrokeAlternativeRenew_1Params.cs" />
-    <Compile Include="Params\RecordedMethod2Params.cs" />
-    <Compile Include="Params\RecordedMethod3Params.cs" />
-    <Compile Include="Params\RecordedMethod5Params.cs" />
     <Compile Include="Params\RegressAppDateParams.cs" />
     <Compile Include="Params\RenewalAfterMTA1Params.cs" />
     <Compile Include="Params\RenewalLoaderRunParams.cs" />
@@ -204,9 +190,7 @@
     <Compile Include="Params\SaveWithoutPremiumParams.cs" />
     <Compile Include="Params\SelectHomeTypeParams.cs" />
     <Compile Include="Params\SelectMotoPolicyParams.cs" />
-    <Compile Include="Params\SelectNextTransactionParams.cs" />
     <Compile Include="Params\SelectPolicyQuoteParams.cs" />
-    <Compile Include="Params\testPrintParams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrySettings.cs" />
     <Compile Include="UIElements\UIAcceptthisquoteNotOvWindow.cs" />
@@ -226,7 +210,6 @@
     <Compile Include="UIElements\UIBillingScreenMotoTestWindow.cs" />
     <Compile Include="UIElements\UIBillingScreenMotoWindow.cs" />
     <Compile Include="UIElements\UIBlankPageMicrosoftInWindow.cs" />
-    <Compile Include="UIElements\UIBlankPageWindowsInteTitleBar.cs" />
     <Compile Include="UIElements\UIBrokerAddonsWindow.cs" />
     <Compile Include="UIElements\UIClaimsWindow.cs" />
     <Compile Include="UIElements\UIConfirmDocumentsWindow.cs" />
@@ -248,13 +231,10 @@
     <Compile Include="UIElements\UIHouseholdRebrokeResuWindow.cs" />
     <Compile Include="UIElements\UIHouseholdRenewalsAmeWindow.cs" />
     <Compile Include="UIElements\UIIETAMRenewalsWindow.cs" />
-    <Compile Include="UIElements\UIImportOptionsClient.cs" />
-    <Compile Include="UIElements\UIImporttoTAMClient.cs" />
     <Compile Include="UIElements\UIImporttoTAMWindow.cs" />
     <Compile Include="UIElements\UIInsurEcomLeftbarDocument.cs" />
     <Compile Include="UIElements\UIInsurEcomMainPageDocument.cs" />
     <Compile Include="UIElements\UIInsurEcomMainPageDocument1.cs" />
-    <Compile Include="UIElements\UIInsurEcomSystemMaintTitleBar.cs" />
     <Compile Include="UIElements\UIInsurEcomSystemMaintWindow.cs" />
     <Compile Include="UIElements\UIInsurerNoticeRevaluaWindow.cs" />
     <Compile Include="UIElements\UIInsurEtamWindow.cs" />
@@ -272,7 +252,6 @@
     <Compile Include="UIElements\UINewPolicyDetailWindow.cs" />
     <Compile Include="UIElements\UIOpenWindow.cs" />
     <Compile Include="UIElements\UIOverridePremiumWindow.cs" />
-    <Compile Include="UIElements\UIPanel1Client.cs" />
     <Compile Include="UIElements\UIPaymentMethodsWindow.cs" />
     <Compile Include="UIElements\UIPleaseselectWHOtofolWindow.cs" />
     <Compile Include="UIElements\UIPointOfSaleWindow.cs" />
@@ -297,7 +276,6 @@
     <Compile Include="UIElements\UIRebrokeResultsScreenWindow.cs" />
     <Compile Include="UIElements\UIRegressIETamPolicyWindow.cs" />
     <Compile Include="UIElements\UIRenewalAcceptWindow.cs" />
-    <Compile Include="UIElements\UIRenewalLoaderTitleBar.cs" />
     <Compile Include="UIElements\UIRenewalLoaderWindow.cs" />
     <Compile Include="UIElements\UIRenewalSearchWindow.cs" />
     <Compile Include="UIElements\UIRenewalsNewBusinessAWindow.cs" />
@@ -307,10 +285,8 @@
     <Compile Include="UIElements\UISearchResultForBN16BWindow.cs" />
     <Compile Include="UIElements\UISelectaPolicyNumberWindow.cs" />
     <Compile Include="UIElements\UISelectTaminsurerforiWindow.cs" />
-    <Compile Include="UIElements\UITamXMLImportCustomerClient.cs" />
     <Compile Include="UIElements\UITheAgencyManagerSignWindow.cs" />
     <Compile Include="UIElements\UITheAgencyManagerWindow1.cs" />
-    <Compile Include="UIElements\UITransactiontoinsertClient.cs" />
     <Compile Include="UIElements\UITransactiontoinsertWindow.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -319,7 +295,6 @@
     <Compile Include="UIElements\UIViewQuoteDetailsWindow.cs" />
     <Compile Include="UIElements\UIWarningWindow.cs" />
     <Compile Include="UIElements\UIWhichpolicywouldyoulWindow.cs" />
-    <Compile Include="UIElements\UIWindowsSecurityPane.cs" />
     <Compile Include="UIElements\UIWindowsSecurityWindow.cs" />
     <Compile Include="UIElements\UIWindowsSecurityWindow1.cs" />
     <Compile Include="UIMap.cs">

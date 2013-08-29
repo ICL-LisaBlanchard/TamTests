@@ -23,7 +23,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         #region Properties
 
-        public UIItemWindow UIOptionsWindow
+        public UITestControl UIOptionsWindow
         {
             get
             {
@@ -51,7 +51,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         #region Fields
 
-        private UIItemWindow mUIOptionsWindow;
+        private UITestControl mUIOptionsWindow;
 
         private UIItemWindow mUIDetailWindow;
 

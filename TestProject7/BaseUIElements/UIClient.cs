@@ -15,7 +15,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
 
             if (!string.IsNullOrEmpty(name))
             {
-                this.SearchProperties[UITestControl.PropertyNames.Name] = name;
+                this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, name, PropertyExpressionOperator.Contains));
             }
 
             this.WindowTitles.Add(searchLimitContainer.WindowTitles[0]);
@@ -36,6 +36,14 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             get
             {
                 return new UIButton(this, "Run");
+            }
+        }
+
+        public WinCheckBox UIAddActivityCheckBox
+        {
+            get
+            {
+                return new UICheckBox(this, "Add Activity");
             }
         }
     }

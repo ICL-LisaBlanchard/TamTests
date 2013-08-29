@@ -5,11 +5,11 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
 
     public class UICheckBox : WinCheckBox
     {
-        public UICheckBox(UITestControl uiItemWindow, string windowName, string name)
+        public UICheckBox(UITestControl uiItemWindow, string name)
             : base(uiItemWindow)
         {
             this.SearchProperties[UITestControl.PropertyNames.Name] = name;
-            this.WindowTitles.Add(windowName);
+            this.WindowTitles.Add(uiItemWindow.WindowTitles[0]);
         }
     }
 }

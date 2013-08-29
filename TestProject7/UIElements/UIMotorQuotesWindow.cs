@@ -358,7 +358,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UIItemWindow UIItemWindow9
+        public UITestControl UIItemWindow9
         {
             get
             {
@@ -466,7 +466,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UIItemWindow UICancelWindow1
+        public UITestControl UICancelWindow1
         {
             get
             {
@@ -550,7 +550,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         private UIItemWindow mUIMTAWindow1;
 
-        private UIItemWindow mUIItemWindow9;
+        private UITestControl mUIItemWindow9;
 
         private UIItemWindow mUIEDIMatchWindow;
 
@@ -568,7 +568,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         private UIItemWindow mUIItemWindow13;
 
-        private UIItemWindow mUICancelWindow1;
+        private UITestControl mUICancelWindow1;
 
         private UIItemWindow mUICancelWindow2;
 
