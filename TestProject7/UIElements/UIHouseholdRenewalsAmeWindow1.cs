@@ -24,27 +24,27 @@
 
         #region Properties
 
-        public UIItemWindow UIItemWindow
+        public UIItemWindow UIItemWindowXxxXxx
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((this.mUIItemWindowXXX == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
+                    this.mUIItemWindowXXX = new UIItemWindow(this, className: "ListView20WndClass");
                 }
-                return this.mUIItemWindow;
+                return this.mUIItemWindowXXX;
             }
         }
 
-        public UIItemWindow UIRenewPolicyWindow
+        public UIItemWindow UIRenewPolicyWindowXxxXxx
         {
             get
             {
-                if ((this.mUIRenewPolicyWindow == null))
+                if ((this.mUIRenewPolicyWindowXXX == null))
                 {
-                    this.mUIRenewPolicyWindow = new UIItemWindow(this, controlId: "2");
+                    this.mUIRenewPolicyWindowXXX = new UIItemWindow(this, controlId: "2");
                 }
-                return this.mUIRenewPolicyWindow;
+                return this.mUIRenewPolicyWindowXXX;
             }
         }
 
@@ -54,9 +54,9 @@
 
         private readonly string windowTitle;
 
-        private UIItemWindow mUIItemWindow;
+        private UIItemWindow mUIItemWindowXXX;
 
-        private UIItemWindow mUIRenewPolicyWindow;
+        private UIItemWindow mUIRenewPolicyWindowXXX;
 
         #endregion
     }

@@ -8,9 +8,9 @@
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
-    public class UIBillingScreenHomeWindow1 : WinWindow
+    public class UIBillingScreenHomeWindow : WinWindow
     {
-        public UIBillingScreenHomeWindow1(UITestControl searchLimitContainer)
+        public UIBillingScreenHomeWindow(UITestControl searchLimitContainer)
             : base(searchLimitContainer)
         {
             #region Search Criteria

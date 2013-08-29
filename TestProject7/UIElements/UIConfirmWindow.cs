@@ -8,9 +8,9 @@
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
-    public class UIConfirmWindow2 : WinWindow
+    public class UIConfirmWindow : WinWindow
     {
-        public UIConfirmWindow2()
+        public UIConfirmWindow()
         {
             #region Search Criteria
 

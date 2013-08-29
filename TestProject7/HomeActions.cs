@@ -582,45 +582,32 @@
 
             #endregion
 
-            // Click '&Ok' button
             Mouse.Click(uIOKButton, new Point(40, 5));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton, new Point(31, 17));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton1, new Point(39, 17));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton2, new Point(39, 17));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton3, new Point(39, 17));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton4, new Point(39, 17));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton5, new Point(39, 17));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton6, new Point(39, 17));
 
-            // Click '&Quote' button
             Mouse.Click(uIQuoteButton, new Point(39, 17));
 
-            // Click '&No' button
             Mouse.Click(uINOButton, new Point(9, 9));
 
             this.PublicCreditCheckOk();
 
-            // Click 'Quotes Results' client
             Mouse.Click(uIQuotesResultsClient, new Point(526, 161));
 
-            // Type '{End}' in 'Quotes Results' client
             Keyboard.SendKeys(uIQuotesResultsClient, this.HomePrintQuote1Params.UIQuotesResultsClientSendKeys, ModifierKeys.None);
 
-            // Click '&Print Quote..' button
             Mouse.Click(uIPrintQuoteButton, new Point(65, 11));
         }
 
@@ -654,92 +641,63 @@
             WinControl uICancelButton1 = this.UIPolicyautotestWindow.UIPolicyListWindow.UICancelWindow.UICancelButton;
             WinControl uIItemButton = this.UIPolicyautotestWindow.UIItemWindow.UIItemButton;
             WinControl uIDetailButton = this.UIPolicyautotestWindow.UIPolicyListWindow1.UIDetailWindow.UIDetailButton;
-            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenHomeWindow1.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenHomeWindow.UIItemWindow.UIItemEdit;
             WinControl uIOKButton3 = this.UISelectTaminsurerforiWindow.UIItemWindow1.UIClient.UIOKButton;
 
             #endregion
 
-            // Click 'Cancel' button
             Mouse.Click(uICancelButton, new Point(41, 14));
 
-            // Click 'Options' button
             Mouse.Click(uIOptionsButton, new Point(49, 4));
 
-            // Click 'Options' -> 'Links' -> '3rd Party Integration' -> 'Quote Select List' menu item
             Mouse.Click(uIQuoteSelectListMenuItem, new Point(89, 11));
 
-            // Click '&Ok' button
             Mouse.Click(uIOKButton, new Point(33, 10));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton, new Point(38, 13));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton1, new Point(46, 13));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton2, new Point(46, 13));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton3, new Point(46, 13));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton4, new Point(46, 13));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton5, new Point(46, 13));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton6, new Point(46, 13));
 
-            // Click '&Quote' button
             Mouse.Click(uIQuoteButton, new Point(46, 13));
 
-            // Click '&No' button
             Mouse.Click(uINOButton, new Point(48, 3));
 
             this.PublicCreditCheckOk();
 
-            // Click 'Quotes Results' client
             Mouse.Click(uIQuotesResultsClient, new Point(500, 164));
 
-            // Type '{Home}' in 'Quotes Results' client
             Keyboard.SendKeys(uIQuotesResultsClient, this.HomeExitWithPolicyParams.UIQuotesResultsClientSendKeys, ModifierKeys.None);
 
-            // Double-Click 'E&xit' button
             Mouse.Click(uIExitButton, new Point(46, 13));
 
-            // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(51, 13));
 
-            // Clear 'Add Activity' check box
             uIAddActivityCheckBox.Checked = this.HomeExitWithPolicyParams.UIAddActivityCheckBoxChecked;
 
-            // Click 'Ok' button
             Mouse.Click(uIOKButton1, new Point(45, 15));
 
-            // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
             Playback.PlaybackSettings.ContinueOnError = true;
 
-            // Click '&Ok' button
             Mouse.Click(uIOKButton3, new Point(42, 10));
 
-            // Click 'OK' button
             Mouse.Click(uIOKButton2, new Point(55, 7));
 
-            // Reset flag to ensure that play back stops if there is an error.
-            Playback.PlaybackSettings.ContinueOnError = false;
-
-            // Click 'Cancel' button
             Mouse.Click(uICancelButton1, new Point(37, 17));
 
-            // Click 'Unknown Name' button
             Mouse.Click(uIItemButton, new Point(28, 18));
 
-            // Click 'Detail' button
             Mouse.Click(uIDetailButton, new Point(29, 11));
 
-            // Click 'Unknown Name' text box
             Mouse.Click(uIItemEdit, new Point(22, 8));
         }
 
@@ -760,34 +718,24 @@
 
             #endregion
 
-            // Click 'Accept' button
             Mouse.Click(uIAcceptButton, new Point(47, 11));
 
-            // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(49, 11));
 
-            // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
             Playback.PlaybackSettings.ContinueOnError = true;
 
-            // Click '&Ok' button
             Mouse.Click(uIOKButton, new Point(30, 14));
 
-            // Click 'Cancel' button
             Mouse.Click(uICancelButton, new Point(41, 9));
-
-            // Reset flag to ensure that play back stops if there is an error.
 
             Playback.PlaybackSettings.ContinueOnError = false;
 
             this.EtamOk();
 
-            // Click '&Ok' button
             Mouse.Click(uIOKButton1, new Point(47, 22));
 
-            // Click 'Ok' button
             Mouse.Click(uIOKButton2, new Point(46, 11));
 
-            // Type 'B338TH' in 'Unknown Name' text box
             uIItemEdit.Text = this.HomeAcceptPolicyParams.UIItemEditText;
         }
 
@@ -803,10 +751,8 @@
 
             #endregion
 
-            // Verify that the 'InnerText' property of '1989' cell equals '1989'
             Assert.AreEqual(this.HomeCheckPrintExpectedValues.UIItem1989CellInnerText, uIItem1989Cell.InnerText);
 
-            // Verify that the 'InnerText' property of 'Mr Test Test' cell equals 'Mr Test Test'
             Assert.AreEqual(this.HomeCheckPrintExpectedValues.UIMrTestTestCellInnerText, uIMrTestTestCell.InnerText);
         }
 
@@ -821,7 +767,6 @@
 
             #endregion
 
-            // Verify that the 'Text' property of text box equals 'NEW'
             Assert.AreEqual(this.HomeCheckStatusExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
@@ -836,7 +781,6 @@
 
             #endregion
 
-            // Verify that the 'Text' property of text box equals '0.00'
             Assert.AreEqual(this.HomeCheckZeroPremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
@@ -851,7 +795,6 @@
 
             #endregion
 
-            // Click text box
             Mouse.Click(uIItemEdit, new Point(24, 5));
         }
 
@@ -865,13 +808,10 @@
 
             #endregion
 
-            // Click 'Cancel' button
             Mouse.Click(uICancelButton, new Point(33, 16));
 
-            // Click button
             Mouse.Click(uIItemButton, new Point(18, 20));
 
-            // Click 'Detail' button
             Mouse.Click(uIDetailButton, new Point(44, 16));
         }
 
@@ -887,10 +827,8 @@
 
             #endregion
 
-            // Click 'Cancel' button
             Mouse.Click(uICancelButton, new Point(47, 19));
 
-            // Click button
             Mouse.Click(uIItemButton, new Point(21, 14));
         }
 
@@ -906,16 +844,8 @@
 
             #endregion
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // The recording for the application under test '\\Pc-pez\J-Drive\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click '&Close' button
             Mouse.Click(uICloseButton, new Point(33, 13));
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\TamXML\TamXML7.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click 'OK' button
             Mouse.Click(uIokButton, new Point(36, 14));
         }
 
@@ -933,16 +863,12 @@
 
             #endregion
 
-            // Verify that the 'Text' property of text box equals 'Test'
             Assert.AreEqual(this.HomeCopyCheckDataExpectedValues.UIItemEditText, uIItemEdit.Text);
 
-            // Verify that the 'SelectedItem' property of combo box equals 'Account Director'
             Assert.AreEqual(this.HomeCopyCheckDataExpectedValues.UIItemComboBoxSelectedItem, uIItemComboBox.SelectedItem);
 
-            // Verify that the 'Text' property of text box equals 'B33 8TH'
             Assert.AreEqual(this.HomeCopyCheckDataExpectedValues.UIItemEditText1, uIItemEdit1.Text);
 
-            // Verify that the 'Text' property of text box equals '533 Yardley Green Road'
             Assert.AreEqual(this.HomeCopyCheckDataExpectedValues.UIItemEditText2, uIItemEdit2.Text);
         }
 
@@ -961,25 +887,14 @@
 
             #endregion
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click 'Options' button
             Mouse.Click(uIOptionsButton, new Point(26, 9));
 
-            // Click 'Options' -> 'Links' -> '3rd Party Integration' -> 'Copy Risk' menu item
             Mouse.Click(uICopyRiskMenuItem, new Point(93, 8));
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\TamXML\TamXML7.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click '&Ok' button
             Mouse.Click(uIOKButton, new Point(54, 10));
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Select 'Household' radio button
             uIHouseholdRadioButton.Selected = this.HomeCopyRiskParams.UIHouseholdRadioButtonSelected;
 
-            // Click '&OK' button
             Mouse.Click(uIOKButton1, new Point(42, 21));
         }
 
@@ -994,7 +909,6 @@
 
             #endregion
 
-            // Verify that the 'Text' property of text box is not equal to '0.00'
             Assert.AreNotEqual(this.HomeCheckPolicyPremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
@@ -1010,10 +924,8 @@
 
             #endregion
 
-            // Click '&Ok' button
             Mouse.Click(uIokButton, new Point(36, 9));
 
-            // Click 'Demands && Needs' button
             Mouse.Click(uIDemandsNeedsButton, new Point(59, 13));
         }
 
@@ -1033,28 +945,20 @@
 
             #endregion
 
-            // Click 'E&xit' button
             Mouse.Click(uIExitButton, new Point(54, 9));
 
-            // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(45, 6));
 
-            // Clear 'Add Activity' check box
             uIAddActivityCheckBox.Checked = this.HomeExitWithoutPolicyParams.UIAddActivityCheckBoxChecked;
 
-            // Click 'Ok' button
             Mouse.Click(uIOKButton, new Point(30, 15));
 
-            // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
             Playback.PlaybackSettings.ContinueOnError = true;
 
-            // Click '&Ok' button
             Mouse.Click(uIOKButton1, new Point(42, 10));
 
-            // Reset flag to ensure that play back stops if there is an error.
             Playback.PlaybackSettings.ContinueOnError = false;
 
-            // Click 'OK' button
             Mouse.Click(uIOKButton2, new Point(70, 14));
         }
 
@@ -1076,28 +980,20 @@
 
             #endregion
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton, new Point(39, 12));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton1, new Point(47, 12));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton2, new Point(47, 12));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton3, new Point(47, 12));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton4, new Point(47, 12));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton5, new Point(47, 12));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton6, new Point(47, 12));
 
-            // Click '&Quote' button
             Mouse.Click(uIQuoteButton, new Point(47, 12));
         }
 
@@ -1112,11 +1008,6 @@
 
             #endregion
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // The recording for the application under test '\\Pc-pez\J-Drive\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click '&After' button
             Mouse.Click(uIAfterButton, new Point(38, 10));
         }
 
@@ -1131,11 +1022,6 @@
 
             #endregion
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // The recording for the application under test '\\Pc-pez\J-Drive\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click '&Before' button
             Mouse.Click(uIBeforeButton, new Point(27, 12));
         }
 
@@ -1152,13 +1038,10 @@
 
             #endregion
 
-            // Click '&Cancel' button
             Mouse.Click(uICancelButton, new Point(42, 13));
 
-            // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(35, 12));
 
-            // Click 'OK' button
             Mouse.Click(uIOKButton, new Point(46, 14));
         }
 
@@ -1175,19 +1058,10 @@
 
             #endregion
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // The recording for the application under test '\\Pc-pez\J-Drive\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click '&Cancel' button
             Mouse.Click(uICancelButton, new Point(37, 17));
 
-            // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(66, 11));
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\TamXML\TamXML7.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click 'OK' button
             Mouse.Click(uIOKButton, new Point(49, 13));
         }
 
@@ -1205,16 +1079,12 @@
 
             #endregion
 
-            // Click '&MTA' button
             Mouse.Click(uIMTAButton, new Point(45, 12));
 
-            // Select 'General Adjustment' in combo box
             uIItemComboBox.SelectedItem = this.HomeMTAChangeParams.UIItemComboBoxSelectedItem;
 
-            // Click '&OK' button
             Mouse.Click(uIOKButton, new Point(35, 15));
 
-            // Type 'NewTest' in text box
             uIItemEdit.Text = this.HomeMTAChangeParams.UIItemEditText;
         }
 
@@ -1229,7 +1099,6 @@
 
             #endregion
 
-            // Verify that the 'Text' property of text box equals 'Test'
             Assert.AreEqual(this.HomeMTACheckCancelledExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
@@ -1244,7 +1113,6 @@
 
             #endregion
 
-            // Verify that the 'Text' property of text box equals 'NewTest'
             Assert.AreEqual(this.HomeMTACheckChangedExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
@@ -1259,7 +1127,6 @@
 
             #endregion
 
-            // Verify that the 'DisplayText' property of 'Date Before Current MTA Effective Date - Please en...' label equals 'Date Before Current MTA Effective Date - Please enter Adjustment Date.'
             Assert.AreEqual(this.HomeMTACheckMessageExpectedValues.UIDateBeforeCurrentMTATextDisplayText, uIDateBeforeCurrentMTAText.DisplayText);
         }
 
@@ -1274,7 +1141,6 @@
 
             #endregion
 
-            // Click 'OK' button
             Mouse.Click(uIOKButton, new Point(52, 7));
         }
 
@@ -1292,16 +1158,12 @@
 
             #endregion
 
-            // Verify that the 'Text' property of text box equals 'NewTest'
             Assert.AreEqual(this.HomeMTACopyCheckExpectedValues.UIItemEditText, uIItemEdit.Text);
 
-            // Verify that the 'Text' property of text box equals 'B33 8TH'
             Assert.AreEqual(this.HomeMTACopyCheckExpectedValues.UIItemEditText1, uIItemEdit1.Text);
 
-            // Verify that the 'Text' property of text box equals '533 Yardley Green Road'
             Assert.AreEqual(this.HomeMTACopyCheckExpectedValues.UIItemEditText2, uIItemEdit2.Text);
 
-            // Verify that the 'SelectedItem' property of combo box equals 'Advertising'
             Assert.AreEqual(this.HomeMTACopyCheckExpectedValues.UIItemComboBoxSelectedItem, uIItemComboBox.SelectedItem);
         }
 
@@ -1317,10 +1179,8 @@
 
             #endregion
 
-            // Verify that the 'Text' property of text box equals '533 Yardley Green Road'
             Assert.AreEqual(this.HomeAddressLookupExpectedValues.UIItemEditText, uIItemEdit.Text);
 
-            // Verify that the 'Text' property of text box equals 'BIRMINGHAM'
             Assert.AreEqual(this.HomeAddressLookupExpectedValues.UIItemEditText1, uIItemEdit1.Text);
         }
 
@@ -1348,67 +1208,46 @@
 
             #endregion
 
-            // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
             Playback.PlaybackSettings.ContinueOnError = true;
 
-            // Click '&Ok' button
             Mouse.Click(uIOKButton, new Point(35, 13));
 
-            // Reset flag to ensure that play back stops if there is an error.
             Playback.PlaybackSettings.ContinueOnError = false;
 
-            // Click '&Ok' button
             Mouse.Click(uIOKButton1, new Point(35, 17));
 
-            // Click 'Ok' button
             Mouse.Click(uIOKButton2, new Point(29, 10));
 
-            // Type 'B338TH' in text box
             uIItemEdit.Text = this.HomeAcceptQuote1Params.UIItemEditText;
 
-            // Click '&Lookup...' button
             Mouse.Click(uILookupButton, new Point(25, 13));
 
-            // Click '&Ok' button
             Mouse.Click(uIOKButton3, new Point(20, 19));
 
-            // Click '&Confirm' button
             Mouse.Click(uIConfirmButton, new Point(26, 9));
 
-            // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
             Playback.PlaybackSettings.ContinueOnError = true;
 
-            // Click 'OK' button
             Mouse.Click(uIOKButton4, new Point(46, 12));
 
-            // Reset flag to ensure that play back stops if there is an error.
             Playback.PlaybackSettings.ContinueOnError = false;
 
-            // Select '&Defer Printing?' check box
             uIDeferPrintingCheckBox.Checked = this.HomeAcceptQuote1Params.UIDeferPrintingCheckBoxChecked;
 
-            // Click 'Ok' button
             Mouse.Click(uIOKButton5, new Point(60, 10));
 
-            // Clear 'Add Activity' check box
             uIAddActivityCheckBox.Checked = this.HomeAcceptQuote1Params.UIAddActivityCheckBoxChecked;
 
-            // Click 'Ok' button
             Mouse.Click(uIOKButton6, new Point(40, 8));
 
-            // Click '&Ok' button
             Mouse.Click(uIOKButton7, new Point(54, 8));
 
-            // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
             Playback.PlaybackSettings.ContinueOnError = true;
 
-            // Click '&Ok' button
             Mouse.Click(uIOKButton7, new Point(40, 18));
 
-            // Reset flag to ensure that play back stops if there is an error.
             Playback.PlaybackSettings.ContinueOnError = false;
 
-            // Click 'OK' button
             Mouse.Click(uIOKButton8, new Point(43, 20));
         }
 
@@ -1438,7 +1277,6 @@
 
             #endregion
 
-            // Click '&OK' button
             Mouse.Click(uIokButton, new Point(36, 13));
         }
 
@@ -1454,10 +1292,8 @@
 
             #endregion
 
-            // Click '&OK' button
             Mouse.Click(uIokButton, new Point(60, 9));
 
-            // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(63, 11));
         }
 
@@ -1474,17 +1310,10 @@
 
             #endregion
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // The recording for the application under test '\\Pc-pez\J-Drive\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click 'Re&broke...' button
             Mouse.Click(uIRebrokeButton, new Point(55, 11));
 
-            // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(41, 15));
 
-            // Click 'Proceed' button
             Mouse.Click(uIProceedButton, new Point(61, 11));
         }
 
@@ -1535,7 +1364,6 @@
             // Click '&Lookup...' button
             Mouse.Click(uILookupButton, new Point(28, 13));
 
-            // Click '&Ok' button
             Mouse.Click(uIokButton, new Point(43, 7));
         }
 
@@ -1550,7 +1378,6 @@
 
             #endregion
 
-            // Click 'Cancel' button
             Mouse.Click(uICancelButton, new Point(19, 8));
         }
 
@@ -1568,13 +1395,11 @@
 
             #endregion
 
-            // Click 'Options' button
             Mouse.Click(uIOptionsButton, new Point(31, 8));
 
             // Click 'Options' -> 'Links' -> '3rd Party Integration' -> 'Quote Select List' menu item
             Mouse.Click(uIQuoteSelectListMenuItem, new Point(123, 7));
 
-            // Click '&Ok' button
             Mouse.Click(uIokButton, new Point(44, 13));
         }
 
@@ -1590,7 +1415,6 @@
 
             #endregion
 
-            // Click 'Detail' button
             Mouse.Click(uIDetailButton, new Point(26, 12));
 
             // Click text box
@@ -1618,42 +1442,28 @@
 
             #endregion
 
-            // Click 'Quotes Results' client
             Mouse.Click(uIQuotesResultsClient, new Point(424, 227));
 
-            // Type '{Home}' in 'Quotes Results' client
             Keyboard.SendKeys(uIQuotesResultsClient1, this.HomeMTASelectQuoteParams.UIQuotesResultsClientSendKeys, ModifierKeys.None);
 
-            // Click 'Accept' button
             Mouse.Click(uIAcceptButton, new Point(64, 11));
 
-            // Click 'OK' button
             Mouse.Click(uIokButton, new Point(37, 8));
 
-            // Click 'Ok' button
             Mouse.Click(uIokButton1, new Point(39, 16));
 
-            // Click 'OK' button
             Mouse.Click(uIokButton2, new Point(58, 15));
 
-            // Select '&Defer Printing?' check box
             uIDeferPrintingCheckBox.Checked = this.HomeMTASelectQuoteParams.UIDeferPrintingCheckBoxChecked;
 
-            // Click 'Ok' button
             Mouse.Click(uIokButton3, new Point(50, 8));
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\TamXML\TamXML7.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Clear 'Add Activity' check box
             uIAddActivityCheckBox.Checked = this.HomeMTASelectQuoteParams.UIAddActivityCheckBoxChecked;
 
-            // Click 'Ok' button
             Mouse.Click(uIokButton4, new Point(29, 19));
 
-            // Click 'OK' button
             Mouse.Click(uIokButton5, new Point(33, 12));
 
-            // Click 'OK' button
             Mouse.Click(uIokButton5, new Point(39, 13));
         }
 
@@ -1668,11 +1478,6 @@
 
             #endregion
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // The recording for the application under test '\\Pc-pez\J-Drive\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Type '15/10/12' in text box
             uIItemEdit.Text = this.HomeMTAEnterDateParams.UIItemEditText;
         }
 
@@ -1687,7 +1492,6 @@
 
             #endregion
 
-            // Click 'OK' button
             Mouse.Click(uIokButton, new Point(46, 8));
         }
 
@@ -1715,46 +1519,32 @@
 
             #endregion
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton, new Point(19, 6));
 
-            // Type '1989' in text box
             uIItemEdit.Text = this.HomeCreatePolicyParams.UIItemEditText;
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton1, new Point(39, 18));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton2, new Point(39, 18));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton3, new Point(39, 18));
 
-            // Type '2345' in text box
             uIItemEdit1.Text = this.HomeCreatePolicyParams.UIItemEditText1;
 
-            // Type '2000' in text box
             uIItemEdit2.Text = this.HomeCreatePolicyParams.UIItemEditText2;
 
-            // Type '2000' in text box
             uIItemEdit3.Text = this.HomeCreatePolicyParams.UIItemEditText3;
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton4, new Point(42, 17));
 
-            // Type '2345' in text box
             uIItemEdit4.Text = this.HomeCreatePolicyParams.UIItemEditText4;
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton5, new Point(16, 13));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton6, new Point(31, 11));
 
-            // Click '&Quote' button
             Mouse.Click(uIQuoteButton, new Point(31, 11));
 
-            // Click '&No' button
             Mouse.Click(uInoButton, new Point(56, 12));
         }
 
@@ -1769,7 +1559,6 @@
 
             #endregion
 
-            // Verify that the 'Text' property of text box is not equal to '0.00'
             Assert.AreNotEqual(this.HomeCheckNewPremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
@@ -1787,18 +1576,12 @@
 
             #endregion
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click 'Premium...' button
             Mouse.Click(uIPremiumButton, new Point(38, 11));
 
-            // Type '10000' in text box
             uIItemEdit.Text = this.HomeChangePremiumParams.UIItemEditText;
 
-            // Type '6515616' in text box
             uIItemEdit1.Text = this.HomeChangePremiumParams.UIItemEditText1;
 
-            // Click '&OK' button
             Mouse.Click(uIokButton, new Point(52, 15));
         }
 
@@ -1814,10 +1597,8 @@
 
             #endregion
 
-            // Click 'OK' button
             Mouse.Click(uIokButton, new Point(52, 9));
 
-            // Click '&No' button
             Mouse.Click(uInoButton, new Point(43, 18));
         }
 
@@ -1832,7 +1613,6 @@
 
             #endregion
 
-            // Click '&Quote' button
             Mouse.Click(uIQuoteButton, new Point(41, 7));
         }
 
@@ -1849,13 +1629,10 @@
 
             #endregion
 
-            // Click 'E&xit' button
             Mouse.Click(uIExitButton, new Point(58, 11));
 
-            // Click 'OK' button
             Mouse.Click(uIokButton, new Point(40, 10));
 
-            // Click 'Cancel' button
             Mouse.Click(uICancelButton, new Point(54, 12));
         }
 
@@ -1879,41 +1656,26 @@
 
             #endregion
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click 'Quotes Results' client
             Mouse.Click(uIQuotesResultsClient, new Point(491, 235));
 
-            // Type '{Home}' in 'Quotes Results' client
             Keyboard.SendKeys(uIQuotesResultsClient, this.HomeCancelPolicyAcceptParams.UIQuotesResultsClientSendKeys, ModifierKeys.None);
 
-            // Click 'Accept' button
             Mouse.Click(uIAcceptButton, new Point(85, 15));
 
-            // Click 'OK' button
             Mouse.Click(uIokButton, new Point(65, 9));
 
-            // Click 'Ok' button
             Mouse.Click(uIokButton1, new Point(39, 10));
 
-            // Click 'OK' button
             Mouse.Click(uIokButton2, new Point(47, 13));
 
-            // Select '&Defer Printing?' check box
             uIDeferPrintingCheckBox.Checked = this.HomeCancelPolicyAcceptParams.UIDeferPrintingCheckBoxChecked;
 
-            // Click 'Ok' button
             Mouse.Click(uIokButton3, new Point(68, 12));
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\TamXML\TamXML7.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Clear 'Add Activity' check box
             uIAddActivityCheckBox.Checked = this.HomeCancelPolicyAcceptParams.UIAddActivityCheckBoxChecked;
 
-            // Click 'Ok' button
             Mouse.Click(uIokButton4, new Point(42, 12));
 
-            // Click 'OK' button
             Mouse.Click(uIokButton5, new Point(23, 5));
         }
 
@@ -1930,13 +1692,10 @@
 
             #endregion
 
-            // Click '&MTA' button
             Mouse.Click(uIMTAButton, new Point(35, 8));
 
-            // Select 'Cancel Cover' in combo box
             uIItemComboBox.SelectedItem = this.HomeCancelPolicyParams.UIItemComboBoxSelectedItem;
 
-            // Click '&OK' button
             Mouse.Click(uIOKButton, new Point(31, 11));
         }
 
@@ -1953,16 +1712,12 @@
 
             #endregion
 
-            // Click '&Cancel' button
             Mouse.Click(uICancelButton, new Point(42, 12));
 
-            // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(56, 7));
 
-            // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(31, 15));
 
-            // Click 'OK' button
             Mouse.Click(uIOKButton, new Point(49, 15));
         }
 
@@ -1973,14 +1728,12 @@
         {
             #region Variable Declarations
 
-            WinClient uIHouseholdRenewalsAmeClient = this.UIHouseholdRenewalsAmeWindow1.UIItemWindow.UIClient;
+            WinClient uIHouseholdRenewalsAmeClient = this.UIHouseholdRenewalsAmeWindow.UIItemWindow7.UIClient;
 
             #endregion
 
-            // Click 'Household Renewals Amend Risk results' client
             Mouse.Click(uIHouseholdRenewalsAmeClient, new Point(337, 202));
 
-            // Type '{Home}' in 'Household Renewals Amend Risk results' client
             Keyboard.SendKeys(uIHouseholdRenewalsAmeClient, this.HomeAmendSelecPolicyParams.UIHouseholdRenewalsAmeClientSendKeys, ModifierKeys.None);
         }
 
@@ -2005,41 +1758,26 @@
 
             #endregion
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // The recording for the application under test '\\Pc-pez\J-Drive\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click '&Amend Risk...' button
             Mouse.Click(uIAmendRiskButton, new Point(67, 17));
 
-            // Type 'TestNew' in text box
             uIItemEdit.Text = this.HomeAmendRiskParams.UIItemEditText;
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton, new Point(36, 13));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton1, new Point(44, 13));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton2, new Point(44, 13));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton3, new Point(44, 13));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton4, new Point(44, 13));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton5, new Point(44, 13));
 
-            // Click '&Next >' button
             Mouse.Click(uINextButton6, new Point(44, 13));
 
-            // Click '&Quote' button
             Mouse.Click(uIQuoteButton, new Point(44, 13));
 
-            // Click 'Proceed' button
             Mouse.Click(uIProceedButton, new Point(59, 15));
         }
 
@@ -2062,40 +1800,28 @@
 
             #endregion
 
-            // Select '&Defer Printing?' check box
             uIDeferPrintingCheckBox.Checked = this.HomeAmendRenewFinish1Params.UIDeferPrintingCheckBoxChecked;
 
-            // Click 'Ok' button
             Mouse.Click(uIokButton, new Point(74, 12));
 
-            // Click 'OK' button
             Mouse.Click(uIokButton1, new Point(47, 12));
 
-            // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
             Playback.PlaybackSettings.ContinueOnError = true;
 
-            // Click 'OK' button
             Mouse.Click(uIokButton1, new Point(54, 13));
 
-            // Reset flag to ensure that play back stops if there is an error.
             Playback.PlaybackSettings.ContinueOnError = false;
 
-            // Clear 'Add Activity' check box
             uIAddActivityCheckBox.Checked = this.HomeAmendRenewFinish1Params.UIAddActivityCheckBoxChecked;
 
-            // Click 'Ok' button
             Mouse.Click(uIokButton2, new Point(48, 9));
 
-            // Click '&Ok' button
             Mouse.Click(uIokButton3, new Point(19, 12));
 
-            // Select 'AG Administrator General' in list box
             uIItemList.SelectedItemsAsString = this.HomeAmendRenewFinish1Params.UIItemListSelectedItemsAsString;
 
-            // Click '&Ok' button
             Mouse.Click(uIokButton4, new Point(13, 16));
 
-            // Click 'OK' button
             Mouse.Click(uIokButton5, new Point(46, 16));
         }
 
@@ -2106,7 +1832,7 @@
         {
             #region Variable Declarations
 
-            WinControl uIRenewPolicyButton = this.UIHouseholdRenewalsAmeWindow1.UIRenewPolicyWindow.UIRenewPolicyButton;
+            WinControl uIRenewPolicyButton = this.UIHouseholdRenewalsAmeWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
             WinControl uICancelButton = this.UISavethefileasWindow.UICancelWindow.UICancelButton;
 
@@ -2115,13 +1841,11 @@
             // Click '&Renew Policy' button
             Mouse.Click(uIRenewPolicyButton, new Point(52, 9));
 
-            // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(55, 11));
 
             // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
             Playback.PlaybackSettings.ContinueOnError = true;
 
-            // Click 'Cancel' button
             Mouse.Click(uICancelButton, new Point(51, 11));
 
             // Reset flag to ensure that play back stops if there is an error.
@@ -2135,7 +1859,7 @@
         {
             #region Variable Declarations
 
-            WinControl uIRenewPolicyButton = this.UIHouseholdRenewalsAmeWindow1.UIRenewPolicyWindow.UIRenewPolicyButton;
+            WinControl uIRenewPolicyButton = this.UIHouseholdRenewalsAmeWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
             WinControl uIokButton = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIDeferPrintingCheckBox = this.UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
@@ -2153,42 +1877,29 @@
             // Click '&Renew Policy' button
             Mouse.Click(uIRenewPolicyButton, new Point(36, 18));
 
-            // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(50, 20));
 
-            // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(65, 18));
 
-            // Click 'Ok' button
             Mouse.Click(uIokButton, new Point(26, 16));
 
-            // Select '&Defer Printing?' check box
             uIDeferPrintingCheckBox.Checked = this.HomeAmendRenewParams.UIDeferPrintingCheckBoxChecked;
 
-            // Click 'Ok' button
             Mouse.Click(uIokButton1, new Point(74, 19));
 
-            // Click 'OK' button
             Mouse.Click(uIokButton2, new Point(64, 14));
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\TamXML\TamXML7.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Clear 'Add Activity' check box
             uIAddActivityCheckBox.Checked = this.HomeAmendRenewParams.UIAddActivityCheckBoxChecked;
 
-            // Click 'Ok' button
             Mouse.Click(uIokButton3, new Point(60, 17));
 
-            // Click '&Ok' button
             Mouse.Click(uIokButton4, new Point(21, 8));
 
             // Select 'AG Administrator General' in list box
             uIItemList.SelectedItemsAsString = this.HomeAmendRenewParams.UIItemListSelectedItemsAsString;
 
-            // Click '&Ok' button
             Mouse.Click(uIokButton5, new Point(60, 14));
 
-            // Click 'OK' button
             Mouse.Click(uIokButton6, new Point(30, 15));
         }
 
@@ -2204,10 +1915,8 @@
 
             #endregion
 
-            // Click 'Accept' button
             Mouse.Click(uIAcceptButton, new Point(33, 15));
 
-            // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(39, 13));
         }
 
@@ -2237,11 +1946,6 @@
 
             #endregion
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // The recording for the application under test '\\Pc-pez\J-Drive\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Type '10/11/12' in text box
             uIItemEdit.Text = this.HomeStartDateParams.UIItemEditText;
         }
 
@@ -2253,7 +1957,7 @@
             #region Variable Declarations
 
             HtmlHyperlink uICreateaHouseholdTestHyperlink =
-                this.UIInsurEcomSystemMaintWindow.UILeftbarFrame.UIInsurEcomLeftbarDocument1.UIDivRenewalsPane.UICreateaHouseholdTestHyperlink;
+                this.UIInsurEcomSystemMaintWindow.UILeftbarFrame.UIInsurEcomLeftbarDocument.UIDivRenewalsPane.UICreateaHouseholdTestHyperlink;
             HtmlComboBox uIInsurerIDComboBox = this.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UIInsurerIDComboBox;
             HtmlEdit uITxtPolicyNumberEdit = this.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UITxtPolicyNumberEdit;
             HtmlEdit uITxtRenewalDateEdit = this.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UITxtRenewalDateEdit;
@@ -2265,31 +1969,22 @@
 
             #endregion
 
-            // Click 'Create a Household Test Renewal Invitation' link
             Mouse.Click(uICreateaHouseholdTestHyperlink, new Point(48, 20));
 
-            // Select 'Covea Insurance plc (formerly MMA)' in 'InsurerID' combo box
             uIInsurerIDComboBox.SelectedItem = this.HomeSiteRenewalParams.UIInsurerIDComboBoxSelectedItem;
 
-            // Type '81588888001120' in 'txtPolicyNumber' text box
             uITxtPolicyNumberEdit.Text = this.HomeSiteRenewalParams.UITxtPolicyNumberEditText;
 
-            // Type '14/11/2012' in 'txtRenewalDate' text box
             uITxtRenewalDateEdit.Text = this.HomeSiteRenewalParams.UITxtRenewalDateEditText;
 
-            // Type '14/11/2012' in 'txtAutoLapseDate' text box
             uITxtAutoLapseDateEdit.Text = this.HomeSiteRenewalParams.UITxtAutoLapseDateEditText;
 
-            // Click 'txtClientXml' text box
             Mouse.Click(uITxtClientXmlEdit, new Point(284, 43));
 
-            // Click 'Get XML from Server' button
             Mouse.Click(uIGetXMLfromServerButton, new Point(114, 9));
 
-            // Click 'Create Record' button
             Mouse.Click(uICreateRecordButton, new Point(102, 11));
 
-            // Click 'Ok' button in the browser dialog window
             uIInsurEcomSystemMaintWindow.PerformDialogAction(BrowserDialogAction.Ok);
         }
 
@@ -2304,14 +1999,8 @@
 
             #endregion
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // The recording for the application under test '\\Pc-pez\J-Drive\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click 'Quotes Results' client
             Mouse.Click(uIQuotesResultsClient, new Point(354, 212));
 
-            // Type '{Home}' in 'Quotes Results' client
             Keyboard.SendKeys(uIQuotesResultsClient, this.HomeSelectPolicy1Params.UIQuotesResultsClientSendKeys, ModifierKeys.None);
         }
 
@@ -2326,10 +2015,8 @@
 
             #endregion
 
-            // Click 'Quotes Results' client
             Mouse.Click(uIQuotesResultsClient, new Point(367, 171));
 
-            // Type '{End}' in 'Quotes Results' client
             Keyboard.SendKeys(uIQuotesResultsClient, this.HomeSelectPolicyParams.UIQuotesResultsClientSendKeys, ModifierKeys.None);
         }
 
@@ -2344,11 +2031,6 @@
 
             #endregion
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // The recording for the application under test '\\Pc-pez\J-Drive\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click '&Yes' button
             Mouse.Click(uIYesButton, new Point(33, 10));
         }
 
@@ -2363,7 +2045,6 @@
 
             #endregion
 
-            // Verify that the 'DisplayText' property of 'MTA successfully processed on a previously renewed...' label contains 'WARNING! - RENEWAL EDI HAS BEEN CANCELLED'
             StringAssert.Contains(uIMTAsuccessfullyproceText.DisplayText, this.HomeRenewalCancelledCheckExpectedValues.UIMTAsuccessfullyproceTextDisplayText);
         }
 
@@ -2383,27 +2064,18 @@
 
             #endregion
 
-            // Click 'OK' button
             Mouse.Click(uIOKButton, new Point(49, 11));
 
-            // Select '&Defer Printing?' check box
             uIDeferPrintingCheckBox.Checked = this.HomeRenewalBeforeFinishParams.UIDeferPrintingCheckBoxChecked;
 
-            // Click 'Ok' button
             Mouse.Click(uIOKButton1, new Point(53, 18));
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\TamXML\TamXML7.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Clear 'Add Activity' check box
             uIAddActivityCheckBox.Checked = this.HomeRenewalBeforeFinishParams.UIAddActivityCheckBoxChecked;
 
-            // Click 'Ok' button
             Mouse.Click(uIOKButton2, new Point(33, 12));
 
-            // Click 'OK' button
             Mouse.Click(uIOKButton3, new Point(28, 13));
 
-            // Click 'OK' button
             Mouse.Click(uIOKButton3, new Point(35, 11));
         }
 
@@ -2422,26 +2094,16 @@
 
             #endregion
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\WINTAM\clntfile.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // The recording for the application under test '\\Pc-pez\J-Drive\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click 'Quotes Results' client
             Mouse.Click(uIQuotesResultsClient, new Point(420, 229));
 
-            // Type '{Home}' in 'Quotes Results' client
             Keyboard.SendKeys(uIQuotesResultsClient, this.HomeRenewalBeforeAcceptParams.UIQuotesResultsClientSendKeys, ModifierKeys.None);
 
-            // Click 'Accept' button
             Mouse.Click(uIAcceptButton, new Point(75, 10));
 
-            // Click 'OK' button
             Mouse.Click(uIokButton, new Point(36, 16));
 
-            // Click 'Ok' button
             Mouse.Click(uIokButton1, new Point(37, 19));
 
-            // Click 'OK' button
             Mouse.Click(uIokButton2, new Point(48, 14));
         }
 
@@ -2456,12 +2118,8 @@
 
             #endregion
 
-            // The recording for the application under test '\\Pc-pez\J-Drive\APPS\IEOffice\Data\InsureTam.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click 'Household Rebroke Results' client
             Mouse.Click(uIHouseholdRebrokeResuClient, new Point(449, 216));
 
-            // Type '{Home}' in 'Household Rebroke Results' client
             Keyboard.SendKeys(uIHouseholdRebrokeResuClient, this.HomeRebrokeSelectPolicyParams.UIHouseholdRebrokeResuClientSendKeys, ModifierKeys.None);
         }
 
@@ -2476,7 +2134,6 @@
 
             #endregion
 
-            // Verify that the 'Text' property of text box is not equal to '0.00'
             Assert.AreNotEqual(this.HomeCheckPremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
     }

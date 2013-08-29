@@ -40,25 +40,11 @@
             }
         }
 
-        public UIInsurEcomLeftbarDocument1 UIInsurEcomLeftbarDocument1
-        {
-            get
-            {
-                if ((this.mUIInsurEcomLeftbarDocument1 == null))
-                {
-                    this.mUIInsurEcomLeftbarDocument1 = new UIInsurEcomLeftbarDocument1(this);
-                }
-                return this.mUIInsurEcomLeftbarDocument1;
-            }
-        }
-
         #endregion
 
         #region Fields
 
         private UIInsurEcomLeftbarDocument mUIInsurEcomLeftbarDocument;
-
-        private UIInsurEcomLeftbarDocument1 mUIInsurEcomLeftbarDocument1;
 
         #endregion
     }

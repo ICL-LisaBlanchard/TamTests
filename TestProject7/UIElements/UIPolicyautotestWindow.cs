@@ -94,15 +94,15 @@
             }
         }
 
-        public UIBillingScreenHomeWindow1 UIBillingScreenHomeWindow1
+        public UIBillingScreenHomeWindow UIBillingScreenHomeWindow
         {
             get
             {
-                if ((this.mUIBillingScreenHOMEWindow1 == null))
+                if ((this.mUIBillingScreenHomeWindow == null))
                 {
-                    this.mUIBillingScreenHOMEWindow1 = new UIBillingScreenHomeWindow1(this);
+                    this.mUIBillingScreenHomeWindow = new UIBillingScreenHomeWindow(this);
                 }
-                return this.mUIBillingScreenHOMEWindow1;
+                return this.mUIBillingScreenHomeWindow;
             }
         }
 
@@ -118,13 +118,13 @@
             }
         }
 
-        public UICustomersWindow1 UICustomersWindow
+        public UICustomersWindow UICustomersWindow
         {
             get
             {
                 if ((this.mUICustomersWindow == null))
                 {
-                    this.mUICustomersWindow = new UICustomersWindow1(this);
+                    this.mUICustomersWindow = new UICustomersWindow(this);
                 }
                 return this.mUICustomersWindow;
             }
@@ -146,11 +146,11 @@
 
         private WinTitleBar mUIPolicyautotestTitleBar;
 
-        private UIBillingScreenHomeWindow1 mUIBillingScreenHOMEWindow1;
+        private UIBillingScreenHomeWindow mUIBillingScreenHomeWindow;
 
         private UIItemWindow mUIItemWindow1;
 
-        private UICustomersWindow1 mUICustomersWindow;
+        private UICustomersWindow mUICustomersWindow;
 
         #endregion
 

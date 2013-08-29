@@ -54,11 +54,25 @@
             }
         }
 
+        public UIDivRenewalsPane UIDivRenewalsPane
+        {
+            get
+            {
+                if ((this.mUIDivRenewalsPane == null))
+                {
+                    this.mUIDivRenewalsPane = new UIDivRenewalsPane(this);
+                }
+                return this.mUIDivRenewalsPane;
+            }
+        }
+
         #endregion
 
         #region Fields
 
         private HtmlHyperlink mUIRenewalsMaintenanceHyperlink;
+
+        private UIDivRenewalsPane mUIDivRenewalsPane;
 
         #endregion
     }

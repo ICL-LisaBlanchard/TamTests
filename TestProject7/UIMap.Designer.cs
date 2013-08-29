@@ -705,13 +705,13 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UIConfirmWindow2 UIConfirmWindow
+        public UIConfirmWindow UIConfirmWindow
         {
             get
             {
                 if ((this.mUIConfirmWindow == null))
                 {
-                    this.mUIConfirmWindow = new UIConfirmWindow2();
+                    this.mUIConfirmWindow = new UIConfirmWindow();
                 }
                 return this.mUIConfirmWindow;
             }
@@ -753,13 +753,13 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UIAmendRiskWindow1 UIAmendRiskWindow
+        public UIAmendRiskWindow UIAmendRiskWindow
         {
             get
             {
                 if ((this.mUIAmendRiskWindow == null))
                 {
-                    this.mUIAmendRiskWindow = new UIAmendRiskWindow1();
+                    this.mUIAmendRiskWindow = new UIAmendRiskWindow();
                 }
                 return this.mUIAmendRiskWindow;
             }
@@ -860,19 +860,7 @@ namespace AppliedSystems.Tam.Ui.Tests
                 return this.mUICreditCheckAtRenewalWindow;
             }
         }
-        
-        public UIHouseholdRenewalsAmeWindow1 UIHouseholdRenewalsAmeWindow1
-        {
-            get
-            {
-                if ((this.mUIHouseholdRenewalsAmeWindow1 == null))
-                {
-                    this.mUIHouseholdRenewalsAmeWindow1 = new UIHouseholdRenewalsAmeWindow1();
-                }
-                return this.mUIHouseholdRenewalsAmeWindow1;
-            }
-        }
-        
+
         public UIAUTO2301001Window UIAUTO2301001Window
         {
             get
@@ -1069,7 +1057,7 @@ namespace AppliedSystems.Tam.Ui.Tests
         
         private UIPrintDocumentsWindow mUIPrintDocumentsWindow;
         
-        private UIConfirmWindow2 mUIConfirmWindow;
+        private UIConfirmWindow mUIConfirmWindow;
         
         private UIMTASuccessfulWindow mUIMTASuccessfulWindow;
         
@@ -1077,7 +1065,7 @@ namespace AppliedSystems.Tam.Ui.Tests
         
         private UIAUTO2081001Window mUIAUTO2081001Window;
         
-        private UIAmendRiskWindow1 mUIAmendRiskWindow;
+        private UIAmendRiskWindow mUIAmendRiskWindow;
         
         private UIAmendRiskResultsWindow mUIAmendRiskResultsWindow;
         
@@ -1094,8 +1082,6 @@ namespace AppliedSystems.Tam.Ui.Tests
         private UIHouseholdRenewalsAmeWindow mUIHouseholdRenewalsAmeWindow;
         
         private UICreditCheckAtRenewalWindow mUICreditCheckAtRenewalWindow;
-        
-        private UIHouseholdRenewalsAmeWindow1 mUIHouseholdRenewalsAmeWindow1;
         
         private UIAUTO2301001Window mUIAUTO2301001Window;
         

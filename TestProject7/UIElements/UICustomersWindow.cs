@@ -8,10 +8,8 @@
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
-    public class UICustomersWindow1 : WinWindow
+    public class UICustomersWindow : WinWindow
     {
-        private const string WindowName = "Customer: autotest";
-
         #region Properties
 
         public UIItemWindow UIItemWindow
@@ -48,7 +46,7 @@
 
         #endregion
 
-        public UICustomersWindow1(UITestControl searchLimitContainer)
+        public UICustomersWindow(UITestControl searchLimitContainer)
             : base(searchLimitContainer)
         {
             #region Search Criteria

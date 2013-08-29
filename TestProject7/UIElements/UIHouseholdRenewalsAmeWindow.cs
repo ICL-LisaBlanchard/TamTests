@@ -132,6 +132,30 @@
             }
         }
 
+        public UIItemWindow UIItemWindow7
+        {
+            get
+            {
+                if ((this.mUIItemWindow7 == null))
+                {
+                    this.mUIItemWindow7 = new UIItemWindow(this, className: "ListView20WndClass");
+                }
+                return this.mUIItemWindow7;
+            }
+        }
+
+        public UIItemWindow UIRenewPolicyWindow
+        {
+            get
+            {
+                if ((this.mUIRenewPolicyWindow == null))
+                {
+                    this.mUIRenewPolicyWindow = new UIItemWindow(this, controlId: "2");
+                }
+                return this.mUIRenewPolicyWindow;
+            }
+        }
+
         #endregion
 
         #region Fields
@@ -155,6 +179,10 @@
         private UIItemWindow mUINextWindow6;
 
         private UIItemWindow mUIQuoteWindow;
+
+        private UIItemWindow mUIItemWindow7;
+
+        private UIItemWindow mUIRenewPolicyWindow;
 
         #endregion
     }

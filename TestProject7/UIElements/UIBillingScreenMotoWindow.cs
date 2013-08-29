@@ -10,10 +10,6 @@
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIBillingScreenMotoWindow : WinWindow
     {
-        private const string WindowName = "Policy: autotest";
-
-        private const string WindowName2 = "Transaction: autotest";
-
         #region Properties
 
         public UIItemWindow UICancelWindow

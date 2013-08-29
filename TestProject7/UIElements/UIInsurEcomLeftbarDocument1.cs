@@ -18,7 +18,7 @@
             this.SearchProperties[PropertyNames.FrameDocument] = "True";
             this.FilterProperties[HtmlControl.PropertyNames.Title] = "insurE-com - Left bar";
             this.FilterProperties[PropertyNames.AbsolutePath] = "/sysmaint/content/leftbar.asp";
-            this.FilterProperties[PropertyNames.PageUrl] = "https://www.insur-econnect.com/sysmaint/content/leftbar.asp#";
+            this.FilterProperties[PropertyNames.PageUrl] = "https://www.insur-econnect.com/sysmaint/content/leftbar.asp";
             this.WindowTitles.Add("insurE-com System Maintenance");
 
             #endregion
@@ -26,23 +26,13 @@
 
         #region Properties
 
-        public UIDivRenewalsPane UIDivRenewalsPane
-        {
-            get
-            {
-                if ((this.mUIDivRenewalsPane == null))
-                {
-                    this.mUIDivRenewalsPane = new UIDivRenewalsPane(this);
-                }
-                return this.mUIDivRenewalsPane;
-            }
-        }
+  
 
         #endregion
 
         #region Fields
 
-        private UIDivRenewalsPane mUIDivRenewalsPane;
+        
 
         #endregion
     }

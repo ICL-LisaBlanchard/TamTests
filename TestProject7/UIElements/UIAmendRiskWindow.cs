@@ -8,7 +8,7 @@
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
-    public class UIAmendRiskWindow1 : WinWindow
+    public class UIAmendRiskWindow : WinWindow
     {
         #region Properties
 
@@ -60,7 +60,7 @@
 
         #endregion
 
-        public UIAmendRiskWindow1()
+        public UIAmendRiskWindow()
         {
             #region Search Criteria
 
