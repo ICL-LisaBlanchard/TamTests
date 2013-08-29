@@ -2,6 +2,8 @@
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
@@ -21,13 +23,13 @@
 
         #region Properties
 
-        public UIExitWindow5 UIExitWindow
+        public UIItemWindow UIExitWindow
         {
             get
             {
                 if ((this.mUIExitWindow == null))
                 {
-                    this.mUIExitWindow = new UIExitWindow5(this);
+                    this.mUIExitWindow = new UIItemWindow(this, "2");
                 }
                 return this.mUIExitWindow;
             }
@@ -37,7 +39,7 @@
 
         #region Fields
 
-        private UIExitWindow5 mUIExitWindow;
+        private UIItemWindow mUIExitWindow;
 
         #endregion
     }

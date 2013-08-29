@@ -2,6 +2,8 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
@@ -27,7 +29,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             {
                 if ((this.mUICurrentOrFutureClient == null))
                 {
-                    this.mUICurrentOrFutureClient = new UIClient(this, "Current Or Future", "Current Or Future");
+                    this.mUICurrentOrFutureClient = new UIClient(this, "Current Or Future");
                 }
                 return this.mUICurrentOrFutureClient;
             }

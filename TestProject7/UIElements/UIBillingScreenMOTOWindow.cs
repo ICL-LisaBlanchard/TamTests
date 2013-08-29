@@ -2,6 +2,8 @@
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
@@ -106,7 +108,7 @@
 
         private UIItemWindow mUIItemWindow;
 
-        private UITestControl mUICancelWindow1;
+        private UIItemWindow mUICancelWindow1;
 
         private UIItemWindow mUIItemWindow1;
 

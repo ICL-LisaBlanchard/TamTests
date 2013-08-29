@@ -2,6 +2,8 @@
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
@@ -12,9 +14,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
+            this.SearchProperties[UITestControl.PropertyNames.Name] = WindowTitle;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add(this.windowTitle);
+            this.WindowTitles.Add(WindowTitle);
 
             #endregion
         }
@@ -45,22 +47,11 @@
             }
         }
 
-        public WinClient UIPointOfSaleClient
+        public UIClient UIPointOfSaleClient
         {
             get
             {
-                if ((this.mUIPointOfSaleClient == null))
-                {
-                    this.mUIPointOfSaleClient = new WinClient(this);
-
-                    #region Search Criteria
-
-                    this.mUIPointOfSaleClient.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
-                    this.mUIPointOfSaleClient.WindowTitles.Add(this.windowTitle);
-
-                    #endregion
-                }
-                return this.mUIPointOfSaleClient;
+                return new UIClient(this, WindowTitle);
             }
         }
 
@@ -68,13 +59,11 @@
 
         #region Fields
 
+        private const string WindowTitle = "Point Of Sale";
+
         private UIItemWindow mUIDeferPrintingWindow;
 
         private UIItemWindow mUIOKWindow;
-
-        private WinClient mUIPointOfSaleClient;
-
-        private string windowTitle = "Point Of Sale";
 
         #endregion
     }

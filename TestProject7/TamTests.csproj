@@ -89,6 +89,32 @@
     <Compile Include="Assertions\HomeMTACheckMessageExpectedValues.cs" />
     <Compile Include="Assertions\HomeMTACopyCheckExpectedValues.cs" />
     <Compile Include="Assertions\HomeRenewalCancelledCheckExpectedValues.cs" />
+    <Compile Include="Assertions\MotoCheckAWAPpremiumExpectedValues.cs" />
+    <Compile Include="Assertions\MotoCheckChangedPremiumExpectedValues.cs" />
+    <Compile Include="Assertions\MotoCheckPolicyStatusExpectedValues.cs" />
+    <Compile Include="Assertions\MotoCopyCheckCarExpectedValues.cs" />
+    <Compile Include="Assertions\MotoCopyCheckProposerExpectedValues.cs" />
+    <Compile Include="Assertions\MotoMTACheckCarExpectedValues.cs" />
+    <Compile Include="Assertions\MotoMTACheckNewValueExpectedValues.cs" />
+    <Compile Include="Assertions\MotoMTAMessageAfterDateExpectedValues.cs" />
+    <Compile Include="Assertions\MotoMTAMessageCancelledExpectedValues.cs" />
+    <Compile Include="Assertions\MotoRenewalCheckRecordExpectedValues.cs" />
+    <Compile Include="Assertions\MTAMessageBeforeCurrentExpectedValues.cs" />
+    <Compile Include="Assertions\PostcodeLookupExpectedValues.cs" />
+    <Compile Include="Assertions\RenewalCheckInvitedExpectedValues.cs" />
+    <Compile Include="Assertions\RenewalCheckStatusExpectedValues.cs" />
+    <Compile Include="BaseUIElements\UIButton.cs" />
+    <Compile Include="BaseUIElements\UICheckBox.cs" />
+    <Compile Include="BaseUIElements\UIClient.cs" />
+    <Compile Include="BaseUIElements\UIDialog.cs" />
+    <Compile Include="BaseUIElements\UIGroup.cs" />
+    <Compile Include="BaseUIElements\UIItemComboBox.cs" />
+    <Compile Include="BaseUIElements\UIItemEdit.cs" />
+    <Compile Include="BaseUIElements\UIItemWindow.cs" />
+    <Compile Include="BaseUIElements\UIMenuListItem.cs" />
+    <Compile Include="BaseUIElements\UIPane.cs" />
+    <Compile Include="BaseUIElements\UIRadioButton.cs" />
+    <Compile Include="BaseUIElements\UIText.cs" />
     <Compile Include="Configs.cs" />
     <Compile Include="CustomerActions.cs" />
     <Compile Include="HomeActions.cs" />
@@ -155,9 +181,11 @@
     <Compile Include="Params\MotoRegressAppParams.cs" />
     <Compile Include="Params\MotoSearchCarParams.cs" />
     <Compile Include="Params\MotoSelectHighwayPolicyParams.cs" />
+    <Compile Include="Params\MTADateParams.cs" />
     <Compile Include="Params\MTAEffectiveDateParams.cs" />
     <Compile Include="Params\OpenBrowser2Params.cs" />
     <Compile Include="Params\OpenSiteForRenewalParams.cs" />
+    <Compile Include="Params\QuoteResultsParams.cs" />
     <Compile Include="Params\RebrokeAlternativeFinishParams.cs" />
     <Compile Include="Params\RebrokeAlternativeFinish_1Params.cs" />
     <Compile Include="Params\RebrokeAlternativeRenewParams.cs" />
@@ -181,30 +209,11 @@
     <Compile Include="Params\testPrintParams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrySettings.cs" />
-    <Compile Include="UIElements\MotoAWAPCheckNEWExpectedValues.cs" />
-    <Compile Include="UIElements\MotoAWAPCheckTAXExpectedValues.cs" />
-    <Compile Include="UIElements\MotoCheckAWAPpremiumExpectedValues.cs" />
-    <Compile Include="UIElements\MotoCheckChangedPremiumExpectedValues.cs" />
-    <Compile Include="UIElements\MotoCheckPolicyStatusExpectedValues.cs" />
-    <Compile Include="UIElements\MotoCopyCheckCarExpectedValues.cs" />
-    <Compile Include="UIElements\MotoCopyCheckProposerExpectedValues.cs" />
-    <Compile Include="UIElements\MotoMTACheckCarExpectedValues.cs" />
-    <Compile Include="UIElements\MotoMTACheckNewValueExpectedValues.cs" />
-    <Compile Include="UIElements\MotoMTAMessageAfterDateExpectedValues.cs" />
-    <Compile Include="UIElements\MotoMTAMessageCancelledExpectedValues.cs" />
-    <Compile Include="UIElements\MotoRenewalCheckRecordExpectedValues.cs" />
-    <Compile Include="UIElements\MTADateParams.cs" />
-    <Compile Include="UIElements\MTAMessageBeforeCurrentExpectedValues.cs" />
-    <Compile Include="UIElements\PostcodeLookupExpectedValues.cs" />
-    <Compile Include="UIElements\QuoteResultsParams.cs" />
-    <Compile Include="UIElements\RenewalCheckInvitedExpectedValues.cs" />
-    <Compile Include="UIElements\RenewalCheckStatusExpectedValues.cs" />
     <Compile Include="UIElements\UIAcceptthisquoteNotOvWindow.cs" />
     <Compile Include="UIElements\UIAcceptWithAnotherProWindow.cs" />
     <Compile Include="UIElements\UIAmendRiskResultsWindow.cs" />
     <Compile Include="UIElements\UIAmendRiskWindow1.cs" />
     <Compile Include="UIElements\UIApplicationMenuBar.cs" />
-    <Compile Include="UIElements\UIApplicationMenuBar1.cs" />
     <Compile Include="UIElements\UIAssignClientNumberWindow.cs" />
     <Compile Include="UIElements\UIAUTO1871001Window.cs" />
     <Compile Include="UIElements\UIAUTO2081001Window.cs" />
@@ -212,7 +221,6 @@
     <Compile Include="UIElements\UIAUTO2251001Window.cs" />
     <Compile Include="UIElements\UIAUTO2301001Window.cs" />
     <Compile Include="UIElements\UIAUTO2311001Window.cs" />
-    <Compile Include="UIElements\UIAWAPWindow.cs" />
     <Compile Include="UIElements\UIBillingScreenHomeTestWindow.cs" />
     <Compile Include="UIElements\UIBillingScreenHOMEWindow1.cs" />
     <Compile Include="UIElements\UIBillingScreenMotoTestWindow.cs" />
@@ -220,51 +228,23 @@
     <Compile Include="UIElements\UIBlankPageMicrosoftInWindow.cs" />
     <Compile Include="UIElements\UIBlankPageWindowsInteTitleBar.cs" />
     <Compile Include="UIElements\UIBrokerAddonsWindow.cs" />
-    <Compile Include="UIElements\UIButton.cs" />
-    <Compile Include="UIElements\UICancelWindow11.cs" />
-    <Compile Include="UIElements\UICancelWindow13.cs" />
-    <Compile Include="UIElements\UICancelWindow21.cs" />
-    <Compile Include="UIElements\UICancelWindow3.cs" />
-    <Compile Include="UIElements\UICancelWindow7.cs" />
-    <Compile Include="UIElements\UICancelWindow8.cs" />
-    <Compile Include="UIElements\UICancelWindow9.cs" />
-    <Compile Include="UIElements\UICheckBox.cs" />
     <Compile Include="UIElements\UIClaimsWindow.cs" />
-    <Compile Include="UIElements\UICloseWindow.cs" />
-    <Compile Include="UIElements\UICloseWindow1.cs" />
-    <Compile Include="UIElements\UIComprehensiveWindow.cs" />
     <Compile Include="UIElements\UIConfirmDocumentsWindow.cs" />
     <Compile Include="UIElements\UIConfirmMTAWindow.cs" />
-    <Compile Include="UIElements\UIConfirmSaveAsDialog.cs" />
-    <Compile Include="UIElements\UIConfirmSaveAsPane.cs" />
-    <Compile Include="UIElements\UIConfirmWindow.cs" />
     <Compile Include="UIElements\UIConfirmWindow2.cs" />
     <Compile Include="UIElements\UIContentFrame.cs" />
     <Compile Include="UIElements\UICreditCheckAtRenewalWindow.cs" />
     <Compile Include="UIElements\UICreditCheckWindow.cs" />
-    <Compile Include="UIElements\UIClient.cs" />
     <Compile Include="UIElements\UICurrentOrFutureWindow.cs" />
     <Compile Include="UIElements\UICUSTOMERSWindow1.cs" />
     <Compile Include="UIElements\UICustomertxt1tdsfsWindow.cs" />
     <Compile Include="UIElements\UIDemandsNeedsMotorComWindow.cs" />
-    <Compile Include="UIElements\UIDesktopList.cs" />
     <Compile Include="UIElements\UIDetailsPanePane.cs" />
-    <Compile Include="UIElements\UIDetailWindow.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="UIElements\UIDisplayRecordWindow.cs" />
     <Compile Include="UIElements\UIDivRenewalsPane.cs" />
     <Compile Include="UIElements\UIDriverDetailsWindow.cs" />
-    <Compile Include="UIElements\UIEDIMatchWindow.cs" />
     <Compile Include="UIElements\UIErrorWindow.cs" />
-    <Compile Include="UIElements\UIExitWindow.cs" />
-    <Compile Include="UIElements\UIExitWindow1.cs" />
-    <Compile Include="UIElements\UIExitWindow5.cs" />
     <Compile Include="UIElements\UIFileJAPPSIEOfficeDatDocument.cs" />
     <Compile Include="UIElements\UIFilterRenewalRecordsWindow.cs" />
-    <Compile Include="UIElements\UIFilterWindow2.cs" />
-    <Compile Include="UIElements\UIFolderViewWindow.cs" />
-    <Compile Include="UIElements\UIGroup.cs" />
     <Compile Include="UIElements\UIHouseholdRebrokeResuWindow.cs" />
     <Compile Include="UIElements\UIHouseholdRenewalsAmeWindow.cs" />
     <Compile Include="UIElements\UIHouseholdRenewalsAmeWindow1.cs" />
@@ -281,39 +261,19 @@
     <Compile Include="UIElements\UIInsurerNoticeRevaluaWindow.cs" />
     <Compile Include="UIElements\UIInsurEtamWindow.cs" />
     <Compile Include="UIElements\UIInsurEtamWindow1.cs" />
-    <Compile Include="UIElements\UIItem12122012Window.cs" />
-    <Compile Include="UIElements\UIItem13122012Window.cs" />
-    <Compile Include="UIElements\UIItem1Window.cs" />
-    <Compile Include="UIElements\UIItem3rdPartyIntegratMenuItem3.cs" />
     <Compile Include="UIElements\UIItemClient1.cs" />
-    <Compile Include="UIElements\UIItemComboBox.cs" />
-    <Compile Include="UIElements\UIItemEdit.cs" />
     <Compile Include="UIElements\UIItemUserDetails.cs" />
     <Compile Include="UIElements\UIItemTable.cs" />
     <Compile Include="UIElements\UIItemTable1.cs" />
-    <Compile Include="UIElements\UIItemWindow.cs" />
     <Compile Include="UIElements\UILeftbarFrame.cs" />
-    <Compile Include="UIElements\UILinksMenuItem1.cs" />
-    <Compile Include="UIElements\UILinksMenuLinks.cs" />
-    <Compile Include="UIElements\UILinksMenuItem2.cs" />
-    <Compile Include="UIElements\UILogandClearWindow.cs" />
-    <Compile Include="UIElements\UILvwVListWindow.cs" />
-    <Compile Include="UIElements\UIMenuListItem.cs" />
     <Compile Include="UIElements\UIMidTermAdjustmentsWindow.cs" />
     <Compile Include="UIElements\UIMotorQuotesWindow.cs" />
     <Compile Include="UIElements\UIMTAEffectiveDatesWindow.cs" />
-    <Compile Include="UIElements\UIMTAsuccessfullyproceWindow.cs" />
     <Compile Include="UIElements\UIMTASuccessfulWindow.cs" />
-    <Compile Include="UIElements\UIMTAWindow.cs" />
-    <Compile Include="UIElements\UIMTAWindow1.cs" />
     <Compile Include="UIElements\UINewCustomerDetailWindow.cs" />
     <Compile Include="UIElements\UINewPolicyDetailWindow.cs" />
     <Compile Include="UIElements\UIOpenWindow.cs" />
-    <Compile Include="UIElements\UIOptionsMenuItem1.cs" />
-    <Compile Include="UIElements\UIOptionsWindow.cs" />
-    <Compile Include="UIElements\UIOurhighwayListItem.cs" />
     <Compile Include="UIElements\UIOverridePremiumWindow.cs" />
-    <Compile Include="UIElements\UIPane.cs" />
     <Compile Include="UIElements\UIPanel1Client.cs" />
     <Compile Include="UIElements\UIPaymentMethodsWindow.cs" />
     <Compile Include="UIElements\UIPleaseselectWHOtofolWindow.cs" />
@@ -324,49 +284,32 @@
     <Compile Include="UIElements\UIPolicyDetailConfirmationWindow.cs" />
     <Compile Include="UIElements\UIPolicygdfhdfdfghgdfWindow.cs" />
     <Compile Include="UIElements\UIPolicyListWindow.cs" />
-    <Compile Include="UIElements\PolicyListWindow1.cs" />
+    <Compile Include="UIElements\UIPolicyListWindow1.cs" />
     <Compile Include="UIElements\UIPolicyListWindow11.cs" />
     <Compile Include="UIElements\UIPolicyrtyertWindow.cs" />
-    <Compile Include="UIElements\UIPolicySummaryWindow.cs" />
-    <Compile Include="UIElements\UIPremiumWindow.cs" />
     <Compile Include="UIElements\UIPrintDocumentsWindow.cs" />
-    <Compile Include="UIElements\UIPrintQuoteWindow.cs" />
-    <Compile Include="UIElements\UIProceedWindow.cs" />
     <Compile Include="UIElements\UIProductSelectionWindow.cs" />
     <Compile Include="UIElements\UIProposerDetailsWindow.cs" />
     <Compile Include="UIElements\UIProposerTypeWindow.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="UIElements\UIQuoteDetailsWindow.cs" />
     <Compile Include="UIElements\UIQuoteResultsWindow.cs" />
     <Compile Include="UIElements\UIQuoteSelectListWindow.cs" />
     <Compile Include="UIElements\UIQuotesResultsWindow.cs" />
-    <Compile Include="UIElements\UIQuoteWindow.cs" />
     <Compile Include="UIElements\UIRebrokeResultsScreenWindow.cs" />
-    <Compile Include="UIElements\UIRebrokeWindow1.cs" />
-    <Compile Include="UIElements\UIRegistryEditorDialog.cs" />
-    <Compile Include="UIElements\UIRegistryEditorPane.cs" />
     <Compile Include="UIElements\UIRegressIETamPolicyWindow.cs" />
     <Compile Include="UIElements\UIRenewalAcceptWindow.cs" />
-    <Compile Include="UIElements\UIRenewalLoaderClient.cs" />
     <Compile Include="UIElements\UIRenewalLoaderTitleBar.cs" />
     <Compile Include="UIElements\UIRenewalLoaderWindow.cs" />
     <Compile Include="UIElements\UIRenewalSearchWindow.cs" />
     <Compile Include="UIElements\UIRenewalsNewBusinessAWindow.cs" />
     <Compile Include="UIElements\UIRenewalsNewBusinessAWindow1.cs" />
-    <Compile Include="UIElements\UIRenewPolicyWindow4.cs" />
-    <Compile Include="UIElements\UIRibbonPropertyPage.cs" />
-    <Compile Include="UIElements\UIRibbonPropertyPage1.cs" />
     <Compile Include="UIElements\UISavethefileasWindow.cs" />
     <Compile Include="UIElements\UISearchResultForB338TWindow.cs" />
     <Compile Include="UIElements\UISearchResultForBN16BWindow.cs" />
     <Compile Include="UIElements\UISelectaPolicyNumberWindow.cs" />
-    <Compile Include="UIElements\UISelectTaminsurerforiClient.cs" />
     <Compile Include="UIElements\UISelectTaminsurerforiWindow.cs" />
-    <Compile Include="UIElements\UITamxml7Client.cs" />
-    <Compile Include="UIElements\UITamxml7Window.cs" />
     <Compile Include="UIElements\UITamXMLImportCustomerClient.cs" />
-    <Compile Include="UIElements\UIText.cs" />
     <Compile Include="UIElements\UITheAgencyManagerSignWindow.cs" />
     <Compile Include="UIElements\UITheAgencyManagerWindow1.cs" />
     <Compile Include="UIElements\UITransactiontoinsertClient.cs" />
@@ -381,8 +324,6 @@
     <Compile Include="UIElements\UIWindowsSecurityPane.cs" />
     <Compile Include="UIElements\UIWindowsSecurityWindow.cs" />
     <Compile Include="UIElements\UIWindowsSecurityWindow1.cs" />
-    <Compile Include="UIElements\UIWindowsSecurityWindow2.cs" />
-    <Compile Include="UIElements\UIWorkspaceClient.cs" />
     <Compile Include="UIMap.cs">
       <DependentUpon>UIMap.uitest</DependentUpon>
     </Compile>
@@ -390,15 +331,12 @@
       <DependentUpon>UIMap.uitest</DependentUpon>
     </Compile>
     <Compile Include="BaseUITest.cs" />
-    <Compile Include="UIRadioButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="UIMap.uitest" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RegistrySettings\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

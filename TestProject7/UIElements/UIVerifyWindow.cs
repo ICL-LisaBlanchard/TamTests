@@ -2,23 +2,16 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
+    using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIVerifyWindow : WinWindow
     {
-        
-        public UIVerifyWindow()
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.Name] = "Verify";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add("Verify");
-            #endregion
-        }
-
-        private const string WindowName = "Verify";
         #region Properties
+
         public UIItemWindow UIYesWindow
         {
             get
@@ -30,10 +23,24 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 return this.mUIYesWindow;
             }
         }
+
         #endregion
-        
+
         #region Fields
+
         private UIItemWindow mUIYesWindow;
+
         #endregion
+
+        public UIVerifyWindow()
+        {
+            #region Search Criteria
+
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "Verify";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
+            this.WindowTitles.Add("Verify");
+
+            #endregion
+        }
     }
 }

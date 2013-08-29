@@ -2,6 +2,8 @@
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
@@ -105,8 +107,6 @@
         private UIItemWindow mUIItemWindow2;
 
         private UIItemWindow mUIRegressWindow;
-
-        private UIItemWindow mUIItemWindow1;
 
         private UIItemWindow mUIExitWindow;
 

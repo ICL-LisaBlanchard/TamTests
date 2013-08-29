@@ -2,6 +2,8 @@
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
@@ -21,13 +23,13 @@
 
         #region Properties
 
-        public UIConfirmWindow UIConfirmWindow
+        public UIItemWindow UIConfirmWindow
         {
             get
             {
                 if ((this.mUIConfirmWindow == null))
                 {
-                    this.mUIConfirmWindow = new UIConfirmWindow(this);
+                    this.mUIConfirmWindow = new UIItemWindow(this, "5");
                 }
                 return this.mUIConfirmWindow;
             }
@@ -37,7 +39,7 @@
 
         #region Fields
 
-        private UIConfirmWindow mUIConfirmWindow;
+        private UIItemWindow mUIConfirmWindow;
 
         #endregion
     }

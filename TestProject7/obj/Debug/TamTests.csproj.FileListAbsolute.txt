@@ -28,4 +28,3 @@ S:\TamTests\TestProject7\bin\Debug\AppliedSystems.Tam.Ui.Tests.dll
 S:\TamTests\TestProject7\bin\Debug\AppliedSystems.Tam.Ui.Tests.pdb
 S:\TamTests\TestProject7\obj\Debug\AppliedSystems.Tam.Ui.Tests.dll
 S:\TamTests\TestProject7\obj\Debug\AppliedSystems.Tam.Ui.Tests.pdb
-S:\TamTests\TestProject7\obj\Debug\TamTests.csprojResolveAssemblyReference.cache

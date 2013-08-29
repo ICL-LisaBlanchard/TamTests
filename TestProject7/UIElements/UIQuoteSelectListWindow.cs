@@ -2,6 +2,8 @@
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
@@ -21,13 +23,13 @@
 
         #region Properties
 
-        public UICancelWindow8 UICancelWindow
+        public UIItemWindow UICancelWindow
         {
             get
             {
                 if ((this.mUICancelWindow == null))
                 {
-                    this.mUICancelWindow = new UICancelWindow8(this);
+                    this.mUICancelWindow = new UIItemWindow(this, "1");
                 }
                 return this.mUICancelWindow;
             }
@@ -37,7 +39,7 @@
 
         #region Fields
 
-        private UICancelWindow8 mUICancelWindow;
+        private UIItemWindow mUICancelWindow;
 
         #endregion
     }

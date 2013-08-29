@@ -2,6 +2,8 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
@@ -19,8 +21,6 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         }
 
         #region Properties
-
-        private const string WindowTitle = "insur-E.tam";
 
         public UIItemWindow UIItemWindow
         {
@@ -298,67 +298,67 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UIQuoteWindow UIQuoteWindow
+        public UIItemWindow UIQuoteWindow
         {
             get
             {
                 if ((this.mUIQuoteWindow == null))
                 {
-                    this.mUIQuoteWindow = new UIQuoteWindow(this);
+                    this.mUIQuoteWindow = new UIItemWindow(this, "12");
                 }
                 return this.mUIQuoteWindow;
             }
         }
 
-        public UIExitWindow UIExitWindow
+        public UIItemWindow UIExitWindow
         {
             get
             {
                 if ((this.mUIExitWindow == null))
                 {
-                    this.mUIExitWindow = new UIExitWindow(this);
+                    this.mUIExitWindow = new UIItemWindow(this, "22");
                 }
                 return this.mUIExitWindow;
             }
         }
 
-        public UIMTAWindow UIMTAWindow
+        public UIItemWindow UIMTAWindow
         {
             get
             {
                 if ((this.mUIMTAWindow == null))
                 {
-                    this.mUIMTAWindow = new UIMTAWindow(this);
+                    this.mUIMTAWindow = new UIItemWindow(this, "48");
                 }
                 return this.mUIMTAWindow;
             }
         }
 
-        public UICancelWindow3 UICancelWindow
+        public UIItemWindow UICancelWindow
         {
             get
             {
                 if ((this.mUICancelWindow == null))
                 {
-                    this.mUICancelWindow = new UICancelWindow3(this);
+                    this.mUICancelWindow = new UIItemWindow(this, "83");
                 }
                 return this.mUICancelWindow;
             }
         }
 
-        public UIMTAWindow1 UIMTAWindow1
+        public UIItemWindow UIMTAWindow1
         {
             get
             {
                 if ((this.mUIMTAWindow1 == null))
                 {
-                    this.mUIMTAWindow1 = new UIMTAWindow1(this);
+                    this.mUIMTAWindow1 = new UIItemWindow(this, "81");
                 }
                 return this.mUIMTAWindow1;
             }
         }
 
-        public UITestControl UIItemWindow9
+        public UIItemWindow UIItemWindow9
         {
             get
             {
@@ -370,25 +370,25 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UIEDIMatchWindow UIEDIMatchWindow
+        public UIItemWindow UIEDIMatchWindow
         {
             get
             {
                 if ((this.mUIEDIMatchWindow == null))
                 {
-                    this.mUIEDIMatchWindow = new UIEDIMatchWindow(this);
+                    this.mUIEDIMatchWindow = new UIItemWindow(this, "7");
                 }
                 return this.mUIEDIMatchWindow;
             }
         }
 
-        public UILogandClearWindow UILogandClearWindow
+        public UIItemWindow UILogandClearWindow
         {
             get
             {
                 if ((this.mUILogandClearWindow == null))
                 {
-                    this.mUILogandClearWindow = new UILogandClearWindow(this);
+                    this.mUILogandClearWindow = new UIItemWindow(this, "5");
                 }
                 return this.mUILogandClearWindow;
             }
@@ -406,25 +406,25 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UIDisplayRecordWindow UIDisplayRecordWindow
+        public UIItemWindow UIDisplayRecordWindow
         {
             get
             {
                 if ((this.mUIDisplayRecordWindow == null))
                 {
-                    this.mUIDisplayRecordWindow = new UIDisplayRecordWindow(this);
+                    this.mUIDisplayRecordWindow = new UIItemWindow(this, "3");
                 }
                 return this.mUIDisplayRecordWindow;
             }
         }
 
-        public UIFilterWindow2 UIFilterWindow
+        public UIItemWindow UIFilterWindow
         {
             get
             {
                 if ((this.mUIFilterWindow == null))
                 {
-                    this.mUIFilterWindow = new UIFilterWindow2(this);
+                    this.mUIFilterWindow = new UIItemWindow(this, "9");
                 }
                 return this.mUIFilterWindow;
             }
@@ -442,13 +442,13 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UIExitWindow1 UIExitWindow1
+        public UIItemWindow UIExitWindow1
         {
             get
             {
                 if ((this.mUIExitWindow1 == null))
                 {
-                    this.mUIExitWindow1 = new UIExitWindow1(this);
+                    this.mUIExitWindow1 = new UIItemWindow(this, "10");
                 }
                 return this.mUIExitWindow1;
             }
@@ -466,25 +466,25 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UICancelWindow11 UICancelWindow1
+        public UIItemWindow UICancelWindow1
         {
             get
             {
                 if ((this.mUICancelWindow1 == null))
                 {
-                    this.mUICancelWindow1 = new UICancelWindow11(this);
+                    this.mUICancelWindow1 = new UIItemWindow(this, "83");
                 }
                 return this.mUICancelWindow1;
             }
         }
 
-        public UICancelWindow21 UICancelWindow2
+        public UIItemWindow UICancelWindow2
         {
             get
             {
                 if ((this.mUICancelWindow2 == null))
                 {
-                    this.mUICancelWindow2 = new UICancelWindow21(this);
+                    this.mUICancelWindow2 = new UIItemWindow(this, "11");
                 }
                 return this.mUICancelWindow2;
             }
@@ -540,37 +540,37 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         private UIItemWindow mUINextWindow6;
 
-        private UIQuoteWindow mUIQuoteWindow;
+        private UIItemWindow mUIQuoteWindow;
 
-        private UIExitWindow mUIExitWindow;
+        private UIItemWindow mUIExitWindow;
 
-        private UIMTAWindow mUIMTAWindow;
+        private UIItemWindow mUIMTAWindow;
 
-        private UICancelWindow3 mUICancelWindow;
+        private UIItemWindow mUICancelWindow;
 
-        private UIMTAWindow1 mUIMTAWindow1;
+        private UIItemWindow mUIMTAWindow1;
 
-        private UITestControl mUIItemWindow9;
+        private UIItemWindow mUIItemWindow9;
 
-        private UIEDIMatchWindow mUIEDIMatchWindow;
+        private UIItemWindow mUIEDIMatchWindow;
 
-        private UILogandClearWindow mUILogandClearWindow;
+        private UIItemWindow mUILogandClearWindow;
 
         private UIItemWindow mUIItemWindow10;
 
-        private UIDisplayRecordWindow mUIDisplayRecordWindow;
+        private UIItemWindow mUIDisplayRecordWindow;
 
-        private UIFilterWindow2 mUIFilterWindow;
+        private UIItemWindow mUIFilterWindow;
 
         private UIItemWindow mUIItemWindow12;
 
-        private UIExitWindow1 mUIExitWindow1;
+        private UIItemWindow mUIExitWindow1;
 
         private UIItemWindow mUIItemWindow13;
 
-        private UICancelWindow11 mUICancelWindow1;
+        private UIItemWindow mUICancelWindow1;
 
-        private UICancelWindow21 mUICancelWindow2;
+        private UIItemWindow mUICancelWindow2;
 
         #endregion
     }

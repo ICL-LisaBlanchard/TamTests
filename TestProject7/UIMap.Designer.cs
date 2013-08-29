@@ -17,6 +17,7 @@ namespace AppliedSystems.Tam.Ui.Tests
     using System.Text.RegularExpressions;
     using System.Windows.Input;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
     using AppliedSystems.Tam.Ui.Tests.UIElements;
 
     using Microsoft.VisualStudio.TestTools.UITest.Extension;
@@ -308,13 +309,13 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UITamxml7Window UITamxml7Window
+        public UIItemWindow UITamxml7Window
         {
             get
             {
                 if ((this.mUITamxml7Window == null))
                 {
-                    this.mUITamxml7Window = new UITamxml7Window();
+                    this.mUITamxml7Window = new UIItemWindow(name: "Tamxml7", className: "TMessageForm");
                 }
                 return this.mUITamxml7Window;
             }
@@ -1002,7 +1003,7 @@ namespace AppliedSystems.Tam.Ui.Tests
         
         private UITransactiontoinsertWindow mUITransactiontoinsertWindow;
         
-        private UITamxml7Window mUITamxml7Window;
+        private UIItemWindow mUITamxml7Window;
         
         private UIPolicyrtyertWindow mUIPolicyrtyertWindow;
         

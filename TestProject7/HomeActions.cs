@@ -632,9 +632,9 @@
             #region Variable Declarations
 
             WinControl uICancelButton = this.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UICancelWindow.UICancelButton;
-            WinControl uIOptionsButton = this.UIPolicyautotestWindow.PolicyListWindow.UIOptionsWindow.UIOptionsButton;
+            WinControl uIOptionsButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UIOptionsWindow.UIOptionsButton;
             WinMenuItem uIQuoteSelectListMenuItem =
-                this.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegrateMenuItem.UIQuoteSelectListMenuItem;
+                this.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegratMenuItem.UIQuoteSelectListMenuItem;
             WinControl uIOKButton = this.UICurrentOrFutureWindow.UIClient.UIOKButton;
             WinControl uINextButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow.UINextButton;
             WinControl uINextButton1 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow1.UINextButton;
@@ -650,8 +650,8 @@
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton1 = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
-            WinControl uIOKButton2 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
-            WinControl uICancelButton1 = this.UIPolicyautotestWindow.PolicyListWindow.UICancelWindow.UICancelButton;
+            WinControl uIOKButton2 = this.UITamxml7Window.UIClient.UIOKButton;
+            WinControl uICancelButton1 = this.UIPolicyautotestWindow.UIPolicyListWindow.UICancelWindow.UICancelButton;
             WinControl uIItemButton = this.UIPolicyautotestWindow.UIItemWindow.UIItemButton;
             WinControl uIDetailButton = this.UIPolicyautotestWindow.UIPolicyListWindow1.UIDetailWindow.UIDetailButton;
             WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenHomeWindow1.UIItemWindow.UIItemEdit;
@@ -859,7 +859,7 @@
         {
             #region Variable Declarations
 
-            WinControl uICancelButton = this.UIPolicyautotestWindow.PolicyListWindow.UICancelWindow.UICancelButton;
+            WinControl uICancelButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UICancelWindow.UICancelButton;
             WinControl uIItemButton = this.UIPolicyautotestWindow.UIItemWindow.UIItemButton;
             WinControl uIDetailButton = this.UIPolicyautotestWindow.UIPolicyListWindow1.UIDetailWindow.UIDetailButton;
 
@@ -882,7 +882,7 @@
         {
             #region Variable Declarations
 
-            WinControl uICancelButton = this.UIPolicyautotestWindow.PolicyListWindow.UICancelWindow.UICancelButton;
+            WinControl uICancelButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UICancelWindow.UICancelButton;
             WinControl uIItemButton = this.UIPolicyautotestWindow.UIItemWindow.UIItemButton;
 
             #endregion
@@ -902,7 +902,7 @@
             #region Variable Declarations
 
             WinControl uICloseButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICancelWindow.UICloseButton;
-            WinControl uIokButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinControl uIokButton = this.UITamxml7Window.UIClient.UIOKButton;
 
             #endregion
 
@@ -953,8 +953,8 @@
         {
             #region Variable Declarations
 
-            WinControl uIOptionsButton = this.UIPolicyautotestWindow.PolicyListWindow.UIOptionsWindow.UIOptionsButton;
-            WinMenuItem uICopyRiskMenuItem = this.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegrateMenuItem.UICopyRiskMenuItem;
+            WinControl uIOptionsButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UIOptionsWindow.UIOptionsButton;
+            WinMenuItem uICopyRiskMenuItem = this.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegratMenuItem.UICopyRiskMenuItem;
             WinControl uIOKButton = this.UIWhichpolicywouldyoulWindow.UIItemWindow.UIClient.UIOKButton;
             WinRadioButton uIHouseholdRadioButton = this.UIProductSelectionWindow.UIHouseholdWindow.UIHouseholdRadioButton;
             WinControl uIOKButton1 = this.UIProductSelectionWindow.UIOKWindow.UIOKButton;
@@ -1029,7 +1029,7 @@
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
             WinControl uIOKButton1 = this.UISelectTaminsurerforiWindow.UIItemWindow1.UIClient.UIOKButton;
-            WinControl uIOKButton2 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinControl uIOKButton2 = this.UITamxml7Window.UIClient.UIOKButton;
 
             #endregion
 
@@ -1148,7 +1148,7 @@
 
             WinControl uICancelButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICancelWindow.UICancelButton;
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
-            WinControl uIOKButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinControl uIOKButton = this.UITamxml7Window.UIClient.UIOKButton;
 
             #endregion
 
@@ -1171,7 +1171,7 @@
 
             WinControl uICancelButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICancelWindow2.UICancelButton;
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
-            WinControl uIOKButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinControl uIOKButton = this.UITamxml7Window.UIClient.UIOKButton;
 
             #endregion
 
@@ -1198,7 +1198,7 @@
         {
             #region Variable Declarations
 
-            WinControl uIMTAButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow1.UIMTAButton;
+            WinControl uIMTAButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow1.UIMTAButton2;
             WinComboBox uIItemComboBox = this.UIMidTermAdjustmentsWindow.UIItemWindow.UIItemComboBox;
             WinControl uIOKButton = this.UIMidTermAdjustmentsWindow.UIOKWindow.UIOKButton;
             WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow2.UIItemEdit;
@@ -1344,7 +1344,7 @@
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton6 = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
             WinControl uIOKButton7 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient.UIOKButton;
-            WinControl uIOKButton8 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinControl uIOKButton8 = this.UITamxml7Window.UIClient.UIOKButton;
 
             #endregion
 
@@ -1561,9 +1561,9 @@
         {
             #region Variable Declarations
 
-            WinControl uIOptionsButton = this.UIPolicyautotestWindow.PolicyListWindow.UIOptionsWindow.UIOptionsButton;
+            WinControl uIOptionsButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UIOptionsWindow.UIOptionsButton;
             WinMenuItem uIQuoteSelectListMenuItem =
-                this.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegrateMenuItem.UIQuoteSelectListMenuItem;
+                this.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegratMenuItem.UIQuoteSelectListMenuItem;
             WinControl uIokButton = this.UICurrentOrFutureWindow.UIClient.UIOKButton;
 
             #endregion
@@ -1585,7 +1585,7 @@
         {
             #region Variable Declarations
 
-            WinControl uIDetailButton = this.UIPolicyautotestWindow.PolicyListWindow.UIDetailWindow.UIDetailButton;
+            WinControl uIDetailButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UIDetailWindow.UIDetailButton;
             WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UIItemWindow.UIItemEdit;
 
             #endregion
@@ -1614,7 +1614,7 @@
             WinControl uIokButton3 = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIokButton4 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinControl uIokButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinControl uIokButton5 = this.UITamxml7Window.UIClient.UIOKButton;
 
             #endregion
 
@@ -1875,7 +1875,7 @@
             WinControl uIokButton3 = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIokButton4 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinControl uIokButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinControl uIokButton5 = this.UITamxml7Window.UIClient.UIOKButton;
 
             #endregion
 
@@ -1924,7 +1924,7 @@
         {
             #region Variable Declarations
 
-            WinControl uIMTAButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow1.UIMTAButton;
+            WinControl uIMTAButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow1.UIMTAButton2;
             WinComboBox uIItemComboBox = this.UIMidTermAdjustmentsWindow.UIItemWindow.UIItemComboBox;
             WinControl uIOKButton = this.UIMidTermAdjustmentsWindow.UIOKWindow.UIOKButton;
 
@@ -1949,7 +1949,7 @@
 
             WinControl uICancelButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICancelWindow.UICancelButton;
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
-            WinControl uIOKButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinControl uIOKButton = this.UITamxml7Window.UIClient.UIOKButton;
 
             #endregion
 
@@ -2058,7 +2058,7 @@
             WinControl uIokButton3 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient.UIOKButton;
             WinList uIItemList = this.UIPleaseSelectWhoToFolWindow.UIItemWindow1.UIItemList;
             WinControl uIokButton4 = this.UIPleaseSelectWhoToFolWindow.UIItemWindow.UIClient.UIOKButton;
-            WinControl uIokButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinControl uIokButton5 = this.UITamxml7Window.UIClient.UIOKButton;
 
             #endregion
 
@@ -2146,7 +2146,7 @@
             WinControl uIokButton4 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient.UIOKButton;
             WinList uIItemList = this.UIPleaseSelectWhoToFolWindow.UIItemWindow1.UIItemList;
             WinControl uIokButton5 = this.UIPleaseSelectWhoToFolWindow.UIItemWindow.UIClient.UIOKButton;
-            WinControl uIokButton6 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinControl uIokButton6 = this.UITamxml7Window.UIClient.UIOKButton;
 
             #endregion
 
@@ -2379,7 +2379,7 @@
             WinControl uIOKButton1 = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton2 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinControl uIOKButton3 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinControl uIOKButton3 = this.UITamxml7Window.UIClient.UIOKButton;
 
             #endregion
 
@@ -2464,8 +2464,6 @@
             // Type '{Home}' in 'Household Rebroke Results' client
             Keyboard.SendKeys(uIHouseholdRebrokeResuClient, this.HomeRebrokeSelectPolicyParams.UIHouseholdRebrokeResuClientSendKeys, ModifierKeys.None);
         }
-
-
 
         /// <summary>
         ///     HomeCheckPremium - Use 'HomeCheckPremiumExpectedValues' to pass parameters into this method.

@@ -2,6 +2,8 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
@@ -21,13 +23,13 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         #region Properties
 
-        public UIRenewalLoaderClient UIRenewalLoaderClient
+        public UIClient UIRenewalLoaderClient
         {
             get
             {
                 if ((this.mUIRenewalLoaderClient == null))
                 {
-                    this.mUIRenewalLoaderClient = new UIRenewalLoaderClient(this);
+                    this.mUIRenewalLoaderClient = new UIClient(this, "Renewal Loader");
                 }
                 return this.mUIRenewalLoaderClient;
             }
@@ -45,39 +47,39 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UIItem1Window UIItem1Window
+        public UIItemWindow UIItem1Window
         {
             get
             {
                 if ((this.mUIItem1Window == null))
                 {
-                    this.mUIItem1Window = new UIItem1Window(this);
+                    this.mUIItem1Window = new UIItemWindow(this, "1");
                 }
                 return this.mUIItem1Window;
             }
         }
 
-        public UIItem12122012Window UIItem12122012Window
+        public UIItemWindow UIItemWindow
         {
             get
             {
-                if ((this.mUIItem12122012Window == null))
+                if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItem12122012Window = new UIItem12122012Window(this);
+                    this.mUIItemWindow = new UIItemWindow(this, className: "TEdit", instance: "3");
                 }
-                return this.mUIItem12122012Window;
+                return this.mUIItemWindow;
             }
         }
 
-        public UIItem13122012Window UIItem13122012Window
+        public UIItemWindow UIItemWindow2
         {
             get
             {
-                if ((this.mUIItem13122012Window == null))
+                if ((this.mUIItemWindow2 == null))
                 {
-                    this.mUIItem13122012Window = new UIItem13122012Window(this);
+                    this.mUIItemWindow2 = new UIItemWindow(this, className: "TEdit", instance: "2");
                 }
-                return this.mUIItem13122012Window;
+                return this.mUIItemWindow2;
             }
         }
 
@@ -85,15 +87,15 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         #region Fields
 
-        private UIRenewalLoaderClient mUIRenewalLoaderClient;
+        private UIClient mUIRenewalLoaderClient;
 
         private UIRenewalLoaderTitleBar mUIRenewalLoaderTitleBar;
 
-        private UIItem1Window mUIItem1Window;
+        private UIItemWindow mUIItem1Window;
 
-        private UIItem12122012Window mUIItem12122012Window;
+        private UIItemWindow mUIItemWindow;
 
-        private UIItem13122012Window mUIItem13122012Window;
+        private UIItemWindow mUIItemWindow2;
 
         #endregion
     }

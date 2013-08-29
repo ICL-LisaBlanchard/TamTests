@@ -2,6 +2,8 @@
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
@@ -14,15 +16,15 @@
 
         #region Properties
 
-        public PolicyListWindow1 PolicyListWindow
+        public UIPolicyListWindow1 UIPolicyListWindow
         {
             get
             {
-                if ((this.mPolicyListWindow == null))
+                if ((this.mUIPolicyListWindow == null))
                 {
-                    this.mPolicyListWindow = new PolicyListWindow1(this);
+                    this.mUIPolicyListWindow = new UIPolicyListWindow1(this);
                 }
-                return this.mPolicyListWindow;
+                return this.mUIPolicyListWindow;
             }
         }
 
@@ -62,13 +64,13 @@
             }
         }
 
-        public UIApplicationMenuBar1 UIApplicationMenuBar
+        public UIApplicationMenuBar UIApplicationMenuBar
         {
             get
             {
                 if ((this.mUIApplicationMenuBar == null))
                 {
-                    this.mUIApplicationMenuBar = new UIApplicationMenuBar1(this);
+                    this.mUIApplicationMenuBar = new UIApplicationMenuBar(this);
                 }
                 return this.mUIApplicationMenuBar;
             }
@@ -89,18 +91,6 @@
                     #endregion
                 }
                 return this.mUIPolicyautotestTitleBar;
-            }
-        }
-
-        public UIWorkspaceClient UIWorkspaceClient
-        {
-            get
-            {
-                if ((this.mUIWorkspaceClient == null))
-                {
-                    this.mUIWorkspaceClient = new UIWorkspaceClient(this);
-                }
-                return this.mUIWorkspaceClient;
             }
         }
 
@@ -144,7 +134,7 @@
 
         #region Fields
 
-        private PolicyListWindow1 mPolicyListWindow;
+        private UIPolicyListWindow1 mUIPolicyListWindow;
 
         private UIItemWindow mUIItemWindow;
 
@@ -152,11 +142,9 @@
 
         private UIBillingScreenMotoWindow mUIBillingScreenMOTOWindow;
 
-        private UIApplicationMenuBar1 mUIApplicationMenuBar;
+        private UIApplicationMenuBar mUIApplicationMenuBar;
 
         private WinTitleBar mUIPolicyautotestTitleBar;
-
-        private UIWorkspaceClient mUIWorkspaceClient;
 
         private UIBillingScreenHomeWindow1 mUIBillingScreenHOMEWindow1;
 

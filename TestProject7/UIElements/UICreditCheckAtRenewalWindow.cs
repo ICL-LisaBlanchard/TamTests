@@ -2,6 +2,8 @@
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
@@ -21,13 +23,13 @@
 
         #region Properties
 
-        public UIProceedWindow UIProceedWindow
+        public UIItemWindow UIProceedWindow
         {
             get
             {
                 if ((this.mUIProceedWindow == null))
                 {
-                    this.mUIProceedWindow = new UIProceedWindow(this);
+                    this.mUIProceedWindow = new UIItemWindow(this, "1");
                 }
                 return this.mUIProceedWindow;
             }
@@ -37,7 +39,7 @@
 
         #region Fields
 
-        private UIProceedWindow mUIProceedWindow;
+        private UIItemWindow mUIProceedWindow;
 
         #endregion
     }

@@ -2,6 +2,8 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 {
     using System.CodeDom.Compiler;
 
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
@@ -91,18 +93,6 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UIApplicationMenuBar UIApplicationMenuBar
-        {
-            get
-            {
-                if ((this.mUIApplicationMenuBar == null))
-                {
-                    this.mUIApplicationMenuBar = new UIApplicationMenuBar(this);
-                }
-                return this.mUIApplicationMenuBar;
-            }
-        }
-
         #endregion
 
         #region Fields
@@ -118,8 +108,6 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         private UINewPolicyDetailWindow mUINewPolicyDetailWindow;
 
         private UIPolicyListWindow mUIPolicyListWindow;
-
-        private UIApplicationMenuBar mUIApplicationMenuBar;
 
         #endregion
     }

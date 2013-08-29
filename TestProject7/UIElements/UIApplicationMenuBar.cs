@@ -1,6 +1,8 @@
-namespace AppliedSystems.Tam.Ui.Tests.UIElements
+﻿namespace AppliedSystems.Tam.Ui.Tests.UIElements
 {
     using System.CodeDom.Compiler;
+
+    using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
 
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
@@ -14,7 +16,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             #region Search Criteria
 
             this.SearchProperties[UITestControl.PropertyNames.Name] = "Application";
-            this.WindowTitles.Add("Policy: autotest autotest");
+            this.WindowTitles.Add("Policy: autotest");
 
             #endregion
         }
