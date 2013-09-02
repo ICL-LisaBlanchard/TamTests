@@ -147,6 +147,7 @@
     <Compile Include="Params\HomeSelectPolicyParams.cs" />
     <Compile Include="Params\HomeSiteRenewalParams.cs" />
     <Compile Include="Params\HomeStartDateParams.cs" />
+    <Compile Include="Params\HouseholdQuoteParams.cs" />
     <Compile Include="Params\HouseRegressAppParams.cs" />
     <Compile Include="Params\LoginEnterDateParams.cs" />
     <Compile Include="Params\LoginParams.cs" />
@@ -228,6 +229,7 @@
     <Compile Include="UIElements\UIErrorWindow.cs" />
     <Compile Include="UIElements\UIFileJAPPSIEOfficeDatDocument.cs" />
     <Compile Include="UIElements\UIFilterRenewalRecordsWindow.cs" />
+    <Compile Include="UIElements\UIHouseholdQuoteWindow.cs" />
     <Compile Include="UIElements\UIHouseholdRebrokeResuWindow.cs" />
     <Compile Include="UIElements\UIHouseholdRenewalsAmeWindow.cs" />
     <Compile Include="UIElements\UIIETAMRenewalsWindow.cs" />
@@ -253,6 +255,8 @@
     <Compile Include="UIElements\UIOpenWindow.cs" />
     <Compile Include="UIElements\UIOverridePremiumWindow.cs" />
     <Compile Include="UIElements\UIPaymentMethodsWindow.cs" />
+    <Compile Include="UIElements\UIPedalCyclesWindow.cs" />
+    <Compile Include="UIElements\UIPersonalLinesWindow.cs" />
     <Compile Include="UIElements\UIPleaseselectWHOtofolWindow.cs" />
     <Compile Include="UIElements\UIPointOfSaleWindow.cs" />
     <Compile Include="UIElements\UIPoliciesAutoRenewedAWindow.cs" />
@@ -283,8 +287,10 @@
     <Compile Include="UIElements\UISavethefileasWindow.cs" />
     <Compile Include="UIElements\UISearchResultForB338TWindow.cs" />
     <Compile Include="UIElements\UISearchResultForBN16BWindow.cs" />
+    <Compile Include="UIElements\UISecondApplicantDetaiWindow.cs" />
     <Compile Include="UIElements\UISelectaPolicyNumberWindow.cs" />
     <Compile Include="UIElements\UISelectTaminsurerforiWindow.cs" />
+    <Compile Include="UIElements\UISpecifiedItemsInsideWindow.cs" />
     <Compile Include="UIElements\UITheAgencyManagerSignWindow.cs" />
     <Compile Include="UIElements\UITheAgencyManagerWindow1.cs" />
     <Compile Include="UIElements\UITransactiontoinsertWindow.cs">
@@ -304,6 +310,7 @@
       <DependentUpon>UIMap.uitest</DependentUpon>
     </Compile>
     <Compile Include="BaseUITest.cs" />
+    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,13 +1,10 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests.UIElements
 {
-    using System.CodeDom.Compiler;
-
     using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
 
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIPaymentMethodsWindow : WinWindow
     {
         public UIPaymentMethodsWindow()
@@ -40,9 +37,9 @@
 
         #region Fields
 
-        private UIItemWindow mUIOKWindow;
+        private readonly string windowTitle;
 
-        private string windowTitle;
+        private UIItemWindow mUIOKWindow;
 
         #endregion
     }

@@ -1,11 +1,8 @@
 namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
 {
-    using System.CodeDom.Compiler;
-
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIClient : WinClient
     {
         public UIClient(UITestControl searchLimitContainer, string name)
@@ -44,6 +41,14 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             get
             {
                 return new UICheckBox(this, "Add Activity");
+            }
+        }
+
+        public WinWindow UIItemWindow
+        {
+            get
+            {
+                return new UIItemWindow(this);
             }
         }
     }

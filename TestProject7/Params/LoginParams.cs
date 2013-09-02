@@ -1,8 +1,5 @@
 ﻿namespace AppliedSystems.Tam.UI.Tests.Params
 {
-    using System.CodeDom.Compiler;
-
-    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class LoginParams
     {
         public string ExePath = "J:\\wintam\\HOMEBASE.EXE";

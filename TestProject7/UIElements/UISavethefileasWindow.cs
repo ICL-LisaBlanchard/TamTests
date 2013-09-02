@@ -1,13 +1,10 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests.UIElements
 {
-    using System.CodeDom.Compiler;
-
     using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
 
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UISavethefileasWindow : WinWindow
     {
         public UISavethefileasWindow()
@@ -76,6 +73,8 @@
 
         #region Fields
 
+        private readonly string windowName;
+
         private UIItemWindow mUICancelWindow;
 
         private UITestControl mUIItemWindow;
@@ -83,8 +82,6 @@
         private UITestControl mUISaveWindow;
 
         private UIDetailsPanePane mUIDetailsPanePane;
-
-        private readonly string windowName;
 
         #endregion
     }

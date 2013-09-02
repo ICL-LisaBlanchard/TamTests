@@ -1,13 +1,10 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests.UIElements
 {
-    using System.CodeDom.Compiler;
-
     using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
 
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIQuotesResultsWindow : WinWindow
     {
         public UIQuotesResultsWindow()
@@ -16,7 +13,7 @@
 
             this.windowName = "Quotes Results";
             this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            //this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
             this.WindowTitles.Add(this.windowName);
 
             #endregion

@@ -1,11 +1,8 @@
 namespace AppliedSystems.Tam.Ui.Tests.Assertions
 {
-    using System.CodeDom.Compiler;
-
     /// <summary>
     /// Parameters to be passed into 'MotoMTACheckNewValue'
     /// </summary>
-    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class MotoMTACheckNewValueExpectedValues
     {
         #region Fields

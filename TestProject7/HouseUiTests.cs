@@ -5,7 +5,7 @@
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-    [TestClass]
+    [CodedUITest]
     public class HouseUiTests : BaseUiTest
     {
         private readonly MotoActions moto = new MotoActions();
@@ -17,6 +17,7 @@
         [TestMethod]
         public void HouseCreateQuote()
         {
+            Playback.PlaybackSettings.SearchTimeout = 15000;
             this.SetOfficeRegKeys();
             this.customer.AddPolicy();
             this.home.SelectHomeType();
@@ -321,7 +322,7 @@
             this.home.Links();
             this.home.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.home.HomeStartDate();
-            this.home.HomeProposerParams.UIItemEditText4 = "BN16BN";
+            this.home.HomeProposerParams.Postcode = "BN16BN";
             this.home.HomeProposer();
             this.home.HomeCreatePolicy();
             this.home.PublicCreditCheckOk();
@@ -421,7 +422,7 @@
             this.home.Links();
             this.home.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.home.HomeStartDate();
-            this.home.HomeProposerParams.UIItemEditText4 = "BN16BN";
+            this.home.HomeProposerParams.Postcode = "BN16BN";
             this.home.HomeProposer();
             this.home.HomeCreatePolicy();
             this.home.PublicCreditCheckOk();
@@ -543,7 +544,7 @@
             this.home.Links();
             this.home.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.home.HomeStartDate();
-            this.home.HomeProposerParams.UIItemEditText4 = "BN16BN";
+            this.home.HomeProposerParams.Postcode = "BN16BN";
             this.home.HomeProposer();
             this.home.HomeCreatePolicy();
             this.home.PublicCreditCheckOk();
@@ -616,7 +617,7 @@
             this.home.Links();
             this.home.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.home.HomeStartDate();
-            this.home.HomeProposerParams.UIItemEditText4 = "BN16BN";
+            this.home.HomeProposerParams.Postcode = "BN16BN";
             this.home.HomeProposer();
             this.home.HomeCreatePolicy();
             this.home.PublicCreditCheckOk();
@@ -717,7 +718,7 @@
             this.home.Links();
             this.home.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.home.HomeStartDate();
-            this.home.HomeProposerParams.UIItemEditText4 = "BN16BN";
+            this.home.HomeProposerParams.Postcode = "BN16BN";
             this.home.HomeProposer();
             this.home.HomeCreatePolicy();
             this.home.PublicCreditCheckOk();
@@ -795,7 +796,7 @@
             this.home.Links();
             this.home.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.home.HomeStartDate();
-            this.home.HomeProposerParams.UIItemEditText4 = "BN16BN";
+            this.home.HomeProposerParams.Postcode = "BN16BN";
             this.home.HomeProposer();
             this.home.HomeCreatePolicy();
             this.home.PublicCreditCheckOk();
@@ -879,7 +880,7 @@
             this.home.Links();
             this.home.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.home.HomeStartDate();
-            this.home.HomeProposerParams.UIItemEditText4 = "BN16BN";
+            this.home.HomeProposerParams.Postcode = "BN16BN";
             this.home.HomeProposer();
             this.home.HomeCreatePolicy();
             this.home.PublicCreditCheckOk();

@@ -1,11 +1,8 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests.UIElements
 {
-    using System.CodeDom.Compiler;
-
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIPolicyrtyertWindow : WinWindow
     {
         public UIPolicyrtyertWindow()

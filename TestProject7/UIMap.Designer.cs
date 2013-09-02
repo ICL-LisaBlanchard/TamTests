@@ -30,7 +30,7 @@ namespace AppliedSystems.Tam.Ui.Tests
     using MouseButtons = System.Windows.Forms.MouseButtons;
     
     
-    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    
     public partial class UIMap
     {
         
@@ -46,7 +46,18 @@ namespace AppliedSystems.Tam.Ui.Tests
                 return this.mUITheAgencyManagerSignWindow;
             }
         }
-        
+
+        public UIPedalCyclesWindow UIPedalCyclesWindow
+        {
+            get
+            {
+                if ((this.mUIPedalCyclesWindow == null))
+                {
+                    this.mUIPedalCyclesWindow = new UIPedalCyclesWindow();
+                }
+                return this.mUIPedalCyclesWindow;
+            }
+        }
 
         public UITheAgencyManagerWindow1 UITheAgencyManagerWindow1
         {
@@ -186,6 +197,42 @@ namespace AppliedSystems.Tam.Ui.Tests
                     this.mUIInsurEtamWindow = new UIInsurEtamWindow();
                 }
                 return this.mUIInsurEtamWindow;
+            }
+        }
+
+        public UIPersonalLinesWindow UIPersonalLinesWindow
+        {
+            get
+            {
+                if ((this.mUIPersonalLinesWindow == null))
+                {
+                    this.mUIPersonalLinesWindow = new UIPersonalLinesWindow();
+                }
+                return this.mUIPersonalLinesWindow;
+            }
+        }
+
+        public UISecondApplicantDetaiWindow UISecondApplicantDetaiWindow
+        {
+            get
+            {
+                if ((this.mUISecondApplicantDetaiWindow == null))
+                {
+                    this.mUISecondApplicantDetaiWindow = new UISecondApplicantDetaiWindow();
+                }
+                return this.mUISecondApplicantDetaiWindow;
+            }
+        }
+
+        public UISpecifiedItemsInsideWindow UISpecifiedItemsInsideWindow
+        {
+            get
+            {
+                if ((this.mUISpecifiedItemsInsideWindow == null))
+                {
+                    this.mUISpecifiedItemsInsideWindow = new UISpecifiedItemsInsideWindow();
+                }
+                return this.mUISpecifiedItemsInsideWindow;
             }
         }
         
@@ -970,6 +1017,12 @@ namespace AppliedSystems.Tam.Ui.Tests
         private UIVehicleLookupWindow mUIVehicleLookupWindow;
         
         private UIInsurEtamWindow mUIInsurEtamWindow;
+
+        private UIPersonalLinesWindow mUIPersonalLinesWindow;
+
+        private UISecondApplicantDetaiWindow mUISecondApplicantDetaiWindow;
+
+        private UISpecifiedItemsInsideWindow mUISpecifiedItemsInsideWindow;
         
         private UICreditCheckWindow mUICreditCheckWindow;
         
@@ -1096,6 +1149,8 @@ namespace AppliedSystems.Tam.Ui.Tests
         private UIWarningWindow mUIWarningWindow;
         
         private UIErrorWindow mUIErrorWindow;
+
+        private UIPedalCyclesWindow mUIPedalCyclesWindow;
         #endregion
     }
 }

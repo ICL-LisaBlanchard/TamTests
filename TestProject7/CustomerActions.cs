@@ -1,6 +1,7 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
     using System.Drawing;
+    using System.Threading;
 
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
@@ -19,9 +20,9 @@
             WinControl uIClientsFilesButton = this.map.UITheAgencyManagerWindow1.UIClientsFilesWindow.UIClientsFilesButton;
             WinComboBox uIItemComboBox = this.map.UICustomertxt1tdsfsWindow.UICustomersWindow.ItemWindow(this.map.UICustomertxt1tdsfsWindow, "", "1").UIItemComboBox;
             WinControl uIAddButton = this.map.UICustomertxt1tdsfsWindow.UIAddWindow.UIAddButton;
-            WinEdit uiFirstname = this.map.UIAssignClientNumberWindow.Firstname.UIItemEdit;
+            //WinEdit uiFirstname = this.map.UIAssignClientNumberWindow.Firstname.UIItemEdit;
             WinEdit uiLastname = this.map.UIAssignClientNumberWindow.Lastname.UIItemEdit;
-            WinEdit uiIntial = this.map.UIAssignClientNumberWindow.Initial.UIItemEdit;
+            //WinEdit uiIntial = this.map.UIAssignClientNumberWindow.Initial.UIItemEdit;
             //WinRadioButton rbTitle = this.map.UIAssignClientNumberWindow.Title.UITitleRadioButton;
             //WinRadioButton rbSuffix = this.map.UIAssignClientNumberWindow.Suffix.UISuffixRadioButton;
             WinControl uIOKButton = this.map.UIAssignClientNumberWindow.UIOKWindow.UIOKButton;
@@ -32,19 +33,21 @@
             WinControl uIItemButton = this.map.UICustomertxt1tdsfsWindow.UIItemWindow.UIItemButton;
             WinControl uIOKButton2 = this.map.UISelectaPolicyNumberWindow.UIOKWindow.UIOKButton;
 
-
             #endregion
 
+            Thread.Sleep(1000);
+
             Mouse.Click(uIClientsFilesButton, new Point(38, 30));
+
             uIItemComboBox.SelectedItem = this.map.AddPolicyParams.UIItemComboBoxSelectedItem;
 
             Mouse.Click(uIAddButton, new Point(175, 7));
 
-            uiFirstname.Text = this.map.AddPolicyParams.FirstName;
+            //uiFirstname.Text = this.map.AddPolicyParams.FirstName;
 
             uiLastname.Text = this.map.AddPolicyParams.LastName;
 
-            uiIntial.Text = "X";
+            //uiIntial.Text = "X";
 
             //rbTitle.Selected = true;
 

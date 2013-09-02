@@ -1,11 +1,8 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests.Params
 {
-    using System.CodeDom.Compiler;
-
     /// <summary>
     /// Parameters to be passed into 'AddPolicy'
     /// </summary>
-    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class AddPolicyParams
     {
         #region Fields
@@ -18,12 +15,12 @@
         /// <summary>
         /// Type 'autotest' in text box
         /// </summary>
-        public string LastName = "Blanchard";
+        public string FirstName = "autotest";
 
         /// <summary>
         /// Type 'autotest' in text box
         /// </summary>
-        public string FirstName = "Lisa";
+        public string LastName = "autotest";
 
         /// <summary>
         /// Type '1' in text box

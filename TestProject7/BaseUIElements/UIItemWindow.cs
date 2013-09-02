@@ -1,16 +1,18 @@
 namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
 {
-    using System.CodeDom.Compiler;
-
-    using AppliedSystems.Tam.Ui.Tests.UIElements;
-
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIItemWindow : WinWindow
     {
-        public UIItemWindow(UITestControl searchLimitContainer, string controlId = "", string instance = "", string className = "", string accessible = "", string name = "")
+        public UIItemWindow(
+            UITestControl searchLimitContainer,
+            string controlId = "",
+            string instance = "",
+            string className = "",
+            string accessible = "",
+            string name = "",
+            string checkboxName = "")
             : base(searchLimitContainer)
         {
             #region Search Criteria
@@ -444,6 +446,19 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             }
         }
 
+        public UIButton UINewButton
+        {
+            get
+            {
+                return new UIButton(this, "New");
+            }
+        }
+
+        public UIButton UIButton(string name)
+        {
+            return new UIButton(this, name);
+        }
+
         #endregion
 
         #region " Groups "
@@ -454,6 +469,11 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             {
                 return new UIGroup(this, "Quote Details");
             }
+        }
+
+        public WinGroup UIGroup(string name = "")
+        {
+            return new UIGroup(this, name);
         }
 
         #endregion
@@ -528,12 +548,9 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
 
         #region " Clients "
 
-        public UIClient UIClient
+        public UIClient UIClient(string name = "")
         {
-            get
-            {
-                return new UIClient(this, string.Empty);
-            }
+            return new UIClient(this, name);
         }
 
         #endregion
@@ -573,11 +590,16 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             }
         }
 
+        public WinEdit UIEdit(string name)
+        {
+            return new UIItemEdit(this, name);
+        }
+
         #endregion
 
         #region " Combo Box "
 
-        public WinComboBox UIOpenComboBox
+        public UIItemComboBox UIOpenComboBox
         {
             get
             {
@@ -585,7 +607,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             }
         }
 
-        public WinComboBox UIItemComboBox
+        public UIItemComboBox UIItemComboBox
         {
             get
             {
@@ -603,6 +625,19 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             {
                 return new UICheckBox(this, "Defer Printing?");
             }
+        }
+
+        public WinCheckBox UIIstheapplicationinjoCheckBox
+        {
+            get
+            {
+                return new UICheckBox(this, "Is the application in joint names?");
+            }
+        }
+
+        public WinCheckBox UICheckBox(string checkboxName)
+        {
+            return new UICheckBox(this, checkboxName);
         }
 
         #endregion

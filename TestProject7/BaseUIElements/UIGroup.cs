@@ -8,7 +8,11 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         public UIGroup(UITestControl uiWindow, string name)
             : base(uiWindow)
         {
-            this.SearchProperties[UITestControl.PropertyNames.Name] = name;
+            if (!string.IsNullOrEmpty(name))
+            {
+                this.SearchProperties[UITestControl.PropertyNames.Name] = name;
+            }
+
             this.WindowTitles.Add(uiWindow.WindowTitles[0]);
         }
     }
