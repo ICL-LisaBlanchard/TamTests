@@ -9,9 +9,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Policy: gdfhdf dfghgdf";
+            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Policy: ", PropertyExpressionOperator.Contains));
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6MDIForm";
-            this.WindowTitles.Add("Policy: gdfhdf dfghgdf");
+            this.WindowTitles.Add("Policy: ");
 
             #endregion
         }

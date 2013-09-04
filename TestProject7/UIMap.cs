@@ -94,6 +94,8 @@
 
         private MTADateParams mMTADateParams;
 
+        private HouseholdQuoteParams mHouseholdQuoteParams;
+
         public virtual MTAEffectiveDateParams MTAEffectiveDateParams
         {
             get
@@ -574,6 +576,30 @@
             }
         }
 
+        public virtual HouseholdQuoteParams HouseholdQuoteParams
+        {
+            get
+            {
+                if ((this.mHouseholdQuoteParams == null))
+                {
+                    this.mHouseholdQuoteParams = new HouseholdQuoteParams();
+                }
+                return this.mHouseholdQuoteParams;
+            }
+        }
+
+        public virtual SelectTamInsurersAndActivityParams SelectTamInsurersAndActivityParams
+        {
+            get
+            {
+                if ((this.mSelectTamInsurersAndActivityParams == null))
+                {
+                    this.mSelectTamInsurersAndActivityParams = new SelectTamInsurersAndActivityParams();
+                }
+                return this.mSelectTamInsurersAndActivityParams;
+            }
+        }
+
         /// <summary>
         ///     MTAEffectiveDate - Use 'MTAEffectiveDateParams' to pass parameters into this method.
         /// </summary>
@@ -615,25 +641,25 @@
             #endregion
 
             // Click 'Close' button
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
             Keyboard.SendKeys(uiDemandsNeedsMotorComClient, "{F4}", ModifierKeys.Alt);
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
         }
 
         public void EtamOk()
         {
             WinControl uIOKButton1 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
             Mouse.Click(uIOKButton1, new Point(47, 12));
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
         }
 
         public void QuoteSelectListCancel()
         {
             WinControl uICancelButton = this.UIQuoteSelectListWindow.UICancelWindow.UICancelButton;
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
             Mouse.Click(uICancelButton, new Point(14, 18));
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
         }
 
         /// <summary>
@@ -655,26 +681,26 @@
 
             this.UIInsurEcomSystemMaintWindow.LaunchUrl(new Uri(this.OpenBrowser2Params.UIInsurEcomSystemMaintWindowUrl));
 
-            if (wXp.Exists)
-            {
-                okBut = okButXp;
-                w = wXp;
-            }
-            else
+            if (w7.Exists)
             {
                 okBut = okBut7;
                 w = w7;
             }
+            else
+            {
+                okBut = okButXp;
+                w = wXp;
+            }
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
 
             Keyboard.SendKeys(w, "Bus Sys{Tab}Tottenham1");
 
             Mouse.Click(okBut, new Point(31, 14));
 
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
 
-            Mouse.Click(uIRenewalsMaintenanceHyperlink, new Point(39, 7));
+            Mouse.Click(uIRenewalsMaintenanceHyperlink);
         }
 
         /// <summary>
@@ -682,9 +708,9 @@
         /// </summary>
         public void CloseBrowser()
         {
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
             Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
         }
 
         /// <summary>
@@ -697,13 +723,11 @@
             WinControl uILookupButton = this.UIPolicyDetailConfirmationWindow.UILookupWindow.UILookupButton;
             WinControl uIOKButton = this.UISearchResultForB338TWindow.UIOKWindow.UIOKButton;
             WinControl uIConfirmButton = this.UIPolicyDetailConfirmationWindow.UIConfirmWindow.UIConfirmButton;
-            WinControl uIOKButton1 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             WinCheckBox uIDeferPrintingCheckBox = this.UIPointOfSaleWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
             WinControl uIOKButton2 = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton3 = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
-            WinControl uIOKButton4 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-            WinControl uIOKButton5 = this.UITamxml7Window.UIClient().UIOKButton;
+            WinControl uIOKButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -713,27 +737,21 @@
 
             Mouse.Click(uIConfirmButton, new Point(25, 11));
 
-            Playback.PlaybackSettings.ContinueOnError = true;
-
-            Mouse.Click(uIOKButton1, new Point(27, 7));
-
-            Playback.PlaybackSettings.ContinueOnError = false;
-
             uIDeferPrintingCheckBox.Checked = this.HomeFinishQuoteParams.UIDeferPrintingCheckBoxChecked;
 
             Mouse.Click(uIOKButton2, new Point(61, 11));
 
+            Playback.Wait(2000);
+
             uIAddActivityCheckBox.Checked = this.HomeFinishQuoteParams.UIAddActivityCheckBoxChecked;
+
+            Playback.Wait(2000);
 
             Mouse.Click(uIOKButton3, new Point(51, 10));
 
-            Mouse.Click(uIOKButton4, new Point(50, 10));
+            this.SelectTamInsurersAndActivity(false);
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
-
-            Mouse.Click(uIOKButton4, new Point(50, 10));
-
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.Wait(2000);
 
             Mouse.Click(uIOKButton5, new Point(44, 10));
         }
@@ -750,7 +768,7 @@
             WinControl uIOKButton1 = this.UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton2 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinControl uIOKButton3 = this.UITamxml7Window.UIClient().UIOKButton;
+            WinControl uIOKButton3 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -839,7 +857,7 @@
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton1 = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
             WinControl uIOKButton2 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-            WinControl uIOKButton3 = this.UITamxml7Window.UIClient().UIOKButton;
+            WinControl uIOKButton3 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -907,7 +925,7 @@
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
-            WinControl uIOKButton1 = this.UITamxml7Window.UIClient().UIOKButton;
+            WinControl uIOKButton1 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
             WinControl uICancelButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UICancelWindow.UICancelButton;
             WinControl uIItemButton = this.UIPolicyautotestWindow.UIItemWindow.UIItemButton;
             WinControl uIDetailButton = this.UIPolicyautotestWindow.UIPolicyListWindow1.UIDetailWindow.UIDetailButton;
@@ -1084,11 +1102,11 @@
 
             #endregion
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Click(uICancelButton, new Point(65, 12));
 
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
         }
 
         /// <summary>
@@ -1102,11 +1120,11 @@
 
             #endregion
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Click(uICancelButton, new Point(42, 8));
 
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
         }
 
         /// <summary>
@@ -1269,7 +1287,7 @@
             WinControl uIOKButton = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
             WinList uIItemList = this.UISelectTaminsurerforiWindow.UIItemWindow.UIItemList;
             WinControl uIOKButton1 = this.UISelectTaminsurerforiWindow.UIItemWindow1.UIClient().UIOKButton;
-            WinControl uIOKButton2 = this.UITamxml7Window.UIClient().UIOKButton;
+            WinControl uIOKButton2 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -1299,11 +1317,11 @@
 
             #endregion
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Click(uIOKButton, new Point(51, 11));
 
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
         }
 
         /// <summary>
@@ -1317,11 +1335,11 @@
 
             #endregion
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Click(uIOKButton, new Point(54, 7));
 
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
         }
 
         /// <summary>
@@ -1351,9 +1369,9 @@
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton2 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
             WinControl uIOKButton3 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-            WinList uIItemList = this.UIPleaseSelectWhoToFolWindow.UIItemWindow1.UIItemList;
-            WinControl uIOKButton4 = this.UIPleaseSelectWhoToFolWindow.UIItemWindow.UIClient().UIOKButton;
-            WinControl uIOKButton5 = this.UITamxml7Window.UIClient().UIOKButton;
+            //WinList uIItemList = this.UIPleaseSelectWhoToFolWindow.UIItemWindow1.UIItemList;
+            //WinControl uIOKButton4 = this.UIPleaseSelectWhoToFolWindow.UIItemWindow.UIClient().UIOKButton;
+            WinControl uIOKButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -1369,9 +1387,10 @@
 
             Mouse.Click(uIOKButton3, new Point(47, 24));
 
-            uIItemList.SelectedItemsAsString = this.RenewalModuleRenew1Params.UIItemListSelectedItemsAsString;
+            //uIItemList.SelectedItemsAsString = this.RenewalModuleRenew1Params.UIItemListSelectedItemsAsString;
 
-            Mouse.Click(uIOKButton4, new Point(46, 4));
+            //Mouse.Click(uIOKButton4, new Point(46, 4));
+            this.SelectTamInsurersAndActivity(false);
 
             Mouse.Click(uIOKButton5, new Point(44, 8));
         }
@@ -1383,7 +1402,7 @@
         {
             #region Variable Declarations
 
-            WinControl uIRenewPolicyButton = this.UIAUTO1871001Window.UIRenewPolicyWindow.UIRenewPolicyButton;
+            WinControl uIRenewPolicyButton = this.UIAUTO1871001Window.UIRenewPolicyWindow.UIRenewPolicyButton2;
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
             WinControl uIOKButton = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
 
@@ -1454,9 +1473,9 @@
 
             //Playback.PlaybackSettings.ContinueOnError = true;
 
-            Mouse.Click(uIOKButton, new Point(36, 13));
+            //Mouse.Click(uIOKButton, new Point(36, 13));
 
-            Mouse.Click(uIExitButton, new Point(33, 11));
+            //Mouse.Click(uIExitButton, new Point(33, 11));
 
             //Playback.PlaybackSettings.ContinueOnError = false;
 
@@ -1468,9 +1487,9 @@
 
             //Playback.PlaybackSettings.ContinueOnError = true;
 
-            Mouse.Click(uILogandClearButton, new Point(50, 15));
+            //Mouse.Click(uILogandClearButton, new Point(50, 15));
 
-            Mouse.Click(uIOKButton, new Point(50, 7));
+            //Mouse.Click(uIOKButton, new Point(50, 7));
 
             //Playback.PlaybackSettings.ContinueOnError = false;
         }
@@ -1535,11 +1554,11 @@
 
             #endregion
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Click(uIOKButton, new Point(45, 13));
 
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
         }
 
         /// <summary>
@@ -1757,9 +1776,9 @@
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton2 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
             WinControl uIOKButton3 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-            WinList uIItemList = this.UIPleaseSelectWhoToFolWindow.UIItemWindow1.UIItemList;
-            WinControl uIOKButton4 = this.UIPleaseSelectWhoToFolWindow.UIItemWindow.UIClient().UIOKButton;
-            WinControl uIOKButton5 = this.UITamxml7Window.UIClient().UIOKButton;
+            //WinList uIItemList = this.UIPleaseSelectWhoToFolWindow.UIItemWindow1.UIItemList;
+            //WinControl uIOKButton4 = this.UIPleaseSelectWhoToFolWindow.UIItemWindow.UIClient().UIOKButton;
+            WinControl uIOKButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -1777,9 +1796,10 @@
 
             Mouse.Click(uIOKButton3, new Point(54, 7));
 
-            uIItemList.SelectedItemsAsString = this.RebrokeAlternativeRenew1Params.UIItemListSelectedItemsAsString;
+            //uIItemList.SelectedItemsAsString = this.RebrokeAlternativeRenew1Params.UIItemListSelectedItemsAsString;
 
-            Mouse.Click(uIOKButton4, new Point(59, 13));
+            //Mouse.Click(uIOKButton4, new Point(59, 13));
+            this.SelectTamInsurersAndActivity(false);
 
             Mouse.Click(uIOKButton5, new Point(48, 4));
         }
@@ -1813,11 +1833,11 @@
 
             Mouse.Click(uIAcceptButton, new Point(45, 17));
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Click(uICancelButton, new Point(51, 14));
 
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
         }
 
         /// <summary>
@@ -1835,7 +1855,7 @@
             WinControl uIOKButton3 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
             WinList uIItemList = this.UIPleaseSelectWhoToFolWindow.UIItemWindow1.UIItemList;
             WinControl uIOKButton4 = this.UIPleaseSelectWhoToFolWindow.UIItemWindow.UIClient().UIOKButton;
-            WinControl uIOKButton5 = this.UITamxml7Window.UIClient().UIOKButton;
+            WinControl uIOKButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -1895,19 +1915,19 @@
 
             Mouse.Click(uIYesButton, new Point(36, 9));
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Click(uICancelButton, new Point(71, 16));
 
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
 
             Mouse.Click(uIOKButton2, new Point(72, 10));
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Click(uICancelButton, new Point(74, 15));
 
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
         }
 
         /// <summary>
@@ -2094,7 +2114,7 @@
             WinControl uICancelButton = this.UIMTAEffectiveDatesWindow.UICancelWindow.UICancelButton;
             WinControl uIExitButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIExitWindow.UIExitButton;
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
-            WinControl uIOKButton = this.UITamxml7Window.UIClient().UIOKButton;
+            WinControl uIOKButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -2119,6 +2139,112 @@
             #endregion
 
             Mouse.Click(uIOKButton, new Point(40, 5));
+        }
+
+        public void SelectTamInsurersAndActivity(bool isMTA, string whoToSelect = "")
+        {
+            #region Variable Declarations
+
+            WinList uiTransToInsert = this.UITransactiontoinsertWindow.UIItemWindow.UIItemList;
+            WinButton uIOKButton6 = this.UITransactiontoinsertWindow.UIItemWindow.UIOKButton;
+            WinList uIItemList = this.UISelectTaminsurerforiWindow.UIItemWindow.UIItemList;
+            WinButton uIOKButton = this.UISelectTaminsurerforiWindow.UIItemWindow1.UIClient().UIOKButton;
+            WinList uIItemList1 = this.UISelectTamActivityTypWindow.UIItemWindow.UIItemList;
+            WinButton uIOKButton1 = this.UISelectTamActivityTypWindow.UIItemWindow1.UIClient().UIOKButton;
+            WinList uIItemList2 = this.UIPleaseselectWHOtofolWindow.UIItemWindow.UIItemList;
+            WinButton uIOKButton2 = this.UIPleaseselectWHOtofolWindow.UIItemWindow1.UIClient().UIOKButton;
+            WinList uIItemList3 = this.UISelectTamActivityTypWindow.UIItemWindow.UIItemList;
+            WinButton uIOKButton3 = this.UISelectTamActivityTypWindow.UIItemWindow1.UIClient().UIOKButton;
+            WinList uIItemList4 = this.UISelectTamActivityTypWindow.UIItemWindow.UIItemList;
+            WinButton uIOKButton4 = this.UISelectTamActivityTypWindow.UIItemWindow1.UIClient().UIOKButton;
+            WinControl uIokButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+
+            #endregion
+
+            int timeOut = Playback.PlaybackSettings.SearchTimeout;
+            Playback.PlaybackSettings.SearchTimeout = 2000;
+
+            if (!isMTA)
+            {
+                try
+                {
+                    uiTransToInsert.SelectedItemsAsString = "NEW";
+                    Mouse.Click(uIOKButton6);
+                }
+                catch (Exception)
+                {
+                }
+            }
+
+            try
+            {
+                uIItemList.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString;
+
+                Mouse.Click(uIOKButton, new Point(21, 16));
+            }
+            catch (Exception)
+            {
+            }
+
+            if (isMTA)
+            {
+                try
+                {
+                    Mouse.Click(uIokButton5);
+                }
+                catch (Exception)
+                {
+                }
+            }
+
+            try
+            {
+                uIItemList1.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString1;
+
+                Mouse.Click(uIOKButton1, new Point(38, 11));
+            }
+            catch
+            {
+            }
+
+            try
+            {
+                if (string.IsNullOrEmpty(whoToSelect))
+                {
+                    uIItemList2.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString2;
+                }
+                else
+                {
+                    uIItemList2.SelectedItemsAsString = whoToSelect;
+                }
+
+                Mouse.Click(uIOKButton2, new Point(33, 13));
+            }
+            catch
+            {
+            }
+
+            try
+            {
+                uIItemList3.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString3;
+
+                Mouse.Click(uIOKButton3, new Point(27, 8));
+            }
+            catch
+            {
+            }
+
+            try
+            {
+                uIItemList4.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString4;
+
+                Mouse.Click(uIOKButton4, new Point(19, 9));
+            }
+            catch
+            {
+            }
+
+            Playback.PlaybackSettings.SearchTimeout = timeOut;
         }
     }
 }

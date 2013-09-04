@@ -30,7 +30,7 @@
         /// <summary>
         /// Type 'Test2' in text box
         /// </summary>
-        public string SecondApplicantFirstName = "Test2";
+        public string SecondApplicantFirstName = "TestSecond";
 
         /// <summary>
         /// Type '{Tab}' in text box
@@ -40,7 +40,7 @@
         /// <summary>
         /// Type 'Test2' in text box
         /// </summary>
-        public string SecondApplicantLastname = "Test2";
+        public string SecondApplicantLastname = "TestSecond";
 
         /// <summary>
         /// Type '30/05/1971' in text box

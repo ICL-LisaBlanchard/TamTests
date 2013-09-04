@@ -18,6 +18,7 @@ namespace AppliedSystems.Tam.Ui.Tests
     using System.Windows.Input;
 
     using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
+    using AppliedSystems.Tam.Ui.Tests.Params;
     using AppliedSystems.Tam.Ui.Tests.UIElements;
 
     using Microsoft.VisualStudio.TestTools.UITest.Extension;
@@ -356,13 +357,13 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UIItemWindow UITamxml7Window
+        public UITamxml7Window UITamxml7Window
         {
             get
             {
                 if ((this.mUITamxml7Window == null))
                 {
-                    this.mUITamxml7Window = new UIItemWindow(name: "Tamxml7", className: "TMessageForm");
+                    this.mUITamxml7Window = new UITamxml7Window();
                 }
                 return this.mUITamxml7Window;
             }
@@ -991,6 +992,31 @@ namespace AppliedSystems.Tam.Ui.Tests
                 return this.mUIErrorWindow;
             }
         }
+
+
+        public UISelectTamActivityTypWindow UISelectTamActivityTypWindow
+        {
+            get
+            {
+                if ((this.mUISelectTamActivityTypWindow == null))
+                {
+                    this.mUISelectTamActivityTypWindow = new UISelectTamActivityTypWindow();
+                }
+                return this.mUISelectTamActivityTypWindow;
+            }
+        }
+
+        public UIPleaseSelectWhoToFolWindow UIPleaseselectWHOtofolWindow
+        {
+            get
+            {
+                if ((this.mUIPleaseselectWHOtofolWindow == null))
+                {
+                    this.mUIPleaseselectWHOtofolWindow = new UIPleaseSelectWhoToFolWindow();
+                }
+                return this.mUIPleaseselectWHOtofolWindow;
+            }
+        }
         #endregion
         
         #region Fields
@@ -1043,8 +1069,8 @@ namespace AppliedSystems.Tam.Ui.Tests
         private UIImporttoTAMWindow mUIImporttoTAMWindow;
         
         private UITransactiontoinsertWindow mUITransactiontoinsertWindow;
-        
-        private UIItemWindow mUITamxml7Window;
+
+        private UITamxml7Window mUITamxml7Window;
         
         private UIPolicyrtyertWindow mUIPolicyrtyertWindow;
         
@@ -1151,6 +1177,12 @@ namespace AppliedSystems.Tam.Ui.Tests
         private UIErrorWindow mUIErrorWindow;
 
         private UIPedalCyclesWindow mUIPedalCyclesWindow;
+
+        private SelectTamInsurersAndActivityParams mSelectTamInsurersAndActivityParams;
+
+        private UISelectTamActivityTypWindow mUISelectTamActivityTypWindow;
+
+        private UIPleaseSelectWhoToFolWindow mUIPleaseselectWHOtofolWindow;
         #endregion
     }
 }

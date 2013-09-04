@@ -250,7 +250,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIButton(this, "Print Quote...");
+                return new UIButton(this, "Print Quote..");
             }
         }
 
@@ -282,7 +282,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIButton(this, "Premium");
+                return new UIButton(this, "Premium...");
             }
         }
 

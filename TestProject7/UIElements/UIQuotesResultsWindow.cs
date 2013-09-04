@@ -13,7 +13,7 @@
 
             this.windowName = "Quotes Results";
             this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
-            //this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
             this.WindowTitles.Add(this.windowName);
 
             #endregion
@@ -87,7 +87,7 @@
             {
                 if ((this.mUIPremiumWindow == null))
                 {
-                    this.mUIPremiumWindow = new UIItemWindow(this, controlId: "16");
+                    this.mUIPremiumWindow = new UIItemWindow(this, controlId: "15");
                 }
                 return this.mUIPremiumWindow;
             }

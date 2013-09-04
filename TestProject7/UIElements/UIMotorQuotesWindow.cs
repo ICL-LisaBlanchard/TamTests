@@ -187,14 +187,6 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UIItemWindow UIItemWindow32
-        {
-            get
-            {
-                return new UIItemWindow(this, controlId: "2", instance: "6");
-            }
-        }
-
         public UIItemWindow UINextWindow4
         {
             get

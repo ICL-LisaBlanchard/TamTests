@@ -499,7 +499,7 @@
             WinCheckBox uIAddActivityCheckBox = this.map.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinButton uIOKButton2 = this.map.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
             WinButton uIOKButton3 = this.map.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-            WinButton uIOKButton4 = this.map.UITamxml7Window.UIClient().UIOKButton;
+            WinButton uIOKButton4 = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -524,9 +524,9 @@
             Mouse.Click(uIOKButton2, new Point(44, 7));
 
             Mouse.Click(uIOKButton3, new Point(56, 6));
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
             Mouse.Click(uIOKButton3, new Point(56, 6));
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
 
             Mouse.Click(uIOKButton4, new Point(47, 13));
         }
@@ -549,7 +549,7 @@
             WinButton uIOKButton4 = this.map.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
             WinList uIItemList = this.map.UIPleaseSelectWhoToFolWindow.UIItemWindow1.UIItemList;
             WinButton uIOKButton5 = this.map.UIPleaseSelectWhoToFolWindow.UIItemWindow.UIClient().UIOKButton;
-            WinButton uIOKButton6 = this.map.UITamxml7Window.UIClient().UIOKButton;
+            WinButton uIOKButton6 = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
             WinButton uIExitButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIExitWindow1.UIExitButton;
             WinButton uIYesButton1 = this.map.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
 
@@ -603,13 +603,13 @@
             WinButton uIOKButton3 = this.map.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
             WinList uIItemList = this.map.UIPleaseSelectWhoToFolWindow.UIItemWindow1.UIItemList;
             WinButton uIOKButton4 = this.map.UIPleaseSelectWhoToFolWindow.UIItemWindow.UIClient().UIOKButton;
-            WinButton uIOKButton5 = this.map.UITamxml7Window.UIClient().UIOKButton;
+            WinButton uIOKButton5 = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
             WinButton uIExitButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIExitWindow1.UIExitButton;
             WinButton uIYesButton = this.map.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
 
             #endregion
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
 
             uIDeferPrintingCheckBox.Checked = this.MotoAmendRiskNew1Params.UIDeferPrintingCheckBoxChecked;
 
@@ -619,7 +619,7 @@
 
             Mouse.Click(uIOKButton1, new Point(50, 20));
 
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
 
             uIAddActivityCheckBox.Checked = this.MotoAmendRiskNew1Params.UIAddActivityCheckBoxChecked;
 
@@ -825,11 +825,11 @@
 
             Mouse.Click(uIYesButton, new Point(60, 14));
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Click(uICancelButton, new Point(62, 15));
 
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
 
             Mouse.Click(uIOKButton, new Point(37, 9));
         }
@@ -866,11 +866,11 @@
 
             Mouse.Click(uINOButton, new Point(50, 0));
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Click(uICancelButton, new Point(14, 18));
 
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
         }
 
         /// <summary>
@@ -1012,11 +1012,11 @@
 
             Mouse.Click(uIOKButton, new Point(50, 10));
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Click(uIYesButton, new Point(43, 11));
 
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
         }
 
         /// <summary>
@@ -1034,11 +1034,11 @@
 
             Mouse.Click(uIRebrokeButton, new Point(86, 12));
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Click(uICancelButton, new Point(48, 17));
 
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.ContinueOnError = false;
 
             Mouse.Click(uINOButton, new Point(48, 11));
         }
@@ -1141,7 +1141,7 @@
             WinButton uIOKButton = this.map.UIMidTermAdjustmentsWindow.UIOKWindow.UIOKButton;
             WinButton uIExitButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIExitWindow.UIExitButton;
             WinButton uIYesButton = this.map.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
-            WinButton uIOKButton1 = this.map.UITamxml7Window.UIClient().UIOKButton;
+            WinButton uIOKButton1 = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -1193,7 +1193,7 @@
         {
             #region Variable Declarations
 
-            WinButton uIOKButton = this.map.UITamxml7Window.UIClient().UIOKButton;
+            WinButton uIOKButton = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -1216,7 +1216,7 @@
             WinButton uIOKButton2 = this.map.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.map.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinButton uIOKButton3 = this.map.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinButton uIOKButton4 = this.map.UITamxml7Window.UIClient().UIOKButton;
+            WinButton uIOKButton4 = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -1315,7 +1315,7 @@
             WinButton uIOKButton1 = this.map.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.map.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinButton uIOKButton2 = this.map.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinButton uIOKButton3 = this.map.UITamxml7Window.UIClient().UIOKButton;
+            WinButton uIOKButton3 = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -1506,7 +1506,7 @@
             WinButton uIOKButton2 = this.map.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.map.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinButton uIOKButton3 = this.map.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinButton uIOKButton4 = this.map.UITamxml7Window.UIClient().UIOKButton;
+            WinButton uIOKButton4 = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -1546,7 +1546,7 @@
 
             WinButton uIExitButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIExitWindow.UIExitButton;
             WinButton uIYesButton = this.map.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
-            WinButton uIOKButton = this.map.UITamxml7Window.UIClient().UIOKButton;
+            WinButton uIOKButton = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -1580,7 +1580,7 @@
 
             WinButton uIExitButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIExitWindow.UIExitButton;
             WinButton uINOButton = this.map.UIInsurEtamWindow1.UINoWindow.UINoButton;
-            WinButton uIOKButton = this.map.UITamxml7Window.UIClient().UIOKButton;
+            WinButton uIOKButton = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -1625,7 +1625,7 @@
 
             WinButton uIExitButton = this.map.UIQuoteResultsWindow.UIExitWindow.UIExitButton;
             WinButton uIYesButton = this.map.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
-            WinButton uIOKButton = this.map.UITamxml7Window.UIClient().UIOKButton;
+            WinButton uIOKButton = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 

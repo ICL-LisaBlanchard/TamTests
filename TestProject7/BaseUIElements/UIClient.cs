@@ -15,7 +15,10 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
                 this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, name, PropertyExpressionOperator.Contains));
             }
 
-            this.WindowTitles.Add(searchLimitContainer.WindowTitles[0]);
+            foreach (string w in searchLimitContainer.WindowTitles)
+            {
+                this.WindowTitles.Add(w);
+            }
 
             #endregion
         }

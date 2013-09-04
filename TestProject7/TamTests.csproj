@@ -109,7 +109,7 @@
     <Compile Include="BaseUIElements\UITitleBar.cs" />
     <Compile Include="Configs.cs" />
     <Compile Include="CustomerActions.cs" />
-    <Compile Include="HomeActions.cs" />
+    <Compile Include="HouseActions.cs" />
     <Compile Include="HouseUiTests.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="MotoActions.cs" />
@@ -192,6 +192,7 @@
     <Compile Include="Params\SelectHomeTypeParams.cs" />
     <Compile Include="Params\SelectMotoPolicyParams.cs" />
     <Compile Include="Params\SelectPolicyQuoteParams.cs" />
+    <Compile Include="Params\SelectTamInsurersAndActivityParams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrySettings.cs" />
     <Compile Include="UIElements\UIAcceptthisquoteNotOvWindow.cs" />
@@ -289,8 +290,10 @@
     <Compile Include="UIElements\UISearchResultForBN16BWindow.cs" />
     <Compile Include="UIElements\UISecondApplicantDetaiWindow.cs" />
     <Compile Include="UIElements\UISelectaPolicyNumberWindow.cs" />
+    <Compile Include="UIElements\UISelectTamActivityTypWindow.cs" />
     <Compile Include="UIElements\UISelectTaminsurerforiWindow.cs" />
     <Compile Include="UIElements\UISpecifiedItemsInsideWindow.cs" />
+    <Compile Include="UIElements\UITamxml7Window.cs" />
     <Compile Include="UIElements\UITheAgencyManagerSignWindow.cs" />
     <Compile Include="UIElements\UITheAgencyManagerWindow1.cs" />
     <Compile Include="UIElements\UITransactiontoinsertWindow.cs">
@@ -311,6 +314,7 @@
     </Compile>
     <Compile Include="BaseUITest.cs" />
     <Compile Include="UnitTest1.cs" />
+    <Compile Include="UnitTest2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

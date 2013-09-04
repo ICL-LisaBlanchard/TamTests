@@ -90,13 +90,13 @@
             //#endregion
 
             //// Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
-            ////Playback.PlaybackSettings.ContinueOnError = true;
+            //Playback.PlaybackSettings.ContinueOnError = true;
 
             //// Click 'OK' button
             //Mouse.Click(uIokButton, new Point(50, 10));
 
             //// Reset flag to ensure that play back stops if there is an error.
-            ////Playback.PlaybackSettings.ContinueOnError = false;
+            //Playback.PlaybackSettings.ContinueOnError = false;
         }
     }
 }

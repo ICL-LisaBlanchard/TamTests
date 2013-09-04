@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "AUTO", PropertyExpressionOperator.Contains));
+            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "-1001", PropertyExpressionOperator.Contains));
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.windowTitle = "AUTO187-1001";
-            this.WindowTitles.Add(this.windowTitle);
+            //this.windowTitle = "AUTO187-1001";
+            //this.WindowTitles.Add(this.windowTitle);
 
             #endregion
         }

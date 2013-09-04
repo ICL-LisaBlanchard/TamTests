@@ -75,7 +75,7 @@
             {
                 if ((this.mUIItemWindow3 == null))
                 {
-                    this.mUIItemWindow3 = new UIItemWindow(this, controlId: "10");
+                    this.mUIItemWindow3 = new UIItemWindow(this, controlId: "9");
                 }
                 return this.mUIItemWindow3;
             }

@@ -13,7 +13,10 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
                 this.SearchProperties[UITestControl.PropertyNames.Name] = name;
             }
 
-            this.WindowTitles.Add(uiItemWindow.WindowTitles[0]);
+            foreach (string w in uiItemWindow.WindowTitles)
+            {
+                this.WindowTitles.Add(w);
+            }
         }
     }
 }

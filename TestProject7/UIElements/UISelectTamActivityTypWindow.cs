@@ -5,9 +5,18 @@
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    public class UISelectTaminsurerforiWindow : WinWindow
+    public class UISelectTamActivityTypWindow : WinWindow
     {
-        private const string WindowName = "Select Tam insurer for insurer code ";
+        public UISelectTamActivityTypWindow()
+        {
+            #region Search Criteria
+
+            //this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Select Tam Activity Type for FSA", PropertyExpressionOperator.Contains));
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
+            this.WindowTitles.Add("Select Tam Activity Type for FSA 2");
+
+            #endregion
+        }
 
         #region Properties
 
@@ -17,7 +26,7 @@
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, className: "TListView");
+                    this.mUIItemWindow = new UIItemWindow(this, className: "TListBox");
                 }
                 return this.mUIItemWindow;
             }
@@ -44,16 +53,5 @@
         private UIItemWindow mUIItemWindow1;
 
         #endregion
-
-        public UISelectTaminsurerforiWindow()
-        {
-            #region Search Criteria
-
-            //this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Select Tam insurer for insurer code ", PropertyExpressionOperator.Contains));
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
-            this.WindowTitles.Add(WindowName);
-
-            #endregion
-        }
     }
 }
