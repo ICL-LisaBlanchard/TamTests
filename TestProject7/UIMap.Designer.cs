@@ -356,7 +356,7 @@ namespace AppliedSystems.Tam.Ui.Tests
                 return this.mUITransactiontoinsertWindow;
             }
         }
-        
+
         public UITamxml7Window UITamxml7Window
         {
             get
@@ -789,15 +789,15 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UIAUTO2081001Window UIAUTO2081001Window
+        public Uiautoxxx1000Window Uiautoxxx1000Window
         {
             get
             {
-                if ((this.mUIAUTO2081001Window == null))
+                if ((this.mUiautoxxx1000Window == null))
                 {
-                    this.mUIAUTO2081001Window = new UIAUTO2081001Window();
+                    this.mUiautoxxx1000Window = new Uiautoxxx1000Window();
                 }
-                return this.mUIAUTO2081001Window;
+                return this.mUiautoxxx1000Window;
             }
         }
         
@@ -1017,6 +1017,18 @@ namespace AppliedSystems.Tam.Ui.Tests
                 return this.mUIPleaseselectWHOtofolWindow;
             }
         }
+
+        public TopWindow TopWindow
+        {
+            get
+            {
+                if ((this.mTopWindow == null))
+                {
+                    this.mTopWindow = new TopWindow();
+                }
+                return this.mTopWindow;
+            }
+        }
         #endregion
         
         #region Fields
@@ -1142,7 +1154,7 @@ namespace AppliedSystems.Tam.Ui.Tests
         
         private UIRebrokeResultsScreenWindow mUIRebrokeResultsScreenWindow;
         
-        private UIAUTO2081001Window mUIAUTO2081001Window;
+        private Uiautoxxx1000Window mUiautoxxx1000Window;
         
         private UIAmendRiskWindow mUIAmendRiskWindow;
         
@@ -1183,6 +1195,9 @@ namespace AppliedSystems.Tam.Ui.Tests
         private UISelectTamActivityTypWindow mUISelectTamActivityTypWindow;
 
         private UIPleaseSelectWhoToFolWindow mUIPleaseselectWHOtofolWindow;
+
+        private TopWindow mTopWindow;
+
         #endregion
     }
 }

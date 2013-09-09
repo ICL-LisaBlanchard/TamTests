@@ -8,12 +8,7 @@
         #region Fields
 
         /// <summary>
-        /// Type '{Home}' in 'Quotes Results' client
-        /// </summary>
-        public string UIQuotesResultsClientSendKeys = "{Home}";
-
-        /// <summary>
-        /// Select '&Defer Printing?' check box
+        /// Select 'Defer Printing?' check box
         /// </summary>
         public bool UIDeferPrintingCheckBoxChecked = true;
 

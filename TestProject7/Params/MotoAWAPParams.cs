@@ -13,7 +13,7 @@
         /// <summary>
         /// Select 'AIG' in 'Unknown Name' combo box
         /// </summary>
-        public string UIItemComboBoxSelectedItem = "AIG";
+        public string UIItemComboBoxSelectedItem = "AIG Europe (UK) Ltd";
 
         /// <summary>
         /// Type 'test' in 'Unknown Name' text box
@@ -29,11 +29,6 @@
         /// Type '10000' in 'Unknown Name' text box
         /// </summary>
         public string UIItemEditText2 = "10000";
-
-        /// <summary>
-        /// Clear 'Add Activity' check box
-        /// </summary>
-        public bool UIAddActivityCheckBoxChecked = false;
 
         #endregion
     }

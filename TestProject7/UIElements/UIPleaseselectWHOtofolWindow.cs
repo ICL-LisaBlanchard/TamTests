@@ -12,6 +12,7 @@
             #region Search Criteria
 
             this.windowName = "Please select WHO to follow up";
+            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, this.windowName, PropertyExpressionOperator.Contains));
             this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
             this.WindowTitles.Add(this.windowName);

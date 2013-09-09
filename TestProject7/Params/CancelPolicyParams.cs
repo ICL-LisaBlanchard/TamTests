@@ -3,7 +3,7 @@
     /// <summary>
     /// Parameters to be passed into 'MotoCancelPolicy'
     /// </summary>
-    public class MotoCancelPolicyParams
+    public class CancelPolicyParams
     {
         #region Fields
 

@@ -83,6 +83,18 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
+        public UIItemWindow CodeName
+        {
+            get
+            {
+                if ((this.mCodeName == null))
+                {
+                    this.mCodeName = new UIItemWindow(this, "1", instance: "3");
+                }
+                return this.mCodeName;
+            }
+        }
+
         #endregion
 
         #region Fields
@@ -92,6 +104,8 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         private UIItemWindow mUIItemWindow;
 
         private UIItemWindow mUIOKWindow;
+
+        private UIItemWindow mCodeName;
 
         #endregion
 

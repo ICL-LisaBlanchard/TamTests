@@ -138,7 +138,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIButton(this, "Proposer Details...");
+                return new UIButton(this, "Proposer Details");
             }
         }
 
@@ -186,7 +186,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIButton(this, "Lookup...");
+                return new UIButton(this, "Lookup");
             }
         }
 
@@ -250,7 +250,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIButton(this, "Print Quote..");
+                return new UIButton(this, "Print Quote");
             }
         }
 
@@ -282,7 +282,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIButton(this, "Premium...");
+                return new UIButton(this, "Premium");
             }
         }
 
@@ -366,19 +366,11 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             }
         }
 
-        public UIButton UIRenewPolicyButton2
-        {
-            get
-            {
-                return new UIButton(this, "Renew Policy...");
-            }
-        }
-
         public UIButton UIAmendRiskButton
         {
             get
             {
-                return new UIButton(this, "Amend Risk...");
+                return new UIButton(this, "Amend Risk");
             }
         }
 
@@ -386,7 +378,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIButton(this, "Rebroke...");
+                return new UIButton(this, "Rebroke");
             }
         }
 
@@ -398,19 +390,11 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             }
         }
 
-        public UIButton UIMTAButton2
+        public UIButton UIEDIMatchButton
         {
             get
             {
-                return new UIButton(this, "MTA...");
-            }
-        }
-
-        public UIButton UIEDIMatchButton2
-        {
-            get
-            {
-                return new UIButton(this, "EDI Match...");
+                return new UIButton(this, "EDI Match");
             }
         }
 
@@ -426,15 +410,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIButton(this, "Display Record...");
-            }
-        }
-
-        public UIButton UIFilterButton1
-        {
-            get
-            {
-                return new UIButton(this, "Filter...");
+                return new UIButton(this, "Display Record");
             }
         }
 
@@ -526,6 +502,11 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             {
                 return new UIRadioButton(this, "Alternative");
             }
+        }
+
+        public WinRadioButton UIRadioButton(string name)
+        {
+            return new UIRadioButton(this, name);
         }
 
         #endregion

@@ -10,12 +10,12 @@ namespace AppliedSystems.Tam.Ui.Tests.Assertions
         /// <summary>
         /// Verify that the 'Text' property of text box equals '533 Yardley Green Road'
         /// </summary>
-        public string UIItemEditText = "533 Yardley Green Road";
+        public string UIItemEditText = "Insurecom Ltd";
 
         /// <summary>
         /// Verify that the 'Text' property of text box equals 'BIRMINGHAM'
         /// </summary>
-        public string UIItemEditText1 = "BIRMINGHAM";
+        public string UIItemEditText1 = "171-173 Preston Road";
 
         #endregion
     }

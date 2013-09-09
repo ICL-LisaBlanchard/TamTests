@@ -19,7 +19,7 @@
         {
             Playback.PlaybackSettings.SearchTimeout = 15000;
             this.SetOfficeRegKeys();
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.CreatePolicy(false);
 
             this.house.HomeSelectPolicy();
@@ -34,7 +34,7 @@
         public void HouseSaveQuoteWithoutPremium()
         {
             this.SetOfficeRegKeys();
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.CreatePolicy(false);
             this.house.HomeExitWithoutPolicy();
             this.house.HomeCloseOpenPolicy();
@@ -60,7 +60,7 @@
         public void HouseOverridePremium()
         {
             this.SetOfficeRegKeys();
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.CreatePolicy(false);
             this.house.HomeSelectPolicy();
             this.house.HomeChangePremium();
@@ -75,7 +75,7 @@
         public void HouseCopyRiskNew()
         {
             this.SetOfficeRegKeys();
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.CreatePolicy(false);
             this.house.HomeSelectPolicy();
             this.house.HomeAcceptPolicy();
@@ -90,7 +90,7 @@
         public void HouseCopyRiskQTE()
         {
             this.SetOfficeRegKeys();
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.CreatePolicy(false);
             this.house.HomeExitWithoutPolicy();
             this.house.HomeCloseOpenPolicyList();
@@ -103,7 +103,7 @@
         public void HouseMTAExit()
         {
             this.SetOfficeRegKeys();
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.CreatePolicy(false);
             this.house.HomeSelectPolicy();
             this.house.HomeAcceptPolicy();
@@ -121,7 +121,7 @@
         public void HouseMTAAccept()
         {
             this.SetOfficeRegKeys();
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.CreatePolicy(false);
             this.house.HomeSelectPolicy();
             this.house.HomeAcceptPolicy();
@@ -141,7 +141,7 @@
         public void HouseCopyMTA()
         {
             this.SetOfficeRegKeys();
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.CreatePolicy(false);
             this.house.HomeSelectPolicy();
             this.house.HomeAcceptPolicy();
@@ -162,7 +162,7 @@
         {
             this.SetOfficeRegKeys();
             // create new policy
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.CreatePolicy(false);
             this.house.HomeSelectPolicy();
             this.house.HomeAcceptPolicy();
@@ -199,7 +199,7 @@
         {
             this.SetOfficeRegKeys();
             //create policy
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.CreatePolicy(false);
             this.house.HomeSelectPolicy();
             this.house.HomeAcceptPolicy();
@@ -225,7 +225,7 @@
         {
             this.SetOfficeRegKeys();
             //add policy
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.CreatePolicy(false);
             this.house.HomeSelectPolicy();
             this.house.HomeAcceptPolicy();
@@ -251,7 +251,7 @@
         {
             this.SetOurMMaRegKeys();
             //add policy
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.house.SelectHomeType();
             this.house.SelectMenu();
             this.house.Links();
@@ -298,16 +298,15 @@
             //  renewal module
             this.house.RenewalModuleEDI();
             this.house.RenewalModuleConfirm();
-            this.house.RenewalModuleEdi1();
+            this.house.RenewalModuleEdi1(true);
             this.house.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.house.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.house.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
             this.house.RenewalModuleFilterMoto();
             this.house.RenewalModuleSort();
-            this.house.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
-            this.house.RenewalModuleDisplay();
-            this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord();
+            this.house.RenewalModuleDisplay(this.moto.CommonParams.SendHomeKeys);
+
+            this.house.MotoRenewalCheckRecord(1, this.house.CustomerCode);
             this.house.RenewalModuleInvite();
             this.house.RenewConfirmInvite();
             this.house.RenewalModuleInvite1();
@@ -351,7 +350,7 @@
             // change registry to ourhighway
             this.SetOurMMaRegKeys();
             //add policy
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.house.SelectHomeType();
             this.house.SelectMenu();
             this.house.Links();
@@ -398,16 +397,15 @@
             // renewal module
             this.house.RenewalModuleEDI();
             this.house.RenewalModuleConfirm();
-            this.house.RenewalModuleEdi1();
+            this.house.RenewalModuleEdi1(true);
             this.house.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.house.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.house.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
             this.house.RenewalModuleFilterMoto();
             this.house.RenewalModuleSort();
-            this.house.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
-            this.house.RenewalModuleDisplay();
+            this.house.RenewalModuleDisplay(this.moto.CommonParams.SendHomeKeys);
             this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord();
+            this.moto.MotoRenewalCheckRecord(1, this.house.CustomerCode);
             this.house.RenewalModuleInvite();
             this.house.RenewConfirmInvite();
             this.house.RenewalModuleInvite1();
@@ -473,7 +471,7 @@
             // change registry to ourhighway
             this.SetOurMMaRegKeys();
             //add policy
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.house.SelectHomeType();
             this.house.SelectMenu();
             this.house.Links();
@@ -520,16 +518,15 @@
             // renewal module
             this.house.RenewalModuleEDI();
             this.house.RenewalModuleConfirm();
-            this.house.RenewalModuleEdi1();
+            this.house.RenewalModuleEdi1(true);
             this.house.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.house.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.house.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
             this.house.RenewalModuleFilterMoto();
             this.house.RenewalModuleSort();
-            this.house.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
-            this.house.RenewalModuleDisplay();
+            this.house.RenewalModuleDisplay(this.moto.CommonParams.SendHomeKeys);
             this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord();
+            this.moto.MotoRenewalCheckRecord(1, this.house.CustomerCode);
             this.house.HomeAmendRisk();
             this.house.PublicCreditCheckOk();
             this.house.HomeAmendSelecPolicy();
@@ -546,7 +543,7 @@
             // change registry to ourhighway
             this.SetOurMMaRegKeys();
             //add policy
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.house.SelectHomeType();
             this.house.SelectMenu();
             this.house.Links();
@@ -593,19 +590,17 @@
             // renewal module
             this.house.RenewalModuleEDI();
             this.house.RenewalModuleConfirm();
-            this.house.RenewalModuleEdi1();
+            this.house.RenewalModuleEdi1(true);
             this.house.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.house.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.house.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
             this.house.RenewalModuleFilterMoto();
             this.house.RenewalModuleSort();
-            this.house.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
-            this.house.RenewalModuleDisplay();
+            this.house.RenewalModuleDisplay(this.moto.CommonParams.SendHomeKeys);
             this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord();
+            this.moto.MotoRenewalCheckRecord(1, this.house.CustomerCode);
             this.house.HomeAmendRisk();
             this.house.PublicCreditCheckOk();
-            this.house.HomeAmendSelecPolicyParams.UIHouseholdRenewalsAmeClientSendKeys = "{End}";
             this.house.HomeAmendSelecPolicy();
             this.house.HomeAmendRenewFinish();
             this.house.EtamOk();
@@ -647,7 +642,7 @@
             // change registry to ourhighway
             this.SetOurMMaRegKeys();
             //add policy
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.house.SelectHomeType();
             this.house.SelectMenu();
             this.house.Links();
@@ -694,16 +689,15 @@
             // renewal module
             this.house.RenewalModuleEDI();
             this.house.RenewalModuleConfirm();
-            this.house.RenewalModuleEdi1();
+            this.house.RenewalModuleEdi1(true);
             this.house.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.house.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.house.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
             this.house.RenewalModuleFilterMoto();
             this.house.RenewalModuleSort();
-            this.house.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
-            this.house.RenewalModuleDisplay();
+            this.house.RenewalModuleDisplay(this.moto.CommonParams.SendHomeKeys);
             this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord();
+            this.moto.MotoRenewalCheckRecord(1, this.house.CustomerCode);
             this.house.HomeRebroke();
             this.house.PublicCreditCheckOk();
             this.house.HomeRebrokeCurrent();
@@ -725,7 +719,7 @@
             // change registry to ourhighway
             this.SetOurMMaRegKeys();
             //add policy
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.house.SelectHomeType();
             this.house.SelectMenu();
             this.house.Links();
@@ -772,19 +766,18 @@
             // renewal module
             this.house.RenewalModuleEDI();
             this.house.RenewalModuleConfirm();
-            this.house.RenewalModuleEdi1();
+            this.house.RenewalModuleEdi1(true);
             this.house.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.house.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.house.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
             this.house.RenewalModuleFilterMoto();
             this.house.RenewalModuleSort();
-            this.house.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
-            this.house.RenewalModuleDisplay();
+            this.house.RenewalModuleDisplay(this.moto.CommonParams.SendHomeKeys);
             this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord();
+            this.moto.MotoRenewalCheckRecord(1, this.house.CustomerCode);
             this.house.HomeRebroke();
             this.house.PublicCreditCheckOk();
-            this.house.HomeRebrokeSelectPolicy();
+            this.house.HomeRebrokeSelectPolicy(this.house.CommonParams.SendHomeKeys);
             this.house.HomeRebrokeSelectAlternative();
             this.house.HomeRebrokeFinish();
             this.house.RenewalModuleInvite();
@@ -809,7 +802,7 @@
             // change registry to ourhighway
             this.SetOurMMaRegKeys();
             //add policy
-            this.customer.AddPolicy();
+            this.house.CustomerCode = this.customer.AddPolicy();
             this.house.SelectHomeType();
             this.house.SelectMenu();
             this.house.Links();
@@ -856,20 +849,18 @@
             // renewal module
             this.house.RenewalModuleEDI();
             this.house.RenewalModuleConfirm();
-            this.house.RenewalModuleEdi1();
+            this.house.RenewalModuleEdi1(true);
             this.house.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.house.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.house.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
             this.house.RenewalModuleFilterMoto();
             this.house.RenewalModuleSort();
-            this.house.RenewalModuleDisplayParams.UIInsurETAMRenewalsClientSendKeys = "{Home}";
-            this.house.RenewalModuleDisplay();
+            this.house.RenewalModuleDisplay(this.moto.CommonParams.SendHomeKeys);
             this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord();
+            this.moto.MotoRenewalCheckRecord(1, this.house.CustomerCode);
             this.house.HomeRebroke();
             this.house.PublicCreditCheckOk();
-            this.house.HomeRebrokeSelectPolicyParams.UIHouseholdRebrokeResuClientSendKeys = "{END}";
-            this.house.HomeRebrokeSelectPolicy();
+            this.house.HomeRebrokeSelectPolicy(this.house.CommonParams.SendEndKeys);
             this.house.HomeRebrokeSelectAlternative();
             this.house.HomeRebrokeFinish();
             this.house.RenewalModuleInvite();

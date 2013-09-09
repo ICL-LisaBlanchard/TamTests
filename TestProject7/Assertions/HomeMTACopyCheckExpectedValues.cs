@@ -15,12 +15,12 @@
         /// <summary>
         /// Verify that the 'Text' property of text box equals 'B33 8TH'
         /// </summary>
-        public string UIItemEditText1 = "B33 8TH";
+        public string UIItemEditText1 = "BN1 6BN";
 
         /// <summary>
         /// Verify that the 'Text' property of text box equals '533 Yardley Green Road'
         /// </summary>
-        public string UIItemEditText2 = "533 Yardley Green Road";
+        public string UIItemEditText2 = "Insurecom Ltd";
 
         /// <summary>
         /// Verify that the 'SelectedItem' property of combo box equals 'Advertising'

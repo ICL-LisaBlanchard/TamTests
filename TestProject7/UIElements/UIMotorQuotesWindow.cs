@@ -43,7 +43,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UIItemWindow UIItemWindow1
+        public UIItemWindow UICarRegistrationWindow
         {
             get
             {

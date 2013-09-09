@@ -112,6 +112,12 @@
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "office");
         }
 
+        //public void SetOfficeNewTest()
+        //{
+        //    RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "newtest");
+        //    RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "livetest");
+        //}
+
         public static void CloseProcess(string name)
         {
             Process[] processes = Process.GetProcessesByName(name);

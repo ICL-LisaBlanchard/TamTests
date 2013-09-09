@@ -10,7 +10,7 @@
         /// <summary>
         /// Type '{Home}' in 'Household Rebroke Results' client
         /// </summary>
-        public string UIHouseholdRebrokeResuClientSendKeys = "{Home}";
+        public string SendHomeHeys = "{Home}";
 
         #endregion
     }

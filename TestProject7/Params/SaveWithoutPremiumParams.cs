@@ -8,11 +8,6 @@
         #region Fields
 
         /// <summary>
-        /// Clear 'Add Activity' check box
-        /// </summary>
-        public bool UIAddActivityCheckBoxChecked = false;
-
-        /// <summary>
         /// Select 'ABD' in list box
         /// </summary>
         public string UIItemListSelectedItemsAsString = "ABD";

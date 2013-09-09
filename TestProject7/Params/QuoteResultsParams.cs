@@ -25,7 +25,9 @@ namespace AppliedSystems.Tam.Ui.Tests.Params
         /// <summary>
         /// Type 'RF53OXL' in text box
         /// </summary>
-        public string UIItemEditText1 = "RF53OXL";
+        public string CarReg1 = "RF53OXL";
+
+        public string CarRegFordFiesta = "Y412CEB";
 
         /// <summary>
         /// Type '1000' in text box

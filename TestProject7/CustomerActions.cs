@@ -13,7 +13,7 @@
         /// <summary>
         ///     AddPolicy - Use 'AddPolicyParams' to pass parameters into this method.
         /// </summary>
-        public void AddPolicy()
+        public string AddPolicy()
         {
             #region Variable Declarations
 
@@ -32,6 +32,7 @@
             WinControl uIOKButton1 = this.map.UICustomertxt1tdsfsWindow.UINewCustomerDetailWindow.UIOKWindow.UIOKButton;
             WinControl uIItemButton = this.map.UICustomertxt1tdsfsWindow.UIItemWindow.UIItemButton;
             WinControl uIOKButton2 = this.map.UISelectaPolicyNumberWindow.UIOKWindow.UIOKButton;
+            WinEdit codeName = this.map.UIAssignClientNumberWindow.CodeName.UIItemEdit;
 
             #endregion
 
@@ -53,6 +54,10 @@
 
             //rbSuffix.Selected = true;
 
+            Mouse.Click(codeName);
+
+            string code = codeName.Text;
+
             Mouse.Click(uIOKButton, new Point(41, 15));
 
             Mouse.Click(uIYesButton, new Point(44, 11));
@@ -68,6 +73,8 @@
             Mouse.Click(uIAddButton, new Point(94, 10));
 
             Mouse.Click(uIOKButton2, new Point(37, 13));
+
+            return code;
         }
     }
 }

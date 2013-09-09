@@ -12,15 +12,11 @@
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-    internal class MotoActions : UIMap
+    public class MotoActions : UIMap
     {
         private readonly UIMap map = new UIMap();
 
         private MotoAWAPParams mMotoAwapParams;
-
-        private MotoAmendRiskRenewParams mMotoAmendRiskRenewParams;
-
-        private MotoAmendRiskNew_1Params mMotoAmendRiskNew1Params;
 
         private MotoCopyCheckProposerExpectedValues mMotoCopyCheckProposerExpectedValues;
 
@@ -32,19 +28,14 @@
 
         private MotoCheckAWAPpremiumExpectedValues mMotoCheckAWAPpremiumExpectedValues;
 
-        private MotoCancelPolicyParams mMotoCancelPolicyParams;
-
         private MotoAmendRiskParams mMotoAmendRiskParams;
 
-        private MotoSelectHighwayPolicyParams mMotoSelectHighwayPolicyParams;
-
-        private MotoSearchCarParams mMotoSearchCarParams;
-
+  
         private MotoRenewalCheckRecordExpectedValues mMotoRenewalCheckRecordExpectedValues;
 
         private MotoRegressAppParams mMotoRegressAppParams;
 
-        private MotoRebrokeSelectSchemeParams mMotoRebrokeSelectSchemeParams;
+  
 
         private MotoPostcodeLookupParams mMotoPostcodeLookupParams;
 
@@ -56,15 +47,11 @@
 
         private MotoMTAMessageAfterDateExpectedValues mMotoMTAMessageAfterDateExpectedValues;
 
-        private MotoMTAConfirmPolicyParams mMotoMTAConfirmPolicyParams;
-
         private MotoMTACheckNewValueExpectedValues mMotoMTACheckNewValueExpectedValues;
 
         private MotoMTACheckCarExpectedValues mMotoMTACheckCarExpectedValues;
 
-        private MotoMTABeforeFinishParams mMotoMTABeforeFinishParams;
 
-        private MotoMTABeforeAcceptParams mMotoMTABeforeAcceptParams;
 
         private MotoMTABefore2Params mMotoMTABefore2Params;
 
@@ -74,7 +61,7 @@
 
         private MotoInceptionDateParams mMotoInceptionDateParams;
 
-        private MotoFinishMTAParams mMotoFinishMTAParams;
+        public string CustomerCode { get; set; }
 
         public virtual MotoAWAPParams MotoAWAPParams
         {
@@ -85,30 +72,6 @@
                     this.mMotoAwapParams = new MotoAWAPParams();
                 }
                 return this.mMotoAwapParams;
-            }
-        }
-
-        public virtual MotoAmendRiskRenewParams MotoAmendRiskRenewParams
-        {
-            get
-            {
-                if ((this.mMotoAmendRiskRenewParams == null))
-                {
-                    this.mMotoAmendRiskRenewParams = new MotoAmendRiskRenewParams();
-                }
-                return this.mMotoAmendRiskRenewParams;
-            }
-        }
-
-        public virtual MotoAmendRiskNew_1Params MotoAmendRiskNew1Params
-        {
-            get
-            {
-                if ((this.mMotoAmendRiskNew1Params == null))
-                {
-                    this.mMotoAmendRiskNew1Params = new MotoAmendRiskNew_1Params();
-                }
-                return this.mMotoAmendRiskNew1Params;
             }
         }
 
@@ -172,18 +135,6 @@
             }
         }
 
-        public virtual MotoCancelPolicyParams MotoCancelPolicyParams
-        {
-            get
-            {
-                if ((this.mMotoCancelPolicyParams == null))
-                {
-                    this.mMotoCancelPolicyParams = new MotoCancelPolicyParams();
-                }
-                return this.mMotoCancelPolicyParams;
-            }
-        }
-
         public virtual MotoAmendRiskParams MotoAmendRiskParams
         {
             get
@@ -196,29 +147,6 @@
             }
         }
 
-        public virtual MotoSelectHighwayPolicyParams MotoSelectHighwayPolicyParams
-        {
-            get
-            {
-                if ((this.mMotoSelectHighwayPolicyParams == null))
-                {
-                    this.mMotoSelectHighwayPolicyParams = new MotoSelectHighwayPolicyParams();
-                }
-                return this.mMotoSelectHighwayPolicyParams;
-            }
-        }
-
-        public virtual MotoSearchCarParams MotoSearchCarParams
-        {
-            get
-            {
-                if ((this.mMotoSearchCarParams == null))
-                {
-                    this.mMotoSearchCarParams = new MotoSearchCarParams();
-                }
-                return this.mMotoSearchCarParams;
-            }
-        }
 
         public virtual MotoRenewalCheckRecordExpectedValues MotoRenewalCheckRecordExpectedValues
         {
@@ -244,17 +172,7 @@
             }
         }
 
-        public virtual MotoRebrokeSelectSchemeParams MotoRebrokeSelectSchemeParams
-        {
-            get
-            {
-                if ((this.mMotoRebrokeSelectSchemeParams == null))
-                {
-                    this.mMotoRebrokeSelectSchemeParams = new MotoRebrokeSelectSchemeParams();
-                }
-                return this.mMotoRebrokeSelectSchemeParams;
-            }
-        }
+
 
         public virtual MotoPostcodeLookupParams MotoPostcodeLookupParams
         {
@@ -316,18 +234,6 @@
             }
         }
 
-        public virtual MotoMTAConfirmPolicyParams MotoMTAConfirmPolicyParams
-        {
-            get
-            {
-                if ((this.mMotoMTAConfirmPolicyParams == null))
-                {
-                    this.mMotoMTAConfirmPolicyParams = new MotoMTAConfirmPolicyParams();
-                }
-                return this.mMotoMTAConfirmPolicyParams;
-            }
-        }
-
         public virtual MotoMTACheckNewValueExpectedValues MotoMTACheckNewValueExpectedValues
         {
             get
@@ -352,29 +258,7 @@
             }
         }
 
-        public virtual MotoMTABeforeFinishParams MotoMTABeforeFinishParams
-        {
-            get
-            {
-                if ((this.mMotoMTABeforeFinishParams == null))
-                {
-                    this.mMotoMTABeforeFinishParams = new MotoMTABeforeFinishParams();
-                }
-                return this.mMotoMTABeforeFinishParams;
-            }
-        }
 
-        public virtual MotoMTABeforeAcceptParams MotoMTABeforeAcceptParams
-        {
-            get
-            {
-                if ((this.mMotoMTABeforeAcceptParams == null))
-                {
-                    this.mMotoMTABeforeAcceptParams = new MotoMTABeforeAcceptParams();
-                }
-                return this.mMotoMTABeforeAcceptParams;
-            }
-        }
 
         public virtual MotoMTABefore2Params MotoMTABefore2Params
         {
@@ -424,18 +308,6 @@
             }
         }
 
-        public virtual MotoFinishMTAParams MotoFinishMTAParams
-        {
-            get
-            {
-                if ((this.mMotoFinishMTAParams == null))
-                {
-                    this.mMotoFinishMTAParams = new MotoFinishMTAParams();
-                }
-                return this.mMotoFinishMTAParams;
-            }
-        }
-
         /// <summary>
         ///     MotoGetPolicyNumber
         /// </summary>
@@ -453,7 +325,8 @@
         /// <summary>
         ///     MotoCreateSiteRenewal - Use 'MotoCreateSiteRenewalParams' to pass parameters into this method.
         /// </summary>
-        public void MotoCreateSiteRenewal()
+        /// <param name="policyNumber"></param>
+        public void MotoCreateSiteRenewal(string policyNumber)
         {
             #region Variable Declarations
 
@@ -472,7 +345,7 @@
 
             uiInsurerIdComboBox.SelectedItem = this.map.MotoCreateSiteRenewalParams.UIInsurerIDComboBoxSelectedItem;
 
-            uITxtPolicyNumberEdit.Text = this.map.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText;
+            uITxtPolicyNumberEdit.Text = policyNumber;
 
             uITxtAutoLapseDateEdit1.Text = uITxtRenewalDateEdit.GetProperty("Text").ToString();
 
@@ -499,7 +372,6 @@
             WinCheckBox uIAddActivityCheckBox = this.map.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinButton uIOKButton2 = this.map.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
             WinButton uIOKButton3 = this.map.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-            WinButton uIOKButton4 = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
@@ -519,16 +391,13 @@
 
             Mouse.Click(uIOKButton1, new Point(45, 11));
 
-            uIAddActivityCheckBox.Checked = this.MotoAWAPParams.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIOKButton2, new Point(44, 7));
 
             Mouse.Click(uIOKButton3, new Point(56, 6));
-            Playback.PlaybackSettings.ContinueOnError = true;
-            Mouse.Click(uIOKButton3, new Point(56, 6));
-            Playback.PlaybackSettings.ContinueOnError = false;
 
-            Mouse.Click(uIOKButton4, new Point(47, 13));
+            this.SelectTamInsurersAndActivity(false);
         }
 
         /// <summary>
@@ -547,9 +416,6 @@
             WinCheckBox uIAddActivityCheckBox = this.map.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinButton uIOKButton3 = this.map.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
             WinButton uIOKButton4 = this.map.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-            WinList uIItemList = this.map.UIPleaseSelectWhoToFolWindow.UIItemWindow1.UIItemList;
-            WinButton uIOKButton5 = this.map.UIPleaseSelectWhoToFolWindow.UIItemWindow.UIClient().UIOKButton;
-            WinButton uIOKButton6 = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
             WinButton uIExitButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIExitWindow1.UIExitButton;
             WinButton uIYesButton1 = this.map.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
 
@@ -565,23 +431,19 @@
 
             this.map.RetrieveResponse();
 
-            uIDeferPrintingCheckBox.Checked = this.MotoAmendRiskRenewParams.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
 
             Mouse.Click(uIOKButton1, new Point(58, 18));
 
             Mouse.Click(uIOKButton2, new Point(48, 11));
 
-            uIAddActivityCheckBox.Checked = this.MotoAmendRiskRenewParams.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIOKButton3, new Point(54, 5));
 
             Mouse.Click(uIOKButton4, new Point(45, 10));
 
-            uIItemList.SelectedItemsAsString = this.MotoAmendRiskRenewParams.UIItemListSelectedItemsAsString;
-
-            Mouse.Click(uIOKButton5, new Point(52, 10));
-
-            Mouse.Click(uIOKButton6, new Point(49, 16));
+            this.SelectTamInsurersAndActivity(false);
 
             Mouse.Click(uIExitButton, new Point(48, 12));
 
@@ -600,38 +462,32 @@
             WinButton uIOKButton1 = this.map.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.map.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinButton uIOKButton2 = this.map.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinButton uIOKButton3 = this.map.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-            WinList uIItemList = this.map.UIPleaseSelectWhoToFolWindow.UIItemWindow1.UIItemList;
-            WinButton uIOKButton4 = this.map.UIPleaseSelectWhoToFolWindow.UIItemWindow.UIClient().UIOKButton;
-            WinButton uIOKButton5 = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
             WinButton uIExitButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIExitWindow1.UIExitButton;
             WinButton uIYesButton = this.map.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
 
             #endregion
 
-            Playback.PlaybackSettings.ContinueOnError = true;
+            //Playback.PlaybackSettings.ContinueOnError = true;
 
-            uIDeferPrintingCheckBox.Checked = this.MotoAmendRiskNew1Params.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
 
             Mouse.Click(uIOKButton, new Point(59, 11));
 
             Mouse.Click(uIOKButton1, new Point(54, 6));
 
-            Mouse.Click(uIOKButton1, new Point(50, 20));
+            //Playback.PlaybackSettings.ContinueOnError = false;
 
-            Playback.PlaybackSettings.ContinueOnError = false;
-
-            uIAddActivityCheckBox.Checked = this.MotoAmendRiskNew1Params.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIOKButton2, new Point(47, 13));
 
-            Mouse.Click(uIOKButton3, new Point(55, 14));
+            //Mouse.Click(uIOKButton3, new Point(55, 14));
 
-            uIItemList.SelectedItemsAsString = this.MotoAmendRiskNew1Params.UIItemListSelectedItemsAsString;
+            //uIItemList.SelectedItemsAsString = this.MotoAmendRiskNew1Params.UIItemListSelectedItemsAsString;
 
-            Mouse.Click(uIOKButton4, new Point(56, 11));
+            //Mouse.Click(uIOKButton4, new Point(56, 11));
 
-            Mouse.Click(uIOKButton5, new Point(48, 12));
+            this.SelectTamInsurersAndActivity(false);
 
             this.map.EtamOk();
 
@@ -670,7 +526,7 @@
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow1.UIItemEdit;
+            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICarRegistrationWindow.UIItemEdit;
             WinEdit uIItemEdit1 = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow.UIItemEdit;
 
             #endregion
@@ -786,7 +642,7 @@
 
             #endregion
 
-            uIItemComboBox.SelectedItem = this.MotoCancelPolicyParams.UIItemComboBoxSelectedItem;
+            uIItemComboBox.SelectedItem = this.CancelPolicyParams.UIItemComboBoxSelectedItem;
 
             Mouse.Click(uIOKButton, new Point(34, 12));
 
@@ -816,7 +672,6 @@
 
             WinButton uIRenewPolicyButton = this.map.UIAmendRiskResultsWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinButton uIYesButton = this.map.UIConfirmWindow.UIYesWindow.UIYesButton;
-            WinButton uICancelButton = this.map.UISavethefileasWindow.UICancelWindow.UICancelButton;
             WinButton uIOKButton = this.map.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
 
             #endregion
@@ -825,11 +680,7 @@
 
             Mouse.Click(uIYesButton, new Point(60, 14));
 
-            Playback.PlaybackSettings.ContinueOnError = true;
-
-            Mouse.Click(uICancelButton, new Point(62, 15));
-
-            Playback.PlaybackSettings.ContinueOnError = false;
+            this.CancelPrint();
 
             Mouse.Click(uIOKButton, new Point(37, 9));
         }
@@ -841,14 +692,13 @@
         {
             #region Variable Declarations
 
-            WinButton uIAmendRiskButton = this.map.UIAUTO2081001Window.UIAmendRiskWindow.UIAmendRiskButton;
+            WinButton uIAmendRiskButton = this.map.Uiautoxxx1000Window.UIAmendRiskWindow.UIAmendRiskButton;
             WinEdit uIItemEdit = this.map.UIAmendRiskWindow.UIItemWindow.UIItemEdit;
             WinButton uIProposerDetailsButton = this.map.UIAmendRiskWindow.UIProposerDetailsWindow.UIProposerDetailsButton;
             WinEdit uIItemEdit1 = this.map.UIProposerDetailsWindow.UIItemWindow.UIItemEdit;
             WinButton uIOKButton = this.map.UIProposerDetailsWindow.UIOKWindow.UIOKButton;
             WinButton uICalculateQuoteButton = this.map.UIAmendRiskWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
             WinButton uINOButton = this.map.UICreditCheckWindow.UINoWindow.UINoButton;
-            WinButton uICancelButton = this.map.UIQuoteSelectListWindow.UICancelWindow.UICancelButton;
 
             #endregion
 
@@ -865,12 +715,6 @@
             Mouse.Click(uICalculateQuoteButton, new Point(58, 6));
 
             Mouse.Click(uINOButton, new Point(50, 0));
-
-            Playback.PlaybackSettings.ContinueOnError = true;
-
-            Mouse.Click(uICancelButton, new Point(14, 18));
-
-            Playback.PlaybackSettings.ContinueOnError = false;
         }
 
         /// <summary>
@@ -886,7 +730,7 @@
 
             Mouse.Click(uIQuoteResultsClient, new Point(405, 217));
 
-            Keyboard.SendKeys(uIQuoteResultsClient, this.MotoSelectHighwayPolicyParams.UIQuoteResultsClientSendKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIQuoteResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
         }
 
         /// <summary>
@@ -901,50 +745,36 @@
             WinComboBox uIItemComboBox1 = this.map.UIDriverDetailsWindow.UIItemWindow1.UIItemComboBox;
             WinEdit uIItemEdit = this.map.UIDriverDetailsWindow.UIItemWindow2.UIItemEdit;
             WinButton uIOKButton1 = this.map.UIDriverDetailsWindow.UIOKWindow.UIOKButton;
-            WinComboBox uIItemComboBox2 = this.map.UIVehicleLookupWindow.UIItemWindow1.UIItemComboBox;
-            WinComboBox uIItemComboBox3 = this.map.UIVehicleLookupWindow.UIItemWindow11.UIItemComboBox;
-            WinButton uIFilterButton = this.map.UIVehicleLookupWindow.UIFilterWindow1.UIFilterButton;
+            WinComboBox uIItemComboBox3 = this.map.UIVehicleLookupWindow.UIItemWindow1.UIItemComboBox;
+            WinComboBox uIItemComboBox2 = this.map.UIVehicleLookupWindow.UIItemWindow2.UIItemComboBox;
+            WinButton uIFilterButton = this.map.UIVehicleLookupWindow.UIFilterWindow.UIFilterButton;
             WinButton uIOKButton2 = this.map.UIVehicleLookupWindow.UIOKWindow.UIOKButton;
-            WinEdit uIItemEdit1 = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow1.UIItemEdit;
+            WinEdit uIItemEdit1 = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICarRegistrationWindow.UIItemEdit;
             WinEdit uIItemEdit2 = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow.UIItemEdit;
 
             #endregion
 
             Mouse.Click(uIOKButton, new Point(40, 9));
 
-            uIItemComboBox.SelectedItem = this.MotoSearchCarParams.UIItemComboBoxSelectedItem;
+            uIItemComboBox.SelectedItem = this.QuoteResultsParams.UIItemComboBoxSelectedItem;
 
-            uIItemComboBox1.SelectedItem = this.MotoSearchCarParams.UIItemComboBoxSelectedItem1;
+            uIItemComboBox1.SelectedItem = this.QuoteResultsParams.UIItemComboBoxSelectedItem1;
 
-            uIItemEdit.Text = this.MotoSearchCarParams.UIItemEditText;
+            uIItemEdit.Text = this.QuoteResultsParams.UIItemEditText;
 
             Mouse.Click(uIOKButton1, new Point(45, 18));
 
-            uIItemComboBox2.EditableItem = this.MotoSearchCarParams.UIItemComboBoxEditableItem;
+            uIItemComboBox2.EditableItem = this.VehicleLookupParams.CarMake;
 
-            uIItemComboBox3.EditableItem = this.MotoSearchCarParams.UIItemComboBoxEditableItem1;
+            uIItemComboBox3.EditableItem = this.VehicleLookupParams.CarModel;
 
             Mouse.Click(uIFilterButton, new Point(29, 9));
 
             Mouse.Click(uIOKButton2, new Point(24, 10));
 
-            uIItemEdit1.Text = this.MotoSearchCarParams.UIItemEditText1;
+            uIItemEdit1.Text = this.QuoteResultsParams.CarRegFordFiesta;
 
-            uIItemEdit2.Text = this.MotoSearchCarParams.UIItemEditText2;
-        }
-
-        /// <summary>
-        ///     MotoRenewalCheckRecord - Use 'MotoRenewalCheckRecordExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void MotoRenewalCheckRecord()
-        {
-            #region Variable Declarations
-
-            WinWindow uIauto1871001Window = this.map.UIAUTO1871001Window;
-
-            #endregion
-
-            StringAssert.Contains(uIauto1871001Window.Name, this.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName);
+            uIItemEdit2.Text = this.QuoteResultsParams.UIItemEditText2;
         }
 
         /// <summary>
@@ -983,7 +813,8 @@
         /// <summary>
         ///     MotoRebrokeSelectScheme - Use 'MotoRebrokeSelectSchemeParams' to pass parameters into this method.
         /// </summary>
-        public void MotoRebrokeSelectScheme()
+        /// <param name="withSendKeys"></param>
+        public void MotoRebrokeSelectScheme(string withSendKeys)
         {
             #region Variable Declarations
 
@@ -995,13 +826,14 @@
             Mouse.Click(uIItemClient, new Point(271, 102));
 
             // Type '{Home}' in client
-            Keyboard.SendKeys(uIItemClient, this.MotoRebrokeSelectSchemeParams.UIItemClientSendKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIItemClient, withSendKeys, ModifierKeys.None);
         }
 
         /// <summary>
         ///     MotoRebrokeCurrent
         /// </summary>
-        public void MotoRebrokeCurrent()
+        /// <param name="withYesButton"></param>
+        public void MotoRebrokeCurrent(bool withYesButton)
         {
             #region Variable Declarations
 
@@ -1012,33 +844,39 @@
 
             Mouse.Click(uIOKButton, new Point(50, 10));
 
-            Playback.PlaybackSettings.ContinueOnError = true;
-
-            Mouse.Click(uIYesButton, new Point(43, 11));
-
-            Playback.PlaybackSettings.ContinueOnError = false;
+            if (withYesButton)
+            {
+                Mouse.Click(uIYesButton, new Point(43, 11));
+            }
         }
 
         /// <summary>
         ///     MotoRebroke
         /// </summary>
-        public void MotoRebroke()
+        /// <param name="withCancel"></param>
+        /// <param name="withConfim"></param>
+        public void MotoRebroke(bool withCancel, bool withConfim)
         {
             #region Variable Declarations
 
-            WinButton uIRebrokeButton = this.map.UIAUTO2081001Window.UIRebrokeWindow.UIRebrokeButton;
+            WinButton uIRebrokeButton = this.map.Uiautoxxx1000Window.UIRebrokeWindow.UIRebrokeButton;
             WinButton uICancelButton = this.map.UIQuoteSelectListWindow.UICancelWindow.UICancelButton;
             WinButton uINOButton = this.map.UICreditCheckWindow.UINoWindow.UINoButton;
+            WinButton uIOKButton = this.UIConfirmWindow.UIOKWindow.UIOKButton;
 
             #endregion
 
             Mouse.Click(uIRebrokeButton, new Point(86, 12));
 
-            Playback.PlaybackSettings.ContinueOnError = true;
+            if (withCancel)
+            {
+                Mouse.Click(uICancelButton, new Point(48, 17));
+            }
 
-            Mouse.Click(uICancelButton, new Point(48, 17));
-
-            Playback.PlaybackSettings.ContinueOnError = false;
+            if (withConfim)
+            {
+                Mouse.Click(uIOKButton);
+            }
 
             Mouse.Click(uINOButton, new Point(48, 11));
         }
@@ -1216,13 +1054,12 @@
             WinButton uIOKButton2 = this.map.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.map.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinButton uIOKButton3 = this.map.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinButton uIOKButton4 = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
             Mouse.Click(uIQuoteResultsClient, new Point(362, 176));
 
-            Keyboard.SendKeys(uIQuoteResultsClient, this.MotoMTAConfirmPolicyParams.UIQuoteResultsClientSendKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIQuoteResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
             Mouse.Click(uIAcceptButton, new Point(54, 8));
 
@@ -1232,15 +1069,15 @@
 
             Mouse.Click(uIOKButton1, new Point(32, 8));
 
-            uIDeferPrintingCheckBox.Checked = this.MotoMTAConfirmPolicyParams.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
 
             Mouse.Click(uIOKButton2, new Point(42, 12));
 
-            uIAddActivityCheckBox.Checked = this.MotoMTAConfirmPolicyParams.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIOKButton3, new Point(24, 14));
 
-            Mouse.Click(uIOKButton4, new Point(37, 10));
+            this.SelectTamInsurersAndActivity(true);
         }
 
         /// <summary>
@@ -1293,7 +1130,7 @@
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow1.UIItemEdit;
+            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICarRegistrationWindow.UIItemEdit;
             WinEdit uIItemEdit1 = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow.UIItemEdit;
 
             #endregion
@@ -1315,23 +1152,20 @@
             WinButton uIOKButton1 = this.map.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.map.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinButton uIOKButton2 = this.map.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinButton uIOKButton3 = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
             Mouse.Click(uIOKButton, new Point(28, 8));
 
-            uIDeferPrintingCheckBox.Checked = this.MotoMTABeforeFinishParams.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
 
             Mouse.Click(uIOKButton1, new Point(69, 14));
 
-            uIAddActivityCheckBox.Checked = this.MotoMTABeforeFinishParams.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIOKButton2, new Point(46, 21));
 
-            Mouse.Click(uIOKButton3, new Point(39, 8));
-
-            Mouse.Click(uIOKButton3, new Point(24, 10));
+            this.SelectTamInsurersAndActivity(true);
         }
 
         /// <summary>
@@ -1351,7 +1185,7 @@
 
             Mouse.Click(uIQuoteResultsClient, new Point(401, 181));
 
-            Keyboard.SendKeys(uIQuoteResultsClient, this.MotoMTABeforeAcceptParams.UIQuoteResultsClientSendKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIQuoteResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
             Mouse.Click(uIAcceptButton, new Point(56, 12));
 
@@ -1371,10 +1205,10 @@
 
             WinButton uIOKButton = this.map.UICurrentOrFutureWindow.UIClient.UIOKButton;
             WinButton uIYesButton = this.map.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
-            WinButton uIMTAButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow.UIMTAButton2;
+            WinButton uIMTAButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow.UIMTAButton;
             WinComboBox uIItemComboBox = this.map.UIMidTermAdjustmentsWindow.UIItemWindow.UIItemComboBox;
             WinButton uIOKButton1 = this.map.UIMidTermAdjustmentsWindow.UIOKWindow.UIOKButton;
-            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow1.UIItemEdit;
+            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICarRegistrationWindow.UIItemEdit;
             WinButton uICalculateQuoteButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
 
             #endregion
@@ -1403,10 +1237,10 @@
 
             WinButton uIOKButton = this.map.UICurrentOrFutureWindow.UIClient.UIOKButton;
             WinButton uIBeforeButton = this.map.UIMidTermAdjustmentsWindow.UIItemWindow.UIBeforeButton;
-            WinButton uIMTAButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow.UIMTAButton2;
+            WinButton uIMTAButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow.UIMTAButton;
             WinComboBox uIItemComboBox = this.map.UIMidTermAdjustmentsWindow.UIItemWindow.UIItemComboBox;
             WinButton uIOKButton1 = this.map.UIMidTermAdjustmentsWindow.UIOKWindow.UIOKButton;
-            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow1.UIItemEdit;
+            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICarRegistrationWindow.UIItemEdit;
             WinButton uICalculateQuoteButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
 
             #endregion
@@ -1461,7 +1295,7 @@
             WinMenuItem uIQuoteSelectListMenuItem =
                 this.map.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegratMenuItem.UIQuoteSelectListMenuItem;
             WinButton uIOKButton = this.map.UICurrentOrFutureWindow.UIClient.UIOKButton;
-            WinButton uIMTAButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow.UIMTAButton2;
+            WinButton uIMTAButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow.UIMTAButton;
 
             #endregion
 
@@ -1506,13 +1340,12 @@
             WinButton uIOKButton2 = this.map.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.map.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinButton uIOKButton3 = this.map.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinButton uIOKButton4 = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
             Mouse.Click(uIQuoteResultsClient, new Point(371, 177));
 
-            Keyboard.SendKeys(uIQuoteResultsClient, this.MotoFinishMTAParams.UIQuoteResultsClientSendKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIQuoteResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
             Mouse.Click(uIAcceptButton, new Point(51, 11));
 
@@ -1524,17 +1357,16 @@
 
             Mouse.Click(uIPointOfSaleClient, new Point(477, 239));
 
-            uIDeferPrintingCheckBox.Checked = this.MotoFinishMTAParams.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
 
             Mouse.Click(uIOKButton2, new Point(54, 19));
 
-            uIAddActivityCheckBox.Checked = this.MotoFinishMTAParams.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
+            Playback.Wait(2000);
             Mouse.Click(uIOKButton3, new Point(43, 6));
 
-            Mouse.Click(uIOKButton4, new Point(48, 14));
-
-            Mouse.Click(uIOKButton4, new Point(38, 12));
+            this.SelectTamInsurersAndActivity(true);
         }
 
         /// <summary>
@@ -1608,7 +1440,6 @@
 
             Mouse.Click(uIOptionsButton, new Point(29, 12));
 
-            // Click 'Options' -> 'Links' -> '3rd Party Integration' -> 'Copy Risk' menu item
             Mouse.Click(uICopyRiskMenuItem, new Point(79, 13));
 
             Mouse.Click(uIOKButton, new Point(57, 15));
@@ -1634,6 +1465,90 @@
             Mouse.Click(uIYesButton, new Point(66, 12));
 
             Mouse.Click(uIOKButton, new Point(53, 10));
+        }
+
+        /// <summary>
+        ///     QuoteResults - Use 'QuoteResultsParams' to pass parameters into this method.
+        /// </summary>
+        public void QuoteResults()
+        {
+            #region Variable Declarations
+
+            WinControl uIOKButton = this.UIProposerDetailsWindow.UIOKWindow.UIOKButton;
+            WinComboBox uIItemComboBox = this.UIDriverDetailsWindow.UIItemWindow.UIItemComboBox;
+            WinComboBox uIItemComboBox1 = this.UIDriverDetailsWindow.UIItemWindow1.UIItemComboBox;
+            WinEdit uIItemEdit = this.UIDriverDetailsWindow.UIItemWindow2.UIItemEdit;
+            WinControl uIOKButton1 = this.UIDriverDetailsWindow.UIOKWindow.UIOKButton;
+            WinEdit uIItemEdit2 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow.UIItemEdit;
+            WinControl uICalculateQuoteButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
+            WinEdit uIItemEdit3 = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICarRegistrationWindow.UIItemEdit;
+
+            #endregion
+
+            Mouse.Click(uIOKButton, new Point(44, 12));
+
+            uIItemComboBox.SelectedItem = this.QuoteResultsParams.UIItemComboBoxSelectedItem;
+
+            uIItemComboBox1.SelectedItem = this.QuoteResultsParams.UIItemComboBoxSelectedItem1;
+
+            uIItemEdit.Text = this.QuoteResultsParams.UIItemEditText;
+
+            Mouse.Click(uIOKButton1, new Point(38, 4));
+
+            //insert standard lookup here
+            //uIItemEdit1.Text = this.QuoteResultsParams.UIItemEditText1;
+
+            //Mouse.Click(uIFilterButton, new Point(59, 14));
+            this.VehicleLookup();
+
+            uIItemEdit2.Text = this.QuoteResultsParams.UIItemEditText2;
+
+            uIItemEdit3.Text = this.QuoteResultsParams.CarRegFordFiesta;
+
+            Mouse.Click(uICalculateQuoteButton, new Point(25, 13));
+        }
+
+        /// <summary>
+        ///     QuoteResults_1
+        /// </summary>
+        public void QuoteResults1()
+        {
+            #region Variable Declarations
+
+            WinControl uINOButton = this.UICreditCheckWindow.UINoWindow.UINoButton;
+
+            #endregion
+
+            Mouse.Click(uINOButton, new Point(28, 10));
+        }
+
+        public void VehicleLookup()
+        {
+            #region Variable Declarations
+
+            WinRadioButton uIStandardLookupRadioButton = this.UIVehicleLookupWindow.UIStandardLookupWindow.UIRadioButton("Standard Lookup:");
+            WinComboBox uIItemComboBox = this.UIVehicleLookupWindow.UIItemWindow.UIItemComboBox;
+            WinComboBox uIItemComboBox1 = this.UIVehicleLookupWindow.UIItemWindow1.UIItemComboBox;
+            WinEdit uIItemEdit = this.UIVehicleLookupWindow.UIItemWindow2.UIItemEdit;
+            WinEdit uIItemEdit1 = this.UIVehicleLookupWindow.UIItemWindow3.UIItemEdit;
+            WinEdit uIItemEdit2 = this.UIVehicleLookupWindow.UIItemWindow4.UIItemEdit;
+            WinComboBox uIItemComboBox2 = this.UIVehicleLookupWindow.UIItemWindow5.UIItemComboBox;
+            WinComboBox uIItemComboBox3 = this.UIVehicleLookupWindow.UIItemWindow6.UIItemComboBox;
+            WinButton uIFilterButton = this.UIVehicleLookupWindow.UIFilterWindow.UIFilterButton;
+            WinButton uIOKButton = this.UIVehicleLookupWindow.UIOKWindow.UIOKButton;
+
+            #endregion
+
+            uIStandardLookupRadioButton.Selected = this.VehicleLookupParams.StandardLookupRadioButton;
+            uIItemComboBox.EditableItem = this.VehicleLookupParams.CarMake;
+            uIItemComboBox1.EditableItem = this.VehicleLookupParams.CarModel;
+            uIItemEdit.Text = this.VehicleLookupParams.EngineCapacity;
+            uIItemEdit1.Text = this.VehicleLookupParams.Doors;
+            uIItemEdit2.Text = this.VehicleLookupParams.YearBuilt;
+            uIItemComboBox2.SelectedItem = this.VehicleLookupParams.FuelType;
+            uIItemComboBox3.SelectedItem = this.VehicleLookupParams.TransmissionType;
+            Mouse.Click(uIFilterButton, new Point(29, 16));
+            Mouse.Click(uIOKButton, new Point(17, 7));
         }
     }
 }

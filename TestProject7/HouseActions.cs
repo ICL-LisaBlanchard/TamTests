@@ -1,6 +1,5 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
-    using System;
     using System.Drawing;
     using System.Windows.Input;
 
@@ -15,10 +14,6 @@
 
     public class HouseActions : UIMap
     {
-        private HomePrintQuote_1Params mHomePrintQuote1Params;
-
-        private HomeExitWithPolicyParams mHomeExitWithPolicyParams;
-
         private HomeAcceptPolicyParams mHomeAcceptPolicyParams;
 
         private HomeCheckPremiumExpectedValues mHomeCheckPremiumExpectedValues;
@@ -31,11 +26,7 @@
 
         private HomeCopyCheckDataExpectedValues mHomeCopyCheckDataExpectedValues;
 
-        private HomeCopyRiskParams mHomeCopyRiskParams;
-
         private HomeCheckPolicyPremiumExpectedValues mHomeCheckPolicyPremiumExpectedValues;
-
-        private HomeExitWithoutPolicyParams mHomeExitWithoutPolicyParams;
 
         private HomeMTAChangeParams mHomeMtaChangeParams;
 
@@ -47,13 +38,9 @@
 
         private HomeMTACopyCheckExpectedValues mHomeMTACopyCheckExpectedValues;
 
-        private HomeAddressLookupExpectedValues mHomeAddressLookupExpectedValues;
-
-        private HomeAcceptQuote_1Params mHomeAcceptQuote1Params;
+        private AddressLookupExpectedValues mAddressLookupExpectedValues;
 
         private HomeProposerParams mHomeProposerParams;
-
-        private HomeMTASelectQuoteParams mHomeMTASelectQuoteParams;
 
         private HomeMTAEnterDateParams mHomeMTAEnterDateParams;
 
@@ -63,17 +50,7 @@
 
         private HomeChangePremiumParams mHomeChangePremiumParams;
 
-        private HomeCancelPolicyAcceptParams mHomeCancelPolicyAcceptParams;
-
-        private HomeCancelPolicyParams mHomeCancelPolicyParams;
-
-        private HomeAmendSelecPolicyParams mHomeAmendSelecPolicyParams;
-
         private HomeAmendRiskParams mHomeAmendRiskParams;
-
-        private HomeAmendRenewFinish_1Params mHomeAmendRenewFinish1Params;
-
-        private HomeAmendRenewParams mHomeAmendRenewParams;
 
         private HouseRegressAppParams mHouseRegressAppParams;
 
@@ -81,41 +58,9 @@
 
         private HomeSiteRenewalParams mHomeSiteRenewalParams;
 
-        private HomeSelectPolicy1Params mHomeSelectPolicy1Params;
-
-        private HomeSelectPolicyParams mHomeSelectPolicyParams;
-
         private HomeRenewalCancelledCheckExpectedValues mHomeRenewalCancelledCheckExpectedValues;
 
-        private HomeRenewalBeforeFinishParams mHomeRenewalBeforeFinishParams;
-
-        private HomeRenewalBeforeAcceptParams mHomeRenewalBeforeAcceptParams;
-
-        private HomeRebrokeSelectPolicyParams mHomeRebrokeSelectPolicyParams;
-
-        public virtual HomePrintQuote_1Params HomePrintQuote1Params
-        {
-            get
-            {
-                if ((this.mHomePrintQuote1Params == null))
-                {
-                    this.mHomePrintQuote1Params = new HomePrintQuote_1Params();
-                }
-                return this.mHomePrintQuote1Params;
-            }
-        }
-
-        public virtual HomeExitWithPolicyParams HomeExitWithPolicyParams
-        {
-            get
-            {
-                if ((this.mHomeExitWithPolicyParams == null))
-                {
-                    this.mHomeExitWithPolicyParams = new HomeExitWithPolicyParams();
-                }
-                return this.mHomeExitWithPolicyParams;
-            }
-        }
+        public string CustomerCode { get; set; }
 
         public virtual HomeAcceptPolicyParams HomeAcceptPolicyParams
         {
@@ -177,18 +122,6 @@
             }
         }
 
-        public virtual HomeCopyRiskParams HomeCopyRiskParams
-        {
-            get
-            {
-                if ((this.mHomeCopyRiskParams == null))
-                {
-                    this.mHomeCopyRiskParams = new HomeCopyRiskParams();
-                }
-                return this.mHomeCopyRiskParams;
-            }
-        }
-
         public virtual HomeCheckPolicyPremiumExpectedValues HomeCheckPolicyPremiumExpectedValues
         {
             get
@@ -198,18 +131,6 @@
                     this.mHomeCheckPolicyPremiumExpectedValues = new HomeCheckPolicyPremiumExpectedValues();
                 }
                 return this.mHomeCheckPolicyPremiumExpectedValues;
-            }
-        }
-
-        public virtual HomeExitWithoutPolicyParams HomeExitWithoutPolicyParams
-        {
-            get
-            {
-                if ((this.mHomeExitWithoutPolicyParams == null))
-                {
-                    this.mHomeExitWithoutPolicyParams = new HomeExitWithoutPolicyParams();
-                }
-                return this.mHomeExitWithoutPolicyParams;
             }
         }
 
@@ -273,27 +194,15 @@
             }
         }
 
-        public virtual HomeAddressLookupExpectedValues HomeAddressLookupExpectedValues
+        public virtual AddressLookupExpectedValues AddressLookupExpectedValues
         {
             get
             {
-                if ((this.mHomeAddressLookupExpectedValues == null))
+                if ((this.mAddressLookupExpectedValues == null))
                 {
-                    this.mHomeAddressLookupExpectedValues = new HomeAddressLookupExpectedValues();
+                    this.mAddressLookupExpectedValues = new AddressLookupExpectedValues();
                 }
-                return this.mHomeAddressLookupExpectedValues;
-            }
-        }
-
-        public virtual HomeAcceptQuote_1Params HomeAcceptQuote1Params
-        {
-            get
-            {
-                if ((this.mHomeAcceptQuote1Params == null))
-                {
-                    this.mHomeAcceptQuote1Params = new HomeAcceptQuote_1Params();
-                }
-                return this.mHomeAcceptQuote1Params;
+                return this.mAddressLookupExpectedValues;
             }
         }
 
@@ -306,18 +215,6 @@
                     this.mHomeProposerParams = new HomeProposerParams();
                 }
                 return this.mHomeProposerParams;
-            }
-        }
-
-        public virtual HomeMTASelectQuoteParams HomeMTASelectQuoteParams
-        {
-            get
-            {
-                if ((this.mHomeMTASelectQuoteParams == null))
-                {
-                    this.mHomeMTASelectQuoteParams = new HomeMTASelectQuoteParams();
-                }
-                return this.mHomeMTASelectQuoteParams;
             }
         }
 
@@ -369,42 +266,6 @@
             }
         }
 
-        public virtual HomeCancelPolicyAcceptParams HomeCancelPolicyAcceptParams
-        {
-            get
-            {
-                if ((this.mHomeCancelPolicyAcceptParams == null))
-                {
-                    this.mHomeCancelPolicyAcceptParams = new HomeCancelPolicyAcceptParams();
-                }
-                return this.mHomeCancelPolicyAcceptParams;
-            }
-        }
-
-        public virtual HomeCancelPolicyParams HomeCancelPolicyParams
-        {
-            get
-            {
-                if ((this.mHomeCancelPolicyParams == null))
-                {
-                    this.mHomeCancelPolicyParams = new HomeCancelPolicyParams();
-                }
-                return this.mHomeCancelPolicyParams;
-            }
-        }
-
-        public virtual HomeAmendSelecPolicyParams HomeAmendSelecPolicyParams
-        {
-            get
-            {
-                if ((this.mHomeAmendSelecPolicyParams == null))
-                {
-                    this.mHomeAmendSelecPolicyParams = new HomeAmendSelecPolicyParams();
-                }
-                return this.mHomeAmendSelecPolicyParams;
-            }
-        }
-
         public virtual HomeAmendRiskParams HomeAmendRiskParams
         {
             get
@@ -414,30 +275,6 @@
                     this.mHomeAmendRiskParams = new HomeAmendRiskParams();
                 }
                 return this.mHomeAmendRiskParams;
-            }
-        }
-
-        public virtual HomeAmendRenewFinish_1Params HomeAmendRenewFinish1Params
-        {
-            get
-            {
-                if ((this.mHomeAmendRenewFinish1Params == null))
-                {
-                    this.mHomeAmendRenewFinish1Params = new HomeAmendRenewFinish_1Params();
-                }
-                return this.mHomeAmendRenewFinish1Params;
-            }
-        }
-
-        public virtual HomeAmendRenewParams HomeAmendRenewParams
-        {
-            get
-            {
-                if ((this.mHomeAmendRenewParams == null))
-                {
-                    this.mHomeAmendRenewParams = new HomeAmendRenewParams();
-                }
-                return this.mHomeAmendRenewParams;
             }
         }
 
@@ -477,30 +314,6 @@
             }
         }
 
-        public virtual HomeSelectPolicy1Params HomeSelectPolicy1Params
-        {
-            get
-            {
-                if ((this.mHomeSelectPolicy1Params == null))
-                {
-                    this.mHomeSelectPolicy1Params = new HomeSelectPolicy1Params();
-                }
-                return this.mHomeSelectPolicy1Params;
-            }
-        }
-
-        public virtual HomeSelectPolicyParams HomeSelectPolicyParams
-        {
-            get
-            {
-                if ((this.mHomeSelectPolicyParams == null))
-                {
-                    this.mHomeSelectPolicyParams = new HomeSelectPolicyParams();
-                }
-                return this.mHomeSelectPolicyParams;
-            }
-        }
-
         public virtual HomeRenewalCancelledCheckExpectedValues HomeRenewalCancelledCheckExpectedValues
         {
             get
@@ -510,42 +323,6 @@
                     this.mHomeRenewalCancelledCheckExpectedValues = new HomeRenewalCancelledCheckExpectedValues();
                 }
                 return this.mHomeRenewalCancelledCheckExpectedValues;
-            }
-        }
-
-        public virtual HomeRenewalBeforeFinishParams HomeRenewalBeforeFinishParams
-        {
-            get
-            {
-                if ((this.mHomeRenewalBeforeFinishParams == null))
-                {
-                    this.mHomeRenewalBeforeFinishParams = new HomeRenewalBeforeFinishParams();
-                }
-                return this.mHomeRenewalBeforeFinishParams;
-            }
-        }
-
-        public virtual HomeRenewalBeforeAcceptParams HomeRenewalBeforeAcceptParams
-        {
-            get
-            {
-                if ((this.mHomeRenewalBeforeAcceptParams == null))
-                {
-                    this.mHomeRenewalBeforeAcceptParams = new HomeRenewalBeforeAcceptParams();
-                }
-                return this.mHomeRenewalBeforeAcceptParams;
-            }
-        }
-
-        public virtual HomeRebrokeSelectPolicyParams HomeRebrokeSelectPolicyParams
-        {
-            get
-            {
-                if ((this.mHomeRebrokeSelectPolicyParams == null))
-                {
-                    this.mHomeRebrokeSelectPolicyParams = new HomeRebrokeSelectPolicyParams();
-                }
-                return this.mHomeRebrokeSelectPolicyParams;
             }
         }
 
@@ -605,7 +382,7 @@
 
             Mouse.Click(uIQuotesResultsClient, new Point(526, 161));
 
-            Keyboard.SendKeys(uIQuotesResultsClient, this.HomePrintQuote1Params.UIQuotesResultsClientSendKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendEndKeys, ModifierKeys.None);
 
             Mouse.Click(uIPrintQuoteButton, new Point(65, 11));
         }
@@ -634,7 +411,7 @@
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton1 = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
-            WinControl uIOKButton2 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            //WinControl uIOKButton2 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
             WinControl uICancelButton1 = this.UIPolicyautotestWindow.UIPolicyListWindow.UICancelWindow.UICancelButton;
             WinControl uIItemButton = this.UIPolicyautotestWindow.UIItemWindow.UIItemButton;
             WinControl uIDetailButton = this.UIPolicyautotestWindow.UIPolicyListWindow1.UIDetailWindow.UIDetailButton;
@@ -671,13 +448,13 @@
 
             Mouse.Click(uIQuotesResultsClient, new Point(500, 164));
 
-            Keyboard.SendKeys(uIQuotesResultsClient, this.HomeExitWithPolicyParams.UIQuotesResultsClientSendKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
             Mouse.Click(uIExitButton, new Point(46, 13));
 
             Mouse.Click(uIYesButton, new Point(51, 13));
 
-            uIAddActivityCheckBox.Checked = this.HomeExitWithPolicyParams.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIOKButton1, new Point(45, 15));
 
@@ -686,8 +463,6 @@
             Mouse.Click(uIOKButton3, new Point(42, 10));
 
             this.SelectTamInsurersAndActivity(false);
-
-            Mouse.Click(uIOKButton2, new Point(55, 7));
 
             Mouse.Click(uICancelButton1, new Point(37, 17));
 
@@ -705,7 +480,6 @@
         {
             WinControl uIAcceptButton = this.UIQuotesResultsWindow.UIAcceptWindow.UIAcceptButton;
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
-            WinControl uICancelButton = this.UISavethefileasWindow.UICancelWindow.UICancelButton;
             WinControl uIOKButton1 = this.UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
             WinControl uIOKButton2 = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
             WinEdit uIItemEdit = this.UIPolicyDetailConfirmationWindow.UIItemWindow.UIItemEdit;
@@ -717,8 +491,7 @@
             Assert.IsTrue(uIYesButton.Exists, "uIYesButton button cannot be found");
             Mouse.Click(uIYesButton, new Point(49, 11));
 
-            Mouse.Click(this.UISavethefileasWindow, new Point(10, 10));
-            Mouse.Click(uICancelButton, new Point(41, 9));
+            this.CancelPrint();
 
             Mouse.Click(uIOKButton1, new Point(47, 22));
 
@@ -845,7 +618,7 @@
 
             Mouse.Click(uIOKButton, new Point(54, 10));
 
-            uIHouseholdRadioButton.Selected = this.HomeCopyRiskParams.UIHouseholdRadioButtonSelected;
+            uIHouseholdRadioButton.Selected = this.CommonParams.UIHouseholdRadioButtonSelected;
 
             Mouse.Click(uIOKButton1, new Point(42, 21));
         }
@@ -882,20 +655,17 @@
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
-            WinControl uIOKButton2 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            //WinControl uIOKButton2 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             Mouse.Click(uIExitButton, new Point(54, 9));
 
             Mouse.Click(uIYesButton, new Point(45, 6));
 
-            //uIAddActivityCheckBox.Checked = this.HomeExitWithoutPolicyParams.UIAddActivityCheckBoxChecked;
             Mouse.Click(uIAddActivityCheckBox);
 
             Mouse.Click(uIOKButton, new Point(30, 15));
 
-            this.SelectTamInsurersAndActivity(true);
-
-            Mouse.Click(uIOKButton2, new Point(70, 14));
+            this.SelectTamInsurersAndActivity(false);
         }
 
         /// <summary>
@@ -1068,9 +838,9 @@
             WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow6.UIItemEdit;
             WinEdit uIItemEdit1 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow7.UIItemEdit;
 
-            Assert.AreEqual(this.HomeAddressLookupExpectedValues.UIItemEditText, uIItemEdit.Text);
+            Assert.AreEqual(this.AddressLookupExpectedValues.UIItemEditText, uIItemEdit.Text);
 
-            Assert.AreEqual(this.HomeAddressLookupExpectedValues.UIItemEditText1, uIItemEdit1.Text);
+            Assert.AreEqual(this.AddressLookupExpectedValues.UIItemEditText1, uIItemEdit1.Text);
         }
 
         /// <summary>
@@ -1091,7 +861,6 @@
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton6 = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
             WinControl uIOKButton7 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-            WinControl uIOKButton8 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             Playback.PlaybackSettings.ContinueOnError = true;
 
@@ -1103,7 +872,7 @@
 
             Mouse.Click(uIOKButton2, new Point(29, 10));
 
-            uIItemEdit.Text = this.HomeAcceptQuote1Params.UIItemEditText;
+            uIItemEdit.Text = this.CommonParams.Postcode;
 
             Mouse.Click(uILookupButton, new Point(25, 13));
 
@@ -1117,23 +886,17 @@
 
             Playback.PlaybackSettings.ContinueOnError = false;
 
-            uIDeferPrintingCheckBox.Checked = this.HomeAcceptQuote1Params.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
 
             Mouse.Click(uIOKButton5, new Point(60, 10));
 
-            uIAddActivityCheckBox.Checked = this.HomeAcceptQuote1Params.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIOKButton6, new Point(40, 8));
 
             Mouse.Click(uIOKButton7, new Point(54, 8));
 
-            Playback.PlaybackSettings.ContinueOnError = true;
-
-            Mouse.Click(uIOKButton7, new Point(40, 18));
-
-            Playback.PlaybackSettings.ContinueOnError = false;
-
-            Mouse.Click(uIOKButton8, new Point(43, 20));
+            this.SelectTamInsurersAndActivity(false);
         }
 
         /// <summary>
@@ -1288,11 +1051,11 @@
             WinControl uIokButton3 = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIokButton4 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinControl uIokButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            //WinControl uIokButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             Mouse.Click(uIQuotesResultsClient, new Point(424, 227));
 
-            Keyboard.SendKeys(uIQuotesResultsClient1, this.HomeMTASelectQuoteParams.UIQuotesResultsClientSendKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIQuotesResultsClient1, this.CommonParams.SendEndKeys, ModifierKeys.None);
 
             Mouse.Move(new Point(500, 500));
 
@@ -1304,21 +1067,15 @@
 
             Mouse.Click(uIokButton2, new Point(58, 15));
 
-            uIDeferPrintingCheckBox.Checked = this.HomeMTASelectQuoteParams.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
 
             Mouse.Click(uIokButton3, new Point(50, 8));
 
-            uIAddActivityCheckBox.Checked = this.HomeMTASelectQuoteParams.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIokButton4, new Point(29, 19));
 
             this.SelectTamInsurersAndActivity(true);
-
-            Mouse.Click(uIokButton5, new Point(33, 12));
-
-            //this.SelectTamInsurersAndActivity();
-
-            //Mouse.Click(uIokButton5, new Point(33, 12));
         }
 
         /// <summary>
@@ -1471,13 +1228,12 @@
             WinControl uIokButton3 = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIokButton4 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinControl uIokButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             Playback.Wait(2000);
 
             Mouse.Click(uIQuotesResultsClient, new Point(491, 235));
 
-            Keyboard.SendKeys(uIQuotesResultsClient, this.HomeCancelPolicyAcceptParams.UIQuotesResultsClientSendKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
             Mouse.Move(new Point(500, 500));
 
@@ -1489,17 +1245,15 @@
 
             Mouse.Click(uIokButton2, new Point(47, 13));
 
-            uIDeferPrintingCheckBox.Checked = this.HomeCancelPolicyAcceptParams.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
 
             Mouse.Click(uIokButton3, new Point(68, 12));
 
-            uIAddActivityCheckBox.Checked = this.HomeCancelPolicyAcceptParams.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIokButton4, new Point(42, 12));
 
             this.SelectTamInsurersAndActivity(false);
-
-            Mouse.Click(uIokButton5, new Point(23, 5));
         }
 
         /// <summary>
@@ -1514,7 +1268,7 @@
             Playback.Wait(5000);
             Mouse.Click(uIMTAButton, new Point(35, 8));
 
-            uIItemComboBox.SelectedItem = this.HomeCancelPolicyParams.UIItemComboBoxSelectedItem;
+            uIItemComboBox.SelectedItem = this.CancelPolicyParams.UIItemComboBoxSelectedItem;
 
             Mouse.Click(uIOKButton, new Point(31, 11));
         }
@@ -1546,7 +1300,7 @@
 
             Mouse.Click(uIHouseholdRenewalsAmeClient, new Point(337, 202));
 
-            Keyboard.SendKeys(uIHouseholdRenewalsAmeClient, this.HomeAmendSelecPolicyParams.UIHouseholdRenewalsAmeClientSendKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIHouseholdRenewalsAmeClient, this.CommonParams.SendEndKeys, ModifierKeys.None);
         }
 
         /// <summary>
@@ -1600,11 +1354,8 @@
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIokButton2 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
             WinControl uIokButton3 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-            //WinList uIItemList = this.UIPleaseSelectWhoToFolWindow.UIItemWindow1.UIItemList;
-            //WinControl uIokButton4 = this.UIPleaseSelectWhoToFolWindow.UIItemWindow.UIClient().UIOKButton;
-            WinControl uIokButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
-            uIDeferPrintingCheckBox.Checked = this.HomeAmendRenewFinish1Params.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
 
             Mouse.Click(uIokButton, new Point(74, 12));
 
@@ -1616,18 +1367,13 @@
 
             Playback.PlaybackSettings.ContinueOnError = false;
 
-            uIAddActivityCheckBox.Checked = this.HomeAmendRenewFinish1Params.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIokButton2, new Point(48, 9));
 
             Mouse.Click(uIokButton3, new Point(19, 12));
 
-            //uIItemList.SelectedItemsAsString = this.HomeAmendRenewFinish1Params.UIItemListSelectedItemsAsString;
-
-            //Mouse.Click(uIokButton4, new Point(13, 16));
             this.SelectTamInsurersAndActivity(false);
-
-            Mouse.Click(uIokButton5, new Point(46, 16));
         }
 
         /// <summary>
@@ -1637,20 +1383,13 @@
         {
             WinControl uIRenewPolicyButton = this.UIHouseholdRenewalsAmeWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
-            WinControl uICancelButton = this.UISavethefileasWindow.UICancelWindow.UICancelButton;
 
             // Click '&Renew Policy' button
             Mouse.Click(uIRenewPolicyButton, new Point(52, 9));
 
             Mouse.Click(uIYesButton, new Point(55, 11));
 
-            // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
-            Playback.PlaybackSettings.ContinueOnError = true;
-
-            Mouse.Click(uICancelButton, new Point(51, 11));
-
-            // Reset flag to ensure that play back stops if there is an error.
-            Playback.PlaybackSettings.ContinueOnError = false;
+            this.CancelPrint();
         }
 
         /// <summary>
@@ -1667,9 +1406,6 @@
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIokButton3 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
             WinControl uIokButton4 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-            //WinList uIItemList = this.UIPleaseSelectWhoToFolWindow.UIItemWindow1.UIItemList;
-            //WinControl uIokButton5 = this.UIPleaseSelectWhoToFolWindow.UIItemWindow.UIClient().UIOKButton;
-            WinControl uIokButton6 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             // Click '&Renew Policy' button
             Mouse.Click(uIRenewPolicyButton, new Point(36, 18));
@@ -1680,25 +1416,19 @@
 
             Mouse.Click(uIokButton, new Point(26, 16));
 
-            uIDeferPrintingCheckBox.Checked = this.HomeAmendRenewParams.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
 
             Mouse.Click(uIokButton1, new Point(74, 19));
 
             Mouse.Click(uIokButton2, new Point(64, 14));
 
-            uIAddActivityCheckBox.Checked = this.HomeAmendRenewParams.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIokButton3, new Point(60, 17));
 
             Mouse.Click(uIokButton4, new Point(21, 8));
 
-            // Select 'AG Administrator General' in list box
-            //uIItemList.SelectedItemsAsString = this.HomeAmendRenewParams.UIItemListSelectedItemsAsString;
-
-            //Mouse.Click(uIokButton5, new Point(60, 14));
-            this.SelectTamInsurersAndActivity(false, this.HomeAmendRenewParams.UIItemListSelectedItemsAsString);
-
-            Mouse.Click(uIokButton6, new Point(30, 15));
+            this.SelectTamInsurersAndActivity(false);
         }
 
         /// <summary>
@@ -1781,7 +1511,7 @@
 
             Mouse.Click(uIQuotesResultsClient, new Point(354, 212));
 
-            Keyboard.SendKeys(uIQuotesResultsClient, this.HomeSelectPolicy1Params.UIQuotesResultsClientSendKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
         }
 
         /// <summary>
@@ -1827,29 +1557,18 @@
             WinControl uIOKButton1 = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton2 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinControl uIOKButton3 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             Mouse.Click(uIOKButton, new Point(49, 11));
 
-            uIDeferPrintingCheckBox.Checked = this.HomeRenewalBeforeFinishParams.UIDeferPrintingCheckBoxChecked;
+            uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
 
             Mouse.Click(uIOKButton1, new Point(53, 18));
 
-            uIAddActivityCheckBox.Checked = this.HomeRenewalBeforeFinishParams.UIAddActivityCheckBoxChecked;
+            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIOKButton2, new Point(33, 12));
 
-            try
-            {
-                Mouse.Click(uIOKButton3, new Point(33, 12));
-            }
-            catch (Exception)
-            {
-            }
-
-            this.SelectTamInsurersAndActivity(true);
-
-            Mouse.Click(uIOKButton3, new Point(28, 13));
+            this.SelectTamInsurersAndActivity(false);
         }
 
         /// <summary>
@@ -1865,7 +1584,7 @@
 
             Mouse.Click(uIQuotesResultsClient, new Point(420, 229));
 
-            Keyboard.SendKeys(uIQuotesResultsClient, this.HomeRenewalBeforeAcceptParams.UIQuotesResultsClientSendKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendEndKeys, ModifierKeys.None);
 
             Mouse.Move(new Point(500, 500));
 
@@ -1881,13 +1600,14 @@
         /// <summary>
         ///     HomeRebrokeSelectPolicy - Use 'HomeRebrokeSelectPolicyParams' to pass parameters into this method.
         /// </summary>
-        public void HomeRebrokeSelectPolicy()
+        /// <param name="withKeys"></param>
+        public void HomeRebrokeSelectPolicy(string withKeys)
         {
             WinClient uIHouseholdRebrokeResuClient = this.UIHouseholdRebrokeResuWindow.UIItemWindow.UIClient();
 
             Mouse.Click(uIHouseholdRebrokeResuClient, new Point(449, 216));
 
-            Keyboard.SendKeys(uIHouseholdRebrokeResuClient, this.HomeRebrokeSelectPolicyParams.UIHouseholdRebrokeResuClientSendKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIHouseholdRebrokeResuClient, withKeys, ModifierKeys.None);
         }
 
         /// <summary>

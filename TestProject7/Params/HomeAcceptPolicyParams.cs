@@ -11,9 +11,9 @@
         #region Fields
 
         /// <summary>
-        /// Type 'B338TH' in 'Unknown Name' text box
+        /// Type 'BN16BN' in 'Unknown Name' text box
         /// </summary>
-        public string UIItemEditText = "B338TH";
+        public string UIItemEditText = "BN16BN";
 
         #endregion
     }

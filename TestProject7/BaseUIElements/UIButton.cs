@@ -10,7 +10,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             if (!string.IsNullOrEmpty(name))
             {
-                this.SearchProperties[UITestControl.PropertyNames.Name] = name;
+                this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, name, PropertyExpressionOperator.Contains));
             }
 
             foreach (string w in uiItemWindow.WindowTitles)

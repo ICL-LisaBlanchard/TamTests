@@ -20,7 +20,7 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.AssertSelectPolicyForm();
@@ -30,7 +30,7 @@
             this.moto.CancelPrint();
             this.moto.FinishQuote1();
             this.moto.MotoCloseAndOpenPolicyList();
-            this.moto.RecordedMethod1();
+            this.moto.HighlightBillingScreen();
             this.moto.AssertMethod1();
         }
 
@@ -42,34 +42,34 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            this.moto.CancelFilter();
+            ////this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.SaveWithoutPremium();
             this.moto.MotoCloseAndOpenPolicyList();
             //check premium
-            this.moto.RecordedMethod1();
-            this.moto.AssertMethod2();
-            this.moto.RecordedMethod4();
+            this.moto.HighlightBillingScreen();
+            this.moto.AssertQuoteCostIsZero();
+            this.moto.CancelBillingScreen();
             this.moto.SelectMenu();
             this.moto.ClickOkButton();
-            this.moto.AssertMethod3();
+            this.moto.AssertCarDetailsCorrect();
             this.moto.Calculate();
-            this.moto.CancelFilter();
+            ////this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.SelectPolicyQuote();
             this.moto.ExitEnabled();
             this.moto.Exit1();
             //check premium
-            this.moto.RecordedMethod1();
+            this.moto.HighlightBillingScreen();
             this.moto.AssertMethod1();
-            this.moto.RecordedMethod4();
+            this.moto.CancelBillingScreen();
             this.moto.SelectMenu();
             this.moto.ClickOkButton();
-            this.moto.AssertMethod3();
+            this.moto.AssertCarDetailsCorrect();
             this.moto.Calculate();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.SelectPolicyQuote();
@@ -83,7 +83,7 @@
             this.moto.CancelPrint();
             this.moto.FinishQuote1();
             this.moto.MotoCloseAndOpenPolicyList();
-            this.moto.RecordedMethod1();
+            this.moto.HighlightBillingScreen();
             this.moto.AssertMethod1();
         }
 
@@ -95,12 +95,12 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.MotoAwap();
             this.moto.MotoCloseAndOpenPolicyList();
-            this.moto.RecordedMethod1();
+            this.moto.HighlightBillingScreen();
             this.moto.MotoCheckAWAPpremium();
         }
 
@@ -112,7 +112,7 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.AssertSelectPolicyForm();
@@ -123,7 +123,7 @@
             this.moto.CancelPrint();
             this.moto.FinishQuote1();
             this.moto.MotoCloseAndOpenPolicyList();
-            this.moto.RecordedMethod1();
+            this.moto.HighlightBillingScreen();
             this.moto.MotoCheckChangedPremium();
         }
 
@@ -135,7 +135,7 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.SelectPolicyQuote();
@@ -158,7 +158,7 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.SaveWithoutPremium();
@@ -177,7 +177,7 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.SelectPolicyQuote();
@@ -188,7 +188,7 @@
             this.moto.MotoMTA();
             this.moto.MotoMTANoSave();
             this.moto.MotoCloseAndOpenPolicyList();
-            this.moto.RecordedMethod1();
+            this.moto.HighlightBillingScreen();
             this.moto.AssertMethod1();
         }
 
@@ -200,7 +200,7 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.SelectPolicyQuote();
@@ -212,7 +212,7 @@
             this.moto.MotoMTAAccept();
             this.moto.MotoMTAConfirmDate();
             this.moto.MotoMTAConfirmPolicy();
-            this.moto.MotoMTAConfirmPolicy1();
+            //this.moto.MotoMTAConfirmPolicy1();
             this.moto.MotoMTAOpenQuote();
             this.moto.MotoMTACheckNewValue();
             this.moto.MotoExitMTA();
@@ -226,7 +226,7 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.SelectPolicyQuote();
@@ -238,12 +238,11 @@
             this.moto.MotoMTAAccept();
             this.moto.MotoMTAConfirmDate();
             this.moto.MotoMTAConfirmPolicy();
-            this.moto.MotoMTAConfirmPolicy1();
             this.moto.MotoMTA();
             this.moto.MotoMTAAccept();
             this.moto.MotoMTAConfirmDate();
             this.moto.MotoMTAConfirmPolicy();
-            this.moto.MotoMTAConfirmPolicy1();
+            //this.moto.MotoMTAConfirmPolicy1();
             this.moto.MotoCopyFinishedRisk();
             this.moto.MotoCopyCheckProposer();
             this.moto.MotoCopyRiskProposerOk();
@@ -259,7 +258,7 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.SelectPolicyQuote();
@@ -279,7 +278,7 @@
             this.moto.MtaEffectiveDate();
             this.moto.MotoMTAConfirmDate();
             this.moto.MotoMTAConfirmPolicy();
-            this.moto.MotoMTAConfirmPolicy1();
+            //this.moto.MotoMTAConfirmPolicy1();
             this.moto.MotoMTAOpenQuote();
             this.moto.MotoMTACheckNewValueExpectedValues.UIItemEditText = "2500";
             this.moto.MotoMTACheckNewValue();
@@ -294,7 +293,7 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.AssertSelectPolicyForm();
@@ -325,7 +324,7 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.AssertSelectPolicyForm();
@@ -357,7 +356,7 @@
             this.moto.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.MotoInceptionDate();
             this.moto.MotoCalculate();
-            this.moto.CancelFilter();
+            ////this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.MotoSelectHighwayPolicy();
@@ -369,7 +368,7 @@
             string policyNumber = this.moto.MotoGetPolicyNumber();
             this.moto.OpenBrowser2();
             this.moto.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            this.moto.MotoCreateSiteRenewal();
+            this.moto.MotoCreateSiteRenewal(policyNumber);
             Playback.Wait(5000);
             this.moto.CloseBrowser();
             this.moto.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
@@ -391,13 +390,13 @@
             this.moto.RenewalLoaderClose();
             this.moto.RenewalModuleEDI();
             this.moto.RenewalModuleConfirm();
-            this.moto.RenewalModuleEdi1();
+            this.moto.RenewalModuleEdi1(true);
             this.moto.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.RenewalModuleFilterMoto();
-            this.moto.RenewalModuleDisplay();
+            this.moto.RenewalModuleDisplay(this.moto.CommonParams.SendEndKeys);
             this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord();
+            this.moto.MotoRenewalCheckRecord(1, this.moto.CustomerCode);
             this.moto.RenewalModuleInvite();
             this.moto.RenewConfirmInvite();
             this.moto.RenewalModuleInvite1();
@@ -440,7 +439,7 @@
             this.moto.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.MotoInceptionDate();
             this.moto.MotoCalculate();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.MotoSelectHighwayPolicy();
@@ -452,7 +451,7 @@
             string policyNumber = this.moto.MotoGetPolicyNumber();
             this.moto.OpenBrowser2();
             this.moto.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            this.moto.MotoCreateSiteRenewal();
+            this.moto.MotoCreateSiteRenewal(policyNumber);
             Playback.Wait(5000);
             this.moto.CloseBrowser();
             this.moto.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
@@ -474,13 +473,13 @@
             this.moto.RenewalLoaderClose();
             this.moto.RenewalModuleEDI();
             this.moto.RenewalModuleConfirm();
-            this.moto.RenewalModuleEdi1();
+            this.moto.RenewalModuleEdi1(true);
             this.moto.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.RenewalModuleFilterMoto();
-            this.moto.RenewalModuleDisplay();
+            this.moto.RenewalModuleDisplay(this.moto.CommonParams.SendEndKeys);
             this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord();
+            this.moto.MotoRenewalCheckRecord(1, this.moto.CustomerCode);
             this.moto.RenewalModuleInvite();
             this.moto.RenewConfirmInvite();
             this.moto.RenewalModuleInvite1();
@@ -540,7 +539,7 @@
             this.moto.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.MotoInceptionDate();
             this.moto.MotoCalculate();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.MotoSelectHighwayPolicy();
@@ -552,7 +551,7 @@
             string policyNumber = this.moto.MotoGetPolicyNumber();
             this.moto.OpenBrowser2();
             this.moto.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            this.moto.MotoCreateSiteRenewal();
+            this.moto.MotoCreateSiteRenewal(policyNumber);
             Playback.Wait(6000);
             this.moto.CloseBrowser();
             this.moto.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
@@ -574,13 +573,13 @@
             this.moto.RenewalLoaderClose();
             this.moto.RenewalModuleEDI();
             this.moto.RenewalModuleConfirm();
-            this.moto.RenewalModuleEdi1();
+            this.moto.RenewalModuleEdi1(true);
             this.moto.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.RenewalModuleFilterMoto();
-            this.moto.RenewalModuleDisplay();
+            this.moto.RenewalModuleDisplay(this.moto.CommonParams.SendEndKeys);
             this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord();
+            this.moto.MotoRenewalCheckRecord(1, this.moto.CustomerCode);
             this.moto.MotoAmendRisk();
             this.moto.PublicCreditCheckOk();
             this.moto.QuoteSelectListCancel();
@@ -601,7 +600,7 @@
             this.moto.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.MotoInceptionDate();
             this.moto.MotoCalculate();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.MotoSelectHighwayPolicy();
@@ -613,7 +612,7 @@
             string policyNumber = this.moto.MotoGetPolicyNumber();
             this.moto.OpenBrowser2();
             this.moto.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            this.moto.MotoCreateSiteRenewal();
+            this.moto.MotoCreateSiteRenewal(policyNumber);
             Playback.Wait(5000);
             this.moto.CloseBrowser();
             this.moto.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
@@ -635,16 +634,16 @@
             this.moto.RenewalLoaderClose();
             this.moto.RenewalModuleEDI();
             this.moto.RenewalModuleConfirm();
-            this.moto.RenewalModuleEdi1();
+            this.moto.RenewalModuleEdi1(true);
             this.moto.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.RenewalModuleFilterMoto();
-            this.moto.RenewalModuleDisplay();
+            this.moto.RenewalModuleDisplay(this.moto.CommonParams.SendEndKeys);
             this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord();
+            this.moto.MotoRenewalCheckRecord(1, this.moto.CustomerCode);
             this.moto.MotoAmendRisk();
             this.moto.PublicCreditCheckOk();
-            this.moto.AmendSelectQuoteParams.UIAmendRiskResultsClientSendKeys = "{End}";
+            this.moto.CommonParams.SendHomeKeys = "{End}";
             this.moto.AmendSelectQuote();
             this.moto.MotoAmendRiskNew();
             this.moto.RetrieveResponse();
@@ -683,7 +682,7 @@
             this.moto.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.MotoInceptionDate();
             this.moto.MotoCalculate();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.MotoSelectHighwayPolicy();
@@ -695,7 +694,7 @@
             string policyNumber = this.moto.MotoGetPolicyNumber();
             this.moto.OpenBrowser2();
             this.moto.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            this.moto.MotoCreateSiteRenewal();
+            this.moto.MotoCreateSiteRenewal(policyNumber);
             Playback.Wait(5000);
             this.moto.CloseBrowser();
             this.moto.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
@@ -717,16 +716,16 @@
             this.moto.RenewalLoaderClose();
             this.moto.RenewalModuleEDI();
             this.moto.RenewalModuleConfirm();
-            this.moto.RenewalModuleEdi1();
+            this.moto.RenewalModuleEdi1(false);
             this.moto.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.RenewalModuleFilterMoto();
-            this.moto.RenewalModuleDisplay();
+            this.moto.RenewalModuleDisplay(this.moto.CommonParams.SendEndKeys);
             this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord();
-            this.moto.MotoRebroke();
+            this.moto.MotoRenewalCheckRecord(1, this.moto.CustomerCode);
+            this.moto.MotoRebroke(false, false);
             this.moto.PublicCreditCheckOk();
-            this.moto.MotoRebrokeCurrent();
+            this.moto.MotoRebrokeCurrent(false);
             this.moto.RenewalModuleInvite();
             this.moto.RenewConfirmInvite();
             this.moto.RenewalModuleInvite1();
@@ -749,7 +748,7 @@
             this.moto.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.MotoInceptionDate();
             this.moto.MotoCalculate();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.MotoSelectHighwayPolicy();
@@ -761,7 +760,7 @@
             string policyNumber = this.moto.MotoGetPolicyNumber();
             this.moto.OpenBrowser2();
             this.moto.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            this.moto.MotoCreateSiteRenewal();
+            this.moto.MotoCreateSiteRenewal(policyNumber);
             Playback.Wait(5000);
             this.moto.CloseBrowser();
             this.moto.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
@@ -783,18 +782,18 @@
             this.moto.RenewalLoaderClose();
             this.moto.RenewalModuleEDI();
             this.moto.RenewalModuleConfirm();
-            this.moto.RenewalModuleEdi1();
+            this.moto.RenewalModuleEdi1(true);
             this.moto.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.RenewalModuleFilterMoto();
-            this.moto.RenewalModuleDisplay();
+            this.moto.RenewalModuleDisplay(this.moto.CommonParams.SendEndKeys);
             this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord();
-            this.moto.MotoRebroke();
+            this.moto.MotoRenewalCheckRecord(1, this.moto.CustomerCode);
+            this.moto.MotoRebroke(false, false);
             this.moto.PublicCreditCheckOk();
-            this.moto.MotoRebrokeSelectScheme();
+            this.moto.MotoRebrokeSelectScheme(this.moto.CommonParams.SendHomeKeys);
             this.moto.RebrokeSelectAlternative();
-            this.moto.MotoRebrokeCurrent();
+            this.moto.MotoRebrokeCurrent(false);
             this.moto.RenewalModuleInvite();
             this.moto.RenewConfirmInvite();
             this.moto.RenewalModuleInvite1();
@@ -819,7 +818,7 @@
             this.moto.MotoInceptionDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.MotoInceptionDate();
             this.moto.MotoCalculate();
-            this.moto.CancelFilter();
+            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.MotoSelectHighwayPolicy();
@@ -831,7 +830,7 @@
             string policyNumber = this.moto.MotoGetPolicyNumber();
             this.moto.OpenBrowser2();
             this.moto.MotoCreateSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            this.moto.MotoCreateSiteRenewal();
+            this.moto.MotoCreateSiteRenewal(policyNumber);
             Playback.Wait(5000);
             this.moto.CloseBrowser();
             this.moto.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
@@ -853,21 +852,20 @@
             this.moto.RenewalLoaderClose();
             this.moto.RenewalModuleEDI();
             this.moto.RenewalModuleConfirm();
-            this.moto.RenewalModuleEdi1();
+            this.moto.RenewalModuleEdi1(true);
             this.moto.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.moto.RenewalModuleFilterMoto();
             this.moto.RenewalModuleSort();
             this.moto.RenewalModuleSort();
-            this.moto.RenewalModuleDisplay();
+            this.moto.RenewalModuleDisplay(this.moto.CommonParams.SendEndKeys);
             this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord();
-            this.moto.MotoRebroke();
+            this.moto.MotoRenewalCheckRecord(1, this.moto.CustomerCode);
+            this.moto.MotoRebroke(false, false);
             this.moto.PublicCreditCheckOk();
-            this.moto.MotoRebrokeSelectSchemeParams.UIItemClientSendKeys = "{End}";
-            this.moto.MotoRebrokeSelectScheme();
+            this.moto.MotoRebrokeSelectScheme(this.moto.CommonParams.SendEndKeys);
             this.moto.RebrokeSelectAlternative();
-            this.moto.MotoRebrokeCurrent();
+            this.moto.MotoRebrokeCurrent(false);
             this.moto.RenewalModuleInvite();
             this.moto.RenewConfirmInvite();
             this.moto.RenewalModuleInvite1();
@@ -884,7 +882,7 @@
 
         private void TamMotorSteps()
         {
-            this.customer.AddPolicy();
+            this.moto.CustomerCode = this.customer.AddPolicy();
             this.moto.SelectMotoPolicy();
             this.moto.SelectMenu();
             this.moto.Links();

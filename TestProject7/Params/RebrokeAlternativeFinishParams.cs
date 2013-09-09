@@ -15,7 +15,7 @@
         /// <summary>
         /// Type '{Home}' in client
         /// </summary>
-        public string UIItemClientSendKeys = "{Home}";
+        public string SendHomeHeys = "{Home}";
 
         #endregion
     }

@@ -10,7 +10,7 @@
         /// <summary>
         /// Type '{Home}' in 'Quote Results' client
         /// </summary>
-        public string UIQuoteResultsClientSendKeys = "{Home}";
+        public string SendHomeKeys = "{Home}";
 
         /// <summary>
         /// Select '&Defer Printing?' check box

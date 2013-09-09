@@ -8,9 +8,9 @@
         #region Fields
 
         /// <summary>
-        /// Verify that the 'Text' property of text box equals 'RF53OXL'
+        /// Verify that the 'Text' property of text box equals 'Y412CEB'
         /// </summary>
-        public string UIItemEditText = "RF53OXL";
+        public string UIItemEditText = "Y412CEB";
 
         /// <summary>
         /// Verify that the 'Text' property of text box equals '1000'

@@ -8,9 +8,9 @@
         #region Fields
 
         /// <summary>
-        /// Type 'B338TH' in text box
+        /// Type 'BN16BN' in text box
         /// </summary>
-        public string UIItemEditText = "B338TH";
+        public string Postcode = "BN16BN";
 
         /// <summary>
         /// Select '&Defer Printing?' check box

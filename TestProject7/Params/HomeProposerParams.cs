@@ -38,9 +38,9 @@
         public string DateOfBirth = "160589";
 
         /// <summary>
-        /// Type 'B338TH' in text box
+        /// Type 'BN16BN' in text box
         /// </summary>
-        public string Postcode = "B338TH";
+        public string Postcode = "BN16BN";
 
         #endregion
     }

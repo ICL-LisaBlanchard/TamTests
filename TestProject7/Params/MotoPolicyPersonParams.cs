@@ -28,9 +28,9 @@
         public string UIItemEditText2 = "160485";
 
         /// <summary>
-        /// Type 'B338TH' in text box
+        /// Type 'BN16BN' in text box
         /// </summary>
-        public string UIItemEditText3 = "B338TH";
+        public string UIItemEditText3 = "BN16BN";
 
         #endregion
     }

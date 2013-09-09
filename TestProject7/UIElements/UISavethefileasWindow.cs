@@ -69,6 +69,24 @@
             }
         }
 
+        public WinTitleBar UISavethefileasTitleBar
+        {
+            get
+            {
+                if ((this.mUISavethefileasTitleBar == null))
+                {
+                    this.mUISavethefileasTitleBar = new WinTitleBar(this);
+
+                    #region Search Criteria
+
+                    this.mUISavethefileasTitleBar.WindowTitles.Add("Save the file as");
+
+                    #endregion
+                }
+                return this.mUISavethefileasTitleBar;
+            }
+        }
+
         #endregion
 
         #region Fields
@@ -82,6 +100,8 @@
         private UITestControl mUISaveWindow;
 
         private UIDetailsPanePane mUIDetailsPanePane;
+
+        private WinTitleBar mUISavethefileasTitleBar;
 
         #endregion
     }

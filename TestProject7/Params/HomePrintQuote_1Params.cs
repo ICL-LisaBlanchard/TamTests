@@ -13,7 +13,7 @@
         /// <summary>
         /// Type '{End}' in 'Quotes Results' client
         /// </summary>
-        public string UIQuotesResultsClientSendKeys = "{End}";
+
 
         #endregion
     }

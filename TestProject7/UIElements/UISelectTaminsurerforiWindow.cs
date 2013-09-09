@@ -49,7 +49,7 @@
         {
             #region Search Criteria
 
-            //this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Select Tam insurer for insurer code ", PropertyExpressionOperator.Contains));
+            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Select Tam insurer for insurer code ", PropertyExpressionOperator.Contains));
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
             this.WindowTitles.Add(WindowName);
 

@@ -10,7 +10,7 @@
         /// <summary>
         /// Select 'Household' radio button
         /// </summary>
-        public bool UIHouseholdRadioButtonSelected = true;
+        
 
         #endregion
     }
