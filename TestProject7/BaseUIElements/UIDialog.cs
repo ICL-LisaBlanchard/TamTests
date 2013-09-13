@@ -3,7 +3,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    public class UIDialog : WinControl
+    public class UIDialog : UIItemWindow
     {
         public UIDialog(UITestControl searchLimitContainer, string name, string controlType)
             : base(searchLimitContainer)

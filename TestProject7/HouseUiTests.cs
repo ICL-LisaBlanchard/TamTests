@@ -8,11 +8,15 @@
     [CodedUITest]
     public class HouseUiTests : BaseUiTest
     {
+        private const string PolicyType = "Household";
+
         private readonly MotoActions moto = new MotoActions();
 
         private readonly HouseActions house = new HouseActions();
 
         private readonly CustomerActions customer = new CustomerActions();
+
+        private readonly DocumentsList docs = new DocumentsList();
 
         [TestMethod]
         public void HouseCreateQuote()
@@ -28,6 +32,7 @@
             this.house.HomeCloseOpenPolicyList();
             this.house.HomeOpenPolicy();
             this.house.HomeCheckPolicyPremium();
+            this.house.CheckPremiumInQuoteDocument(this.docs.DocumentsForHhNewBusinessQuote);
         }
 
         [TestMethod]
@@ -47,28 +52,31 @@
             this.house.HomePrintQuote1();
             this.house.HomeCheckPrint();
             this.house.HomeDemands();
-            this.house.CloseDemandsMoto();
+            this.house.CloseDemands();
             this.house.HomeAcceptQuote();
             this.house.CancelPrint();
             this.house.HomeAcceptQuote1();
             this.house.HomeCloseOpenPolicyList();
             this.house.HomeOpenPolicy();
             this.house.HomeCheckPolicyPremium();
+            this.house.CheckPremiumInQuoteDocument(this.docs.DocumentsForHhSaveQuoteWithoutPremium);
         }
 
         [TestMethod]
         public void HouseOverridePremium()
         {
+            const int OverridePremium = 19999;
             this.SetOfficeRegKeys();
             this.house.CustomerCode = this.customer.AddPolicy();
             this.CreatePolicy(false);
             this.house.HomeSelectPolicy();
-            this.house.HomeChangePremium();
+            this.house.HomeChangePremium(OverridePremium);
             this.house.HomeAcceptPolicy();
             this.house.HomeFinishQuote();
             this.house.HomeCloseOpenPolicyList();
             this.house.HomeOpenPolicy();
             this.house.HomeCheckNewPremium();
+            this.house.CheckPremiumInQuoteDocument(this.docs.DocumentsForHhNewBusinessQuote, OverridePremium);
         }
 
         [TestMethod]
@@ -179,12 +187,11 @@
             this.house.HomeMTAChangeParams.UIItemEditText = "NewestMTA";
             this.house.HomeMTAChange();
             this.house.HomeMTAAccept();
-            this.house.HomeMTAEnterDateParams.UIItemEditText = "30/09/12";
-            this.house.HomeMTAEnterDate();
+
+            this.house.HomeMTAEnterDate("30/09/12");
             this.house.HomeMTACoverDate();
             this.house.HomeMTACheckMessage();
             this.house.HomeMTACloseMessage();
-            this.house.HomeMTAEnterDateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
             this.house.HomeMTAEnterDate();
             this.house.HomeMTACoverDate();
             this.house.HomeMTASelectQuote();
@@ -209,7 +216,7 @@
             this.house.HomeOpenQuote();
             this.house.HomeCancelPolicy();
             this.house.HomeCancelPolicyQuote();
-            this.house.HomeMTAEnterDateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
+
             this.house.HomeMTAEnterDate();
             this.house.HomeCancelPolicyQuote1();
             this.house.HomeCancelPolicyExit();
@@ -235,7 +242,6 @@
             this.house.HomeOpenQuote();
             this.house.HomeCancelPolicy();
             this.house.HomeCancelPolicyQuote();
-            this.house.HomeMTAEnterDateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
             this.house.HomeMTAEnterDate();
             this.house.HomeCancelPolicyQuote1();
             this.house.HomeCancelPolicyAccept();
@@ -255,9 +261,8 @@
             this.house.SelectHomeType();
             this.house.SelectMenu();
             this.house.Links();
-            this.house.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+
             this.house.HomeStartDate();
-            this.house.HomeProposerParams.Postcode = "BN16BN";
             this.house.HomeProposer();
             this.house.HomeCreatePolicy();
             this.house.PublicCreditCheckOk();
@@ -269,44 +274,33 @@
             string policyNumber = this.moto.MotoGetPolicyNumber();
             //site for renewal
             this.house.OpenBrowser2();
-            this.house.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            this.house.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            this.house.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            this.house.HomeSiteRenewal();
+            this.house.HomeSiteRenewal(policyNumber);
             Playback.Wait(5000);
             this.house.CloseBrowser();
-            this.house.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
             this.house.ChangeDatePolicy();
             //regress app
             this.house.HighlightCustomer();
             string customerCode = this.house.GetCustomerCode();
-            this.moto.MotoRegressAppParams.UIItemEditText = customerCode;
-            this.moto.MotoRegressApp();
-            this.house.HouseRegressApp();
-            this.house.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.moto.RegressApp(customerCode);
+            this.house.HouseRegressApp(PolicyType);
             this.house.RegressAppDate();
-            this.moto.MotoRegressAppFinish();
+            this.moto.RegressAppFinish();
             this.house.CloseRegressApp();
             //renewal loader
             this.house.RenewalLoaderOpen();
-            this.house.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
-            this.house.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
             this.house.RenewalLoaderRun();
-            Playback.Wait(5000);
+            Playback.Wait(1000);
             this.house.CloseBrowser();
             this.house.RenewalLoaderClose();
             //  renewal module
             this.house.RenewalModuleEDI();
             this.house.RenewalModuleConfirm();
-            this.house.RenewalModuleEdi1(true);
-            this.house.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            this.house.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            this.house.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
-            this.house.RenewalModuleFilterMoto();
+            this.house.RenewalModuleEdi1(false);
+            this.house.RenewalModuleFilter(PolicyType);
             this.house.RenewalModuleSort();
             this.house.RenewalModuleDisplay(this.moto.CommonParams.SendHomeKeys);
 
-            this.house.MotoRenewalCheckRecord(1, this.house.CustomerCode);
+            this.house.RenewalCheckRecord(1, this.house.CustomerCode);
             this.house.RenewalModuleInvite();
             this.house.RenewConfirmInvite();
             this.house.RenewalModuleInvite1();
@@ -314,7 +308,7 @@
             this.house.RetrieveResponse();
             this.house.RenewalModuleRenew1();
             this.house.RenewalModuleClose();
-            this.moto.MotoCloseAndOpenPolicyList();
+            this.moto.CloseAndOpenPolicyList();
             this.house.RenewalCheckStatus();
             this.house.ClosePolicy();
             //mta1
@@ -322,8 +316,7 @@
             this.house.HomeMTABefore();
             this.house.HomeMTAChange();
             this.house.HomeMTAAccept();
-            this.house.MTADateParams.UIItemEditText = DateTime.Now.AddDays(2).ToString("dd/MM/yy");
-            this.house.MTADate();
+            this.house.MTADate(DateTime.Now.AddDays(2).ToString("dd/MM/yy"));
             this.house.HomeRenewalBeforeAccept();
             this.house.HomeRenewalCancelledCheck();
             this.house.HomeRenewalBeforeFinish();
@@ -332,12 +325,11 @@
             this.house.HomeRenewalConfirm();
             this.house.HomeMTAChange();
             this.house.HomeMTAAccept();
-            this.house.MTADateParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yy");
-            this.house.MTADate();
+            this.house.MTADate(DateTime.Now.ToString("dd/MM/yy"));
             this.house.MTAMessageBeforeCurrent();
             this.house.MTACloseMessageBefore();
-            this.house.MTADateParams.UIItemEditText = DateTime.Now.AddDays(10).ToString("dd/MM/yy");
-            this.house.MTADate();
+
+            this.house.MTADate(DateTime.Now.AddDays(10).ToString("dd/MM/yy"));
             this.moto.MotoMTAMessageAfterDate();
             this.house.MTACloseMessageAfter();
             this.house.MTAEffectiveDatesCancel();
@@ -354,9 +346,9 @@
             this.house.SelectHomeType();
             this.house.SelectMenu();
             this.house.Links();
-            this.house.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+
             this.house.HomeStartDate();
-            this.house.HomeProposerParams.Postcode = "BN16BN";
+
             this.house.HomeProposer();
             this.house.HomeCreatePolicy();
             this.house.PublicCreditCheckOk();
@@ -368,28 +360,20 @@
             string policyNumber = this.moto.MotoGetPolicyNumber();
             //site for renewal
             this.house.OpenBrowser2();
-            this.house.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            this.house.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            this.house.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            this.house.HomeSiteRenewal();
+            this.house.HomeSiteRenewal(policyNumber);
             Playback.Wait(5000);
             this.house.CloseBrowser();
-            this.house.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
             this.house.ChangeDatePolicy();
             //regress app
             this.house.HighlightCustomer();
             string customerCode = this.house.GetCustomerCode();
-            this.moto.MotoRegressAppParams.UIItemEditText = customerCode;
-            this.moto.MotoRegressApp();
-            this.house.HouseRegressApp();
-            this.house.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.moto.RegressApp(customerCode);
+            this.house.HouseRegressApp(PolicyType);
             this.house.RegressAppDate();
-            this.moto.MotoRegressAppFinish();
+            this.moto.RegressAppFinish();
             this.house.CloseRegressApp();
             //renewal loader
             this.house.RenewalLoaderOpen();
-            this.house.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
-            this.house.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
             this.house.RenewalLoaderRun();
             Playback.Wait(5000);
             this.house.CloseBrowser();
@@ -397,15 +381,12 @@
             // renewal module
             this.house.RenewalModuleEDI();
             this.house.RenewalModuleConfirm();
-            this.house.RenewalModuleEdi1(true);
-            this.house.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            this.house.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            this.house.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
-            this.house.RenewalModuleFilterMoto();
+            this.house.RenewalModuleEdi1(false);
+            this.house.RenewalModuleFilter(PolicyType);
             this.house.RenewalModuleSort();
             this.house.RenewalModuleDisplay(this.moto.CommonParams.SendHomeKeys);
-            this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord(1, this.house.CustomerCode);
+            this.moto.RenewalCheckRecordExpectedValues.UIWindowName = customerCode;
+            this.moto.RenewalCheckRecord(1, this.house.CustomerCode);
             this.house.RenewalModuleInvite();
             this.house.RenewConfirmInvite();
             this.house.RenewalModuleInvite1();
@@ -413,7 +394,7 @@
             this.house.RetrieveResponse();
             this.house.RenewalModuleRenew1();
             this.house.RenewalModuleClose();
-            this.moto.MotoCloseAndOpenPolicyList();
+            this.moto.CloseAndOpenPolicyList();
             this.house.RenewalCheckStatus();
             this.house.ClosePolicy();
             ////MTA1
@@ -421,16 +402,16 @@
             this.house.HomeMTAAfter();
             this.house.HomeMTAChange();
             this.house.HomeMTAAccept();
-            this.house.MTADateParams.UIItemEditText = DateTime.Now.AddDays(14).ToString("dd/MM/yy");
-            this.house.MTADate();
+
+            this.house.MTADate(DateTime.Now.AddDays(14).ToString("dd/MM/yy"));
             this.house.HomeMTASelectQuote();
             //MTA2
             this.house.HomeOpenQuote();
             this.house.HomeMTAAfter();
             this.house.HomeMTAChange();
             this.house.HomeMTAAccept();
-            this.house.MTADateParams.UIItemEditText = DateTime.Now.AddDays(13).ToString("dd/MM/yy");
-            this.house.MTADate();
+
+            this.house.MTADate(DateTime.Now.AddDays(13).ToString("dd/MM/yy"));
             this.house.MTAMessageBeforeCurrent();
             this.house.MTACloseMessageBefore();
             this.house.MTAEffectiveDatesCancel();
@@ -440,12 +421,12 @@
             this.house.HomeMTABefore();
             this.house.HomeMTAChange();
             this.house.HomeMTAAccept();
-            this.house.MTADateParams.UIItemEditText = DateTime.Now.AddDays(9).ToString("dd/MM/yy");
-            this.house.MTADate();
+
+            this.house.MTADate(DateTime.Now.AddDays(9).ToString("dd/MM/yy"));
             this.moto.MotoMTAMessageAfterDate();
             this.house.MTACloseMessageAfter();
-            this.house.MTADateParams.UIItemEditText = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
-            this.house.MTADate();
+
+            this.house.MTADate(DateTime.Now.AddDays(1).ToString("dd/MM/yy"));
             this.house.HomeRenewalBeforeAccept();
             this.house.HomeRenewalBeforeFinish();
             //mta4
@@ -453,12 +434,12 @@
             this.house.HomeRenewalConfirm();
             this.house.HomeMTAChange();
             this.house.HomeMTAAccept();
-            this.house.MTADateParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yy");
-            this.house.MTADate();
+
+            this.house.MTADate(DateTime.Now.ToString("dd/MM/yy"));
             this.house.MTAMessageBeforeCurrent();
             this.house.MTACloseMessageBefore();
-            this.house.MTADateParams.UIItemEditText = DateTime.Now.AddDays(11).ToString("dd/MM/yy");
-            this.house.MTADate();
+
+            this.house.MTADate(DateTime.Now.AddDays(11).ToString("dd/MM/yy"));
             this.moto.MotoMTAMessageAfterDate();
             this.house.MTACloseMessageAfter();
             this.house.MTAEffectiveDatesCancel();
@@ -475,9 +456,7 @@
             this.house.SelectHomeType();
             this.house.SelectMenu();
             this.house.Links();
-            this.house.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
             this.house.HomeStartDate();
-            this.house.HomeProposerParams.Postcode = "BN16BN";
             this.house.HomeProposer();
             this.house.HomeCreatePolicy();
             this.house.PublicCreditCheckOk();
@@ -489,28 +468,20 @@
             string policyNumber = this.moto.MotoGetPolicyNumber();
             //site for renewal
             this.house.OpenBrowser2();
-            this.house.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            this.house.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            this.house.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            this.house.HomeSiteRenewal();
+            this.house.HomeSiteRenewal(policyNumber);
             Playback.Wait(5000);
             this.house.CloseBrowser();
-            this.house.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
             this.house.ChangeDatePolicy();
             //regress app
             this.house.HighlightCustomer();
             string customerCode = this.house.GetCustomerCode();
-            this.moto.MotoRegressAppParams.UIItemEditText = customerCode;
-            this.moto.MotoRegressApp();
-            this.house.HouseRegressApp();
-            this.house.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.moto.RegressApp(customerCode);
+            this.house.HouseRegressApp(PolicyType);
             this.house.RegressAppDate();
-            this.moto.MotoRegressAppFinish();
+            this.moto.RegressAppFinish();
             this.house.CloseRegressApp();
             //renewal loader
             this.house.RenewalLoaderOpen();
-            this.house.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
-            this.house.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
             this.house.RenewalLoaderRun();
             Playback.Wait(5000);
             this.house.CloseBrowser();
@@ -518,21 +489,18 @@
             // renewal module
             this.house.RenewalModuleEDI();
             this.house.RenewalModuleConfirm();
-            this.house.RenewalModuleEdi1(true);
-            this.house.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            this.house.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            this.house.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
-            this.house.RenewalModuleFilterMoto();
+            this.house.RenewalModuleEdi1(false);
+            this.house.RenewalModuleFilter(PolicyType);
             this.house.RenewalModuleSort();
             this.house.RenewalModuleDisplay(this.moto.CommonParams.SendHomeKeys);
-            this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord(1, this.house.CustomerCode);
+            this.moto.RenewalCheckRecordExpectedValues.UIWindowName = customerCode;
+            this.moto.RenewalCheckRecord(1, this.house.CustomerCode);
             this.house.HomeAmendRisk();
             this.house.PublicCreditCheckOk();
             this.house.HomeAmendSelecPolicy();
             this.house.HomeAmendRenew();
             this.house.RenewalModuleClose();
-            this.moto.MotoCloseAndOpenPolicyList();
+            this.moto.CloseAndOpenPolicyList();
             this.house.RenewalCheckStatus();
             this.house.ClosePolicy();
         }
@@ -547,9 +515,9 @@
             this.house.SelectHomeType();
             this.house.SelectMenu();
             this.house.Links();
-            this.house.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+
             this.house.HomeStartDate();
-            this.house.HomeProposerParams.Postcode = "BN16BN";
+
             this.house.HomeProposer();
             this.house.HomeCreatePolicy();
             this.house.PublicCreditCheckOk();
@@ -561,28 +529,20 @@
             string policyNumber = this.moto.MotoGetPolicyNumber();
             //site for renewal
             this.house.OpenBrowser2();
-            this.house.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            this.house.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            this.house.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            this.house.HomeSiteRenewal();
+            this.house.HomeSiteRenewal(policyNumber);
             Playback.Wait(5000);
             this.house.CloseBrowser();
-            this.house.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
             this.house.ChangeDatePolicy();
             //regress app
             this.house.HighlightCustomer();
             string customerCode = this.house.GetCustomerCode();
-            this.moto.MotoRegressAppParams.UIItemEditText = customerCode;
-            this.moto.MotoRegressApp();
-            this.house.HouseRegressApp();
-            this.house.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.moto.RegressApp(customerCode);
+            this.house.HouseRegressApp(PolicyType);
             this.house.RegressAppDate();
-            this.moto.MotoRegressAppFinish();
+            this.moto.RegressAppFinish();
             this.house.CloseRegressApp();
             //renewal loader
             this.house.RenewalLoaderOpen();
-            this.house.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
-            this.house.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
             this.house.RenewalLoaderRun();
             Playback.Wait(5000);
             this.house.CloseBrowser();
@@ -590,15 +550,12 @@
             // renewal module
             this.house.RenewalModuleEDI();
             this.house.RenewalModuleConfirm();
-            this.house.RenewalModuleEdi1(true);
-            this.house.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            this.house.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            this.house.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
-            this.house.RenewalModuleFilterMoto();
+            this.house.RenewalModuleEdi1(false);
+            this.house.RenewalModuleFilter(PolicyType);
             this.house.RenewalModuleSort();
             this.house.RenewalModuleDisplay(this.moto.CommonParams.SendHomeKeys);
-            this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord(1, this.house.CustomerCode);
+            this.moto.RenewalCheckRecordExpectedValues.UIWindowName = customerCode;
+            this.moto.RenewalCheckRecord(1, this.house.CustomerCode);
             this.house.HomeAmendRisk();
             this.house.PublicCreditCheckOk();
             this.house.HomeAmendSelecPolicy();
@@ -609,27 +566,28 @@
             this.house.HomeAmendRenewFinish1();
             this.house.EtamOk();
             this.house.RenewalModuleClose();
-            this.moto.MotoCloseAndOpenPolicyList();
-            this.house.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
+            this.moto.CloseAndOpenPolicyList();
             this.house.RenewalCheckStatus();
             this.house.ClosePolicy();
             //MTA1
             this.house.HomeOpenQuote();
+            this.house.HomeMTABefore();
             this.house.HomeMTAChange();
             this.house.HomeMTAAccept();
-            this.house.MTADateParams.UIItemEditText = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
-            this.house.MTADate();
+
+            this.house.MTADate(DateTime.Now.AddDays(1).ToString("dd/MM/yy"));
             this.house.AmendDateBeforeMessage();
             this.house.MTACloseMessageBefore();
-            this.house.MTADateParams.UIItemEditText = DateTime.Now.AddDays(14).ToString("dd/MM/yy");
-            this.house.MTADate();
+
+            this.house.MTADate(DateTime.Now.AddDays(14).ToString("dd/MM/yy"));
             this.house.HomeMTASelectQuote();
             //MTA2
             this.house.HomeOpenQuote();
+            this.house.HomeMTABefore();
             this.house.HomeMTAChange();
             this.house.HomeMTAAccept();
-            this.house.MTADateParams.UIItemEditText = DateTime.Now.AddDays(13).ToString("dd/MM/yy");
-            this.house.MTADate();
+
+            this.house.MTADate(DateTime.Now.AddDays(13).ToString("dd/MM/yy"));
             this.house.MTAMessageBeforeCurrent();
             this.house.MTACloseMessageBefore();
             this.house.MTAEffectiveDatesCancel();
@@ -646,9 +604,9 @@
             this.house.SelectHomeType();
             this.house.SelectMenu();
             this.house.Links();
-            this.house.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+
             this.house.HomeStartDate();
-            this.house.HomeProposerParams.Postcode = "BN16BN";
+
             this.house.HomeProposer();
             this.house.HomeCreatePolicy();
             this.house.PublicCreditCheckOk();
@@ -660,28 +618,20 @@
             string policyNumber = this.moto.MotoGetPolicyNumber();
             //site for renewal
             this.house.OpenBrowser2();
-            this.house.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            this.house.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            this.house.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            this.house.HomeSiteRenewal();
+            this.house.HomeSiteRenewal(policyNumber);
             Playback.Wait(5000);
             this.house.CloseBrowser();
-            this.house.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
             this.house.ChangeDatePolicy();
             //regress app
             this.house.HighlightCustomer();
             string customerCode = this.house.GetCustomerCode();
-            this.moto.MotoRegressAppParams.UIItemEditText = customerCode;
-            this.moto.MotoRegressApp();
-            this.house.HouseRegressApp();
-            this.house.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.moto.RegressApp(customerCode);
+            this.house.HouseRegressApp(PolicyType);
             this.house.RegressAppDate();
-            this.moto.MotoRegressAppFinish();
+            this.moto.RegressAppFinish();
             this.house.CloseRegressApp();
             //renewal loader
             this.house.RenewalLoaderOpen();
-            this.house.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
-            this.house.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
             this.house.RenewalLoaderRun();
             Playback.Wait(5000);
             this.house.CloseBrowser();
@@ -690,14 +640,11 @@
             this.house.RenewalModuleEDI();
             this.house.RenewalModuleConfirm();
             this.house.RenewalModuleEdi1(true);
-            this.house.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            this.house.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            this.house.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
-            this.house.RenewalModuleFilterMoto();
+            this.house.RenewalModuleFilter(PolicyType);
             this.house.RenewalModuleSort();
             this.house.RenewalModuleDisplay(this.moto.CommonParams.SendHomeKeys);
-            this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord(1, this.house.CustomerCode);
+            this.moto.RenewalCheckRecordExpectedValues.UIWindowName = customerCode;
+            this.moto.RenewalCheckRecord(1, this.house.CustomerCode);
             this.house.HomeRebroke();
             this.house.PublicCreditCheckOk();
             this.house.HomeRebrokeCurrent();
@@ -708,7 +655,7 @@
             this.house.RetrieveResponse();
             this.house.RenewalModuleRenew1();
             this.house.RenewalModuleClose();
-            this.moto.MotoCloseAndOpenPolicyList();
+            this.moto.CloseAndOpenPolicyList();
             this.house.RenewalCheckStatus();
             this.house.ClosePolicy();
         }
@@ -723,9 +670,9 @@
             this.house.SelectHomeType();
             this.house.SelectMenu();
             this.house.Links();
-            this.house.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+
             this.house.HomeStartDate();
-            this.house.HomeProposerParams.Postcode = "BN16BN";
+
             this.house.HomeProposer();
             this.house.HomeCreatePolicy();
             this.house.PublicCreditCheckOk();
@@ -737,28 +684,21 @@
             string policyNumber = this.moto.MotoGetPolicyNumber();
             //site for renewal
             this.house.OpenBrowser2();
-            this.house.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            this.house.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            this.house.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            this.house.HomeSiteRenewal();
+
+            this.house.HomeSiteRenewal(policyNumber);
             Playback.Wait(5000);
             this.house.CloseBrowser();
-            this.house.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
             this.house.ChangeDatePolicy();
             //regress app
             this.house.HighlightCustomer();
             string customerCode = this.house.GetCustomerCode();
-            this.moto.MotoRegressAppParams.UIItemEditText = customerCode;
-            this.moto.MotoRegressApp();
-            this.house.HouseRegressApp();
-            this.house.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.moto.RegressApp(customerCode);
+            this.house.HouseRegressApp(PolicyType);
             this.house.RegressAppDate();
-            this.moto.MotoRegressAppFinish();
+            this.moto.RegressAppFinish();
             this.house.CloseRegressApp();
             //renewal loader
             this.house.RenewalLoaderOpen();
-            this.house.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
-            this.house.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
             this.house.RenewalLoaderRun();
             Playback.Wait(5000);
             this.house.CloseBrowser();
@@ -766,15 +706,12 @@
             // renewal module
             this.house.RenewalModuleEDI();
             this.house.RenewalModuleConfirm();
-            this.house.RenewalModuleEdi1(true);
-            this.house.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            this.house.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            this.house.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
-            this.house.RenewalModuleFilterMoto();
+            this.house.RenewalModuleEdi1(false);
+            this.house.RenewalModuleFilter(PolicyType);
             this.house.RenewalModuleSort();
             this.house.RenewalModuleDisplay(this.moto.CommonParams.SendHomeKeys);
-            this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord(1, this.house.CustomerCode);
+            this.moto.RenewalCheckRecordExpectedValues.UIWindowName = customerCode;
+            this.moto.RenewalCheckRecord(1, this.house.CustomerCode);
             this.house.HomeRebroke();
             this.house.PublicCreditCheckOk();
             this.house.HomeRebrokeSelectPolicy(this.house.CommonParams.SendHomeKeys);
@@ -790,7 +727,7 @@
             this.house.RetrieveResponse();
             this.house.RebrokeAlternativeRenew1();
             this.house.RenewalModuleClose();
-            this.moto.MotoCloseAndOpenPolicyList();
+            this.moto.CloseAndOpenPolicyList();
             this.house.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
             this.house.RenewalCheckStatus();
             this.house.ClosePolicy();
@@ -806,9 +743,9 @@
             this.house.SelectHomeType();
             this.house.SelectMenu();
             this.house.Links();
-            this.house.HomeStartDateParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+
             this.house.HomeStartDate();
-            this.house.HomeProposerParams.Postcode = "BN16BN";
+
             this.house.HomeProposer();
             this.house.HomeCreatePolicy();
             this.house.PublicCreditCheckOk();
@@ -820,28 +757,20 @@
             string policyNumber = this.moto.MotoGetPolicyNumber();
             //site for renewal
             this.house.OpenBrowser2();
-            this.house.HomeSiteRenewalParams.UITxtPolicyNumberEditText = policyNumber;
-            this.house.HomeSiteRenewalParams.UITxtRenewalDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            this.house.HomeSiteRenewalParams.UITxtAutoLapseDateEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-            this.house.HomeSiteRenewal();
+            this.house.HomeSiteRenewal(policyNumber);
             Playback.Wait(5000);
             this.house.CloseBrowser();
-            this.house.ChangeDatePolicyParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
             this.house.ChangeDatePolicy();
             //regress app
             this.house.HighlightCustomer();
             string customerCode = this.house.GetCustomerCode();
-            this.moto.MotoRegressAppParams.UIItemEditText = customerCode;
-            this.moto.MotoRegressApp();
-            this.house.HouseRegressApp();
-            this.house.RegressAppDateParams.UIItemEditText = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+            this.moto.RegressApp(customerCode);
+            this.house.HouseRegressApp(PolicyType);
             this.house.RegressAppDate();
-            this.moto.MotoRegressAppFinish();
+            this.moto.RegressAppFinish();
             this.house.CloseRegressApp();
             //renewal loader
             this.house.RenewalLoaderOpen();
-            this.house.RenewalLoaderRunParams.UIItemEditText = DateTime.Now.ToString("dd/MM/yyyy");
-            this.house.RenewalLoaderRunParams.UIItemEditText1 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
             this.house.RenewalLoaderRun();
             Playback.Wait(5000);
             this.house.CloseBrowser();
@@ -849,15 +778,12 @@
             // renewal module
             this.house.RenewalModuleEDI();
             this.house.RenewalModuleConfirm();
-            this.house.RenewalModuleEdi1(true);
-            this.house.RenewalModuleFilterMotoParams.UIItemEditText = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            this.house.RenewalModuleFilterMotoParams.UIItemEditText1 = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
-            this.house.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem = "Household";
-            this.house.RenewalModuleFilterMoto();
+            this.house.RenewalModuleEdi1(false);
+            this.house.RenewalModuleFilter(PolicyType);
             this.house.RenewalModuleSort();
             this.house.RenewalModuleDisplay(this.moto.CommonParams.SendHomeKeys);
-            this.moto.MotoRenewalCheckRecordExpectedValues.UIAUTO1871001WindowName = customerCode;
-            this.moto.MotoRenewalCheckRecord(1, this.house.CustomerCode);
+            this.moto.RenewalCheckRecordExpectedValues.UIWindowName = customerCode;
+            this.moto.RenewalCheckRecord(1, this.house.CustomerCode);
             this.house.HomeRebroke();
             this.house.PublicCreditCheckOk();
             this.house.HomeRebrokeSelectPolicy(this.house.CommonParams.SendEndKeys);
@@ -873,7 +799,7 @@
             this.house.RetrieveResponse();
             this.house.RebrokeAlternativeRenew1();
             this.house.RenewalModuleClose();
-            this.moto.MotoCloseAndOpenPolicyList();
+            this.moto.CloseAndOpenPolicyList();
             this.house.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
             this.house.ClosePolicy();
         }

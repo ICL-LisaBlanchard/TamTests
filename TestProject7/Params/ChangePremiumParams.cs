@@ -10,12 +10,12 @@
         /// <summary>
         /// Type '10000' in text box
         /// </summary>
-        public string UIItemEditText = "10000";
+        public string BrokerPremium = "10000";
 
         /// <summary>
         /// Type '321412341' in text box
         /// </summary>
-        public string UIItemEditText1 = "321412341";
+        public string AuthCode = "321412341";
 
         #endregion
     }

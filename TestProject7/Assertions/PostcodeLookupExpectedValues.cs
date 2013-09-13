@@ -7,15 +7,9 @@ namespace AppliedSystems.Tam.Ui.Tests.Assertions
     {
         #region Fields
 
-        /// <summary>
-        /// Verify that the 'Text' property of text box equals '533 Yardley Green Road'
-        /// </summary>
-        public string UIItemEditText = "Insurecom Ltd";
+        public string AddressLine1 = "Insurecom Ltd";
 
-        /// <summary>
-        /// Verify that the 'Text' property of text box equals 'BIRMINGHAM'
-        /// </summary>
-        public string UIItemEditText1 = "171-173 Preston Road";
+        public string AddressLine2 = "171-173 Preston Road";
 
         #endregion
     }

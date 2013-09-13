@@ -1,7 +1,9 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
     using System;
+    using System.Collections.Generic;
     using System.Drawing;
+    using System.Globalization;
     using System.Windows.Input;
 
     using AppliedSystems.Tam.Ui.Tests.Assertions;
@@ -14,8 +16,6 @@
 
     public partial class UIMap
     {
-        private MTAEffectiveDateParams mMtaEffectiveDateParams;
-
         private MotoCreateSiteRenewalParams mMotoCreateSiteRenewalParams;
 
         private OpenBrowser2Params mOpenBrowser2Params;
@@ -32,8 +32,6 @@
 
         private ChangePremiumParams mChangePremiumParams;
 
-        private ChangeDatePolicyParams mChangeDatePolicyParams;
-
         private AssertSelectPolicyFormExpectedValues mAssertSelectPolicyFormExpectedValues;
 
         private AssertMethod3ExpectedValues mAssertMethod3ExpectedValues;
@@ -46,25 +44,13 @@
 
         private CommonParams mCommonParams;
 
-        private SelectMotoPolicyParams mSelectMotoPolicyParams;
-
-        private SelectHomeTypeParams mSelectHomeTypeParams;
-
         private SaveWithoutPremiumParams mSaveWithoutPremiumParams;
-
-        private RenewalModuleFilterMotoParams mRenewalModuleFilterMotoParams;
 
         private RenewalModuleEDIParams mRenewalModuleEDIParams;
 
-        private RenewalLoaderRunParams mRenewalLoaderRunParams;
-
         private RenewalCheckStatusExpectedValues mRenewalCheckStatusExpectedValues;
 
-        private RenewalAfterMTA1Params mRenewalAfterMTA1Params;
-
-        private RegressAppDateParams mRegressAppDateParams;
-
-        private RebrokeAlternativeRenewParams mRebrokeAlternativeRenewParams;
+        private MotoMTAParams mMotoMTAParams;
 
         private QuoteResultsParams mQuoteResultsParams;
 
@@ -72,13 +58,13 @@
 
         private MTAMessageBeforeCurrentExpectedValues mMTAMessageBeforeCurrentExpectedValues;
 
-        private MTADateParams mMTADateParams;
-
         private HouseholdQuoteParams mHouseholdQuoteParams;
 
         private VehicleLookupParams mVehicleLookupParams;
 
         private CancelPolicyParams mCancelPolicyParams;
+
+        private ProposerParams mProposerParams;
 
         public virtual CancelPolicyParams CancelPolicyParams
         {
@@ -89,18 +75,6 @@
                     this.mCancelPolicyParams = new CancelPolicyParams();
                 }
                 return this.mCancelPolicyParams;
-            }
-        }
-
-        public virtual MTAEffectiveDateParams MTAEffectiveDateParams
-        {
-            get
-            {
-                if ((this.mMtaEffectiveDateParams == null))
-                {
-                    this.mMtaEffectiveDateParams = new MTAEffectiveDateParams();
-                }
-                return this.mMtaEffectiveDateParams;
             }
         }
 
@@ -200,18 +174,6 @@
             }
         }
 
-        public virtual ChangeDatePolicyParams ChangeDatePolicyParams
-        {
-            get
-            {
-                if ((this.mChangeDatePolicyParams == null))
-                {
-                    this.mChangeDatePolicyParams = new ChangeDatePolicyParams();
-                }
-                return this.mChangeDatePolicyParams;
-            }
-        }
-
         public virtual AssertSelectPolicyFormExpectedValues AssertSelectPolicyFormExpectedValues
         {
             get
@@ -284,30 +246,6 @@
             }
         }
 
-        public virtual SelectMotoPolicyParams SelectMotoPolicyParams
-        {
-            get
-            {
-                if ((this.mSelectMotoPolicyParams == null))
-                {
-                    this.mSelectMotoPolicyParams = new SelectMotoPolicyParams();
-                }
-                return this.mSelectMotoPolicyParams;
-            }
-        }
-
-        public virtual SelectHomeTypeParams SelectHomeTypeParams
-        {
-            get
-            {
-                if ((this.mSelectHomeTypeParams == null))
-                {
-                    this.mSelectHomeTypeParams = new SelectHomeTypeParams();
-                }
-                return this.mSelectHomeTypeParams;
-            }
-        }
-
         public virtual SaveWithoutPremiumParams SaveWithoutPremiumParams
         {
             get
@@ -317,18 +255,6 @@
                     this.mSaveWithoutPremiumParams = new SaveWithoutPremiumParams();
                 }
                 return this.mSaveWithoutPremiumParams;
-            }
-        }
-
-        public virtual RenewalModuleFilterMotoParams RenewalModuleFilterMotoParams
-        {
-            get
-            {
-                if ((this.mRenewalModuleFilterMotoParams == null))
-                {
-                    this.mRenewalModuleFilterMotoParams = new RenewalModuleFilterMotoParams();
-                }
-                return this.mRenewalModuleFilterMotoParams;
             }
         }
 
@@ -344,18 +270,6 @@
             }
         }
 
-        public virtual RenewalLoaderRunParams RenewalLoaderRunParams
-        {
-            get
-            {
-                if ((this.mRenewalLoaderRunParams == null))
-                {
-                    this.mRenewalLoaderRunParams = new RenewalLoaderRunParams();
-                }
-                return this.mRenewalLoaderRunParams;
-            }
-        }
-
         public virtual RenewalCheckStatusExpectedValues RenewalCheckStatusExpectedValues
         {
             get
@@ -368,39 +282,15 @@
             }
         }
 
-        public virtual RenewalAfterMTA1Params RenewalAfterMTA1Params
+        public virtual MotoMTAParams MotoMTAParams
         {
             get
             {
-                if ((this.mRenewalAfterMTA1Params == null))
+                if ((this.mMotoMTAParams == null))
                 {
-                    this.mRenewalAfterMTA1Params = new RenewalAfterMTA1Params();
+                    this.mMotoMTAParams = new MotoMTAParams();
                 }
-                return this.mRenewalAfterMTA1Params;
-            }
-        }
-
-        public virtual RegressAppDateParams RegressAppDateParams
-        {
-            get
-            {
-                if ((this.mRegressAppDateParams == null))
-                {
-                    this.mRegressAppDateParams = new RegressAppDateParams();
-                }
-                return this.mRegressAppDateParams;
-            }
-        }
-
-        public virtual RebrokeAlternativeRenewParams RebrokeAlternativeRenewParams
-        {
-            get
-            {
-                if ((this.mRebrokeAlternativeRenewParams == null))
-                {
-                    this.mRebrokeAlternativeRenewParams = new RebrokeAlternativeRenewParams();
-                }
-                return this.mRebrokeAlternativeRenewParams;
+                return this.mMotoMTAParams;
             }
         }
 
@@ -428,6 +318,18 @@
             }
         }
 
+        public virtual ProposerParams ProposerParams
+        {
+            get
+            {
+                if ((this.mProposerParams == null))
+                {
+                    this.mProposerParams = new ProposerParams();
+                }
+                return this.mProposerParams;
+            }
+        }
+
         public virtual MTAMessageBeforeCurrentExpectedValues MTAMessageBeforeCurrentExpectedValues
         {
             get
@@ -437,18 +339,6 @@
                     this.mMTAMessageBeforeCurrentExpectedValues = new MTAMessageBeforeCurrentExpectedValues();
                 }
                 return this.mMTAMessageBeforeCurrentExpectedValues;
-            }
-        }
-
-        public virtual MTADateParams MTADateParams
-        {
-            get
-            {
-                if ((this.mMTADateParams == null))
-                {
-                    this.mMTADateParams = new MTADateParams();
-                }
-                return this.mMTADateParams;
             }
         }
 
@@ -491,7 +381,8 @@
         /// <summary>
         ///     MTAEffectiveDate - Use 'MTAEffectiveDateParams' to pass parameters into this method.
         /// </summary>
-        public void MtaEffectiveDate()
+        /// <param name="withDate"></param>
+        public void MtaEffectiveDate(string withDate = "")
         {
             #region Variable Declarations
 
@@ -499,7 +390,14 @@
 
             #endregion
 
-            uIItemEdit.Text = this.MTAEffectiveDateParams.UIItemEditText;
+            if (string.IsNullOrEmpty(withDate))
+            {
+                uIItemEdit.Text = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
+            }
+            else
+            {
+                uIItemEdit.Text = withDate;
+            }
         }
 
         /// <summary>
@@ -520,7 +418,7 @@
         /// <summary>
         ///     CloseDemandsMoto
         /// </summary>
-        public void CloseDemandsMoto()
+        public void CloseDemands()
         {
             #region Variable Declarations
 
@@ -547,7 +445,7 @@
         /// </summary>
         /// <param name="policyType"></param>
         /// <param name="customerCode"></param>
-        public void MotoRenewalCheckRecord(int policyType, string customerCode)
+        public void RenewalCheckRecord(int policyType, string customerCode)
         {
             #region Variable Declarations
 
@@ -640,7 +538,13 @@
 
             Mouse.Click(uIConfirmButton, new Point(25, 11));
 
+            int timeout = Playback.PlaybackSettings.SearchTimeout;
+
+            Playback.PlaybackSettings.SearchTimeout = 120000;
+
             uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
+
+            Playback.PlaybackSettings.SearchTimeout = timeout;
 
             Mouse.Click(uIOKButton2, new Point(61, 11));
 
@@ -670,6 +574,7 @@
 
             #endregion
 
+            this.WaitForControl(uIOKButton);
             Mouse.Click(uIOKButton, new Point(50, 16));
 
             this.RetrieveResponse();
@@ -926,7 +831,7 @@
         {
             #region Variable Declarations
 
-            WinControl uICancelButton = this.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UICancelWindow.UICancelButton;
+            WinControl uICancelButton = this.UIPolicyautotestWindow.UIBillingScreenWindow.UICancelWindow.UICancelButton;
 
             #endregion
 
@@ -963,9 +868,9 @@
 
             Mouse.Click(uIPremiumButton, new Point(23, 7));
 
-            uIItemEdit.Text = this.ChangePremiumParams.UIItemEditText;
+            uIItemEdit.Text = this.ChangePremiumParams.BrokerPremium;
 
-            uIItemEdit1.Text = this.ChangePremiumParams.UIItemEditText1;
+            uIItemEdit1.Text = this.ChangePremiumParams.AuthCode;
 
             Mouse.Click(uIOKButton, new Point(25, 6));
         }
@@ -977,12 +882,12 @@
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UIItemWindow3.UIItemEdit;
-            WinControl uIOKButton = this.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UIOKWindow.UIOKButton;
+            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow3.UIItemEdit;
+            WinControl uIOKButton = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIOKWindow.UIOKButton;
 
             #endregion
 
-            uIItemEdit.Text = this.ChangeDatePolicyParams.UIItemEditText;
+            uIItemEdit.Text = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
 
             Mouse.Click(uIOKButton, new Point(36, 17));
         }
@@ -1066,9 +971,9 @@
 
             #endregion
 
-            Assert.AreEqual(this.AssertMethod3ExpectedValues.UIItemEditText, uIItemEdit.Text);
+            Assert.AreEqual(this.AssertMethod3ExpectedValues.VehicleReg, uIItemEdit.Text);
 
-            Assert.AreEqual(this.AssertMethod3ExpectedValues.UIItemEditText1, uIItemEdit1.Text);
+            Assert.AreEqual(this.AssertMethod3ExpectedValues.VehicleCost, uIItemEdit1.Text);
         }
 
         /// <summary>
@@ -1082,7 +987,7 @@
 
             #endregion
 
-            Assert.AreEqual(this.AssertMethod2ExpectedValues.UIItemEditText, uIItemEdit.Text);
+            Assert.AreEqual("0", uIItemEdit.Text);
         }
 
         /// <summary>
@@ -1096,7 +1001,7 @@
 
             #endregion
 
-            Assert.AreNotEqual(this.AssertMethod1ExpectedValues.UIItemEditText, uIItemEdit.Text);
+            Assert.AreNotEqual("0", uIItemEdit.Text);
         }
 
         /// <summary>
@@ -1127,7 +1032,7 @@
 
             #endregion
 
-            uIItemEdit.Text = this.SelectMotoPolicyParams.UIItemEditText;
+            uIItemEdit.Text = this.CommonParams.MotorPolicy;
 
             Mouse.Click(uIOKButton, new Point(38, 18));
         }
@@ -1168,7 +1073,7 @@
 
             #endregion
 
-            uIItemEdit.Text = this.SelectHomeTypeParams.UIItemEditText;
+            uIItemEdit.Text = this.CommonParams.HomePolicy;
 
             Mouse.Click(uIOKButton, new Point(40, 15));
         }
@@ -1317,7 +1222,8 @@
         /// <summary>
         ///     RenewalModuleFilterMoto - Use 'RenewalModuleFilterMotoParams' to pass parameters into this method.
         /// </summary>
-        public void RenewalModuleFilterMoto()
+        /// <param name="houseOrMoto"></param>
+        public void RenewalModuleFilter(string houseOrMoto)
         {
             #region Variable Declarations
 
@@ -1331,11 +1237,11 @@
 
             Mouse.Click(uIFilterButton, new Point(40, 11));
 
-            uIItemEdit.Text = this.RenewalModuleFilterMotoParams.UIItemEditText;
+            uIItemEdit.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
 
-            uIItemEdit1.Text = this.RenewalModuleFilterMotoParams.UIItemEditText1;
+            uIItemEdit1.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
 
-            uIItemComboBox.SelectedItem = this.RenewalModuleFilterMotoParams.UIItemComboBoxSelectedItem;
+            uIItemComboBox.SelectedItem = houseOrMoto;
 
             Mouse.Click(uIOKButton, new Point(39, 11));
         }
@@ -1483,9 +1389,9 @@
 
             Mouse.Click(uIRenewalLoaderTitleBar, new Point(103, 8));
 
-            uIItemEdit.Text = this.RenewalLoaderRunParams.UIItemEditText;
+            uIItemEdit.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
-            uIItemEdit1.Text = this.RenewalLoaderRunParams.UIItemEditText1;
+            uIItemEdit1.Text = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
 
             Mouse.Click(uIRunButton, new Point(42, 15));
         }
@@ -1541,7 +1447,7 @@
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UIItemWindow1.UIItemEdit;
+            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow1.UIItemEdit;
 
             #endregion
 
@@ -1572,11 +1478,11 @@
 
             Mouse.Click(uIMTAButton, new Point(55, 10));
 
-            uIItemComboBox.SelectedItem = this.RenewalAfterMTA1Params.UIItemComboBoxSelectedItem;
+            uIItemComboBox.SelectedItem = this.MotoMTAParams.UIChangeOfVehicle;
 
             Mouse.Click(uIOKButton1, new Point(39, 17));
 
-            uIItemEdit.Text = this.RenewalAfterMTA1Params.UIItemEditText;
+            uIItemEdit.Text = this.MotoMTAParams.VehicleRegistration1;
 
             Mouse.Click(uICalculateQuoteButton, new Point(71, 13));
         }
@@ -1592,7 +1498,7 @@
 
             #endregion
 
-            uIItemEdit.Text = this.RegressAppDateParams.UIItemEditText;
+            uIItemEdit.Text = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
         }
 
         /// <summary>
@@ -1616,7 +1522,7 @@
         {
             #region Variable Declarations
 
-            WinControl uICancelButton = this.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UICancelWindow.UICancelButton;
+            WinControl uICancelButton = this.UIPolicyautotestWindow.UIBillingScreenWindow.UICancelWindow.UICancelButton;
 
             #endregion
 
@@ -1703,7 +1609,7 @@
 
             Mouse.Click(uIRenewPolicyButton, new Point(48, 13));
 
-            uIAlternativeRadioButton.Selected = this.RebrokeAlternativeRenewParams.UIAlternativeRadioButtonSelected;
+            uIAlternativeRadioButton.Selected = this.CommonParams.UIAlternativeRadioButtonSelected;
 
             Mouse.Click(uIOKButton, new Point(52, 20));
 
@@ -1828,9 +1734,9 @@
 
             #endregion
 
-            Assert.AreEqual(this.PostcodeLookupExpectedValues.UIItemEditText, uIItemEdit.Text);
+            Assert.AreEqual(this.PostcodeLookupExpectedValues.AddressLine1, uIItemEdit.Text);
 
-            Assert.AreEqual(this.PostcodeLookupExpectedValues.UIItemEditText1, uIItemEdit1.Text);
+            Assert.AreEqual(this.PostcodeLookupExpectedValues.AddressLine2, uIItemEdit1.Text);
         }
 
         /// <summary>
@@ -1864,7 +1770,8 @@
         /// <summary>
         ///     MTADate - Use 'MTADateParams' to pass parameters into this method.
         /// </summary>
-        public void MTADate()
+        /// <param name="withDate"></param>
+        public void MTADate(string withDate)
         {
             #region Variable Declarations
 
@@ -1873,7 +1780,7 @@
 
             #endregion
 
-            uIItemEdit.Text = this.MTADateParams.UIItemEditText;
+            uIItemEdit.Text = withDate;
 
             Mouse.Click(uIOKButton, new Point(39, 10));
         }
@@ -1965,13 +1872,6 @@
                 {
                 }
             }
-            try
-            {
-                Mouse.Click(uIokButton5);
-            }
-            catch (Exception)
-            {
-            }
 
             this.ImportToTamOptions(whoToSelect);
 
@@ -1984,6 +1884,229 @@
             }
 
             Playback.PlaybackSettings.SearchTimeout = timeOut;
+        }
+
+        public void WaitForControl(UITestControl control)
+        {
+            int timeout = Playback.PlaybackSettings.SearchTimeout;
+            Playback.PlaybackSettings.SearchTimeout = 120000;
+            Assert.IsTrue(control.Exists, "Control: " + control.Name + " does not exist");
+            Playback.PlaybackSettings.SearchTimeout = timeout;
+        }
+
+        public void CheckPremiumInQuoteDocument(List<Document> expectedDocs, double overridePremium = 0.00)
+        {
+            WinClient uIBillingScreenClient = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIPolicyDocumentsWindow.UIClient();
+            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
+            WinClient uIPolicyAttachmentsClient = this.UIPolicyAttachmentsWindow.UIItemWindow.UIClient();
+
+            WinButton uIDetailButton = this.UIPolicyAttachmentsWindow.UIOptionsWindow.UIDetailButton;
+            WinEdit checkFileName = this.UIAttachmentDetailWindow.UIItemWindow.UIItemEdit;
+            WinButton uICancelButton = this.UIAttachmentDetailWindow.UICancelWindow.UICancelButton;
+
+            Mouse.Click(uIItemEdit);
+            double premium = (Math.Round(Double.Parse(uIItemEdit.Text) * 1.06 * 100) / 100);
+
+            Mouse.DoubleClick(uIBillingScreenClient, new Point(40, 14));
+
+            string filename = string.Empty;
+            for (int i = 19; i < 220; i = i + 19)
+            {
+                Mouse.Click(uIPolicyAttachmentsClient, new Point(10, i));
+                Mouse.Click(uIDetailButton);
+
+                if (filename == checkFileName.Text)
+                {
+                    Mouse.Click(uICancelButton);
+                    break;
+                }
+
+                filename = checkFileName.Text;
+
+                this.IncreaseDocsListCount(expectedDocs, filename);
+
+                Mouse.Click(uICancelButton);
+
+                switch (filename)
+                {
+                    case "HHQuote":
+
+                        if (overridePremium > 0.0)
+                        {
+                            break;
+                        }
+                        this.CheckPremiumInHhQuote(premium);
+                        break;
+                    case "Schedule":
+                        this.CheckPremiumInPdfProposal(premium);
+                        break;
+                    case "FSA":
+                        this.CheckPremiumInWordDoc(premium);
+                        break;
+                }
+            }
+
+            this.CheckDocsList(expectedDocs);
+        }
+
+        private void IncreaseDocsListCount(IEnumerable<Document> expectedDocs, string docName)
+        {
+            foreach (Document doc in expectedDocs)
+            {
+                if (doc.DocName == docName)
+                {
+                    doc.ActualCount++;
+                }
+
+                Assert.IsFalse(doc.ActualCount > doc.ExpectedCount, "Too many occurences of " + doc.DocName + ". Expected : " + doc.ExpectedCount + ", actual : " + doc.ActualCount);
+            }
+        }
+
+        private void CheckDocsList(IEnumerable<Document> expectedDocs)
+        {
+            foreach (Document doc in expectedDocs)
+            {
+                Assert.IsTrue(
+                    doc.ActualCount == doc.ExpectedCount, "Incorrect occurences of " + doc.DocName + ". Expected : " + doc.ExpectedCount + ", actual : " + doc.ActualCount);
+                ;
+            }
+        }
+
+        private bool CheckStringForPremium(string text, double premium)
+        {
+            if (text.Contains(premium.ToString(CultureInfo.InvariantCulture)))
+            {
+                return true;
+            }
+
+            if (text.Contains((premium + 0.01).ToString(CultureInfo.InvariantCulture)))
+            {
+                return true;
+            }
+
+            if (text.Contains((premium - 0.01).ToString(CultureInfo.InvariantCulture)))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void CheckPremiumInHhQuote(double premium)
+        {
+            this.OpenAttachment();
+
+            HtmlCell uIItem26652Cell = this.UIIEPolicyDocumentWindow.UIFileCUsersLisaBlanchDocument.UIItemTable.UIItem26652Cell;
+            Assert.IsTrue(this.UIIEPolicyDocumentWindow.UIFileCUsersLisaBlanchDocument.Exists);
+            Assert.IsTrue(this.CheckStringForPremium(uIItem26652Cell.InnerText, premium));
+            this.UIIEPolicyDocumentWindow.Close();
+        }
+
+        private void OpenAttachment()
+        {
+            WinButton uIOptionsButton = this.UIPolicyAttachmentsWindow.UIOptionsWindow.UIOptionsButton;
+            WinButton uIOKButton = this.UIViewAttachmentWindow.UIOKWindow.UIOKButton;
+            WinMenuItem uIViewAttachmentMenuItem = this.UIAttachmentsMenuWindow.UIContextMenu.UIMenuItem("View Attachment");
+            Mouse.Click(uIOptionsButton);
+            Mouse.Click(uIViewAttachmentMenuItem);
+            Mouse.Click(uIOKButton);
+        }
+
+        private void CheckPremiumInPdfProposal(double premium)
+        {
+            this.OpenAttachment();
+
+            WinMenuItem uIPropertiesCtrlDMenuItem = this.UIItemPdfSecureWindow.UIApplicationMenuBar.UIFileMenuItem.UIPropertiesCtrlDMenuItem;
+            WinEdit uIItemEdit = this.UIDocumentPropertiesWindow.UIItemWindow.UIItemEdit;
+            WinButton uIOKButton = this.UIDocumentPropertiesWindow.UIOKWindow.UIOKButton;
+            WinButton uICloseButton = this.UIItemPdfSecureWindow.UITitleBar.UICloseButton;
+
+            Mouse.Click(uIPropertiesCtrlDMenuItem);
+            Mouse.Click(uIItemEdit);
+
+            string pdfFilePath = uIItemEdit.Text;
+
+            Mouse.Click(uIOKButton, new Point(33, 12));
+
+            Mouse.Click(uICloseButton);
+
+            var parser = new PDFParser();
+
+            string text = parser.ExtractText(pdfFilePath).Replace(" ", string.Empty);
+
+            Assert.IsTrue(this.CheckStringForPremium(text, premium));
+        }
+
+        private void CheckPremiumInWordDoc(double premium)
+        {
+            WinButton uIOptionsButton = this.UIPolicyAttachmentsWindow.UIOptionsWindow.UIOptionsButton;
+            WinMenuItem uIViewAttachmentMenuItem = this.UIAttachmentsMenuWindow.UIContextMenu.UIMenuItem("View Attachment");
+            WinMenuItem uIFindMenuItem = this.UIDemand2docMicrosoftWWindow.UIMenuBarMenuBar.UIEditMenuItem.UIFindMenuItem;
+            WinEdit uIFindwhatEdit = this.UIFindandGotoWindow.UIFindandGotoDialog.UIEdit("Find what:");
+            WinButton uIFindNextButton = this.UIFindandGotoWindow.UIFindandGotoDialog.UIButton("Find Next");
+            WinButton uIOkButton = this.UIMicrosoftOfficeWordVWindow.UIOKWindow.UIOKButton;
+            WinButton uICancelButton = this.UIFindandGotoWindow.UIFindandGotoDialog.UICancelButton;
+            WinButton uICloseButton = this.UIDemand2docMicrosoftWWindow.UIDemand2DocMicrosoftWTitleBar.UICloseButton;
+
+            Mouse.Click(uIOptionsButton);
+            Mouse.Click(uIViewAttachmentMenuItem);
+
+            Mouse.Click(uIFindMenuItem, new Point(36, 6));
+
+            uIFindwhatEdit.Text = (premium).ToString(CultureInfo.InvariantCulture);
+
+            Mouse.Click(uIFindNextButton, new Point(28, 14));
+
+            bool b;
+            try
+            {
+                b = !this.UIMicrosoftOfficeWordVWindow.UIOKWindow.Exists;
+            }
+            catch (Exception)
+            {
+                b = true;
+            }
+
+            if (!b)
+            {
+                Mouse.Click(uIOkButton);
+                uIFindwhatEdit.Text = (premium + 0.01).ToString(CultureInfo.InvariantCulture);
+
+                Mouse.Click(uIFindNextButton, new Point(28, 14));
+
+                try
+                {
+                    b = !this.UIMicrosoftOfficeWordVWindow.UIOKWindow.Exists;
+                }
+                catch (Exception)
+                {
+                    b = true;
+                }
+            }
+
+            if (!b)
+            {
+                Mouse.Click(uIOkButton);
+                uIFindwhatEdit.Text = (premium + 0.01).ToString(CultureInfo.InvariantCulture);
+
+                Mouse.Click(uIFindNextButton, new Point(28, 14));
+
+                try
+                {
+                    b = !this.UIMicrosoftOfficeWordVWindow.UIOKWindow.Exists;
+                }
+                catch (Exception)
+                {
+                    b = true;
+                }
+            }
+
+            Assert.IsTrue(b);
+
+            // Click 'Cancel' button
+            Mouse.Click(uICancelButton, new Point(50, 15));
+
+            // Click 'Close' button
+            Mouse.Click(uICloseButton, new Point(22, 8));
         }
 
         private void ImportToTamOptions(string whoToSelect)
@@ -2032,7 +2155,7 @@
 
                     if (name.Contains("Select Tam Activity Type for FSA "))
                     {
-                        uIItemList3.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString3;
+                        uIItemList3.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString;
                         Mouse.Click(uIOKButton3, new Point(27, 8));
                     }
                 }

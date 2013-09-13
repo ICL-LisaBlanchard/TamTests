@@ -10,22 +10,22 @@
         /// <summary>
         /// Verify that the 'Text' property of text box equals 'NewTest'
         /// </summary>
-        public string UIItemEditText = "NewTest";
+        public string NewSurname = "NewTest";
 
         /// <summary>
         /// Verify that the 'Text' property of text box equals 'B33 8TH'
         /// </summary>
-        public string UIItemEditText1 = "BN1 6BN";
+        public string Postcode = "BN1 6BN";
 
         /// <summary>
         /// Verify that the 'Text' property of text box equals '533 Yardley Green Road'
         /// </summary>
-        public string UIItemEditText2 = "Insurecom Ltd";
+        public string Address = "Insurecom Ltd";
 
         /// <summary>
         /// Verify that the 'SelectedItem' property of combo box equals 'Advertising'
         /// </summary>
-        public string UIItemComboBoxSelectedItem = "Advertising";
+        public string JobSector = "Advertising";
 
         #endregion
     }

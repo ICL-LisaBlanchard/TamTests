@@ -19,16 +19,6 @@
         /// </summary>
         public string UIItemListSelectedItemsAsString2 = "EX Executive User";
 
-        /// <summary>
-        /// Select '7DAY 7 Day Account Chaser' in list box
-        /// </summary>
-        public string UIItemListSelectedItemsAsString3 = "7DAY 7 Day Account Chaser";
-
-        /// <summary>
-        /// Select '7DAY 7 Day Account Chaser' in list box
-        /// </summary>
-        public string UIItemListSelectedItemsAsString4 = "7DAY 7 Day Account Chaser";
-
         #endregion
     }
 }

@@ -27,7 +27,7 @@
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, instance: "2", className: "ListView20WndClass");
+                    this.mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
                 }
                 return this.mUIItemWindow;
             }
@@ -93,30 +93,6 @@
             }
         }
 
-        public UIItemWindow UIItemWindow1
-        {
-            get
-            {
-                if ((this.mUIItemWindow1 == null))
-                {
-                    this.mUIItemWindow1 = new UIItemWindow(this, className: "ListView20WndClass");
-                }
-                return this.mUIItemWindow1;
-            }
-        }
-
-        public UIItemWindow UIItemWindow2
-        {
-            get
-            {
-                if ((this.mUIItemWindow2 == null))
-                {
-                    this.mUIItemWindow2 = new UIItemWindow(this, className: "ListView20WndClass");
-                }
-                return this.mUIItemWindow2;
-            }
-        }
-
         #endregion
 
         #region Fields
@@ -134,10 +110,6 @@
         private UIItemWindow mUIDemandsNeedsWindow;
 
         private UIItemWindow mUIPremiumWindow;
-
-        private UIItemWindow mUIItemWindow1;
-
-        private UIItemWindow mUIItemWindow2;
 
         #endregion
     }

@@ -10,12 +10,12 @@
         /// <summary>
         /// Verify that the 'Text' property of text box equals 'Y412CEB'
         /// </summary>
-        public string UIItemEditText = "Y412CEB";
+        public string VehicleReg = "Y412CEB";
 
         /// <summary>
         /// Verify that the 'Text' property of text box equals '1000'
         /// </summary>
-        public string UIItemEditText1 = "1000";
+        public string VehicleCost = "1000";
 
         #endregion
     }

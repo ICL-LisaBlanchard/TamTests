@@ -15,11 +15,15 @@
 
         public bool UIAddActivityCheckBoxChecked = false;
 
-        public string Postcode = "BN16BN";
-
         public bool UIHouseholdRadioButtonSelected = true;
 
         public bool UIAlternativeRadioButtonSelected = true;
+
+        public string UIInsurerIDComboBoxSelectedItem = "Covea Insurance plc (formerly MMA)";
+
+        public string MotorPolicy = "MOTO";
+
+        public string HomePolicy = "HOME";
 
         #endregion
     }

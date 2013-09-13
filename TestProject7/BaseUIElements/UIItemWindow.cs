@@ -46,7 +46,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
 
             if (!string.IsNullOrEmpty(name))
             {
-                this.SearchProperties[UITestControl.PropertyNames.Name] = name;
+                this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, name, PropertyExpressionOperator.Contains));
             }
 
             #endregion
@@ -90,21 +90,19 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
 
         #region Properties
 
-        public WinList UIItemList
+        public UIItemList UIItemList
         {
             get
             {
-                if ((this.mUIItemList == null))
-                {
-                    this.mUIItemList = new WinList(this);
+                return new UIItemList(this, "");
+            }
+        }
 
-                    #region Search Criteria
-
-                    this.mUIItemList.WindowTitles.Add(this.WindowName);
-
-                    #endregion
-                }
-                return this.mUIItemList;
+        public UIItemList UIHHQuotehtmList
+        {
+            get
+            {
+                return new UIItemList(this, "HHQuote.htm");
             }
         }
 
@@ -194,7 +192,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIButton(this, "Next >");
+                return new UIButton(this, "Next");
             }
         }
 
@@ -354,7 +352,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIButton(this, "Invite");
+                return new UIButton(this, "Invite", false);
             }
         }
 

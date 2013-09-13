@@ -10,7 +10,7 @@ namespace AppliedSystems.Tam.Ui.Tests.Assertions
         /// <summary>
         /// Verify that the 'Name' property of 'AUTO187-1001' window contains 'AUTO187'
         /// </summary>
-        public string UIAUTO1871001WindowName = "AUTO187";
+        public string UIWindowName = "AUTO187";
 
         #endregion
     }

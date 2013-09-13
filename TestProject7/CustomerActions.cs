@@ -40,7 +40,7 @@
 
             Mouse.Click(uIClientsFilesButton, new Point(38, 30));
 
-            uIItemComboBox.SelectedItem = this.map.AddPolicyParams.UIItemComboBoxSelectedItem;
+            uIItemComboBox.SelectedItem = this.map.AddPolicyParams.SelectCustomers;
 
             Mouse.Click(uIAddButton, new Point(175, 7));
 
@@ -62,9 +62,9 @@
 
             Mouse.Click(uIYesButton, new Point(44, 11));
 
-            uIItemEdit1.Text = this.map.AddPolicyParams.UIItemEditText1;
+            uIItemEdit1.Text = this.map.AddPolicyParams.Agency;
 
-            uIItemEdit2.Text = this.map.AddPolicyParams.UIItemEditText2;
+            uIItemEdit2.Text = this.map.AddPolicyParams.Branch;
 
             Mouse.Click(uIOKButton1, new Point(24, 17));
 

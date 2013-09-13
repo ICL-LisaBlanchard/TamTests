@@ -1,6 +1,8 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
+    using System;
     using System.Drawing;
+    using System.Globalization;
     using System.Windows.Input;
 
     using AppliedSystems.Tam.Ui.Tests.Assertions;
@@ -14,8 +16,6 @@
 
     public class HouseActions : UIMap
     {
-        private HomeAcceptPolicyParams mHomeAcceptPolicyParams;
-
         private HomeCheckPremiumExpectedValues mHomeCheckPremiumExpectedValues;
 
         private HomeCheckPrintExpectedValues mHomeCheckPrintExpectedValues;
@@ -40,10 +40,6 @@
 
         private AddressLookupExpectedValues mAddressLookupExpectedValues;
 
-        private HomeProposerParams mHomeProposerParams;
-
-        private HomeMTAEnterDateParams mHomeMTAEnterDateParams;
-
         private HomeCreatePolicyParams mHomeCreatePolicyParams;
 
         private HomeCheckNewPremiumExpectedValues mHomeCheckNewPremiumExpectedValues;
@@ -52,27 +48,9 @@
 
         private HomeAmendRiskParams mHomeAmendRiskParams;
 
-        private HouseRegressAppParams mHouseRegressAppParams;
-
-        private HomeStartDateParams mHomeStartDateParams;
-
-        private HomeSiteRenewalParams mHomeSiteRenewalParams;
-
         private HomeRenewalCancelledCheckExpectedValues mHomeRenewalCancelledCheckExpectedValues;
 
         public string CustomerCode { get; set; }
-
-        public virtual HomeAcceptPolicyParams HomeAcceptPolicyParams
-        {
-            get
-            {
-                if ((this.mHomeAcceptPolicyParams == null))
-                {
-                    this.mHomeAcceptPolicyParams = new HomeAcceptPolicyParams();
-                }
-                return this.mHomeAcceptPolicyParams;
-            }
-        }
 
         public virtual HomeCheckPrintExpectedValues HomeCheckPrintExpectedValues
         {
@@ -206,30 +184,6 @@
             }
         }
 
-        public virtual HomeProposerParams HomeProposerParams
-        {
-            get
-            {
-                if ((this.mHomeProposerParams == null))
-                {
-                    this.mHomeProposerParams = new HomeProposerParams();
-                }
-                return this.mHomeProposerParams;
-            }
-        }
-
-        public virtual HomeMTAEnterDateParams HomeMTAEnterDateParams
-        {
-            get
-            {
-                if ((this.mHomeMTAEnterDateParams == null))
-                {
-                    this.mHomeMTAEnterDateParams = new HomeMTAEnterDateParams();
-                }
-                return this.mHomeMTAEnterDateParams;
-            }
-        }
-
         public virtual HomeCreatePolicyParams HomeCreatePolicyParams
         {
             get
@@ -278,42 +232,6 @@
             }
         }
 
-        public virtual HouseRegressAppParams HouseRegressAppParams
-        {
-            get
-            {
-                if ((this.mHouseRegressAppParams == null))
-                {
-                    this.mHouseRegressAppParams = new HouseRegressAppParams();
-                }
-                return this.mHouseRegressAppParams;
-            }
-        }
-
-        public virtual HomeStartDateParams HomeStartDateParams
-        {
-            get
-            {
-                if ((this.mHomeStartDateParams == null))
-                {
-                    this.mHomeStartDateParams = new HomeStartDateParams();
-                }
-                return this.mHomeStartDateParams;
-            }
-        }
-
-        public virtual HomeSiteRenewalParams HomeSiteRenewalParams
-        {
-            get
-            {
-                if ((this.mHomeSiteRenewalParams == null))
-                {
-                    this.mHomeSiteRenewalParams = new HomeSiteRenewalParams();
-                }
-                return this.mHomeSiteRenewalParams;
-            }
-        }
-
         public virtual HomeRenewalCancelledCheckExpectedValues HomeRenewalCancelledCheckExpectedValues
         {
             get
@@ -338,9 +256,6 @@
             }
         }
 
-        /// <summary>
-        ///     HomePrintQuote_1 - Use 'HomePrintQuote_1Params' to pass parameters into this method.
-        /// </summary>
         public void HomePrintQuote1()
         {
             WinControl uIOKButton = this.UICurrentOrFutureWindow.UIClient.UIOKButton;
@@ -387,12 +302,9 @@
             Mouse.Click(uIPrintQuoteButton, new Point(65, 11));
         }
 
-        /// <summary>
-        ///     HomeExitWithPolicy - Use 'HomeExitWithPolicyParams' to pass parameters into this method.
-        /// </summary>
         public void HomeExitWithPolicy()
         {
-            WinControl uICancelButton = this.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UICancelWindow.UICancelButton;
+            WinControl uICancelButton = this.UIPolicyautotestWindow.UIBillingScreenWindow.UICancelWindow.UICancelButton;
             WinControl uIOptionsButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UIOptionsWindow.UIOptionsButton;
             WinMenuItem uIQuoteSelectListMenuItem =
                 this.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegratMenuItem.UIQuoteSelectListMenuItem;
@@ -411,11 +323,10 @@
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton1 = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
-            //WinControl uIOKButton2 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
             WinControl uICancelButton1 = this.UIPolicyautotestWindow.UIPolicyListWindow.UICancelWindow.UICancelButton;
             WinControl uIItemButton = this.UIPolicyautotestWindow.UIItemWindow.UIItemButton;
             WinControl uIDetailButton = this.UIPolicyautotestWindow.UIPolicyListWindow1.UIDetailWindow.UIDetailButton;
-            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenHomeWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
             WinControl uIOKButton3 = this.UISelectTaminsurerforiWindow.UIItemWindow1.UIClient().UIOKButton;
 
             Mouse.Click(uICancelButton, new Point(41, 14));
@@ -450,6 +361,8 @@
 
             Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
+            Mouse.Move(new Point(500, 500));
+
             Mouse.Click(uIExitButton, new Point(46, 13));
 
             Mouse.Click(uIYesButton, new Point(51, 13));
@@ -457,10 +370,6 @@
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIOKButton1, new Point(45, 15));
-
-            Playback.PlaybackSettings.ContinueOnError = true;
-
-            Mouse.Click(uIOKButton3, new Point(42, 10));
 
             this.SelectTamInsurersAndActivity(false);
 
@@ -473,9 +382,6 @@
             Mouse.Click(uIItemEdit, new Point(22, 8));
         }
 
-        /// <summary>
-        ///     HomeAcceptPolicy - Use 'HomeAcceptPolicyParams' to pass parameters into this method.
-        /// </summary>
         public void HomeAcceptPolicy()
         {
             WinControl uIAcceptButton = this.UIQuotesResultsWindow.UIAcceptWindow.UIAcceptButton;
@@ -484,11 +390,8 @@
             WinControl uIOKButton2 = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
             WinEdit uIItemEdit = this.UIPolicyDetailConfirmationWindow.UIItemWindow.UIItemEdit;
 
-            Assert.IsTrue(uIAcceptButton.Exists, "Accept button cannot be found");
-
             Mouse.Click(uIAcceptButton, new Point(47, 11));
 
-            Assert.IsTrue(uIYesButton.Exists, "uIYesButton button cannot be found");
             Mouse.Click(uIYesButton, new Point(49, 11));
 
             this.CancelPrint();
@@ -497,12 +400,9 @@
 
             Mouse.Click(uIOKButton2, new Point(46, 11));
 
-            uIItemEdit.Text = this.HomeAcceptPolicyParams.UIItemEditText;
+            uIItemEdit.Text = this.ProposerParams.Postcode;
         }
 
-        /// <summary>
-        ///     HomeCheckPrint - Use 'HomeCheckPrintExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void HomeCheckPrint()
         {
             HtmlCell uIItem1989Cell = this.UIViewQuoteDetailsWindow.UIItemClient.UIFileJAPPSIEOfficeDatDocument.UIItemTable1.UIItem1989Cell;
@@ -513,32 +413,23 @@
             Assert.AreEqual(this.HomeCheckPrintExpectedValues.UIMrTestTestCellInnerText, uIMrTestTestCell.InnerText);
         }
 
-        /// <summary>
-        ///     HomeCheckStatus - Use 'HomeCheckStatusExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void HomeCheckStatus()
         {
-            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UIItemWindow1.UIItemEdit;
+            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow1.UIItemEdit;
 
             Assert.AreEqual(this.HomeCheckStatusExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
-        /// <summary>
-        ///     HomeCheckZeroPremium - Use 'HomeCheckZeroPremiumExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void HomeCheckZeroPremium()
         {
-            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
 
             Assert.AreEqual(this.HomeCheckZeroPremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
-        /// <summary>
-        ///     HomeClickPremium
-        /// </summary>
         public void HomeClickPremium()
         {
-            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
 
             Mouse.Click(uIItemEdit, new Point(24, 5));
         }
@@ -556,9 +447,6 @@
             Mouse.Click(uIDetailButton, new Point(44, 16));
         }
 
-        /// <summary>
-        ///     HomeCloseOpenPolicyList
-        /// </summary>
         public void HomeCloseOpenPolicyList()
         {
             WinControl uICancelButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UICancelWindow.UICancelButton;
@@ -569,9 +457,6 @@
             Mouse.Click(uIItemButton, new Point(21, 14));
         }
 
-        /// <summary>
-        ///     HomeClosePilicy
-        /// </summary>
         public void HomeClosePilicy()
         {
             WinControl uICloseButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICancelWindow.UICloseButton;
@@ -582,9 +467,6 @@
             Mouse.Click(uIokButton, new Point(36, 14));
         }
 
-        /// <summary>
-        ///     HomeCopyCheckData - Use 'HomeCopyCheckDataExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void HomeCopyCheckData()
         {
             WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxFirstname.UIItemEdit;
@@ -601,9 +483,6 @@
             Assert.AreEqual(this.HomeCopyCheckDataExpectedValues.UIItemEditText2, uIItemEdit2.Text);
         }
 
-        /// <summary>
-        ///     HomeCopyRisk - Use 'HomeCopyRiskParams' to pass parameters into this method.
-        /// </summary>
         public void HomeCopyRisk()
         {
             WinControl uIOptionsButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UIOptionsWindow.UIOptionsButton;
@@ -623,19 +502,13 @@
             Mouse.Click(uIOKButton1, new Point(42, 21));
         }
 
-        /// <summary>
-        ///     HomeCheckPolicyPremium - Use 'HomeCheckPolicyPremiumExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void HomeCheckPolicyPremium()
         {
-            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
 
             Assert.AreNotEqual(this.HomeCheckPolicyPremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
-        /// <summary>
-        ///     HomeDemands
-        /// </summary>
         public void HomeDemands()
         {
             WinControl uIokButton = this.UIViewQuoteDetailsWindow.UIOKWindow.UIOKButton;
@@ -646,16 +519,12 @@
             Mouse.Click(uIDemandsNeedsButton, new Point(59, 13));
         }
 
-        /// <summary>
-        ///     HomeExitWithoutPolicy - Use 'HomeExitWithoutPolicyParams' to pass parameters into this method.
-        /// </summary>
         public void HomeExitWithoutPolicy()
         {
             WinControl uIExitButton = this.UIQuotesResultsWindow.UIExitWindow.UIExitButton;
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
-            //WinControl uIOKButton2 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             Mouse.Click(uIExitButton, new Point(54, 9));
 
@@ -699,9 +568,6 @@
             Mouse.Click(uIQuoteButton, new Point(47, 12));
         }
 
-        /// <summary>
-        ///     HomeMTAAfter
-        /// </summary>
         public void HomeMTAAfter()
         {
             WinControl uIAfterButton = this.UIMidTermAdjustmentsWindow.UIOKWindow.UIAfterButton;
@@ -709,9 +575,6 @@
             Mouse.Click(uIAfterButton, new Point(38, 10));
         }
 
-        /// <summary>
-        ///     HomeMTABefore
-        /// </summary>
         public void HomeMTABefore()
         {
             WinControl uIBeforeButton = this.UIMidTermAdjustmentsWindow.UIItemWindow.UIBeforeButton;
@@ -719,9 +582,6 @@
             Mouse.Click(uIBeforeButton, new Point(27, 12));
         }
 
-        /// <summary>
-        ///     HomeMTACancel
-        /// </summary>
         public void HomeMTACancel()
         {
             WinControl uICancelButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICancelWindow.UICancelButton;
@@ -735,9 +595,6 @@
             Mouse.Click(uIOKButton, new Point(46, 14));
         }
 
-        /// <summary>
-        ///     HomeMTACancel1
-        /// </summary>
         public void HomeMTACancel1()
         {
             WinControl uICancelButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICancelWindow2.UICancelButton;
@@ -751,9 +608,6 @@
             Mouse.Click(uIOKButton, new Point(49, 13));
         }
 
-        /// <summary>
-        ///     HomeMTAChange - Use 'HomeMTAChangeParams' to pass parameters into this method.
-        /// </summary>
         public void HomeMTAChange()
         {
             WinControl uIMTAButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow1.UIMTAButton;
@@ -771,9 +625,6 @@
             uIItemEdit.Text = this.HomeMTAChangeParams.UIItemEditText;
         }
 
-        /// <summary>
-        ///     HomeMTACheckCancelled - Use 'HomeMTACheckCancelledExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void HomeMTACheckCancelled()
         {
             WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxFirstname.UIItemEdit;
@@ -781,9 +632,6 @@
             Assert.AreEqual(this.HomeMTACheckCancelledExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
-        /// <summary>
-        ///     HomeMTACheckChanged - Use 'HomeMTACheckChangedExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void HomeMTACheckChanged()
         {
             WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxFirstname.UIItemEdit;
@@ -791,9 +639,6 @@
             Assert.AreEqual(this.HomeMTACheckChangedExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
-        /// <summary>
-        ///     HomeMTACheckMessage - Use 'HomeMTACheckMessageExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void HomeMTACheckMessage()
         {
             WinText uIDateBeforeCurrentMTAText = this.UIInsurEtamWindow1.UIAcceptthisquoteNotOvWindow.UIDateBeforeCurrentMTAText;
@@ -801,9 +646,6 @@
             Assert.AreEqual(this.HomeMTACheckMessageExpectedValues.UIDateBeforeCurrentMTATextDisplayText, uIDateBeforeCurrentMTAText.DisplayText);
         }
 
-        /// <summary>
-        ///     HomeMTACloseMessage
-        /// </summary>
         public void HomeMTACloseMessage()
         {
             WinControl uIOKButton = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
@@ -811,9 +653,6 @@
             Mouse.Click(uIOKButton, new Point(52, 7));
         }
 
-        /// <summary>
-        ///     HomeMTACopyCheck - Use 'HomeMTACopyCheckExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void HomeMTACopyCheck()
         {
             WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxFirstname.UIItemEdit;
@@ -821,31 +660,25 @@
             WinEdit uIItemEdit2 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow6.UIItemEdit;
             WinComboBox uIItemComboBox = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxJobSector.UIItemComboBox;
 
-            Assert.AreEqual(this.HomeMTACopyCheckExpectedValues.UIItemEditText, uIItemEdit.Text);
+            Assert.AreEqual(this.HomeMTACopyCheckExpectedValues.NewSurname, uIItemEdit.Text);
 
-            Assert.AreEqual(this.HomeMTACopyCheckExpectedValues.UIItemEditText1, uIItemEdit1.Text);
+            Assert.AreEqual(this.HomeMTACopyCheckExpectedValues.Postcode, uIItemEdit1.Text);
 
-            Assert.AreEqual(this.HomeMTACopyCheckExpectedValues.UIItemEditText2, uIItemEdit2.Text);
+            Assert.AreEqual(this.HomeMTACopyCheckExpectedValues.Address, uIItemEdit2.Text);
 
-            Assert.AreEqual(this.HomeMTACopyCheckExpectedValues.UIItemComboBoxSelectedItem, uIItemComboBox.SelectedItem);
+            Assert.AreEqual(this.HomeMTACopyCheckExpectedValues.JobSector, uIItemComboBox.SelectedItem);
         }
 
-        /// <summary>
-        ///     HomeAddressLookup - Use 'HomeAddressLookupExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void HomeAddressLookup()
         {
             WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow6.UIItemEdit;
             WinEdit uIItemEdit1 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow7.UIItemEdit;
 
-            Assert.AreEqual(this.AddressLookupExpectedValues.UIItemEditText, uIItemEdit.Text);
+            Assert.AreEqual(this.AddressLookupExpectedValues.AddressLine1, uIItemEdit.Text);
 
-            Assert.AreEqual(this.AddressLookupExpectedValues.UIItemEditText1, uIItemEdit1.Text);
+            Assert.AreEqual(this.AddressLookupExpectedValues.AddressLine2, uIItemEdit1.Text);
         }
 
-        /// <summary>
-        ///     HomeAcceptQuote_1 - Use 'HomeAcceptQuote_1Params' to pass parameters into this method.
-        /// </summary>
         public void HomeAcceptQuote1()
         {
             WinControl uIOKButton = this.UIBrokerAddonsWindow.UIOKWindow.UIOKButton;
@@ -872,7 +705,7 @@
 
             Mouse.Click(uIOKButton2, new Point(29, 10));
 
-            uIItemEdit.Text = this.CommonParams.Postcode;
+            uIItemEdit.Text = this.ProposerParams.Postcode;
 
             Mouse.Click(uILookupButton, new Point(25, 13));
 
@@ -899,20 +732,13 @@
             this.SelectTamInsurersAndActivity(false);
         }
 
-        /// <summary>
-        ///     HomeRebrokeSelectAlternative
-        /// </summary>
         public void HomeRebrokeSelectAlternative()
         {
             WinControl uISelectAlternativeButton = this.UIHouseholdRebrokeResuWindow.UISelectAlternativeWindow.UISelectAlternativeButton;
 
-            // Click '&Select Alternative' button
             Mouse.Click(uISelectAlternativeButton, new Point(49, 13));
         }
 
-        /// <summary>
-        ///     HomeRebrokeFinish
-        /// </summary>
         public void HomeRebrokeFinish()
         {
             WinControl uIokButton = this.UIHouseholdRebrokeResuWindow.UIOKWindow.UIOKButton;
@@ -920,9 +746,6 @@
             Mouse.Click(uIokButton, new Point(36, 13));
         }
 
-        /// <summary>
-        ///     HomeRebrokeCurrent
-        /// </summary>
         public void HomeRebrokeCurrent()
         {
             WinControl uIokButton = this.UIHouseholdRebrokeResuWindow.UIOKWindow.UIOKButton;
@@ -933,9 +756,6 @@
             Mouse.Click(uIYesButton, new Point(63, 11));
         }
 
-        /// <summary>
-        ///     HomeRebroke
-        /// </summary>
         public void HomeRebroke()
         {
             WinControl uIRebrokeButton = this.UIAUTO2301001Window.UIRebrokeWindow.UIRebrokeButton;
@@ -949,9 +769,6 @@
             Mouse.Click(uIProceedButton, new Point(61, 11));
         }
 
-        /// <summary>
-        ///     HomeProposer - Use 'HomeProposerParams' to pass parameters into this method.
-        /// </summary>
         public void HomeProposer()
         {
             WinEdit tbxFirstname = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxFirstname.UIItemEdit;
@@ -963,19 +780,19 @@
             WinControl uILookupButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UILookupWindow.UILookupButton;
             WinControl uIokButton = this.UISearchResultForB338TWindow.UIOKWindow.UIOKButton;
 
-            tbxLastName.Text = this.HomeProposerParams.LastName;
+            tbxLastName.Text = this.ProposerParams.Lastname;
 
-            tbxFirstname.Text = this.HomeProposerParams.FirstName;
+            tbxFirstname.Text = this.ProposerParams.Firstname;
 
-            tbxJobTitle.SelectedItem = this.HomeProposerParams.JobTitle;
+            tbxJobTitle.SelectedItem = this.ProposerParams.JobTitle;
 
-            tbxJobSector.SelectedItem = this.HomeProposerParams.JobSector;
+            tbxJobSector.SelectedItem = this.ProposerParams.JobSector;
 
-            tbxDateOfBirth.Text = this.HomeProposerParams.DateOfBirth;
+            tbxDateOfBirth.Text = this.ProposerParams.DateOfBirth;
 
             Mouse.Click(txbPostcode, new Point(48, 10));
 
-            txbPostcode.Text = this.HomeProposerParams.Postcode;
+            txbPostcode.Text = this.ProposerParams.Postcode;
 
             Mouse.Click(uILookupButton, new Point(28, 13));
 
@@ -996,19 +813,13 @@
             Mouse.Click(uIQuoteButton, new Point(14, 11));
         }
 
-        /// <summary>
-        ///     HomePrintQuote
-        /// </summary>
         public void HomePrintQuote()
         {
-            WinControl uICancelButton = this.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UICancelWindow.UICancelButton;
+            WinControl uICancelButton = this.UIPolicyautotestWindow.UIBillingScreenWindow.UICancelWindow.UICancelButton;
 
             Mouse.Click(uICancelButton, new Point(19, 8));
         }
 
-        /// <summary>
-        ///     HomeOpenQuote
-        /// </summary>
         public void HomeOpenQuote()
         {
             WinControl uIOptionsButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UIOptionsWindow.UIOptionsButton;
@@ -1020,29 +831,25 @@
 
             Mouse.Click(uIQuoteSelectListMenuItem, new Point(123, 7));
 
+            Mouse.Move(new Point(500, 500));
+
+            this.WaitForControl(uIokButton);
             Mouse.Click(uIokButton, new Point(44, 13));
         }
 
-        /// <summary>
-        ///     HomeOpenPolicy
-        /// </summary>
         public void HomeOpenPolicy()
         {
             WinControl uIDetailButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UIDetailWindow.UIDetailButton;
-            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
 
             Mouse.Click(uIDetailButton, new Point(26, 12));
 
             Mouse.Click(uIItemEdit, new Point(25, 5));
         }
 
-        /// <summary>
-        ///     HomeMTASelectQuote - Use 'HomeMTASelectQuoteParams' to pass parameters into this method.
-        /// </summary>
         public void HomeMTASelectQuote()
         {
-            WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow1.UIClient();
-            WinClient uIQuotesResultsClient1 = this.UIQuotesResultsWindow.UIItemWindow2.UIClient();
+            WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
             WinControl uIAcceptButton = this.UIQuotesResultsWindow.UIAcceptWindow.UIAcceptButton;
             WinControl uIokButton = this.UIConfirmMTAWindow.UIOKWindow.UIOKButton;
             WinControl uIokButton1 = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
@@ -1051,11 +858,10 @@
             WinControl uIokButton3 = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIokButton4 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            //WinControl uIokButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             Mouse.Click(uIQuotesResultsClient, new Point(424, 227));
 
-            Keyboard.SendKeys(uIQuotesResultsClient1, this.CommonParams.SendEndKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendEndKeys, ModifierKeys.None);
 
             Mouse.Move(new Point(500, 500));
 
@@ -1064,6 +870,8 @@
             Mouse.Click(uIokButton, new Point(37, 8));
 
             Mouse.Click(uIokButton1, new Point(39, 16));
+
+            this.WaitForControl(uIokButton2);
 
             Mouse.Click(uIokButton2, new Point(58, 15));
 
@@ -1078,19 +886,13 @@
             this.SelectTamInsurersAndActivity(true);
         }
 
-        /// <summary>
-        ///     HomeMTAEnterDate - Use 'HomeMTAEnterDateParams' to pass parameters into this method.
-        /// </summary>
-        public void HomeMTAEnterDate()
+        public void HomeMTAEnterDate(string withDate = "")
         {
             WinEdit uIItemEdit = this.UIMTAEffectiveDatesWindow.UIItemWindow.UIItemEdit;
 
-            uIItemEdit.Text = this.HomeMTAEnterDateParams.UIItemEditText;
+            uIItemEdit.Text = string.IsNullOrEmpty(withDate) ? DateTime.Now.AddDays(2).ToString("dd/MM/yy") : withDate;
         }
 
-        /// <summary>
-        ///     HomeMTACoverDate
-        /// </summary>
         public void HomeMTACoverDate()
         {
             WinControl uIokButton = this.UIMTAEffectiveDatesWindow.UIOKWindow.UIOKButton;
@@ -1098,9 +900,6 @@
             Mouse.Click(uIokButton, new Point(46, 8));
         }
 
-        /// <summary>
-        ///     HomeCreatePolicy - Use 'HomeCreatePolicyParams' to pass parameters into this method.
-        /// </summary>
         public void HomeCreatePolicy()
         {
             WinControl uINextButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow.UINextButton;
@@ -1144,9 +943,6 @@
             Mouse.Click(uInoButton, new Point(56, 12));
         }
 
-        /// <summary>
-        ///     HomeCheckNewPremium - Use 'HomeCheckNewPremiumExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void HomeCheckNewPremium()
         {
             WinEdit uIItemEdit = this.UIPolicygdfhdfdfghgdfWindow.UIBillingScreenHomeTestWindow.UIItemWindow.UIItemEdit;
@@ -1154,10 +950,7 @@
             Assert.AreNotEqual(this.HomeCheckNewPremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
-        /// <summary>
-        ///     HomeChangePremium - Use 'HomeChangePremiumParams' to pass parameters into this method.
-        /// </summary>
-        public void HomeChangePremium()
+        public void HomeChangePremium(int overridePremium)
         {
             WinControl uIPremiumButton = this.UIQuotesResultsWindow.UIPremiumWindow.UIPremiumButton;
             WinEdit uIItemEdit = this.UIOverridePremiumWindow.UIItemWindow.UIItemEdit;
@@ -1168,16 +961,13 @@
 
             Mouse.Click(uIPremiumButton, new Point(38, 11));
 
-            uIItemEdit.Text = this.HomeChangePremiumParams.UIItemEditText;
+            uIItemEdit.Text = overridePremium.ToString(CultureInfo.InvariantCulture);
 
             uIItemEdit1.Text = this.HomeChangePremiumParams.UIItemEditText1;
 
             Mouse.Click(uIokButton, new Point(52, 15));
         }
 
-        /// <summary>
-        ///     HomeCancelPolicyQuote_1
-        /// </summary>
         public void HomeCancelPolicyQuote1()
         {
             WinControl uIokButton = this.UIMTAEffectiveDatesWindow.UIOKWindow.UIOKButton;
@@ -1188,9 +978,6 @@
             Mouse.Click(uInoButton, new Point(43, 18));
         }
 
-        /// <summary>
-        ///     HomeCancelPolicyQuote
-        /// </summary>
         public void HomeCancelPolicyQuote()
         {
             WinControl uIQuoteButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIQuoteWindow.UIQuoteButton;
@@ -1198,9 +985,6 @@
             Mouse.Click(uIQuoteButton, new Point(41, 7));
         }
 
-        /// <summary>
-        ///     HomeCancelPolicyExit
-        /// </summary>
         public void HomeCancelPolicyExit()
         {
             WinControl uIExitButton = this.UIQuotesResultsWindow.UIExitWindow.UIExitButton;
@@ -1214,12 +998,9 @@
             Mouse.Click(uICancelButton, new Point(54, 12));
         }
 
-        /// <summary>
-        ///     HomeCancelPolicyAccept - Use 'HomeCancelPolicyAcceptParams' to pass parameters into this method.
-        /// </summary>
         public void HomeCancelPolicyAccept()
         {
-            WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow1.UIClient();
+            WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
             WinControl uIAcceptButton = this.UIQuotesResultsWindow.UIAcceptWindow.UIAcceptButton;
             WinControl uIokButton = this.UIConfirmMTAWindow.UIOKWindow.UIOKButton;
             WinControl uIokButton1 = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
@@ -1256,9 +1037,6 @@
             this.SelectTamInsurersAndActivity(false);
         }
 
-        /// <summary>
-        ///     HomeCancelPolicy - Use 'HomeCancelPolicyParams' to pass parameters into this method.
-        /// </summary>
         public void HomeCancelPolicy()
         {
             WinControl uIMTAButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow1.UIMTAButton;
@@ -1273,9 +1051,6 @@
             Mouse.Click(uIOKButton, new Point(31, 11));
         }
 
-        /// <summary>
-        ///     HomeCancelCopy
-        /// </summary>
         public void HomeCancelCopy()
         {
             WinControl uICancelButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICancelWindow.UICancelButton;
@@ -1291,33 +1066,28 @@
             Mouse.Click(uIOKButton, new Point(49, 15));
         }
 
-        /// <summary>
-        ///     HomeAmendSelecPolicy - Use 'HomeAmendSelecPolicyParams' to pass parameters into this method.
-        /// </summary>
         public void HomeAmendSelecPolicy()
         {
-            WinClient uIHouseholdRenewalsAmeClient = this.UIHouseholdRenewalsAmeWindow.UIItemWindow7.UIClient();
+            Playback.Wait(2000);
+            WinClient uIHouseholdRenewalsAmeClient = this.UIHouseholdRenewalsResultsWindow.UIItemWindow.UIClient();
 
-            Mouse.Click(uIHouseholdRenewalsAmeClient, new Point(337, 202));
+            Mouse.Click(uIHouseholdRenewalsAmeClient, new Point(101, 31));
 
             Keyboard.SendKeys(uIHouseholdRenewalsAmeClient, this.CommonParams.SendEndKeys, ModifierKeys.None);
         }
 
-        /// <summary>
-        ///     HomeAmendRisk - Use 'HomeAmendRiskParams' to pass parameters into this method.
-        /// </summary>
         public void HomeAmendRisk()
         {
             WinControl uIAmendRiskButton = this.UIAUTO2251001Window.UIAmendRiskWindow.UIAmendRiskButton;
-            WinEdit uIItemEdit = this.UIHouseholdRenewalsAmeWindow.UIItemWindow.UIItemEdit;
-            WinControl uINextButton = this.UIHouseholdRenewalsAmeWindow.UINextWindow.UINextButton;
-            WinControl uINextButton1 = this.UIHouseholdRenewalsAmeWindow.UINextWindow1.UINextButton;
-            WinControl uINextButton2 = this.UIHouseholdRenewalsAmeWindow.UINextWindow2.UINextButton;
-            WinControl uINextButton3 = this.UIHouseholdRenewalsAmeWindow.UINextWindow3.UINextButton;
-            WinControl uINextButton4 = this.UIHouseholdRenewalsAmeWindow.UINextWindow4.UINextButton;
-            WinControl uINextButton5 = this.UIHouseholdRenewalsAmeWindow.UINextWindow5.UINextButton;
-            WinControl uINextButton6 = this.UIHouseholdRenewalsAmeWindow.UINextWindow6.UINextButton;
-            WinControl uIQuoteButton = this.UIHouseholdRenewalsAmeWindow.UIQuoteWindow.UIQuoteButton;
+            WinEdit uIItemEdit = this.UIHouseholdRenewalsWindow.UIItemWindow.UIItemEdit;
+            WinControl uINextButton = this.UIHouseholdRenewalsWindow.UINextWindow.UINextButton;
+            WinControl uINextButton1 = this.UIHouseholdRenewalsWindow.UINextWindow1.UINextButton;
+            WinControl uINextButton2 = this.UIHouseholdRenewalsWindow.UINextWindow2.UINextButton;
+            WinControl uINextButton3 = this.UIHouseholdRenewalsWindow.UINextWindow3.UINextButton;
+            WinControl uINextButton4 = this.UIHouseholdRenewalsWindow.UINextWindow4.UINextButton;
+            WinControl uINextButton5 = this.UIHouseholdRenewalsWindow.UINextWindow5.UINextButton;
+            WinControl uINextButton6 = this.UIHouseholdRenewalsWindow.UINextWindow6.UINextButton;
+            WinControl uIQuoteButton = this.UIHouseholdRenewalsWindow.UIQuoteWindow.UIQuoteButton;
             WinControl uIProceedButton = this.UICreditCheckAtRenewalWindow.UIProceedWindow.UIProceedButton;
 
             Mouse.Click(uIAmendRiskButton, new Point(67, 17));
@@ -1343,9 +1113,6 @@
             Mouse.Click(uIProceedButton, new Point(59, 15));
         }
 
-        /// <summary>
-        ///     HomeAmendRenewFinish_1 - Use 'HomeAmendRenewFinish_1Params' to pass parameters into this method.
-        /// </summary>
         public void HomeAmendRenewFinish1()
         {
             WinCheckBox uIDeferPrintingCheckBox = this.UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
@@ -1359,13 +1126,19 @@
 
             Mouse.Click(uIokButton, new Point(74, 12));
 
-            Mouse.Click(uIokButton1, new Point(47, 12));
+            int timeout = Playback.PlaybackSettings.SearchTimeout;
+
+            Playback.PlaybackSettings.SearchTimeout = 120000;
 
             Playback.PlaybackSettings.ContinueOnError = true;
 
-            Mouse.Click(uIokButton1, new Point(54, 13));
+            Mouse.Move(new Point(500, 500));
+
+            Mouse.Click(uIokButton1, new Point(47, 12));
 
             Playback.PlaybackSettings.ContinueOnError = false;
+
+            Playback.PlaybackSettings.SearchTimeout = timeout;
 
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
@@ -1376,28 +1149,25 @@
             this.SelectTamInsurersAndActivity(false);
         }
 
-        /// <summary>
-        ///     HomeAmendRenewFinish
-        /// </summary>
         public void HomeAmendRenewFinish()
         {
-            WinControl uIRenewPolicyButton = this.UIHouseholdRenewalsAmeWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
+            WinControl uIRenewPolicyButton = this.UIHouseholdRenewalsResultsWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
 
-            // Click '&Renew Policy' button
+            WinControl uIYesButton2 = this.UIConfirmWindow.UIYesWindow.UIYesButton;
+
             Mouse.Click(uIRenewPolicyButton, new Point(52, 9));
 
             Mouse.Click(uIYesButton, new Point(55, 11));
 
+            Mouse.Click(uIYesButton2, new Point(34, 12));
+
             this.CancelPrint();
         }
 
-        /// <summary>
-        ///     HomeAmendRenew - Use 'HomeAmendRenewParams' to pass parameters into this method.
-        /// </summary>
         public void HomeAmendRenew()
         {
-            WinControl uIRenewPolicyButton = this.UIHouseholdRenewalsAmeWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
+            WinControl uIRenewPolicyButton = this.UIHouseholdRenewalsResultsWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
             WinControl uIokButton = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIDeferPrintingCheckBox = this.UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
@@ -1407,7 +1177,8 @@
             WinControl uIokButton3 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
             WinControl uIokButton4 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
 
-            // Click '&Renew Policy' button
+            Playback.Wait(2000);
+
             Mouse.Click(uIRenewPolicyButton, new Point(36, 18));
 
             Mouse.Click(uIYesButton, new Point(50, 20));
@@ -1431,9 +1202,6 @@
             this.SelectTamInsurersAndActivity(false);
         }
 
-        /// <summary>
-        ///     HomeAcceptQuote
-        /// </summary>
         public void HomeAcceptQuote()
         {
             WinControl uIAcceptButton = this.UIQuotesResultsWindow.UIAcceptWindow.UIAcceptButton;
@@ -1446,31 +1214,21 @@
             Mouse.Click(uIYesButton, new Point(39, 13));
         }
 
-        /// <summary>
-        ///     HouseRegressApp - Use 'HouseRegressAppParams' to pass parameters into this method.
-        /// </summary>
-        public void HouseRegressApp()
+        public void HouseRegressApp(string policyType)
         {
             WinComboBox uIItemComboBox = this.UIRegressIETamPolicyWindow.UIItemWindow4.UIItemComboBox;
 
-            // Select 'Household' in combo box
-            uIItemComboBox.SelectedItem = this.HouseRegressAppParams.UIItemComboBoxSelectedItem;
+            uIItemComboBox.SelectedItem = policyType;
         }
 
-        /// <summary>
-        ///     HomeStartDate - Use 'HomeStartDateParams' to pass parameters into this method.
-        /// </summary>
         public void HomeStartDate()
         {
             WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow13.UIItemEdit;
 
-            uIItemEdit.Text = this.HomeStartDateParams.UIItemEditText;
+            uIItemEdit.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
         }
 
-        /// <summary>
-        ///     HomeSiteRenewal - Use 'HomeSiteRenewalParams' to pass parameters into this method.
-        /// </summary>
-        public void HomeSiteRenewal()
+        public void HomeSiteRenewal(string policyNumber)
         {
             HtmlHyperlink uICreateaHouseholdTestHyperlink =
                 this.UIInsurEcomSystemMaintWindow.UILeftbarFrame.UIInsurEcomLeftbarDocument.UIDivRenewalsPane.UICreateaHouseholdTestHyperlink;
@@ -1485,13 +1243,13 @@
 
             Mouse.Click(uICreateaHouseholdTestHyperlink, new Point(48, 20));
 
-            uIInsurerIDComboBox.SelectedItem = this.HomeSiteRenewalParams.UIInsurerIDComboBoxSelectedItem;
+            uIInsurerIDComboBox.SelectedItem = this.CommonParams.UIInsurerIDComboBoxSelectedItem;
 
-            uITxtPolicyNumberEdit.Text = this.HomeSiteRenewalParams.UITxtPolicyNumberEditText;
+            uITxtPolicyNumberEdit.Text = policyNumber;
 
-            uITxtRenewalDateEdit.Text = this.HomeSiteRenewalParams.UITxtRenewalDateEditText;
+            uITxtRenewalDateEdit.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
 
-            uITxtAutoLapseDateEdit.Text = this.HomeSiteRenewalParams.UITxtAutoLapseDateEditText;
+            uITxtAutoLapseDateEdit.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
 
             Mouse.Click(uITxtClientXmlEdit, new Point(284, 43));
 
@@ -1502,34 +1260,25 @@
             uIInsurEcomSystemMaintWindow.PerformDialogAction(BrowserDialogAction.Ok);
         }
 
-        /// <summary>
-        ///     HomeSelectPolicy1 - Use 'HomeSelectPolicy1Params' to pass parameters into this method.
-        /// </summary>
         public void HomeSelectPolicy1()
         {
-            WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow1.UIClient();
+            WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
 
             Mouse.Click(uIQuotesResultsClient, new Point(354, 212));
 
             Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
         }
 
-        /// <summary>
-        ///     HomeSelectPolicy - Use 'HomeSelectPolicyParams' to pass parameters into this method.
-        /// </summary>
         public void HomeSelectPolicy()
         {
             WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
 
-            Mouse.Click(uIQuotesResultsClient, new Point(100, 171));
+            Mouse.Click(uIQuotesResultsClient, new Point(30, 30));
 
-            Playback.Wait(4000);
+            Playback.Wait(1000);
             Mouse.Move(new Point(500, 500));
         }
 
-        /// <summary>
-        ///     HomeRenewalConfirm
-        /// </summary>
         public void HomeRenewalConfirm()
         {
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
@@ -1537,9 +1286,6 @@
             Mouse.Click(uIYesButton, new Point(33, 10));
         }
 
-        /// <summary>
-        ///     HomeRenewalCancelledCheck - Use 'HomeRenewalCancelledCheckExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void HomeRenewalCancelledCheck()
         {
             WinText uIMTAsuccessfullyproceText = this.UIMTASuccessfulWindow.UIMtaSuccessfullyProcessedWindow.UIMtaSuccessfullyProcessedText;
@@ -1547,9 +1293,6 @@
             StringAssert.Contains(uIMTAsuccessfullyproceText.DisplayText, this.HomeRenewalCancelledCheckExpectedValues.UIMTAsuccessfullyproceTextDisplayText);
         }
 
-        /// <summary>
-        ///     HomeRenewalBeforeFinish - Use 'HomeRenewalBeforeFinishParams' to pass parameters into this method.
-        /// </summary>
         public void HomeRenewalBeforeFinish()
         {
             WinControl uIOKButton = this.UIMTASuccessfulWindow.UIOKWindow.UIOKButton;
@@ -1571,12 +1314,9 @@
             this.SelectTamInsurersAndActivity(false);
         }
 
-        /// <summary>
-        ///     HomeRenewalBeforeAccept - Use 'HomeRenewalBeforeAcceptParams' to pass parameters into this method.
-        /// </summary>
         public void HomeRenewalBeforeAccept()
         {
-            WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow1.UIClient();
+            WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
             WinControl uIAcceptButton = this.UIQuotesResultsWindow.UIAcceptWindow.UIAcceptButton;
             WinControl uIokButton = this.UIConfirmMTAWindow.UIOKWindow.UIOKButton;
             WinControl uIokButton1 = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
@@ -1597,10 +1337,6 @@
             Mouse.Click(uIokButton2, new Point(48, 14));
         }
 
-        /// <summary>
-        ///     HomeRebrokeSelectPolicy - Use 'HomeRebrokeSelectPolicyParams' to pass parameters into this method.
-        /// </summary>
-        /// <param name="withKeys"></param>
         public void HomeRebrokeSelectPolicy(string withKeys)
         {
             WinClient uIHouseholdRebrokeResuClient = this.UIHouseholdRebrokeResuWindow.UIItemWindow.UIClient();
@@ -1610,12 +1346,9 @@
             Keyboard.SendKeys(uIHouseholdRebrokeResuClient, withKeys, ModifierKeys.None);
         }
 
-        /// <summary>
-        ///     HomeCheckPremium - Use 'HomeCheckPremiumExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void HomeCheckPremium()
         {
-            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
 
             Assert.AreNotEqual(this.HomeCheckPremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
         }

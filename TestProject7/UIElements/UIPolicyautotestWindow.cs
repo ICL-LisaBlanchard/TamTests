@@ -49,25 +49,13 @@
             }
         }
 
-        public UIBillingScreenMotoWindow UIBillingScreenMotoWindow
-        {
-            get
-            {
-                if ((this.mUIBillingScreenMOTOWindow == null))
-                {
-                    this.mUIBillingScreenMOTOWindow = new UIBillingScreenMotoWindow(this);
-                }
-                return this.mUIBillingScreenMOTOWindow;
-            }
-        }
-
         public UIApplicationMenuBar UIApplicationMenuBar
         {
             get
             {
                 if ((this.mUIApplicationMenuBar == null))
                 {
-                    this.mUIApplicationMenuBar = new UIApplicationMenuBar(this);
+                    this.mUIApplicationMenuBar = new UIApplicationMenuBar(this, "Application");
                 }
                 return this.mUIApplicationMenuBar;
             }
@@ -91,15 +79,15 @@
             }
         }
 
-        public UIBillingScreenHomeWindow UIBillingScreenHomeWindow
+        public UIBillingScreenWindow UIBillingScreenWindow
         {
             get
             {
-                if ((this.mUIBillingScreenHomeWindow == null))
+                if ((this.mUIBillingScreenWindow == null))
                 {
-                    this.mUIBillingScreenHomeWindow = new UIBillingScreenHomeWindow(this);
+                    this.mUIBillingScreenWindow = new UIBillingScreenWindow(this);
                 }
-                return this.mUIBillingScreenHomeWindow;
+                return this.mUIBillingScreenWindow;
             }
         }
 
@@ -137,13 +125,11 @@
 
         private UIPolicyListWindow11 mUIPolicyListWindow1;
 
-        private UIBillingScreenMotoWindow mUIBillingScreenMOTOWindow;
-
         private UIApplicationMenuBar mUIApplicationMenuBar;
 
         private WinTitleBar mUIPolicyautotestTitleBar;
 
-        private UIBillingScreenHomeWindow mUIBillingScreenHomeWindow;
+        private UIBillingScreenWindow mUIBillingScreenWindow;
 
         private UITestControl mUIItemWindow1;
 

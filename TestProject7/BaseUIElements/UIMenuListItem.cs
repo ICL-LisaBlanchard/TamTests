@@ -13,7 +13,10 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
 
             this.SearchProperties[UITestControl.PropertyNames.Name] = name;
             this.SearchConfigurations.Add(SearchConfiguration.ExpandWhileSearching);
-            this.WindowTitles.Add(searchLimitContainer.WindowTitles[0]);
+            foreach (string windowTitle in searchLimitContainer.WindowTitles)
+            {
+                this.WindowTitles.Add(windowTitle);
+            }
 
             #endregion
         }
@@ -71,6 +74,22 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             get
             {
                 return new UIMenuListItem(this, "Print a Barcode");
+            }
+        }
+
+        public UIMenuListItem UIPropertiesCtrlDMenuItem
+        {
+            get
+            {
+                return new UIMenuListItem(this, "Properties...\tCtrl+D");
+            }
+        }
+
+        public UIMenuListItem UIFindMenuItem
+        {
+            get
+            {
+                return new UIMenuListItem(this, "Find...");
             }
         }
     }

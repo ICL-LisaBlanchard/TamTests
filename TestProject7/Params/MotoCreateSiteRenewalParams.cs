@@ -15,15 +15,6 @@
         /// </summary>
         public string UIInsurerIDComboBoxSelectedItem = "Highway Insurance";
 
-        /// <summary>
-        /// Type '7071000841' in 'txtPolicyNumber' text box
-        /// </summary>
-        public string UITxtPolicyNumberEditText = "7071000841";
-
-        /// <summary>
-        /// Type '12/11/2012' in 'txtAutoLapseDate' text box
-        /// </summary>
-        public string UITxtAutoLapseDateEdit1Text = "12/11/2012";
 
         #endregion
     }

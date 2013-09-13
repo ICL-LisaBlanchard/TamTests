@@ -1,5 +1,6 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
+    using System;
     using System.Drawing;
     using System.Windows.Input;
 
@@ -30,18 +31,9 @@
 
         private MotoAmendRiskParams mMotoAmendRiskParams;
 
-  
         private MotoRenewalCheckRecordExpectedValues mMotoRenewalCheckRecordExpectedValues;
 
         private MotoRegressAppParams mMotoRegressAppParams;
-
-  
-
-        private MotoPostcodeLookupParams mMotoPostcodeLookupParams;
-
-        private MotoPolicyPersonParams mMotoPolicyPersonParams;
-
-        private MotoMTANoSaveParams mMotoMTANoSaveParams;
 
         private MotoMTAMessageCancelledExpectedValues mMotoMTAMessageCancelledExpectedValues;
 
@@ -50,16 +42,6 @@
         private MotoMTACheckNewValueExpectedValues mMotoMTACheckNewValueExpectedValues;
 
         private MotoMTACheckCarExpectedValues mMotoMTACheckCarExpectedValues;
-
-
-
-        private MotoMTABefore2Params mMotoMTABefore2Params;
-
-        private MotoMTABeforeParams mMotoMTABeforeParams;
-
-        private MotoMTAAcceptParams mMotoMTAAcceptParams;
-
-        private MotoInceptionDateParams mMotoInceptionDateParams;
 
         public string CustomerCode { get; set; }
 
@@ -147,8 +129,7 @@
             }
         }
 
-
-        public virtual MotoRenewalCheckRecordExpectedValues MotoRenewalCheckRecordExpectedValues
+        public virtual MotoRenewalCheckRecordExpectedValues RenewalCheckRecordExpectedValues
         {
             get
             {
@@ -169,44 +150,6 @@
                     this.mMotoRegressAppParams = new MotoRegressAppParams();
                 }
                 return this.mMotoRegressAppParams;
-            }
-        }
-
-
-
-        public virtual MotoPostcodeLookupParams MotoPostcodeLookupParams
-        {
-            get
-            {
-                if ((this.mMotoPostcodeLookupParams == null))
-                {
-                    this.mMotoPostcodeLookupParams = new MotoPostcodeLookupParams();
-                }
-                return this.mMotoPostcodeLookupParams;
-            }
-        }
-
-        public virtual MotoPolicyPersonParams MotoPolicyPersonParams
-        {
-            get
-            {
-                if ((this.mMotoPolicyPersonParams == null))
-                {
-                    this.mMotoPolicyPersonParams = new MotoPolicyPersonParams();
-                }
-                return this.mMotoPolicyPersonParams;
-            }
-        }
-
-        public virtual MotoMTANoSaveParams MotoMTANoSaveParams
-        {
-            get
-            {
-                if ((this.mMotoMTANoSaveParams == null))
-                {
-                    this.mMotoMTANoSaveParams = new MotoMTANoSaveParams();
-                }
-                return this.mMotoMTANoSaveParams;
             }
         }
 
@@ -258,74 +201,17 @@
             }
         }
 
-
-
-        public virtual MotoMTABefore2Params MotoMTABefore2Params
-        {
-            get
-            {
-                if ((this.mMotoMTABefore2Params == null))
-                {
-                    this.mMotoMTABefore2Params = new MotoMTABefore2Params();
-                }
-                return this.mMotoMTABefore2Params;
-            }
-        }
-
-        public virtual MotoMTABeforeParams MotoMTABeforeParams
-        {
-            get
-            {
-                if ((this.mMotoMTABeforeParams == null))
-                {
-                    this.mMotoMTABeforeParams = new MotoMTABeforeParams();
-                }
-                return this.mMotoMTABeforeParams;
-            }
-        }
-
-        public virtual MotoMTAAcceptParams MotoMTAAcceptParams
-        {
-            get
-            {
-                if ((this.mMotoMTAAcceptParams == null))
-                {
-                    this.mMotoMTAAcceptParams = new MotoMTAAcceptParams();
-                }
-                return this.mMotoMTAAcceptParams;
-            }
-        }
-
-        public virtual MotoInceptionDateParams MotoInceptionDateParams
-        {
-            get
-            {
-                if ((this.mMotoInceptionDateParams == null))
-                {
-                    this.mMotoInceptionDateParams = new MotoInceptionDateParams();
-                }
-                return this.mMotoInceptionDateParams;
-            }
-        }
-
-        /// <summary>
-        ///     MotoGetPolicyNumber
-        /// </summary>
         public string MotoGetPolicyNumber()
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.map.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UIItemWindow2.UIItemEdit;
+            WinEdit uIItemEdit = this.map.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow2.UIItemEdit;
 
             #endregion
 
             return uIItemEdit.GetProperty("Text").ToString();
         }
 
-        /// <summary>
-        ///     MotoCreateSiteRenewal - Use 'MotoCreateSiteRenewalParams' to pass parameters into this method.
-        /// </summary>
-        /// <param name="policyNumber"></param>
         public void MotoCreateSiteRenewal(string policyNumber)
         {
             #region Variable Declarations
@@ -354,9 +240,6 @@
             uIInsurEcomSystemMaintWindow.PerformDialogAction(BrowserDialogAction.Ok);
         }
 
-        /// <summary>
-        ///     MotoAWAP - Use 'MotoAWAPParams' to pass parameters into this method.
-        /// </summary>
         public void MotoAwap()
         {
             #region Variable Declarations
@@ -377,15 +260,15 @@
 
             Mouse.Click(uIawapButton, new Point(50, 14));
 
-            uIItemComboBox.SelectedItem = this.MotoAWAPParams.UIItemComboBoxSelectedItem;
+            uIItemComboBox.SelectedItem = this.MotoAWAPParams.InsurerSelect;
 
-            uIItemEdit.Text = this.MotoAWAPParams.UIItemEditText;
+            uIItemEdit.Text = this.MotoAWAPParams.ProductDescription;
 
-            uIItemEdit1.Text = this.MotoAWAPParams.UIItemEditText1;
+            uIItemEdit1.Text = this.MotoAWAPParams.PolicyNumber;
 
-            uIItemEdit2.Text = this.MotoAWAPParams.UIItemEditText2;
+            uIItemEdit2.Text = this.MotoAWAPParams.Premium;
 
-            Mouse.Click(uIItemEdit3, new Point(31, 6));
+            uIItemEdit3.Text = this.MotoAWAPParams.VolExcess;
 
             Mouse.Click(uIOKButton, new Point(49, 9));
 
@@ -400,9 +283,6 @@
             this.SelectTamInsurersAndActivity(false);
         }
 
-        /// <summary>
-        ///     MotoAmendRiskRenew - Use 'MotoAmendRiskRenewParams' to pass parameters into this method.
-        /// </summary>
         public void MotoAmendRiskRenew()
         {
             #region Variable Declarations
@@ -450,9 +330,6 @@
             Mouse.Click(uIYesButton1, new Point(19, 10));
         }
 
-        /// <summary>
-        ///     MotoAmendRiskNew_1 - Use 'MotoAmendRiskNew_1Params' to pass parameters into this method.
-        /// </summary>
         public void MotoAmendRiskNew1()
         {
             #region Variable Declarations
@@ -467,25 +344,15 @@
 
             #endregion
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
-
             uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
 
             Mouse.Click(uIOKButton, new Point(59, 11));
 
             Mouse.Click(uIOKButton1, new Point(54, 6));
 
-            //Playback.PlaybackSettings.ContinueOnError = false;
-
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIOKButton2, new Point(47, 13));
-
-            //Mouse.Click(uIOKButton3, new Point(55, 14));
-
-            //uIItemList.SelectedItemsAsString = this.MotoAmendRiskNew1Params.UIItemListSelectedItemsAsString;
-
-            //Mouse.Click(uIOKButton4, new Point(56, 11));
 
             this.SelectTamInsurersAndActivity(false);
 
@@ -496,9 +363,6 @@
             Mouse.Click(uIYesButton, new Point(51, 7));
         }
 
-        /// <summary>
-        ///     MotoCopyCheckProposer - Use 'MotoCopyCheckProposerExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void MotoCopyCheckProposer()
         {
             #region Variable Declarations
@@ -510,18 +374,15 @@
 
             #endregion
 
-            Assert.AreEqual(this.MotoCopyCheckProposerExpectedValues.UIItemEditText, uIItemEdit.Text);
+            Assert.AreEqual(this.MotoCopyCheckProposerExpectedValues.Firstname, uIItemEdit.Text);
 
-            Assert.AreEqual(this.MotoCopyCheckProposerExpectedValues.UIItemEditText1, uIItemEdit1.Text);
+            Assert.AreEqual(this.MotoCopyCheckProposerExpectedValues.DateOfBirth, uIItemEdit1.Text);
 
-            Assert.AreEqual(this.MotoCopyCheckProposerExpectedValues.UIItemEditText2, uIItemEdit2.Text);
+            Assert.AreEqual(this.MotoCopyCheckProposerExpectedValues.Postcode, uIItemEdit2.Text);
 
-            Assert.AreEqual(this.MotoCopyCheckProposerExpectedValues.UIItemEditText3, uIItemEdit3.Text);
+            Assert.AreEqual(this.MotoCopyCheckProposerExpectedValues.AddressLine1, uIItemEdit3.Text);
         }
 
-        /// <summary>
-        ///     MotoCopyCheckCar - Use 'MotoCopyCheckCarExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void MotoCopyCheckCar()
         {
             #region Variable Declarations
@@ -531,29 +392,23 @@
 
             #endregion
 
-            Assert.AreEqual(this.MotoCopyCheckCarExpectedValues.UIItemEditText, uIItemEdit.Text);
+            Assert.AreEqual(this.MotoCopyCheckCarExpectedValues.VehicleReg, uIItemEdit.Text);
 
-            Assert.AreEqual(this.MotoCopyCheckCarExpectedValues.UIItemEditText1, uIItemEdit1.Text);
+            Assert.AreEqual(this.MotoCopyCheckCarExpectedValues.VehicleCost, uIItemEdit1.Text);
         }
 
-        /// <summary>
-        ///     MotoCloseDetails
-        /// </summary>
         public void MotoCloseDetails()
         {
             #region Variable Declarations
 
-            WinButton uICancelButton = this.map.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UICancelWindow.UICancelButton;
+            WinButton uICancelButton = this.map.UIPolicyautotestWindow.UIBillingScreenWindow.UICancelWindow.UICancelButton;
 
             #endregion
 
             Mouse.Click(uICancelButton, new Point(32, 12));
         }
 
-        /// <summary>
-        ///     MotoCloseAndOpenPolicyList
-        /// </summary>
-        public void MotoCloseAndOpenPolicyList()
+        public void CloseAndOpenPolicyList()
         {
             #region Variable Declarations
 
@@ -570,51 +425,39 @@
             Mouse.Click(uIDetailButton, new Point(52, 11));
         }
 
-        /// <summary>
-        ///     MotoCheckPolicyStatus - Use 'MotoCheckPolicyStatusExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void MotoCheckPolicyStatus()
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.map.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UIItemWindow1.UIItemEdit;
+            WinEdit uIItemEdit = this.map.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow1.UIItemEdit;
 
             #endregion
 
             Assert.AreEqual(this.MotoCheckPolicyStatusExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
-        /// <summary>
-        ///     MotoCheckChangedPremium - Use 'MotoCheckChangedPremiumExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void MotoCheckChangedPremium()
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.map.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.map.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
 
             #endregion
 
             Assert.AreEqual(this.MotoCheckChangedPremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
-        /// <summary>
-        ///     MotoCheckAWAPpremium - Use 'MotoCheckAWAPpremiumExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void MotoCheckAWAPpremium()
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.map.UIPolicyautotestWindow.UIBillingScreenMotoWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.map.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
 
             #endregion
 
             Assert.AreEqual(this.MotoCheckAWAPpremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
-        /// <summary>
-        ///     MotoCancelPolicy_1
-        /// </summary>
         public void MotoCancelPolicy1()
         {
             #region Variable Declarations
@@ -629,9 +472,6 @@
             Mouse.Click(uINOButton, new Point(22, 18));
         }
 
-        /// <summary>
-        ///     MotoCancelPolicy - Use 'MotoCancelPolicyParams' to pass parameters into this method.
-        /// </summary>
         public void MotoCancelPolicy()
         {
             #region Variable Declarations
@@ -649,9 +489,6 @@
             Mouse.Click(uICalculateQuoteButton, new Point(67, 12));
         }
 
-        /// <summary>
-        ///     MotoCalculate
-        /// </summary>
         public void MotoCalculate()
         {
             #region Variable Declarations
@@ -663,9 +500,6 @@
             Mouse.Click(uICalculateQuoteButton, new Point(69, 13));
         }
 
-        /// <summary>
-        ///     MotoAmendRiskNew
-        /// </summary>
         public void MotoAmendRiskNew()
         {
             #region Variable Declarations
@@ -685,9 +519,6 @@
             Mouse.Click(uIOKButton, new Point(37, 9));
         }
 
-        /// <summary>
-        ///     MotoAmendRisk - Use 'MotoAmendRiskParams' to pass parameters into this method.
-        /// </summary>
         public void MotoAmendRisk()
         {
             #region Variable Declarations
@@ -704,11 +535,11 @@
 
             Mouse.Click(uIAmendRiskButton, new Point(80, 11));
 
-            uIItemEdit.Text = this.MotoAmendRiskParams.UIItemEditText;
+            uIItemEdit.Text = this.MotoAmendRiskParams.VehicleCostNew;
 
             Mouse.Click(uIProposerDetailsButton, new Point(66, 12));
 
-            uIItemEdit1.Text = this.MotoAmendRiskParams.UIItemEditText1;
+            uIItemEdit1.Text = this.MotoAmendRiskParams.SurnameNew;
 
             Mouse.Click(uIOKButton, new Point(50, 11));
 
@@ -717,9 +548,6 @@
             Mouse.Click(uINOButton, new Point(50, 0));
         }
 
-        /// <summary>
-        ///     MotoSelectHighwayPolicy - Use 'MotoSelectHighwayPolicyParams' to pass parameters into this method.
-        /// </summary>
         public void MotoSelectHighwayPolicy()
         {
             #region Variable Declarations
@@ -733,9 +561,6 @@
             Keyboard.SendKeys(uIQuoteResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
         }
 
-        /// <summary>
-        ///     MotoSearchCar - Use 'MotoSearchCarParams' to pass parameters into this method.
-        /// </summary>
         public void MotoSearchCar()
         {
             #region Variable Declarations
@@ -756,11 +581,11 @@
 
             Mouse.Click(uIOKButton, new Point(40, 9));
 
-            uIItemComboBox.SelectedItem = this.QuoteResultsParams.UIItemComboBoxSelectedItem;
+            uIItemComboBox.SelectedItem = this.QuoteResultsParams.JobTitle;
 
-            uIItemComboBox1.SelectedItem = this.QuoteResultsParams.UIItemComboBoxSelectedItem1;
+            uIItemComboBox1.SelectedItem = this.QuoteResultsParams.JobSector;
 
-            uIItemEdit.Text = this.QuoteResultsParams.UIItemEditText;
+            uIItemEdit.Text = this.QuoteResultsParams.LicenceDate;
 
             Mouse.Click(uIOKButton1, new Point(45, 18));
 
@@ -774,13 +599,10 @@
 
             uIItemEdit1.Text = this.QuoteResultsParams.CarRegFordFiesta;
 
-            uIItemEdit2.Text = this.QuoteResultsParams.UIItemEditText2;
+            uIItemEdit2.Text = this.QuoteResultsParams.VehicleCost;
         }
 
-        /// <summary>
-        ///     MotoRegressAppFinish
-        /// </summary>
-        public void MotoRegressAppFinish()
+        public void RegressAppFinish()
         {
             #region Variable Declarations
 
@@ -791,10 +613,7 @@
             Mouse.Click(uIRegressButton, new Point(47, 22));
         }
 
-        /// <summary>
-        ///     MotoRegressApp - Use 'MotoRegressAppParams' to pass parameters into this method.
-        /// </summary>
-        public void MotoRegressApp()
+        public void RegressApp(string customer)
         {
             #region Variable Declarations
 
@@ -805,15 +624,11 @@
 
             ApplicationUnderTest.Launch(this.MotoRegressAppParams.ExePath, this.MotoRegressAppParams.AlternateExePath);
 
-            uIItemEdit.Text = this.MotoRegressAppParams.UIItemEditText;
+            uIItemEdit.Text = customer;
 
             uIItemEdit1.Text = this.MotoRegressAppParams.UIItemEditText1;
         }
 
-        /// <summary>
-        ///     MotoRebrokeSelectScheme - Use 'MotoRebrokeSelectSchemeParams' to pass parameters into this method.
-        /// </summary>
-        /// <param name="withSendKeys"></param>
         public void MotoRebrokeSelectScheme(string withSendKeys)
         {
             #region Variable Declarations
@@ -900,13 +715,13 @@
 
             Mouse.Click(uIOKButton, new Point(41, 13));
 
-            uIItemEdit.Text = this.MotoPostcodeLookupParams.UIItemEditText;
+            uIItemEdit.Text = this.ProposerParams.Firstname;
 
-            uIItemEdit1.Text = this.MotoPostcodeLookupParams.UIItemEditText1;
+            uIItemEdit1.Text = this.ProposerParams.Lastname;
 
-            uIItemEdit2.Text = this.MotoPostcodeLookupParams.UIItemEditText2;
+            uIItemEdit2.Text = this.ProposerParams.DateOfBirth;
 
-            uIItemEdit3.Text = this.MotoPostcodeLookupParams.UIItemEditText3;
+            uIItemEdit3.Text = this.ProposerParams.Postcode;
 
             Mouse.Click(uILookupButton, new Point(9, 12));
 
@@ -932,15 +747,13 @@
 
             Mouse.Click(uIOKButton, new Point(52, 17));
 
-            uIItemEdit.Text = this.MotoPolicyPersonParams.UIItemEditText;
+            uIItemEdit.Text = this.ProposerParams.Firstname;
 
-            Keyboard.SendKeys(uIItemEdit, this.MotoPolicyPersonParams.UIItemEditSendKeys, ModifierKeys.None);
+            uIItemEdit1.Text = this.ProposerParams.Lastname;
 
-            uIItemEdit1.Text = this.MotoPolicyPersonParams.UIItemEditText1;
+            uIItemEdit2.Text = this.ProposerParams.DateOfBirth;
 
-            uIItemEdit2.Text = this.MotoPolicyPersonParams.UIItemEditText2;
-
-            uIItemEdit3.Text = this.MotoPolicyPersonParams.UIItemEditText3;
+            uIItemEdit3.Text = this.ProposerParams.Postcode;
 
             Mouse.Click(uILookupButton, new Point(34, 13));
 
@@ -984,7 +797,7 @@
             #endregion
 
             // Select 'Change of Driver' in combo box
-            uIItemComboBox.SelectedItem = this.MotoMTANoSaveParams.UIItemComboBoxSelectedItem;
+            uIItemComboBox.SelectedItem = this.MotoMTAParams.UIChangeOfVehicle;
 
             Mouse.Click(uIOKButton, new Point(42, 16));
 
@@ -1219,11 +1032,11 @@
 
             Mouse.Click(uIMTAButton, new Point(53, 9));
 
-            uIItemComboBox.SelectedItem = this.MotoMTABefore2Params.UIItemComboBoxSelectedItem;
+            uIItemComboBox.SelectedItem = this.MotoMTAParams.UIChangeOfVehicle;
 
             Mouse.Click(uIOKButton1, new Point(36, 16));
 
-            uIItemEdit.Text = this.MotoMTABefore2Params.UIItemEditText;
+            uIItemEdit.Text = this.MotoMTAParams.VehicleRegistration1;
 
             Mouse.Click(uICalculateQuoteButton, new Point(59, 11));
         }
@@ -1251,12 +1064,11 @@
 
             Mouse.Click(uIMTAButton, new Point(44, 11));
 
-            uIItemComboBox.SelectedItem = this.MotoMTABeforeParams.UIItemComboBoxSelectedItem;
+            uIItemComboBox.SelectedItem = this.MotoMTAParams.UIChangeOfVehicle;
 
             Mouse.Click(uIOKButton1, new Point(44, 21));
 
-            // Type '77777' in text box
-            uIItemEdit.Text = this.MotoMTABeforeParams.UIItemEditText;
+            uIItemEdit.Text = this.MotoMTAParams.VehicleRegistration2;
 
             Mouse.Click(uICalculateQuoteButton, new Point(61, 15));
         }
@@ -1275,11 +1087,11 @@
 
             #endregion
 
-            uIItemComboBox.SelectedItem = this.MotoMTAAcceptParams.UIItemComboBoxSelectedItem;
+            uIItemComboBox.SelectedItem = this.MotoMTAParams.UIChangeOfVehicle;
 
             Mouse.Click(uIOKButton, new Point(28, 12));
 
-            uIItemEdit.Text = this.MotoMTAAcceptParams.UIItemEditText;
+            uIItemEdit.Text = this.MotoMTAParams.CostOfVehicle;
 
             Mouse.Click(uICalculateQuoteButton, new Point(68, 4));
         }
@@ -1319,8 +1131,7 @@
 
             #endregion
 
-            // Type '13/11/12' in text box
-            uIItemEdit.Text = this.MotoInceptionDateParams.UIItemEditText;
+            uIItemEdit.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
         }
 
         /// <summary>
@@ -1487,11 +1298,11 @@
 
             Mouse.Click(uIOKButton, new Point(44, 12));
 
-            uIItemComboBox.SelectedItem = this.QuoteResultsParams.UIItemComboBoxSelectedItem;
+            uIItemComboBox.SelectedItem = this.QuoteResultsParams.JobTitle;
 
-            uIItemComboBox1.SelectedItem = this.QuoteResultsParams.UIItemComboBoxSelectedItem1;
+            uIItemComboBox1.SelectedItem = this.QuoteResultsParams.JobSector;
 
-            uIItemEdit.Text = this.QuoteResultsParams.UIItemEditText;
+            uIItemEdit.Text = this.QuoteResultsParams.LicenceDate;
 
             Mouse.Click(uIOKButton1, new Point(38, 4));
 
@@ -1501,7 +1312,7 @@
             //Mouse.Click(uIFilterButton, new Point(59, 14));
             this.VehicleLookup();
 
-            uIItemEdit2.Text = this.QuoteResultsParams.UIItemEditText2;
+            uIItemEdit2.Text = this.QuoteResultsParams.VehicleCost;
 
             uIItemEdit3.Text = this.QuoteResultsParams.CarRegFordFiesta;
 

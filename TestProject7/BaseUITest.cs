@@ -64,6 +64,7 @@
         [DeploymentItem(@"RegistrySettings")]
         public void StartTest()
         {
+            Playback.PlaybackSettings.SearchTimeout = 30000;
             this.TestName = this.TestContext.TestName;
             this.TestLinkInitialize();
 
@@ -111,12 +112,6 @@
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "office");
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "office");
         }
-
-        //public void SetOfficeNewTest()
-        //{
-        //    RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "newtest");
-        //    RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "livetest");
-        //}
 
         public static void CloseProcess(string name)
         {

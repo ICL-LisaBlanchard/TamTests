@@ -5,29 +5,20 @@
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    public class UIConfirmWindow : WinWindow
+    public class UIMicrosoftOfficeWordVWindow : WinWindow
     {
-        public UIConfirmWindow()
+        public UIMicrosoftOfficeWordVWindow()
         {
             #region Search Criteria
 
-            this.windowTitle = "Confirm";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "Microsoft Office Word Viewer";
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add(this.windowTitle);
+            this.WindowTitles.Add("Microsoft Office Word Viewer");
 
             #endregion
         }
 
         #region Properties
-
-        public UIItemWindow UIYesWindow
-        {
-            get
-            {
-                return new UIItemWindow(this, "6");
-            }
-        }
 
         public UIItemWindow UIOKWindow
         {
@@ -35,7 +26,7 @@
             {
                 if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, "1");
+                    this.mUIOKWindow = new UIItemWindow(this, "2");
                 }
                 return this.mUIOKWindow;
             }
@@ -44,10 +35,6 @@
         #endregion
 
         #region Fields
-
-        private readonly string windowTitle;
-
-        private UIItemWindow mUIYesWindow;
 
         private UIItemWindow mUIOKWindow;
 

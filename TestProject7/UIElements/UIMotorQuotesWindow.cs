@@ -13,6 +13,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             #region Search Criteria
 
             this.SearchProperties[WinControl.PropertyNames.ControlId] = "32768";
+            this.WindowTitles.Add("Personal Lines");
 
             #endregion
         }

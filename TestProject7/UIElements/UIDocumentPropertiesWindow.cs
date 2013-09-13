@@ -5,27 +5,30 @@
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    public class UIConfirmWindow : WinWindow
+    public class UIDocumentPropertiesWindow : WinWindow
     {
-        public UIConfirmWindow()
+        public UIDocumentPropertiesWindow()
         {
             #region Search Criteria
 
-            this.windowTitle = "Confirm";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "Document Properties";
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add(this.windowTitle);
+            this.WindowTitles.Add("Document Properties");
 
             #endregion
         }
 
         #region Properties
 
-        public UIItemWindow UIYesWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
-                return new UIItemWindow(this, "6");
+                if ((this.mUIItemWindow == null))
+                {
+                    this.mUIItemWindow = new UIItemWindow(this, "1211");
+                }
+                return this.mUIItemWindow;
             }
         }
 
@@ -45,9 +48,7 @@
 
         #region Fields
 
-        private readonly string windowTitle;
-
-        private UIItemWindow mUIYesWindow;
+        private UIItemWindow mUIItemWindow;
 
         private UIItemWindow mUIOKWindow;
 

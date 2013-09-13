@@ -5,27 +5,30 @@
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    public class UIConfirmWindow : WinWindow
+    public class UIOpenwithWindow : WinWindow
     {
-        public UIConfirmWindow()
+        public UIOpenwithWindow()
         {
             #region Search Criteria
 
-            this.windowTitle = "Confirm";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "Open with";
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add(this.windowTitle);
+            this.WindowTitles.Add("Open with");
 
             #endregion
         }
 
         #region Properties
 
-        public UIItemWindow UIYesWindow
+        public UIItemWindow UIItemWindow
         {
             get
             {
-                return new UIItemWindow(this, "6");
+                if ((this.mUIItemWindow == null))
+                {
+                    this.mUIItemWindow = new UIItemWindow(this, "13829");
+                }
+                return this.mUIItemWindow;
             }
         }
 
@@ -45,9 +48,7 @@
 
         #region Fields
 
-        private readonly string windowTitle;
-
-        private UIItemWindow mUIYesWindow;
+        private UIItemWindow mUIItemWindow;
 
         private UIItemWindow mUIOKWindow;
 

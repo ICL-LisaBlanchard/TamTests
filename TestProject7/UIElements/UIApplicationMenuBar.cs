@@ -7,13 +7,16 @@
 
     public class UIApplicationMenuBar : WinMenuBar
     {
-        public UIApplicationMenuBar(UITestControl searchLimitContainer)
+        public UIApplicationMenuBar(UITestControl searchLimitContainer, string name)
             : base(searchLimitContainer)
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Application";
-            this.WindowTitles.Add("Policy: autotest");
+            this.SearchProperties[UITestControl.PropertyNames.Name] = name;
+            foreach (string windowTitle in searchLimitContainer.WindowTitles)
+            {
+                this.WindowTitles.Add(windowTitle);
+            }
 
             #endregion
         }
@@ -25,6 +28,22 @@
             get
             {
                 return new UIMenuListItem(this, "Options");
+            }
+        }
+
+        public UIMenuListItem UIFileMenuItem
+        {
+            get
+            {
+                return new UIMenuListItem(this, "File");
+            }
+        }
+
+        public UIMenuListItem UIEditMenuItem
+        {
+            get
+            {
+                return new UIMenuListItem(this, "Edit");
             }
         }
 

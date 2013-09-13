@@ -60,6 +60,42 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
 
+        public UIPolicyAttachmentsWindow UIPolicyAttachmentsWindow
+        {
+            get
+            {
+                if ((this.mUIPolicyAttachmentsWindow == null))
+                {
+                    this.mUIPolicyAttachmentsWindow = new UIPolicyAttachmentsWindow();
+                }
+                return this.mUIPolicyAttachmentsWindow;
+            }
+        }
+
+        public UIAttachmentDetailWindow UIAttachmentDetailWindow
+        {
+            get
+            {
+                if ((this.mUIAttachmentDetailWindow == null))
+                {
+                    this.mUIAttachmentDetailWindow = new UIAttachmentDetailWindow();
+                }
+                return this.mUIAttachmentDetailWindow;
+            }
+        }
+
+        public UIAttatchmentsMenuWindow UIAttachmentsMenuWindow
+        {
+            get
+            {
+                if ((this.mUIAttatchmentsMenuWindow == null))
+                {
+                    this.mUIAttatchmentsMenuWindow = new UIAttatchmentsMenuWindow();
+                }
+                return this.mUIAttatchmentsMenuWindow;
+            }
+        }
+
         public UITheAgencyManagerWindow1 UITheAgencyManagerWindow1
         {
             get
@@ -885,15 +921,27 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UIHouseholdRenewalsAmeWindow UIHouseholdRenewalsAmeWindow
+        public UIHouseholdRenewalsWindow UIHouseholdRenewalsWindow
         {
             get
             {
-                if ((this.mUIHouseholdRenewalsAmeWindow == null))
+                if ((this.mUIHouseholdRenewalsWindow == null))
                 {
-                    this.mUIHouseholdRenewalsAmeWindow = new UIHouseholdRenewalsAmeWindow();
+                    this.mUIHouseholdRenewalsWindow = new UIHouseholdRenewalsWindow();
                 }
-                return this.mUIHouseholdRenewalsAmeWindow;
+                return this.mUIHouseholdRenewalsWindow;
+            }
+        }
+
+        public UIHouseholdRenewalsResultsWindow UIHouseholdRenewalsResultsWindow
+        {
+            get
+            {
+                if ((this.mUIHouseholdRenewalsResultsWindow == null))
+                {
+                    this.mUIHouseholdRenewalsResultsWindow = new UIHouseholdRenewalsResultsWindow();
+                }
+                return this.mUIHouseholdRenewalsResultsWindow;
             }
         }
         
@@ -1029,9 +1077,119 @@ namespace AppliedSystems.Tam.Ui.Tests
                 return this.mTopWindow;
             }
         }
+
+        public UIViewAttachmentWindow UIViewAttachmentWindow
+        {
+            get
+            {
+                if ((this.mUIViewAttachmentWindow == null))
+                {
+                    this.mUIViewAttachmentWindow = new UIViewAttachmentWindow();
+                }
+                return this.mUIViewAttachmentWindow;
+            }
+        }
+
+        public UIOpenwithWindow UIOpenwithWindow
+        {
+            get
+            {
+                if ((this.mUIOpenwithWindow == null))
+                {
+                    this.mUIOpenwithWindow = new UIOpenwithWindow();
+                }
+                return this.mUIOpenwithWindow;
+            }
+        }
+
+        public UIIEPolicyDocumentWindow UIIEPolicyDocumentWindow
+        {
+            get
+            {
+                if (this.mUIIEPolicyDocumentWindow == null)
+                {
+                    this.mUIIEPolicyDocumentWindow = new UIIEPolicyDocumentWindow();
+                }
+                return this.mUIIEPolicyDocumentWindow;
+            }
+        }
+
+        public UIItemPdfSecureWindow UIItemPdfSecureWindow
+        {
+            get
+            {
+                if ((this.mUIItemPdfSecureWindow == null))
+                {
+                    this.mUIItemPdfSecureWindow = new UIItemPdfSecureWindow();
+                }
+                return this.mUIItemPdfSecureWindow;
+            }
+        }
+
+        public UIDocumentPropertiesWindow UIDocumentPropertiesWindow
+        {
+            get
+            {
+                if ((this.mUIDocumentPropertiesWindow == null))
+                {
+                    this.mUIDocumentPropertiesWindow = new UIDocumentPropertiesWindow();
+                }
+                return this.mUIDocumentPropertiesWindow;
+            }
+        }
+
+        public UIDemand2DocMicrosoftWWindow UIDemand2docMicrosoftWWindow
+        {
+            get
+            {
+                if ((this.mUIDemand2docMicrosoftWWindow == null))
+                {
+                    this.mUIDemand2docMicrosoftWWindow = new UIDemand2DocMicrosoftWWindow();
+                }
+                return this.mUIDemand2docMicrosoftWWindow;
+            }
+        }
+
+        public UIFindandGotoWindow UIFindandGotoWindow
+        {
+            get
+            {
+                if ((this.mUIFindandGotoWindow == null))
+                {
+                    this.mUIFindandGotoWindow = new UIFindandGotoWindow();
+                }
+                return this.mUIFindandGotoWindow;
+            }
+        }
+
+        public UIMicrosoftOfficeWordVWindow UIMicrosoftOfficeWordVWindow
+        {
+            get
+            {
+                if ((this.mUIMicrosoftOfficeWordVWindow == null))
+                {
+                    this.mUIMicrosoftOfficeWordVWindow = new UIMicrosoftOfficeWordVWindow();
+                }
+                return this.mUIMicrosoftOfficeWordVWindow;
+            }
+        }
         #endregion
         
         #region Fields
+
+
+        private UIDemand2DocMicrosoftWWindow mUIDemand2docMicrosoftWWindow;
+
+        private UIFindandGotoWindow mUIFindandGotoWindow;
+
+        private UIMicrosoftOfficeWordVWindow mUIMicrosoftOfficeWordVWindow;
+
+        private UIItemPdfSecureWindow mUIItemPdfSecureWindow;
+
+        private UIDocumentPropertiesWindow mUIDocumentPropertiesWindow;
+
+        private UIIEPolicyDocumentWindow mUIIEPolicyDocumentWindow;
+
         private UITheAgencyManagerSignWindow mUITheAgencyManagerSignWindow;
         
         private UITheAgencyManagerWindow1 mUITheAgencyManagerWindow1;
@@ -1170,7 +1328,7 @@ namespace AppliedSystems.Tam.Ui.Tests
         
         private UIAUTO2251001Window mUIAUTO2251001Window;
         
-        private UIHouseholdRenewalsAmeWindow mUIHouseholdRenewalsAmeWindow;
+        private UIHouseholdRenewalsWindow mUIHouseholdRenewalsWindow;
         
         private UICreditCheckAtRenewalWindow mUICreditCheckAtRenewalWindow;
         
@@ -1198,6 +1356,19 @@ namespace AppliedSystems.Tam.Ui.Tests
 
         private TopWindow mTopWindow;
 
+        private UIHouseholdRenewalsResultsWindow mUIHouseholdRenewalsResultsWindow;
+
+        private UIPolicyAttachmentsWindow mUIPolicyAttachmentsWindow;
+
+        private UIViewAttachmentWindow mUIViewAttachmentWindow;
+
+        private UIOpenwithWindow mUIOpenwithWindow;
+
+        private UIAttatchmentsMenuWindow mUIAttatchmentsMenuWindow;
+
+        private UIAttachmentDetailWindow mUIAttachmentDetailWindow;
         #endregion
+
+
     }
 }

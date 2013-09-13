@@ -10,12 +10,12 @@
         /// <summary>
         /// Type '1500' in text box
         /// </summary>
-        public string UIItemEditText = "1500";
+        public string VehicleCostNew = "1500";
 
         /// <summary>
         /// Type 'NewTest' in text box
         /// </summary>
-        public string UIItemEditText1 = "NewTest";
+        public string SurnameNew = "NewTest";
 
         #endregion
     }

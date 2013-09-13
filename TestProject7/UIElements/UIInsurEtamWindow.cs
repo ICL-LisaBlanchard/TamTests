@@ -11,6 +11,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
             this.SearchProperties[UITestControl.PropertyNames.Name] = "Personal Lines";
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6MDIForm";
+            this.WindowTitles.Add("Personal Lines");
 
             #endregion
         }

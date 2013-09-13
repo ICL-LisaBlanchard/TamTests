@@ -5,12 +5,19 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
 
     public class UIButton : WinButton
     {
-        public UIButton(UITestControl uiItemWindow, string name)
+        public UIButton(UITestControl uiItemWindow, string name, bool useContains = true)
             : base(uiItemWindow)
         {
             if (!string.IsNullOrEmpty(name))
             {
-                this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, name, PropertyExpressionOperator.Contains));
+                if (useContains)
+                {
+                    this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, name, PropertyExpressionOperator.Contains));
+                }
+                else
+                {
+                    this.SearchProperties[UITestControl.PropertyNames.Name] = name;
+                }
             }
 
             foreach (string w in uiItemWindow.WindowTitles)

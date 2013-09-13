@@ -10,7 +10,7 @@
         /// <summary>
         /// Select 'Customers' in combo box
         /// </summary>
-        public string UIItemComboBoxSelectedItem = "Customers";
+        public string SelectCustomers = "Customers";
 
         /// <summary>
         /// Type 'autotest' in text box
@@ -25,12 +25,12 @@
         /// <summary>
         /// Type '1' in text box
         /// </summary>
-        public string UIItemEditText1 = "1";
+        public string Agency = "1";
 
         /// <summary>
         /// Type '1' in text box
         /// </summary>
-        public string UIItemEditText2 = "1";
+        public string Branch = "1";
 
         #endregion
     }

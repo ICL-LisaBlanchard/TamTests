@@ -10,17 +10,17 @@ namespace AppliedSystems.Tam.Ui.Tests.Params
         /// <summary>
         /// Select 'Account Executive' in combo box
         /// </summary>
-        public string UIItemComboBoxSelectedItem = "Account Executive";
+        public string JobTitle = "Account Executive";
 
         /// <summary>
         /// Select 'Acupuncture' in combo box
         /// </summary>
-        public string UIItemComboBoxSelectedItem1 = "Acupuncture";
+        public string JobSector = "Acupuncture";
 
         /// <summary>
         /// Type '151101' in text box
         /// </summary>
-        public string UIItemEditText = "151101";
+        public string LicenceDate = "151101";
 
         /// <summary>
         /// Type 'RF53OXL' in text box
@@ -32,7 +32,7 @@ namespace AppliedSystems.Tam.Ui.Tests.Params
         /// <summary>
         /// Type '1000' in text box
         /// </summary>
-        public string UIItemEditText2 = "1000";
+        public string VehicleCost = "1000";
 
         #endregion
     }
