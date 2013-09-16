@@ -15,9 +15,9 @@
             this.SearchProperties[PropertyNames.FrameDocument] = "False";
             this.FilterProperties[HtmlControl.PropertyNames.Title] = null;
 
-            this.SearchProperties.Add(new PropertyExpression(PropertyNames.AbsolutePath, "HHQuot", PropertyExpressionOperator.Contains));
-            this.SearchProperties.Add(new PropertyExpression(PropertyNames.PageUrl, "HHQuot", PropertyExpressionOperator.Contains));
-            this.WindowTitles.Add("\\HHQuote.htm");
+            this.SearchProperties.Add(new PropertyExpression(PropertyNames.AbsolutePath, "Quot", PropertyExpressionOperator.Contains));
+            this.SearchProperties.Add(new PropertyExpression(PropertyNames.PageUrl, "Quot", PropertyExpressionOperator.Contains));
+            this.WindowTitles.Add("Quote.htm");
 
             #endregion
         }

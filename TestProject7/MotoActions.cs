@@ -240,7 +240,7 @@
             uIInsurEcomSystemMaintWindow.PerformDialogAction(BrowserDialogAction.Ok);
         }
 
-        public void MotoAwap()
+        public void MotoAwap(string revisedPremium)
         {
             #region Variable Declarations
 
@@ -266,7 +266,7 @@
 
             uIItemEdit1.Text = this.MotoAWAPParams.PolicyNumber;
 
-            uIItemEdit2.Text = this.MotoAWAPParams.Premium;
+            uIItemEdit2.Text = revisedPremium;
 
             uIItemEdit3.Text = this.MotoAWAPParams.VolExcess;
 
@@ -447,7 +447,7 @@
             Assert.AreEqual(this.MotoCheckChangedPremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
-        public void MotoCheckAWAPpremium()
+        public void MotoCheckAWAPpremium(string expectedPremium)
         {
             #region Variable Declarations
 
@@ -455,7 +455,7 @@
 
             #endregion
 
-            Assert.AreEqual(this.MotoCheckAWAPpremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
+            Assert.AreEqual(expectedPremium, uIItemEdit.Text);
         }
 
         public void MotoCancelPolicy1()

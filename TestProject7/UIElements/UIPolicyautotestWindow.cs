@@ -115,6 +115,26 @@
             }
         }
 
+        public UIItemWindow UIInvoicesWindow
+        {
+            get
+            {
+                return new UIItemWindow(this, "26");
+            }
+        }
+
+        public UITransactionListWindow UITransactionListWindow
+        {
+            get
+            {
+                if ((this.mUITransactionListWindow == null))
+                {
+                    this.mUITransactionListWindow = new UITransactionListWindow(this);
+                }
+                return this.mUITransactionListWindow;
+            }
+        }
+
         #endregion
 
         #region Fields
@@ -134,6 +154,8 @@
         private UITestControl mUIItemWindow1;
 
         private UICustomersWindow mUICustomersWindow;
+
+        private UITransactionListWindow mUITransactionListWindow;
 
         #endregion
 

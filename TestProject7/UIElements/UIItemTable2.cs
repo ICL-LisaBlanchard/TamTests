@@ -50,6 +50,31 @@
             }
         }
 
+        public HtmlCell UIItem181873Cell
+        {
+            get
+            {
+                if ((this.mUIItem181873Cell == null))
+                {
+                    this.mUIItem181873Cell = new HtmlCell(this);
+
+                    #region Search Criteria
+
+                    this.mUIItem181873Cell.SearchProperties[HtmlControl.PropertyNames.Id] = null;
+                    this.mUIItem181873Cell.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUIItem181873Cell.SearchProperties[UITestControl.PropertyNames.MaxDepth] = "3";
+                    this.mUIItem181873Cell.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = null;
+                    this.mUIItem181873Cell.FilterProperties[HtmlCell.PropertyNames.RowIndex] = "2";
+                    this.mUIItem181873Cell.FilterProperties[HtmlCell.PropertyNames.ColumnIndex] = "1";
+                    this.mUIItem181873Cell.FilterProperties[HtmlControl.PropertyNames.Class] = null;
+                    this.mUIItem181873Cell.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "9";
+
+                    #endregion
+                }
+                return this.mUIItem181873Cell;
+            }
+        }
+
         public HtmlCell UIMrTestTestCell
         {
             get
@@ -80,6 +105,8 @@
         #region Fields
 
         private HtmlCell mUIItem26652Cell;
+
+        private HtmlCell mUIItem181873Cell;
 
         private HtmlCell mUIMrTestTestCell;
 

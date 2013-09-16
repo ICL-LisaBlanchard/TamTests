@@ -390,14 +390,7 @@
 
             #endregion
 
-            if (string.IsNullOrEmpty(withDate))
-            {
-                uIItemEdit.Text = DateTime.Now.AddDays(1).ToString("dd/MM/yy");
-            }
-            else
-            {
-                uIItemEdit.Text = withDate;
-            }
+            uIItemEdit.Text = string.IsNullOrEmpty(withDate) ? DateTime.Now.AddDays(1).ToString("dd/MM/yy") : withDate;
         }
 
         /// <summary>
@@ -1544,6 +1537,15 @@
             Mouse.Click(uIItemEdit, new Point(45, 4));
         }
 
+        public string CheckPolicyPremium()
+        {
+            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
+
+            Assert.AreNotEqual("0.00", uIItemEdit.Text);
+
+            return uIItemEdit.Text;
+        }
+
         /// <summary>
         ///     RebrokeSelectAlternative
         /// </summary>
@@ -1894,6 +1896,88 @@
             Playback.PlaybackSettings.SearchTimeout = timeout;
         }
 
+        public void CheckCorrectNumberTrans(int expected)
+        {
+            WinButton uIInvoicesButton = this.UIPolicyautotestWindow.UIInvoicesWindow.UIInvoicesButton;
+            WinButton uIDetailButton = this.UIPolicyautotestWindow.UITransactionListWindow.UIDetailWindow.UIDetailButton;
+            WinButton uICancelButton = this.UIUpdateGeneralTransacWindow.UICancelWindow.UICancelButton;
+            WinList uILvwVListList = this.UITransactionListWindow.UILvwVListWindow.UIList("Enter Code");
+            WinButton uICloseButton = this.UITransactionListWindow.UICloseWindow.UICloseButton;
+            WinButton uiCancelButton2 = this.UIPolicyautotestWindow.UITransactionListWindow.UICancelWindow.UICancelButton;
+
+            Mouse.Click(uIInvoicesButton);
+
+            Mouse.Click(uIDetailButton);
+
+            Mouse.Click(uICancelButton);
+
+            Assert.AreEqual(uILvwVListList.Items.Count, expected, "Incorrect number of transactions.");
+
+            Mouse.Click(uICloseButton);
+
+            Mouse.Click(uiCancelButton2);
+        }
+
+        public void OpenTransList(Dictionary<string, string> expectedRows)
+        {
+            #region Variable Declarations
+
+            WinButton uIInvoicesButton = this.UIPolicyautotestWindow.UIInvoicesWindow.UIInvoicesButton;
+            WinButton uIDetailButton = this.UIPolicyautotestWindow.UITransactionListWindow.UIDetailWindow.UIDetailButton;
+            WinButton uICancelButton = this.UIUpdateGeneralTransacWindow.UICancelWindow.UICancelButton;
+            WinEdit uILblTranEdit = this.UIUpdateGeneralTransacWindow.UILblTranWindow.UIEdit("Tran");
+            WinEdit uILblBalanceEdit = this.UIUpdateGeneralTransacWindow.UILblBalanceWindow.UIEdit("Balance");
+            WinButton uICloseButton = this.UITransactionListWindow.UICloseWindow.UICloseButton;
+            WinClient uITransactionListClient = this.UIPolicyautotestWindow.UITransactionListWindow.UIItemWindow.UIClient();
+            WinButton uIOptionsButton = this.UIPolicyautotestWindow.UITransactionListWindow.UIOptionsWindow.UIOptionsButton;
+            WinButton uIOKButton = this.UICommissionAdjustmentWindow.UIOKWindow.UIOKButton;
+            WinButton uiCancelButton2 = this.UIPolicyautotestWindow.UITransactionListWindow.UICancelWindow.UICancelButton;
+
+            #endregion
+
+            WinButton uIYesButton = this.UIPolicyWindow.UIYesWindow.UIYesButton;
+            try
+            {
+                Mouse.Click(uIYesButton);
+            }
+            catch (Exception)
+            {
+            }
+
+            Mouse.Click(uIInvoicesButton);
+
+            Mouse.Click(uIDetailButton);
+
+            string premium;
+            bool b = expectedRows.TryGetValue(uILblTranEdit.Text, out premium);
+
+            Assert.IsTrue(b);
+            Assert.AreEqual(premium, uILblBalanceEdit.Text.Replace(",", ""));
+
+            Mouse.Click(uICancelButton);
+
+            Mouse.Click(uICloseButton);
+
+            Mouse.Click(uITransactionListClient, new Point(221, 40));
+
+            Mouse.Click(uIOptionsButton, new Point(21, 18));
+
+            Mouse.Click(uIDetailButton, new Point(50, 15));
+
+            Mouse.Click(uIOKButton, new Point(32, 7));
+
+            b = expectedRows.TryGetValue(uILblTranEdit.Text, out premium);
+            Assert.IsTrue(b);
+
+            Assert.AreEqual(premium, uILblBalanceEdit.Text.Replace(",", ""));
+
+            Mouse.Click(uICancelButton);
+
+            Mouse.Click(uICloseButton);
+
+            Mouse.Click(uiCancelButton2);
+        }
+
         public void CheckPremiumInQuoteDocument(List<Document> expectedDocs, double overridePremium = 0.00)
         {
             WinClient uIBillingScreenClient = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIPolicyDocumentsWindow.UIClient();
@@ -1930,13 +2014,20 @@
                 switch (filename)
                 {
                     case "HHQuote":
-
                         if (overridePremium > 0.0)
                         {
                             break;
                         }
-                        this.CheckPremiumInHhQuote(premium);
+                        this.CheckPremiumInQuote(premium, true);
                         break;
+                    case "Quote":
+                        if (overridePremium > 0.0)
+                        {
+                            break;
+                        }
+                        this.CheckPremiumInQuote(premium, false);
+                        break;
+
                     case "Schedule":
                         this.CheckPremiumInPdfProposal(premium);
                         break;
@@ -1991,13 +2082,21 @@
             return false;
         }
 
-        private void CheckPremiumInHhQuote(double premium)
+        private void CheckPremiumInQuote(double premium, bool isHouse)
         {
             this.OpenAttachment();
-
-            HtmlCell uIItem26652Cell = this.UIIEPolicyDocumentWindow.UIFileCUsersLisaBlanchDocument.UIItemTable.UIItem26652Cell;
             Assert.IsTrue(this.UIIEPolicyDocumentWindow.UIFileCUsersLisaBlanchDocument.Exists);
-            Assert.IsTrue(this.CheckStringForPremium(uIItem26652Cell.InnerText, premium));
+            if (isHouse)
+            {
+                HtmlCell uIItem26652Cell = this.UIIEPolicyDocumentWindow.UIFileCUsersLisaBlanchDocument.UIItemTable.UIItem26652Cell;
+                Assert.IsTrue(this.CheckStringForPremium(uIItem26652Cell.InnerText, premium));
+            }
+            else
+            {
+                HtmlCell uIItem181873Cell = this.UIIEPolicyDocumentWindow.UIFileCUsersLisaBlanchDocument.UIItemTable.UIItem181873Cell;
+                Assert.IsTrue(this.CheckStringForPremium(uIItem181873Cell.InnerText, premium));
+            }
+
             this.UIIEPolicyDocumentWindow.Close();
         }
 
@@ -2033,7 +2132,14 @@
 
             string text = parser.ExtractText(pdfFilePath).Replace(" ", string.Empty);
 
-            Assert.IsTrue(this.CheckStringForPremium(text, premium));
+            if (text.Contains("Cancellation"))
+            {
+                Assert.IsTrue(this.CheckStringForPremium(text, 0 - premium));
+            }
+            else
+            {
+                Assert.IsTrue(this.CheckStringForPremium(text, premium));
+            }
         }
 
         private void CheckPremiumInWordDoc(double premium)
@@ -2141,14 +2247,9 @@
 
                     if (name.Contains("Please select WHO to follow up"))
                     {
-                        if (string.IsNullOrEmpty(whoToSelect))
-                        {
-                            uIItemList2.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString2;
-                        }
-                        else
-                        {
-                            uIItemList2.SelectedItemsAsString = whoToSelect;
-                        }
+                        uIItemList2.SelectedItemsAsString = string.IsNullOrEmpty(whoToSelect)
+                                                                ? this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString2
+                                                                : whoToSelect;
 
                         Mouse.Click(uIOKButton2, new Point(33, 13));
                     }

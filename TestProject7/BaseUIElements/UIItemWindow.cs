@@ -12,7 +12,8 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             string className = "",
             string accessible = "",
             string name = "",
-            string checkboxName = "")
+            string checkboxName = "",
+            string controlName = "")
             : base(searchLimitContainer)
         {
             #region Search Criteria
@@ -47,6 +48,11 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             if (!string.IsNullOrEmpty(name))
             {
                 this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, name, PropertyExpressionOperator.Contains));
+            }
+
+            if (!string.IsNullOrEmpty(controlName))
+            {
+                this.SearchProperties[WinControl.PropertyNames.ControlName] = controlName;
             }
 
             #endregion
@@ -104,6 +110,11 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             {
                 return new UIItemList(this, "HHQuote.htm");
             }
+        }
+
+        public UIItemList UIList(string name)
+        {
+            return new UIItemList(this, name);
         }
 
         public UIItemWindow ItemWindow(
@@ -425,6 +436,14 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             get
             {
                 return new UIButton(this, "New");
+            }
+        }
+
+        public UIButton UIInvoicesButton
+        {
+            get
+            {
+                return new UIButton(this, "Invoices");
             }
         }
 

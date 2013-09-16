@@ -1,5 +1,6 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
+    using System.Collections.Generic;
     using System.Diagnostics;
     using System.Linq;
 
@@ -157,6 +158,15 @@
             {
                 //
             }
+        }
+
+        protected static Dictionary<string, string> GetTransactionDictionary(string premium)
+        {
+            double tax = double.Parse(premium) * 0.06;
+            var dict = new Dictionary<string, string>();
+            dict.Add("NEW", premium);
+            dict.Add("TAX", tax.ToString("0.00"));
+            return dict;
         }
     }
 }

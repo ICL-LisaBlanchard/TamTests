@@ -457,7 +457,7 @@
             Mouse.Click(uIItemButton, new Point(21, 14));
         }
 
-        public void HomeClosePilicy()
+        public void HomeClosePolicy()
         {
             WinControl uICloseButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICancelWindow.UICloseButton;
             WinControl uIokButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
@@ -500,13 +500,6 @@
             uIHouseholdRadioButton.Selected = this.CommonParams.UIHouseholdRadioButtonSelected;
 
             Mouse.Click(uIOKButton1, new Point(42, 21));
-        }
-
-        public void HomeCheckPolicyPremium()
-        {
-            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
-
-            Assert.AreNotEqual(this.HomeCheckPolicyPremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
         public void HomeDemands()

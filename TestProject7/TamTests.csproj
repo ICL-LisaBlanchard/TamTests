@@ -152,6 +152,7 @@
     <Compile Include="RegistrySettings.cs" />
     <Compile Include="UIElements\UIAttachmentDetailWindow.cs" />
     <Compile Include="UIElements\UIAttatchmentsMenuWindow.cs" />
+    <Compile Include="UIElements\UICommissionAdjustmentWindow.cs" />
     <Compile Include="UIElements\UIDemand2docMicrosoftWWindow.cs" />
     <Compile Include="UIElements\UIDocumentPropertiesWindow.cs" />
     <Compile Include="UIElements\UIFileCUsersLisaBlanchDocument.cs" />
@@ -239,6 +240,7 @@
     <Compile Include="UIElements\UIPolicyListWindow1.cs" />
     <Compile Include="UIElements\UIPolicyListWindow11.cs" />
     <Compile Include="UIElements\UIPolicyrtyertWindow.cs" />
+    <Compile Include="UIElements\UIPolicyWindow.cs" />
     <Compile Include="UIElements\UIPrintDocumentsWindow.cs" />
     <Compile Include="UIElements\UIProductSelectionWindow.cs" />
     <Compile Include="UIElements\UIProposerDetailsWindow.cs" />
@@ -266,9 +268,12 @@
     <Compile Include="UIElements\UITamxml7Window.cs" />
     <Compile Include="UIElements\UITheAgencyManagerSignWindow.cs" />
     <Compile Include="UIElements\UITheAgencyManagerWindow1.cs" />
+    <Compile Include="UIElements\UITransactionListWindow.cs" />
+    <Compile Include="UIElements\UITransactionListWindow1.cs" />
     <Compile Include="UIElements\UITransactiontoinsertWindow.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="UIElements\UIUpdateGeneralTransacWindow.cs" />
     <Compile Include="UIElements\UIVehicleLookupWindow.cs" />
     <Compile Include="UIElements\UIVerifyWindow.cs" />
     <Compile Include="UIElements\UIViewAttachmentWindow.cs" />

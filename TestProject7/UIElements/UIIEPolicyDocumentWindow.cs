@@ -10,7 +10,7 @@
         {
             #region Search Criteria
 
-            //this.SearchProperties.Add(new PropertyExpression(PropertyNames.Name, "\\HHQuote.htm", PropertyExpressionOperator.Contains));
+            this.SearchProperties.Add(new PropertyExpression(PropertyNames.Name, "Quote", PropertyExpressionOperator.Contains));
 
             this.SearchProperties[PropertyNames.ClassName] = "IEFrame";
             //this.WindowTitles.Add("\\HHQuote.htm");

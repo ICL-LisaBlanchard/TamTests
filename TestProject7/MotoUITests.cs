@@ -14,6 +14,8 @@
 
         private readonly CustomerActions customer = new CustomerActions();
 
+        private readonly DocumentsList docs = new DocumentsList();
+
         [TestMethod]
         public void MotoCreateQuote()
         {
@@ -33,7 +35,9 @@
             this.moto.FinishQuote1();
             this.moto.CloseAndOpenPolicyList();
             this.moto.HighlightBillingScreen();
-            this.moto.AssertMethod1();
+            string premium = this.moto.CheckPolicyPremium();
+            this.moto.OpenTransList(GetTransactionDictionary(premium));
+            this.moto.CheckPremiumInQuoteDocument(this.docs.DocumentsForMotoNewBusinessQuote);
         }
 
         [TestMethod]
@@ -97,13 +101,14 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
-            this.moto.MotoAwap();
+            const string Premium = "17777.00";
+            this.moto.MotoAwap(Premium);
             this.moto.CloseAndOpenPolicyList();
             this.moto.HighlightBillingScreen();
-            this.moto.MotoCheckAWAPpremium();
+            this.moto.MotoCheckAWAPpremium(Premium);
+            this.moto.OpenTransList(GetTransactionDictionary(Premium));
         }
 
         [TestMethod]
@@ -202,7 +207,6 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.SelectPolicyQuote();
@@ -214,9 +218,9 @@
             this.moto.MotoMTAAccept();
             this.moto.MotoMTAConfirmDate();
             this.moto.MotoMTAConfirmPolicy();
-            //this.moto.MotoMTAConfirmPolicy1();
             this.moto.MotoMTAOpenQuote();
             this.moto.MotoMTACheckNewValue();
+            this.moto.CheckCorrectNumberTrans(2);
             this.moto.MotoExitMTA();
         }
 
@@ -323,7 +327,6 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.AssertSelectPolicyForm();
@@ -333,6 +336,7 @@
             this.moto.CancelPrint();
             this.moto.FinishQuote1();
             this.moto.CloseAndOpenPolicyList();
+            string premium = this.moto.CheckPolicyPremium();
             this.moto.MotoCloseDetails();
             this.moto.MotoMTA();
             this.moto.MotoCancelPolicy();
@@ -342,6 +346,7 @@
             this.moto.CloseAndOpenPolicyList();
             this.moto.MotoCheckPolicyStatusExpectedValues.UIItemEditText = "CAN";
             this.moto.MotoCheckPolicyStatus();
+            this.moto.CheckPremiumInQuoteDocument(this.docs.DocumentsForMotoNewBusinessCancelAccept);
         }
 
         [TestMethod]

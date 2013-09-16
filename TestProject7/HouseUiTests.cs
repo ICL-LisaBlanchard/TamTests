@@ -1,6 +1,8 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
     using System;
+    using System.Collections.Generic;
+    using System.Globalization;
 
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -31,7 +33,8 @@
             this.house.HomeFinishQuote();
             this.house.HomeCloseOpenPolicyList();
             this.house.HomeOpenPolicy();
-            this.house.HomeCheckPolicyPremium();
+            string premium = this.house.CheckPolicyPremium();
+            this.house.OpenTransList(GetTransactionDictionary(premium));
             this.house.CheckPremiumInQuoteDocument(this.docs.DocumentsForHhNewBusinessQuote);
         }
 
@@ -58,8 +61,7 @@
             this.house.HomeAcceptQuote1();
             this.house.HomeCloseOpenPolicyList();
             this.house.HomeOpenPolicy();
-            this.house.HomeCheckPolicyPremium();
-            this.house.CheckPremiumInQuoteDocument(this.docs.DocumentsForHhSaveQuoteWithoutPremium);
+            this.house.CheckPolicyPremium();
         }
 
         [TestMethod]
@@ -76,6 +78,8 @@
             this.house.HomeCloseOpenPolicyList();
             this.house.HomeOpenPolicy();
             this.house.HomeCheckNewPremium();
+
+            this.house.OpenTransList(GetTransactionDictionary("18866.98"));
             this.house.CheckPremiumInQuoteDocument(this.docs.DocumentsForHhNewBusinessQuote, OverridePremium);
         }
 
@@ -122,7 +126,7 @@
             this.house.HomeMTACancel();
             this.house.HomeOpenQuote();
             this.house.HomeMTACheckCancelled();
-            this.house.HomeClosePilicy();
+            this.house.HomeClosePolicy();
         }
 
         [TestMethod]
@@ -142,7 +146,8 @@
             this.house.HomeMTASelectQuote();
             this.house.HomeOpenQuote();
             this.house.HomeMTACheckChanged();
-            this.house.HomeClosePilicy();
+            this.house.CheckCorrectNumberTrans(2);
+            this.house.HomeClosePolicy();
         }
 
         [TestMethod]
@@ -198,7 +203,7 @@
             this.house.HomeOpenQuote();
             this.house.HomeMTACheckChangedExpectedValues.UIItemEditText = "NewestMTA";
             this.house.HomeMTACheckChanged();
-            this.house.HomeClosePilicy();
+            this.house.HomeClosePolicy();
         }
 
         [TestMethod]

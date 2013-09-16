@@ -440,6 +440,19 @@ namespace AppliedSystems.Tam.Ui.Tests
                 return this.mUIPolicyautotestWindow;
             }
         }
+
+        public UITransactionListWindow1 UITransactionListWindow
+        {
+            get
+            {
+                if ((this.mUITransactionListWindow == null))
+                {
+                    this.mUITransactionListWindow = new UITransactionListWindow1();
+                }
+                return this.mUITransactionListWindow;
+            }
+        }
+        
         
         public UIViewQuoteDetailsWindow UIViewQuoteDetailsWindow
         {
@@ -1106,11 +1119,7 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if (this.mUIIEPolicyDocumentWindow == null)
-                {
-                    this.mUIIEPolicyDocumentWindow = new UIIEPolicyDocumentWindow();
-                }
-                return this.mUIIEPolicyDocumentWindow;
+                return new UIIEPolicyDocumentWindow();
             }
         }
 
@@ -1173,10 +1182,51 @@ namespace AppliedSystems.Tam.Ui.Tests
                 return this.mUIMicrosoftOfficeWordVWindow;
             }
         }
+
+        public UIUpdateGeneralTransacWindow UIUpdateGeneralTransacWindow
+        {
+            get
+            {
+                if ((this.mUIUpdateGeneralTransacWindow == null))
+                {
+                    this.mUIUpdateGeneralTransacWindow = new UIUpdateGeneralTransacWindow();
+                }
+                return this.mUIUpdateGeneralTransacWindow;
+            }
+        }
+
+        public UICommissionAdjustmentWindow UICommissionAdjustmentWindow
+        {
+            get
+            {
+                if ((this.mUICommissionAdjustmentWindow == null))
+                {
+                    this.mUICommissionAdjustmentWindow = new UICommissionAdjustmentWindow();
+                }
+                return this.mUICommissionAdjustmentWindow;
+            }
+        }
+
+        public UIPolicyWindow UIPolicyWindow
+        {
+            get
+            {
+                if ((this.mUIPolicyWindow == null))
+                {
+                    this.mUIPolicyWindow = new UIPolicyWindow();
+                }
+                return this.mUIPolicyWindow;
+            }
+        }
         #endregion
         
         #region Fields
 
+        private UICommissionAdjustmentWindow mUICommissionAdjustmentWindow;
+
+        private UIUpdateGeneralTransacWindow mUIUpdateGeneralTransacWindow;
+
+        private UITransactionListWindow1 mUITransactionListWindow;
 
         private UIDemand2DocMicrosoftWWindow mUIDemand2docMicrosoftWWindow;
 
@@ -1188,8 +1238,7 @@ namespace AppliedSystems.Tam.Ui.Tests
 
         private UIDocumentPropertiesWindow mUIDocumentPropertiesWindow;
 
-        private UIIEPolicyDocumentWindow mUIIEPolicyDocumentWindow;
-
+  
         private UITheAgencyManagerSignWindow mUITheAgencyManagerSignWindow;
         
         private UITheAgencyManagerWindow1 mUITheAgencyManagerWindow1;
@@ -1367,6 +1416,8 @@ namespace AppliedSystems.Tam.Ui.Tests
         private UIAttatchmentsMenuWindow mUIAttatchmentsMenuWindow;
 
         private UIAttachmentDetailWindow mUIAttachmentDetailWindow;
+
+        private UIPolicyWindow mUIPolicyWindow;
         #endregion
 
 
