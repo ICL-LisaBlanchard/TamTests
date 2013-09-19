@@ -34,6 +34,36 @@
             }
         }
 
+        public List<Document> DocumentsForHhRenewalBefore
+        {
+            get
+            {
+                return new List<Document>
+                           {
+                               new Document("HHQuotesList", 2),
+                               new Document("HHQuote", 1),
+                               new Document("Schedule", 2),
+                               new Document("Proposal", 2),
+                               new Document("FSA", 2)
+                           };
+            }
+        }
+
+        public List<Document> DocumentsForHhAcceptQuoteCancel
+        {
+            get
+            {
+                return new List<Document>
+                           {
+                               new Document("HHQuotesList", 2),
+                               new Document("HHQuote", 1),
+                               new Document("Schedule", 2),
+                               new Document("Proposal", 1),
+                               new Document("FSA", 1)
+                           };
+            }
+        }
+
         public List<Document> DocumentsForMotoNewBusinessQuote
         {
             get
@@ -56,8 +86,8 @@
             {
                 return new List<Document>
                            {
-                               new Document("QuotesList", 2),
-                               new Document("Quote", 1),
+                               new Document("QuotesList", 1),
+                               new Document("Quote", 2),
                                new Document("Schedule", 2),
                                new Document("Proposal", 1),
                                new Document("Certificate", 1),

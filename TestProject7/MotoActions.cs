@@ -31,8 +31,6 @@
 
         private MotoAmendRiskParams mMotoAmendRiskParams;
 
-        private MotoRenewalCheckRecordExpectedValues mMotoRenewalCheckRecordExpectedValues;
-
         private MotoRegressAppParams mMotoRegressAppParams;
 
         private MotoMTAMessageCancelledExpectedValues mMotoMTAMessageCancelledExpectedValues;
@@ -126,18 +124,6 @@
                     this.mMotoAmendRiskParams = new MotoAmendRiskParams();
                 }
                 return this.mMotoAmendRiskParams;
-            }
-        }
-
-        public virtual MotoRenewalCheckRecordExpectedValues RenewalCheckRecordExpectedValues
-        {
-            get
-            {
-                if ((this.mMotoRenewalCheckRecordExpectedValues == null))
-                {
-                    this.mMotoRenewalCheckRecordExpectedValues = new MotoRenewalCheckRecordExpectedValues();
-                }
-                return this.mMotoRenewalCheckRecordExpectedValues;
             }
         }
 
@@ -296,7 +282,7 @@
             WinCheckBox uIAddActivityCheckBox = this.map.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinButton uIOKButton3 = this.map.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
             WinButton uIOKButton4 = this.map.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-            WinButton uIExitButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIExitWindow1.UIExitButton;
+            WinButton uIExitButton = this.map.UIInsurEtamWindow.UIQuotesWindow.UIExitWindow1.UIExitButton;
             WinButton uIYesButton1 = this.map.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
 
             #endregion
@@ -339,7 +325,7 @@
             WinButton uIOKButton1 = this.map.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.map.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinButton uIOKButton2 = this.map.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinButton uIExitButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIExitWindow1.UIExitButton;
+            WinButton uIExitButton = this.map.UIInsurEtamWindow.UIQuotesWindow.UIExitWindow1.UIExitButton;
             WinButton uIYesButton = this.map.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
 
             #endregion
@@ -387,8 +373,8 @@
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICarRegistrationWindow.UIItemEdit;
-            WinEdit uIItemEdit1 = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIQuotesWindow.UICarRegistrationWindow.UIItemEdit;
+            WinEdit uIItemEdit1 = this.map.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow.UIItemEdit;
 
             #endregion
 
@@ -406,23 +392,6 @@
             #endregion
 
             Mouse.Click(uICancelButton, new Point(32, 12));
-        }
-
-        public void CloseAndOpenPolicyList()
-        {
-            #region Variable Declarations
-
-            WinButton uICancelButton = this.map.UICustomertxt1tdsfsWindow.UINewCustomerDetailWindow.UICancelWindow.UICancelButton;
-            WinButton uIItemButton = this.map.UICustomertxt1tdsfsWindow.UIItemWindow.UIItemButton;
-            WinButton uIDetailButton = this.map.UICustomertxt1tdsfsWindow.UIPolicyListWindow.UIDetailWindow.UIDetailButton;
-
-            #endregion
-
-            Mouse.Click(uICancelButton, new Point(31, 15));
-
-            Mouse.Click(uIItemButton, new Point(27, 23));
-
-            Mouse.Click(uIDetailButton, new Point(52, 11));
         }
 
         public void MotoCheckPolicyStatus()
@@ -478,7 +447,7 @@
 
             WinComboBox uIItemComboBox = this.map.UIMidTermAdjustmentsWindow.UIItemWindow.UIItemComboBox;
             WinButton uIOKButton = this.map.UIMidTermAdjustmentsWindow.UIOKWindow.UIOKButton;
-            WinButton uICalculateQuoteButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
+            WinButton uICalculateQuoteButton = this.map.UIInsurEtamWindow.UIQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
 
             #endregion
 
@@ -493,7 +462,7 @@
         {
             #region Variable Declarations
 
-            WinButton uICalculateQuoteButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
+            WinButton uICalculateQuoteButton = this.map.UIInsurEtamWindow.UIQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
 
             #endregion
 
@@ -574,8 +543,8 @@
             WinComboBox uIItemComboBox2 = this.map.UIVehicleLookupWindow.UIItemWindow2.UIItemComboBox;
             WinButton uIFilterButton = this.map.UIVehicleLookupWindow.UIFilterWindow.UIFilterButton;
             WinButton uIOKButton2 = this.map.UIVehicleLookupWindow.UIOKWindow.UIOKButton;
-            WinEdit uIItemEdit1 = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICarRegistrationWindow.UIItemEdit;
-            WinEdit uIItemEdit2 = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit1 = this.map.UIInsurEtamWindow.UIQuotesWindow.UICarRegistrationWindow.UIItemEdit;
+            WinEdit uIItemEdit2 = this.map.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow.UIItemEdit;
 
             #endregion
 
@@ -790,7 +759,7 @@
 
             WinComboBox uIItemComboBox = this.map.UIMidTermAdjustmentsWindow.UIItemWindow.UIItemComboBox;
             WinButton uIOKButton = this.map.UIMidTermAdjustmentsWindow.UIOKWindow.UIOKButton;
-            WinButton uIExitButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIExitWindow.UIExitButton;
+            WinButton uIExitButton = this.map.UIInsurEtamWindow.UIQuotesWindow.UIExitWindow.UIExitButton;
             WinButton uIYesButton = this.map.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinButton uIOKButton1 = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
@@ -893,9 +862,6 @@
             this.SelectTamInsurersAndActivity(true);
         }
 
-        /// <summary>
-        ///     MotoMTAConfirmDate
-        /// </summary>
         public void MotoMTAConfirmDate()
         {
             #region Variable Declarations
@@ -907,9 +873,6 @@
             Mouse.Click(uIOKButton, new Point(21, 17));
         }
 
-        /// <summary>
-        ///     MotoMTACloseMessage
-        /// </summary>
         public void MotoMTACloseMessage()
         {
             #region Variable Declarations
@@ -921,30 +884,29 @@
             Mouse.Click(uIOKButton, new Point(56, 8));
         }
 
-        /// <summary>
-        ///     MotoMTACheckNewValue - Use 'MotoMTACheckNewValueExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void MotoMTACheckNewValue()
+        public void MotoMTACheckNewValue(bool needScreenshot, string expectedDate = "")
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow.UIItemEdit;
 
             #endregion
 
-            // Verify that the 'Text' property of text box equals '2000'
             Assert.AreEqual(this.MotoMTACheckNewValueExpectedValues.UIItemEditText, uIItemEdit.Text);
+
+            if (needScreenshot)
+            {
+                Image image = this.UIInsurEtamWindow.UIQuotesWindow.CaptureImage();
+                image.Save(string.Format(Configs.ScreenshotPath, expectedDate));
+            }
         }
 
-        /// <summary>
-        ///     MotoMTACheckCar - Use 'MotoMTACheckCarExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void MotoMTACheckCar()
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICarRegistrationWindow.UIItemEdit;
-            WinEdit uIItemEdit1 = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIQuotesWindow.UICarRegistrationWindow.UIItemEdit;
+            WinEdit uIItemEdit1 = this.map.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow.UIItemEdit;
 
             #endregion
 
@@ -1018,11 +980,11 @@
 
             WinButton uIOKButton = this.map.UICurrentOrFutureWindow.UIClient.UIOKButton;
             WinButton uIYesButton = this.map.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
-            WinButton uIMTAButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow.UIMTAButton;
+            WinButton uIMTAButton = this.map.UIInsurEtamWindow.UIQuotesWindow.UIMTAWindow.UIMTAButton;
             WinComboBox uIItemComboBox = this.map.UIMidTermAdjustmentsWindow.UIItemWindow.UIItemComboBox;
             WinButton uIOKButton1 = this.map.UIMidTermAdjustmentsWindow.UIOKWindow.UIOKButton;
-            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICarRegistrationWindow.UIItemEdit;
-            WinButton uICalculateQuoteButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
+            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIQuotesWindow.UICarRegistrationWindow.UIItemEdit;
+            WinButton uICalculateQuoteButton = this.map.UIInsurEtamWindow.UIQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
 
             #endregion
 
@@ -1050,11 +1012,11 @@
 
             WinButton uIOKButton = this.map.UICurrentOrFutureWindow.UIClient.UIOKButton;
             WinButton uIBeforeButton = this.map.UIMidTermAdjustmentsWindow.UIItemWindow.UIBeforeButton;
-            WinButton uIMTAButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow.UIMTAButton;
+            WinButton uIMTAButton = this.map.UIInsurEtamWindow.UIQuotesWindow.UIMTAWindow.UIMTAButton;
             WinComboBox uIItemComboBox = this.map.UIMidTermAdjustmentsWindow.UIItemWindow.UIItemComboBox;
             WinButton uIOKButton1 = this.map.UIMidTermAdjustmentsWindow.UIOKWindow.UIOKButton;
-            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICarRegistrationWindow.UIItemEdit;
-            WinButton uICalculateQuoteButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
+            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIQuotesWindow.UICarRegistrationWindow.UIItemEdit;
+            WinButton uICalculateQuoteButton = this.map.UIInsurEtamWindow.UIQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
 
             #endregion
 
@@ -1082,8 +1044,8 @@
 
             WinComboBox uIItemComboBox = this.map.UIMidTermAdjustmentsWindow.UIItemWindow.UIItemComboBox;
             WinButton uIOKButton = this.map.UIMidTermAdjustmentsWindow.UIOKWindow.UIOKButton;
-            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow.UIItemEdit;
-            WinButton uICalculateQuoteButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
+            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow.UIItemEdit;
+            WinButton uICalculateQuoteButton = this.map.UIInsurEtamWindow.UIQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
 
             #endregion
 
@@ -1107,7 +1069,7 @@
             WinMenuItem uIQuoteSelectListMenuItem =
                 this.map.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegratMenuItem.UIQuoteSelectListMenuItem;
             WinButton uIOKButton = this.map.UICurrentOrFutureWindow.UIClient.UIOKButton;
-            WinButton uIMTAButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow.UIMTAButton;
+            WinButton uIMTAButton = this.map.UIInsurEtamWindow.UIQuotesWindow.UIMTAWindow.UIMTAButton;
 
             #endregion
 
@@ -1127,7 +1089,7 @@
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow13.UIItemEdit;
+            WinEdit uIItemEdit = this.map.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow13.UIItemEdit;
 
             #endregion
 
@@ -1187,7 +1149,7 @@
         {
             #region Variable Declarations
 
-            WinButton uIExitButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIExitWindow.UIExitButton;
+            WinButton uIExitButton = this.map.UIInsurEtamWindow.UIQuotesWindow.UIExitWindow.UIExitButton;
             WinButton uIYesButton = this.map.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinButton uIOKButton = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
@@ -1221,7 +1183,7 @@
         {
             #region Variable Declarations
 
-            WinButton uIExitButton = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UIExitWindow.UIExitButton;
+            WinButton uIExitButton = this.map.UIInsurEtamWindow.UIQuotesWindow.UIExitWindow.UIExitButton;
             WinButton uINOButton = this.map.UIInsurEtamWindow1.UINoWindow.UINoButton;
             WinButton uIOKButton = this.map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
@@ -1290,9 +1252,9 @@
             WinComboBox uIItemComboBox1 = this.UIDriverDetailsWindow.UIItemWindow1.UIItemComboBox;
             WinEdit uIItemEdit = this.UIDriverDetailsWindow.UIItemWindow2.UIItemEdit;
             WinControl uIOKButton1 = this.UIDriverDetailsWindow.UIOKWindow.UIOKButton;
-            WinEdit uIItemEdit2 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow.UIItemEdit;
-            WinControl uICalculateQuoteButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
-            WinEdit uIItemEdit3 = this.map.UIInsurEtamWindow.UIMotorQuotesWindow.UICarRegistrationWindow.UIItemEdit;
+            WinEdit uIItemEdit2 = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow.UIItemEdit;
+            WinControl uICalculateQuoteButton = this.UIInsurEtamWindow.UIQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
+            WinEdit uIItemEdit3 = this.map.UIInsurEtamWindow.UIQuotesWindow.UICarRegistrationWindow.UIItemEdit;
 
             #endregion
 

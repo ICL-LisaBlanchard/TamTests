@@ -5,30 +5,32 @@
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    public class UIPersonalLinesWindow : WinWindow
+    public class UIPersonalLinesDialogWindow : WinWindow
     {
-        public UIPersonalLinesWindow()
+        public UIPersonalLinesDialogWindow()
         {
             #region Search Criteria
 
             this.SearchProperties[UITestControl.PropertyNames.Name] = "Personal Lines";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6MDIForm";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
             this.WindowTitles.Add("Personal Lines");
 
             #endregion
         }
 
-        #region Properties
-
-        public UIHouseholdQuoteWindow UIHouseholdQuoteWindow
+        public UIItemWindow UIYesWindow
         {
             get
             {
-                if ((this.mUIHouseholdQuoteWindow == null))
-                {
-                    this.mUIHouseholdQuoteWindow = new UIHouseholdQuoteWindow(this);
-                }
-                return this.mUIHouseholdQuoteWindow;
+                return new UIItemWindow(this, "6");
+            }
+        }
+
+        public UIItemWindow UIPolicy1001PolicyNo81Window
+        {
+            get
+            {
+                return new UIItemWindow(this, controlId: "65535");
             }
         }
 
@@ -44,22 +46,6 @@
             }
         }
 
-        public UIItemWindow UIYesWindow
-        {
-            get
-            {
-                return new UIItemWindow(this, "6");
-            }
-        }
-
-        #endregion
-
-        #region Fields
-
-        private UIHouseholdQuoteWindow mUIHouseholdQuoteWindow;
-
         private UIItemWindow mUIOKWindow;
-
-        #endregion
     }
 }

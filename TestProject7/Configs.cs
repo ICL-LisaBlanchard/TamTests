@@ -54,5 +54,21 @@
                 return Directory.GetCurrentDirectory() + "/" + (string)Reader.GetValue("OfficePath", typeof(string));
             }
         }
+
+        public static string ScreenshotPath
+        {
+            get
+            {
+                return (string)Reader.GetValue("ScreenshotPath", typeof(string));
+            }
+        }
+
+        public static string LocalDocsPath
+        {
+            get
+            {
+                return (string)Reader.GetValue("LocalDocsPath", typeof(string));
+            }
+        }
     }
 }

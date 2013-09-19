@@ -56,6 +56,14 @@
             }
         }
 
+        public UITitleBar UITitleBar
+        {
+            get
+            {
+                return new UITitleBar(this);
+            }
+        }
+
         #endregion
 
         #region Fields

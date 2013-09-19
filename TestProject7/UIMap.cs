@@ -4,6 +4,8 @@
     using System.Collections.Generic;
     using System.Drawing;
     using System.Globalization;
+    using System.IO;
+    using System.Linq;
     using System.Windows.Input;
 
     using AppliedSystems.Tam.Ui.Tests.Assertions;
@@ -75,6 +77,14 @@
                     this.mCancelPolicyParams = new CancelPolicyParams();
                 }
                 return this.mCancelPolicyParams;
+            }
+        }
+
+        public virtual MotoRenewalCheckRecordExpectedValues RenewalCheckRecordExpectedValues
+        {
+            get
+            {
+                return new MotoRenewalCheckRecordExpectedValues();
             }
         }
 
@@ -381,16 +391,17 @@
         /// <summary>
         ///     MTAEffectiveDate - Use 'MTAEffectiveDateParams' to pass parameters into this method.
         /// </summary>
-        /// <param name="withDate"></param>
-        public void MtaEffectiveDate(string withDate = "")
+        public string MtaEffectiveDate(string withDate = "")
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.UIMTAEffectiveDatesWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIMTADate = this.UIMTAEffectiveDatesWindow.UIMTADate.UIItemEdit;
+            WinEdit uIMTATime = this.UIMTAEffectiveDatesWindow.UIMTATime.UIItemEdit;
 
             #endregion
 
-            uIItemEdit.Text = string.IsNullOrEmpty(withDate) ? DateTime.Now.AddDays(1).ToString("dd/MM/yy") : withDate;
+            uIMTADate.Text = string.IsNullOrEmpty(withDate) ? DateTime.Now.AddDays(1).ToString("dd/MM/yy") : withDate;
+            return uIMTADate.Text.Replace("/", "_") + "_" + uIMTATime.Text.Replace(":", "");
         }
 
         /// <summary>
@@ -431,6 +442,12 @@
             Playback.PlaybackSettings.ContinueOnError = true;
             Mouse.Click(uIOKButton1, new Point(47, 12));
             Playback.PlaybackSettings.ContinueOnError = false;
+        }
+
+        public void LapseOk()
+        {
+            WinButton uIOKButton = this.UIPersonalLinesWindow.UIOKWindow.UIOKButton;
+            Mouse.Click(uIOKButton, new Point(41, 12));
         }
 
         /// <summary>
@@ -549,7 +566,7 @@
 
             Mouse.Click(uIOKButton3, new Point(51, 10));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(false, selectListItems1: 3);
         }
 
         /// <summary>
@@ -580,7 +597,7 @@
 
             Mouse.Click(uIOKButton2, new Point(24, 12));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(selectListItems1: 0);
         }
 
         /// <summary>
@@ -598,9 +615,6 @@
             Mouse.Click(uIcustomersClient, new Point(31, 25));
         }
 
-        /// <summary>
-        ///     AcceptQuote
-        /// </summary>
         public void AcceptQuote()
         {
             #region Variable Declarations
@@ -613,9 +627,6 @@
             Mouse.Click(uIAcceptButton, new Point(70, 7));
         }
 
-        /// <summary>
-        ///     AmendDateBeforeMessage - Use 'AmendDateBeforeMessageExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void AmendDateBeforeMessage()
         {
             #region Variable Declarations
@@ -627,9 +638,6 @@
             Assert.AreEqual(this.AmendDateBeforeMessageExpectedValues.UIDateBeforeInceptionDTextDisplayText, uIDateBeforeInceptionDText.DisplayText);
         }
 
-        /// <summary>
-        ///     ExitEnabled - Use 'ExitEnabledExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void ExitEnabled()
         {
             #region Variable Declarations
@@ -641,9 +649,23 @@
             Assert.AreEqual(this.ExitEnabledExpectedValues.UIExitButtonEnabled, uIExitButton.Enabled);
         }
 
-        /// <summary>
-        ///     FinishQuote1 - Use 'FinishQuote1Params' to pass parameters into this method.
-        /// </summary>
+        public void CloseAndOpenPolicyList()
+        {
+            #region Variable Declarations
+
+            WinButton uICancelButton = this.UICustomertxt1tdsfsWindow.UINewCustomerDetailWindow.UICancelWindow.UICancelButton;
+            WinButton uIItemButton = this.UICustomertxt1tdsfsWindow.UIItemWindow.UIItemButton;
+            WinButton uIDetailButton = this.UICustomertxt1tdsfsWindow.UIPolicyListWindow.UIDetailWindow.UIDetailButton;
+
+            #endregion
+
+            Mouse.Click(uICancelButton, new Point(31, 15));
+
+            Mouse.Click(uIItemButton, new Point(27, 23));
+
+            Mouse.Click(uIDetailButton, new Point(52, 11));
+        }
+
         public void FinishQuote1()
         {
             #region Variable Declarations
@@ -931,7 +953,7 @@
         {
             #region Variable Declarations
 
-            WinControl uICalculateQuoteButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
+            WinControl uICalculateQuoteButton = this.UIInsurEtamWindow.UIQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
 
             #endregion
 
@@ -959,8 +981,8 @@
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICarRegistrationWindow.UIItemEdit;
-            WinEdit uIItemEdit1 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIQuotesWindow.UICarRegistrationWindow.UIItemEdit;
+            WinEdit uIItemEdit1 = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow.UIItemEdit;
 
             #endregion
 
@@ -1139,7 +1161,7 @@
         {
             #region Variable Declarations
 
-            WinClient uIInsurEtamRenewalsClient = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow12.UIClient();
+            WinClient uIInsurEtamRenewalsClient = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow12.UIClient();
 
             #endregion
 
@@ -1174,7 +1196,7 @@
 
             Mouse.Click(uIOKButton3, new Point(47, 24));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(selectListItems1: 2);
         }
 
         /// <summary>
@@ -1220,7 +1242,7 @@
         {
             #region Variable Declarations
 
-            WinControl uIFilterButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIFilterWindow.UIFilterButton;
+            WinControl uIFilterButton = this.UIInsurEtamWindow.UIQuotesWindow.UIFilterWindow.UIFilterButton;
             WinEdit uIItemEdit = this.UIFilterRenewalRecordsWindow.UIItemWindow.UIItemEdit;
             WinEdit uIItemEdit1 = this.UIFilterRenewalRecordsWindow.UIItemWindow1.UIItemEdit;
             WinComboBox uIItemComboBox = this.UIFilterRenewalRecordsWindow.UIItemWindow2.UIItemComboBox;
@@ -1249,9 +1271,9 @@
 
             WinControl uIOKButton = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             WinControl uIExitButton = this.UIPoliciesAutoRenewedAWindow.UIExitWindow.UIExitButton;
-            WinControl uIediMatchButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIEDIMatchWindow.UIEDIMatchButton;
+            WinControl uIediMatchButton = this.UIInsurEtamWindow.UIQuotesWindow.UIEDIMatchWindow.UIEDIMatchButton;
             WinControl uIOKButton1 = this.UIRenewalSearchWindow.UIOKWindow.UIOKButton;
-            WinControl uILogandClearButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UILogandClearWindow.UILogandClearButton;
+            WinControl uILogandClearButton = this.UIInsurEtamWindow.UIQuotesWindow.UILogandClearWindow.UILogandClearButton;
 
             #endregion
 
@@ -1319,8 +1341,8 @@
         {
             #region Variable Declarations
 
-            WinClient uIInsurETAMRenewalsClient = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow10.UIClient();
-            WinControl uIDisplayRecordButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIDisplayRecordWindow.UIDisplayRecordButton;
+            WinClient uIInsurETAMRenewalsClient = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow10.UIClient();
+            WinControl uIDisplayRecordButton = this.UIInsurEtamWindow.UIQuotesWindow.UIDisplayRecordWindow.UIDisplayRecordButton;
 
             #endregion
 
@@ -1356,7 +1378,7 @@
         {
             #region Variable Declarations
 
-            WinControl uIExitButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIExitWindow1.UIExitButton;
+            WinControl uIExitButton = this.UIInsurEtamWindow.UIQuotesWindow.UIExitWindow1.UIExitButton;
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
 
             #endregion
@@ -1436,7 +1458,8 @@
         /// <summary>
         ///     RenewalCheckStatus - Use 'RenewalCheckStatusExpectedValues' to pass parameters into this method.
         /// </summary>
-        public void RenewalCheckStatus()
+        /// <param name="expectedStatus"></param>
+        public void RenewalCheckStatus(string expectedStatus)
         {
             #region Variable Declarations
 
@@ -1445,7 +1468,7 @@
             #endregion
 
             // Verify that the 'Text' property of text box equals 'REN'
-            Assert.AreEqual(this.RenewalCheckStatusExpectedValues.UIItemEditText, uIItemEdit.Text);
+            Assert.AreEqual(expectedStatus, uIItemEdit.Text);
         }
 
         /// <summary>
@@ -1457,11 +1480,11 @@
 
             WinControl uIOKButton = this.UICurrentOrFutureWindow.UIClient.UIOKButton;
             WinControl uIAfterButton = this.UIMidTermAdjustmentsWindow.UIOKWindow.UIAfterButton;
-            WinControl uIMTAButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow.UIMTAButton;
+            WinControl uIMTAButton = this.UIInsurEtamWindow.UIQuotesWindow.UIMTAWindow.UIMTAButton;
             WinComboBox uIItemComboBox = this.UIMidTermAdjustmentsWindow.UIItemWindow.UIItemComboBox;
             WinControl uIOKButton1 = this.UIMidTermAdjustmentsWindow.UIOKWindow.UIOKButton;
-            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICarRegistrationWindow.UIItemEdit;
-            WinControl uICalculateQuoteButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
+            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIQuotesWindow.UICarRegistrationWindow.UIItemEdit;
+            WinControl uICalculateQuoteButton = this.UIInsurEtamWindow.UIQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
 
             #endregion
 
@@ -1580,6 +1603,7 @@
 
             Mouse.Click(uIOKButton, new Point(63, 21));
 
+            //Check is lapse here.
             Mouse.Click(uIOKButton1, new Point(49, 8));
 
             Mouse.Click(uIOKButton1, new Point(62, 14));
@@ -1590,7 +1614,7 @@
 
             Mouse.Click(uIOKButton3, new Point(54, 7));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(false, onlyOnce: true);
         }
 
         /// <summary>
@@ -1624,9 +1648,30 @@
             this.CancelPrint();
         }
 
-        /// <summary>
-        ///     RebrokeAlternativeFinish_1 - Use 'RebrokeAlternativeFinish_1Params' to pass parameters into this method.
-        /// </summary>
+        public void LapsePolicy(string policyNumber)
+        {
+            #region Variable Declarations
+
+            string lapseMessage = "Policy -1001. PolicyNo: " + policyNumber + " successfully lapsed.";
+
+            WinButton uILapsePolicyButton = this.UIAUTOWindow.UILapsePolicyWindow.UILapsePolicyButton;
+            WinButton uIYesButton = this.UIPersonalLinesDialogWindow.UIYesWindow.UIYesButton;
+            WinText uIPolicy1001PolicyNo81Text = this.UIPersonalLinesDialogWindow.UIPolicy1001PolicyNo81Window.UIText(lapseMessage);
+            WinButton uIOKButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
+
+            #endregion
+
+            //Mouse.Click(uILapsePolicyButton);
+
+            
+            //Mouse.Click(uIYesButton);
+
+            Assert.IsTrue(uIPolicy1001PolicyNo81Text.Exists, "Policy lapse text not valid");
+
+            Mouse.Click(uIOKButton);
+       
+        }
+
         public void RebrokeAlternativeFinish1()
         {
             #region Variable Declarations
@@ -1777,7 +1822,7 @@
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.UIMTAEffectiveDatesWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.UIMTAEffectiveDatesWindow.UIMTADate.UIItemEdit;
             WinControl uIOKButton = this.UIMTAEffectiveDatesWindow.UIOKWindow.UIOKButton;
 
             #endregion
@@ -1823,7 +1868,7 @@
             #region Variable Declarations
 
             WinControl uICancelButton = this.UIMTAEffectiveDatesWindow.UICancelWindow.UICancelButton;
-            WinControl uIExitButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIExitWindow.UIExitButton;
+            WinControl uIExitButton = this.UIInsurEtamWindow.UIQuotesWindow.UIExitWindow.UIExitButton;
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinControl uIOKButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
@@ -1852,7 +1897,7 @@
             Mouse.Click(uIOKButton, new Point(40, 5));
         }
 
-        public void SelectTamInsurersAndActivity(bool isMTA, string whoToSelect = "")
+        public void SelectTamInsurersAndActivity(bool isMTA = false, string whoToSelect = "", bool onlyOnce = false, int selectListItems1 = -1, int selectListItems2 = -1)
         {
             #region Variable Declarations
 
@@ -1860,12 +1905,45 @@
 
             #endregion
 
-            int timeOut = Playback.PlaybackSettings.SearchTimeout;
-            Playback.PlaybackSettings.SearchTimeout = 3000;
-
-            this.ImportToTamOptions(whoToSelect);
-            if (isMTA)
+            if (selectListItems1 > -1)
             {
+                for (int i = 0; i < selectListItems1; i++)
+                {
+                    this.ImportToTamOptionsOnce(whoToSelect);
+                }
+
+                Mouse.Click(uIokButton5);
+
+                for (int i = 0; i < selectListItems2; i++)
+                {
+                    this.ImportToTamOptionsOnce(whoToSelect);
+                }
+
+                if (selectListItems2 > 0)
+                {
+                    Mouse.Click(uIokButton5);
+                }
+            }
+            else
+            {
+                int timeOut = Playback.PlaybackSettings.SearchTimeout;
+                Playback.PlaybackSettings.SearchTimeout = 3000;
+
+                this.ImportToTamOptions(whoToSelect);
+
+                if (isMTA)
+                {
+                    try
+                    {
+                        Mouse.Click(uIokButton5);
+                    }
+                    catch (Exception)
+                    {
+                    }
+                }
+
+                this.ImportToTamOptions(whoToSelect);
+
                 try
                 {
                     Mouse.Click(uIokButton5);
@@ -1873,19 +1951,9 @@
                 catch (Exception)
                 {
                 }
-            }
 
-            this.ImportToTamOptions(whoToSelect);
-
-            try
-            {
-                Mouse.Click(uIokButton5);
+                Playback.PlaybackSettings.SearchTimeout = timeOut;
             }
-            catch (Exception)
-            {
-            }
-
-            Playback.PlaybackSettings.SearchTimeout = timeOut;
         }
 
         public void WaitForControl(UITestControl control)
@@ -1918,7 +1986,7 @@
             Mouse.Click(uiCancelButton2);
         }
 
-        public void OpenTransList(Dictionary<string, string> expectedRows)
+        public void OpenTransList(List<Transaction> expectedRows)
         {
             #region Variable Declarations
 
@@ -1932,8 +2000,11 @@
             WinButton uIOptionsButton = this.UIPolicyautotestWindow.UITransactionListWindow.UIOptionsWindow.UIOptionsButton;
             WinButton uIOKButton = this.UICommissionAdjustmentWindow.UIOKWindow.UIOKButton;
             WinButton uiCancelButton2 = this.UIPolicyautotestWindow.UITransactionListWindow.UICancelWindow.UICancelButton;
+            WinList uILvwVListList = this.UITransactionListWindow.UILvwVListWindow.UIList("Enter Code");
 
             #endregion
+
+            Mouse.Click(uIInvoicesButton);
 
             WinButton uIYesButton = this.UIPolicyWindow.UIYesWindow.UIYesButton;
             try
@@ -1944,57 +2015,48 @@
             {
             }
 
-            Mouse.Click(uIInvoicesButton);
-
             Mouse.Click(uIDetailButton);
 
-            string premium;
-            bool b = expectedRows.TryGetValue(uILblTranEdit.Text, out premium);
-
-            Assert.IsTrue(b);
-            Assert.AreEqual(premium, uILblBalanceEdit.Text.Replace(",", ""));
-
             Mouse.Click(uICancelButton);
 
-            Mouse.Click(uICloseButton);
-
-            Mouse.Click(uITransactionListClient, new Point(221, 40));
-
-            Mouse.Click(uIOptionsButton, new Point(21, 18));
-
-            Mouse.Click(uIDetailButton, new Point(50, 15));
-
-            Mouse.Click(uIOKButton, new Point(32, 7));
-
-            b = expectedRows.TryGetValue(uILblTranEdit.Text, out premium);
-            Assert.IsTrue(b);
-
-            Assert.AreEqual(premium, uILblBalanceEdit.Text.Replace(",", ""));
-
-            Mouse.Click(uICancelButton);
+            for (int i = 0; i < uILvwVListList.Items.Count; i++)
+            {
+                Mouse.DoubleClick(uILvwVListList.Items[i]);
+                Transaction trans = expectedRows[i];
+                if (trans.TransType == "TAX")
+                {
+                    Mouse.Click(uIOKButton);
+                }
+                Assert.AreEqual(trans.TransType, uILblTranEdit.Text.Replace(",", ""));
+                Assert.AreEqual(trans.Premium, uILblBalanceEdit.Text.Replace(",", ""));
+                Mouse.Click(uICancelButton);
+            }
 
             Mouse.Click(uICloseButton);
 
             Mouse.Click(uiCancelButton2);
         }
 
-        public void CheckPremiumInQuoteDocument(List<Document> expectedDocs, double overridePremium = 0.00)
+        public void CheckPremiumInQuoteDocument(List<Document> expectedDocs, double overridePremium = 0.00, double originalPremium = 0.00)
         {
             WinClient uIBillingScreenClient = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIPolicyDocumentsWindow.UIClient();
             WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
             WinClient uIPolicyAttachmentsClient = this.UIPolicyAttachmentsWindow.UIItemWindow.UIClient();
 
             WinButton uIDetailButton = this.UIPolicyAttachmentsWindow.UIOptionsWindow.UIDetailButton;
+            WinButton uICancelButton2 = this.UIPolicyAttachmentsWindow.UIOptionsWindow.UICancelButton;
+
             WinEdit checkFileName = this.UIAttachmentDetailWindow.UIItemWindow.UIItemEdit;
             WinButton uICancelButton = this.UIAttachmentDetailWindow.UICancelWindow.UICancelButton;
 
             Mouse.Click(uIItemEdit);
-            double premium = (Math.Round(Double.Parse(uIItemEdit.Text) * 1.06 * 100) / 100);
+            double premium = Math.Round(Double.Parse(uIItemEdit.Text) * 106) / 100;
+            originalPremium = Math.Round(originalPremium * 106) / 100;
 
             Mouse.DoubleClick(uIBillingScreenClient, new Point(40, 14));
 
             string filename = string.Empty;
-            for (int i = 19; i < 220; i = i + 19)
+            for (int i = 16; i < 1000; i = i + 18)
             {
                 Mouse.Click(uIPolicyAttachmentsClient, new Point(10, i));
                 Mouse.Click(uIDetailButton);
@@ -2007,7 +2069,7 @@
 
                 filename = checkFileName.Text;
 
-                this.IncreaseDocsListCount(expectedDocs, filename);
+                IncreaseDocsListCount(expectedDocs, filename);
 
                 Mouse.Click(uICancelButton);
 
@@ -2027,33 +2089,57 @@
                         }
                         this.CheckPremiumInQuote(premium, false);
                         break;
-
                     case "Schedule":
                         this.CheckPremiumInPdfProposal(premium);
                         break;
                     case "FSA":
                         this.CheckPremiumInWordDoc(premium);
+                        premium = originalPremium;
                         break;
                 }
             }
 
             this.CheckDocsList(expectedDocs);
+            Mouse.Click(uICancelButton2);
         }
 
-        private void IncreaseDocsListCount(IEnumerable<Document> expectedDocs, string docName)
+        public void CheckCorrectDocumentPresent(List<Document> expectedDocs)
         {
-            foreach (Document doc in expectedDocs)
+            WinClient uIBillingScreenClient = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIPolicyDocumentsWindow.UIClient();
+            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
+            WinClient uIPolicyAttachmentsClient = this.UIPolicyAttachmentsWindow.UIItemWindow.UIClient();
+
+            WinButton uIDetailButton = this.UIPolicyAttachmentsWindow.UIOptionsWindow.UIDetailButton;
+            WinEdit checkFileName = this.UIAttachmentDetailWindow.UIItemWindow.UIItemEdit;
+            WinButton uICancelButton = this.UIAttachmentDetailWindow.UICancelWindow.UICancelButton;
+
+            Mouse.Click(uIItemEdit);
+
+            Mouse.DoubleClick(uIBillingScreenClient, new Point(40, 14));
+
+            string filename = string.Empty;
+            for (int i = 16; i < 1000; i = i + 18)
             {
-                if (doc.DocName == docName)
+                Mouse.Click(uIPolicyAttachmentsClient, new Point(10, i));
+                Mouse.Click(uIDetailButton);
+
+                if (filename == checkFileName.Text)
                 {
-                    doc.ActualCount++;
+                    Mouse.Click(uICancelButton);
+                    break;
                 }
 
-                Assert.IsFalse(doc.ActualCount > doc.ExpectedCount, "Too many occurences of " + doc.DocName + ". Expected : " + doc.ExpectedCount + ", actual : " + doc.ActualCount);
+                filename = checkFileName.Text;
+
+                IncreaseDocsListCount(expectedDocs, filename);
+
+                Mouse.Click(uICancelButton);
             }
+
+            this.CheckDocsList(expectedDocs);
         }
 
-        private void CheckDocsList(IEnumerable<Document> expectedDocs)
+        public void CheckDocsList(IEnumerable<Document> expectedDocs)
         {
             foreach (Document doc in expectedDocs)
             {
@@ -2063,41 +2149,44 @@
             }
         }
 
-        private bool CheckStringForPremium(string text, double premium)
+        private static void IncreaseDocsListCount(IEnumerable<Document> expectedDocs, string docName)
         {
-            if (text.Contains(premium.ToString(CultureInfo.InvariantCulture)))
+            foreach (Document doc in expectedDocs.Where(doc => doc.DocName == docName))
             {
-                return true;
+                doc.ActualCount++;
+                Assert.IsFalse(doc.ActualCount > doc.ExpectedCount, "Too many occurences of " + doc.DocName + ". Expected : " + doc.ExpectedCount + ", actual : " + doc.ActualCount);
+                break;
             }
+        }
 
-            if (text.Contains((premium + 0.01).ToString(CultureInfo.InvariantCulture)))
-            {
-                return true;
-            }
-
-            if (text.Contains((premium - 0.01).ToString(CultureInfo.InvariantCulture)))
-            {
-                return true;
-            }
-            return false;
+        private static bool CheckStringForPremium(string text, double premium)
+        {
+            return text.Contains(premium.ToString("0.00")) || text.Contains((premium + 0.01).ToString("0.00")) || text.Contains((premium - 0.01).ToString("0.00"));
         }
 
         private void CheckPremiumInQuote(double premium, bool isHouse)
         {
             this.OpenAttachment();
-            Assert.IsTrue(this.UIIEPolicyDocumentWindow.UIFileCUsersLisaBlanchDocument.Exists);
+
+            this.UIIEPolicyDocumentWindow.Close();
+
+            string file;
             if (isHouse)
             {
-                HtmlCell uIItem26652Cell = this.UIIEPolicyDocumentWindow.UIFileCUsersLisaBlanchDocument.UIItemTable.UIItem26652Cell;
-                Assert.IsTrue(this.CheckStringForPremium(uIItem26652Cell.InnerText, premium));
+                file = Configs.LocalDocsPath + "HHQuote.htm";
             }
             else
             {
-                HtmlCell uIItem181873Cell = this.UIIEPolicyDocumentWindow.UIFileCUsersLisaBlanchDocument.UIItemTable.UIItem181873Cell;
-                Assert.IsTrue(this.CheckStringForPremium(uIItem181873Cell.InnerText, premium));
+                file = Configs.LocalDocsPath + "Quote.htm";
             }
 
-            this.UIIEPolicyDocumentWindow.Close();
+            string body;
+            using (var reader = new StreamReader(file))
+            {
+                body = reader.ReadToEnd();
+            }
+
+            Assert.IsTrue(CheckStringForPremium(body, premium), " Premium : " + premium + ", Body : " + body);
         }
 
         private void OpenAttachment()
@@ -2134,11 +2223,11 @@
 
             if (text.Contains("Cancellation"))
             {
-                Assert.IsTrue(this.CheckStringForPremium(text, 0 - premium));
+                Assert.IsTrue(CheckStringForPremium(text, 0 - premium));
             }
             else
             {
-                Assert.IsTrue(this.CheckStringForPremium(text, premium));
+                Assert.IsTrue(CheckStringForPremium(text, premium));
             }
         }
 
@@ -2261,6 +2350,52 @@
                     }
                 }
                 while (true);
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void ImportToTamOptionsOnce(string whoToSelect)
+        {
+            WinList uIItemList = this.UISelectTaminsurerforiWindow.UIItemWindow.UIItemList;
+            WinButton uIOKButton = this.UISelectTaminsurerforiWindow.UIItemWindow1.UIClient().UIOKButton;
+            WinList uiTransToInsert = this.UITransactiontoinsertWindow.UIItemWindow.UIItemList;
+            WinButton uIOKButton6 = this.UITransactiontoinsertWindow.UIItemWindow.UIOKButton;
+            WinList uIItemList2 = this.UIPleaseselectWHOtofolWindow.UIItemWindow.UIItemList;
+            WinButton uIOKButton2 = this.UIPleaseselectWHOtofolWindow.UIItemWindow1.UIClient().UIOKButton;
+            WinList uIItemList3 = this.UISelectTamActivityTypWindow.UIItemWindow.UIItemList;
+            WinButton uIOKButton3 = this.UISelectTamActivityTypWindow.UIItemWindow1.UIClient().UIOKButton;
+
+            try
+            {
+                WinWindow win = this.TopWindow;
+                string name = win.GetProperty("Name").ToString();
+
+                if (name.Contains("Select Tam insurer for insurer code"))
+                {
+                    uIItemList.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString;
+                    Mouse.Click(uIOKButton, new Point(21, 16));
+                }
+
+                if (name.Contains("Transaction to insert"))
+                {
+                    uiTransToInsert.SelectedItemsAsString = "NEW";
+                    Mouse.Click(uIOKButton6);
+                }
+
+                if (name.Contains("Please select WHO to follow up"))
+                {
+                    uIItemList2.SelectedItemsAsString = string.IsNullOrEmpty(whoToSelect) ? this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString2 : whoToSelect;
+
+                    Mouse.Click(uIOKButton2, new Point(33, 13));
+                }
+
+                if (name.Contains("Select Tam Activity Type for FSA "))
+                {
+                    uIItemList3.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString;
+                    Mouse.Click(uIOKButton3, new Point(27, 8));
+                }
             }
             catch (Exception)
             {

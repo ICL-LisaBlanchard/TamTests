@@ -150,6 +150,8 @@
     <Compile Include="PDFParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrySettings.cs" />
+    <Compile Include="Transactions.cs" />
+    <Compile Include="UIElements\UIPersonalLinesDialogWindow.cs" />
     <Compile Include="UIElements\UIAttachmentDetailWindow.cs" />
     <Compile Include="UIElements\UIAttatchmentsMenuWindow.cs" />
     <Compile Include="UIElements\UICommissionAdjustmentWindow.cs" />
@@ -171,7 +173,7 @@
     <Compile Include="UIElements\UIAUTOXXX1000Window.cs" />
     <Compile Include="UIElements\UIAUTO2211001Window.cs" />
     <Compile Include="UIElements\UIAUTO2251001Window.cs" />
-    <Compile Include="UIElements\UIAUTO2301001Window.cs" />
+    <Compile Include="UIElements\UIAUTOWindow.cs" />
     <Compile Include="UIElements\UIAUTO2311001Window.cs" />
     <Compile Include="UIElements\UIBillingScreenHomeTestWindow.cs" />
     <Compile Include="UIElements\UIBillingScreenWindow.cs" />
@@ -217,7 +219,7 @@
     <Compile Include="UIElements\UILeftbarFrame.cs" />
     <Compile Include="UIElements\UIMicrosoftOfficeWordVWindow.cs" />
     <Compile Include="UIElements\UIMidTermAdjustmentsWindow.cs" />
-    <Compile Include="UIElements\UIMotorQuotesWindow.cs" />
+    <Compile Include="UIElements\UIQuotesWindow.cs" />
     <Compile Include="UIElements\UIMTAEffectiveDatesWindow.cs" />
     <Compile Include="UIElements\UIMTASuccessfulWindow.cs" />
     <Compile Include="UIElements\UINewCustomerDetailWindow.cs" />

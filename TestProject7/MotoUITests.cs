@@ -36,7 +36,7 @@
             this.moto.CloseAndOpenPolicyList();
             this.moto.HighlightBillingScreen();
             string premium = this.moto.CheckPolicyPremium();
-            this.moto.OpenTransList(GetTransactionDictionary(premium));
+            this.moto.OpenTransList(Transactions.GetTransactionDictionary(premium));
             this.moto.CheckPremiumInQuoteDocument(this.docs.DocumentsForMotoNewBusinessQuote);
         }
 
@@ -108,7 +108,7 @@
             this.moto.CloseAndOpenPolicyList();
             this.moto.HighlightBillingScreen();
             this.moto.MotoCheckAWAPpremium(Premium);
-            this.moto.OpenTransList(GetTransactionDictionary(Premium));
+            this.moto.OpenTransList(Transactions.GetTransactionDictionary(Premium));
         }
 
         [TestMethod]
@@ -219,7 +219,7 @@
             this.moto.MotoMTAConfirmDate();
             this.moto.MotoMTAConfirmPolicy();
             this.moto.MotoMTAOpenQuote();
-            this.moto.MotoMTACheckNewValue();
+            this.moto.MotoMTACheckNewValue(false);
             this.moto.CheckCorrectNumberTrans(2);
             this.moto.MotoExitMTA();
         }
@@ -264,7 +264,6 @@
             this.moto.MotoPolicyPerson();
             this.moto.PostcodeLookup();
             this.moto.QuoteResults();
-            //this.moto.CancelFilter();
             this.moto.QuoteResults1();
             this.moto.PublicCreditCheckOk();
             this.moto.SelectPolicyQuote();
@@ -279,13 +278,14 @@
             this.moto.MotoMTAConfirmDate();
             this.moto.CoverDateBackCheck();
             this.moto.MotoMTACloseMessage();
-            this.moto.MtaEffectiveDate();
+            string coverDate = "MotoMTAtoMTA_" + this.moto.MtaEffectiveDate();
             this.moto.MotoMTAConfirmDate();
             this.moto.MotoMTAConfirmPolicy();
-            //this.moto.MotoMTAConfirmPolicy1();
+            Playback.Wait(5000);
             this.moto.MotoMTAOpenQuote();
+
             this.moto.MotoMTACheckNewValueExpectedValues.UIItemEditText = "2500";
-            this.moto.MotoMTACheckNewValue();
+            this.moto.MotoMTACheckNewValue(true, coverDate);
             this.moto.MotoExitMTA();
         }
 
@@ -336,7 +336,7 @@
             this.moto.CancelPrint();
             this.moto.FinishQuote1();
             this.moto.CloseAndOpenPolicyList();
-            string premium = this.moto.CheckPolicyPremium();
+            this.moto.CheckPolicyPremium();
             this.moto.MotoCloseDetails();
             this.moto.MotoMTA();
             this.moto.MotoCancelPolicy();
@@ -346,7 +346,8 @@
             this.moto.CloseAndOpenPolicyList();
             this.moto.MotoCheckPolicyStatusExpectedValues.UIItemEditText = "CAN";
             this.moto.MotoCheckPolicyStatus();
-            this.moto.CheckPremiumInQuoteDocument(this.docs.DocumentsForMotoNewBusinessCancelAccept);
+            this.moto.CheckCorrectNumberTrans(2);
+            this.moto.CheckCorrectDocumentPresent(this.docs.DocumentsForMotoNewBusinessCancelAccept);
         }
 
         [TestMethod]
@@ -401,7 +402,7 @@
             this.moto.RenewalModuleRenew1();
             this.moto.RenewalModuleClose();
             this.moto.CloseAndOpenPolicyList();
-            this.moto.RenewalCheckStatus();
+            this.moto.RenewalCheckStatus("REN");
             this.moto.ClosePolicy();
             //mta1
             this.moto.SelectMenu();
@@ -474,7 +475,7 @@
             this.moto.RenewalModuleRenew1();
             this.moto.RenewalModuleClose();
             this.moto.CloseAndOpenPolicyList();
-            this.moto.RenewalCheckStatus();
+            this.moto.RenewalCheckStatus("REN");
             this.moto.ClosePolicy();
             ////MTA1
             this.moto.SelectMenu();
@@ -564,7 +565,7 @@
             this.moto.AmendSelectQuote();
             this.moto.MotoAmendRiskRenew();
             this.moto.CloseAndOpenPolicyList();
-            this.moto.RenewalCheckStatus();
+            this.moto.RenewalCheckStatus("REN");
             this.moto.ClosePolicy();
         }
 
@@ -621,8 +622,7 @@
             this.moto.RetrieveResponse();
             this.moto.MotoAmendRiskNew1();
             this.moto.CloseAndOpenPolicyList();
-            this.moto.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
-            this.moto.RenewalCheckStatus();
+            this.moto.RenewalCheckStatus("REW");
             this.moto.ClosePolicy();
 
             //mta1
@@ -699,7 +699,7 @@
             this.moto.RenewalModuleRenew1();
             this.moto.RenewalModuleClose();
             this.moto.CloseAndOpenPolicyList();
-            this.moto.RenewalCheckStatus();
+            this.moto.RenewalCheckStatus("REN");
             this.moto.ClosePolicy();
         }
 
@@ -763,7 +763,7 @@
             this.moto.RenewalModuleClose();
             this.moto.CloseAndOpenPolicyList();
             this.moto.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
-            this.moto.RenewalCheckStatus();
+            this.moto.RenewalCheckStatus("REN");
             this.moto.ClosePolicy();
         }
 
@@ -829,7 +829,7 @@
             this.moto.RenewalModuleClose();
             this.moto.CloseAndOpenPolicyList();
             this.moto.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
-            this.moto.RenewalCheckStatus();
+            this.moto.RenewalCheckStatus("REN");
             this.moto.ClosePolicy();
         }
 

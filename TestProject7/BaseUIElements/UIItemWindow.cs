@@ -179,7 +179,7 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                return new UIButton(this, "Yes");
+                return new UIButton(this, "Yes", false);
             }
         }
 
@@ -388,6 +388,14 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             get
             {
                 return new UIButton(this, "Rebroke");
+            }
+        }
+
+        public UIButton UILapsePolicyButton
+        {
+            get
+            {
+                return new UIButton(this, "Lapse Policy");
             }
         }
 
@@ -651,6 +659,11 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
                     "MTA successfully processed on a previously renewed policy.WARNING! - RENEWAL EDI "
                     + "HAS BEEN CANCELLEDThe renewal status has been stepped back to Due. You will need" + " to process the renewal again via the Amend Risk option.");
             }
+        }
+
+        public UIText UIText(string text)
+        {
+            return new UIText(this, text);
         }
 
         #endregion

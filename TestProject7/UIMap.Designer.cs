@@ -237,6 +237,18 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
 
+        public UIPersonalLinesDialogWindow UIPersonalLinesDialogWindow
+        {
+            get
+            {
+                if ((this.mUIPersonalLinesDialogWindow == null))
+                {
+                    this.mUIPersonalLinesDialogWindow = new UIPersonalLinesDialogWindow();
+                }
+                return this.mUIPersonalLinesDialogWindow;
+            }
+        }
+
         public UIPersonalLinesWindow UIPersonalLinesWindow
         {
             get
@@ -970,15 +982,15 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
 
-        public UIAUTO2301001Window UIAUTO2301001Window
+        public UiautoWindow UIAUTOWindow
         {
             get
             {
-                if ((this.mUIAUTO2301001Window == null))
+                if ((this.mUiautoWindow == null))
                 {
-                    this.mUIAUTO2301001Window = new UIAUTO2301001Window();
+                    this.mUiautoWindow = new UiautoWindow();
                 }
-                return this.mUIAUTO2301001Window;
+                return this.mUiautoWindow;
             }
         }
         
@@ -1222,6 +1234,8 @@ namespace AppliedSystems.Tam.Ui.Tests
         
         #region Fields
 
+        private UIPersonalLinesDialogWindow mUIPersonalLinesDialogWindow;
+
         private UICommissionAdjustmentWindow mUICommissionAdjustmentWindow;
 
         private UIUpdateGeneralTransacWindow mUIUpdateGeneralTransacWindow;
@@ -1381,7 +1395,7 @@ namespace AppliedSystems.Tam.Ui.Tests
         
         private UICreditCheckAtRenewalWindow mUICreditCheckAtRenewalWindow;
         
-        private UIAUTO2301001Window mUIAUTO2301001Window;
+        private UiautoWindow mUiautoWindow;
         
         private UIHouseholdRebrokeResuWindow mUIHouseholdRebrokeResuWindow;
         

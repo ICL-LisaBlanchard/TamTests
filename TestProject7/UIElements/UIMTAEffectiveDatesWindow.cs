@@ -23,7 +23,7 @@
             }
         }
 
-        public UIItemWindow UIItemWindow
+        public UIItemWindow UIMTADate
         {
             get
             {
@@ -32,6 +32,18 @@
                     this.mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "2");
                 }
                 return this.mUIItemWindow;
+            }
+        }
+
+        public UIItemWindow UIMTATime
+        {
+            get
+            {
+                if ((this.mUIItemWindow2 == null))
+                {
+                    this.mUIItemWindow2 = new UIItemWindow(this, controlId: "5");
+                }
+                return this.mUIItemWindow2;
             }
         }
 
@@ -54,6 +66,8 @@
         private UIItemWindow mUIOKWindow;
 
         private UIItemWindow mUIItemWindow;
+
+        private UIItemWindow mUIItemWindow2;
 
         private UIItemWindow mUICancelWindow;
 

@@ -5,9 +5,9 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    public class UIAUTO2301001Window : WinWindow
+    public class UiautoWindow : WinWindow
     {
-        public UIAUTO2301001Window()
+        public UiautoWindow()
         {
             #region Search Criteria
 
@@ -32,11 +32,25 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
+        public UIItemWindow UILapsePolicyWindow
+        {
+            get
+            {
+                if ((this.mUILapsePolicyWindow == null))
+                {
+                    this.mUILapsePolicyWindow = new UIItemWindow(this, "26");
+                }
+                return this.mUILapsePolicyWindow;
+            }
+        }
+
         #endregion
 
         #region Fields
 
         private UIItemWindow mUIRebrokeWindow;
+
+        private UIItemWindow mUILapsePolicyWindow;
 
         #endregion
     }

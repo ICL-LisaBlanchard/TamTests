@@ -259,14 +259,14 @@
         public void HomePrintQuote1()
         {
             WinControl uIOKButton = this.UICurrentOrFutureWindow.UIClient.UIOKButton;
-            WinControl uINextButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow.UINextButton;
-            WinControl uINextButton1 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow1.UINextButton;
-            WinControl uINextButton2 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow2.UINextButton;
-            WinControl uINextButton3 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow3.UINextButton;
-            WinControl uINextButton4 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow4.UINextButton;
-            WinControl uINextButton5 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow5.UINextButton;
-            WinControl uINextButton6 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow6.UINextButton;
-            WinControl uIQuoteButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIQuoteWindow.UIQuoteButton;
+            WinControl uINextButton = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow.UINextButton;
+            WinControl uINextButton1 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow1.UINextButton;
+            WinControl uINextButton2 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow2.UINextButton;
+            WinControl uINextButton3 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow3.UINextButton;
+            WinControl uINextButton4 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow4.UINextButton;
+            WinControl uINextButton5 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow5.UINextButton;
+            WinControl uINextButton6 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow6.UINextButton;
+            WinControl uIQuoteButton = this.UIInsurEtamWindow.UIQuotesWindow.UIQuoteWindow.UIQuoteButton;
             WinControl uINOButton = this.UICreditCheckWindow.UINoWindow.UINoButton;
             WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
             WinControl uIPrintQuoteButton = this.UIQuotesResultsWindow.UIPrintQuoteWindow.UIPrintQuoteButton;
@@ -309,14 +309,14 @@
             WinMenuItem uIQuoteSelectListMenuItem =
                 this.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegratMenuItem.UIQuoteSelectListMenuItem;
             WinControl uIOKButton = this.UICurrentOrFutureWindow.UIClient.UIOKButton;
-            WinControl uINextButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow.UINextButton;
-            WinControl uINextButton1 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow1.UINextButton;
-            WinControl uINextButton2 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow2.UINextButton;
-            WinControl uINextButton3 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow3.UINextButton;
-            WinControl uINextButton4 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow4.UINextButton;
-            WinControl uINextButton5 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow5.UINextButton;
-            WinControl uINextButton6 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow6.UINextButton;
-            WinControl uIQuoteButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIQuoteWindow.UIQuoteButton;
+            WinControl uINextButton = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow.UINextButton;
+            WinControl uINextButton1 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow1.UINextButton;
+            WinControl uINextButton2 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow2.UINextButton;
+            WinControl uINextButton3 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow3.UINextButton;
+            WinControl uINextButton4 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow4.UINextButton;
+            WinControl uINextButton5 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow5.UINextButton;
+            WinControl uINextButton6 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow6.UINextButton;
+            WinControl uIQuoteButton = this.UIInsurEtamWindow.UIQuotesWindow.UIQuoteWindow.UIQuoteButton;
             WinControl uINOButton = this.UICreditCheckWindow.UINoWindow.UINoButton;
             WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
             WinControl uIExitButton = this.UIQuotesResultsWindow.UIExitWindow.UIExitButton;
@@ -327,7 +327,6 @@
             WinControl uIItemButton = this.UIPolicyautotestWindow.UIItemWindow.UIItemButton;
             WinControl uIDetailButton = this.UIPolicyautotestWindow.UIPolicyListWindow1.UIDetailWindow.UIDetailButton;
             WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
-            WinControl uIOKButton3 = this.UISelectTaminsurerforiWindow.UIItemWindow1.UIClient().UIOKButton;
 
             Mouse.Click(uICancelButton, new Point(41, 14));
 
@@ -389,6 +388,10 @@
             WinControl uIOKButton1 = this.UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
             WinControl uIOKButton2 = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
             WinEdit uIItemEdit = this.UIPolicyDetailConfirmationWindow.UIItemWindow.UIItemEdit;
+
+            Playback.Wait(3000);
+
+            Mouse.Move(new Point(500, 500));
 
             Mouse.Click(uIAcceptButton, new Point(47, 11));
 
@@ -459,7 +462,7 @@
 
         public void HomeClosePolicy()
         {
-            WinControl uICloseButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICancelWindow.UICloseButton;
+            WinControl uICloseButton = this.UIInsurEtamWindow.UIQuotesWindow.UICancelWindow.UICloseButton;
             WinControl uIokButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             Mouse.Click(uICloseButton, new Point(33, 13));
@@ -469,10 +472,10 @@
 
         public void HomeCopyCheckData()
         {
-            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxFirstname.UIItemEdit;
-            WinComboBox uIItemComboBox = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxJobTitle.UIItemComboBox;
-            WinEdit uIItemEdit1 = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxPostcode.UIItemEdit;
-            WinEdit uIItemEdit2 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow6.UIItemEdit;
+            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIQuotesWindow.TbxFirstname.UIItemEdit;
+            WinComboBox uIItemComboBox = this.UIInsurEtamWindow.UIQuotesWindow.TbxJobTitle.UIItemComboBox;
+            WinEdit uIItemEdit1 = this.UIInsurEtamWindow.UIQuotesWindow.TbxPostcode.UIItemEdit;
+            WinEdit uIItemEdit2 = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow6.UIItemEdit;
 
             Assert.AreEqual(this.HomeCopyCheckDataExpectedValues.UIItemEditText, uIItemEdit.Text);
 
@@ -533,16 +536,18 @@
         /// <summary>
         ///     HomeMTAAccept
         /// </summary>
-        public void HomeMTAAccept()
+        /// <param name="needScreenshot"></param>
+        /// <param name="expectedDate"></param>
+        public void HomeMTAAccept(bool needScreenshot, string expectedDate = "")
         {
-            WinControl uINextButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow.UINextButton;
-            WinControl uINextButton1 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow1.UINextButton;
-            WinControl uINextButton2 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow2.UINextButton;
-            WinControl uINextButton3 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow3.UINextButton;
-            WinControl uINextButton4 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow4.UINextButton;
-            WinControl uINextButton5 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow5.UINextButton;
-            WinControl uINextButton6 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow6.UINextButton;
-            WinControl uIQuoteButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIQuoteWindow.UIQuoteButton;
+            WinControl uINextButton = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow.UINextButton;
+            WinControl uINextButton1 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow1.UINextButton;
+            WinControl uINextButton2 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow2.UINextButton;
+            WinControl uINextButton3 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow3.UINextButton;
+            WinControl uINextButton4 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow4.UINextButton;
+            WinControl uINextButton5 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow5.UINextButton;
+            WinControl uINextButton6 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow6.UINextButton;
+            WinControl uIQuoteButton = this.UIInsurEtamWindow.UIQuotesWindow.UIQuoteWindow.UIQuoteButton;
 
             Mouse.Click(uINextButton, new Point(39, 12));
 
@@ -557,6 +562,12 @@
             Mouse.Click(uINextButton5, new Point(47, 12));
 
             Mouse.Click(uINextButton6, new Point(47, 12));
+
+            if (needScreenshot)
+            {
+                Image image = this.UIInsurEtamWindow.UIQuotesWindow.CaptureImage();
+                image.Save(string.Format(Configs.ScreenshotPath, expectedDate));
+            }
 
             Mouse.Click(uIQuoteButton, new Point(47, 12));
         }
@@ -577,7 +588,7 @@
 
         public void HomeMTACancel()
         {
-            WinControl uICancelButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICancelWindow.UICancelButton;
+            WinControl uICancelButton = this.UIInsurEtamWindow.UIQuotesWindow.UICancelWindow.UICancelButton;
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinControl uIOKButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
@@ -590,7 +601,7 @@
 
         public void HomeMTACancel1()
         {
-            WinControl uICancelButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICancelWindow2.UICancelButton;
+            WinControl uICancelButton = this.UIInsurEtamWindow.UIQuotesWindow.UICancelWindow2.UICancelButton;
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinControl uIOKButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
@@ -603,10 +614,10 @@
 
         public void HomeMTAChange()
         {
-            WinControl uIMTAButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow1.UIMTAButton;
+            WinControl uIMTAButton = this.UIInsurEtamWindow.UIQuotesWindow.UIMTAWindow1.UIMTAButton;
             WinComboBox uIItemComboBox = this.UIMidTermAdjustmentsWindow.UIItemWindow.UIItemComboBox;
             WinControl uIOKButton = this.UIMidTermAdjustmentsWindow.UIOKWindow.UIOKButton;
-            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxFirstname.UIItemEdit;
+            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIQuotesWindow.TbxFirstname.UIItemEdit;
 
             Playback.Wait(2000);
             Mouse.Click(uIMTAButton, new Point(45, 12));
@@ -620,14 +631,14 @@
 
         public void HomeMTACheckCancelled()
         {
-            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxFirstname.UIItemEdit;
+            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIQuotesWindow.TbxFirstname.UIItemEdit;
 
             Assert.AreEqual(this.HomeMTACheckCancelledExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
         public void HomeMTACheckChanged()
         {
-            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxFirstname.UIItemEdit;
+            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIQuotesWindow.TbxFirstname.UIItemEdit;
 
             Assert.AreEqual(this.HomeMTACheckChangedExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
@@ -648,10 +659,10 @@
 
         public void HomeMTACopyCheck()
         {
-            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxFirstname.UIItemEdit;
-            WinEdit uIItemEdit1 = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxPostcode.UIItemEdit;
-            WinEdit uIItemEdit2 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow6.UIItemEdit;
-            WinComboBox uIItemComboBox = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxJobSector.UIItemComboBox;
+            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIQuotesWindow.TbxFirstname.UIItemEdit;
+            WinEdit uIItemEdit1 = this.UIInsurEtamWindow.UIQuotesWindow.TbxPostcode.UIItemEdit;
+            WinEdit uIItemEdit2 = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow6.UIItemEdit;
+            WinComboBox uIItemComboBox = this.UIInsurEtamWindow.UIQuotesWindow.TbxJobSector.UIItemComboBox;
 
             Assert.AreEqual(this.HomeMTACopyCheckExpectedValues.NewSurname, uIItemEdit.Text);
 
@@ -664,8 +675,8 @@
 
         public void HomeAddressLookup()
         {
-            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow6.UIItemEdit;
-            WinEdit uIItemEdit1 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow7.UIItemEdit;
+            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow6.UIItemEdit;
+            WinEdit uIItemEdit1 = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow7.UIItemEdit;
 
             Assert.AreEqual(this.AddressLookupExpectedValues.AddressLine1, uIItemEdit.Text);
 
@@ -751,7 +762,7 @@
 
         public void HomeRebroke()
         {
-            WinControl uIRebrokeButton = this.UIAUTO2301001Window.UIRebrokeWindow.UIRebrokeButton;
+            WinControl uIRebrokeButton = this.UIAUTOWindow.UIRebrokeWindow.UIRebrokeButton;
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinControl uIProceedButton = this.UICreditCheckAtRenewalWindow.UIProceedWindow.UIProceedButton;
 
@@ -764,13 +775,13 @@
 
         public void HomeProposer()
         {
-            WinEdit tbxFirstname = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxFirstname.UIItemEdit;
-            WinEdit tbxLastName = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxLastName.UIItemEdit;
-            WinComboBox tbxJobTitle = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxJobTitle.UIItemComboBox;
-            WinComboBox tbxJobSector = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxJobSector.UIItemComboBox;
-            WinEdit tbxDateOfBirth = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxDateOfBirth.UIItemEdit;
-            WinEdit txbPostcode = this.UIInsurEtamWindow.UIMotorQuotesWindow.TbxPostcode.UIItemEdit;
-            WinControl uILookupButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UILookupWindow.UILookupButton;
+            WinEdit tbxFirstname = this.UIInsurEtamWindow.UIQuotesWindow.TbxFirstname.UIItemEdit;
+            WinEdit tbxLastName = this.UIInsurEtamWindow.UIQuotesWindow.TbxLastName.UIItemEdit;
+            WinComboBox tbxJobTitle = this.UIInsurEtamWindow.UIQuotesWindow.TbxJobTitle.UIItemComboBox;
+            WinComboBox tbxJobSector = this.UIInsurEtamWindow.UIQuotesWindow.TbxJobSector.UIItemComboBox;
+            WinEdit tbxDateOfBirth = this.UIInsurEtamWindow.UIQuotesWindow.TbxDateOfBirth.UIItemEdit;
+            WinEdit txbPostcode = this.UIInsurEtamWindow.UIQuotesWindow.TbxPostcode.UIItemEdit;
+            WinControl uILookupButton = this.UIInsurEtamWindow.UIQuotesWindow.UILookupWindow.UILookupButton;
             WinControl uIokButton = this.UISearchResultForB338TWindow.UIOKWindow.UIOKButton;
 
             tbxLastName.Text = this.ProposerParams.Lastname;
@@ -876,37 +887,42 @@
 
             Mouse.Click(uIokButton4, new Point(29, 19));
 
-            this.SelectTamInsurersAndActivity(true);
+            this.SelectTamInsurersAndActivity(selectListItems1: 1, selectListItems2: 1);
         }
 
         public void HomeMTAEnterDate(string withDate = "")
         {
-            WinEdit uIItemEdit = this.UIMTAEffectiveDatesWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.UIMTAEffectiveDatesWindow.UIMTADate.UIItemEdit;
 
             uIItemEdit.Text = string.IsNullOrEmpty(withDate) ? DateTime.Now.AddDays(2).ToString("dd/MM/yy") : withDate;
         }
 
-        public void HomeMTACoverDate()
+        public string HomeMTACoverDate()
         {
+            WinEdit uIMTADate = this.UIMTAEffectiveDatesWindow.UIMTADate.UIItemEdit;
+            WinEdit uIMTATime = this.UIMTAEffectiveDatesWindow.UIMTATime.UIItemEdit;
             WinControl uIokButton = this.UIMTAEffectiveDatesWindow.UIOKWindow.UIOKButton;
 
+            string mtaDate = uIMTADate.Text.Replace(" ", "_") + "_" + uIMTATime.Text.Replace(":", "");
             Mouse.Click(uIokButton, new Point(46, 8));
+
+            return mtaDate;
         }
 
         public void HomeCreatePolicy()
         {
-            WinControl uINextButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow.UINextButton;
-            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow8.UIItemEdit;
-            WinControl uINextButton1 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow1.UINextButton;
-            WinControl uINextButton2 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow2.UINextButton;
-            WinControl uINextButton3 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow3.UINextButton;
-            WinEdit uIItemEdit1 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow.UIItemEdit;
-            WinEdit uIItemEdit2 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow22.UIItemEdit;
-            WinControl uINextButton4 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow4.UINextButton;
-            WinEdit uIItemEdit4 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow41.UIItemEdit;
-            WinControl uINextButton5 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow5.UINextButton;
-            WinControl uINextButton6 = this.UIInsurEtamWindow.UIMotorQuotesWindow.UINextWindow6.UINextButton;
-            WinControl uIQuoteButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIQuoteWindow.UIQuoteButton;
+            WinControl uINextButton = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow.UINextButton;
+            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow8.UIItemEdit;
+            WinControl uINextButton1 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow1.UINextButton;
+            WinControl uINextButton2 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow2.UINextButton;
+            WinControl uINextButton3 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow3.UINextButton;
+            WinEdit uIItemEdit1 = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit2 = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow22.UIItemEdit;
+            WinControl uINextButton4 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow4.UINextButton;
+            WinEdit uIItemEdit4 = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow41.UIItemEdit;
+            WinControl uINextButton5 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow5.UINextButton;
+            WinControl uINextButton6 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow6.UINextButton;
+            WinControl uIQuoteButton = this.UIInsurEtamWindow.UIQuotesWindow.UIQuoteWindow.UIQuoteButton;
             WinControl uInoButton = this.UICreditCheckWindow.UINoWindow.UINoButton;
 
             Mouse.Click(uINextButton, new Point(19, 6));
@@ -973,7 +989,7 @@
 
         public void HomeCancelPolicyQuote()
         {
-            WinControl uIQuoteButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIQuoteWindow.UIQuoteButton;
+            WinControl uIQuoteButton = this.UIInsurEtamWindow.UIQuotesWindow.UIQuoteWindow.UIQuoteButton;
 
             Mouse.Click(uIQuoteButton, new Point(41, 7));
         }
@@ -1032,7 +1048,7 @@
 
         public void HomeCancelPolicy()
         {
-            WinControl uIMTAButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIMTAWindow1.UIMTAButton;
+            WinControl uIMTAButton = this.UIInsurEtamWindow.UIQuotesWindow.UIMTAWindow1.UIMTAButton;
             WinComboBox uIItemComboBox = this.UIMidTermAdjustmentsWindow.UIItemWindow.UIItemComboBox;
             WinControl uIOKButton = this.UIMidTermAdjustmentsWindow.UIOKWindow.UIOKButton;
 
@@ -1046,7 +1062,7 @@
 
         public void HomeCancelCopy()
         {
-            WinControl uICancelButton = this.UIInsurEtamWindow.UIMotorQuotesWindow.UICancelWindow.UICancelButton;
+            WinControl uICancelButton = this.UIInsurEtamWindow.UIQuotesWindow.UICancelWindow.UICancelButton;
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinControl uIOKButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
@@ -1059,14 +1075,14 @@
             Mouse.Click(uIOKButton, new Point(49, 15));
         }
 
-        public void HomeAmendSelecPolicy()
+        public void HomeAmendSelecPolicy(bool newPolicy)
         {
             Playback.Wait(2000);
             WinClient uIHouseholdRenewalsAmeClient = this.UIHouseholdRenewalsResultsWindow.UIItemWindow.UIClient();
 
-            Mouse.Click(uIHouseholdRenewalsAmeClient, new Point(101, 31));
+            Mouse.Click(uIHouseholdRenewalsAmeClient, newPolicy ? new Point(101, 60) : new Point(101, 31));
 
-            Keyboard.SendKeys(uIHouseholdRenewalsAmeClient, this.CommonParams.SendEndKeys, ModifierKeys.None);
+            Mouse.Move(new Point(500, 500));
         }
 
         public void HomeAmendRisk()
@@ -1133,13 +1149,14 @@
 
             Playback.PlaybackSettings.SearchTimeout = timeout;
 
+            this.WaitForControl(uIAddActivityCheckBox);
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIokButton2, new Point(48, 9));
 
             Mouse.Click(uIokButton3, new Point(19, 12));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(false, onlyOnce: true);
         }
 
         public void HomeAmendRenewFinish()
@@ -1147,13 +1164,9 @@
             WinControl uIRenewPolicyButton = this.UIHouseholdRenewalsResultsWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
 
-            WinControl uIYesButton2 = this.UIConfirmWindow.UIYesWindow.UIYesButton;
-
             Mouse.Click(uIRenewPolicyButton, new Point(52, 9));
 
             Mouse.Click(uIYesButton, new Point(55, 11));
-
-            Mouse.Click(uIYesButton2, new Point(34, 12));
 
             this.CancelPrint();
         }
@@ -1216,7 +1229,7 @@
 
         public void HomeStartDate()
         {
-            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIMotorQuotesWindow.UIItemWindow13.UIItemEdit;
+            WinEdit uIItemEdit = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow13.UIItemEdit;
 
             uIItemEdit.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
         }
@@ -1251,15 +1264,6 @@
             Mouse.Click(uICreateRecordButton, new Point(102, 11));
 
             uIInsurEcomSystemMaintWindow.PerformDialogAction(BrowserDialogAction.Ok);
-        }
-
-        public void HomeSelectPolicy1()
-        {
-            WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
-
-            Mouse.Click(uIQuotesResultsClient, new Point(354, 212));
-
-            Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
         }
 
         public void HomeSelectPolicy()
@@ -1304,7 +1308,7 @@
 
             Mouse.Click(uIOKButton2, new Point(33, 12));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(selectListItems1: 1, selectListItems2: 1);
         }
 
         public void HomeRenewalBeforeAccept()

@@ -18,15 +18,15 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         #region Properties
 
-        public UIMotorQuotesWindow UIMotorQuotesWindow
+        public UIQuotesWindow UIQuotesWindow
         {
             get
             {
-                if ((this.mUIMotorQuotesWindow == null))
+                if ((this.mUIQuotesWindow == null))
                 {
-                    this.mUIMotorQuotesWindow = new UIMotorQuotesWindow(this);
+                    this.mUIQuotesWindow = new UIQuotesWindow(this);
                 }
-                return this.mUIMotorQuotesWindow;
+                return this.mUIQuotesWindow;
             }
         }
 
@@ -34,7 +34,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         #region Fields
 
-        private UIMotorQuotesWindow mUIMotorQuotesWindow;
+        private UIQuotesWindow mUIQuotesWindow;
 
         #endregion
     }

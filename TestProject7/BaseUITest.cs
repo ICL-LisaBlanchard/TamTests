@@ -1,7 +1,8 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
-    using System.Collections.Generic;
+    using System.Collections.Specialized;
     using System.Diagnostics;
+    using System.IO;
     using System.Linq;
 
     using Meyn.TestLink;
@@ -65,6 +66,7 @@
         [DeploymentItem(@"RegistrySettings")]
         public void StartTest()
         {
+            CleanDocuments();
             Playback.PlaybackSettings.SearchTimeout = 30000;
             this.TestName = this.TestContext.TestName;
             this.TestLinkInitialize();
@@ -160,13 +162,34 @@
             }
         }
 
-        protected static Dictionary<string, string> GetTransactionDictionary(string premium)
+        protected static NameValueCollection GetTransactionDictionary(string premium, string originalPremium = "")
         {
+            var dict = new NameValueCollection();
+            if (!string.IsNullOrEmpty(originalPremium))
+            {
+                double oTax = double.Parse(originalPremium) * 0.06;
+                dict.Add("NEW", originalPremium);
+                dict.Add("TAX", oTax.ToString("0.00"));
+            }
             double tax = double.Parse(premium) * 0.06;
-            var dict = new Dictionary<string, string>();
             dict.Add("NEW", premium);
             dict.Add("TAX", tax.ToString("0.00"));
             return dict;
+        }
+
+        protected static void CleanDocuments()
+        {
+            string[] files = Directory.GetFiles(Configs.LocalDocsPath, "*.htm");
+            foreach (string file in files)
+            {
+                File.Delete(file);
+            }
+
+            files = Directory.GetFiles(Configs.LocalDocsPath, "*.pdf");
+            foreach (string file in files)
+            {
+                File.Delete(file);
+            }
         }
     }
 }

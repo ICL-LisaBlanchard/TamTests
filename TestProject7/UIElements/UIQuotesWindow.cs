@@ -5,9 +5,9 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    public class UIMotorQuotesWindow : WinWindow
+    public class UIQuotesWindow : WinWindow
     {
-        public UIMotorQuotesWindow(UITestControl searchLimitContainer)
+        public UIQuotesWindow(UITestControl searchLimitContainer)
             : base(searchLimitContainer)
         {
             #region Search Criteria
