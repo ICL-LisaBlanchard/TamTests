@@ -74,7 +74,7 @@
         [DeploymentItem(@"RegistrySettings")]
         public void StartTest()
         {
-            CleanDocuments();
+            UIMap.CleanDocuments();
             Playback.PlaybackSettings.SearchTimeout = 30000;
             this.TestName = this.TestContext.TestName;
             this.TestLinkInitialize();
@@ -183,21 +183,6 @@
             dict.Add("NEW", premium);
             dict.Add("TAX", tax.ToString("0.00"));
             return dict;
-        }
-
-        protected static void CleanDocuments()
-        {
-            string[] files = Directory.GetFiles(Configs.LocalDocsPath, "*.htm");
-            foreach (string file in files)
-            {
-                File.Delete(file);
-            }
-
-            files = Directory.GetFiles(Configs.LocalDocsPath, "*.pdf");
-            foreach (string file in files)
-            {
-                File.Delete(file);
-            }
         }
 
         protected void RenewalModule(string customerCode, string policyType)

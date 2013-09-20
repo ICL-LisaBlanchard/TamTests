@@ -11,29 +11,9 @@
 
     public class PDFParser
     {
-        /// BT = Beginning of a text object operator 
-        /// ET = End of a text object operator
-        /// Td move to the start of next line
-        ///  5 Ts = superscript
-        /// -5 Ts = subscript
 
-        #region Fields
-
-        #region _numberOfCharsToKeep
-
-        /// <summary>
-        /// The number of characters to keep, when extracting text.
-        /// </summary>
         private const int NumberOfCharsToKeep = 15;
 
-        #region ExtractText
-
-        /// <summary>
-        /// Extracts a text from a PDF file.
-        /// </summary>
-        /// <param name="inFileName">the full path to the pdf file.</param>
-        /// <param name="outFileName">the output file name.</param>
-        /// <returns>the extracted text</returns>
         public bool ExtractText(string inFileName, string outFileName)
         {
             StreamWriter outFile = null;
@@ -116,6 +96,8 @@
                     outputText += (this.ExtractTextFromPDFBytes(reader.GetPageContent(page)) + " ");
                 }
 
+                reader.Close();
+
                 return outputText;
             }
             catch (Exception ex)
@@ -124,16 +106,6 @@
             }
         }
 
-        #endregion
-
-        #region ExtractTextFromPDFBytes
-
-        /// <summary>
-        /// This method processes an uncompressed Adobe (text) object 
-        /// and extracts text.
-        /// </summary>
-        /// <param name="input">uncompressed</param>
-        /// <returns></returns>
         public string ExtractTextFromPDFBytes(byte[] input)
         {
             if (input == null || input.Length == 0)
@@ -259,7 +231,7 @@
             }
         }
 
-        #endregion
+
 
         #region CheckToken
 
@@ -282,8 +254,6 @@
 
         #endregion
 
-        #endregion
 
-        #endregion
     }
 }

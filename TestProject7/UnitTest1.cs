@@ -17,7 +17,7 @@
         [TestMethod]
         public void TestMethod1()
         {
-            this.moto.RenewalModuleInvite(true);
+            this.moto.CheckPremiumInQuoteDocument(docs.DocumentsForMotoNewBusinessCancelAccept);
         }
     }
 }

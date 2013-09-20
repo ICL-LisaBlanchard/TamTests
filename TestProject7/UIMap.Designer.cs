@@ -14,6 +14,7 @@ namespace AppliedSystems.Tam.Ui.Tests
     using System.CodeDom.Compiler;
     using System.Collections.Generic;
     using System.Drawing;
+    using System.IO;
     using System.Text.RegularExpressions;
     using System.Windows.Input;
 
@@ -1433,7 +1434,5 @@ namespace AppliedSystems.Tam.Ui.Tests
 
         private UIPolicyWindow mUIPolicyWindow;
         #endregion
-
-
     }
 }

@@ -414,7 +414,7 @@
 
             #endregion
 
-            uIMTADate.Text = string.IsNullOrEmpty(withDate) ? DateTime.Now.AddDays(1).ToString("dd/MM/yy") : withDate;
+            uIMTADate.Text = String.IsNullOrEmpty(withDate) ? DateTime.Now.AddDays(1).ToString("dd/MM/yy") : withDate;
             return uIMTADate.Text.Replace("/", "_") + "_" + uIMTATime.Text.Replace(":", "");
         }
 
@@ -477,7 +477,7 @@
 
             #endregion
 
-            StringAssert.Contains(uIauto1871001Window.Name, string.Format("{0}-{1}001", customerCode, policyType));
+            StringAssert.Contains(uIauto1871001Window.Name, String.Format("{0}-{1}001", customerCode, policyType));
         }
 
         public void QuoteSelectListCancel()
@@ -1945,6 +1945,21 @@
             Mouse.Click(uiCancelButton2);
         }
 
+        public static void CleanDocuments()
+        {
+            string[] files = Directory.GetFiles(Configs.LocalDocsPath, "*.htm");
+            foreach (string file in files)
+            {
+                File.Delete(file);
+            }
+
+            files = Directory.GetFiles(Configs.LocalDocsPath, "*.pdf");
+            foreach (string file in files)
+            {
+                File.Delete(file);
+            }
+        }
+
         public void CheckPremiumInQuoteDocument(List<Document> expectedDocs, double overridePremium = 0.00, double originalPremium = 0.00)
         {
             WinClient uIBillingScreenClient = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIPolicyDocumentsWindow.UIClient();
@@ -1963,9 +1978,11 @@
 
             Mouse.DoubleClick(uIBillingScreenClient, new Point(40, 14));
 
-            string filename = string.Empty;
+            string filename = String.Empty;
             for (int i = 20; i < 300; i = i + 18)
             {
+                CleanDocuments();
+
                 Mouse.Click(uIPolicyAttachmentsClient, new Point(10, i));
                 Mouse.Click(uIDetailButton);
 
@@ -2033,7 +2050,7 @@
 
             Mouse.DoubleClick(uIBillingScreenClient, new Point(40, 14));
 
-            string filename = string.Empty;
+            string filename = String.Empty;
             for (int i = 16; i < 1000; i = i + 18)
             {
                 Mouse.Click(uIPolicyAttachmentsClient, new Point(10, i));
@@ -2083,7 +2100,7 @@
         {
             this.OpenAttachment();
 
-            this.UIIEPolicyDocumentWindow.Close();
+            Keyboard.SendKeys("Q", ModifierKeys.Control);
 
             string file;
             if (isHouse)
@@ -2118,23 +2135,13 @@
         {
             this.OpenAttachment();
 
-            WinMenuItem uIPropertiesCtrlDMenuItem = this.UIItemPdfSecureWindow.UIApplicationMenuBar.UIFileMenuItem.UIPropertiesCtrlDMenuItem;
-            WinEdit uIItemEdit = this.UIDocumentPropertiesWindow.UIItemWindow.UIItemEdit;
-            WinButton uIOKButton = this.UIDocumentPropertiesWindow.UIOKWindow.UIOKButton;
-            WinButton uICloseButton = this.UIItemPdfSecureWindow.UITitleBar.UICloseButton;
+            Keyboard.SendKeys("Q", ModifierKeys.Control);
 
-            Mouse.Click(uIPropertiesCtrlDMenuItem);
-            Mouse.Click(uIItemEdit);
-
-            string pdfFilePath = uIItemEdit.Text;
-
-            Mouse.Click(uIOKButton, new Point(33, 12));
-
-            Mouse.Click(uICloseButton);
+            string pdfFilePath = Configs.LocalDocsPath + DateTime.Now.Year + DateTime.Now.Month.ToString("00") + "~1.pdf";
 
             var parser = new PDFParser();
 
-            string text = parser.ExtractText(pdfFilePath).Replace(" ", string.Empty);
+            string text = parser.ExtractText(pdfFilePath).Replace(" ", String.Empty);
 
             if (text.Contains("Cancellation"))
             {
@@ -2144,6 +2151,11 @@
             {
                 Assert.IsTrue(CheckStringForPremium(text, premium));
             }
+
+            
+
+            Playback.Wait(5000);
+
         }
 
         private void CheckPremiumInWordDoc(double premium)
@@ -2251,7 +2263,7 @@
 
                     if (name.Contains("Please select WHO to follow up"))
                     {
-                        uIItemList2.SelectedItemsAsString = string.IsNullOrEmpty(whoToSelect)
+                        uIItemList2.SelectedItemsAsString = String.IsNullOrEmpty(whoToSelect)
                                                                 ? this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString2
                                                                 : whoToSelect;
 
@@ -2301,7 +2313,7 @@
 
                 if (name.Contains("Please select WHO to follow up"))
                 {
-                    uIItemList2.SelectedItemsAsString = string.IsNullOrEmpty(whoToSelect) ? this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString2 : whoToSelect;
+                    uIItemList2.SelectedItemsAsString = String.IsNullOrEmpty(whoToSelect) ? this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString2 : whoToSelect;
 
                     Mouse.Click(uIOKButton2, new Point(33, 13));
                 }
