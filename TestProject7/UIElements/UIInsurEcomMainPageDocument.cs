@@ -50,6 +50,29 @@
             }
         }
 
+        public HtmlEdit UITxtPremiumEdit
+        {
+            get
+            {
+                if ((this.mUITxtPremiumEdit == null))
+                {
+                    this.mUITxtPremiumEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUITxtPremiumEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = null;
+                    this.mUITxtPremiumEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "txtPremium";
+                    this.mUITxtPremiumEdit.SearchProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUITxtPremiumEdit.SearchProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUITxtPremiumEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUITxtPremiumEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUITxtPremiumEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=txtPremium align=left value=500.00 ";
+                    this.mUITxtPremiumEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "3";
+                    this.mUITxtPremiumEdit.WindowTitles.Add("insurE-com System Maintenance");
+                    #endregion
+                }
+                return this.mUITxtPremiumEdit;
+            }
+        }
+
         public HtmlEdit UITxtPolicyNumberEdit
         {
             get
@@ -167,6 +190,8 @@
         private HtmlInputButton mUICreateRecordButton;
 
         private HtmlEdit mUITxtRenewalDateEdit;
+
+        private HtmlEdit mUITxtPremiumEdit;
 
         #endregion
     }

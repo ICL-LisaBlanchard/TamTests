@@ -13,6 +13,14 @@
     [CodedUITest]
     public class BaseUiTest
     {
+        protected readonly MotoActions Moto = new MotoActions();
+
+        protected readonly HouseActions House = new HouseActions();
+
+        protected readonly CustomerActions Customer = new CustomerActions();
+
+        protected readonly DocumentsList Docs = new DocumentsList();
+
         protected const string PlanName = "Ver. 12.05";
 
         protected const string ProjectName = "TAM";
@@ -190,6 +198,80 @@
             {
                 File.Delete(file);
             }
+        }
+
+        protected void RenewalModule(string customerCode, string policyType)
+        {
+            this.UiMap.RenewalModuleEDI();
+            this.UiMap.RenewalModuleConfirm();
+            this.UiMap.RenewalModuleEdi1(false);
+            this.UiMap.RenewalModuleFilter(policyType);
+            this.UiMap.RenewalModuleSort();
+            this.UiMap.RenewalModuleDisplay(this.UiMap.CommonParams.SendHomeKeys);
+            this.UiMap.RenewalCheckRecord(1, customerCode);
+        }
+
+        protected string RegressApp(string policyType)
+        {
+            this.UiMap.HighlightCustomer();
+            string customerCode = this.UiMap.GetCustomerCode();
+            this.UiMap.RegressApp(customerCode);
+            this.UiMap.RegressAppPolicyTypeSelection(policyType);
+            this.UiMap.RegressAppDate();
+            this.UiMap.RegressAppFinish();
+            this.UiMap.CloseRegressApp();
+            return customerCode;
+        }
+
+        protected void RenewalLoader()
+        {
+            this.UiMap.RenewalLoaderOpen();
+            this.UiMap.RenewalLoaderRun();
+            this.UiMap.CloseBrowser();
+            this.UiMap.RenewalLoaderClose();
+        }
+
+        protected void SiteForRenewal(string policyNumber, string policyType, string renewalPremium)
+        {
+            this.UiMap.OpenBrowser2();
+            if (policyType == "Household")
+            {
+                this.House.HomeSiteRenewal(policyNumber, renewalPremium);
+            }
+            else
+            {
+                this.Moto.MotoCreateSiteRenewal(policyNumber, renewalPremium);
+            }
+            
+            Playback.Wait(5000);
+            this.UiMap.CloseBrowser();
+            this.UiMap.ChangeDatePolicy();
+        }
+
+        protected void Renewals(string policyNumber, string policyType, string renewalPremium)
+        {
+            //site for renewal
+            this.SiteForRenewal(policyNumber, policyType, renewalPremium);
+
+            //regress app
+            string customerCode = this.RegressApp(policyType);
+
+            //renewal loader
+            this.RenewalLoader();   
+
+            // renewal module
+            this.RenewalModule(customerCode, policyType);
+        }
+
+        protected void RenewalsInvite(bool selectAlternative)
+        {
+            this.House.RenewalModuleInvite(selectAlternative);
+            this.House.RenewConfirmInvite();
+            this.House.RenewalModuleInvite1();
+            this.House.RenewalModuleRenew();
+            this.House.RetrieveResponse();
+            this.House.RenewalModuleRenew1();
+            this.House.RenewalModuleClose();
         }
     }
 }

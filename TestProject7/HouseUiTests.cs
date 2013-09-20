@@ -10,50 +10,44 @@
     {
         private const string PolicyType = "Household";
 
-        private readonly MotoActions moto = new MotoActions();
-
-        private readonly HouseActions house = new HouseActions();
-
-        private readonly CustomerActions customer = new CustomerActions();
-
-        private readonly DocumentsList docs = new DocumentsList();
+        private const string RenewalPremium = "1232";
 
         [TestMethod]
         public void HouseCreateQuote()
         {
             Playback.PlaybackSettings.SearchTimeout = 15000;
             this.SetOfficeRegKeys();
-            this.house.CustomerCode = this.customer.AddPolicy();
+            this.House.CustomerCode = this.Customer.AddPolicy();
             this.CreatePolicy(false);
             string premium = this.CreateNewPolicy();
-            this.house.OpenTransList(Transactions.GetTransactionDictionary(premium));
-            this.house.CheckPremiumInQuoteDocument(this.docs.DocumentsForHhNewBusinessQuote);
+            this.House.OpenTransList(Transactions.GetTransactionDictionary(premium));
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhNewBusinessQuote);
         }
 
         [TestMethod]
         public void HouseSaveQuoteWithoutPremium()
         {
             this.SetOfficeRegKeys();
-            this.house.CustomerCode = this.customer.AddPolicy();
+            this.House.CustomerCode = this.Customer.AddPolicy();
             this.CreatePolicy(false);
-            this.house.HomeExitWithoutPolicy();
-            this.house.HomeCloseOpenPolicy();
-            this.house.HomeClickPremium();
-            this.house.HomeCheckZeroPremium();
-            this.house.HomeExitWithPolicy();
-            this.house.HomeCheckPremium();
-            this.house.HomePrintQuote();
-            this.house.SelectMenu();
-            this.house.HomePrintQuote1();
-            this.house.HomeCheckPrint();
-            this.house.HomeDemands();
-            this.house.CloseDemands();
-            this.house.HomeAcceptQuote();
-            this.house.CancelPrint();
-            this.house.HomeAcceptQuote1();
-            this.house.HomeCloseOpenPolicyList();
-            this.house.HomeOpenPolicy();
-            this.house.CheckPolicyPremium();
+            this.House.HomeExitWithoutPolicy();
+            this.House.HomeCloseOpenPolicy();
+            this.House.HomeClickPremium();
+            this.House.HomeCheckZeroPremium();
+            this.House.HomeExitWithPolicy();
+            this.House.HomeCheckPremium();
+            this.House.HomePrintQuote();
+            this.House.SelectMenu();
+            this.House.HomePrintQuote1();
+            this.House.HomeCheckPrint();
+            this.House.HomeDemands();
+            this.House.CloseDemands();
+            this.House.HomeAcceptQuote();
+            this.House.CancelPrint();
+            this.House.HomeAcceptQuote1();
+            this.House.HomeCloseOpenPolicyList();
+            this.House.HomeOpenPolicy();
+            this.House.CheckPolicyPremium();
         }
 
         [TestMethod]
@@ -61,102 +55,102 @@
         {
             const int OverridePremium = 19999;
             this.SetOfficeRegKeys();
-            this.house.CustomerCode = this.customer.AddPolicy();
+            this.House.CustomerCode = this.Customer.AddPolicy();
             this.CreatePolicy(false);
-            this.house.HomeSelectPolicy();
-            this.house.HomeChangePremium(OverridePremium);
+            this.House.HomeSelectPolicy();
+            this.House.HomeChangePremium(OverridePremium);
             this.SetPolicyDetails();
-            this.house.HomeCheckNewPremium();
+            this.House.HomeCheckNewPremium();
 
-            this.house.OpenTransList(Transactions.GetTransactionDictionary("18866.98"));
-            this.house.CheckPremiumInQuoteDocument(this.docs.DocumentsForHhNewBusinessQuote, OverridePremium);
+            this.House.OpenTransList(Transactions.GetTransactionDictionary("18866.98"));
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhNewBusinessQuote, OverridePremium);
         }
 
         [TestMethod]
         public void HouseCopyRiskNew()
         {
             this.SetOfficeRegKeys();
-            this.house.CustomerCode = this.customer.AddPolicy();
+            this.House.CustomerCode = this.Customer.AddPolicy();
             this.CreatePolicy(false);
-            this.house.HomeSelectPolicy();
-            this.house.HomeAcceptPolicy();
-            this.house.HomeFinishQuote();
-            this.house.HomeCloseOpenPolicyList();
-            this.house.HomeCopyRisk();
-            this.house.HomeCopyCheckData();
-            this.house.HomeCancelCopy();
+            this.House.HomeSelectPolicy();
+            this.House.HomeAcceptPolicy();
+            this.House.HomeFinishQuote();
+            this.House.HomeCloseOpenPolicyList();
+            this.House.HomeCopyRisk();
+            this.House.HomeCopyCheckData();
+            this.House.HomeCancelCopy();
         }
 
         [TestMethod]
         public void HouseCopyRiskQTE()
         {
             this.SetOfficeRegKeys();
-            this.house.CustomerCode = this.customer.AddPolicy();
+            this.House.CustomerCode = this.Customer.AddPolicy();
             this.CreatePolicy(false);
-            this.house.HomeExitWithoutPolicy();
-            this.house.HomeCloseOpenPolicyList();
-            this.house.HomeCopyRisk();
-            this.house.HomeCopyCheckData();
-            this.house.HomeCancelCopy();
+            this.House.HomeExitWithoutPolicy();
+            this.House.HomeCloseOpenPolicyList();
+            this.House.HomeCopyRisk();
+            this.House.HomeCopyCheckData();
+            this.House.HomeCancelCopy();
         }
 
         [TestMethod]
         public void HouseMTAExit()
         {
             this.SetOfficeRegKeys();
-            this.house.CustomerCode = this.customer.AddPolicy();
+            this.House.CustomerCode = this.Customer.AddPolicy();
             this.CreatePolicy(false);
-            this.house.HomeSelectPolicy();
-            this.house.HomeAcceptPolicy();
-            this.house.HomeFinishQuote();
-            this.house.HomeCloseOpenPolicyList();
-            this.house.HomeOpenQuote();
-            this.house.HomeMTAChange();
-            this.house.HomeMTACancel();
-            this.house.HomeOpenQuote();
-            this.house.HomeMTACheckCancelled();
-            this.house.HomeClosePolicy();
+            this.House.HomeSelectPolicy();
+            this.House.HomeAcceptPolicy();
+            this.House.HomeFinishQuote();
+            this.House.HomeCloseOpenPolicyList();
+            this.House.HomeOpenQuote();
+            this.House.HomeMTAChange();
+            this.House.HomeMTACancel();
+            this.House.HomeOpenQuote();
+            this.House.HomeMTACheckCancelled();
+            this.House.HomeClosePolicy();
         }
 
         [TestMethod]
         public void HouseMTAAccept()
         {
             this.SetOfficeRegKeys();
-            this.house.CustomerCode = this.customer.AddPolicy();
+            this.House.CustomerCode = this.Customer.AddPolicy();
             this.CreatePolicy(false);
-            this.house.HomeSelectPolicy();
-            this.house.HomeAcceptPolicy();
-            this.house.HomeFinishQuote();
-            this.house.HomeCloseOpenPolicyList();
-            this.house.HomeOpenQuote();
-            this.house.HomeMTAChange();
-            this.house.HomeMTAAccept(false);
-            this.house.HomeMTACoverDate();
-            this.house.HomeMTASelectQuote();
-            this.house.HomeOpenQuote();
-            this.house.HomeMTACheckChanged();
-            this.house.CheckCorrectNumberTrans(2);
-            this.house.HomeClosePolicy();
+            this.House.HomeSelectPolicy();
+            this.House.HomeAcceptPolicy();
+            this.House.HomeFinishQuote();
+            this.House.HomeCloseOpenPolicyList();
+            this.House.HomeOpenQuote();
+            this.House.HomeMTAChange();
+            this.House.HomeMTAAccept(false);
+            this.House.HomeMTACoverDate();
+            this.House.HomeMTASelectQuote();
+            this.House.HomeOpenQuote();
+            this.House.HomeMTACheckChanged();
+            this.House.CheckCorrectNumberTrans(2);
+            this.House.HomeClosePolicy();
         }
 
         [TestMethod]
         public void HouseCopyMTA()
         {
             this.SetOfficeRegKeys();
-            this.house.CustomerCode = this.customer.AddPolicy();
+            this.House.CustomerCode = this.Customer.AddPolicy();
             this.CreatePolicy(false);
-            this.house.HomeSelectPolicy();
-            this.house.HomeAcceptPolicy();
-            this.house.HomeFinishQuote();
-            this.house.HomeCloseOpenPolicyList();
-            this.house.HomeOpenQuote();
-            this.house.HomeMTAChange();
-            this.house.HomeMTAAccept(false);
-            this.house.HomeMTACoverDate();
-            this.house.HomeMTASelectQuote();
-            this.house.HomeCopyRisk();
-            this.house.HomeMTACopyCheck();
-            this.house.HomeCancelCopy();
+            this.House.HomeSelectPolicy();
+            this.House.HomeAcceptPolicy();
+            this.House.HomeFinishQuote();
+            this.House.HomeCloseOpenPolicyList();
+            this.House.HomeOpenQuote();
+            this.House.HomeMTAChange();
+            this.House.HomeMTAAccept(false);
+            this.House.HomeMTACoverDate();
+            this.House.HomeMTASelectQuote();
+            this.House.HomeCopyRisk();
+            this.House.HomeMTACopyCheck();
+            this.House.HomeCancelCopy();
         }
 
         [TestMethod]
@@ -164,35 +158,35 @@
         {
             this.SetOfficeRegKeys();
             // create new policy
-            this.house.CustomerCode = this.customer.AddPolicy();
+            this.House.CustomerCode = this.Customer.AddPolicy();
             this.CreatePolicy(false);
-            this.house.HomeSelectPolicy();
-            this.house.HomeAcceptPolicy();
-            this.house.HomeFinishQuote();
-            this.house.HomeCloseOpenPolicyList();
+            this.House.HomeSelectPolicy();
+            this.House.HomeAcceptPolicy();
+            this.House.HomeFinishQuote();
+            this.House.HomeCloseOpenPolicyList();
             //MTA
-            this.house.HomeOpenQuote();
-            this.house.HomeMTAChange();
-            this.house.HomeMTAAccept(false);
-            string coverDate = "HouseMTAtoMTA_" + this.house.HomeMTACoverDate();
-            this.house.HomeMTASelectQuote();
+            this.House.HomeOpenQuote();
+            this.House.HomeMTAChange();
+            this.House.HomeMTAAccept(false);
+            string coverDate = "HouseMTAtoMTA_" + this.House.HomeMTACoverDate();
+            this.House.HomeMTASelectQuote();
             //new MTA
-            this.house.HomeOpenQuote();
-            this.house.HomeMTAChangeParams.UIItemEditText = "NewestMTA";
-            this.house.HomeMTAChange();
-            this.house.HomeMTAAccept(true, coverDate);
+            this.House.HomeOpenQuote();
+            this.House.HomeMTAChangeParams.UIItemEditText = "NewestMTA";
+            this.House.HomeMTAChange();
+            this.House.HomeMTAAccept(true, coverDate);
 
-            this.house.HomeMTAEnterDate("30/09/12");
-            this.house.HomeMTACoverDate();
-            this.house.HomeMTACheckMessage();
-            this.house.HomeMTACloseMessage();
-            this.house.HomeMTAEnterDate();
-            this.house.HomeMTACoverDate();
-            this.house.HomeMTASelectQuote();
-            this.house.HomeOpenQuote();
-            this.house.HomeMTACheckChangedExpectedValues.UIItemEditText = "NewestMTA";
-            this.house.HomeMTACheckChanged();
-            this.house.HomeClosePolicy();
+            this.House.HomeMTAEnterDate("30/09/12");
+            this.House.HomeMTACoverDate();
+            this.House.HomeMTACheckMessage();
+            this.House.HomeMTACloseMessage();
+            this.House.HomeMTAEnterDate();
+            this.House.HomeMTACoverDate();
+            this.House.HomeMTASelectQuote();
+            this.House.HomeOpenQuote();
+            this.House.HomeMTACheckChangedExpectedValues.UIItemEditText = "NewestMTA";
+            this.House.HomeMTACheckChanged();
+            this.House.HomeClosePolicy();
         }
 
         [TestMethod]
@@ -200,25 +194,25 @@
         {
             this.SetOfficeRegKeys();
             //create policy
-            this.house.CustomerCode = this.customer.AddPolicy();
+            this.House.CustomerCode = this.Customer.AddPolicy();
             this.CreatePolicy(false);
-            this.house.HomeSelectPolicy();
-            this.house.HomeAcceptPolicy();
-            this.house.HomeFinishQuote();
-            this.house.HomeCloseOpenPolicyList();
+            this.House.HomeSelectPolicy();
+            this.House.HomeAcceptPolicy();
+            this.House.HomeFinishQuote();
+            this.House.HomeCloseOpenPolicyList();
             //cancel policy
-            this.house.HomeOpenQuote();
-            this.house.HomeCancelPolicy();
-            this.house.HomeCancelPolicyQuote();
+            this.House.HomeOpenQuote();
+            this.House.HomeCancelPolicy();
+            this.House.HomeCancelPolicyQuote();
 
-            this.house.HomeMTAEnterDate();
-            this.house.HomeCancelPolicyQuote1();
-            this.house.HomeCancelPolicyExit();
+            this.House.HomeMTAEnterDate();
+            this.House.HomeCancelPolicyQuote1();
+            this.House.HomeCancelPolicyExit();
             //check status
-            this.house.HomeCloseOpenPolicyList();
-            this.house.HomeOpenPolicy();
-            this.house.HomeCheckStatusExpectedValues.UIItemEditText = "NEW";
-            this.house.HomeCheckStatus();
+            this.House.HomeCloseOpenPolicyList();
+            this.House.HomeOpenPolicy();
+            this.House.HomeCheckStatusExpectedValues.UIItemEditText = "NEW";
+            this.House.HomeCheckStatus();
         }
 
         [TestMethod]
@@ -226,26 +220,26 @@
         {
             this.SetOfficeRegKeys();
             //add policy
-            this.house.CustomerCode = this.customer.AddPolicy();
+            this.House.CustomerCode = this.Customer.AddPolicy();
             this.CreatePolicy(false);
-            this.house.HomeSelectPolicy();
-            this.house.HomeAcceptPolicy();
-            this.house.HomeFinishQuote();
-            this.house.HomeCloseOpenPolicyList();
+            this.House.HomeSelectPolicy();
+            this.House.HomeAcceptPolicy();
+            this.House.HomeFinishQuote();
+            this.House.HomeCloseOpenPolicyList();
             //cancel policy
-            this.house.HomeOpenQuote();
-            this.house.HomeCancelPolicy();
-            this.house.HomeCancelPolicyQuote();
-            this.house.HomeMTAEnterDate();
-            this.house.HomeCancelPolicyQuote1();
-            this.house.HomeCancelPolicyAccept();
+            this.House.HomeOpenQuote();
+            this.House.HomeCancelPolicy();
+            this.House.HomeCancelPolicyQuote();
+            this.House.HomeMTAEnterDate();
+            this.House.HomeCancelPolicyQuote1();
+            this.House.HomeCancelPolicyAccept();
             //check status
-            this.house.HomeCloseOpenPolicyList();
-            this.house.HomeOpenPolicy();
-            this.house.HomeCheckStatusExpectedValues.UIItemEditText = "CAN";
-            this.house.HomeCheckStatus();
-            this.house.CheckCorrectNumberTrans(2);
-            this.house.CheckCorrectDocumentPresent(this.docs.DocumentsForHhAcceptQuoteCancel);
+            this.House.HomeCloseOpenPolicyList();
+            this.House.HomeOpenPolicy();
+            this.House.HomeCheckStatusExpectedValues.UIItemEditText = "CAN";
+            this.House.HomeCheckStatus();
+            this.House.CheckCorrectNumberTrans(2);
+            this.House.CheckCorrectDocumentPresent(this.Docs.DocumentsForHhAcceptQuoteCancel);
         }
 
         [TestMethod]
@@ -253,74 +247,69 @@
         {
             this.SetOurMMaRegKeys();
             //add policy
-            this.house.CustomerCode = this.customer.AddPolicy();
-            this.house.SelectHomeType();
-            this.house.SelectMenu();
-            this.house.Links();
+            this.House.CustomerCode = this.Customer.AddPolicy();
+            this.House.SelectHomeType();
+            this.House.SelectMenu();
+            this.House.Links();
 
-            this.house.HomeStartDate();
-            this.house.HomeProposer();
-            this.house.HomeCreatePolicy();
-            this.house.PublicCreditCheckOk();
-            this.house.HomeSelectPolicy();
+            this.House.HomeStartDate();
+            this.House.HomeProposer();
+            this.House.HomeCreatePolicy();
+            this.House.PublicCreditCheckOk();
+            this.House.HomeSelectPolicy();
             this.SetPolicyDetails();
-            string originalPremium = this.house.CheckPolicyPremium();
-            string policyNumber = this.moto.MotoGetPolicyNumber();
+            string originalPremium = this.House.CheckPolicyPremium();
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
 
             //site for renewal
-            this.house.OpenBrowser2();
-            this.house.HomeSiteRenewal(policyNumber);
+            this.House.OpenBrowser2();
+            this.House.HomeSiteRenewal(policyNumber, RenewalPremium);
             Playback.Wait(5000);
-            this.house.CloseBrowser();
-            this.house.ChangeDatePolicy();
+            this.House.CloseBrowser();
+            this.House.ChangeDatePolicy();
 
             //regress app
-            string customerCode = this.RegressApp();
+            string customerCode = this.RegressApp(PolicyType);
 
             //renewal loader
             this.RenewalLoader();
 
             //  renewal module
-            this.RenewalModule(customerCode);
+            this.RenewalModule(customerCode, PolicyType);
+            this.RenewalsInvite(false);
 
-            this.house.RenewalModuleInvite();
-            this.house.RenewConfirmInvite();
-            this.house.RenewalModuleInvite1();
-            this.house.RenewalModuleRenew();
-            this.house.RetrieveResponse();
-            this.house.RenewalModuleRenew1();
-            this.house.RenewalModuleClose();
-
-            this.house.CloseAndOpenPolicyList();
-            this.house.RenewalCheckStatus("REN");
-            this.house.CheckPremiumInQuoteDocument(this.docs.DocumentsForHhRenewalBefore, originalPremium: double.Parse(originalPremium));
-            this.house.ClosePolicy();
+            this.House.CloseAndOpenPolicyList();
+            this.House.RenewalCheckStatus("REN");
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhRenewalBefore, originalPremium: double.Parse(originalPremium));
+            this.House.OpenTransList(Transactions.GetTransactionDictionary(RenewalPremium, originalPremium));
+            this.House.ClosePolicy();
 
             //mta1
-            this.house.HomeOpenQuote();
-            this.house.HomeMTABefore();
-            this.house.HomeMTAChange();
-            this.house.HomeMTAAccept(false);
-            this.house.MTADate(DateTime.Now.AddDays(2).ToString("dd/MM/yy"));
-            this.house.HomeRenewalBeforeAccept();
-            this.house.HomeRenewalCancelledCheck();
-            this.house.HomeRenewalBeforeFinish();
+            this.House.HomeOpenQuote();
+            this.House.HomeMTABefore();
+            this.House.HomeMTAChange();
+            this.House.HomeMTAAccept(false);
+            this.House.MTADate(DateTime.Now.AddDays(2).ToString("dd/MM/yy"));
+            this.House.HomeRenewalBeforeAccept();
+            this.House.HomeRenewalCancelledCheck();
+            this.House.HomeRenewalBeforeFinish();
 
             ////mta2
-            this.house.HomeOpenQuote();
-            this.house.HomeRenewalConfirm();
-            this.house.HomeMTAChange();
-            this.house.HomeMTAAccept(false);
-            this.house.MTADate(DateTime.Now.ToString("dd/MM/yy"));
-            this.house.MTAMessageBeforeCurrent();
-            this.house.MTACloseMessageBefore();
+            this.House.HomeOpenQuote();
+            this.House.HomeRenewalConfirm();
+            this.House.HomeMTAChange();
+            this.House.HomeMTAAccept(false);
+            this.House.MTADate(DateTime.Now.ToString("dd/MM/yy"));
+            this.House.MTAMessageBeforeCurrent();
+            this.House.MTACloseMessageBefore();
 
-            this.house.MTADate(DateTime.Now.AddDays(10).ToString("dd/MM/yy"));
-            this.moto.MotoMTAMessageAfterDate();
-            this.house.MTACloseMessageAfter();
-            this.house.MTAEffectiveDatesCancel();
-            this.house.HomeMTACancel1();
+            this.House.MTADate(DateTime.Now.AddDays(10).ToString("dd/MM/yy"));
+            this.Moto.MotoMTAMessageAfterDate();
+            this.House.MTACloseMessageAfter();
+            this.House.MTAEffectiveDatesCancel();
+            this.House.HomeMTACancel1();
         }
+
 
         [TestMethod]
         public void HouseRenewalAfter()
@@ -328,77 +317,71 @@
             // change registry to ourhighway
             this.SetOurMMaRegKeys();
             //add policy
-            this.house.CustomerCode = this.customer.AddPolicy();
-            this.house.SelectHomeType();
-            this.house.SelectMenu();
-            this.house.Links();
-            this.house.HomeStartDate();
-            this.house.HomeProposer();
-            this.house.HomeCreatePolicy();
-            this.house.PublicCreditCheckOk();
+            this.House.CustomerCode = this.Customer.AddPolicy();
+            this.House.SelectHomeType();
+            this.House.SelectMenu();
+            this.House.Links();
+            this.House.HomeStartDate();
+            this.House.HomeProposer();
+            this.House.HomeCreatePolicy();
+            this.House.PublicCreditCheckOk();
 
             this.CreateNewPolicy();
-            string policyNumber = this.moto.MotoGetPolicyNumber();
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
 
-            this.Renewals(policyNumber);
+            this.Renewals(policyNumber, PolicyType, RenewalPremium);
 
-            this.house.RenewalModuleInvite();
-            this.house.RenewConfirmInvite();
-            this.house.RenewalModuleInvite1();
-            this.house.RenewalModuleRenew();
-            this.house.RetrieveResponse();
-            this.house.RenewalModuleRenew1();
-            this.house.RenewalModuleClose();
-            this.moto.CloseAndOpenPolicyList();
-            this.house.RenewalCheckStatus("REN");
-            this.house.ClosePolicy();
+            this.RenewalsInvite(false);
+            this.Moto.CloseAndOpenPolicyList();
+            this.House.RenewalCheckStatus("REN");
+            this.House.ClosePolicy();
 
             ////MTA1
-            this.house.HomeOpenQuote();
-            this.house.HomeMTAAfter();
-            this.house.HomeMTAChange();
-            this.house.HomeMTAAccept(false);
-            this.house.MTADate(DateTime.Now.AddDays(14).ToString("dd/MM/yy"));
-            this.house.HomeMTASelectQuote();
+            this.House.HomeOpenQuote();
+            this.House.HomeMTAAfter();
+            this.House.HomeMTAChange();
+            this.House.HomeMTAAccept(false);
+            this.House.MTADate(DateTime.Now.AddDays(14).ToString("dd/MM/yy"));
+            this.House.HomeMTASelectQuote();
 
             //MTA2
-            this.house.HomeOpenQuote();
-            this.house.HomeMTAAfter();
-            this.house.HomeMTAChange();
-            this.house.HomeMTAAccept(false);
-            this.house.MTADate(DateTime.Now.AddDays(13).ToString("dd/MM/yy"));
-            this.house.MTAMessageBeforeCurrent();
-            this.house.MTACloseMessageBefore();
-            this.house.MTAEffectiveDatesCancel();
-            this.house.HomeMTACancel1();
+            this.House.HomeOpenQuote();
+            this.House.HomeMTAAfter();
+            this.House.HomeMTAChange();
+            this.House.HomeMTAAccept(false);
+            this.House.MTADate(DateTime.Now.AddDays(13).ToString("dd/MM/yy"));
+            this.House.MTAMessageBeforeCurrent();
+            this.House.MTACloseMessageBefore();
+            this.House.MTAEffectiveDatesCancel();
+            this.House.HomeMTACancel1();
 
             //MTA3
-            this.house.HomeOpenQuote();
-            this.house.HomeMTABefore();
-            this.house.HomeMTAChange();
-            this.house.HomeMTAAccept(false);
+            this.House.HomeOpenQuote();
+            this.House.HomeMTABefore();
+            this.House.HomeMTAChange();
+            this.House.HomeMTAAccept(false);
 
-            this.house.MTADate(DateTime.Now.AddDays(9).ToString("dd/MM/yy"));
-            this.moto.MotoMTAMessageAfterDate();
-            this.house.MTACloseMessageAfter();
+            this.House.MTADate(DateTime.Now.AddDays(9).ToString("dd/MM/yy"));
+            this.Moto.MotoMTAMessageAfterDate();
+            this.House.MTACloseMessageAfter();
 
-            this.house.MTADate(DateTime.Now.AddDays(1).ToString("dd/MM/yy"));
-            this.house.HomeRenewalBeforeAccept();
-            this.house.HomeRenewalBeforeFinish();
+            this.House.MTADate(DateTime.Now.AddDays(1).ToString("dd/MM/yy"));
+            this.House.HomeRenewalBeforeAccept();
+            this.House.HomeRenewalBeforeFinish();
 
             //mta4
-            this.house.HomeOpenQuote();
-            this.house.HomeRenewalConfirm();
-            this.house.HomeMTAChange();
-            this.house.HomeMTAAccept(false);
-            this.house.MTADate(DateTime.Now.ToString("dd/MM/yy"));
-            this.house.MTAMessageBeforeCurrent();
-            this.house.MTACloseMessageBefore();
-            this.house.MTADate(DateTime.Now.AddDays(11).ToString("dd/MM/yy"));
-            this.moto.MotoMTAMessageAfterDate();
-            this.house.MTACloseMessageAfter();
-            this.house.MTAEffectiveDatesCancel();
-            this.house.HomeMTACancel1();
+            this.House.HomeOpenQuote();
+            this.House.HomeRenewalConfirm();
+            this.House.HomeMTAChange();
+            this.House.HomeMTAAccept(false);
+            this.House.MTADate(DateTime.Now.ToString("dd/MM/yy"));
+            this.House.MTAMessageBeforeCurrent();
+            this.House.MTACloseMessageBefore();
+            this.House.MTADate(DateTime.Now.AddDays(11).ToString("dd/MM/yy"));
+            this.Moto.MotoMTAMessageAfterDate();
+            this.House.MTACloseMessageAfter();
+            this.House.MTAEffectiveDatesCancel();
+            this.House.HomeMTACancel1();
         }
 
         [TestMethod]
@@ -408,27 +391,27 @@
             this.SetOurMMaRegKeys();
 
             //add policy
-            this.house.CustomerCode = this.customer.AddPolicy();
-            this.house.SelectHomeType();
-            this.house.SelectMenu();
-            this.house.Links();
-            this.house.HomeStartDate();
-            this.house.HomeProposer();
-            this.house.HomeCreatePolicy();
-            this.house.PublicCreditCheckOk();
+            this.House.CustomerCode = this.Customer.AddPolicy();
+            this.House.SelectHomeType();
+            this.House.SelectMenu();
+            this.House.Links();
+            this.House.HomeStartDate();
+            this.House.HomeProposer();
+            this.House.HomeCreatePolicy();
+            this.House.PublicCreditCheckOk();
 
             this.CreateNewPolicy();
-            string policyNumber = this.moto.MotoGetPolicyNumber();
-            this.Renewals(policyNumber);
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
+            this.Renewals(policyNumber, PolicyType, RenewalPremium);
 
-            this.house.HomeAmendRisk();
-            this.house.PublicCreditCheckOk();
-            this.house.HomeAmendSelecPolicy(false);
-            this.house.HomeAmendRenew();
-            this.house.RenewalModuleClose();
-            this.moto.CloseAndOpenPolicyList();
-            this.house.RenewalCheckStatus("REN");
-            this.house.ClosePolicy();
+            this.House.HomeAmendRisk();
+            this.House.PublicCreditCheckOk();
+            this.House.HomeAmendSelecPolicy(false);
+            this.House.HomeAmendRenew();
+            this.House.RenewalModuleClose();
+            this.Moto.CloseAndOpenPolicyList();
+            this.House.RenewalCheckStatus("REN");
+            this.House.ClosePolicy();
         }
 
         [TestMethod]
@@ -437,58 +420,58 @@
             // change registry to ourhighway
             this.SetOurMMaRegKeys();
             //add policy
-            this.house.CustomerCode = this.customer.AddPolicy();
-            this.house.SelectHomeType();
-            this.house.SelectMenu();
-            this.house.Links();
-            this.house.HomeStartDate();
-            this.house.HomeProposer();
-            this.house.HomeCreatePolicy();
-            this.house.PublicCreditCheckOk();
-            this.house.HomeSelectPolicy();
+            this.House.CustomerCode = this.Customer.AddPolicy();
+            this.House.SelectHomeType();
+            this.House.SelectMenu();
+            this.House.Links();
+            this.House.HomeStartDate();
+            this.House.HomeProposer();
+            this.House.HomeCreatePolicy();
+            this.House.PublicCreditCheckOk();
+            this.House.HomeSelectPolicy();
             this.SetPolicyDetails();
-            string originalpremium = this.house.CheckPolicyPremium();
-            string policyNumber = this.moto.MotoGetPolicyNumber();
+            string originalpremium = this.House.CheckPolicyPremium();
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
 
-            this.Renewals(policyNumber);
+            this.Renewals(policyNumber, PolicyType, RenewalPremium);
 
-            this.house.HomeAmendRisk();
-            this.house.PublicCreditCheckOk();
-            this.house.HomeAmendSelecPolicy(true);
-            this.house.HomeAmendRenewFinish();
+            this.House.HomeAmendRisk();
+            this.House.PublicCreditCheckOk();
+            this.House.HomeAmendSelecPolicy(true);
+            this.House.HomeAmendRenewFinish();
             //this.house.EtamOk();
-            this.house.ConfirmDocuments();
-            this.house.RetrieveResponse();
-            this.house.HomeAmendRenewFinish1();
-            this.house.EtamOk();
+            this.House.ConfirmDocuments();
+            this.House.RetrieveResponse();
+            this.House.HomeAmendRenewFinish1();
+            this.House.EtamOk();
 
-            this.house.RenewalModuleClose();
-            this.house.CloseAndOpenPolicyList();
-            this.house.CheckPremiumInQuoteDocument(this.docs.DocumentsForHhRenewalBefore, originalPremium: double.Parse(originalpremium));
-            string premium = this.house.CheckPolicyPremium();
-            this.house.OpenTransList(Transactions.GetTransactionDictionary(premium, originalpremium));
-            this.house.RenewalCheckStatus("REW");
-            this.house.ClosePolicy();
+            this.House.RenewalModuleClose();
+            this.House.CloseAndOpenPolicyList();
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhRenewalBefore, originalPremium: double.Parse(originalpremium));
+            string premium = this.House.CheckPolicyPremium();
+            this.House.OpenTransList(Transactions.GetTransactionDictionary(premium, originalpremium));
+            this.House.RenewalCheckStatus("REW");
+            this.House.ClosePolicy();
 
             //MTA1
-            this.house.HomeOpenQuote();
-            this.house.HomeMTAChange();
-            this.house.HomeMTAAccept(false);
-            this.house.MTADate(DateTime.Now.AddDays(1).ToString("dd/MM/yy"));
-            this.house.AmendDateBeforeMessage();
-            this.house.MTACloseMessageBefore();
-            this.house.MTADate(DateTime.Now.AddDays(14).ToString("dd/MM/yy"));
-            this.house.HomeMTASelectQuote();
+            this.House.HomeOpenQuote();
+            this.House.HomeMTAChange();
+            this.House.HomeMTAAccept(false);
+            this.House.MTADate(DateTime.Now.AddDays(1).ToString("dd/MM/yy"));
+            this.House.AmendDateBeforeMessage();
+            this.House.MTACloseMessageBefore();
+            this.House.MTADate(DateTime.Now.AddDays(14).ToString("dd/MM/yy"));
+            this.House.HomeMTASelectQuote();
 
             //MTA2
-            this.house.HomeOpenQuote();
-            this.house.HomeMTAChange();
-            this.house.HomeMTAAccept(false);
-            this.house.MTADate(DateTime.Now.AddDays(13).ToString("dd/MM/yy"));
-            this.house.MTAMessageBeforeCurrent();
-            this.house.MTACloseMessageBefore();
-            this.house.MTAEffectiveDatesCancel();
-            this.house.HomeMTACancel1();
+            this.House.HomeOpenQuote();
+            this.House.HomeMTAChange();
+            this.House.HomeMTAAccept(false);
+            this.House.MTADate(DateTime.Now.AddDays(13).ToString("dd/MM/yy"));
+            this.House.MTAMessageBeforeCurrent();
+            this.House.MTACloseMessageBefore();
+            this.House.MTAEffectiveDatesCancel();
+            this.House.HomeMTACancel1();
         }
 
         [TestMethod]
@@ -497,34 +480,28 @@
             // change registry to ourhighway
             this.SetOurMMaRegKeys();
             //add policy
-            this.house.CustomerCode = this.customer.AddPolicy();
-            this.house.SelectHomeType();
-            this.house.SelectMenu();
-            this.house.Links();
+            this.House.CustomerCode = this.Customer.AddPolicy();
+            this.House.SelectHomeType();
+            this.House.SelectMenu();
+            this.House.Links();
 
-            this.house.HomeStartDate();
+            this.House.HomeStartDate();
 
-            this.house.HomeProposer();
-            this.house.HomeCreatePolicy();
-            this.house.PublicCreditCheckOk();
+            this.House.HomeProposer();
+            this.House.HomeCreatePolicy();
+            this.House.PublicCreditCheckOk();
             this.CreateNewPolicy();
-            string policyNumber = this.moto.MotoGetPolicyNumber();
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
 
-            this.Renewals(policyNumber);
+            this.Renewals(policyNumber, PolicyType, RenewalPremium);
 
-            this.house.HomeRebroke();
-            this.house.PublicCreditCheckOk();
-            this.house.HomeRebrokeCurrent();
-            this.house.RenewalModuleInvite();
-            this.house.RenewConfirmInvite();
-            this.house.RenewalModuleInvite1();
-            this.house.RenewalModuleRenew();
-            this.house.RetrieveResponse();
-            this.house.RenewalModuleRenew1();
-            this.house.RenewalModuleClose();
-            this.moto.CloseAndOpenPolicyList();
-            this.house.RenewalCheckStatus("REN");
-            this.house.ClosePolicy();
+            this.House.HomeRebroke();
+            this.House.PublicCreditCheckOk();
+            this.House.HomeRebrokeCurrent();
+            this.RenewalsInvite(false);
+            this.Moto.CloseAndOpenPolicyList();
+            this.House.RenewalCheckStatus("REN");
+            this.House.ClosePolicy();
         }
 
         [TestMethod]
@@ -533,43 +510,43 @@
             // change registry to ourhighway
             this.SetOurMMaRegKeys();
             //add policy
-            this.house.CustomerCode = this.customer.AddPolicy();
-            this.house.SelectHomeType();
-            this.house.SelectMenu();
-            this.house.Links();
-            this.house.HomeStartDate();
-            this.house.HomeProposer();
-            this.house.HomeCreatePolicy();
-            this.house.PublicCreditCheckOk();
-            this.house.HomeSelectPolicy();
+            this.House.CustomerCode = this.Customer.AddPolicy();
+            this.House.SelectHomeType();
+            this.House.SelectMenu();
+            this.House.Links();
+            this.House.HomeStartDate();
+            this.House.HomeProposer();
+            this.House.HomeCreatePolicy();
+            this.House.PublicCreditCheckOk();
+            this.House.HomeSelectPolicy();
             this.SetPolicyDetails();
 
-            string policyNumber = this.moto.MotoGetPolicyNumber();
-            string originalpremium = this.house.CheckPolicyPremium();
-            this.Renewals(policyNumber);
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
+            string originalpremium = this.House.CheckPolicyPremium();
+            this.Renewals(policyNumber, PolicyType, RenewalPremium);
 
-            this.house.HomeRebroke();
-            this.house.PublicCreditCheckOk();
-            this.house.HomeRebrokeSelectPolicy(this.house.CommonParams.SendHomeKeys);
-            this.house.HomeRebrokeSelectAlternative();
-            this.house.HomeRebrokeFinish();
-            this.house.RenewalModuleInvite();
-            this.house.RenewConfirmInvite();
-            this.house.RenewalModuleInvite1();
-            this.house.RebrokeAlternativeRenew();
-            this.house.EtamOk();
+            this.House.HomeRebroke();
+            this.House.PublicCreditCheckOk();
+            this.House.HomeRebrokeSelectPolicy(this.House.CommonParams.SendHomeKeys);
+            this.House.HomeRebrokeSelectAlternative();
+            this.House.HomeRebrokeFinish();
+            this.House.RenewalModuleInvite(false);
+            this.House.RenewConfirmInvite();
+            this.House.RenewalModuleInvite1();
+            this.House.RebrokeAlternativeRenew();
+            this.House.EtamOk();
             //this.house.LapseOk();
-            this.house.EtamYes();
-            this.house.ConfirmDocuments();
-            this.house.RetrieveResponse();
-            this.house.RebrokeAlternativeRenew1();
-            this.house.RenewalModuleClose();
-            this.house.CloseAndOpenPolicyList();
-            this.house.RenewalCheckStatus("REW");
-            this.house.CheckPremiumInQuoteDocument(this.docs.DocumentsForHhRenewalBefore, originalPremium: double.Parse(originalpremium));
-            string premium = this.house.CheckPolicyPremium();
-            this.house.OpenTransList(Transactions.GetTransactionDictionary(premium, originalpremium));
-            this.house.ClosePolicy();
+            this.House.EtamYes();
+            this.House.ConfirmDocuments();
+            this.House.RetrieveResponse();
+            this.House.RebrokeAlternativeRenew1();
+            this.House.RenewalModuleClose();
+            this.House.CloseAndOpenPolicyList();
+            this.House.RenewalCheckStatus("REW");
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhRenewalBefore, originalPremium: double.Parse(originalpremium));
+            string premium = this.House.CheckPolicyPremium();
+            this.House.OpenTransList(Transactions.GetTransactionDictionary(premium, originalpremium));
+            this.House.ClosePolicy();
         }
 
         [TestMethod]
@@ -579,42 +556,42 @@
             this.SetOurMMaRegKeys();
 
             //add policy
-            this.house.CustomerCode = this.customer.AddPolicy();
-            this.house.SelectHomeType();
-            this.house.SelectMenu();
-            this.house.Links();
-            this.house.HomeStartDate();
-            this.house.HomeProposer();
-            this.house.HomeCreatePolicy();
-            this.house.PublicCreditCheckOk();
+            this.House.CustomerCode = this.Customer.AddPolicy();
+            this.House.SelectHomeType();
+            this.House.SelectMenu();
+            this.House.Links();
+            this.House.HomeStartDate();
+            this.House.HomeProposer();
+            this.House.HomeCreatePolicy();
+            this.House.PublicCreditCheckOk();
 
             string originalpremium = this.CreateNewPolicy();
-            string policyNumber = this.moto.MotoGetPolicyNumber();
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
 
-            this.Renewals(policyNumber);
+            this.Renewals(policyNumber, PolicyType, RenewalPremium);
 
-            this.house.HomeRebroke();
-            this.house.PublicCreditCheckOk();
-            this.house.HomeRebrokeSelectPolicy(this.house.CommonParams.SendEndKeys);
-            this.house.HomeRebrokeSelectAlternative();
-            this.house.HomeRebrokeFinish();
-            this.house.RenewalModuleInvite();
-            this.house.RenewConfirmInvite();
-            this.house.RenewalModuleInvite1();
-            this.house.RebrokeAlternativeRenew();
-            this.house.EtamOk();
-            this.house.EtamYes();
-            this.house.ConfirmDocuments();
-            this.house.RetrieveResponse();
-            this.house.RebrokeAlternativeRenew1();
-            this.house.RenewalModuleClose();
-            this.moto.CloseAndOpenPolicyList();
+            this.House.HomeRebroke();
+            this.House.PublicCreditCheckOk();
+            this.House.HomeRebrokeSelectPolicy(this.House.CommonParams.SendEndKeys);
+            this.House.HomeRebrokeSelectAlternative();
+            this.House.HomeRebrokeFinish();
+            this.House.RenewalModuleInvite(false);
+            this.House.RenewConfirmInvite();
+            this.House.RenewalModuleInvite1();
+            this.House.RebrokeAlternativeRenew();
+            this.House.EtamOk();
+            this.House.EtamYes();
+            this.House.ConfirmDocuments();
+            this.House.RetrieveResponse();
+            this.House.RebrokeAlternativeRenew1();
+            this.House.RenewalModuleClose();
+            this.Moto.CloseAndOpenPolicyList();
 
-            this.house.CheckPremiumInQuoteDocument(this.docs.DocumentsForHhRenewalBefore, originalPremium: double.Parse(originalpremium));
-            string premium = this.house.CheckPolicyPremium();
-            this.house.OpenTransList(Transactions.GetTransactionDictionary(premium, originalpremium));
-            this.house.RenewalCheckStatus("REW");
-            this.house.ClosePolicy();
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhRenewalBefore, originalPremium: double.Parse(originalpremium));
+            string premium = this.House.CheckPolicyPremium();
+            this.House.OpenTransList(Transactions.GetTransactionDictionary(premium, originalpremium));
+            this.House.RenewalCheckStatus("REW");
+            this.House.ClosePolicy();
         }
 
         [TestMethod]
@@ -623,122 +600,67 @@
             // change registry to ourhighway
             this.SetOurMMaRegKeys();
             //add policy
-            this.house.CustomerCode = this.customer.AddPolicy();
-            this.house.SelectHomeType();
-            this.house.SelectMenu();
-            this.house.Links();
-            this.house.HomeStartDate();
-            this.house.HomeProposer();
-            this.house.HomeCreatePolicy();
-            this.house.PublicCreditCheckOk();
+            this.House.CustomerCode = this.Customer.AddPolicy();
+            this.House.SelectHomeType();
+            this.House.SelectMenu();
+            this.House.Links();
+            this.House.HomeStartDate();
+            this.House.HomeProposer();
+            this.House.HomeCreatePolicy();
+            this.House.PublicCreditCheckOk();
 
             this.CreateNewPolicy();
-            string policyNumber = this.moto.MotoGetPolicyNumber();
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
 
-            this.Renewals(policyNumber);
+            this.Renewals(policyNumber, PolicyType, RenewalPremium);
 
-            this.house.RenewalModuleInvite();
-            this.house.RenewConfirmInvite();
-            this.house.RenewalModuleInvite1();
-            this.house.LapsePolicy(policyNumber);
-            this.house.RenewalModuleClose();
-            this.moto.CloseAndOpenPolicyList();
-            this.house.RenewalCheckStatus("LAP");
-            this.house.ClosePolicy();
+            this.House.RenewalModuleInvite(false);
+            this.House.RenewConfirmInvite();
+            this.House.RenewalModuleInvite1();
+            this.House.LapsePolicy(policyNumber);
+            this.House.RenewalModuleClose();
+            this.Moto.CloseAndOpenPolicyList();
+            this.House.RenewalCheckStatus("LAP");
+            this.House.ClosePolicy();
         }
 
         #region Private Functions
 
-        private void RenewalModule(string customerCode)
-        {
-            this.house.RenewalModuleEDI();
-            this.house.RenewalModuleConfirm();
-            this.house.RenewalModuleEdi1(false);
-            this.house.RenewalModuleFilter(PolicyType);
-            this.house.RenewalModuleSort();
-            this.house.RenewalModuleDisplay(this.moto.CommonParams.SendHomeKeys);
-            this.house.RenewalCheckRecord(1, customerCode);
-        }
-
-        private string RegressApp()
-        {
-            this.house.HighlightCustomer();
-            string customerCode = this.house.GetCustomerCode();
-            this.moto.RegressApp(customerCode);
-            this.house.HouseRegressApp(PolicyType);
-            this.house.RegressAppDate();
-            this.moto.RegressAppFinish();
-            this.house.CloseRegressApp();
-            return customerCode;
-        }
-
-        private void RenewalLoader()
-        {
-            this.house.RenewalLoaderOpen();
-            this.house.RenewalLoaderRun();
-            this.house.CloseBrowser();
-            this.house.RenewalLoaderClose();
-        }
-
         private string CreateNewPolicy()
         {
-            this.house.HomeSelectPolicy();
+            this.House.HomeSelectPolicy();
             this.SetPolicyDetails();
-            string premium = this.house.CheckPolicyPremium();
+            string premium = this.House.CheckPolicyPremium();
             return premium;
         }
 
         private void SetPolicyDetails()
         {
-            this.house.HomeAcceptPolicy();
-            this.house.HomeFinishQuote();
-            this.house.HomeCloseOpenPolicyList();
-            this.house.HomeOpenPolicy();
+            this.House.HomeAcceptPolicy();
+            this.House.HomeFinishQuote();
+            this.House.HomeCloseOpenPolicyList();
+            this.House.HomeOpenPolicy();
         }
 
         private void CreatePolicy(bool full)
         {
-            this.house.SelectHomeType();
-            this.house.SelectMenu();
-            this.house.Links();
-            this.house.HomeProposer();
+            this.House.SelectHomeType();
+            this.House.SelectMenu();
+            this.House.Links();
+            this.House.HomeProposer();
             if (full)
             {
-                this.house.HomeProposerFull();
+                this.House.HomeProposerFull();
             }
             else
             {
-                this.house.HomeAddressLookup();
-                this.house.HomeCreatePolicy();
+                this.House.HomeAddressLookup();
+                this.House.HomeCreatePolicy();
             }
 
-            this.house.PublicCreditCheckOk();
+            this.House.PublicCreditCheckOk();
         }
 
         #endregion
-
-        private void Renewals(string policyNumber)
-        {
-            //site for renewal
-            this.SiteForRenewal(policyNumber);
-
-            //regress app
-            string customerCode = this.RegressApp();
-
-            //renewal loader
-            this.RenewalLoader();
-
-            // renewal module
-            this.RenewalModule(customerCode);
-        }
-
-        private void SiteForRenewal(string policyNumber)
-        {
-            this.house.OpenBrowser2();
-            this.house.HomeSiteRenewal(policyNumber);
-            Playback.Wait(5000);
-            this.house.CloseBrowser();
-            this.house.ChangeDatePolicy();
-        }
     }
 }

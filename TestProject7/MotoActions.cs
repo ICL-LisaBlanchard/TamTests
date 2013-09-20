@@ -31,8 +31,6 @@
 
         private MotoAmendRiskParams mMotoAmendRiskParams;
 
-        private MotoRegressAppParams mMotoRegressAppParams;
-
         private MotoMTAMessageCancelledExpectedValues mMotoMTAMessageCancelledExpectedValues;
 
         private MotoMTAMessageAfterDateExpectedValues mMotoMTAMessageAfterDateExpectedValues;
@@ -127,18 +125,6 @@
             }
         }
 
-        public virtual MotoRegressAppParams MotoRegressAppParams
-        {
-            get
-            {
-                if ((this.mMotoRegressAppParams == null))
-                {
-                    this.mMotoRegressAppParams = new MotoRegressAppParams();
-                }
-                return this.mMotoRegressAppParams;
-            }
-        }
-
         public virtual MotoMTAMessageCancelledExpectedValues MotoMTAMessageCancelledExpectedValues
         {
             get
@@ -198,7 +184,7 @@
             return uIItemEdit.GetProperty("Text").ToString();
         }
 
-        public void MotoCreateSiteRenewal(string policyNumber)
+        public void MotoCreateSiteRenewal(string policyNumber, string renewalPremium)
         {
             #region Variable Declarations
 
@@ -208,6 +194,7 @@
             HtmlEdit uITxtPolicyNumberEdit = this.map.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument.UITxtPolicyNumberEdit;
             HtmlEdit uITxtAutoLapseDateEdit1 = this.map.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument.UITxtAutoLapseDateEdit1;
             HtmlInputButton uICreateRecordButton = this.map.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument.UICreateRecordButton;
+            HtmlEdit uITxtPremiumEdit = this.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument.UITxtPremiumEdit;
             BrowserWindow uIInsurEcomSystemMaintWindow = this.map.UIInsurEcomSystemMaintWindow;
             HtmlEdit uITxtRenewalDateEdit = this.map.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument.UITxtRenewalDateEdit;
 
@@ -218,6 +205,8 @@
             uiInsurerIdComboBox.SelectedItem = this.map.MotoCreateSiteRenewalParams.UIInsurerIDComboBoxSelectedItem;
 
             uITxtPolicyNumberEdit.Text = policyNumber;
+
+            uITxtPremiumEdit.Text = renewalPremium;
 
             uITxtAutoLapseDateEdit1.Text = uITxtRenewalDateEdit.GetProperty("Text").ToString();
 
@@ -266,7 +255,7 @@
 
             Mouse.Click(uIOKButton3, new Point(56, 6));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(selectListItems1:1);
         }
 
         public void MotoAmendRiskRenew()
@@ -309,7 +298,7 @@
 
             Mouse.Click(uIOKButton4, new Point(45, 10));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(selectListItems1:2);
 
             Mouse.Click(uIExitButton, new Point(48, 12));
 
@@ -340,7 +329,7 @@
 
             Mouse.Click(uIOKButton2, new Point(47, 13));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(selectListItems1: 3);
 
             this.map.EtamOk();
 
@@ -405,7 +394,7 @@
             Assert.AreEqual(this.MotoCheckPolicyStatusExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
-        public void MotoCheckChangedPremium()
+        public void MotoCheckChangedPremium(string overridePremium)
         {
             #region Variable Declarations
 
@@ -413,7 +402,7 @@
 
             #endregion
 
-            Assert.AreEqual(this.MotoCheckChangedPremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
+            Assert.AreEqual(overridePremium, uIItemEdit.Text);
         }
 
         public void MotoCheckAWAPpremium(string expectedPremium)
@@ -571,32 +560,6 @@
             uIItemEdit2.Text = this.QuoteResultsParams.VehicleCost;
         }
 
-        public void RegressAppFinish()
-        {
-            #region Variable Declarations
-
-            WinButton uIRegressButton = this.map.UIRegressIETamPolicyWindow.UIRegressWindow.UIRegressButton;
-
-            #endregion
-
-            Mouse.Click(uIRegressButton, new Point(47, 22));
-        }
-
-        public void RegressApp(string customer)
-        {
-            #region Variable Declarations
-
-            WinEdit uIItemEdit = this.map.UIRegressIETamPolicyWindow.UIItemWindow.UIItemEdit;
-            WinEdit uIItemEdit1 = this.map.UIRegressIETamPolicyWindow.UIItemWindow2.UIItemEdit;
-
-            #endregion
-
-            ApplicationUnderTest.Launch(this.MotoRegressAppParams.ExePath, this.MotoRegressAppParams.AlternateExePath);
-
-            uIItemEdit.Text = customer;
-
-            uIItemEdit1.Text = this.MotoRegressAppParams.UIItemEditText1;
-        }
 
         public void MotoRebrokeSelectScheme(string withSendKeys)
         {
@@ -823,7 +786,8 @@
         /// <summary>
         ///     MotoMTAConfirmPolicy - Use 'MotoMTAConfirmPolicyParams' to pass parameters into this method.
         /// </summary>
-        public void MotoMTAConfirmPolicy()
+        /// <param name="action"></param>
+        public void MotoMTAConfirmPolicy(string action)
         {
             #region Variable Declarations
 
@@ -859,7 +823,15 @@
 
             Mouse.Click(uIOKButton3, new Point(24, 14));
 
-            this.SelectTamInsurersAndActivity(true);
+            if (action == "cancel")
+            {
+                this.SelectTamInsurersAndActivity(selectListItems1: 2);
+            }
+            else
+            {
+                this.SelectTamInsurersAndActivity(selectListItems1: 1, selectListItems2: 1);
+            }
+            
         }
 
         public void MotoMTAConfirmDate()
@@ -940,7 +912,7 @@
 
             Mouse.Click(uIOKButton2, new Point(46, 21));
 
-            this.SelectTamInsurersAndActivity(true);
+            this.SelectTamInsurersAndActivity(selectListItems1:1, selectListItems2:1);
         }
 
         /// <summary>
@@ -1139,7 +1111,7 @@
             Playback.Wait(2000);
             Mouse.Click(uIOKButton3, new Point(43, 6));
 
-            this.SelectTamInsurersAndActivity(true);
+            this.SelectTamInsurersAndActivity(selectListItems1: 1, selectListItems2: 1);
         }
 
         /// <summary>
@@ -1322,6 +1294,32 @@
             uIItemComboBox3.SelectedItem = this.VehicleLookupParams.TransmissionType;
             Mouse.Click(uIFilterButton, new Point(29, 16));
             Mouse.Click(uIOKButton, new Point(17, 7));
+        }
+
+        public void MotoFinishQuote()
+        {
+            #region Variable Declarations
+
+            WinCheckBox uIDeferPrintingCheckBox = this.UIPointOfSaleWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
+            WinControl uIOKButton = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
+            WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
+            WinControl uIOKButton1 = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
+            WinControl uIOKButton2 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
+
+            #endregion
+
+            uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
+
+            Mouse.Click(uIOKButton, new Point(51, 7));
+
+            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
+
+            Playback.Wait(2000);
+            Mouse.Click(uIOKButton1, new Point(41, 15));
+
+            Mouse.Click(uIOKButton2, new Point(42, 14));
+
+            this.SelectTamInsurersAndActivity(selectListItems1:2);
         }
     }
 }

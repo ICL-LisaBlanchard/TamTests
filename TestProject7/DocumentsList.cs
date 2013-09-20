@@ -91,7 +91,54 @@
                                new Document("Schedule", 2),
                                new Document("Proposal", 1),
                                new Document("Certificate", 1),
+                               new Document("FSA", 2)
+                           };
+            }
+        }
+
+        public List<Document> DocumentsForMotoOverridePremium
+        {
+            get
+            {
+                return new List<Document>
+                           {
+                               new Document("QuotesList", 1),
+                               new Document("Quote", 1),
+                               new Document("Schedule", 1),
+                               new Document("Proposal", 1),
+                               new Document("Certificate", 1),
                                new Document("FSA", 1)
+                           };
+            }
+        }
+
+        public List<Document> DocumentsForMotoRenewalBefore
+        {
+            get
+            {
+                return new List<Document>
+                           {
+                               new Document("QuotesList", 2),
+                               new Document("Quote", 1),
+                               new Document("Schedule", 2),
+                               new Document("Proposal", 2),
+                               new Document("FSA", 2)
+                           };
+            }
+        }
+
+        public List<Document> DocumentsForMotoAmendRiskNew
+        {
+            get
+            {
+                return new List<Document>
+                           {
+                               new Document("QuotesList", 2),
+                               new Document("Quote", 2),
+                               new Document("Schedule", 2),
+                               new Document("Proposal", 2),
+                               new Document("FSA", 2),
+                               new Document("Certificate", 2)
                            };
             }
         }

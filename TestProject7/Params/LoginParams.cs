@@ -10,6 +10,6 @@
 
         public string TabKey = "{Tab}";
 
-        public string Password = "Pg0NWiUP5hQNZAJXwcx+tA2ZD1IKNoRj";
+        public string Password = "PSWD";
     }
 }

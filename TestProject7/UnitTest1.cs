@@ -17,11 +17,7 @@
         [TestMethod]
         public void TestMethod1()
         {
-            this.house.LapsePolicy("81588888002067");
-            this.house.RenewalModuleClose();
-            this.moto.CloseAndOpenPolicyList();
-            this.house.RenewalCheckStatus("LAP");
-            this.house.ClosePolicy();
+            this.moto.RenewalModuleInvite(true);
         }
     }
 }

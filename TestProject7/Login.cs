@@ -51,10 +51,9 @@
             #endregion
 
             ApplicationUnderTest.Launch(this.LoginParams.ExePath, this.LoginParams.AlternateExePath);
-            Mouse.Click(tbxUserName, new Point(33, 11));
-            Keyboard.SendKeys(tbxUserName, this.LoginParams.Username);
-            Mouse.Click(tbxPassword, new Point(33, 11));
-            Keyboard.SendKeys(tbxPassword, this.LoginParams.Password, true);
+
+            tbxUserName.Text = this.LoginParams.Username;
+            tbxPassword.Text = this.LoginParams.Password;
             Mouse.Click(btnOk, new Point(67, 13));
         }
 

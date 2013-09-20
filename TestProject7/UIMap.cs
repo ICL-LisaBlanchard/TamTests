@@ -68,6 +68,8 @@
 
         private ProposerParams mProposerParams;
 
+        private RegressAppParams mRegressAppParams;
+
         public virtual CancelPolicyParams CancelPolicyParams
         {
             get
@@ -77,6 +79,18 @@
                     this.mCancelPolicyParams = new CancelPolicyParams();
                 }
                 return this.mCancelPolicyParams;
+            }
+        }
+
+        public virtual RegressAppParams RegressAppParams
+        {
+            get
+            {
+                if ((this.mRegressAppParams == null))
+                {
+                    this.mRegressAppParams = new RegressAppParams();
+                }
+                return this.mRegressAppParams;
             }
         }
 
@@ -566,7 +580,7 @@
 
             Mouse.Click(uIOKButton3, new Point(51, 10));
 
-            this.SelectTamInsurersAndActivity(false, selectListItems1: 3);
+            this.SelectTamInsurersAndActivity(selectListItems1: 3);
         }
 
         /// <summary>
@@ -666,32 +680,6 @@
             Mouse.Click(uIDetailButton, new Point(52, 11));
         }
 
-        public void FinishQuote1()
-        {
-            #region Variable Declarations
-
-            WinCheckBox uIDeferPrintingCheckBox = this.UIPointOfSaleWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
-            WinControl uIOKButton = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
-            WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
-            WinControl uIOKButton1 = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
-            WinControl uIOKButton2 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-
-            #endregion
-
-            uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
-
-            Mouse.Click(uIOKButton, new Point(51, 7));
-
-            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
-
-            Playback.Wait(2000);
-            Mouse.Click(uIOKButton1, new Point(41, 15));
-
-            Mouse.Click(uIOKButton2, new Point(42, 14));
-
-            this.SelectTamInsurersAndActivity(false);
-        }
-
         /// <summary>
         ///     SelectPolicyQuote - Use 'SelectPolicyQuoteParams' to pass parameters into this method.
         /// </summary>
@@ -757,7 +745,7 @@
 
             Mouse.Click(uIOKButton, new Point(34, 11));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(selectListItems1: 2);
 
             Mouse.Click(uICancelButton, new Point(23, 19));
 
@@ -766,9 +754,6 @@
             Mouse.Click(uIDetailButton, new Point(44, 15));
         }
 
-        /// <summary>
-        ///     etam_yes
-        /// </summary>
         public void EtamYes()
         {
             #region Variable Declarations
@@ -780,9 +765,6 @@
             Mouse.Click(uIYesButton, new Point(42, 12));
         }
 
-        /// <summary>
-        ///     DemandsAndNeeds
-        /// </summary>
         public void DemandsAndNeeds()
         {
             #region Variable Declarations
@@ -797,9 +779,6 @@
             Mouse.Click(uIDemandsNeedsButton, new Point(47, 12));
         }
 
-        /// <summary>
-        ///     CoverDateBackCheck - Use 'CoverDateBackCheckExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void CoverDateBackCheck()
         {
             #region Variable Declarations
@@ -811,9 +790,6 @@
             Assert.AreEqual(this.CoverDateBackCheckExpectedValues.UICoverCantBeBackDatedTextDisplayText, uICoverCantBeBackDatedText.DisplayText);
         }
 
-        /// <summary>
-        ///     ConfirmDocuments
-        /// </summary>
         public void ConfirmDocuments()
         {
             #region Variable Declarations
@@ -825,9 +801,6 @@
             Mouse.Click(uIOKButton, new Point(33, 16));
         }
 
-        /// <summary>
-        ///     CloseRegressApp
-        /// </summary>
         public void CloseRegressApp()
         {
             #region Variable Declarations
@@ -839,9 +812,6 @@
             Mouse.Click(uIExitButton, new Point(35, 20));
         }
 
-        /// <summary>
-        ///     ClosePolicy
-        /// </summary>
         public void ClosePolicy()
         {
             #region Variable Declarations
@@ -853,9 +823,6 @@
             Mouse.Click(uICancelButton, new Point(46, 7));
         }
 
-        /// <summary>
-        ///     CheckAutoPrint - Use 'CheckAutoPrintExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void CheckAutoPrint()
         {
             #region Variable Declarations
@@ -867,10 +834,7 @@
             StringAssert.Contains(uIfordfiestablack16V13Cell.InnerText, this.VehicleLookupParams.CarMake);
         }
 
-        /// <summary>
-        ///     ChangePremium - Use 'ChangePremiumParams' to pass parameters into this method.
-        /// </summary>
-        public void ChangePremium()
+        public void ChangePremium(string overridePremium)
         {
             #region Variable Declarations
 
@@ -883,16 +847,13 @@
 
             Mouse.Click(uIPremiumButton, new Point(23, 7));
 
-            uIItemEdit.Text = this.ChangePremiumParams.BrokerPremium;
+            uIItemEdit.Text = overridePremium;
 
             uIItemEdit1.Text = this.ChangePremiumParams.AuthCode;
 
             Mouse.Click(uIOKButton, new Point(25, 6));
         }
 
-        /// <summary>
-        ///     ChangeDatePolicy - Use 'ChangeDatePolicyParams' to pass parameters into this method.
-        /// </summary>
         public void ChangeDatePolicy()
         {
             #region Variable Declarations
@@ -907,9 +868,6 @@
             Mouse.Click(uIOKButton, new Point(36, 17));
         }
 
-        /// <summary>
-        ///     CancelPrint
-        /// </summary>
         public void CancelPrint()
         {
             #region Variable Declarations
@@ -928,9 +886,6 @@
             Playback.PlaybackSettings.ContinueOnError = false;
         }
 
-        /// <summary>
-        ///     CancelFilter
-        /// </summary>
         public void CancelFilter()
         {
             #region Variable Declarations
@@ -946,9 +901,6 @@
             Playback.PlaybackSettings.ContinueOnError = false;
         }
 
-        /// <summary>
-        ///     Calculate
-        /// </summary>
         public void Calculate()
         {
             #region Variable Declarations
@@ -960,9 +912,6 @@
             Mouse.Click(uICalculateQuoteButton, new Point(68, 8));
         }
 
-        /// <summary>
-        ///     AssertSelectPolicyForm - Use 'AssertSelectPolicyFormExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void AssertSelectPolicyForm()
         {
             #region Variable Declarations
@@ -974,9 +923,6 @@
             Assert.AreEqual(this.AssertSelectPolicyFormExpectedValues.UIQuoteResultsWindowName, uIQuoteResultsWindow.Name);
         }
 
-        /// <summary>
-        ///     AssertMethod3 - Use 'AssertMethod3ExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void AssertCarDetailsCorrect()
         {
             #region Variable Declarations
@@ -991,9 +937,6 @@
             Assert.AreEqual(this.AssertMethod3ExpectedValues.VehicleCost, uIItemEdit1.Text);
         }
 
-        /// <summary>
-        ///     AssertMethod2 - Use 'AssertMethod2ExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void AssertQuoteCostIsZero()
         {
             #region Variable Declarations
@@ -1002,12 +945,9 @@
 
             #endregion
 
-            Assert.AreEqual("0", uIItemEdit.Text);
+            Assert.AreEqual("0.00", uIItemEdit.Text);
         }
 
-        /// <summary>
-        ///     AssertMethod1 - Use 'AssertMethod1ExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void AssertMethod1()
         {
             #region Variable Declarations
@@ -1019,9 +959,6 @@
             Assert.AreNotEqual("0", uIItemEdit.Text);
         }
 
-        /// <summary>
-        ///     AmendSelectQuote - Use 'AmendSelectQuoteParams' to pass parameters into this method.
-        /// </summary>
         public void AmendSelectQuote()
         {
             #region Variable Declarations
@@ -1035,9 +972,6 @@
             Keyboard.SendKeys(uIAmendRiskResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
         }
 
-        /// <summary>
-        ///     SelectMotoPolicy - Use 'SelectMotoPolicyParams' to pass parameters into this method.
-        /// </summary>
         public void SelectMotoPolicy()
         {
             #region Variable Declarations
@@ -1052,9 +986,6 @@
             Mouse.Click(uIOKButton, new Point(38, 18));
         }
 
-        /// <summary>
-        ///     SelectMenu
-        /// </summary>
         public void SelectMenu()
         {
             #region Variable Declarations
@@ -1076,9 +1007,6 @@
             Mouse.Click(uIQuoteSelectListMenuItem, new Point(101, 9));
         }
 
-        /// <summary>
-        ///     SelectHomeType - Use 'SelectHomeTypeParams' to pass parameters into this method.
-        /// </summary>
         public void SelectHomeType()
         {
             #region Variable Declarations
@@ -1093,9 +1021,6 @@
             Mouse.Click(uIOKButton, new Point(40, 15));
         }
 
-        /// <summary>
-        ///     SaveWithoutPremium - Use 'SaveWithoutPremiumParams' to pass parameters into this method.
-        /// </summary>
         public void SaveWithoutPremium()
         {
             #region Variable Declarations
@@ -1115,12 +1040,9 @@
 
             Mouse.Click(uIOKButton, new Point(32, 8));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(selectListItems1: 2);
         }
 
-        /// <summary>
-        ///     RetrieveResponse
-        /// </summary>
         public void RetrieveResponse()
         {
             #region Variable Declarations
@@ -1136,9 +1058,6 @@
             Playback.PlaybackSettings.ContinueOnError = false;
         }
 
-        /// <summary>
-        ///     RenewConfirmInvite
-        /// </summary>
         public void RenewConfirmInvite()
         {
             #region Variable Declarations
@@ -1199,9 +1118,6 @@
             this.SelectTamInsurersAndActivity(selectListItems1: 2);
         }
 
-        /// <summary>
-        ///     RenewalModuleRenew
-        /// </summary>
         public void RenewalModuleRenew()
         {
             #region Variable Declarations
@@ -1219,25 +1135,22 @@
             Mouse.Click(uIOKButton, new Point(44, 16));
         }
 
-        /// <summary>
-        ///     RenewalModuleInvite
-        /// </summary>
-        public void RenewalModuleInvite()
+        public void RenewalModuleInvite(bool selectAlternative)
         {
             #region Variable Declarations
 
             WinControl uIInviteButton = this.UIAUTO1871001Window.UIInviteWindow.UIInviteButton;
+            WinControl uiYesButton = this.UIPersonalLinesWindow.UIYesWindow.UIYesButton;
 
             #endregion
+            if (selectAlternative)
+            {
+                Mouse.Click(uiYesButton);
+            }
 
-            // Click '&Invite' button
             Mouse.Click(uIInviteButton, new Point(75, 8));
         }
 
-        /// <summary>
-        ///     RenewalModuleFilterMoto - Use 'RenewalModuleFilterMotoParams' to pass parameters into this method.
-        /// </summary>
-        /// <param name="houseOrMoto"></param>
         public void RenewalModuleFilter(string houseOrMoto)
         {
             #region Variable Declarations
@@ -1261,10 +1174,6 @@
             Mouse.Click(uIOKButton, new Point(39, 11));
         }
 
-        /// <summary>
-        ///     RenewalModuleEDI_1
-        /// </summary>
-        /// <param name="continueOnError"></param>
         public void RenewalModuleEdi1(bool continueOnError)
         {
             #region Variable Declarations
@@ -1503,9 +1412,6 @@
             Mouse.Click(uICalculateQuoteButton, new Point(71, 13));
         }
 
-        /// <summary>
-        ///     RegressAppDate - Use 'RegressAppDateParams' to pass parameters into this method.
-        /// </summary>
         public void RegressAppDate()
         {
             #region Variable Declarations
@@ -1515,6 +1421,29 @@
             #endregion
 
             uIItemEdit.Text = DateTime.Now.AddYears(-1).AddDays(7).ToString("dd/MM/yyyy");
+        }
+
+        public void RegressAppPolicyTypeSelection(string policyType)
+        {
+            WinComboBox uIItemComboBox = this.UIRegressIETamPolicyWindow.UIItemWindow4.UIItemComboBox;
+
+            if (policyType == "Motor")
+            {
+                uIItemComboBox.SelectedItem = "Private Motor";
+                return;
+            }
+            uIItemComboBox.SelectedItem = policyType;
+        }
+
+        public void RegressAppFinish()
+        {
+            #region Variable Declarations
+
+            WinButton uIRegressButton = this.UIRegressIETamPolicyWindow.UIRegressWindow.UIRegressButton;
+
+            #endregion
+
+            Mouse.Click(uIRegressButton, new Point(47, 22));
         }
 
         /// <summary>
@@ -1661,15 +1590,13 @@
 
             #endregion
 
-            //Mouse.Click(uILapsePolicyButton);
+            Mouse.Click(uILapsePolicyButton);
 
-            
-            //Mouse.Click(uIYesButton);
+            Mouse.Click(uIYesButton);
 
             Assert.IsTrue(uIPolicy1001PolicyNo81Text.Exists, "Policy lapse text not valid");
 
             Mouse.Click(uIOKButton);
-       
         }
 
         public void RebrokeAlternativeFinish1()
@@ -1696,7 +1623,7 @@
 
             Mouse.Click(uIOKButton2, new Point(46, 14));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity();
         }
 
         /// <summary>
@@ -1897,62 +1824,45 @@
             Mouse.Click(uIOKButton, new Point(40, 5));
         }
 
+        public void RegressApp(string customer)
+        {
+            #region Variable Declarations
+
+            WinEdit uIItemEdit = this.UIRegressIETamPolicyWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit1 = this.UIRegressIETamPolicyWindow.UIItemWindow2.UIItemEdit;
+
+            #endregion
+
+            ApplicationUnderTest.Launch(this.RegressAppParams.ExePath, this.RegressAppParams.AlternateExePath);
+
+            uIItemEdit.Text = customer;
+
+            uIItemEdit1.Text = this.RegressAppParams.UIItemEditText1;
+        }
+
         public void SelectTamInsurersAndActivity(bool isMTA = false, string whoToSelect = "", bool onlyOnce = false, int selectListItems1 = -1, int selectListItems2 = -1)
         {
             #region Variable Declarations
 
-            WinControl uIokButton5 = this.UITamxml7Window.UITamxml7Client.UIOKButton;
+            WinControl tamXmlButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
             #endregion
 
-            if (selectListItems1 > -1)
+            for (int i = 0; i < selectListItems1; i++)
             {
-                for (int i = 0; i < selectListItems1; i++)
-                {
-                    this.ImportToTamOptionsOnce(whoToSelect);
-                }
-
-                Mouse.Click(uIokButton5);
-
-                for (int i = 0; i < selectListItems2; i++)
-                {
-                    this.ImportToTamOptionsOnce(whoToSelect);
-                }
-
-                if (selectListItems2 > 0)
-                {
-                    Mouse.Click(uIokButton5);
-                }
+                this.ImportToTamOptionsOnce(whoToSelect);
             }
-            else
+
+            Mouse.Click(tamXmlButton);
+
+            for (int i = 0; i < selectListItems2; i++)
             {
-                int timeOut = Playback.PlaybackSettings.SearchTimeout;
-                Playback.PlaybackSettings.SearchTimeout = 3000;
+                this.ImportToTamOptionsOnce(whoToSelect);
+            }
 
-                this.ImportToTamOptions(whoToSelect);
-
-                if (isMTA)
-                {
-                    try
-                    {
-                        Mouse.Click(uIokButton5);
-                    }
-                    catch (Exception)
-                    {
-                    }
-                }
-
-                this.ImportToTamOptions(whoToSelect);
-
-                try
-                {
-                    Mouse.Click(uIokButton5);
-                }
-                catch (Exception)
-                {
-                }
-
-                Playback.PlaybackSettings.SearchTimeout = timeOut;
+            if (selectListItems2 > 0)
+            {
+                Mouse.Click(tamXmlButton);
             }
         }
 
@@ -1996,8 +1906,6 @@
             WinEdit uILblTranEdit = this.UIUpdateGeneralTransacWindow.UILblTranWindow.UIEdit("Tran");
             WinEdit uILblBalanceEdit = this.UIUpdateGeneralTransacWindow.UILblBalanceWindow.UIEdit("Balance");
             WinButton uICloseButton = this.UITransactionListWindow.UICloseWindow.UICloseButton;
-            WinClient uITransactionListClient = this.UIPolicyautotestWindow.UITransactionListWindow.UIItemWindow.UIClient();
-            WinButton uIOptionsButton = this.UIPolicyautotestWindow.UITransactionListWindow.UIOptionsWindow.UIOptionsButton;
             WinButton uIOKButton = this.UICommissionAdjustmentWindow.UIOKWindow.UIOKButton;
             WinButton uiCancelButton2 = this.UIPolicyautotestWindow.UITransactionListWindow.UICancelWindow.UICancelButton;
             WinList uILvwVListList = this.UITransactionListWindow.UILvwVListWindow.UIList("Enter Code");
@@ -2056,7 +1964,7 @@
             Mouse.DoubleClick(uIBillingScreenClient, new Point(40, 14));
 
             string filename = string.Empty;
-            for (int i = 16; i < 1000; i = i + 18)
+            for (int i = 20; i < 300; i = i + 18)
             {
                 Mouse.Click(uIPolicyAttachmentsClient, new Point(10, i));
                 Mouse.Click(uIDetailButton);
@@ -2078,6 +1986,10 @@
                     case "HHQuote":
                         if (overridePremium > 0.0)
                         {
+                            if (originalPremium > 0.0)
+                            {
+                                this.CheckPremiumInQuote(originalPremium, false);
+                            }
                             break;
                         }
                         this.CheckPremiumInQuote(premium, true);
@@ -2085,6 +1997,10 @@
                     case "Quote":
                         if (overridePremium > 0.0)
                         {
+                            if (originalPremium > 0.0)
+                            {
+                                this.CheckPremiumInQuote(originalPremium, false);
+                            }
                             break;
                         }
                         this.CheckPremiumInQuote(premium, false);
@@ -2145,7 +2061,6 @@
             {
                 Assert.IsTrue(
                     doc.ActualCount == doc.ExpectedCount, "Incorrect occurences of " + doc.DocName + ". Expected : " + doc.ExpectedCount + ", actual : " + doc.ActualCount);
-                ;
             }
         }
 

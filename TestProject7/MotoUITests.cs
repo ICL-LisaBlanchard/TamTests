@@ -1,6 +1,7 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
     using System;
+    using System.Collections.Generic;
 
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -9,35 +10,21 @@
     public class MotoUiTests : BaseUiTest
     {
         private const string PolicyType = "Motor";
-
-        private readonly MotoActions moto = new MotoActions();
-
-        private readonly CustomerActions customer = new CustomerActions();
-
-        private readonly DocumentsList docs = new DocumentsList();
-
+        private const string RenewalPremium = "1357";
         [TestMethod]
         public void MotoCreateQuote()
         {
             this.SetOfficeRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPolicyPerson();
-            this.moto.PostcodeLookup();
-            this.moto.QuoteResults();
-            //this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.AssertSelectPolicyForm();
-            this.moto.SelectPolicyQuote();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.HighlightBillingScreen();
-            string premium = this.moto.CheckPolicyPremium();
-            this.moto.OpenTransList(Transactions.GetTransactionDictionary(premium));
-            this.moto.CheckPremiumInQuoteDocument(this.docs.DocumentsForMotoNewBusinessQuote);
+            this.CreateNewBusinessPolicy();
+            this.Moto.AssertSelectPolicyForm();
+            this.Moto.SelectPolicyQuote();
+            this.AcceptAndFinishQuote();
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.HighlightBillingScreen();
+            string premium = this.Moto.CheckPolicyPremium();
+            this.Moto.OpenTransList(Transactions.GetTransactionDictionary(premium));
+            this.Moto.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoNewBusinessQuote);
         }
 
         [TestMethod]
@@ -45,52 +32,45 @@
         {
             this.SetOfficeRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPolicyPerson();
-            this.moto.PostcodeLookup();
-            this.moto.QuoteResults();
-            ////this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.SaveWithoutPremium();
-            this.moto.CloseAndOpenPolicyList();
+            this.CreateNewBusinessPolicy();
+            this.Moto.SaveWithoutPremium();
+            this.Moto.CloseAndOpenPolicyList();
+
             //check premium
-            this.moto.HighlightBillingScreen();
-            this.moto.AssertQuoteCostIsZero();
-            this.moto.CancelBillingScreen();
-            this.moto.SelectMenu();
-            this.moto.ClickOkButton();
-            this.moto.AssertCarDetailsCorrect();
-            this.moto.Calculate();
-            ////this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.SelectPolicyQuote();
-            this.moto.ExitEnabled();
-            this.moto.Exit1();
+            this.Moto.HighlightBillingScreen();
+            this.Moto.AssertQuoteCostIsZero();
+            this.Moto.CancelBillingScreen();
+            this.Moto.SelectMenu();
+            this.Moto.ClickOkButton();
+            this.Moto.AssertCarDetailsCorrect();
+            this.Moto.Calculate();
+            this.Moto.QuoteResults1();
+            this.Moto.PublicCreditCheckOk();
+            this.Moto.SelectPolicyQuote();
+            this.Moto.ExitEnabled();
+            this.Moto.Exit1();
+
             //check premium
-            this.moto.HighlightBillingScreen();
-            this.moto.AssertMethod1();
-            this.moto.CancelBillingScreen();
-            this.moto.SelectMenu();
-            this.moto.ClickOkButton();
-            this.moto.AssertCarDetailsCorrect();
-            this.moto.Calculate();
-            //this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.SelectPolicyQuote();
-            this.moto.PrintQuote();
-            this.moto.CheckAutoPrint();
-            this.moto.DemandsAndNeeds();
+            this.Moto.HighlightBillingScreen();
+            this.Moto.AssertMethod1();
+            this.Moto.CancelBillingScreen();
+            this.Moto.SelectMenu();
+            this.Moto.ClickOkButton();
+            this.Moto.AssertCarDetailsCorrect();
+            this.Moto.Calculate();
+
+            this.Moto.QuoteResults1();
+            this.Moto.PublicCreditCheckOk();
+            this.Moto.SelectPolicyQuote();
+            this.Moto.PrintQuote();
+            this.Moto.CheckAutoPrint();
+            this.Moto.DemandsAndNeeds();
             Playback.Wait(3000);
-            this.moto.CloseDemands();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.HighlightBillingScreen();
-            this.moto.AssertMethod1();
+            this.Moto.CloseDemands();
+            this.AcceptAndFinishQuote();
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.HighlightBillingScreen();
+            this.Moto.AssertMethod1();
         }
 
         [TestMethod]
@@ -98,40 +78,33 @@
         {
             this.SetOfficeRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPolicyPerson();
-            this.moto.PostcodeLookup();
-            this.moto.QuoteResults();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
+            this.CreateNewBusinessPolicy();
             const string Premium = "17777.00";
-            this.moto.MotoAwap(Premium);
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.HighlightBillingScreen();
-            this.moto.MotoCheckAWAPpremium(Premium);
-            this.moto.OpenTransList(Transactions.GetTransactionDictionary(Premium));
+            this.Moto.MotoAwap(Premium);
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.HighlightBillingScreen();
+            this.Moto.MotoCheckAWAPpremium(Premium);
+            this.Moto.OpenTransList(Transactions.GetTransactionDictionary(Premium));
         }
 
         [TestMethod]
         public void MotoOverridePremium()
         {
+            const string OverridePremiumGross = "3393.06";
+            const string OverridePremiumNet = "3201.00";
             this.SetOfficeRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPolicyPerson();
-            this.moto.PostcodeLookup();
-            this.moto.QuoteResults();
-            //this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.AssertSelectPolicyForm();
-            this.moto.SelectPolicyQuote();
-            this.moto.ChangePremium();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.HighlightBillingScreen();
-            this.moto.MotoCheckChangedPremium();
+            this.CreateNewBusinessPolicy();
+            this.Moto.AssertSelectPolicyForm();
+            this.Moto.SelectPolicyQuote();
+            this.Moto.ChangePremium(OverridePremiumGross);
+            this.AcceptAndFinishQuote();
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.HighlightBillingScreen();
+            this.Moto.MotoCheckChangedPremium(OverridePremiumNet);
+
+            this.Moto.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoOverridePremium, double.Parse(OverridePremiumNet));
+            this.Moto.OpenTransList(Transactions.GetTransactionDictionary(OverridePremiumNet));
         }
 
         [TestMethod]
@@ -139,22 +112,14 @@
         {
             this.SetOfficeRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPolicyPerson();
-            this.moto.PostcodeLookup();
-            this.moto.QuoteResults();
-            //this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.SelectPolicyQuote();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.MotoCopyFinishedRisk();
-            this.moto.MotoCopyCheckProposer();
-            this.moto.MotoCopyRiskProposerOk();
-            this.moto.MotoCopyCheckCar();
-            this.moto.MotoCopyRiskExit();
+            this.CreateNewBusinessPolicy();
+            this.Moto.SelectPolicyQuote();
+            this.AcceptAndFinishQuote();
+            this.Moto.MotoCopyFinishedRisk();
+            this.Moto.MotoCopyCheckProposer();
+            this.Moto.MotoCopyRiskProposerOk();
+            this.Moto.MotoCopyCheckCar();
+            this.Moto.MotoCopyRiskExit();
         }
 
         [TestMethod]
@@ -162,18 +127,13 @@
         {
             this.SetOfficeRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPolicyPerson();
-            this.moto.PostcodeLookup();
-            this.moto.QuoteResults();
-            //this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.SaveWithoutPremium();
-            this.moto.MotoCopyFinishedRisk();
-            this.moto.MotoCopyCheckProposer();
-            this.moto.MotoCopyRiskProposerOk();
-            this.moto.MotoCopyCheckCar();
-            this.moto.MotoCopyRiskExit();
+            this.CreateNewBusinessPolicy();
+            this.Moto.SaveWithoutPremium();
+            this.Moto.MotoCopyFinishedRisk();
+            this.Moto.MotoCopyCheckProposer();
+            this.Moto.MotoCopyRiskProposerOk();
+            this.Moto.MotoCopyCheckCar();
+            this.Moto.MotoCopyRiskExit();
         }
 
         [TestMethod]
@@ -181,22 +141,14 @@
         {
             this.SetOfficeRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPolicyPerson();
-            this.moto.PostcodeLookup();
-            this.moto.QuoteResults();
-            //this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.SelectPolicyQuote();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.MotoMTA();
-            this.moto.MotoMTANoSave();
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.HighlightBillingScreen();
-            this.moto.AssertMethod1();
+            this.CreateNewBusinessPolicy();
+            this.Moto.SelectPolicyQuote();
+            this.AcceptAndFinishQuote();
+            this.Moto.MotoMTA();
+            this.Moto.MotoMTANoSave();
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.HighlightBillingScreen();
+            this.Moto.AssertMethod1();
         }
 
         [TestMethod]
@@ -204,24 +156,14 @@
         {
             this.SetOfficeRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPolicyPerson();
-            this.moto.PostcodeLookup();
-            this.moto.QuoteResults();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.SelectPolicyQuote();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.MotoMTA();
-            this.moto.MotoMTAAccept();
-            this.moto.MotoMTAConfirmDate();
-            this.moto.MotoMTAConfirmPolicy();
-            this.moto.MotoMTAOpenQuote();
-            this.moto.MotoMTACheckNewValue(false);
-            this.moto.CheckCorrectNumberTrans(2);
-            this.moto.MotoExitMTA();
+            this.CreateNewBusinessPolicy();
+            this.Moto.SelectPolicyQuote();
+            this.AcceptAndFinishQuote();
+            this.CreateMTA();
+            this.Moto.MotoMTAOpenQuote();
+            this.Moto.MotoMTACheckNewValue(false);
+            this.Moto.CheckCorrectNumberTrans(2);
+            this.Moto.MotoExitMTA();
         }
 
         [TestMethod]
@@ -229,31 +171,16 @@
         {
             this.SetOfficeRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPolicyPerson();
-            this.moto.PostcodeLookup();
-            this.moto.QuoteResults();
-            //this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.SelectPolicyQuote();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.MotoMTA();
-            this.moto.MotoMTAAccept();
-            this.moto.MotoMTAConfirmDate();
-            this.moto.MotoMTAConfirmPolicy();
-            this.moto.MotoMTA();
-            this.moto.MotoMTAAccept();
-            this.moto.MotoMTAConfirmDate();
-            this.moto.MotoMTAConfirmPolicy();
-            //this.moto.MotoMTAConfirmPolicy1();
-            this.moto.MotoCopyFinishedRisk();
-            this.moto.MotoCopyCheckProposer();
-            this.moto.MotoCopyRiskProposerOk();
-            this.moto.MotoMTACheckCar();
-            this.moto.MotoCopyRiskExit();
+            this.CreateNewBusinessPolicy();
+            this.Moto.SelectPolicyQuote();
+            this.AcceptAndFinishQuote();
+            this.CreateMTA();
+            this.CreateMTA();
+            this.Moto.MotoCopyFinishedRisk();
+            this.Moto.MotoCopyCheckProposer();
+            this.Moto.MotoCopyRiskProposerOk();
+            this.Moto.MotoMTACheckCar();
+            this.Moto.MotoCopyRiskExit();
         }
 
         [TestMethod]
@@ -261,32 +188,25 @@
         {
             this.SetOfficeRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPolicyPerson();
-            this.moto.PostcodeLookup();
-            this.moto.QuoteResults();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.SelectPolicyQuote();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.MotoMTA();
-            this.moto.MotoMTAParams.CostOfVehicle = "2500";
-            this.moto.MotoMTAAccept();
-            this.moto.MtaEffectiveDate("13/10/12");
-            this.moto.MotoMTAConfirmDate();
-            this.moto.CoverDateBackCheck();
-            this.moto.MotoMTACloseMessage();
-            string coverDate = "MotoMTAtoMTA_" + this.moto.MtaEffectiveDate();
-            this.moto.MotoMTAConfirmDate();
-            this.moto.MotoMTAConfirmPolicy();
+            this.CreateNewBusinessPolicy();
+            this.Moto.SelectPolicyQuote();
+            this.AcceptAndFinishQuote();
+            this.Moto.MotoMTA();
+            this.Moto.MotoMTAParams.CostOfVehicle = "2500";
+            this.Moto.MotoMTAAccept();
+            this.Moto.MtaEffectiveDate("13/10/12");
+            this.Moto.MotoMTAConfirmDate();
+            this.Moto.CoverDateBackCheck();
+            this.Moto.MotoMTACloseMessage();
+            string coverDate = "MotoMTAtoMTA_" + this.Moto.MtaEffectiveDate();
+            this.Moto.MotoMTAConfirmDate();
+            this.Moto.MotoMTAConfirmPolicy("mta");
             Playback.Wait(5000);
-            this.moto.MotoMTAOpenQuote();
+            this.Moto.MotoMTAOpenQuote();
 
-            this.moto.MotoMTACheckNewValueExpectedValues.UIItemEditText = "2500";
-            this.moto.MotoMTACheckNewValue(true, coverDate);
-            this.moto.MotoExitMTA();
+            this.Moto.MotoMTACheckNewValueExpectedValues.UIItemEditText = "2500";
+            this.Moto.MotoMTACheckNewValue(true, coverDate);
+            this.Moto.MotoExitMTA();
         }
 
         [TestMethod]
@@ -294,29 +214,21 @@
         {
             this.SetOfficeRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPolicyPerson();
-            this.moto.PostcodeLookup();
-            this.moto.QuoteResults();
-            //this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.AssertSelectPolicyForm();
-            this.moto.SelectPolicyQuote();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.MotoCloseDetails();
+            this.CreateNewBusinessPolicy();
+            this.Moto.AssertSelectPolicyForm();
+            this.Moto.SelectPolicyQuote();
+            this.AcceptAndFinishQuote();
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.MotoCloseDetails();
             //Cancel policy
-            this.moto.MotoMTA();
-            this.moto.MotoCancelPolicy();
-            this.moto.MtaEffectiveDate();
-            this.moto.MotoCancelPolicy1();
-            this.moto.MotoCancelExit();
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.MotoCheckPolicyStatusExpectedValues.UIItemEditText = "NEW";
-            this.moto.MotoCheckPolicyStatus();
+            this.Moto.MotoMTA();
+            this.Moto.MotoCancelPolicy();
+            this.Moto.MtaEffectiveDate();
+            this.Moto.MotoCancelPolicy1();
+            this.Moto.MotoCancelExit();
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.MotoCheckPolicyStatusExpectedValues.UIItemEditText = "NEW";
+            this.Moto.MotoCheckPolicyStatus();
         }
 
         [TestMethod]
@@ -324,30 +236,23 @@
         {
             this.SetOfficeRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPolicyPerson();
-            this.moto.PostcodeLookup();
-            this.moto.QuoteResults();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.AssertSelectPolicyForm();
-            this.moto.SelectPolicyQuote();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.CheckPolicyPremium();
-            this.moto.MotoCloseDetails();
-            this.moto.MotoMTA();
-            this.moto.MotoCancelPolicy();
-            this.moto.MtaEffectiveDate();
-            this.moto.MotoCancelPolicy1();
-            this.moto.MotoMTAConfirmPolicy();
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.MotoCheckPolicyStatusExpectedValues.UIItemEditText = "CAN";
-            this.moto.MotoCheckPolicyStatus();
-            this.moto.CheckCorrectNumberTrans(2);
-            this.moto.CheckCorrectDocumentPresent(this.docs.DocumentsForMotoNewBusinessCancelAccept);
+            this.CreateNewBusinessPolicy();
+            this.Moto.AssertSelectPolicyForm();
+            this.Moto.SelectPolicyQuote();
+            this.AcceptAndFinishQuote();
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.CheckPolicyPremium();
+            this.Moto.MotoCloseDetails();
+            this.Moto.MotoMTA();
+            this.Moto.MotoCancelPolicy();
+            this.Moto.MtaEffectiveDate();
+            this.Moto.MotoCancelPolicy1();
+            this.Moto.MotoMTAConfirmPolicy("cancel");
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.MotoCheckPolicyStatusExpectedValues.UIItemEditText = "CAN";
+            this.Moto.MotoCheckPolicyStatus();
+            this.Moto.CheckCorrectNumberTrans(2);
+            this.Moto.CheckCorrectDocumentPresent(this.Docs.DocumentsForMotoNewBusinessCancelAccept);
         }
 
         [TestMethod]
@@ -355,73 +260,48 @@
         {
             this.SetOurHighwayRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPostcodeLookup();
-            this.moto.MotoSearchCar();
-            this.moto.MotoInceptionDate();
-            this.moto.MotoCalculate();
-            ////this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.MotoSelectHighwayPolicy();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.CloseAndOpenPolicyList();
-            string policyNumber = this.moto.MotoGetPolicyNumber();
-            this.moto.OpenBrowser2();
-            this.moto.MotoCreateSiteRenewal(policyNumber);
-            Playback.Wait(5000);
-            this.moto.CloseBrowser();
-            this.moto.ChangeDatePolicy();
-            this.moto.HighlightCustomer();
-            string customerCode = this.moto.GetCustomerCode();
+            this.Moto.MotoPostcodeLookup();
+            this.Moto.MotoSearchCar();
+            this.Moto.MotoInceptionDate();
+            this.Moto.MotoCalculate();
+            this.Moto.QuoteResults1();
+            this.Moto.PublicCreditCheckOk();
+            this.Moto.MotoSelectHighwayPolicy();
+            this.AcceptAndFinishQuote();
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.HighlightBillingScreen();
+            string premium = this.Moto.CheckPolicyPremium();
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
 
-            this.moto.RegressApp(customerCode);
+            this.SiteForRenewal(policyNumber, PolicyType, RenewalPremium);
+            string customerCode = this.RegressApp(PolicyType);
+            this.RenewalLoader();
+            this.RenewalModule(customerCode, PolicyType);
+            this.RenewalsInvite(false);
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.RenewalCheckStatus("REN");
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRenewalBefore, originalPremium: double.Parse(premium));
+            this.House.OpenTransList(Transactions.GetTransactionDictionary(RenewalPremium, premium));
+            this.Moto.ClosePolicy();
 
-            this.moto.RegressAppDate();
-            this.moto.RegressAppFinish();
-            this.moto.CloseRegressApp();
-            this.moto.RenewalLoaderOpen();
-            this.moto.RenewalLoaderRun();
-            Playback.Wait(5000);
-            this.moto.CloseBrowser();
-            this.moto.RenewalLoaderClose();
-            this.moto.RenewalModuleEDI();
-            this.moto.RenewalModuleConfirm();
-            this.moto.RenewalModuleEdi1(true);
-            this.moto.RenewalModuleFilter(PolicyType);
-            this.moto.RenewalModuleDisplay(this.moto.CommonParams.SendEndKeys);
-            this.moto.RenewalCheckRecordExpectedValues.UIWindowName = customerCode;
-            this.moto.RenewalCheckRecord(1, this.moto.CustomerCode);
-            this.moto.RenewalModuleInvite();
-            this.moto.RenewConfirmInvite();
-            this.moto.RenewalModuleInvite1();
-            this.moto.RenewalModuleRenew();
-            this.moto.RetrieveResponse();
-            this.moto.RenewalModuleRenew1();
-            this.moto.RenewalModuleClose();
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.RenewalCheckStatus("REN");
-            this.moto.ClosePolicy();
             //mta1
-            this.moto.SelectMenu();
-            this.moto.MotoMTABefore();
+            this.Moto.SelectMenu();
+            this.Moto.MotoMTABefore();
+            this.Moto.MTADate(DateTime.Now.AddDays(2).ToString("dd/MM/yy"));
+            this.Moto.MotoMTABeforeAccept();
+            this.Moto.MotoMTAMessageCancelled();
+            this.Moto.MotoMTABeforeFinish();
 
-            this.moto.MTADate(DateTime.Now.AddDays(2).ToString("dd/MM/yy"));
-            this.moto.MotoMTABeforeAccept();
-            this.moto.MotoMTAMessageCancelled();
-            this.moto.MotoMTABeforeFinish();
             //mta2
-            this.moto.SelectMenu();
-            this.moto.MotoMTABefore2();
-            this.moto.MTADate(DateTime.Now.ToString("dd/MM/yy"));
-            this.moto.MTAMessageBeforeCurrent();
-            this.moto.MTACloseMessageBefore();
-            this.moto.MTADate(DateTime.Now.AddDays(10).ToString("dd/MM/yy"));
-            this.moto.MotoMTAMessageAfterDate();
-            this.moto.MTACloseMessageAfter();
-            this.moto.MTACancel();
+            this.Moto.SelectMenu();
+            this.Moto.MotoMTABefore2();
+            this.Moto.MTADate(DateTime.Now.ToString("dd/MM/yy"));
+            this.Moto.MTAMessageBeforeCurrent();
+            this.Moto.MTACloseMessageBefore();
+            this.Moto.MTADate(DateTime.Now.AddDays(10).ToString("dd/MM/yy"));
+            this.Moto.MotoMTAMessageAfterDate();
+            this.Moto.MTACloseMessageAfter();
+            this.Moto.MTACancel();
         }
 
         [TestMethod]
@@ -429,88 +309,58 @@
         {
             this.SetOurHighwayRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPostcodeLookup();
-            this.moto.MotoSearchCar();
+            this.Moto.MotoPostcodeLookup();
+            this.Moto.MotoSearchCar();
 
-            this.moto.MotoInceptionDate();
-            this.moto.MotoCalculate();
+            this.Moto.MotoInceptionDate();
+            this.Moto.MotoCalculate();
             //this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.MotoSelectHighwayPolicy();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.CloseAndOpenPolicyList();
-            string policyNumber = this.moto.MotoGetPolicyNumber();
-            this.moto.OpenBrowser2();
-            this.moto.MotoCreateSiteRenewal(policyNumber);
-            Playback.Wait(5000);
-            this.moto.CloseBrowser();
-            this.moto.ChangeDatePolicy();
-            this.moto.HighlightCustomer();
-            string customerCode = this.moto.GetCustomerCode();
-            this.moto.RegressApp(customerCode);
-            this.moto.RegressAppDate();
-            this.moto.RegressAppFinish();
-            this.moto.CloseRegressApp();
-            this.moto.RenewalLoaderOpen();
-            this.moto.RenewalLoaderRun();
-            Playback.Wait(5000);
-            this.moto.CloseBrowser();
-            this.moto.RenewalLoaderClose();
-            this.moto.RenewalModuleEDI();
-            this.moto.RenewalModuleConfirm();
-            this.moto.RenewalModuleEdi1(true);
-            this.moto.RenewalModuleFilter(PolicyType);
-            this.moto.RenewalModuleDisplay(this.moto.CommonParams.SendEndKeys);
-            this.moto.RenewalCheckRecordExpectedValues.UIWindowName = customerCode;
-            this.moto.RenewalCheckRecord(1, this.moto.CustomerCode);
-            this.moto.RenewalModuleInvite();
-            this.moto.RenewConfirmInvite();
-            this.moto.RenewalModuleInvite1();
-            this.moto.RenewalModuleRenew();
-            this.moto.RetrieveResponse();
-            this.moto.RenewalModuleRenew1();
-            this.moto.RenewalModuleClose();
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.RenewalCheckStatus("REN");
-            this.moto.ClosePolicy();
+            this.Moto.QuoteResults1();
+            this.Moto.PublicCreditCheckOk();
+            this.Moto.MotoSelectHighwayPolicy();
+            this.AcceptAndFinishQuote();
+            this.Moto.CloseAndOpenPolicyList();
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
+
+            Renewals(policyNumber, PolicyType, RenewalPremium);
+            this.RenewalsInvite(false);
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.RenewalCheckStatus("REN");
+            this.Moto.ClosePolicy();
             ////MTA1
-            this.moto.SelectMenu();
-            this.moto.RenewalAfterMTA1();
-            this.moto.MTADate(DateTime.Now.AddDays(14).ToString("dd/MM/yy"));
-            this.moto.MotoFinishMTA();
+            this.Moto.SelectMenu();
+            this.Moto.RenewalAfterMTA1();
+            this.Moto.MTADate(DateTime.Now.AddDays(14).ToString("dd/MM/yy"));
+            this.Moto.MotoFinishMTA();
             //MTA2
-            this.moto.SelectMenu();
-            this.moto.RenewalAfterMTA1();
-            this.moto.MTADate(DateTime.Now.AddDays(13).ToString("dd/MM/yy"));
-            this.moto.MTAMessageBeforeCurrent();
-            this.moto.MTACloseMessageBefore();
-            this.moto.MTACancel();
+            this.Moto.SelectMenu();
+            this.Moto.RenewalAfterMTA1();
+            this.Moto.MTADate(DateTime.Now.AddDays(13).ToString("dd/MM/yy"));
+            this.Moto.MTAMessageBeforeCurrent();
+            this.Moto.MTACloseMessageBefore();
+            this.Moto.MTACancel();
             //MTA3
-            this.moto.SelectMenu();
-            this.moto.MotoMTABefore();
-            this.moto.MTADate(DateTime.Now.AddDays(9).ToString("dd/MM/yy"));
-            this.moto.MotoMTAMessageAfterDate();
-            this.moto.MTACloseMessageAfter();
+            this.Moto.SelectMenu();
+            this.Moto.MotoMTABefore();
+            this.Moto.MTADate(DateTime.Now.AddDays(9).ToString("dd/MM/yy"));
+            this.Moto.MotoMTAMessageAfterDate();
+            this.Moto.MTACloseMessageAfter();
 
-            this.moto.MTADate(DateTime.Now.AddDays(1).ToString("dd/MM/yy"));
-            this.moto.MotoMTABeforeAccept();
-            this.moto.MotoMTABeforeFinish();
+            this.Moto.MTADate(DateTime.Now.AddDays(1).ToString("dd/MM/yy"));
+            this.Moto.MotoMTABeforeAccept();
+            this.Moto.MotoMTABeforeFinish();
             //mta4
-            this.moto.SelectMenu();
-            this.moto.MotoMTABefore2();
+            this.Moto.SelectMenu();
+            this.Moto.MotoMTABefore2();
 
-            this.moto.MTADate(DateTime.Now.ToString("dd/MM/yy"));
-            this.moto.MTAMessageBeforeCurrent();
-            this.moto.MTACloseMessageBefore();
+            this.Moto.MTADate(DateTime.Now.ToString("dd/MM/yy"));
+            this.Moto.MTAMessageBeforeCurrent();
+            this.Moto.MTACloseMessageBefore();
 
-            this.moto.MTADate(DateTime.Now.AddDays(11).ToString("dd/MM/yy"));
-            this.moto.MotoMTAMessageAfterDate();
-            this.moto.MTACloseMessageAfter();
-            this.moto.MTACancel();
+            this.Moto.MTADate(DateTime.Now.AddDays(11).ToString("dd/MM/yy"));
+            this.Moto.MotoMTAMessageAfterDate();
+            this.Moto.MTACloseMessageAfter();
+            this.Moto.MTACancel();
         }
 
         [TestMethod]
@@ -518,55 +368,26 @@
         {
             this.SetOurHighwayRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPostcodeLookup();
-            this.moto.MotoSearchCar();
+            this.Moto.MotoPostcodeLookup();
+            this.Moto.MotoSearchCar();
+            this.Moto.MotoInceptionDate();
+            this.Moto.MotoCalculate();
+            this.Moto.QuoteResults1();
+            this.Moto.PublicCreditCheckOk();
+            this.Moto.MotoSelectHighwayPolicy();
+            this.AcceptAndFinishQuote();
+            this.Moto.CloseAndOpenPolicyList();
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
 
-            this.moto.MotoInceptionDate();
-            this.moto.MotoCalculate();
-            //this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.MotoSelectHighwayPolicy();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.CloseAndOpenPolicyList();
-            string policyNumber = this.moto.MotoGetPolicyNumber();
-            this.moto.OpenBrowser2();
-            this.moto.MotoCreateSiteRenewal(policyNumber);
-            Playback.Wait(6000);
-            this.moto.CloseBrowser();
-
-            this.moto.ChangeDatePolicy();
-            this.moto.HighlightCustomer();
-            string customerCode = this.moto.GetCustomerCode();
-
-            this.moto.RegressApp(customerCode);
-
-            this.moto.RegressAppDate();
-            this.moto.RegressAppFinish();
-            this.moto.CloseRegressApp();
-            this.moto.RenewalLoaderOpen();
-            this.moto.RenewalLoaderRun();
-            Playback.Wait(5000);
-            this.moto.CloseBrowser();
-            this.moto.RenewalLoaderClose();
-            this.moto.RenewalModuleEDI();
-            this.moto.RenewalModuleConfirm();
-            this.moto.RenewalModuleEdi1(true);
-            this.moto.RenewalModuleFilter(PolicyType);
-            this.moto.RenewalModuleDisplay(this.moto.CommonParams.SendEndKeys);
-            this.moto.RenewalCheckRecordExpectedValues.UIWindowName = customerCode;
-            this.moto.RenewalCheckRecord(1, this.moto.CustomerCode);
-            this.moto.MotoAmendRisk();
-            this.moto.PublicCreditCheckOk();
-            this.moto.QuoteSelectListCancel();
-            this.moto.AmendSelectQuote();
-            this.moto.MotoAmendRiskRenew();
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.RenewalCheckStatus("REN");
-            this.moto.ClosePolicy();
+            Renewals(policyNumber, PolicyType, RenewalPremium);
+            this.Moto.MotoAmendRisk();
+            this.Moto.PublicCreditCheckOk();
+            this.Moto.QuoteSelectListCancel();
+            this.Moto.AmendSelectQuote();
+            this.Moto.MotoAmendRiskRenew();
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.RenewalCheckStatus("REN");
+            this.Moto.ClosePolicy();
         }
 
         [TestMethod]
@@ -574,73 +395,51 @@
         {
             this.SetOurHighwayRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPostcodeLookup();
-            this.moto.MotoSearchCar();
-            this.moto.MotoInceptionDate();
-            this.moto.MotoCalculate();
-            //this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.MotoSelectHighwayPolicy();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.CloseAndOpenPolicyList();
-            string policyNumber = this.moto.MotoGetPolicyNumber();
-            this.moto.OpenBrowser2();
-            this.moto.MotoCreateSiteRenewal(policyNumber);
-            Playback.Wait(5000);
-            this.moto.CloseBrowser();
+            this.Moto.MotoPostcodeLookup();
+            this.Moto.MotoSearchCar();
+            this.Moto.MotoInceptionDate();
+            this.Moto.MotoCalculate();
+            this.Moto.QuoteResults1();
+            this.Moto.PublicCreditCheckOk();
+            this.Moto.MotoSelectHighwayPolicy();
+            this.AcceptAndFinishQuote();
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.HighlightBillingScreen();
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
+            string originalPremium = this.Moto.CheckPolicyPremium();
 
-            this.moto.ChangeDatePolicy();
-            this.moto.HighlightCustomer();
-            string customerCode = this.moto.GetCustomerCode();
-
-            this.moto.RegressApp(customerCode);
-
-            this.moto.RegressAppDate();
-            this.moto.RegressAppFinish();
-            this.moto.CloseRegressApp();
-            this.moto.RenewalLoaderOpen();
-            this.moto.RenewalLoaderRun();
-            Playback.Wait(5000);
-            this.moto.CloseBrowser();
-            this.moto.RenewalLoaderClose();
-            this.moto.RenewalModuleEDI();
-            this.moto.RenewalModuleConfirm();
-            this.moto.RenewalModuleEdi1(true);
-            this.moto.RenewalModuleFilter(PolicyType);
-            this.moto.RenewalModuleDisplay(this.moto.CommonParams.SendEndKeys);
-            this.moto.RenewalCheckRecordExpectedValues.UIWindowName = customerCode;
-            this.moto.RenewalCheckRecord(1, this.moto.CustomerCode);
-            this.moto.MotoAmendRisk();
-            this.moto.PublicCreditCheckOk();
-            this.moto.CommonParams.SendHomeKeys = "{End}";
-            this.moto.AmendSelectQuote();
-            this.moto.MotoAmendRiskNew();
-            this.moto.RetrieveResponse();
-            this.moto.MotoAmendRiskNew1();
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.RenewalCheckStatus("REW");
-            this.moto.ClosePolicy();
+            Renewals(policyNumber, PolicyType, RenewalPremium);
+            this.Moto.MotoAmendRisk();
+            this.Moto.PublicCreditCheckOk();
+            this.Moto.CommonParams.SendHomeKeys = "{End}";
+            this.Moto.AmendSelectQuote();
+            this.Moto.MotoAmendRiskNew();
+            this.Moto.RetrieveResponse();
+            this.Moto.MotoAmendRiskNew1();
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.HighlightBillingScreen();
+            string premium = this.Moto.CheckPolicyPremium();
+            this.Moto.RenewalCheckStatus("REW");
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoAmendRiskNew, originalPremium: double.Parse(originalPremium));
+            this.House.OpenTransList(Transactions.GetTransactionDictionary(premium, originalPremium));
+            this.Moto.ClosePolicy();
 
             //mta1
-            this.moto.MotoMTA();
-            this.moto.MotoMTAAccept();
-            this.moto.MTADate(DateTime.Now.AddDays(5).ToString("dd/MM/yy"));
-            this.moto.AmendDateBeforeMessage();
-            this.moto.MTACloseMessageBefore();
-            this.moto.MTADate(DateTime.Now.AddDays(12).ToString("dd/MM/yy"));
-            this.moto.MotoFinishMTA();
+            this.Moto.MotoMTA();
+            this.Moto.MotoMTAAccept();
+            this.Moto.MTADate(DateTime.Now.AddDays(5).ToString("dd/MM/yy"));
+            this.Moto.AmendDateBeforeMessage();
+            this.Moto.MTACloseMessageBefore();
+            this.Moto.MTADate(DateTime.Now.AddDays(12).ToString("dd/MM/yy"));
+            this.Moto.MotoFinishMTA();
 
             //mta2
-            this.moto.MotoMTA();
-            this.moto.MotoMTAAccept();
-            this.moto.MTADate(DateTime.Now.AddDays(9).ToString("dd/MM/yy"));
-            this.moto.MTAMessageBeforeCurrent();
-            this.moto.MTACloseMessageBefore();
-            this.moto.MTACancel();
+            this.Moto.MotoMTA();
+            this.Moto.MotoMTAAccept();
+            this.Moto.MTADate(DateTime.Now.AddDays(9).ToString("dd/MM/yy"));
+            this.Moto.MTAMessageBeforeCurrent();
+            this.Moto.MTACloseMessageBefore();
+            this.Moto.MTACancel();
         }
 
         [TestMethod]
@@ -648,59 +447,29 @@
         {
             this.SetOurHighwayRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPostcodeLookup();
-            this.moto.MotoSearchCar();
-            this.moto.MotoInceptionDate();
-            this.moto.MotoCalculate();
-            //this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.MotoSelectHighwayPolicy();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.CloseAndOpenPolicyList();
-            string policyNumber = this.moto.MotoGetPolicyNumber();
-            this.moto.OpenBrowser2();
-            this.moto.MotoCreateSiteRenewal(policyNumber);
-            Playback.Wait(5000);
-            this.moto.CloseBrowser();
+            this.Moto.MotoPostcodeLookup();
+            this.Moto.MotoSearchCar();
+            this.Moto.MotoInceptionDate();
+            this.Moto.MotoCalculate();
+            this.Moto.QuoteResults1();
+            this.Moto.PublicCreditCheckOk();
+            this.Moto.MotoSelectHighwayPolicy();
+            this.AcceptAndFinishQuote();
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.HighlightBillingScreen();
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
+            string premium = this.Moto.CheckPolicyPremium();
 
-            this.moto.ChangeDatePolicy();
-            this.moto.HighlightCustomer();
-            string customerCode = this.moto.GetCustomerCode();
-
-            this.moto.RegressApp(customerCode);
-
-            this.moto.RegressAppDate();
-            this.moto.RegressAppFinish();
-            this.moto.CloseRegressApp();
-            this.moto.RenewalLoaderOpen();
-            this.moto.RenewalLoaderRun();
-            Playback.Wait(5000);
-            this.moto.CloseBrowser();
-            this.moto.RenewalLoaderClose();
-            this.moto.RenewalModuleEDI();
-            this.moto.RenewalModuleConfirm();
-            this.moto.RenewalModuleEdi1(false);
-            this.moto.RenewalModuleFilter(PolicyType);
-            this.moto.RenewalModuleDisplay(this.moto.CommonParams.SendEndKeys);
-            this.moto.RenewalCheckRecordExpectedValues.UIWindowName = customerCode;
-            this.moto.RenewalCheckRecord(1, this.moto.CustomerCode);
-            this.moto.MotoRebroke(false, false);
-            this.moto.PublicCreditCheckOk();
-            this.moto.MotoRebrokeCurrent(false);
-            this.moto.RenewalModuleInvite();
-            this.moto.RenewConfirmInvite();
-            this.moto.RenewalModuleInvite1();
-            this.moto.RenewalModuleRenew();
-            this.moto.RetrieveResponse();
-            this.moto.RenewalModuleRenew1();
-            this.moto.RenewalModuleClose();
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.RenewalCheckStatus("REN");
-            this.moto.ClosePolicy();
+            Renewals(policyNumber, PolicyType, RenewalPremium);
+            this.Moto.MotoRebroke(false, false);
+            this.Moto.PublicCreditCheckOk();
+            this.Moto.MotoRebrokeCurrent(false);
+            this.RenewalsInvite(true);
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.RenewalCheckStatus("REN");
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRenewalBefore, originalPremium: double.Parse(premium));
+            this.House.OpenTransList(Transactions.GetTransactionDictionary(RenewalPremium, premium));
+            this.Moto.ClosePolicy();
         }
 
         [TestMethod]
@@ -708,63 +477,38 @@
         {
             this.SetOurHighwayRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPostcodeLookup();
-            this.moto.MotoSearchCar();
-            this.moto.MotoInceptionDate();
-            this.moto.MotoCalculate();
-            //this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.MotoSelectHighwayPolicy();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.CloseAndOpenPolicyList();
-            string policyNumber = this.moto.MotoGetPolicyNumber();
-            this.moto.OpenBrowser2();
-            this.moto.MotoCreateSiteRenewal(policyNumber);
-            Playback.Wait(5000);
-            this.moto.CloseBrowser();
+            this.Moto.MotoPostcodeLookup();
+            this.Moto.MotoSearchCar();
+            this.Moto.MotoInceptionDate();
+            this.Moto.MotoCalculate();
+            this.Moto.QuoteResults1();
+            this.Moto.PublicCreditCheckOk();
+            this.Moto.MotoSelectHighwayPolicy();
+            this.AcceptAndFinishQuote();
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.HighlightBillingScreen();
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
+            string premium = this.Moto.CheckPolicyPremium();
 
-            this.moto.ChangeDatePolicy();
-            this.moto.HighlightCustomer();
-            string customerCode = this.moto.GetCustomerCode();
-
-            this.moto.RegressApp(customerCode);
-
-            this.moto.RegressAppDate();
-            this.moto.RegressAppFinish();
-            this.moto.CloseRegressApp();
-            this.moto.RenewalLoaderOpen();
-            this.moto.RenewalLoaderRun();
-            Playback.Wait(5000);
-            this.moto.CloseBrowser();
-            this.moto.RenewalLoaderClose();
-            this.moto.RenewalModuleEDI();
-            this.moto.RenewalModuleConfirm();
-            this.moto.RenewalModuleEdi1(true);
-            this.moto.RenewalModuleFilter(PolicyType);
-            this.moto.RenewalModuleDisplay(this.moto.CommonParams.SendEndKeys);
-            this.moto.RenewalCheckRecordExpectedValues.UIWindowName = customerCode;
-            this.moto.RenewalCheckRecord(1, this.moto.CustomerCode);
-            this.moto.MotoRebroke(false, false);
-            this.moto.PublicCreditCheckOk();
-            this.moto.MotoRebrokeSelectScheme(this.moto.CommonParams.SendHomeKeys);
-            this.moto.RebrokeSelectAlternative();
-            this.moto.MotoRebrokeCurrent(false);
-            this.moto.RenewalModuleInvite();
-            this.moto.RenewConfirmInvite();
-            this.moto.RenewalModuleInvite1();
-            this.moto.RebrokeAlternativeFinish();
-            this.moto.RetrieveResponse();
-            this.moto.CancelPrint();
-            this.moto.RebrokeAlternativeFinish1();
-            this.moto.RenewalModuleClose();
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
-            this.moto.RenewalCheckStatus("REN");
-            this.moto.ClosePolicy();
+            Renewals(policyNumber, PolicyType, RenewalPremium);
+            this.Moto.MotoRebroke(false, false);
+            this.Moto.PublicCreditCheckOk();
+            this.Moto.MotoRebrokeSelectScheme(this.Moto.CommonParams.SendHomeKeys);
+            this.Moto.RebrokeSelectAlternative();
+            this.Moto.MotoRebrokeCurrent(false);
+            this.Moto.RenewalModuleInvite(false);
+            this.Moto.RenewConfirmInvite();
+            this.Moto.RenewalModuleInvite1();
+            this.Moto.RebrokeAlternativeFinish();
+            this.Moto.RetrieveResponse();
+            this.Moto.CancelPrint();
+            this.Moto.RebrokeAlternativeFinish1();
+            this.Moto.RenewalModuleClose();
+            this.Moto.CloseAndOpenPolicyList();
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRenewalBefore, originalPremium: double.Parse(premium));
+            this.House.OpenTransList(Transactions.GetTransactionDictionary(RenewalPremium, premium));
+            this.Moto.RenewalCheckStatus("REW");
+            this.Moto.ClosePolicy();
         }
 
         [TestMethod]
@@ -772,73 +516,75 @@
         {
             this.SetOurHighwayRegKeys();
             this.TamMotorSteps();
-            this.moto.MotoPostcodeLookup();
-            this.moto.MotoSearchCar();
-            this.moto.MotoInceptionDate();
-            this.moto.MotoCalculate();
-            //this.moto.CancelFilter();
-            this.moto.QuoteResults1();
-            this.moto.PublicCreditCheckOk();
-            this.moto.MotoSelectHighwayPolicy();
-            this.moto.AcceptQuote();
-            this.moto.FinishQuote();
-            this.moto.CancelPrint();
-            this.moto.FinishQuote1();
-            this.moto.CloseAndOpenPolicyList();
-            string policyNumber = this.moto.MotoGetPolicyNumber();
-            this.moto.OpenBrowser2();
-            this.moto.MotoCreateSiteRenewal(policyNumber);
-            Playback.Wait(5000);
-            this.moto.CloseBrowser();
-            this.moto.ChangeDatePolicy();
-            this.moto.HighlightCustomer();
-            string customerCode = this.moto.GetCustomerCode();
+            this.Moto.MotoPostcodeLookup();
+            this.Moto.MotoSearchCar();
+            this.Moto.MotoInceptionDate();
+            this.Moto.MotoCalculate();
+            this.Moto.QuoteResults1();
+            this.Moto.PublicCreditCheckOk();
+            this.Moto.MotoSelectHighwayPolicy();
+            this.AcceptAndFinishQuote();
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.HighlightBillingScreen();
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
+            string premium = this.Moto.CheckPolicyPremium();
 
-            this.moto.RegressApp(customerCode);
+            Renewals(policyNumber, PolicyType, RenewalPremium);
+            this.Moto.MotoRebroke(false, false);
+            this.Moto.PublicCreditCheckOk();
+            this.Moto.MotoRebrokeSelectScheme(this.Moto.CommonParams.SendEndKeys);
+            this.Moto.RebrokeSelectAlternative();
+            this.Moto.MotoRebrokeCurrent(false);
+            this.Moto.RenewalModuleInvite(false);
+            this.Moto.RenewConfirmInvite();
+            this.Moto.RenewalModuleInvite1();
+            this.Moto.RebrokeAlternativeFinish();
+            this.Moto.RetrieveResponse();
+            this.Moto.CancelPrint();
+            this.Moto.RebrokeAlternativeFinish1();
+            this.Moto.RenewalModuleClose();
+            this.Moto.CloseAndOpenPolicyList();
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRenewalBefore, originalPremium: double.Parse(premium));
+            this.House.OpenTransList(Transactions.GetTransactionDictionary(RenewalPremium, premium));
+            this.Moto.RenewalCheckStatus("REW");
+            this.Moto.ClosePolicy();
+        }
 
-            this.moto.RegressAppDate();
-            this.moto.RegressAppFinish();
-            this.moto.CloseRegressApp();
-            this.moto.RenewalLoaderOpen();
+        #region Private Functions
 
-            this.moto.RenewalLoaderRun();
-            Playback.Wait(5000);
-            this.moto.CloseBrowser();
-            this.moto.RenewalLoaderClose();
-            this.moto.RenewalModuleEDI();
-            this.moto.RenewalModuleConfirm();
-            this.moto.RenewalModuleEdi1(true);
-            this.moto.RenewalModuleFilter(PolicyType);
-            this.moto.RenewalModuleSort();
-            this.moto.RenewalModuleSort();
-            this.moto.RenewalModuleDisplay(this.moto.CommonParams.SendEndKeys);
-            this.moto.RenewalCheckRecordExpectedValues.UIWindowName = customerCode;
-            this.moto.RenewalCheckRecord(1, this.moto.CustomerCode);
-            this.moto.MotoRebroke(false, false);
-            this.moto.PublicCreditCheckOk();
-            this.moto.MotoRebrokeSelectScheme(this.moto.CommonParams.SendEndKeys);
-            this.moto.RebrokeSelectAlternative();
-            this.moto.MotoRebrokeCurrent(false);
-            this.moto.RenewalModuleInvite();
-            this.moto.RenewConfirmInvite();
-            this.moto.RenewalModuleInvite1();
-            this.moto.RebrokeAlternativeFinish();
-            this.moto.RetrieveResponse();
-            this.moto.CancelPrint();
-            this.moto.RebrokeAlternativeFinish1();
-            this.moto.RenewalModuleClose();
-            this.moto.CloseAndOpenPolicyList();
-            this.moto.RenewalCheckStatusExpectedValues.UIItemEditText = "REW";
-            this.moto.RenewalCheckStatus("REN");
-            this.moto.ClosePolicy();
+        private void CreateMTA()
+        {
+            this.Moto.MotoMTA();
+            this.Moto.MotoMTAAccept();
+            this.Moto.MotoMTAConfirmDate();
+            this.Moto.MotoMTAConfirmPolicy("mta");
+        }
+
+        private void AcceptAndFinishQuote()
+        {
+            this.Moto.AcceptQuote();
+            this.Moto.FinishQuote();
+            this.Moto.CancelPrint();
+            this.Moto.MotoFinishQuote();
+        }
+
+        private void CreateNewBusinessPolicy()
+        {
+            this.Moto.MotoPolicyPerson();
+            this.Moto.PostcodeLookup();
+            this.Moto.QuoteResults();
+            this.Moto.QuoteResults1();
+            this.Moto.PublicCreditCheckOk();
         }
 
         private void TamMotorSteps()
         {
-            this.moto.CustomerCode = this.customer.AddPolicy();
-            this.moto.SelectMotoPolicy();
-            this.moto.SelectMenu();
-            this.moto.Links();
+            this.Moto.CustomerCode = this.Customer.AddPolicy();
+            this.Moto.SelectMotoPolicy();
+            this.Moto.SelectMenu();
+            this.Moto.Links();
         }
+
+        #endregion
     }
 }

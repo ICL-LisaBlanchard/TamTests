@@ -370,7 +370,7 @@
 
             Mouse.Click(uIOKButton1, new Point(45, 15));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(selectListItems1: 1);
 
             Mouse.Click(uICancelButton1, new Point(37, 17));
 
@@ -392,6 +392,8 @@
             Playback.Wait(3000);
 
             Mouse.Move(new Point(500, 500));
+
+            Playback.Wait(500);
 
             Mouse.Click(uIAcceptButton, new Point(47, 11));
 
@@ -530,7 +532,7 @@
 
             Mouse.Click(uIOKButton, new Point(30, 15));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(selectListItems1: 2);
         }
 
         /// <summary>
@@ -733,7 +735,7 @@
 
             Mouse.Click(uIOKButton7, new Point(54, 8));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(selectListItems1: 2);
         }
 
         public void HomeRebrokeSelectAlternative()
@@ -1043,7 +1045,7 @@
 
             Mouse.Click(uIokButton4, new Point(42, 12));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(selectListItems1: 1);
         }
 
         public void HomeCancelPolicy()
@@ -1197,6 +1199,8 @@
 
             Mouse.Click(uIokButton1, new Point(74, 19));
 
+            Mouse.Move(new Point(500,500));
+
             Mouse.Click(uIokButton2, new Point(64, 14));
 
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
@@ -1205,7 +1209,7 @@
 
             Mouse.Click(uIokButton4, new Point(21, 8));
 
-            this.SelectTamInsurersAndActivity(false);
+            this.SelectTamInsurersAndActivity(selectListItems1:2);
         }
 
         public void HomeAcceptQuote()
@@ -1220,13 +1224,6 @@
             Mouse.Click(uIYesButton, new Point(39, 13));
         }
 
-        public void HouseRegressApp(string policyType)
-        {
-            WinComboBox uIItemComboBox = this.UIRegressIETamPolicyWindow.UIItemWindow4.UIItemComboBox;
-
-            uIItemComboBox.SelectedItem = policyType;
-        }
-
         public void HomeStartDate()
         {
             WinEdit uIItemEdit = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow13.UIItemEdit;
@@ -1234,7 +1231,7 @@
             uIItemEdit.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
         }
 
-        public void HomeSiteRenewal(string policyNumber)
+        public void HomeSiteRenewal(string policyNumber, string renewalPremium)
         {
             HtmlHyperlink uICreateaHouseholdTestHyperlink =
                 this.UIInsurEcomSystemMaintWindow.UILeftbarFrame.UIInsurEcomLeftbarDocument.UIDivRenewalsPane.UICreateaHouseholdTestHyperlink;
@@ -1244,6 +1241,8 @@
             HtmlEdit uITxtAutoLapseDateEdit = this.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UITxtAutoLapseDateEdit;
             HtmlTextArea uITxtClientXmlEdit = this.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UITxtClientXmlEdit;
             HtmlInputButton uIGetXMLfromServerButton = this.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UIGetXMLfromServerButton;
+            HtmlEdit uITxtPremiumEdit = this.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UITxtPremiumEdit;
+            
             HtmlInputButton uICreateRecordButton = this.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UICreateRecordButton;
             BrowserWindow uIInsurEcomSystemMaintWindow = this.UIInsurEcomSystemMaintWindow;
 
@@ -1253,9 +1252,12 @@
 
             uITxtPolicyNumberEdit.Text = policyNumber;
 
+            uITxtPremiumEdit.Text = renewalPremium;
+
             uITxtRenewalDateEdit.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
 
             uITxtAutoLapseDateEdit.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+
 
             Mouse.Click(uITxtClientXmlEdit, new Point(284, 43));
 

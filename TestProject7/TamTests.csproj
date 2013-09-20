@@ -140,7 +140,7 @@
     <Compile Include="Params\CancelPolicyParams.cs" />
     <Compile Include="Params\MotoCreateSiteRenewalParams.cs" />
     <Compile Include="Params\MotoMTAParams.cs" />
-    <Compile Include="Params\MotoRegressAppParams.cs" />
+    <Compile Include="Params\RegressAppParams.cs" />
     <Compile Include="Params\OpenBrowser2Params.cs" />
     <Compile Include="Params\QuoteResultsParams.cs" />
     <Compile Include="Params\RenewalModuleEDIParams.cs" />

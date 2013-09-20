@@ -3,7 +3,7 @@
     /// <summary>
     /// Parameters to be passed into 'MotoRegressApp'
     /// </summary>
-    public class MotoRegressAppParams
+    public class RegressAppParams
     {
         #region Fields
 
