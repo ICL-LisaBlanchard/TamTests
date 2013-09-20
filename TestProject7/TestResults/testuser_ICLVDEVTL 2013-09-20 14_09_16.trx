@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="2c92decc-5ad4-40cf-898d-19c7cd73370c" name="testuser@ICLVDEVTL 2013-09-20 14:09:16" runUser="ICLVDEVTL\testuser" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Remote" id="47e1e203-4706-4ffd-9873-ee9804c8144d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="C:\TamTestsGit\TestProject7\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="testuser_ICLVDEVTL 2013-09-20 14_09_16">
+      <DeploymentItem filename="C:\TestLinkAPI.dll" />
+      <DeploymentItem filename="C:\TamTestsGit\TestProject7\References\itextsharp.dll" />
+    </Deployment>
+    <RemoteController name="ICLVDEVTL" />
+    <Execution location="Remote">
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+      </TestTypeSpecific>
+      <AgentRule name="New role 1">
+        <DataCollectors>
+          <DataCollector uri="datacollector://microsoft/SystemInfo/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TestTools.DataCollection.SystemInfo.SystemInfoDataCollector, Microsoft.VisualStudio.TestTools.DataCollection.SystemInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="System Information">
+          </DataCollector>
+          <DataCollector uri="datacollector://microsoft/HttpProxy/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TraceCollector.HttpProxyCollector, Microsoft.VisualStudio.TraceCollector, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="ASP.NET Client Proxy for IntelliTrace and Test Impact">
+          </DataCollector>
+          <DataCollector uri="datacollector://microsoft/TestImpact/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TraceCollector.TestImpactDataCollector, Microsoft.VisualStudio.TraceCollector, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="Test Impact">
+          </DataCollector>
+          <DataCollector uri="datacollector://microsoft/TraceDebugger/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TraceCollector.TraceDebuggerDataCollector, Microsoft.VisualStudio.TraceCollector, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="IntelliTrace">
+          </DataCollector>
+        </DataCollectors>
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-09-20T14:09:16.8709518+01:00" queuing="2013-09-20T14:09:17.7110358+01:00" start="2013-09-20T14:09:24.0196666+01:00" finish="2013-09-20T14:15:26.4689079+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <CollectorDataEntries>
+      <Collector agentName="ICLVDEVTM02" isFromRemoteAgent="true" uri="datacollector://microsoft/SystemInfo/1.0" collectorDisplayName="System Information">
+        <UriAttachments>
+          <UriAttachment>
+            <A href="ICLVDEVTM02\SystemInformation.xml">System Information from ICLVDEVTM02</A>
+          </UriAttachment>
+        </UriAttachments>
+      </Collector>
+    </CollectorDataEntries>
+    <DataCollectorMessages>
+      <DataCollectorMessage timestamp="2013-09-20T13:53:12.6035154+01:00" dataCollectorUri="datacollector://microsoft/TestImpact/1.0" dataCollectorFriendlyName="Test Impact" agentName="ICLVDEVTM02" level="Warning">
+        <Text>Diagnostics and data collection from IIS failed: An error occurred during website instrumentation: Internet Information Services could not be found on the machine.</Text>
+      </DataCollectorMessage>
+      <DataCollectorMessage timestamp="2013-09-20T13:59:16.8337668+01:00" dataCollectorUri="datacollector://microsoft/TraceDebugger/1.0" dataCollectorFriendlyName="IntelliTrace" agentName="ICLVDEVTM02" level="Warning">
+        <Text>Diagnostics and data collection from IIS failed: An error occurred during website instrumentation: Internet Information Services could not be found on the machine.</Text>
+      </DataCollectorMessage>
+    </DataCollectorMessages>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="HouseCreateQuote" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="860b3117-58e1-faeb-5039-5d480603d3e0">
+      <Execution id="5601654a-e972-4eb7-a8ee-ea43234db272" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCreateQuote" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="860b3117-58e1-faeb-5039-5d480603d3e0" executionId="5601654a-e972-4eb7-a8ee-ea43234db272" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="5601654a-e972-4eb7-a8ee-ea43234db272" testId="860b3117-58e1-faeb-5039-5d480603d3e0" testName="HouseCreateQuote" computerName="ICLVDEVTM02" duration="00:05:36.8916062" startTime="2013-09-20T13:53:19.8614370+01:00" endTime="2013-09-20T13:59:15.9061490+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5601654a-e972-4eb7-a8ee-ea43234db272">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method AppliedSystems.Tam.Ui.Tests.HouseUiTests.HouseCreateQuote threw exception: 
+Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotFoundException: The playback failed to find the control with the given search properties. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Button'
+Name:  'OK'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IScreenElement.FindAllDescendants(String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindAllScreenElement(String queryId, Int32 depth, Boolean singleQueryId, Boolean throwException)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindScreenElement(String queryId, Int32 depth)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindFirstDescendant(String queryId, Int32 maxDepth, Int32&amp; timeLeft)
+ --- End of inner exception stack trace ---
+    at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapControlNotFoundException(COMException ex, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowComException(COMException innerException, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindFirstDescendant(String queryId, Int32 maxDepth, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetElement(Boolean useCache, ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.Search(ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindInternal()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindControlIfNecessary()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click(UITestControl control)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.OpenAttachment() in C:\TamTestsGit\TestProject7\UIMap.cs:line 2131
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CheckPremiumInQuote(Double premium, Boolean isHouse) in C:\TamTestsGit\TestProject7\UIMap.cs:line 2101
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CheckPremiumInQuoteDocument(List`1 expectedDocs, Double overridePremium, Double originalPremium) in C:\TamTestsGit\TestProject7\UIMap.cs:line 2012
+   at AppliedSystems.Tam.Ui.Tests.HouseUiTests.HouseCreateQuote() in C:\TamTestsGit\TestProject7\HouseUiTests.cs:line 24
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="ICLVDEVTM02\HouseCreateQuote.png" />
+      </ResultFiles>
+      <CollectorDataEntries>
+        <Collector agentName="ICLVDEVTM02" isFromRemoteAgent="true" uri="datacollector://microsoft/SystemInfo/1.0" collectorDisplayName="System Information">
+          <UriAttachments>
+            <UriAttachment>
+              <A href="ICLVDEVTM02\SystemInformation.xml">System Information from ICLVDEVTM02</A>
+            </UriAttachment>
+          </UriAttachments>
+        </Collector>
+        <Collector agentName="ICLVDEVTM02" isFromRemoteAgent="true" uri="datacollector://microsoft/TraceDebugger/1.0" collectorDisplayName="IntelliTrace">
+          <UriAttachments>
+            <UriAttachment>
+              <A href="ICLVDEVTM02\QTAgent32_130920_135859472_6068.iTrace">IntelliTrace file for 'QTAgent32.exe' (6068)</A>
+            </UriAttachment>
+            <UriAttachment>
+              <A href="ICLVDEVTM02\AppliedSystems.TAM.GUIDS_00005910_130920_135336.iTrace">IntelliTrace file for 'AppliedSystems.TAM.GUIDS.exe' (22800)</A>
+            </UriAttachment>
+            <UriAttachment>
+              <A href="ICLVDEVTM02\clntfile_00003914_130920_135344.iTrace">IntelliTrace file for 'clntfile.exe' (14612)</A>
+            </UriAttachment>
+            <UriAttachment>
+              <A href="ICLVDEVTM02\TamXML7_00001dfc_130920_135410.iTrace">IntelliTrace file for 'TamXML7.exe' (7676)</A>
+            </UriAttachment>
+            <UriAttachment>
+              <A href="ICLVDEVTM02\InsureTam_00005f14_130920_135418.iTrace">IntelliTrace file for 'InsureTam.exe' (24340)</A>
+            </UriAttachment>
+            <UriAttachment>
+              <A href="ICLVDEVTM02\AppliedSystems.Tam.Client.Accounting.TransactionsUP_00005764_130920_135810.iTrace">IntelliTrace file for 'AppliedSystems.Tam.Client.Accounting.TransactionsUP.exe' (22372)</A>
+            </UriAttachment>
+          </UriAttachments>
+        </Collector>
+      </CollectorDataEntries>
+      <ExtensionResult>Exception has been thrown by the target of an invocation.</ExtensionResult>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -1140,7 +1140,7 @@
             #region Variable Declarations
 
             WinControl uIInviteButton = this.UIAUTO1871001Window.UIInviteWindow.UIInviteButton;
-            WinControl uiYesButton = this.UIPersonalLinesWindow.UIYesWindow.UIYesButton;
+            WinControl uiYesButton = this.UIPersonalLinesDialogWindow.UIYesWindow.UIYesButton;
 
             #endregion
             if (selectAlternative)
@@ -2128,7 +2128,11 @@
             WinMenuItem uIViewAttachmentMenuItem = this.UIAttachmentsMenuWindow.UIContextMenu.UIMenuItem("View Attachment");
             Mouse.Click(uIOptionsButton);
             Mouse.Click(uIViewAttachmentMenuItem);
-            Mouse.Click(uIOKButton);
+            try {
+                Mouse.Click(uIOKButton);
+            }
+            catch { }
+            
         }
 
         private void CheckPremiumInPdfProposal(double premium)

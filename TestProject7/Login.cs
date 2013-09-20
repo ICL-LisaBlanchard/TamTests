@@ -53,7 +53,7 @@
             ApplicationUnderTest.Launch(this.LoginParams.ExePath, this.LoginParams.AlternateExePath);
 
             tbxUserName.Text = this.LoginParams.Username;
-            tbxPassword.Text = this.LoginParams.Password;
+            tbxPassword.Text = "PLUS"; // this.LoginParams.Password;
             Mouse.Click(btnOk, new Point(67, 13));
         }
 
