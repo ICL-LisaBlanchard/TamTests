@@ -1140,9 +1140,10 @@
             #region Variable Declarations
 
             WinControl uIInviteButton = this.UIAUTO1871001Window.UIInviteWindow.UIInviteButton;
-            WinControl uiYesButton = this.UIPersonalLinesWindow.UIYesWindow.UIYesButton;
+            WinControl uiYesButton = this.UIPersonalLinesDialogWindow.UIYesWindow.UIYesButton;
 
             #endregion
+
             if (selectAlternative)
             {
                 Mouse.Click(uiYesButton);
@@ -1945,7 +1946,7 @@
             Mouse.Click(uiCancelButton2);
         }
 
-        public static void CleanDocuments()
+        public void CleanDocuments()
         {
             string[] files = Directory.GetFiles(Configs.LocalDocsPath, "*.htm");
             foreach (string file in files)
@@ -1981,7 +1982,7 @@
             string filename = String.Empty;
             for (int i = 20; i < 300; i = i + 18)
             {
-                CleanDocuments();
+                this.CleanDocuments();
 
                 Mouse.Click(uIPolicyAttachmentsClient, new Point(10, i));
                 Mouse.Click(uIDetailButton);
@@ -2081,6 +2082,32 @@
             }
         }
 
+        public void CheckPremiumInPdfProposal(double premium)
+        {
+            this.OpenAttachment();
+
+            Playback.Wait(2500);
+
+            Keyboard.SendKeys("Q", ModifierKeys.Control);
+
+            string pdfFilePath = Configs.LocalDocsPath + DateTime.Now.Year + DateTime.Now.Month.ToString("00") + "~1.pdf";
+
+            var parser = new PDFParser();
+
+            string text = parser.ExtractText(pdfFilePath).Replace(" ", String.Empty);
+
+            if (text.Contains("Cancellation"))
+            {
+                Assert.IsTrue(CheckStringForPremium(text, 0 - premium));
+            }
+            else
+            {
+                Assert.IsTrue(CheckStringForPremium(text, premium));
+            }
+
+            Playback.Wait(5000);
+        }
+
         private static void IncreaseDocsListCount(IEnumerable<Document> expectedDocs, string docName)
         {
             foreach (Document doc in expectedDocs.Where(doc => doc.DocName == docName))
@@ -2129,33 +2156,6 @@
             Mouse.Click(uIOptionsButton);
             Mouse.Click(uIViewAttachmentMenuItem);
             Mouse.Click(uIOKButton);
-        }
-
-        private void CheckPremiumInPdfProposal(double premium)
-        {
-            this.OpenAttachment();
-
-            Keyboard.SendKeys("Q", ModifierKeys.Control);
-
-            string pdfFilePath = Configs.LocalDocsPath + DateTime.Now.Year + DateTime.Now.Month.ToString("00") + "~1.pdf";
-
-            var parser = new PDFParser();
-
-            string text = parser.ExtractText(pdfFilePath).Replace(" ", String.Empty);
-
-            if (text.Contains("Cancellation"))
-            {
-                Assert.IsTrue(CheckStringForPremium(text, 0 - premium));
-            }
-            else
-            {
-                Assert.IsTrue(CheckStringForPremium(text, premium));
-            }
-
-            
-
-            Playback.Wait(5000);
-
         }
 
         private void CheckPremiumInWordDoc(double premium)

@@ -1,6 +1,8 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
     using System;
+    using System.Diagnostics;
+    using System.Text;
 
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -17,7 +19,8 @@
         [TestMethod]
         public void TestMethod1()
         {
-            this.moto.CheckPremiumInQuoteDocument(docs.DocumentsForMotoNewBusinessCancelAccept);
+            this.moto.CheckPremiumInPdfProposal(7071001982);
+            this.moto.CleanDocuments();
         }
     }
 }
