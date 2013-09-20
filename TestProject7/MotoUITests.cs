@@ -467,7 +467,7 @@
             this.RenewalsInvite(true);
             this.Moto.CloseAndOpenPolicyList();
             this.Moto.RenewalCheckStatus("REN");
-            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRenewalBefore, originalPremium: double.Parse(premium));
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRenewalCurrent, originalPremium: double.Parse(premium));
             this.House.OpenTransList(Transactions.GetTransactionDictionary(RenewalPremium, premium));
             this.Moto.ClosePolicy();
         }

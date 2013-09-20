@@ -1132,7 +1132,15 @@
 
             Mouse.Click(uIYesButton, new Point(55, 14));
 
-            Mouse.Click(uIOKButton, new Point(44, 16));
+            try
+            {
+                Mouse.Click(uIOKButton, new Point(44, 16));
+            }
+            catch
+            {
+                
+            }
+            
         }
 
         public void RenewalModuleInvite(bool selectAlternative)
