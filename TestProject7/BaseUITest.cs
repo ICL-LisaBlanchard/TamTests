@@ -74,7 +74,7 @@
         [DeploymentItem(@"RegistrySettings")]
         public void StartTest()
         {
-            UIMap.CleanDocuments();
+            this.UiMap.CleanDocuments();
             Playback.PlaybackSettings.SearchTimeout = 30000;
             this.TestName = this.TestContext.TestName;
             this.TestLinkInitialize();

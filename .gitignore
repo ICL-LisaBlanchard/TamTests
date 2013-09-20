@@ -1,0 +1,6 @@
+*.config
+/TestProject7/bin/Debug/*.pdb
+/TestProject7/obj
+/TestProject7/obj/Debug/*.pdb
+/TestProject7/obj/Debug/*.dll
+/TestProject7/App.config

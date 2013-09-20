@@ -13,7 +13,7 @@
         /// <summary>
         /// Select 'AIG' in 'Unknown Name' combo box
         /// </summary>
-        public string InsurerSelect = "AIG Europe (UK) Ltd";
+        public string InsurerSelect = "ABC";
 
         /// <summary>
         /// Type 'test' in 'Unknown Name' text box

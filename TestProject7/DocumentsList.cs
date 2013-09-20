@@ -127,6 +127,22 @@
             }
         }
 
+
+        public List<Document> DocumentsForMotoRenewalCurrent
+        {
+            get
+            {
+                return new List<Document>
+                           {
+                               new Document("QuotesList", 2),
+                               new Document("Quote", 1),
+                               new Document("Schedule", 2),
+                               new Document("Proposal", 2),
+                               new Document("FSA", 1)
+                           };
+            }
+        }
+
         public List<Document> DocumentsForMotoAmendRiskNew
         {
             get
