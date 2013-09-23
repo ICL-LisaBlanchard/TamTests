@@ -688,9 +688,6 @@ Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
             Mouse.Click(uIDetailButton, new Point(52, 11));
         }
 
-        /// <summary>
-        ///     SelectPolicyQuote - Use 'SelectPolicyQuoteParams' to pass parameters into this method.
-        /// </summary>
         public void SelectPolicyQuote()
         {
             #region Variable Declarations
@@ -1146,9 +1143,7 @@ Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
             }
             catch
             {
-                
             }
-            
         }
 
         public void RenewalModuleInvite(bool selectAlternative)
@@ -1640,7 +1635,7 @@ Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
 
             Mouse.Click(uIOKButton2, new Point(46, 14));
 
-            this.SelectTamInsurersAndActivity(selectListItems1:3);
+            this.SelectTamInsurersAndActivity(selectListItems1: 3);
         }
 
         /// <summary>
@@ -2124,6 +2119,16 @@ Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
             Playback.Wait(5000);
         }
 
+        public void CreateScreenshot(string expectedDate)
+        {
+            if (!Directory.Exists(Configs.ScreenshotPath))
+            {
+                Directory.CreateDirectory(Configs.ScreenshotPath);
+            }
+            Image image = this.UIInsurEtamWindow.UIQuotesWindow.CaptureImage();
+            image.Save(Configs.ScreenshotPath + expectedDate + ".jpg");
+        }
+
         private static void IncreaseDocsListCount(IEnumerable<Document> expectedDocs, string docName)
         {
             foreach (Document doc in expectedDocs.Where(doc => doc.DocName == docName))
@@ -2354,16 +2359,6 @@ Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
             catch (Exception)
             {
             }
-        }
-
-        public void CreateScreenshot(string expectedDate)
-        {
-            if (!Directory.Exists(Configs.ScreenshotPath))
-            {
-                Directory.CreateDirectory(Configs.ScreenshotPath);
-            }
-            Image image = this.UIInsurEtamWindow.UIQuotesWindow.CaptureImage();
-            image.Save(Configs.ScreenshotPath +  expectedDate + ".jpg");
         }
     }
 }

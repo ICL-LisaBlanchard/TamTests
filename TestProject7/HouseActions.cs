@@ -356,7 +356,7 @@
 
             this.PublicCreditCheckOk();
 
-            Mouse.Click(uIQuotesResultsClient, new Point(500, 164));
+            Mouse.Click(uIQuotesResultsClient, new Point(30, 30));
 
             Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
@@ -1023,7 +1023,7 @@
 
             Playback.Wait(2000);
 
-            Mouse.Click(uIQuotesResultsClient, new Point(491, 235));
+            Mouse.Click(uIQuotesResultsClient, new Point(30, 30));
 
             Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
@@ -1199,7 +1199,7 @@
 
             Mouse.Click(uIokButton1, new Point(74, 19));
 
-            Mouse.Move(new Point(500,500));
+            Mouse.Move(new Point(500, 500));
 
             Mouse.Click(uIokButton2, new Point(64, 14));
 
@@ -1209,7 +1209,7 @@
 
             Mouse.Click(uIokButton4, new Point(21, 8));
 
-            this.SelectTamInsurersAndActivity(selectListItems1:2);
+            this.SelectTamInsurersAndActivity(selectListItems1: 2);
         }
 
         public void HomeAcceptQuote()
@@ -1242,7 +1242,7 @@
             HtmlTextArea uITxtClientXmlEdit = this.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UITxtClientXmlEdit;
             HtmlInputButton uIGetXMLfromServerButton = this.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UIGetXMLfromServerButton;
             HtmlEdit uITxtPremiumEdit = this.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UITxtPremiumEdit;
-            
+
             HtmlInputButton uICreateRecordButton = this.UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UICreateRecordButton;
             BrowserWindow uIInsurEcomSystemMaintWindow = this.UIInsurEcomSystemMaintWindow;
 
@@ -1257,7 +1257,6 @@
             uITxtRenewalDateEdit.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
 
             uITxtAutoLapseDateEdit.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
-
 
             Mouse.Click(uITxtClientXmlEdit, new Point(284, 43));
 
@@ -1342,7 +1341,7 @@
 
             Mouse.Click(uIHouseholdRebrokeResuClient, new Point(208, 85));
 
-           // Keyboard.SendKeys(uIHouseholdRebrokeResuClient, withKeys, ModifierKeys.None);
+            // Keyboard.SendKeys(uIHouseholdRebrokeResuClient, withKeys, ModifierKeys.None);
         }
 
         public void HomeCheckPremium()

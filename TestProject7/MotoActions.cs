@@ -175,12 +175,10 @@
 
         public string MotoGetPolicyNumber()
         {
-
-
             WinEdit uIItemEdit = this.map.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow2.UIItemEdit;
             WinEdit uIItemEdit2 = this.UIPolicyrtyertWindow.UIBillingScreenMotoTestWindow.UIItemWindow.UIItemEdit;
 
-            var policyNo =  uIItemEdit.GetProperty("Text").ToString();
+            string policyNo = uIItemEdit.GetProperty("Text").ToString();
 
             Mouse.Click(uIItemEdit2, new Point(45, 4));
 
@@ -258,7 +256,7 @@
 
             Mouse.Click(uIOKButton3, new Point(56, 6));
 
-            this.SelectTamInsurersAndActivity(selectListItems1:1);
+            this.SelectTamInsurersAndActivity(selectListItems1: 1);
         }
 
         public void MotoAmendRiskRenew()
@@ -301,7 +299,7 @@
 
             Mouse.Click(uIOKButton4, new Point(45, 10));
 
-            this.SelectTamInsurersAndActivity(selectListItems1:2);
+            this.SelectTamInsurersAndActivity(selectListItems1: 2);
 
             Mouse.Click(uIExitButton, new Point(48, 12));
 
@@ -517,7 +515,7 @@
 
             #endregion
 
-            Mouse.Click(uIQuoteResultsClient, new Point(405, 217));
+            Mouse.Click(uIQuoteResultsClient, new Point(10, 10));
 
             Keyboard.SendKeys(uIQuoteResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
         }
@@ -562,7 +560,6 @@
 
             uIItemEdit2.Text = this.QuoteResultsParams.VehicleCost;
         }
-
 
         public void MotoRebrokeSelectScheme(string withSendKeys)
         {
@@ -806,7 +803,7 @@
 
             #endregion
 
-            Mouse.Click(uIQuoteResultsClient, new Point(362, 176));
+            Mouse.Click(uIQuoteResultsClient, new Point(10,10));
 
             Keyboard.SendKeys(uIQuoteResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
@@ -834,7 +831,6 @@
             {
                 this.SelectTamInsurersAndActivity(selectListItems1: 1, selectListItems2: 1);
             }
-            
         }
 
         public void MotoMTAConfirmDate()
@@ -914,7 +910,7 @@
 
             Mouse.Click(uIOKButton2, new Point(46, 21));
 
-            this.SelectTamInsurersAndActivity(selectListItems1:1, selectListItems2:1);
+            this.SelectTamInsurersAndActivity(selectListItems1: 1, selectListItems2: 1);
         }
 
         /// <summary>
@@ -932,7 +928,7 @@
 
             #endregion
 
-            Mouse.Click(uIQuoteResultsClient, new Point(401, 181));
+            Mouse.Click(uIQuoteResultsClient, new Point(10,10));
 
             Keyboard.SendKeys(uIQuoteResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
@@ -1090,7 +1086,7 @@
 
             #endregion
 
-            Mouse.Click(uIQuoteResultsClient, new Point(371, 177));
+            Mouse.Click(uIQuoteResultsClient, new Point(10, 10));
 
             Keyboard.SendKeys(uIQuoteResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
@@ -1321,7 +1317,7 @@
 
             Mouse.Click(uIOKButton2, new Point(42, 14));
 
-            this.SelectTamInsurersAndActivity(selectListItems1:2);
+            this.SelectTamInsurersAndActivity(selectListItems1: 2);
         }
     }
 }
