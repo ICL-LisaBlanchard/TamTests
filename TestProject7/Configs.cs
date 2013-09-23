@@ -70,5 +70,13 @@
                 return (string)Reader.GetValue("LocalDocsPath", typeof(string));
             }
         }
+
+        public static int SearchTimeout
+        {
+            get
+            {
+                return ((int)Reader.GetValue("SearchTimeoutInSeconds", typeof(int))) * 1000;
+            }
+        }
     }
 }
