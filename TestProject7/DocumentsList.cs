@@ -34,7 +34,7 @@
             }
         }
 
-        public List<Document> DocumentsForHhRenewalBefore
+        public List<Document> DocumentsForHouseAmendRiskNewScheme
         {
             get
             {
@@ -45,6 +45,22 @@
                                new Document("Schedule", 2),
                                new Document("Proposal", 2),
                                new Document("FSA", 2)
+                           };
+            }
+        }
+
+        public List<Document> DocumentsForRenewalBefore
+        {
+            get
+            {
+                return new List<Document>
+                           {
+                               new Document("HHQuotesList", 1),
+                               new Document("HHQuote", 1),
+                               new Document("Schedule", 2),
+                               new Document("Proposal", 2),
+                               new Document("FSA", 2),
+                               new Document("Notice", 1)
                            };
             }
         }

@@ -280,7 +280,7 @@
 
             this.House.CloseAndOpenPolicyList();
             this.House.RenewalCheckStatus("REN");
-            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhRenewalBefore, originalPremium: double.Parse(originalPremium));
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRenewalBefore, originalPremium: double.Parse(originalPremium));
             this.House.OpenTransList(Transactions.GetTransactionDictionary(RenewalPremium, originalPremium));
             this.House.ClosePolicy();
 
@@ -446,7 +446,7 @@
 
             this.House.RenewalModuleClose();
             this.House.CloseAndOpenPolicyList();
-            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhRenewalBefore, originalPremium: double.Parse(originalpremium));
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, originalPremium: double.Parse(originalpremium));
             string premium = this.House.CheckPolicyPremium();
             this.House.OpenTransList(Transactions.GetTransactionDictionary(premium, originalpremium));
             this.House.RenewalCheckStatus("REW");
@@ -542,7 +542,7 @@
             this.House.RenewalModuleClose();
             this.House.CloseAndOpenPolicyList();
             this.House.RenewalCheckStatus("REW");
-            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhRenewalBefore, originalPremium: double.Parse(originalpremium));
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, originalPremium: double.Parse(originalpremium));
             string premium = this.House.CheckPolicyPremium();
             this.House.OpenTransList(Transactions.GetTransactionDictionary(premium, originalpremium));
             this.House.ClosePolicy();
@@ -586,7 +586,7 @@
             this.House.RenewalModuleClose();
             this.Moto.CloseAndOpenPolicyList();
 
-            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhRenewalBefore, originalPremium: double.Parse(originalpremium));
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, originalPremium: double.Parse(originalpremium));
             string premium = this.House.CheckPolicyPremium();
             this.House.OpenTransList(Transactions.GetTransactionDictionary(premium, originalpremium));
             this.House.RenewalCheckStatus("REW");

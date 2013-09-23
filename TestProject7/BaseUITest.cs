@@ -75,7 +75,7 @@
         public void StartTest()
         {
             this.UiMap.CleanDocuments();
-            Playback.PlaybackSettings.SearchTimeout = 30000;
+            Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
             this.TestName = this.TestContext.TestName;
             this.TestLinkInitialize();
 

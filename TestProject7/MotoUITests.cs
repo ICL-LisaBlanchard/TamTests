@@ -554,6 +554,36 @@
             this.Moto.ClosePolicy();
         }
 
+        [TestMethod]
+        public void MotoLapsePolicy()
+        {
+            this.SetOurHighwayRegKeys();
+            this.TamMotorSteps();
+            this.Moto.MotoPostcodeLookup();
+            this.Moto.MotoSearchCar();
+            this.Moto.MotoInceptionDate();
+            this.Moto.MotoCalculate();
+            this.Moto.QuoteResults1();
+            this.Moto.PublicCreditCheckOk();
+            this.Moto.MotoSelectHighwayPolicy();
+            this.AcceptAndFinishQuote();
+            this.Moto.CloseAndOpenPolicyList();
+            string policyNumber = this.Moto.MotoGetPolicyNumber();
+            string originalPremium = this.Moto.CheckPolicyPremium();
+
+            Renewals(policyNumber, PolicyType, RenewalPremium);
+
+
+            this.Moto.RenewalModuleInvite(false);
+            this.Moto.RenewConfirmInvite();
+            this.Moto.RenewalModuleInvite1();
+            this.Moto.LapsePolicy(policyNumber);
+            this.Moto.RenewalModuleClose();
+            this.Moto.CloseAndOpenPolicyList();
+            this.Moto.RenewalCheckStatus("LAP");
+            this.Moto.ClosePolicy();
+        }
+
         #region Private Functions
 
         private void CreateMTA()

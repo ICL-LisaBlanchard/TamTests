@@ -2337,5 +2337,15 @@
             {
             }
         }
+
+        public void CreateScreenshot(string expectedDate)
+        {
+            if (!Directory.Exists(Configs.ScreenshotPath))
+            {
+                Directory.CreateDirectory(Configs.ScreenshotPath);
+            }
+            Image image = this.UIInsurEtamWindow.UIQuotesWindow.CaptureImage();
+            image.Save(Configs.ScreenshotPath +  expectedDate + ".jpg");
+        }
     }
 }

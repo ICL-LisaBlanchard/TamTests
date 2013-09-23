@@ -567,8 +567,7 @@
 
             if (needScreenshot)
             {
-                Image image = this.UIInsurEtamWindow.UIQuotesWindow.CaptureImage();
-                image.Save(string.Format(Configs.ScreenshotPath, expectedDate));
+                this.CreateScreenshot(expectedDate);
             }
 
             Mouse.Click(uIQuoteButton, new Point(47, 12));
