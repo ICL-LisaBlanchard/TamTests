@@ -391,9 +391,10 @@
 
             Playback.Wait(3000);
 
-            Mouse.Move(new Point(500, 500));
+            Mouse.Move(UIQuotesResultsWindow, new Point(500, 500));
+            Mouse.Click(UIQuotesResultsWindow);
 
-            Playback.Wait(500);
+            Playback.Wait(3000);
 
             Mouse.Click(uIAcceptButton, new Point(47, 11));
 
@@ -1340,9 +1341,9 @@
         {
             WinClient uIHouseholdRebrokeResuClient = this.UIHouseholdRebrokeResuWindow.UIItemWindow.UIClient();
 
-            Mouse.Click(uIHouseholdRebrokeResuClient, new Point(449, 216));
+            Mouse.Click(uIHouseholdRebrokeResuClient, new Point(208, 85));
 
-            Keyboard.SendKeys(uIHouseholdRebrokeResuClient, withKeys, ModifierKeys.None);
+           // Keyboard.SendKeys(uIHouseholdRebrokeResuClient, withKeys, ModifierKeys.None);
         }
 
         public void HomeCheckPremium()

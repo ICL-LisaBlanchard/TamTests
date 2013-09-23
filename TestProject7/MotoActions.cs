@@ -175,13 +175,16 @@
 
         public string MotoGetPolicyNumber()
         {
-            #region Variable Declarations
+
 
             WinEdit uIItemEdit = this.map.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow2.UIItemEdit;
+            WinEdit uIItemEdit2 = this.UIPolicyrtyertWindow.UIBillingScreenMotoTestWindow.UIItemWindow.UIItemEdit;
 
-            #endregion
+            var policyNo =  uIItemEdit.GetProperty("Text").ToString();
 
-            return uIItemEdit.GetProperty("Text").ToString();
+            Mouse.Click(uIItemEdit2, new Point(45, 4));
+
+            return policyNo;
         }
 
         public void MotoCreateSiteRenewal(string policyNumber, string renewalPremium)

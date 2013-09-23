@@ -27,9 +27,9 @@
 
         //private static string buildName = DateTime.Now.Date.ToShortDateString();
 
-        //private const int PlatformId = 3;  // WIN XP
+        private const int PlatformId = 3;  // WIN XP
         //private const int PlatformId = 4;   // Win7 32
-        protected const int PlatformId = 5; // Win7 64
+        //protected const int PlatformId = 5; // Win7 64
 
         protected static string BuildName = "InsureTam.exe v4.0.8 May";
 
@@ -75,7 +75,7 @@
         public void StartTest()
         {
             this.UiMap.CleanDocuments();
-            Playback.PlaybackSettings.SearchTimeout = 30000;
+            Playback.PlaybackSettings.SearchTimeout = 120000;
             this.TestName = this.TestContext.TestName;
             this.TestLinkInitialize();
 

@@ -389,7 +389,6 @@
         {
             // change registry to ourhighway
             this.SetOurMMaRegKeys();
-
             //add policy
             this.House.CustomerCode = this.Customer.AddPolicy();
             this.House.SelectHomeType();

@@ -535,7 +535,15 @@
         public void CloseBrowser()
         {
             Playback.PlaybackSettings.ContinueOnError = true;
-            Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
+            try
+            {
+Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
+            }
+            catch (Exception)
+            {
+    
+            }
+            
             Playback.PlaybackSettings.ContinueOnError = false;
         }
 
@@ -1552,7 +1560,7 @@
 
             Mouse.Click(uIOKButton3, new Point(54, 7));
 
-            this.SelectTamInsurersAndActivity(false, onlyOnce: true);
+            this.SelectTamInsurersAndActivity(selectListItems1: 2);
         }
 
         /// <summary>
@@ -1632,7 +1640,7 @@
 
             Mouse.Click(uIOKButton2, new Point(46, 14));
 
-            this.SelectTamInsurersAndActivity();
+            this.SelectTamInsurersAndActivity(selectListItems1:3);
         }
 
         /// <summary>
@@ -2135,6 +2143,7 @@
         {
             this.OpenAttachment();
 
+            Playback.Wait(5000);
             Keyboard.SendKeys("Q", ModifierKeys.Control);
 
             string file;
@@ -2328,8 +2337,11 @@
 
                 if (name.Contains("Please select WHO to follow up"))
                 {
-                    uIItemList2.SelectedItemsAsString = String.IsNullOrEmpty(whoToSelect) ? this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString2 : whoToSelect;
+                    //uIItemList2.SelectedItemsAsString = String.IsNullOrEmpty(whoToSelect) ? this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString2 : whoToSelect;
+                    var i = new int[1];
+                    i[0] = 0;
 
+                    uIItemList2.SelectedIndices = i;
                     Mouse.Click(uIOKButton2, new Point(33, 13));
                 }
 
