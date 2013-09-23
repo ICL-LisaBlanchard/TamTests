@@ -21,7 +21,7 @@
             this.Moto.SelectPolicyQuote();
             this.AcceptAndFinishQuote();
             this.Moto.CloseAndOpenPolicyList();
-            this.Moto.HighlightBillingScreen();
+            
             string premium = this.Moto.CheckPolicyPremium();
             this.Moto.OpenTransList(Transactions.GetTransactionDictionary(premium));
             this.Moto.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoNewBusinessQuote);
@@ -378,6 +378,7 @@
             this.AcceptAndFinishQuote();
             this.Moto.CloseAndOpenPolicyList();
             string policyNumber = this.Moto.MotoGetPolicyNumber();
+            string originalPremium = this.Moto.CheckPolicyPremium();
 
             Renewals(policyNumber, PolicyType, RenewalPremium);
             this.Moto.MotoAmendRisk();
@@ -386,6 +387,10 @@
             this.Moto.AmendSelectQuote();
             this.Moto.MotoAmendRiskRenew();
             this.Moto.CloseAndOpenPolicyList();
+            this.Moto.HighlightBillingScreen();
+            string premium = this.Moto.CheckPolicyPremium();
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoMotoAmendRiskExistingScheme, originalPremium: double.Parse(originalPremium));
+            this.House.OpenTransList(Transactions.GetTransactionDictionary(premium, originalPremium));
             this.Moto.RenewalCheckStatus("REN");
             this.Moto.ClosePolicy();
         }
@@ -404,7 +409,6 @@
             this.Moto.MotoSelectHighwayPolicy();
             this.AcceptAndFinishQuote();
             this.Moto.CloseAndOpenPolicyList();
-            this.Moto.HighlightBillingScreen();
             string policyNumber = this.Moto.MotoGetPolicyNumber();
             string originalPremium = this.Moto.CheckPolicyPremium();
 
@@ -456,7 +460,6 @@
             this.Moto.MotoSelectHighwayPolicy();
             this.AcceptAndFinishQuote();
             this.Moto.CloseAndOpenPolicyList();
-            this.Moto.HighlightBillingScreen();
             string policyNumber = this.Moto.MotoGetPolicyNumber();
             string premium = this.Moto.CheckPolicyPremium();
 
@@ -486,7 +489,7 @@
             this.Moto.MotoSelectHighwayPolicy();
             this.AcceptAndFinishQuote();
             this.Moto.CloseAndOpenPolicyList();
-            this.Moto.HighlightBillingScreen();
+    
             string policyNumber = this.Moto.MotoGetPolicyNumber();
             string premium = this.Moto.CheckPolicyPremium();
 
@@ -505,7 +508,7 @@
             this.Moto.RebrokeAlternativeFinish1();
             this.Moto.RenewalModuleClose();
             this.Moto.CloseAndOpenPolicyList();
-            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRenewalBefore, originalPremium: double.Parse(premium));
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRebrokeRenewExistingScheme, originalPremium: double.Parse(premium));
             this.House.OpenTransList(Transactions.GetTransactionDictionary(RenewalPremium, premium));
             this.Moto.RenewalCheckStatus("REW");
             this.Moto.ClosePolicy();
@@ -525,9 +528,8 @@
             this.Moto.MotoSelectHighwayPolicy();
             this.AcceptAndFinishQuote();
             this.Moto.CloseAndOpenPolicyList();
-            this.Moto.HighlightBillingScreen();
             string policyNumber = this.Moto.MotoGetPolicyNumber();
-            string premium = this.Moto.CheckPolicyPremium();
+            string originalPremium = this.Moto.CheckPolicyPremium();
 
             Renewals(policyNumber, PolicyType, RenewalPremium);
             this.Moto.MotoRebroke(false, false);
@@ -544,8 +546,10 @@
             this.Moto.RebrokeAlternativeFinish1();
             this.Moto.RenewalModuleClose();
             this.Moto.CloseAndOpenPolicyList();
-            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRenewalBefore, originalPremium: double.Parse(premium));
-            this.House.OpenTransList(Transactions.GetTransactionDictionary(RenewalPremium, premium));
+            this.Moto.HighlightBillingScreen();
+            string premium = this.Moto.CheckPolicyPremium();
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRebrokeRenewExistingScheme, originalPremium: double.Parse(originalPremium));
+            this.House.OpenTransList(Transactions.GetTransactionDictionary(premium, originalPremium));
             this.Moto.RenewalCheckStatus("REW");
             this.Moto.ClosePolicy();
         }

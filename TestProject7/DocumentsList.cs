@@ -118,7 +118,7 @@
             {
                 return new List<Document>
                            {
-                               new Document("QuotesList", 2),
+                               new Document("QuotesList", 1),
                                new Document("Quote", 1),
                                new Document("Schedule", 2),
                                new Document("Proposal", 2),
@@ -127,6 +127,22 @@
             }
         }
 
+        public List<Document> DocumentsForMotoRebrokeRenewExistingScheme
+        {
+            get
+            {
+                return new List<Document>
+                           {
+                               new Document("QuotesList", 2),
+                               new Document("Quote", 2),
+                               new Document("Schedule", 2),
+                               new Document("Proposal", 2),
+                               new Document("Certificate", 2),
+                               new Document("FSA", 2),
+                               new Document("Notice", 1)
+                           };                
+            }
+        }
 
         public List<Document> DocumentsForMotoRenewalCurrent
         {
@@ -134,11 +150,13 @@
             {
                 return new List<Document>
                            {
-                               new Document("QuotesList", 2),
+                               new Document("QuotesList", 1),
                                new Document("Quote", 1),
                                new Document("Schedule", 2),
                                new Document("Proposal", 2),
-                               new Document("FSA", 1)
+                               new Document("FSA", 2),
+                               new Document("Notice", 1),
+                               new Document("Certificate", 1)
                            };
             }
         }
@@ -153,6 +171,22 @@
                                new Document("Quote", 2),
                                new Document("Schedule", 2),
                                new Document("Proposal", 2),
+                               new Document("FSA", 2),
+                               new Document("Certificate", 2)
+                           };
+            }
+        }
+
+        public List<Document> DocumentsForMotoMotoAmendRiskExistingScheme
+        {
+            get
+            {
+                return new List<Document>
+                           {
+                               new Document("QuotesList", 2),
+                               new Document("Quote", 2),
+                               new Document("Schedule", 2),
+                               new Document("Proposal", 1),
                                new Document("FSA", 2),
                                new Document("Certificate", 2)
                            };

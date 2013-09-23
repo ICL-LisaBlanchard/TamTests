@@ -1552,7 +1552,7 @@
 
             Mouse.Click(uIOKButton3, new Point(54, 7));
 
-            this.SelectTamInsurersAndActivity(false, onlyOnce: true);
+            this.SelectTamInsurersAndActivity(selectListItems1: 2);
         }
 
         /// <summary>
@@ -1632,7 +1632,7 @@
 
             Mouse.Click(uIOKButton2, new Point(46, 14));
 
-            this.SelectTamInsurersAndActivity();
+            this.SelectTamInsurersAndActivity(selectListItems1:3);
         }
 
         /// <summary>

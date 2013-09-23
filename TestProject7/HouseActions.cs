@@ -1340,9 +1340,9 @@
         {
             WinClient uIHouseholdRebrokeResuClient = this.UIHouseholdRebrokeResuWindow.UIItemWindow.UIClient();
 
-            Mouse.Click(uIHouseholdRebrokeResuClient, new Point(449, 216));
+            Mouse.Click(uIHouseholdRebrokeResuClient, new Point(208, 85));
 
-            Keyboard.SendKeys(uIHouseholdRebrokeResuClient, withKeys, ModifierKeys.None);
+           // Keyboard.SendKeys(uIHouseholdRebrokeResuClient, withKeys, ModifierKeys.None);
         }
 
         public void HomeCheckPremium()
