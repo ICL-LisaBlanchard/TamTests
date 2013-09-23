@@ -2094,7 +2094,7 @@
         {
             this.OpenAttachment();
 
-            Playback.Wait(2500);
+            Playback.Wait(5000);
 
             Keyboard.SendKeys("Q", ModifierKeys.Control);
 
@@ -2313,7 +2313,10 @@
 
                 if (name.Contains("Select Tam insurer for insurer code"))
                 {
-                    uIItemList.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString;
+                    var i = new int[1];
+                    i[0] = 0;
+
+                    uIItemList.SelectedIndices = i;
                     Mouse.Click(uIOKButton, new Point(21, 16));
                 }
 

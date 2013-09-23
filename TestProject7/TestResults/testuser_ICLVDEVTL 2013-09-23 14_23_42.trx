@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="801be07f-60ad-445b-9382-60fa22433c9f" name="testuser@ICLVDEVTL 2013-09-23 14:23:42" runUser="ICLVDEVTL\testuser" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Remote" id="47e1e203-4706-4ffd-9873-ee9804c8144d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment runDeploymentRoot="testuser_ICLVDEVTL 2013-09-23 14_23_42">
+      <DeploymentItem filename="C:\TestLinkAPI.dll" />
+      <DeploymentItem filename="C:\TamTestsGit\TestProject7\References\itextsharp.dll" />
+    </Deployment>
+    <RemoteController name="ICLVDEVTL" />
+    <Execution location="Remote">
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+      </TestTypeSpecific>
+      <AgentRule name="AllAgentsDefaultRole">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-09-23T14:23:42.3580699+01:00" queuing="2013-09-23T14:23:42.8572891+01:00" start="2013-09-23T14:23:43.7153221+01:00" finish="2013-09-23T14:25:28.9876666+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="HouseCopyRiskQTE" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="36d24d45-f602-15e0-0ca5-89a9133049d8">
+      <Execution id="4af774ed-fdf3-4a7e-843d-b426a6c98a14" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCopyRiskQTE" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="36d24d45-f602-15e0-0ca5-89a9133049d8" executionId="4af774ed-fdf3-4a7e-843d-b426a6c98a14" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="4af774ed-fdf3-4a7e-843d-b426a6c98a14" testId="36d24d45-f602-15e0-0ca5-89a9133049d8" testName="HouseCopyRiskQTE" computerName="ICLVDEVTM02" duration="00:01:43.2905591" startTime="2013-09-23T14:22:25.1455347+01:00" endTime="2013-09-23T14:24:08.9472158+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4af774ed-fdf3-4a7e-843d-b426a6c98a14">
+    </UnitTestResult>
+  </Results>
+</TestRun>

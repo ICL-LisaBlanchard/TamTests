@@ -30,7 +30,6 @@ S:\TamTests\TestProject7\obj\Debug\AppliedSystems.Tam.Ui.Tests.dll
 S:\TamTests\TestProject7\obj\Debug\AppliedSystems.Tam.Ui.Tests.pdb
 S:\TamTests\TestProject7\obj\Debug\TamTests.csprojResolveAssemblyReference.cache
 S:\TamTests\TestProject7\bin\Debug\itextsharp.dll
-C:\TamTestsGit\TestProject7\obj\Debug\ResolveAssemblyReference.cache
 C:\TamTestsGit\TestProject7\bin\Debug\AppliedSystems.Tam.Ui.Tests.dll.config
 C:\TamTestsGit\TestProject7\bin\Debug\AppliedSystems.Tam.Ui.Tests.dll
 C:\TamTestsGit\TestProject7\bin\Debug\AppliedSystems.Tam.Ui.Tests.pdb
@@ -38,5 +37,6 @@ C:\TamTestsGit\TestProject7\bin\Debug\itextsharp.dll
 C:\TamTestsGit\TestProject7\bin\Debug\TestLinkAPI.dll
 C:\TamTestsGit\TestProject7\bin\Debug\CookComputing.XmlRpcV2.dll
 C:\TamTestsGit\TestProject7\bin\Debug\TestLinkFixture.dll
+C:\TamTestsGit\TestProject7\obj\Debug\ResolveAssemblyReference.cache
 C:\TamTestsGit\TestProject7\obj\Debug\AppliedSystems.Tam.Ui.Tests.dll
 C:\TamTestsGit\TestProject7\obj\Debug\AppliedSystems.Tam.Ui.Tests.pdb

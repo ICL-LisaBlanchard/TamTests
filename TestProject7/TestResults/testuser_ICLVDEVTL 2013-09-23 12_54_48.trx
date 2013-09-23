@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="c7ece041-b5cf-4057-9425-07f4a44d6c74" name="testuser@ICLVDEVTL 2013-09-23 12:54:48" runUser="ICLVDEVTL\testuser" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Remote" id="47e1e203-4706-4ffd-9873-ee9804c8144d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment runDeploymentRoot="testuser_ICLVDEVTL 2013-09-23 12_54_48">
+      <DeploymentItem filename="C:\TestLinkAPI.dll" />
+      <DeploymentItem filename="C:\TamTestsGit\TestProject7\References\itextsharp.dll" />
+    </Deployment>
+    <RemoteController name="ICLVDEVTL" />
+    <Execution location="Remote">
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+      </TestTypeSpecific>
+      <AgentRule name="AllAgentsDefaultRole">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-09-23T12:54:48.0170025+01:00" queuing="2013-09-23T12:54:48.7033893+01:00" start="2013-09-23T12:54:49.5145737+01:00" finish="2013-09-23T12:54:51.2149410+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="cf1f05dd-a70c-81bc-1012-592720aa6031">
+      <Execution id="f97684c0-3644-47fb-a449-dbe47feeab7f" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.UnitTest1, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="cf1f05dd-a70c-81bc-1012-592720aa6031" executionId="f97684c0-3644-47fb-a449-dbe47feeab7f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="f97684c0-3644-47fb-a449-dbe47feeab7f" testId="cf1f05dd-a70c-81bc-1012-592720aa6031" testName="TestMethod1" computerName="ICLVDEVTM02" duration="00:00:00.2474106" startTime="2013-09-23T12:53:30.9686802+01:00" endTime="2013-09-23T12:53:31.4982475+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f97684c0-3644-47fb-a449-dbe47feeab7f">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.UnitTest1: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

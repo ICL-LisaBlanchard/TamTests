@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="c402f76c-67cc-47bc-8493-d074cb6848fb" name="testuser@ICLVDEVTL 2013-09-23 14:28:22" runUser="ICLVDEVTL\testuser" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Remote" id="47e1e203-4706-4ffd-9873-ee9804c8144d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment runDeploymentRoot="testuser_ICLVDEVTL 2013-09-23 14_28_22">
+      <DeploymentItem filename="C:\TestLinkAPI.dll" />
+      <DeploymentItem filename="C:\TamTestsGit\TestProject7\References\itextsharp.dll" />
+    </Deployment>
+    <RemoteController name="ICLVDEVTL" />
+    <Execution location="Remote">
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+      </TestTypeSpecific>
+      <AgentRule name="AllAgentsDefaultRole">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-09-23T14:28:22.7438320+01:00" queuing="2013-09-23T14:28:23.5216854+01:00" start="2013-09-23T14:28:40.5730319+01:00" finish="2013-09-23T14:32:49.5882129+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="HouseMTAExit" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="82f80eb4-3d69-14db-4df1-0d43b770c2aa">
+      <Execution id="284e5873-4128-4eb5-9d70-f0cc9d105315" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseMTAExit" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="82f80eb4-3d69-14db-4df1-0d43b770c2aa" executionId="284e5873-4128-4eb5-9d70-f0cc9d105315" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="284e5873-4128-4eb5-9d70-f0cc9d105315" testId="82f80eb4-3d69-14db-4df1-0d43b770c2aa" testName="HouseMTAExit" computerName="ICLVDEVTM02" duration="00:04:07.4180432" startTime="2013-09-23T14:27:21.8662134+01:00" endTime="2013-09-23T14:31:29.5936708+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="284e5873-4128-4eb5-9d70-f0cc9d105315">
+    </UnitTestResult>
+  </Results>
+</TestRun>

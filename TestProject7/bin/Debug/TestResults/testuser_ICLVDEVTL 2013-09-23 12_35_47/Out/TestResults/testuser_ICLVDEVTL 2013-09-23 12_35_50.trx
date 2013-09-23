@@ -1,0 +1,991 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="6f31c9a7-1a45-45e8-9662-e450743a701e" name="testuser@ICLVDEVTL 2013-09-23 12:35:50" runUser="ICLVDEVTL\testuser" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Remote" id="47e1e203-4706-4ffd-9873-ee9804c8144d">
+    <Description>These are default test settings for a local test run.</Description>
+    <RemoteController name="ICLVDEVTL" />
+    <Execution location="Remote">
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+      </TestTypeSpecific>
+      <AgentRule name="AllAgentsDefaultRole">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="testuser_ICLVDEVTL 2013-09-23 12_35_50" />
+  </TestSettings>
+  <Times creation="2013-09-23T12:35:50.5506788+01:00" queuing="2013-09-23T12:35:51.3516788+01:00" start="2013-09-23T12:36:15.7736788+01:00" finish="2013-09-23T12:36:41.9540788+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="40" executed="40" error="0" failed="40" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="HouseLapsePolicy" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="a117b69c-fc2d-defc-988c-38b2c22b62ba">
+      <Execution id="8fe1fccd-77b2-4b45-93d8-6172d84344d6" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseLapsePolicy" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCancelExit" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="4d206040-ae1d-2a21-9082-485d3086eaa9">
+      <Execution id="9f13dae5-2de0-47fe-ba37-7f5b3dd65a70" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCancelExit" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseRebrokeRenewCurrent" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="62fbdf2e-88f8-1124-e9d6-6f2b028ba869">
+      <Execution id="a49b89c0-c0b8-492b-9f45-57fef08773ea" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseRebrokeRenewCurrent" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseRenewalBefore" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="84b504ff-9703-f2ac-6d29-56c44a019f4e">
+      <Execution id="dcc0b3b9-87a9-449f-a898-c3079fd7534a" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseRenewalBefore" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCancelAccept" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="cc65a43a-9a33-7c83-9bd5-ff01c2ffa61d">
+      <Execution id="682a7c3d-2788-44a7-b5db-28cb72c2e5ee" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCancelAccept" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseRenewalAfter" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="65dcd85a-ef1f-e29b-3743-f87742e2ed3d">
+      <Execution id="7b8d0298-ae16-4d8d-8bb5-91f822ac111d" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseRenewalAfter" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCreateQuote" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="96a60826-dea1-f77f-fc60-00cd6747296c">
+      <Execution id="b6f3068b-78fe-433d-b6a0-062604fca6c9" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCreateQuote" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoAmendRiskExistingScheme" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="582fc786-fe70-74aa-52dd-24cf380932df">
+      <Execution id="3d9ae970-a44a-45ae-a066-3f9c618dc783" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoAmendRiskExistingScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCopyMTA" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="614fe764-f9f9-c1c7-0af0-55b68bb46c8e">
+      <Execution id="6e8b1c48-76f1-4243-ae35-96e59a772505" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCopyMTA" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseOverridePremium" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="0896610c-4da4-38c0-ce20-352846d79839">
+      <Execution id="7e118ada-17d6-4b7d-a002-d8298e55bf83" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseOverridePremium" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCancelAccept" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="5c9c2876-ef7b-214a-39ca-065818518ce8">
+      <Execution id="47266d9d-9987-4a67-9f1d-e861872f2505" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCancelAccept" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoRebrokeRenewNewScheme" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="9410f0c0-fb50-f25a-6718-26afc2f3339f">
+      <Execution id="7efe9c21-d885-45c5-9b17-221b42bc224c" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoRebrokeRenewNewScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="TestMethod1" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="cf1f05dd-a70c-81bc-1012-592720aa6031">
+      <Execution id="4660f1fb-faa3-4f74-8b55-d0cd701e7070" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.UnitTest1, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCopyRiskQTE" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="36d24d45-f602-15e0-0ca5-89a9133049d8">
+      <Execution id="c5459844-105e-4299-abc1-0c1dcc03fda0" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCopyRiskQTE" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoAWAP" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="21ba00c6-09f4-caa5-ac59-791655e24b9d">
+      <Execution id="29b6c28f-3add-4905-b0c0-221041f4c85b" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoAWAP" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoRenewalBefore" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="31988f60-6dd2-d7f1-3544-10a47a577690">
+      <Execution id="812e899d-852d-4643-9030-8c41a1b4f0b1" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoRenewalBefore" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="TestMethod" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="6bd48419-af25-d06e-1d1b-4584b7e15d64">
+      <Execution id="ea89f4e5-4d37-4ef2-b0e9-1dd5e62b46b6" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.UnitTest2, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod" />
+    </UnitTest>
+    <UnitTest name="HouseCreateQuote" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="860b3117-58e1-faeb-5039-5d480603d3e0">
+      <Execution id="ea7257bf-6b20-4dc4-bd62-3b9cce9d0b35" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCreateQuote" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoRebrokeRenewCurrent" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="371ed565-7848-460e-53f8-0d5da86a6d95">
+      <Execution id="68d16c91-4cb2-4626-b5f1-e988862edcd2" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoRebrokeRenewCurrent" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseRebrokeRenewNewScheme" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="b54caa2e-c0b5-ae92-08ad-7881c99df81b">
+      <Execution id="30dfc5df-7595-438a-a3e6-f05d715f8dec" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseRebrokeRenewNewScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCopyRiskNew" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="89230cfa-6a19-d3c2-743b-2d2fcea3c803">
+      <Execution id="46ed12b5-e881-4206-8116-baa3c09f4578" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCopyRiskNew" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseMTAtoMTA" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="a264afa1-312a-8c64-caac-2ca63265fc8a">
+      <Execution id="9f85d963-b655-4333-8bb7-40d1f422dec9" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseMTAtoMTA" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseMTAExit" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="82f80eb4-3d69-14db-4df1-0d43b770c2aa">
+      <Execution id="0d7cf785-4937-40ad-8f72-9843a467876e" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseMTAExit" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCopyRiskNew" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="75e0255d-1dc3-e4d9-5704-a08715d1f3a6">
+      <Execution id="28292265-4e1a-49fb-ac8d-5c438e8fb92a" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCopyRiskNew" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoRenewalAfter" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="576c4cce-f2fa-69e8-ebd1-c09bc0e1c559">
+      <Execution id="79912454-c798-484d-9f7a-5cc3541ddcc5" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoRenewalAfter" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseAmendRiskNewScheme" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="89df0505-7bef-1c84-6aca-37d1506692db">
+      <Execution id="6ad112c8-c106-4437-968a-023a6cf225a7" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseAmendRiskNewScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoMTAtoMTA" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="b84b18ae-6912-43dc-1ce8-659e613146c1">
+      <Execution id="fed8b1a1-a7a5-4546-ac1a-80af9b7c2fc4" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoMTAtoMTA" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCopyMTA" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="e896f84c-ec6c-92c3-3bd8-d41d57aae4bc">
+      <Execution id="2e0df499-74ec-4cb5-b104-751c4c3d2cb7" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCopyMTA" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseAmendRiskExistingScheme" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="8325e849-00cb-74b8-f092-b233e3af24b2">
+      <Execution id="aaf69d0e-4f68-4f9d-a670-d7bb7e12f183" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseAmendRiskExistingScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoMTAExit" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="640fd6db-860c-c140-a3d8-d0f055d2eed9">
+      <Execution id="5dcd9d2a-17eb-4c5d-8a2c-adfc7be0b661" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoMTAExit" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCopyRiskQte" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="c4938c05-03da-60f7-0f88-e65778d3fa19">
+      <Execution id="ed2f83ca-ae25-40a0-8d05-b87d6d29d57b" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCopyRiskQte" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseRebrokeRenewExistingScheme" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="ffca28b1-a49b-3196-65aa-cebac8571ce3">
+      <Execution id="af016d26-d7d5-41bf-83d9-77d7500500d2" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseRebrokeRenewExistingScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoRebrokeRenewExistingScheme" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="a6b0d3b5-976c-4b22-35f2-21b23c03c32a">
+      <Execution id="2585216a-500e-4b15-9ebe-31802e5142f2" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoRebrokeRenewExistingScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseMTAAccept" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="ba26e76f-de14-32e4-8ac8-5df322f1fd27">
+      <Execution id="bbf65714-560d-4554-a9dd-cdf7ca583326" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseMTAAccept" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoOverridePremium" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="e7ea3675-20d2-cf0b-af85-2890e55fc37d">
+      <Execution id="2e08a46c-58ce-49f3-bed7-b1f2d1a463fe" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoOverridePremium" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoAmendRiskNewScheme" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="327dc295-46f8-d9eb-d13a-04ac8001804a">
+      <Execution id="ac160a3f-410c-46e8-85d6-608445de5c6d" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoAmendRiskNewScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoSaveQuoteWithoutPremium" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="3aa144ec-52be-8aa1-dd30-729da149368a">
+      <Execution id="3b55080f-c40e-4ebe-84ec-75c7c3980e32" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoSaveQuoteWithoutPremium" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoMTAAccept" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="6e105339-dc20-c02c-288a-6cce06bb4251">
+      <Execution id="d6fd6cf7-f660-45ca-b261-eea9aff43b4c" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoMTAAccept" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseSaveQuoteWithoutPremium" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="23806c32-26a6-baf2-e67c-b2710d259613">
+      <Execution id="194fdbe3-4210-4606-b9d4-6198cf3c4934" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseSaveQuoteWithoutPremium" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCancelExit" storage="c:\tamtestsgit\testproject7\bin\debug\testresults\testuser_iclvdevtl 2013-09-23 12_35_47\out\appliedsystems.tam.ui.tests.dll" id="e07608a6-4f59-4278-8d59-5e8ddd012acc">
+      <Execution id="d9d861d0-5293-420e-beb6-4cf8c4a1cbd5" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/TestResults/testuser_ICLVDEVTL 2013-09-23 12_35_47/Out/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCancelExit" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="8325e849-00cb-74b8-f092-b233e3af24b2" executionId="aaf69d0e-4f68-4f9d-a670-d7bb7e12f183" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89df0505-7bef-1c84-6aca-37d1506692db" executionId="6ad112c8-c106-4437-968a-023a6cf225a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5c9c2876-ef7b-214a-39ca-065818518ce8" executionId="47266d9d-9987-4a67-9f1d-e861872f2505" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4d206040-ae1d-2a21-9082-485d3086eaa9" executionId="9f13dae5-2de0-47fe-ba37-7f5b3dd65a70" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e896f84c-ec6c-92c3-3bd8-d41d57aae4bc" executionId="2e0df499-74ec-4cb5-b104-751c4c3d2cb7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89230cfa-6a19-d3c2-743b-2d2fcea3c803" executionId="46ed12b5-e881-4206-8116-baa3c09f4578" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="36d24d45-f602-15e0-0ca5-89a9133049d8" executionId="c5459844-105e-4299-abc1-0c1dcc03fda0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="860b3117-58e1-faeb-5039-5d480603d3e0" executionId="ea7257bf-6b20-4dc4-bd62-3b9cce9d0b35" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a117b69c-fc2d-defc-988c-38b2c22b62ba" executionId="8fe1fccd-77b2-4b45-93d8-6172d84344d6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ba26e76f-de14-32e4-8ac8-5df322f1fd27" executionId="bbf65714-560d-4554-a9dd-cdf7ca583326" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="82f80eb4-3d69-14db-4df1-0d43b770c2aa" executionId="0d7cf785-4937-40ad-8f72-9843a467876e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a264afa1-312a-8c64-caac-2ca63265fc8a" executionId="9f85d963-b655-4333-8bb7-40d1f422dec9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0896610c-4da4-38c0-ce20-352846d79839" executionId="7e118ada-17d6-4b7d-a002-d8298e55bf83" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="62fbdf2e-88f8-1124-e9d6-6f2b028ba869" executionId="a49b89c0-c0b8-492b-9f45-57fef08773ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffca28b1-a49b-3196-65aa-cebac8571ce3" executionId="af016d26-d7d5-41bf-83d9-77d7500500d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b54caa2e-c0b5-ae92-08ad-7881c99df81b" executionId="30dfc5df-7595-438a-a3e6-f05d715f8dec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="65dcd85a-ef1f-e29b-3743-f87742e2ed3d" executionId="7b8d0298-ae16-4d8d-8bb5-91f822ac111d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="84b504ff-9703-f2ac-6d29-56c44a019f4e" executionId="dcc0b3b9-87a9-449f-a898-c3079fd7534a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="23806c32-26a6-baf2-e67c-b2710d259613" executionId="194fdbe3-4210-4606-b9d4-6198cf3c4934" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="582fc786-fe70-74aa-52dd-24cf380932df" executionId="3d9ae970-a44a-45ae-a066-3f9c618dc783" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="327dc295-46f8-d9eb-d13a-04ac8001804a" executionId="ac160a3f-410c-46e8-85d6-608445de5c6d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="21ba00c6-09f4-caa5-ac59-791655e24b9d" executionId="29b6c28f-3add-4905-b0c0-221041f4c85b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc65a43a-9a33-7c83-9bd5-ff01c2ffa61d" executionId="682a7c3d-2788-44a7-b5db-28cb72c2e5ee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e07608a6-4f59-4278-8d59-5e8ddd012acc" executionId="d9d861d0-5293-420e-beb6-4cf8c4a1cbd5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="614fe764-f9f9-c1c7-0af0-55b68bb46c8e" executionId="6e8b1c48-76f1-4243-ae35-96e59a772505" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="75e0255d-1dc3-e4d9-5704-a08715d1f3a6" executionId="28292265-4e1a-49fb-ac8d-5c438e8fb92a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c4938c05-03da-60f7-0f88-e65778d3fa19" executionId="ed2f83ca-ae25-40a0-8d05-b87d6d29d57b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="96a60826-dea1-f77f-fc60-00cd6747296c" executionId="b6f3068b-78fe-433d-b6a0-062604fca6c9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6e105339-dc20-c02c-288a-6cce06bb4251" executionId="d6fd6cf7-f660-45ca-b261-eea9aff43b4c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="640fd6db-860c-c140-a3d8-d0f055d2eed9" executionId="5dcd9d2a-17eb-4c5d-8a2c-adfc7be0b661" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b84b18ae-6912-43dc-1ce8-659e613146c1" executionId="fed8b1a1-a7a5-4546-ac1a-80af9b7c2fc4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e7ea3675-20d2-cf0b-af85-2890e55fc37d" executionId="2e08a46c-58ce-49f3-bed7-b1f2d1a463fe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="371ed565-7848-460e-53f8-0d5da86a6d95" executionId="68d16c91-4cb2-4626-b5f1-e988862edcd2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a6b0d3b5-976c-4b22-35f2-21b23c03c32a" executionId="2585216a-500e-4b15-9ebe-31802e5142f2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9410f0c0-fb50-f25a-6718-26afc2f3339f" executionId="7efe9c21-d885-45c5-9b17-221b42bc224c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="576c4cce-f2fa-69e8-ebd1-c09bc0e1c559" executionId="79912454-c798-484d-9f7a-5cc3541ddcc5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="31988f60-6dd2-d7f1-3544-10a47a577690" executionId="812e899d-852d-4643-9030-8c41a1b4f0b1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3aa144ec-52be-8aa1-dd30-729da149368a" executionId="3b55080f-c40e-4ebe-84ec-75c7c3980e32" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cf1f05dd-a70c-81bc-1012-592720aa6031" executionId="4660f1fb-faa3-4f74-8b55-d0cd701e7070" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6bd48419-af25-d06e-1d1b-4584b7e15d64" executionId="ea89f4e5-4d37-4ef2-b0e9-1dd5e62b46b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="aaf69d0e-4f68-4f9d-a670-d7bb7e12f183" testId="8325e849-00cb-74b8-f092-b233e3af24b2" testName="HouseAmendRiskExistingScheme" computerName="ICLVDEVTM02" duration="00:00:00.0320046" startTime="2013-09-23T12:34:57.2527563+01:00" endTime="2013-09-23T12:34:57.2887608+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aaf69d0e-4f68-4f9d-a670-d7bb7e12f183">
+      <Output>
+        <DebugTrace>W, 25400, 91, 2013/09/23, 12:34:57.285, 154739423242006, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 91, 2013/09/23, 12:34:57.285, 154739423244219, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6ad112c8-c106-4437-968a-023a6cf225a7" testId="89df0505-7bef-1c84-6aca-37d1506692db" testName="HouseAmendRiskNewScheme" computerName="ICLVDEVTM02" duration="00:00:00.0241421" startTime="2013-09-23T12:34:57.2957617+01:00" endTime="2013-09-23T12:34:57.3207649+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6ad112c8-c106-4437-968a-023a6cf225a7">
+      <Output>
+        <DebugTrace>W, 25400, 84, 2013/09/23, 12:34:57.319, 154739423725784, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 84, 2013/09/23, 12:34:57.319, 154739423727447, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="47266d9d-9987-4a67-9f1d-e861872f2505" testId="5c9c2876-ef7b-214a-39ca-065818518ce8" testName="HouseCancelAccept" computerName="ICLVDEVTM02" duration="00:00:00.0324173" startTime="2013-09-23T12:34:57.3262656+01:00" endTime="2013-09-23T12:34:57.3597699+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="47266d9d-9987-4a67-9f1d-e861872f2505">
+      <Output>
+        <DebugTrace>W, 25400, 76, 2013/09/23, 12:34:57.357, 154739424275716, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 76, 2013/09/23, 12:34:57.357, 154739424277877, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9f13dae5-2de0-47fe-ba37-7f5b3dd65a70" testId="4d206040-ae1d-2a21-9082-485d3086eaa9" testName="HouseCancelExit" computerName="ICLVDEVTM02" duration="00:00:00.7693755" startTime="2013-09-23T12:34:57.3652706+01:00" endTime="2013-09-23T12:34:58.1368685+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f13dae5-2de0-47fe-ba37-7f5b3dd65a70">
+      <Output>
+        <DebugTrace>W, 25400, 104, 2013/09/23, 12:34:58.121, 154739435215455, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 104, 2013/09/23, 12:34:58.122, 154739435223271, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2e0df499-74ec-4cb5-b104-751c4c3d2cb7" testId="e896f84c-ec6c-92c3-3bd8-d41d57aae4bc" testName="HouseCopyMTA" computerName="ICLVDEVTM02" duration="00:00:00.1679986" startTime="2013-09-23T12:34:58.1828744+01:00" endTime="2013-09-23T12:34:58.3568965+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2e0df499-74ec-4cb5-b104-751c4c3d2cb7">
+      <Output>
+        <DebugTrace>W, 25400, 110, 2013/09/23, 12:34:58.345, 154739438423187, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 110, 2013/09/23, 12:34:58.346, 154739438430494, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="46ed12b5-e881-4206-8116-baa3c09f4578" testId="89230cfa-6a19-d3c2-743b-2d2fcea3c803" testName="HouseCopyRiskNew" computerName="ICLVDEVTM02" duration="00:00:00.1710164" startTime="2013-09-23T12:34:58.4249051+01:00" endTime="2013-09-23T12:34:58.6044279+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="46ed12b5-e881-4206-8116-baa3c09f4578">
+      <Output>
+        <DebugTrace>W, 25400, 117, 2013/09/23, 12:34:58.594, 154739441988673, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 117, 2013/09/23, 12:34:58.595, 154739441996363, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c5459844-105e-4299-abc1-0c1dcc03fda0" testId="36d24d45-f602-15e0-0ca5-89a9133049d8" testName="HouseCopyRiskQTE" computerName="ICLVDEVTM02" duration="00:00:00.1644738" startTime="2013-09-23T12:34:58.6509338+01:00" endTime="2013-09-23T12:34:58.8219555+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c5459844-105e-4299-abc1-0c1dcc03fda0">
+      <Output>
+        <DebugTrace>W, 25400, 123, 2013/09/23, 12:34:58.812, 154739445103404, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 123, 2013/09/23, 12:34:58.812, 154739445111018, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ea7257bf-6b20-4dc4-bd62-3b9cce9d0b35" testId="860b3117-58e1-faeb-5039-5d480603d3e0" testName="HouseCreateQuote" computerName="ICLVDEVTM02" duration="00:00:00.1840097" startTime="2013-09-23T12:34:58.8639609+01:00" endTime="2013-09-23T12:34:59.0554852+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ea7257bf-6b20-4dc4-bd62-3b9cce9d0b35">
+      <Output>
+        <DebugTrace>W, 25400, 130, 2013/09/23, 12:34:59.043, 154739448418368, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 130, 2013/09/23, 12:34:59.044, 154739448425872, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8fe1fccd-77b2-4b45-93d8-6172d84344d6" testId="a117b69c-fc2d-defc-988c-38b2c22b62ba" testName="HouseLapsePolicy" computerName="ICLVDEVTM02" duration="00:00:00.0915433" startTime="2013-09-23T12:34:59.1004909+01:00" endTime="2013-09-23T12:34:59.1975032+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8fe1fccd-77b2-4b45-93d8-6172d84344d6">
+      <Output>
+        <DebugTrace>W, 25400, 138, 2013/09/23, 12:34:59.194, 154739450570780, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 138, 2013/09/23, 12:34:59.194, 154739450572632, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bbf65714-560d-4554-a9dd-cdf7ca583326" testId="ba26e76f-de14-32e4-8ac8-5df322f1fd27" testName="HouseMTAAccept" computerName="ICLVDEVTM02" duration="00:00:00.0261853" startTime="2013-09-23T12:34:59.2055042+01:00" endTime="2013-09-23T12:34:59.2340079+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bbf65714-560d-4554-a9dd-cdf7ca583326">
+      <Output>
+        <DebugTrace>W, 25400, 145, 2013/09/23, 12:34:59.231, 154739451102066, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 145, 2013/09/23, 12:34:59.231, 154739451104025, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0d7cf785-4937-40ad-8f72-9843a467876e" testId="82f80eb4-3d69-14db-4df1-0d43b770c2aa" testName="HouseMTAExit" computerName="ICLVDEVTM02" duration="00:00:00.0271665" startTime="2013-09-23T12:34:59.2415088+01:00" endTime="2013-09-23T12:34:59.2705125+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d7cf785-4937-40ad-8f72-9843a467876e">
+      <Output>
+        <DebugTrace>W, 25400, 73, 2013/09/23, 12:34:59.267, 154739451620204, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 73, 2013/09/23, 12:34:59.267, 154739451621784, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9f85d963-b655-4333-8bb7-40d1f422dec9" testId="a264afa1-312a-8c64-caac-2ca63265fc8a" testName="HouseMTAtoMTA" computerName="ICLVDEVTM02" duration="00:00:00.0261554" startTime="2013-09-23T12:34:59.2775134+01:00" endTime="2013-09-23T12:34:59.3060170+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f85d963-b655-4333-8bb7-40d1f422dec9">
+      <Output>
+        <DebugTrace>W, 25400, 67, 2013/09/23, 12:34:59.303, 154739452128543, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 67, 2013/09/23, 12:34:59.303, 154739452130203, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7e118ada-17d6-4b7d-a002-d8298e55bf83" testId="0896610c-4da4-38c0-ce20-352846d79839" testName="HouseOverridePremium" computerName="ICLVDEVTM02" duration="00:00:00.0295331" startTime="2013-09-23T12:34:59.3125178+01:00" endTime="2013-09-23T12:34:59.3445219+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7e118ada-17d6-4b7d-a002-d8298e55bf83">
+      <Output>
+        <DebugTrace>W, 25400, 61, 2013/09/23, 12:34:59.341, 154739452680280, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 61, 2013/09/23, 12:34:59.341, 154739452681823, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a49b89c0-c0b8-492b-9f45-57fef08773ea" testId="62fbdf2e-88f8-1124-e9d6-6f2b028ba869" testName="HouseRebrokeRenewCurrent" computerName="ICLVDEVTM02" duration="00:00:00.0941535" startTime="2013-09-23T12:34:59.3615241+01:00" endTime="2013-09-23T12:34:59.4580363+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a49b89c0-c0b8-492b-9f45-57fef08773ea">
+      <Output>
+        <DebugTrace>W, 25400, 57, 2013/09/23, 12:34:59.455, 154739454317214, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 57, 2013/09/23, 12:34:59.456, 154739454319094, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="af016d26-d7d5-41bf-83d9-77d7500500d2" testId="ffca28b1-a49b-3196-65aa-cebac8571ce3" testName="HouseRebrokeRenewExistingScheme" computerName="ICLVDEVTM02" duration="00:00:00.0264533" startTime="2013-09-23T12:34:59.4660373+01:00" endTime="2013-09-23T12:34:59.4945409+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="af016d26-d7d5-41bf-83d9-77d7500500d2">
+      <Output>
+        <DebugTrace>W, 25400, 65, 2013/09/23, 12:34:59.491, 154739454825598, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 65, 2013/09/23, 12:34:59.491, 154739454831436, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="30dfc5df-7595-438a-a3e6-f05d715f8dec" testId="b54caa2e-c0b5-ae92-08ad-7881c99df81b" testName="HouseRebrokeRenewNewScheme" computerName="ICLVDEVTM02" duration="00:00:00.0261463" startTime="2013-09-23T12:34:59.5025420+01:00" endTime="2013-09-23T12:34:59.5305455+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="30dfc5df-7595-438a-a3e6-f05d715f8dec">
+      <Output>
+        <DebugTrace>W, 25400, 72, 2013/09/23, 12:34:59.528, 154739455351161, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 72, 2013/09/23, 12:34:59.528, 154739455352589, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7b8d0298-ae16-4d8d-8bb5-91f822ac111d" testId="65dcd85a-ef1f-e29b-3743-f87742e2ed3d" testName="HouseRenewalAfter" computerName="ICLVDEVTM02" duration="00:00:00.0278594" startTime="2013-09-23T12:34:59.5360462+01:00" endTime="2013-09-23T12:34:59.5660500+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7b8d0298-ae16-4d8d-8bb5-91f822ac111d">
+      <Output>
+        <DebugTrace>W, 25400, 145, 2013/09/23, 12:34:59.563, 154739455853908, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 145, 2013/09/23, 12:34:59.563, 154739455855363, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="dcc0b3b9-87a9-449f-a898-c3079fd7534a" testId="84b504ff-9703-f2ac-6d29-56c44a019f4e" testName="HouseRenewalBefore" computerName="ICLVDEVTM02" duration="00:00:00.0304247" startTime="2013-09-23T12:34:59.5725509+01:00" endTime="2013-09-23T12:34:59.6040549+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dcc0b3b9-87a9-449f-a898-c3079fd7534a">
+      <Output>
+        <DebugTrace>W, 25400, 135, 2013/09/23, 12:34:59.601, 154739456399113, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 135, 2013/09/23, 12:34:59.601, 154739456400552, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="194fdbe3-4210-4606-b9d4-6198cf3c4934" testId="23806c32-26a6-baf2-e67c-b2710d259613" testName="HouseSaveQuoteWithoutPremium" computerName="ICLVDEVTM02" duration="00:00:00.0256943" startTime="2013-09-23T12:34:59.6110557+01:00" endTime="2013-09-23T12:34:59.6390593+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="194fdbe3-4210-4606-b9d4-6198cf3c4934">
+      <Output>
+        <DebugTrace>W, 25400, 127, 2013/09/23, 12:34:59.636, 154739456898295, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 127, 2013/09/23, 12:34:59.636, 154739456899760, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3d9ae970-a44a-45ae-a066-3f9c618dc783" testId="582fc786-fe70-74aa-52dd-24cf380932df" testName="MotoAmendRiskExistingScheme" computerName="ICLVDEVTM02" duration="00:00:00.0257967" startTime="2013-09-23T12:34:59.6445600+01:00" endTime="2013-09-23T12:34:59.6710634+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d9ae970-a44a-45ae-a066-3f9c618dc783">
+      <Output>
+        <DebugTrace>W, 25400, 120, 2013/09/23, 12:34:59.669, 154739457376071, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 120, 2013/09/23, 12:34:59.669, 154739457378078, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ac160a3f-410c-46e8-85d6-608445de5c6d" testId="327dc295-46f8-d9eb-d13a-04ac8001804a" testName="MotoAmendRiskNewScheme" computerName="ICLVDEVTM02" duration="00:00:00.0345541" startTime="2013-09-23T12:34:59.6770641+01:00" endTime="2013-09-23T12:34:59.7130687+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ac160a3f-410c-46e8-85d6-608445de5c6d">
+      <Output>
+        <DebugTrace>W, 25400, 114, 2013/09/23, 12:34:59.711, 154739457979559, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 114, 2013/09/23, 12:34:59.711, 154739457981189, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="29b6c28f-3add-4905-b0c0-221041f4c85b" testId="21ba00c6-09f4-caa5-ac59-791655e24b9d" testName="MotoAWAP" computerName="ICLVDEVTM02" duration="00:00:00.0325158" startTime="2013-09-23T12:34:59.7180693+01:00" endTime="2013-09-23T12:34:59.7525737+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="29b6c28f-3add-4905-b0c0-221041f4c85b">
+      <Output>
+        <DebugTrace>W, 25400, 107, 2013/09/23, 12:34:59.749, 154739458527683, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 107, 2013/09/23, 12:34:59.750, 154739458529232, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="682a7c3d-2788-44a7-b5db-28cb72c2e5ee" testId="cc65a43a-9a33-7c83-9bd5-ff01c2ffa61d" testName="MotoCancelAccept" computerName="ICLVDEVTM02" duration="00:00:00.0263643" startTime="2013-09-23T12:34:59.7595746+01:00" endTime="2013-09-23T12:34:59.7870781+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="682a7c3d-2788-44a7-b5db-28cb72c2e5ee">
+      <Output>
+        <DebugTrace>W, 25400, 85, 2013/09/23, 12:34:59.785, 154739459034803, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 85, 2013/09/23, 12:34:59.785, 154739459036839, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d9d861d0-5293-420e-beb6-4cf8c4a1cbd5" testId="e07608a6-4f59-4278-8d59-5e8ddd012acc" testName="MotoCancelExit" computerName="ICLVDEVTM02" duration="00:00:00.0301347" startTime="2013-09-23T12:34:59.7940790+01:00" endTime="2013-09-23T12:34:59.8260830+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d9d861d0-5293-420e-beb6-4cf8c4a1cbd5">
+      <Output>
+        <DebugTrace>W, 25400, 137, 2013/09/23, 12:34:59.823, 154739459579043, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 137, 2013/09/23, 12:34:59.823, 154739459581226, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6e8b1c48-76f1-4243-ae35-96e59a772505" testId="614fe764-f9f9-c1c7-0af0-55b68bb46c8e" testName="MotoCopyMTA" computerName="ICLVDEVTM02" duration="00:00:00.0247732" startTime="2013-09-23T12:34:59.8300836+01:00" endTime="2013-09-23T12:34:59.8580871+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6e8b1c48-76f1-4243-ae35-96e59a772505">
+      <Output>
+        <DebugTrace>W, 25400, 101, 2013/09/23, 12:34:59.855, 154739460038207, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 101, 2013/09/23, 12:34:59.855, 154739460039910, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="28292265-4e1a-49fb-ac8d-5c438e8fb92a" testId="75e0255d-1dc3-e4d9-5704-a08715d1f3a6" testName="MotoCopyRiskNew" computerName="ICLVDEVTM02" duration="00:00:00.0292196" startTime="2013-09-23T12:34:59.8635878+01:00" endTime="2013-09-23T12:34:59.8955919+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="28292265-4e1a-49fb-ac8d-5c438e8fb92a">
+      <Output>
+        <DebugTrace>W, 25400, 105, 2013/09/23, 12:34:59.892, 154739460571441, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 105, 2013/09/23, 12:34:59.892, 154739460572997, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ed2f83ca-ae25-40a0-8d05-b87d6d29d57b" testId="c4938c05-03da-60f7-0f88-e65778d3fa19" testName="MotoCopyRiskQte" computerName="ICLVDEVTM02" duration="00:00:00.0263587" startTime="2013-09-23T12:34:59.9010926+01:00" endTime="2013-09-23T12:34:59.9285961+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed2f83ca-ae25-40a0-8d05-b87d6d29d57b">
+      <Output>
+        <DebugTrace>W, 25400, 111, 2013/09/23, 12:34:59.926, 154739461061898, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 111, 2013/09/23, 12:34:59.927, 154739461068042, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b6f3068b-78fe-433d-b6a0-062604fca6c9" testId="96a60826-dea1-f77f-fc60-00cd6747296c" testName="MotoCreateQuote" computerName="ICLVDEVTM02" duration="00:00:00.0248472" startTime="2013-09-23T12:34:59.9355970+01:00" endTime="2013-09-23T12:34:59.9611002+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b6f3068b-78fe-433d-b6a0-062604fca6c9">
+      <Output>
+        <DebugTrace>W, 25400, 118, 2013/09/23, 12:34:59.959, 154739461533533, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 118, 2013/09/23, 12:34:59.960, 154739461535300, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d6fd6cf7-f660-45ca-b261-eea9aff43b4c" testId="6e105339-dc20-c02c-288a-6cce06bb4251" testName="MotoMTAAccept" computerName="ICLVDEVTM02" duration="00:00:00.0242684" startTime="2013-09-23T12:34:59.9666009+01:00" endTime="2013-09-23T12:34:59.9916041+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d6fd6cf7-f660-45ca-b261-eea9aff43b4c">
+      <Output>
+        <DebugTrace>W, 25400, 124, 2013/09/23, 12:34:59.990, 154739461965545, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 124, 2013/09/23, 12:34:59.990, 154739461967195, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5dcd9d2a-17eb-4c5d-8a2c-adfc7be0b661" testId="640fd6db-860c-c140-a3d8-d0f055d2eed9" testName="MotoMTAExit" computerName="ICLVDEVTM02" duration="00:00:00.0271447" startTime="2013-09-23T12:34:59.9966047+01:00" endTime="2013-09-23T12:35:00.0246083+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5dcd9d2a-17eb-4c5d-8a2c-adfc7be0b661">
+      <Output>
+        <DebugTrace>W, 25400, 133, 2013/09/23, 12:35:00.022, 154739462436396, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 133, 2013/09/23, 12:35:00.023, 154739462438056, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fed8b1a1-a7a5-4546-ac1a-80af9b7c2fc4" testId="b84b18ae-6912-43dc-1ce8-659e613146c1" testName="MotoMTAtoMTA" computerName="ICLVDEVTM02" duration="00:00:00.0231634" startTime="2013-09-23T12:35:00.0296089+01:00" endTime="2013-09-23T12:35:00.0531119+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fed8b1a1-a7a5-4546-ac1a-80af9b7c2fc4">
+      <Output>
+        <DebugTrace>W, 25400, 142, 2013/09/23, 12:35:00.051, 154739462851875, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 142, 2013/09/23, 12:35:00.052, 154739462853476, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2e08a46c-58ce-49f3-bed7-b1f2d1a463fe" testId="e7ea3675-20d2-cf0b-af85-2890e55fc37d" testName="MotoOverridePremium" computerName="ICLVDEVTM02" duration="00:00:00.0302205" startTime="2013-09-23T12:35:00.0586126+01:00" endTime="2013-09-23T12:35:00.0896165+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2e08a46c-58ce-49f3-bed7-b1f2d1a463fe">
+      <Output>
+        <DebugTrace>W, 25400, 73, 2013/09/23, 12:35:00.088, 154739463369400, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 73, 2013/09/23, 12:35:00.088, 154739463370916, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="68d16c91-4cb2-4626-b5f1-e988862edcd2" testId="371ed565-7848-460e-53f8-0d5da86a6d95" testName="MotoRebrokeRenewCurrent" computerName="ICLVDEVTM02" duration="00:00:00.0239872" startTime="2013-09-23T12:35:00.0946171+01:00" endTime="2013-09-23T12:35:00.1196203+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="68d16c91-4cb2-4626-b5f1-e988862edcd2">
+      <Output>
+        <DebugTrace>W, 25400, 66, 2013/09/23, 12:35:00.117, 154739463793345, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 66, 2013/09/23, 12:35:00.117, 154739463794859, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2585216a-500e-4b15-9ebe-31802e5142f2" testId="a6b0d3b5-976c-4b22-35f2-21b23c03c32a" testName="MotoRebrokeRenewExistingScheme" computerName="ICLVDEVTM02" duration="00:00:00.0275782" startTime="2013-09-23T12:35:00.1246210+01:00" endTime="2013-09-23T12:35:00.1531246+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2585216a-500e-4b15-9ebe-31802e5142f2">
+      <Output>
+        <DebugTrace>W, 25400, 58, 2013/09/23, 12:35:00.151, 154739464280816, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 58, 2013/09/23, 12:35:00.151, 154739464282252, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7efe9c21-d885-45c5-9b17-221b42bc224c" testId="9410f0c0-fb50-f25a-6718-26afc2f3339f" testName="MotoRebrokeRenewNewScheme" computerName="ICLVDEVTM02" duration="00:00:00.0244758" startTime="2013-09-23T12:35:00.1581252+01:00" endTime="2013-09-23T12:35:00.1836285+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7efe9c21-d885-45c5-9b17-221b42bc224c">
+      <Output>
+        <DebugTrace>W, 25400, 76, 2013/09/23, 12:35:00.182, 154739464717476, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 76, 2013/09/23, 12:35:00.182, 154739464719136, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="79912454-c798-484d-9f7a-5cc3541ddcc5" testId="576c4cce-f2fa-69e8-ebd1-c09bc0e1c559" testName="MotoRenewalAfter" computerName="ICLVDEVTM02" duration="00:00:00.0237678" startTime="2013-09-23T12:35:00.1886291+01:00" endTime="2013-09-23T12:35:00.2136323+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="79912454-c798-484d-9f7a-5cc3541ddcc5">
+      <Output>
+        <DebugTrace>W, 25400, 86, 2013/09/23, 12:35:00.211, 154739465142288, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 86, 2013/09/23, 12:35:00.212, 154739465144001, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="812e899d-852d-4643-9030-8c41a1b4f0b1" testId="31988f60-6dd2-d7f1-3544-10a47a577690" testName="MotoRenewalBefore" computerName="ICLVDEVTM02" duration="00:00:00.0141305" startTime="2013-09-23T12:35:00.2186329+01:00" endTime="2013-09-23T12:35:00.2341349+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="812e899d-852d-4643-9030-8c41a1b4f0b1">
+      <Output>
+        <DebugTrace>W, 25400, 91, 2013/09/23, 12:35:00.232, 154739465435768, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 91, 2013/09/23, 12:35:00.232, 154739465438464, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3b55080f-c40e-4ebe-84ec-75c7c3980e32" testId="3aa144ec-52be-8aa1-dd30-729da149368a" testName="MotoSaveQuoteWithoutPremium" computerName="ICLVDEVTM02" duration="00:00:00.0264433" startTime="2013-09-23T12:35:00.2391355+01:00" endTime="2013-09-23T12:35:00.2666390+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3b55080f-c40e-4ebe-84ec-75c7c3980e32">
+      <Output>
+        <DebugTrace>W, 25400, 79, 2013/09/23, 12:35:00.265, 154739465904054, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 79, 2013/09/23, 12:35:00.265, 154739465905773, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4660f1fb-faa3-4f74-8b55-d0cd701e7070" testId="cf1f05dd-a70c-81bc-1012-592720aa6031" testName="TestMethod1" computerName="ICLVDEVTM02" duration="00:00:21.8872915" startTime="2013-09-23T12:35:00.2721397+01:00" endTime="2013-09-23T12:35:22.1609192+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4660f1fb-faa3-4f74-8b55-d0cd701e7070">
+      <Output>
+        <DebugTrace>W, 25400, 102, 2013/09/23, 12:35:00.572, 154739470310707, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Policy Attachments' &amp;&amp; ClassName='ThunderRT6FormDC'
+\0
+E, 25400, 102, 2013/09/23, 12:35:00.573, 154739470314790, QTAgent32.exe, &lt;a class=failure&gt;Playback - {1} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Policy Attachments' &amp;&amp; ClassName='ThunderRT6FormDC') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 25400, 102, 2013/09/23, 12:35:00.634, 154739471191332, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPFCD97.png
+\0
+W, 25400, 102, 2013/09/23, 12:35:00.634, 154739471193534, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 25400, 102, 2013/09/23, 12:35:18.701, 154739729878889, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Policy Attachments' &amp;&amp; ClassName='ThunderRT6FormDC'
+\0
+E, 25400, 102, 2013/09/23, 12:35:18.701, 154739729889481, QTAgent32.exe, &lt;a class=failure&gt;Playback - {2} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Policy Attachments' &amp;&amp; ClassName='ThunderRT6FormDC') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 25400, 102, 2013/09/23, 12:35:18.770, 154739730878752, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPF1468.png
+\0
+W, 25400, 102, 2013/09/23, 12:35:18.771, 154739730881517, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 25400, 102, 2013/09/23, 12:35:18.771, 154739730890027, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 18137 ms. Expected it to take maximum 500 ms.
+W, 25400, 102, 2013/09/23, 12:35:19.270, 154739738020398, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:19.437, 154739740411326, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:19.601, 154739742764327, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:19.761, 154739745054804, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:19.930, 154739747479233, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:20.094, 154739749826308, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:20.251, 154739752074802, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:20.408, 154739754328948, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:20.572, 154739756668978, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:20.733, 154739758978095, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:20.892, 154739761245511, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:21.047, 154739763471564, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:21.210, 154739765805421, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:21.408, 154739768635149, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:21.563, 154739770864060, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:21.718, 154739773077537, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:21.871, 154739775272435, QTAgent32.exe, Playback - [WARNING] Internal warning: Smart Match failed
+\0
+W, 25400, 102, 2013/09/23, 12:35:21.913, 154739775866678, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: [VisibleOnly]ControlType='Window' &amp;&amp; Name='Policy Attachments' &amp;&amp; ClassName='ThunderRT6FormDC'
+\0
+E, 25400, 102, 2013/09/23, 12:35:21.913, 154739775870041, QTAgent32.exe, &lt;a class=failure&gt;Playback - {3} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;[VisibleOnly]ControlType='Window' &amp;&amp; Name='Policy Attachments' &amp;&amp; ClassName='ThunderRT6FormDC') (The object specified was not found.)
+\0&lt;/a&gt;
+E, 25400, 102, 2013/09/23, 12:35:21.973, 154739776736196, QTAgent32.exe, Playback - [IMAGE] C:\Users\testuser\AppData\Local\Temp\UITestLogs\LastRun\RPF20F6.png
+\0
+W, 25400, 102, 2013/09/23, 12:35:21.973, 154739776738725, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 25400, 102, 2013/09/23, 12:35:21.974, 154739776745897, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 3202 ms. Expected it to take maximum 500 ms.
+E, 25400, 102, 2013/09/23, 12:35:21.974, 154739776749480, QTAgent32.exe, Exception: System.Runtime.InteropServices.COMException
+	Message: Error HRESULT E_FAIL has been returned from a call to a COM component.
+	Stack Trace:    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+	BaseExceptionMessage: Error HRESULT E_FAIL has been returned from a call to a COM component.
+
+E, 25400, 102, 2013/09/23, 12:35:22.108, 154739778658737, QTAgent32.exe, AL: Playback Error: Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotFoundException: The playback failed to find the control with the given search properties. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Window'
+Name:  'Policy Attachments'
+ClassName:  'ThunderRT6FormDC'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindFromPartialQueryId(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+   --- End of inner exception stack trace ---
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapControlNotFoundException(COMException ex, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowComException(COMException innerException, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.SearchTopLevelWindow(ISearchArgument topLevelSearchArg, String topLevelElementQueryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTitleUpdatedTopLevelWindow(ISearchArgument topLevelSearchArg, String queryId, IList`1 windowTitles)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTopLevelElement(Boolean useCache, Boolean useCacheOnly, ISearchArgument searchArg, IList`1 windowTitles, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetElement(Boolean useCache, ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.Search(ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindInternal()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindControlIfNecessary()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+W, 25400, 102, 2013/09/23, 12:35:22.158, 154739779388492, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 25400, 102, 2013/09/23, 12:35:22.159, 154739779390736, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method AppliedSystems.Tam.Ui.Tests.UnitTest1.TestMethod1 threw exception: 
+Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotFoundException: The playback failed to find the control with the given search properties. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Window'
+Name:  'Policy Attachments'
+ClassName:  'ThunderRT6FormDC'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindFromPartialQueryId(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+ --- End of inner exception stack trace ---
+    at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapControlNotFoundException(COMException ex, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowComException(COMException innerException, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.SearchTopLevelWindow(ISearchArgument topLevelSearchArg, String topLevelElementQueryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTitleUpdatedTopLevelWindow(ISearchArgument topLevelSearchArg, String queryId, IList`1 windowTitles)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTopLevelElement(Boolean useCache, Boolean useCacheOnly, ISearchArgument searchArg, IList`1 windowTitles, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetElement(Boolean useCache, ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.Search(ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindInternal()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindControlIfNecessary()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click(UITestControl control)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.OpenAttachment() in C:\TamTestsGit\TestProject7\UIMap.cs:line 2164
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CheckPremiumInPdfProposal(Double premium) in C:\TamTestsGit\TestProject7\UIMap.cs:line 2095
+   at AppliedSystems.Tam.Ui.Tests.UnitTest1.TestMethod1() in C:\TamTestsGit\TestProject7\UnitTest1.cs:line 22
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="ICLVDEVTM02\TestMethod1.png" />
+      </ResultFiles>
+      <ExtensionResult>Exception has been thrown by the target of an invocation.</ExtensionResult>
+    </UnitTestResult>
+    <UnitTestResult executionId="ea89f4e5-4d37-4ef2-b0e9-1dd5e62b46b6" testId="6bd48419-af25-d06e-1d1b-4584b7e15d64" testName="TestMethod" computerName="ICLVDEVTM02" duration="00:00:00.0020130" startTime="2013-09-23T12:35:22.1704204+01:00" endTime="2013-09-23T12:35:22.1739209+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ea89f4e5-4d37-4ef2-b0e9-1dd5e62b46b6">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.UnitTest2.StartTest threw exception. System.InvalidOperationException: System.InvalidOperationException: The key 'LocalDocsPath' does not exist in the appSettings configuration section..</Message>
+          <StackTrace>    at System.Configuration.AppSettingsReader.GetValue(String key, Type type)
+   at AppliedSystems.Tam.Ui.Tests.Configs.get_LocalDocsPath() in C:\TamTestsGit\TestProject7\Configs.cs:line 70
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1959
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
