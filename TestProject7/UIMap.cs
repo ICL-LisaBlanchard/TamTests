@@ -2135,6 +2135,7 @@
         {
             this.OpenAttachment();
 
+            Playback.Wait(5000);
             Keyboard.SendKeys("Q", ModifierKeys.Control);
 
             string file;
