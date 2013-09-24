@@ -104,6 +104,8 @@
             CloseProcess("InsureTam");
             CloseProcess("clntfile");
             CloseProcess("Homebase");
+            CloseProcess("AcroRd32");
+            CloseProcess("iexplore");
         }
 
         public void SetOurHighwayRegKeys()

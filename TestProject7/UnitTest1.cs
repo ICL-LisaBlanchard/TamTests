@@ -19,7 +19,8 @@
         [TestMethod]
         public void TestMethod1()
         {
-            this.House.SelectPolicyQuote();
+
+            BaseUiTest.CloseProcess("AcroRd32");
         }
     }
 }

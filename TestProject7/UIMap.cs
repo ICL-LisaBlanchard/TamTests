@@ -2183,7 +2183,15 @@
             WinMenuItem uIViewAttachmentMenuItem = this.UIAttachmentsMenuWindow.UIContextMenu.UIMenuItem("View Attachment");
             Mouse.Click(uIOptionsButton);
             Mouse.Click(uIViewAttachmentMenuItem);
-            Mouse.Click(uIOKButton);
+            try
+            {
+                Mouse.Click(uIOKButton);
+            }
+            catch (Exception)
+            {
+    
+            }
+           
         }
 
         private void CheckPremiumInWordDoc(double premium)
