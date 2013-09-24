@@ -696,7 +696,7 @@ Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
 
             #endregion
 
-            Mouse.Click(uIQuoteResultsClient, new Point(295, 127));
+            Mouse.Click(uIQuoteResultsClient, new Point(30, 30));
 
             Mouse.Move(new Point(500, 500));
         }
