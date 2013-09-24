@@ -688,7 +688,7 @@
 
             #endregion
 
-            Mouse.Click(uIQuoteResultsClient, new Point(30, 30));
+            Mouse.Click(uIQuoteResultsClient, new Point(30, 60));
 
             Playback.Wait(1000);
 

@@ -1011,7 +1011,6 @@
 
         public void HomeCancelPolicyAccept()
         {
-            WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
             WinControl uIAcceptButton = this.UIQuotesResultsWindow.UIAcceptWindow.UIAcceptButton;
             WinControl uIokButton = this.UIConfirmMTAWindow.UIOKWindow.UIOKButton;
             WinControl uIokButton1 = this.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
@@ -1023,7 +1022,7 @@
 
             Playback.Wait(2000);
 
-            SelectPolicyQuote();
+            HomeSelectPolicy();
 
             Mouse.Click(uIAcceptButton, new Point(85, 15));
 

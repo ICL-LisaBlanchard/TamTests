@@ -19,7 +19,7 @@
         [TestMethod]
         public void TestMethod1()
         {
-            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhNewBusinessQuote);
+            this.House.SelectPolicyQuote();
         }
     }
 }
