@@ -1489,7 +1489,8 @@
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = this.UIPolicyrtyertWindow.UIBillingScreenMotoTestWindow.UIItemWindow.UIItemEdit;
+            //WinEdit uIItemEdit = this.UIPolicyrtyertWindow.UIBillingScreenMotoTestWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
 
             #endregion
 
@@ -1862,7 +1863,15 @@
                 this.ImportToTamOptionsOnce(whoToSelect);
             }
 
-            Mouse.Click(tamXmlButton);
+            try
+            {
+                Mouse.Click(tamXmlButton);
+            }
+            catch (Exception)
+            {
+                this.ImportToTamOptionsOnce(whoToSelect);
+            }
+            
 
             for (int i = 0; i < selectListItems2; i++)
             {

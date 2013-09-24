@@ -175,8 +175,8 @@
 
         public string MotoGetPolicyNumber()
         {
-            WinEdit uIItemEdit = this.map.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow2.UIItemEdit;
-            WinEdit uIItemEdit2 = this.UIPolicyrtyertWindow.UIBillingScreenMotoTestWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow2.UIItemEdit;
+            WinEdit uIItemEdit2 = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
 
             string policyNo = uIItemEdit.GetProperty("Text").ToString();
 

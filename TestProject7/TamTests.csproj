@@ -177,7 +177,6 @@
     <Compile Include="UIElements\UIAUTO2311001Window.cs" />
     <Compile Include="UIElements\UIBillingScreenHomeTestWindow.cs" />
     <Compile Include="UIElements\UIBillingScreenWindow.cs" />
-    <Compile Include="UIElements\UIBillingScreenMotoTestWindow.cs" />
     <Compile Include="UIElements\UIBlankPageMicrosoftInWindow.cs" />
     <Compile Include="UIElements\UIBrokerAddonsWindow.cs" />
     <Compile Include="UIElements\UIClaimsWindow.cs" />
@@ -241,7 +240,6 @@
     <Compile Include="UIElements\UIPolicyListWindow.cs" />
     <Compile Include="UIElements\UIPolicyListWindow1.cs" />
     <Compile Include="UIElements\UIPolicyListWindow11.cs" />
-    <Compile Include="UIElements\UIPolicyrtyertWindow.cs" />
     <Compile Include="UIElements\UIPolicyWindow.cs" />
     <Compile Include="UIElements\UIPrintDocumentsWindow.cs" />
     <Compile Include="UIElements\UIProductSelectionWindow.cs" />
