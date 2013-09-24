@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="1b728376-f115-483d-bcf6-433859aa0d62" name="testuser@ICLVDEVTL 2013-09-24 11:54:56" runUser="ICLVDEVTL\testuser" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Remote" id="47e1e203-4706-4ffd-9873-ee9804c8144d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment runDeploymentRoot="testuser_ICLVDEVTL 2013-09-24 11_54_56">
+      <DeploymentItem filename="C:\TestLinkAPI.dll" />
+      <DeploymentItem filename="C:\TamTestsGit\TestProject7\References\itextsharp.dll" />
+    </Deployment>
+    <RemoteController name="ICLVDEVTL" />
+    <Execution location="Remote">
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+      </TestTypeSpecific>
+      <AgentRule name="AllAgentsDefaultRole">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-09-24T11:54:56.8209150+01:00" queuing="2013-09-24T11:54:57.9210250+01:00" start="2013-09-24T11:54:58.8851214+01:00" finish="2013-09-24T11:55:03.8056134+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="39" executed="39" error="0" failed="39" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="HouseLapsePolicy" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="a117b69c-fc2d-defc-988c-38b2c22b62ba">
+      <Execution id="9a1ae6cd-4c7c-4470-8d5e-e511a776a657" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseLapsePolicy" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCancelExit" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="4d206040-ae1d-2a21-9082-485d3086eaa9">
+      <Execution id="d388ee1b-ad78-4f29-98ce-bd9e44dbfabe" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCancelExit" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseRebrokeRenewCurrent" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="62fbdf2e-88f8-1124-e9d6-6f2b028ba869">
+      <Execution id="66e46925-573e-4baa-a08d-34916a40a0a4" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseRebrokeRenewCurrent" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseRenewalBefore" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="84b504ff-9703-f2ac-6d29-56c44a019f4e">
+      <Execution id="6d3bec14-c0df-45a6-9372-5a441f391e25" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseRenewalBefore" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCancelAccept" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="cc65a43a-9a33-7c83-9bd5-ff01c2ffa61d">
+      <Execution id="916dcf5f-438b-45c5-aa5b-bf986836fd17" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCancelAccept" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseRenewalAfter" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="65dcd85a-ef1f-e29b-3743-f87742e2ed3d">
+      <Execution id="2cf415ee-74b2-4438-96a0-fc67e7738381" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseRenewalAfter" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoAmendRiskNewScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="327dc295-46f8-d9eb-d13a-04ac8001804a">
+      <Execution id="1870f053-2345-4d2c-836a-a90dee55aeb3" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoAmendRiskNewScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoRebrokeRenewNewScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="9410f0c0-fb50-f25a-6718-26afc2f3339f">
+      <Execution id="bcb1a025-f905-4b02-9fdf-05fe56dce16c" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoRebrokeRenewNewScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoAmendRiskExistingScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="582fc786-fe70-74aa-52dd-24cf380932df">
+      <Execution id="e6d5a4db-fc70-45f2-94e4-0adbb3c719ae" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoAmendRiskExistingScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCreateQuote" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="96a60826-dea1-f77f-fc60-00cd6747296c">
+      <Execution id="14022354-9f31-427a-86b6-6b5d4a87f0b7" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCreateQuote" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseOverridePremium" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="0896610c-4da4-38c0-ce20-352846d79839">
+      <Execution id="bef26522-ec8f-4e2f-80f9-ec2ca36b0217" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseOverridePremium" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCancelAccept" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="5c9c2876-ef7b-214a-39ca-065818518ce8">
+      <Execution id="089948dd-1794-48f0-9aac-5993e3a300b8" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCancelAccept" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoLapsePolicy" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="4f35f7f7-c83f-5499-ca6e-3b756d5ad8dd">
+      <Execution id="8abbf672-40b0-4c08-800b-a5bca8cea078" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoLapsePolicy" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCopyRiskQTE" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="36d24d45-f602-15e0-0ca5-89a9133049d8">
+      <Execution id="9681153e-2a75-46a8-97df-95e768c1602e" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCopyRiskQTE" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoAWAP" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="21ba00c6-09f4-caa5-ac59-791655e24b9d">
+      <Execution id="66d21504-bd51-4b76-a069-4347781b5901" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoAWAP" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCreateQuote" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="860b3117-58e1-faeb-5039-5d480603d3e0">
+      <Execution id="18d926a6-b05e-4af6-a2d1-d3a74547ba6f" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCreateQuote" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoRebrokeRenewCurrent" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="371ed565-7848-460e-53f8-0d5da86a6d95">
+      <Execution id="03824997-c888-4e25-97f8-abffb812fd6e" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoRebrokeRenewCurrent" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseRebrokeRenewNewScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="b54caa2e-c0b5-ae92-08ad-7881c99df81b">
+      <Execution id="5d61fe6f-3e4d-42cf-92c0-67b8ce2b441d" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseRebrokeRenewNewScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCopyRiskNew" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="89230cfa-6a19-d3c2-743b-2d2fcea3c803">
+      <Execution id="41f0a718-a95c-4454-9181-d3dcde4317a0" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCopyRiskNew" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseMTAtoMTA" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="a264afa1-312a-8c64-caac-2ca63265fc8a">
+      <Execution id="ba84735c-f98b-4361-9389-09b32a41bb63" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseMTAtoMTA" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseMTAExit" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="82f80eb4-3d69-14db-4df1-0d43b770c2aa">
+      <Execution id="05a00747-667f-4433-9d8b-16bb77b4a352" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseMTAExit" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCopyRiskNew" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="75e0255d-1dc3-e4d9-5704-a08715d1f3a6">
+      <Execution id="96cb7b69-cc7e-468f-9c23-d984e69c5158" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCopyRiskNew" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCopyMTA" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="614fe764-f9f9-c1c7-0af0-55b68bb46c8e">
+      <Execution id="7ef7c9f9-90c2-40c0-9e28-cb9e473197f9" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCopyMTA" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseAmendRiskNewScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="89df0505-7bef-1c84-6aca-37d1506692db">
+      <Execution id="5cf27be9-1c68-4345-828f-f5b735737455" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseAmendRiskNewScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCopyMTA" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="e896f84c-ec6c-92c3-3bd8-d41d57aae4bc">
+      <Execution id="bb05de9e-a03e-4cc3-9965-407af0cae006" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCopyMTA" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseAmendRiskExistingScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="8325e849-00cb-74b8-f092-b233e3af24b2">
+      <Execution id="99fe5090-f849-4a85-95e0-cbe36d680d47" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseAmendRiskExistingScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoRenewalAfter" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="576c4cce-f2fa-69e8-ebd1-c09bc0e1c559">
+      <Execution id="a20c68f4-0b33-4699-993d-41714527e0bb" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoRenewalAfter" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoMTAExit" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="640fd6db-860c-c140-a3d8-d0f055d2eed9">
+      <Execution id="4bb4987c-b503-4ba0-b67f-1f9deb9a00b2" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoMTAExit" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCopyRiskQte" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="c4938c05-03da-60f7-0f88-e65778d3fa19">
+      <Execution id="7143a9c1-af00-463f-b7f3-0dd9f683a239" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCopyRiskQte" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseRebrokeRenewExistingScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="ffca28b1-a49b-3196-65aa-cebac8571ce3">
+      <Execution id="789ea623-108a-46ed-9b5c-72d19dee6b2e" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseRebrokeRenewExistingScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoRenewalBefore" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="31988f60-6dd2-d7f1-3544-10a47a577690">
+      <Execution id="f117f704-ac89-4ff3-b79c-c9ce0d4411bf" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoRenewalBefore" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseMTAAccept" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="ba26e76f-de14-32e4-8ac8-5df322f1fd27">
+      <Execution id="ac528834-922a-413b-a1c8-6ccc0f732efc" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseMTAAccept" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoRebrokeRenewExistingScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="a6b0d3b5-976c-4b22-35f2-21b23c03c32a">
+      <Execution id="77320f23-27d8-4078-aa40-fb669d35a3cf" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoRebrokeRenewExistingScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoOverridePremium" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="e7ea3675-20d2-cf0b-af85-2890e55fc37d">
+      <Execution id="c46971bc-410b-48bb-a66d-14fee8cbe67a" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoOverridePremium" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoMTAtoMTA" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="b84b18ae-6912-43dc-1ce8-659e613146c1">
+      <Execution id="70d15d67-1fdd-424f-a31b-cbe26ad247b7" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoMTAtoMTA" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoSaveQuoteWithoutPremium" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="3aa144ec-52be-8aa1-dd30-729da149368a">
+      <Execution id="c0090abd-8405-4daf-98ec-028346d57c80" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoSaveQuoteWithoutPremium" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoMTAAccept" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="6e105339-dc20-c02c-288a-6cce06bb4251">
+      <Execution id="ea063f33-a162-475a-8303-03398d2b7cc6" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoMTAAccept" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseSaveQuoteWithoutPremium" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="23806c32-26a6-baf2-e67c-b2710d259613">
+      <Execution id="f57b2bfe-e960-4eb1-ab58-0f061ff91928" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseSaveQuoteWithoutPremium" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCancelExit" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="e07608a6-4f59-4278-8d59-5e8ddd012acc">
+      <Execution id="92039079-d885-4d4f-8607-9274e55442bc" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCancelExit" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="860b3117-58e1-faeb-5039-5d480603d3e0" executionId="18d926a6-b05e-4af6-a2d1-d3a74547ba6f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="23806c32-26a6-baf2-e67c-b2710d259613" executionId="f57b2bfe-e960-4eb1-ab58-0f061ff91928" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0896610c-4da4-38c0-ce20-352846d79839" executionId="bef26522-ec8f-4e2f-80f9-ec2ca36b0217" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89230cfa-6a19-d3c2-743b-2d2fcea3c803" executionId="41f0a718-a95c-4454-9181-d3dcde4317a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="36d24d45-f602-15e0-0ca5-89a9133049d8" executionId="9681153e-2a75-46a8-97df-95e768c1602e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="82f80eb4-3d69-14db-4df1-0d43b770c2aa" executionId="05a00747-667f-4433-9d8b-16bb77b4a352" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ba26e76f-de14-32e4-8ac8-5df322f1fd27" executionId="ac528834-922a-413b-a1c8-6ccc0f732efc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e896f84c-ec6c-92c3-3bd8-d41d57aae4bc" executionId="bb05de9e-a03e-4cc3-9965-407af0cae006" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a264afa1-312a-8c64-caac-2ca63265fc8a" executionId="ba84735c-f98b-4361-9389-09b32a41bb63" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4d206040-ae1d-2a21-9082-485d3086eaa9" executionId="d388ee1b-ad78-4f29-98ce-bd9e44dbfabe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5c9c2876-ef7b-214a-39ca-065818518ce8" executionId="089948dd-1794-48f0-9aac-5993e3a300b8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="84b504ff-9703-f2ac-6d29-56c44a019f4e" executionId="6d3bec14-c0df-45a6-9372-5a441f391e25" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="65dcd85a-ef1f-e29b-3743-f87742e2ed3d" executionId="2cf415ee-74b2-4438-96a0-fc67e7738381" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8325e849-00cb-74b8-f092-b233e3af24b2" executionId="99fe5090-f849-4a85-95e0-cbe36d680d47" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89df0505-7bef-1c84-6aca-37d1506692db" executionId="5cf27be9-1c68-4345-828f-f5b735737455" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="62fbdf2e-88f8-1124-e9d6-6f2b028ba869" executionId="66e46925-573e-4baa-a08d-34916a40a0a4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffca28b1-a49b-3196-65aa-cebac8571ce3" executionId="789ea623-108a-46ed-9b5c-72d19dee6b2e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b54caa2e-c0b5-ae92-08ad-7881c99df81b" executionId="5d61fe6f-3e4d-42cf-92c0-67b8ce2b441d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a117b69c-fc2d-defc-988c-38b2c22b62ba" executionId="9a1ae6cd-4c7c-4470-8d5e-e511a776a657" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="96a60826-dea1-f77f-fc60-00cd6747296c" executionId="14022354-9f31-427a-86b6-6b5d4a87f0b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3aa144ec-52be-8aa1-dd30-729da149368a" executionId="c0090abd-8405-4daf-98ec-028346d57c80" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="21ba00c6-09f4-caa5-ac59-791655e24b9d" executionId="66d21504-bd51-4b76-a069-4347781b5901" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e7ea3675-20d2-cf0b-af85-2890e55fc37d" executionId="c46971bc-410b-48bb-a66d-14fee8cbe67a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="75e0255d-1dc3-e4d9-5704-a08715d1f3a6" executionId="96cb7b69-cc7e-468f-9c23-d984e69c5158" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c4938c05-03da-60f7-0f88-e65778d3fa19" executionId="7143a9c1-af00-463f-b7f3-0dd9f683a239" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="640fd6db-860c-c140-a3d8-d0f055d2eed9" executionId="4bb4987c-b503-4ba0-b67f-1f9deb9a00b2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6e105339-dc20-c02c-288a-6cce06bb4251" executionId="ea063f33-a162-475a-8303-03398d2b7cc6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="614fe764-f9f9-c1c7-0af0-55b68bb46c8e" executionId="7ef7c9f9-90c2-40c0-9e28-cb9e473197f9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b84b18ae-6912-43dc-1ce8-659e613146c1" executionId="70d15d67-1fdd-424f-a31b-cbe26ad247b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e07608a6-4f59-4278-8d59-5e8ddd012acc" executionId="92039079-d885-4d4f-8607-9274e55442bc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc65a43a-9a33-7c83-9bd5-ff01c2ffa61d" executionId="916dcf5f-438b-45c5-aa5b-bf986836fd17" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="31988f60-6dd2-d7f1-3544-10a47a577690" executionId="f117f704-ac89-4ff3-b79c-c9ce0d4411bf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="576c4cce-f2fa-69e8-ebd1-c09bc0e1c559" executionId="a20c68f4-0b33-4699-993d-41714527e0bb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="582fc786-fe70-74aa-52dd-24cf380932df" executionId="e6d5a4db-fc70-45f2-94e4-0adbb3c719ae" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="327dc295-46f8-d9eb-d13a-04ac8001804a" executionId="1870f053-2345-4d2c-836a-a90dee55aeb3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="371ed565-7848-460e-53f8-0d5da86a6d95" executionId="03824997-c888-4e25-97f8-abffb812fd6e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a6b0d3b5-976c-4b22-35f2-21b23c03c32a" executionId="77320f23-27d8-4078-aa40-fb669d35a3cf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9410f0c0-fb50-f25a-6718-26afc2f3339f" executionId="bcb1a025-f905-4b02-9fdf-05fe56dce16c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4f35f7f7-c83f-5499-ca6e-3b756d5ad8dd" executionId="8abbf672-40b0-4c08-800b-a5bca8cea078" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="18d926a6-b05e-4af6-a2d1-d3a74547ba6f" testId="860b3117-58e1-faeb-5039-5d480603d3e0" testName="HouseCreateQuote" computerName="ICLVDEVTM02" duration="00:00:00.9649042" startTime="2013-09-24T11:53:38.9944641+01:00" endTime="2013-09-24T11:53:41.8078213+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="18d926a6-b05e-4af6-a2d1-d3a74547ba6f">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f57b2bfe-e960-4eb1-ab58-0f061ff91928" testId="23806c32-26a6-baf2-e67c-b2710d259613" testName="HouseSaveQuoteWithoutPremium" computerName="ICLVDEVTM02" duration="00:00:00.0025929" startTime="2013-09-24T11:53:41.8193228+01:00" endTime="2013-09-24T11:53:41.8358249+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f57b2bfe-e960-4eb1-ab58-0f061ff91928">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bef26522-ec8f-4e2f-80f9-ec2ca36b0217" testId="0896610c-4da4-38c0-ce20-352846d79839" testName="HouseOverridePremium" computerName="ICLVDEVTM02" duration="00:00:00.0021582" startTime="2013-09-24T11:53:41.8383252+01:00" endTime="2013-09-24T11:53:41.8453261+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bef26522-ec8f-4e2f-80f9-ec2ca36b0217">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="41f0a718-a95c-4454-9181-d3dcde4317a0" testId="89230cfa-6a19-d3c2-743b-2d2fcea3c803" testName="HouseCopyRiskNew" computerName="ICLVDEVTM02" duration="00:00:00.0020983" startTime="2013-09-24T11:53:41.8508268+01:00" endTime="2013-09-24T11:53:41.8623282+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="41f0a718-a95c-4454-9181-d3dcde4317a0">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9681153e-2a75-46a8-97df-95e768c1602e" testId="36d24d45-f602-15e0-0ca5-89a9133049d8" testName="HouseCopyRiskQTE" computerName="ICLVDEVTM02" duration="00:00:00.0023740" startTime="2013-09-24T11:53:41.8663288+01:00" endTime="2013-09-24T11:53:41.8743298+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9681153e-2a75-46a8-97df-95e768c1602e">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="05a00747-667f-4433-9d8b-16bb77b4a352" testId="82f80eb4-3d69-14db-4df1-0d43b770c2aa" testName="HouseMTAExit" computerName="ICLVDEVTM02" duration="00:00:00.0027128" startTime="2013-09-24T11:53:41.8763300+01:00" endTime="2013-09-24T11:53:41.8853312+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="05a00747-667f-4433-9d8b-16bb77b4a352">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ac528834-922a-413b-a1c8-6ccc0f732efc" testId="ba26e76f-de14-32e4-8ac8-5df322f1fd27" testName="HouseMTAAccept" computerName="ICLVDEVTM02" duration="00:00:00.0022677" startTime="2013-09-24T11:53:41.8893317+01:00" endTime="2013-09-24T11:53:41.8973327+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ac528834-922a-413b-a1c8-6ccc0f732efc">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bb05de9e-a03e-4cc3-9965-407af0cae006" testId="e896f84c-ec6c-92c3-3bd8-d41d57aae4bc" testName="HouseCopyMTA" computerName="ICLVDEVTM02" duration="00:00:00.0028204" startTime="2013-09-24T11:53:41.9078340+01:00" endTime="2013-09-24T11:53:41.9163351+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bb05de9e-a03e-4cc3-9965-407af0cae006">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ba84735c-f98b-4361-9389-09b32a41bb63" testId="a264afa1-312a-8c64-caac-2ca63265fc8a" testName="HouseMTAtoMTA" computerName="ICLVDEVTM02" duration="00:00:00.0023662" startTime="2013-09-24T11:53:41.9203356+01:00" endTime="2013-09-24T11:53:41.9283366+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ba84735c-f98b-4361-9389-09b32a41bb63">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d388ee1b-ad78-4f29-98ce-bd9e44dbfabe" testId="4d206040-ae1d-2a21-9082-485d3086eaa9" testName="HouseCancelExit" computerName="ICLVDEVTM02" duration="00:00:00.0023716" startTime="2013-09-24T11:53:41.9298368+01:00" endTime="2013-09-24T11:53:41.9393380+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d388ee1b-ad78-4f29-98ce-bd9e44dbfabe">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="089948dd-1794-48f0-9aac-5993e3a300b8" testId="5c9c2876-ef7b-214a-39ca-065818518ce8" testName="HouseCancelAccept" computerName="ICLVDEVTM02" duration="00:00:00.0024072" startTime="2013-09-24T11:53:41.9433385+01:00" endTime="2013-09-24T11:53:41.9518396+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="089948dd-1794-48f0-9aac-5993e3a300b8">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6d3bec14-c0df-45a6-9372-5a441f391e25" testId="84b504ff-9703-f2ac-6d29-56c44a019f4e" testName="HouseRenewalBefore" computerName="ICLVDEVTM02" duration="00:00:00.0058414" startTime="2013-09-24T11:53:41.9538399+01:00" endTime="2013-09-24T11:53:41.9723422+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d3bec14-c0df-45a6-9372-5a441f391e25">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2cf415ee-74b2-4438-96a0-fc67e7738381" testId="65dcd85a-ef1f-e29b-3743-f87742e2ed3d" testName="HouseRenewalAfter" computerName="ICLVDEVTM02" duration="00:00:00.0024042" startTime="2013-09-24T11:53:41.9763427+01:00" endTime="2013-09-24T11:53:41.9843437+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2cf415ee-74b2-4438-96a0-fc67e7738381">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="99fe5090-f849-4a85-95e0-cbe36d680d47" testId="8325e849-00cb-74b8-f092-b233e3af24b2" testName="HouseAmendRiskExistingScheme" computerName="ICLVDEVTM02" duration="00:00:00.0024652" startTime="2013-09-24T11:53:41.9863440+01:00" endTime="2013-09-24T11:53:41.9958452+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="99fe5090-f849-4a85-95e0-cbe36d680d47">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5cf27be9-1c68-4345-828f-f5b735737455" testId="89df0505-7bef-1c84-6aca-37d1506692db" testName="HouseAmendRiskNewScheme" computerName="ICLVDEVTM02" duration="00:00:00.0022259" startTime="2013-09-24T11:53:41.9993456+01:00" endTime="2013-09-24T11:53:42.0078467+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5cf27be9-1c68-4345-828f-f5b735737455">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="66e46925-573e-4baa-a08d-34916a40a0a4" testId="62fbdf2e-88f8-1124-e9d6-6f2b028ba869" testName="HouseRebrokeRenewCurrent" computerName="ICLVDEVTM02" duration="00:00:00.0023239" startTime="2013-09-24T11:53:42.0118472+01:00" endTime="2013-09-24T11:53:42.0198482+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="66e46925-573e-4baa-a08d-34916a40a0a4">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="789ea623-108a-46ed-9b5c-72d19dee6b2e" testId="ffca28b1-a49b-3196-65aa-cebac8571ce3" testName="HouseRebrokeRenewExistingScheme" computerName="ICLVDEVTM02" duration="00:00:00.0023552" startTime="2013-09-24T11:53:42.0218485+01:00" endTime="2013-09-24T11:53:42.0323498+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="789ea623-108a-46ed-9b5c-72d19dee6b2e">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5d61fe6f-3e4d-42cf-92c0-67b8ce2b441d" testId="b54caa2e-c0b5-ae92-08ad-7881c99df81b" testName="HouseRebrokeRenewNewScheme" computerName="ICLVDEVTM02" duration="00:00:00.0025624" startTime="2013-09-24T11:53:42.0343501+01:00" endTime="2013-09-24T11:53:42.0528524+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5d61fe6f-3e4d-42cf-92c0-67b8ce2b441d">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9a1ae6cd-4c7c-4470-8d5e-e511a776a657" testId="a117b69c-fc2d-defc-988c-38b2c22b62ba" testName="HouseLapsePolicy" computerName="ICLVDEVTM02" duration="00:00:00.0023119" startTime="2013-09-24T11:53:42.0578531+01:00" endTime="2013-09-24T11:53:42.0658541+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9a1ae6cd-4c7c-4470-8d5e-e511a776a657">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.HouseUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="14022354-9f31-427a-86b6-6b5d4a87f0b7" testId="96a60826-dea1-f77f-fc60-00cd6747296c" testName="MotoCreateQuote" computerName="ICLVDEVTM02" duration="00:00:00.0024914" startTime="2013-09-24T11:53:42.0678543+01:00" endTime="2013-09-24T11:53:42.0773556+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="14022354-9f31-427a-86b6-6b5d4a87f0b7">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c0090abd-8405-4daf-98ec-028346d57c80" testId="3aa144ec-52be-8aa1-dd30-729da149368a" testName="MotoSaveQuoteWithoutPremium" computerName="ICLVDEVTM02" duration="00:00:00.0020020" startTime="2013-09-24T11:53:42.0808560+01:00" endTime="2013-09-24T11:53:42.0873568+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c0090abd-8405-4daf-98ec-028346d57c80">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="66d21504-bd51-4b76-a069-4347781b5901" testId="21ba00c6-09f4-caa5-ac59-791655e24b9d" testName="MotoAWAP" computerName="ICLVDEVTM02" duration="00:00:00.0021191" startTime="2013-09-24T11:53:42.0893571+01:00" endTime="2013-09-24T11:53:42.0953578+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="66d21504-bd51-4b76-a069-4347781b5901">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c46971bc-410b-48bb-a66d-14fee8cbe67a" testId="e7ea3675-20d2-cf0b-af85-2890e55fc37d" testName="MotoOverridePremium" computerName="ICLVDEVTM02" duration="00:00:00.0024465" startTime="2013-09-24T11:53:42.0973581+01:00" endTime="2013-09-24T11:53:42.1038589+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c46971bc-410b-48bb-a66d-14fee8cbe67a">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="96cb7b69-cc7e-468f-9c23-d984e69c5158" testId="75e0255d-1dc3-e4d9-5704-a08715d1f3a6" testName="MotoCopyRiskNew" computerName="ICLVDEVTM02" duration="00:00:00.0067154" startTime="2013-09-24T11:53:42.1058592+01:00" endTime="2013-09-24T11:53:42.1183608+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="96cb7b69-cc7e-468f-9c23-d984e69c5158">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7143a9c1-af00-463f-b7f3-0dd9f683a239" testId="c4938c05-03da-60f7-0f88-e65778d3fa19" testName="MotoCopyRiskQte" computerName="ICLVDEVTM02" duration="00:00:00.0021515" startTime="2013-09-24T11:53:42.1223613+01:00" endTime="2013-09-24T11:53:42.1288621+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7143a9c1-af00-463f-b7f3-0dd9f683a239">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4bb4987c-b503-4ba0-b67f-1f9deb9a00b2" testId="640fd6db-860c-c140-a3d8-d0f055d2eed9" testName="MotoMTAExit" computerName="ICLVDEVTM02" duration="00:00:00.0020661" startTime="2013-09-24T11:53:42.1308623+01:00" endTime="2013-09-24T11:53:42.1378632+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4bb4987c-b503-4ba0-b67f-1f9deb9a00b2">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ea063f33-a162-475a-8303-03398d2b7cc6" testId="6e105339-dc20-c02c-288a-6cce06bb4251" testName="MotoMTAAccept" computerName="ICLVDEVTM02" duration="00:00:00.0021817" startTime="2013-09-24T11:53:42.1428639+01:00" endTime="2013-09-24T11:53:42.1493647+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ea063f33-a162-475a-8303-03398d2b7cc6">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7ef7c9f9-90c2-40c0-9e28-cb9e473197f9" testId="614fe764-f9f9-c1c7-0af0-55b68bb46c8e" testName="MotoCopyMTA" computerName="ICLVDEVTM02" duration="00:00:00.0021963" startTime="2013-09-24T11:53:42.1538653+01:00" endTime="2013-09-24T11:53:42.1598660+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7ef7c9f9-90c2-40c0-9e28-cb9e473197f9">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="70d15d67-1fdd-424f-a31b-cbe26ad247b7" testId="b84b18ae-6912-43dc-1ce8-659e613146c1" testName="MotoMTAtoMTA" computerName="ICLVDEVTM02" duration="00:00:00.0033861" startTime="2013-09-24T11:53:42.1643666+01:00" endTime="2013-09-24T11:53:42.1733677+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="70d15d67-1fdd-424f-a31b-cbe26ad247b7">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="92039079-d885-4d4f-8607-9274e55442bc" testId="e07608a6-4f59-4278-8d59-5e8ddd012acc" testName="MotoCancelExit" computerName="ICLVDEVTM02" duration="00:00:00.0023845" startTime="2013-09-24T11:53:42.1748679+01:00" endTime="2013-09-24T11:53:42.1838691+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="92039079-d885-4d4f-8607-9274e55442bc">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="916dcf5f-438b-45c5-aa5b-bf986836fd17" testId="cc65a43a-9a33-7c83-9bd5-ff01c2ffa61d" testName="MotoCancelAccept" computerName="ICLVDEVTM02" duration="00:00:00.0021464" startTime="2013-09-24T11:53:42.1873695+01:00" endTime="2013-09-24T11:53:42.1943704+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="916dcf5f-438b-45c5-aa5b-bf986836fd17">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f117f704-ac89-4ff3-b79c-c9ce0d4411bf" testId="31988f60-6dd2-d7f1-3544-10a47a577690" testName="MotoRenewalBefore" computerName="ICLVDEVTM02" duration="00:00:00.0020977" startTime="2013-09-24T11:53:42.1968707+01:00" endTime="2013-09-24T11:53:42.2028715+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f117f704-ac89-4ff3-b79c-c9ce0d4411bf">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a20c68f4-0b33-4699-993d-41714527e0bb" testId="576c4cce-f2fa-69e8-ebd1-c09bc0e1c559" testName="MotoRenewalAfter" computerName="ICLVDEVTM02" duration="00:00:00.0021326" startTime="2013-09-24T11:53:42.2063719+01:00" endTime="2013-09-24T11:53:42.2133728+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a20c68f4-0b33-4699-993d-41714527e0bb">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e6d5a4db-fc70-45f2-94e4-0adbb3c719ae" testId="582fc786-fe70-74aa-52dd-24cf380932df" testName="MotoAmendRiskExistingScheme" computerName="ICLVDEVTM02" duration="00:00:00.0020202" startTime="2013-09-24T11:53:42.2153731+01:00" endTime="2013-09-24T11:53:42.2218739+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6d5a4db-fc70-45f2-94e4-0adbb3c719ae">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1870f053-2345-4d2c-836a-a90dee55aeb3" testId="327dc295-46f8-d9eb-d13a-04ac8001804a" testName="MotoAmendRiskNewScheme" computerName="ICLVDEVTM02" duration="00:00:00.0025172" startTime="2013-09-24T11:53:42.2238742+01:00" endTime="2013-09-24T11:53:42.2318752+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1870f053-2345-4d2c-836a-a90dee55aeb3">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="03824997-c888-4e25-97f8-abffb812fd6e" testId="371ed565-7848-460e-53f8-0d5da86a6d95" testName="MotoRebrokeRenewCurrent" computerName="ICLVDEVTM02" duration="00:00:00.0022229" startTime="2013-09-24T11:53:42.2398762+01:00" endTime="2013-09-24T11:53:42.2478772+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03824997-c888-4e25-97f8-abffb812fd6e">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="77320f23-27d8-4078-aa40-fb669d35a3cf" testId="a6b0d3b5-976c-4b22-35f2-21b23c03c32a" testName="MotoRebrokeRenewExistingScheme" computerName="ICLVDEVTM02" duration="00:00:00.0020182" startTime="2013-09-24T11:53:42.2498775+01:00" endTime="2013-09-24T11:53:42.2563783+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77320f23-27d8-4078-aa40-fb669d35a3cf">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bcb1a025-f905-4b02-9fdf-05fe56dce16c" testId="9410f0c0-fb50-f25a-6718-26afc2f3339f" testName="MotoRebrokeRenewNewScheme" computerName="ICLVDEVTM02" duration="00:00:00.0022575" startTime="2013-09-24T11:53:42.2578785+01:00" endTime="2013-09-24T11:53:42.2643793+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bcb1a025-f905-4b02-9fdf-05fe56dce16c">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8abbf672-40b0-4c08-800b-a5bca8cea078" testId="4f35f7f7-c83f-5499-ca6e-3b756d5ad8dd" testName="MotoLapsePolicy" computerName="ICLVDEVTM02" duration="00:00:00.0033703" startTime="2013-09-24T11:53:42.2708801+01:00" endTime="2013-09-24T11:53:42.2788811+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8abbf672-40b0-4c08-800b-a5bca8cea078">
+      <Output>
+        <ErrorInfo>
+          <Message>Error calling Initialization method for test class AppliedSystems.Tam.Ui.Tests.MotoUiTests: System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.SetSkipStepEventName(String skipStepEventName)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.InitPlayback()
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.Initialize()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

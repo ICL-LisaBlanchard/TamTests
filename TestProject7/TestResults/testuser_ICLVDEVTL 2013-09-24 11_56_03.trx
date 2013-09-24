@@ -1,0 +1,850 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="a50c9e94-7698-44ee-a3bc-54423804638d" name="testuser@ICLVDEVTL 2013-09-24 11:56:03" runUser="ICLVDEVTL\testuser" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Remote" id="47e1e203-4706-4ffd-9873-ee9804c8144d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="C:\TamTestsGit\TestProject7\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="testuser_ICLVDEVTL 2013-09-24 11_56_03">
+      <DeploymentItem filename="C:\TestLinkAPI.dll" />
+      <DeploymentItem filename="C:\TamTestsGit\TestProject7\References\itextsharp.dll" />
+    </Deployment>
+    <RemoteController name="ICLVDEVTL" />
+    <Execution location="Remote">
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+      </TestTypeSpecific>
+      <AgentRule name="AllAgentsDefaultRole">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-09-24T11:56:03.0195342+01:00" queuing="2013-09-24T11:56:03.3335656+01:00" start="2013-09-24T11:56:05.4387761+01:00" finish="2013-09-24T12:49:20.0092012+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="39" executed="39" passed="2" error="0" failed="37" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="HouseAmendRiskNewScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="89df0505-7bef-1c84-6aca-37d1506692db">
+      <Execution id="9a22e7ce-02a7-4c54-9f23-076432a837c2" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseAmendRiskNewScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCancelAccept" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="5c9c2876-ef7b-214a-39ca-065818518ce8">
+      <Execution id="a3c3badc-f9fa-42d1-824b-2e4a33daa433" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCancelAccept" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseLapsePolicy" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="a117b69c-fc2d-defc-988c-38b2c22b62ba">
+      <Execution id="528abc65-1821-46cf-8c3d-8af62d2108de" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseLapsePolicy" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCopyMTA" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="e896f84c-ec6c-92c3-3bd8-d41d57aae4bc">
+      <Execution id="03d5794d-9854-4068-a18e-b427349a640f" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCopyMTA" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCancelAccept" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="cc65a43a-9a33-7c83-9bd5-ff01c2ffa61d">
+      <Execution id="03508936-8b5f-4074-b7fa-6610b4efc0ef" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCancelAccept" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseRenewalAfter" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="65dcd85a-ef1f-e29b-3743-f87742e2ed3d">
+      <Execution id="5afea3b8-5148-4919-8561-5126b749bf59" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseRenewalAfter" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoAmendRiskNewScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="327dc295-46f8-d9eb-d13a-04ac8001804a">
+      <Execution id="37545d28-c20f-4cf0-ba13-cf86427f8b4f" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoAmendRiskNewScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoAmendRiskExistingScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="582fc786-fe70-74aa-52dd-24cf380932df">
+      <Execution id="ef9b3f66-f55b-410f-bacb-3acbbf61b802" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoAmendRiskExistingScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCreateQuote" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="96a60826-dea1-f77f-fc60-00cd6747296c">
+      <Execution id="0b412edd-e03d-4650-8860-54f6f7a22cb0" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCreateQuote" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseOverridePremium" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="0896610c-4da4-38c0-ce20-352846d79839">
+      <Execution id="4f63c24b-1fbc-42c8-ba9b-05700dba14b0" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseOverridePremium" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCopyMTA" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="614fe764-f9f9-c1c7-0af0-55b68bb46c8e">
+      <Execution id="2fffbb52-c84a-434d-9f4e-2130f7f7673c" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCopyMTA" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseRebrokeRenewCurrent" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="62fbdf2e-88f8-1124-e9d6-6f2b028ba869">
+      <Execution id="19748a92-697b-46f3-8350-0ef2b0986c50" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseRebrokeRenewCurrent" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCopyRiskQTE" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="36d24d45-f602-15e0-0ca5-89a9133049d8">
+      <Execution id="8f30edec-f211-4603-9f06-c002fde03ff8" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCopyRiskQTE" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCancelExit" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="4d206040-ae1d-2a21-9082-485d3086eaa9">
+      <Execution id="f32f3a5e-a799-41e1-9e7a-714e22b79fd5" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCancelExit" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoAWAP" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="21ba00c6-09f4-caa5-ac59-791655e24b9d">
+      <Execution id="1c4b6226-0e71-46ac-84e8-82e9e209a7f6" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoAWAP" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoRebrokeRenewCurrent" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="371ed565-7848-460e-53f8-0d5da86a6d95">
+      <Execution id="996fd433-e0c3-446b-bdb6-b4c5cd9d0683" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoRebrokeRenewCurrent" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoRenewalBefore" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="31988f60-6dd2-d7f1-3544-10a47a577690">
+      <Execution id="abbec9cb-60ae-4825-aebc-89969fe4bd63" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoRenewalBefore" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseRebrokeRenewNewScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="b54caa2e-c0b5-ae92-08ad-7881c99df81b">
+      <Execution id="594639f5-9ac0-4f49-88f0-8eabfdc2d6c8" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseRebrokeRenewNewScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoRebrokeRenewNewScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="9410f0c0-fb50-f25a-6718-26afc2f3339f">
+      <Execution id="230c3816-1d9b-4ca8-b2d8-d8ddbcfd1943" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoRebrokeRenewNewScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseRenewalBefore" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="84b504ff-9703-f2ac-6d29-56c44a019f4e">
+      <Execution id="a26de58b-dd27-48c7-bf7a-ef9310e9f032" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseRenewalBefore" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseMTAtoMTA" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="a264afa1-312a-8c64-caac-2ca63265fc8a">
+      <Execution id="ed81c8d9-2fb4-43ca-b14b-c157e2e599d4" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseMTAtoMTA" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCopyRiskNew" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="89230cfa-6a19-d3c2-743b-2d2fcea3c803">
+      <Execution id="d1331e63-9a32-4333-be98-0af570cb86b5" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCopyRiskNew" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoOverridePremium" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="e7ea3675-20d2-cf0b-af85-2890e55fc37d">
+      <Execution id="40cb9ba2-c433-4c1e-ab3d-e2b67b0ddb18" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoOverridePremium" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCopyRiskNew" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="75e0255d-1dc3-e4d9-5704-a08715d1f3a6">
+      <Execution id="b5aa051f-fdc9-4501-9f3f-b0b3c10a56a7" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCopyRiskNew" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoRenewalAfter" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="576c4cce-f2fa-69e8-ebd1-c09bc0e1c559">
+      <Execution id="cc4b126f-435c-48a4-8997-9d89f03f3ed6" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoRenewalAfter" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseMTAExit" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="82f80eb4-3d69-14db-4df1-0d43b770c2aa">
+      <Execution id="b35f1cfa-d3d6-48fc-ad77-ce88a938a140" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseMTAExit" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseAmendRiskExistingScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="8325e849-00cb-74b8-f092-b233e3af24b2">
+      <Execution id="75f78133-ef72-402f-8ca9-9345eb887440" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseAmendRiskExistingScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseCreateQuote" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="860b3117-58e1-faeb-5039-5d480603d3e0">
+      <Execution id="71037958-7b62-4326-9ce0-9a46352fb39f" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseCreateQuote" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoMTAExit" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="640fd6db-860c-c140-a3d8-d0f055d2eed9">
+      <Execution id="4b939930-6365-4ac8-81ca-0bcec3f09935" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoMTAExit" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCopyRiskQte" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="c4938c05-03da-60f7-0f88-e65778d3fa19">
+      <Execution id="a36a878d-6ba0-4650-9ea0-fb62ed6c6714" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCopyRiskQte" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseRebrokeRenewExistingScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="ffca28b1-a49b-3196-65aa-cebac8571ce3">
+      <Execution id="421605de-13d3-4112-b48e-c30ab8e3817d" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseRebrokeRenewExistingScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoLapsePolicy" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="4f35f7f7-c83f-5499-ca6e-3b756d5ad8dd">
+      <Execution id="8d1efcba-f7ff-4555-9472-c96cacccb445" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoLapsePolicy" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseMTAAccept" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="ba26e76f-de14-32e4-8ac8-5df322f1fd27">
+      <Execution id="24f158fe-7ff9-406c-8fb2-74d754e78bb2" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseMTAAccept" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoRebrokeRenewExistingScheme" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="a6b0d3b5-976c-4b22-35f2-21b23c03c32a">
+      <Execution id="74b216c8-1dcd-4f1c-bf3c-ae5a24004f17" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoRebrokeRenewExistingScheme" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoMTAtoMTA" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="b84b18ae-6912-43dc-1ce8-659e613146c1">
+      <Execution id="a7a2d0bf-0f3c-434c-bc61-950309027d8d" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoMTAtoMTA" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoSaveQuoteWithoutPremium" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="3aa144ec-52be-8aa1-dd30-729da149368a">
+      <Execution id="d2c1094e-f80e-4c36-8a6c-cf7e524567b6" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoSaveQuoteWithoutPremium" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoMTAAccept" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="6e105339-dc20-c02c-288a-6cce06bb4251">
+      <Execution id="63de3d97-6fa9-4e93-a5e8-91d94abe206a" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoMTAAccept" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="HouseSaveQuoteWithoutPremium" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="23806c32-26a6-baf2-e67c-b2710d259613">
+      <Execution id="3dfbe84f-690d-4ded-b030-30d41cce67e7" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.HouseUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HouseSaveQuoteWithoutPremium" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+    <UnitTest name="MotoCancelExit" storage="c:\tamtestsgit\testproject7\bin\debug\appliedsystems.tam.ui.tests.dll" id="e07608a6-4f59-4278-8d59-5e8ddd012acc">
+      <Execution id="8e2551f8-6b9b-4771-8db2-77abf205fdf5" />
+      <TestMethod codeBase="C:/TamTestsGit/TestProject7/bin/Debug/AppliedSystems.Tam.Ui.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AppliedSystems.Tam.Ui.Tests.MotoUiTests, AppliedSystems.Tam.Ui.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MotoCancelExit" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="a264afa1-312a-8c64-caac-2ca63265fc8a" executionId="ed81c8d9-2fb4-43ca-b14b-c157e2e599d4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8325e849-00cb-74b8-f092-b233e3af24b2" executionId="75f78133-ef72-402f-8ca9-9345eb887440" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffca28b1-a49b-3196-65aa-cebac8571ce3" executionId="421605de-13d3-4112-b48e-c30ab8e3817d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4f35f7f7-c83f-5499-ca6e-3b756d5ad8dd" executionId="8d1efcba-f7ff-4555-9472-c96cacccb445" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9410f0c0-fb50-f25a-6718-26afc2f3339f" executionId="230c3816-1d9b-4ca8-b2d8-d8ddbcfd1943" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4d206040-ae1d-2a21-9082-485d3086eaa9" executionId="f32f3a5e-a799-41e1-9e7a-714e22b79fd5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89df0505-7bef-1c84-6aca-37d1506692db" executionId="9a22e7ce-02a7-4c54-9f23-076432a837c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ba26e76f-de14-32e4-8ac8-5df322f1fd27" executionId="24f158fe-7ff9-406c-8fb2-74d754e78bb2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc65a43a-9a33-7c83-9bd5-ff01c2ffa61d" executionId="03508936-8b5f-4074-b7fa-6610b4efc0ef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="75e0255d-1dc3-e4d9-5704-a08715d1f3a6" executionId="b5aa051f-fdc9-4501-9f3f-b0b3c10a56a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e896f84c-ec6c-92c3-3bd8-d41d57aae4bc" executionId="03d5794d-9854-4068-a18e-b427349a640f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0896610c-4da4-38c0-ce20-352846d79839" executionId="4f63c24b-1fbc-42c8-ba9b-05700dba14b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e7ea3675-20d2-cf0b-af85-2890e55fc37d" executionId="40cb9ba2-c433-4c1e-ab3d-e2b67b0ddb18" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="614fe764-f9f9-c1c7-0af0-55b68bb46c8e" executionId="2fffbb52-c84a-434d-9f4e-2130f7f7673c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b84b18ae-6912-43dc-1ce8-659e613146c1" executionId="a7a2d0bf-0f3c-434c-bc61-950309027d8d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5c9c2876-ef7b-214a-39ca-065818518ce8" executionId="a3c3badc-f9fa-42d1-824b-2e4a33daa433" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="84b504ff-9703-f2ac-6d29-56c44a019f4e" executionId="a26de58b-dd27-48c7-bf7a-ef9310e9f032" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b54caa2e-c0b5-ae92-08ad-7881c99df81b" executionId="594639f5-9ac0-4f49-88f0-8eabfdc2d6c8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="576c4cce-f2fa-69e8-ebd1-c09bc0e1c559" executionId="cc4b126f-435c-48a4-8997-9d89f03f3ed6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="82f80eb4-3d69-14db-4df1-0d43b770c2aa" executionId="b35f1cfa-d3d6-48fc-ad77-ce88a938a140" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="23806c32-26a6-baf2-e67c-b2710d259613" executionId="3dfbe84f-690d-4ded-b030-30d41cce67e7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a6b0d3b5-976c-4b22-35f2-21b23c03c32a" executionId="74b216c8-1dcd-4f1c-bf3c-ae5a24004f17" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="371ed565-7848-460e-53f8-0d5da86a6d95" executionId="996fd433-e0c3-446b-bdb6-b4c5cd9d0683" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6e105339-dc20-c02c-288a-6cce06bb4251" executionId="63de3d97-6fa9-4e93-a5e8-91d94abe206a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e07608a6-4f59-4278-8d59-5e8ddd012acc" executionId="8e2551f8-6b9b-4771-8db2-77abf205fdf5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a117b69c-fc2d-defc-988c-38b2c22b62ba" executionId="528abc65-1821-46cf-8c3d-8af62d2108de" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="62fbdf2e-88f8-1124-e9d6-6f2b028ba869" executionId="19748a92-697b-46f3-8350-0ef2b0986c50" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="31988f60-6dd2-d7f1-3544-10a47a577690" executionId="abbec9cb-60ae-4825-aebc-89969fe4bd63" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89230cfa-6a19-d3c2-743b-2d2fcea3c803" executionId="d1331e63-9a32-4333-be98-0af570cb86b5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="327dc295-46f8-d9eb-d13a-04ac8001804a" executionId="37545d28-c20f-4cf0-ba13-cf86427f8b4f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="640fd6db-860c-c140-a3d8-d0f055d2eed9" executionId="4b939930-6365-4ac8-81ca-0bcec3f09935" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="36d24d45-f602-15e0-0ca5-89a9133049d8" executionId="8f30edec-f211-4603-9f06-c002fde03ff8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3aa144ec-52be-8aa1-dd30-729da149368a" executionId="d2c1094e-f80e-4c36-8a6c-cf7e524567b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="21ba00c6-09f4-caa5-ac59-791655e24b9d" executionId="1c4b6226-0e71-46ac-84e8-82e9e209a7f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="582fc786-fe70-74aa-52dd-24cf380932df" executionId="ef9b3f66-f55b-410f-bacb-3acbbf61b802" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="65dcd85a-ef1f-e29b-3743-f87742e2ed3d" executionId="5afea3b8-5148-4919-8561-5126b749bf59" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="96a60826-dea1-f77f-fc60-00cd6747296c" executionId="0b412edd-e03d-4650-8860-54f6f7a22cb0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c4938c05-03da-60f7-0f88-e65778d3fa19" executionId="a36a878d-6ba0-4650-9ea0-fb62ed6c6714" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="860b3117-58e1-faeb-5039-5d480603d3e0" executionId="71037958-7b62-4326-9ce0-9a46352fb39f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="ed81c8d9-2fb4-43ca-b14b-c157e2e599d4" testId="a264afa1-312a-8c64-caac-2ca63265fc8a" testName="HouseMTAtoMTA" computerName="ICLVDEVTM02" duration="00:07:27.3366893" startTime="2013-09-24T11:54:45.3208865+01:00" endTime="2013-09-24T12:02:13.4947973+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed81c8d9-2fb4-43ca-b14b-c157e2e599d4">
+    </UnitTestResult>
+    <UnitTestResult executionId="75f78133-ef72-402f-8ca9-9345eb887440" testId="8325e849-00cb-74b8-f092-b233e3af24b2" testName="HouseAmendRiskExistingScheme" computerName="ICLVDEVTM02" duration="00:13:15.4422499" startTime="2013-09-24T12:02:13.5648062+01:00" endTime="2013-09-24T12:15:29.5483833+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="75f78133-ef72-402f-8ca9-9345eb887440">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method AppliedSystems.Tam.Ui.Tests.HouseUiTests.HouseAmendRiskExistingScheme threw exception: 
+Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotAvailableException: The control is not available or not valid. Additional Details: 
+TechnologyName:  'MSAA'
+Name:  'Tamxml7'
+ClassName:  'TMessageForm'
+ControlType:  'Window'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindFromPartialQueryId(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.EnsureValid(Boolean waitForReady, Boolean refetch)
+ --- End of inner exception stack trace ---
+    at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.EnsureValid(Boolean waitForReady, Boolean refetch)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindFirstDescendant(String queryId, Int32 maxDepth, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetElement(Boolean useCache, ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.Search(ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindInternal()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindControlIfNecessary()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click(UITestControl control)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.SelectTamInsurersAndActivity(Boolean isMTA, String whoToSelect, Boolean onlyOnce, Int32 selectListItems1, Int32 selectListItems2) in C:\TamTestsGit\TestProject7\UIMap.cs:line 1865
+   at AppliedSystems.Tam.Ui.Tests.HouseActions.HomeAmendRenew() in C:\TamTestsGit\TestProject7\HouseActions.cs:line 1207
+   at AppliedSystems.Tam.Ui.Tests.HouseUiTests.HouseAmendRiskExistingScheme() in C:\TamTestsGit\TestProject7\HouseUiTests.cs:line 409
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="ICLVDEVTM02\HouseAmendRiskExistingScheme.png" />
+      </ResultFiles>
+      <ExtensionResult>Exception has been thrown by the target of an invocation.</ExtensionResult>
+    </UnitTestResult>
+    <UnitTestResult executionId="421605de-13d3-4112-b48e-c30ab8e3817d" testId="ffca28b1-a49b-3196-65aa-cebac8571ce3" testName="HouseRebrokeRenewExistingScheme" computerName="ICLVDEVTM02" duration="00:11:50.9968595" startTime="2013-09-24T12:15:29.6083909+01:00" endTime="2013-09-24T12:27:21.0352306+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="421605de-13d3-4112-b48e-c30ab8e3817d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method AppliedSystems.Tam.Ui.Tests.HouseUiTests.HouseRebrokeRenewExistingScheme threw exception: 
+Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotAvailableException: The control is not available or not valid. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Window'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindFromPartialQueryId(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.EnsureValid(Boolean waitForReady, Boolean refetch)
+ --- End of inner exception stack trace ---
+    at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.EnsureValid(Boolean waitForReady, Boolean refetch)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindFirstDescendant(String queryId, Int32 maxDepth, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetElement(Boolean useCache, ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.Search(ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindInternal()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindControlIfNecessary()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click(UITestControl control)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.SelectTamInsurersAndActivity(Boolean isMTA, String whoToSelect, Boolean onlyOnce, Int32 selectListItems1, Int32 selectListItems2) in C:\TamTestsGit\TestProject7\UIMap.cs:line 1865
+   at AppliedSystems.Tam.Ui.Tests.UIMap.RebrokeAlternativeRenew1() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1555
+   at AppliedSystems.Tam.Ui.Tests.HouseUiTests.HouseRebrokeRenewExistingScheme() in C:\TamTestsGit\TestProject7\HouseUiTests.cs:line 541
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="ICLVDEVTM02\HouseRebrokeRenewExistingScheme.png" />
+      </ResultFiles>
+      <ExtensionResult>Exception has been thrown by the target of an invocation.</ExtensionResult>
+    </UnitTestResult>
+    <UnitTestResult executionId="8d1efcba-f7ff-4555-9472-c96cacccb445" testId="4f35f7f7-c83f-5499-ca6e-3b756d5ad8dd" testName="MotoLapsePolicy" computerName="ICLVDEVTM02" duration="00:03:15.8129156" startTime="2013-09-24T12:27:21.2102529+01:00" endTime="2013-09-24T12:30:37.3916647+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8d1efcba-f7ff-4555-9472-c96cacccb445">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method AppliedSystems.Tam.Ui.Tests.MotoUiTests.MotoLapsePolicy threw exception: 
+Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotFoundException: The playback failed to find the control with the given search properties. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Button'
+Name:  'Accept'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IScreenElement.FindAllDescendants(String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindAllScreenElement(String queryId, Int32 depth, Boolean singleQueryId, Boolean throwException)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindScreenElement(String queryId, Int32 depth)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindFirstDescendant(String queryId, Int32 maxDepth, Int32&amp; timeLeft)
+ --- End of inner exception stack trace ---
+    at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapControlNotFoundException(COMException ex, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowComException(COMException innerException, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindFirstDescendant(String queryId, Int32 maxDepth, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetElement(Boolean useCache, ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.Search(ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindInternal()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindControlIfNecessary()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click(UITestControl control, Point relativeCoordinate)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.AcceptQuote() in C:\TamTestsGit\TestProject7\UIMap.cs:line 641
+   at AppliedSystems.Tam.Ui.Tests.MotoUiTests.AcceptAndFinishQuote() in C:\TamTestsGit\TestProject7\MotoUITests.cs:line 599
+   at AppliedSystems.Tam.Ui.Tests.MotoUiTests.MotoLapsePolicy() in C:\TamTestsGit\TestProject7\MotoUITests.cs:line 569
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="ICLVDEVTM02\MotoLapsePolicy.png" />
+      </ResultFiles>
+      <ExtensionResult>Exception has been thrown by the target of an invocation.</ExtensionResult>
+    </UnitTestResult>
+    <UnitTestResult executionId="230c3816-1d9b-4ca8-b2d8-d8ddbcfd1943" testId="9410f0c0-fb50-f25a-6718-26afc2f3339f" testName="MotoRebrokeRenewNewScheme" computerName="ICLVDEVTM02" duration="00:02:16.9936965" startTime="2013-09-24T12:30:37.4041663+01:00" endTime="2013-09-24T12:32:54.4205652+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="230c3816-1d9b-4ca8-b2d8-d8ddbcfd1943">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method AppliedSystems.Tam.Ui.Tests.MotoUiTests.MotoRebrokeRenewNewScheme threw exception: 
+Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotFoundException: Unable to find the top level element of the control ---&gt; Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotFoundException: The playback failed to find the control with the given search properties. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Window'
+Name:  'Personal Lines'
+ClassName:  '#32770'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindFromPartialQueryId(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+ --- End of inner exception stack trace ---
+    at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapControlNotFoundException(COMException ex, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowComException(COMException innerException, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl..ctor(String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.SearchTopLevelWindow(ISearchArgument topLevelSearchArg, String topLevelElementQueryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.SearchUsingMultipleTitles(ISearchArgument topLevelSearchArg, QueryId topLevelQueryId, IList`1 windowTitles)
+ --- End of inner exception stack trace ---
+    at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.SearchUsingMultipleTitles(ISearchArgument topLevelSearchArg, QueryId topLevelQueryId, IList`1 windowTitles)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTitleUpdatedTopLevelWindow(ISearchArgument topLevelSearchArg, String queryId, IList`1 windowTitles)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetTopLevelElement(Boolean useCache, Boolean useCacheOnly, ISearchArgument searchArg, IList`1 windowTitles, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetElement(Boolean useCache, ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.Search(ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindInternal()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindControlIfNecessary()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click(UITestControl control, Point relativeCoordinate)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.FinishQuote() in C:\TamTestsGit\TestProject7\UIMap.cs:line 714
+   at AppliedSystems.Tam.Ui.Tests.MotoUiTests.AcceptAndFinishQuote() in C:\TamTestsGit\TestProject7\MotoUITests.cs:line 600
+   at AppliedSystems.Tam.Ui.Tests.MotoUiTests.MotoRebrokeRenewNewScheme() in C:\TamTestsGit\TestProject7\MotoUITests.cs:line 529
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="ICLVDEVTM02\MotoRebrokeRenewNewScheme.png" />
+      </ResultFiles>
+      <ExtensionResult>Exception has been thrown by the target of an invocation.</ExtensionResult>
+    </UnitTestResult>
+    <UnitTestResult executionId="f32f3a5e-a799-41e1-9e7a-714e22b79fd5" testId="4d206040-ae1d-2a21-9082-485d3086eaa9" testName="HouseCancelExit" computerName="ICLVDEVTM02" duration="00:04:26.8806684" startTime="2013-09-24T12:32:54.4430681+01:00" endTime="2013-09-24T12:37:21.3614624+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f32f3a5e-a799-41e1-9e7a-714e22b79fd5">
+    </UnitTestResult>
+    <UnitTestResult executionId="9a22e7ce-02a7-4c54-9f23-076432a837c2" testId="89df0505-7bef-1c84-6aca-37d1506692db" testName="HouseAmendRiskNewScheme" computerName="ICLVDEVTM02" duration="00:10:29.2228911" startTime="2013-09-24T12:37:21.4074682+01:00" endTime="2013-09-24T12:47:50.8398960+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9a22e7ce-02a7-4c54-9f23-076432a837c2">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method AppliedSystems.Tam.Ui.Tests.HouseUiTests.HouseAmendRiskNewScheme threw exception: 
+Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotFoundException: The playback failed to find the control with the given search properties. Additional Details: 
+TechnologyName:  'MSAA'
+ControlType:  'Button'
+Name:  'OK'
+ ---&gt; System.Runtime.InteropServices.COMException: Error HRESULT E_FAIL has been returned from a call to a COM component.</Message>
+          <StackTrace>    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IScreenElement.FindAllDescendants(String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindAllScreenElement(String queryId, Int32 depth, Boolean singleQueryId, Boolean throwException)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindScreenElement(String queryId, Int32 depth)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindFirstDescendant(String queryId, Int32 maxDepth, Int32&amp; timeLeft)
+ --- End of inner exception stack trace ---
+    at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapControlNotFoundException(COMException ex, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowComException(COMException innerException, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, IPlaybackContext context)
+   at Microsoft.VisualStudio.TestTools.UITesting.Playback.MapAndThrowException(SystemException exception, String queryId)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindFirstDescendant(String queryId, Int32 maxDepth, Int32&amp; timeLeft)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.GetElement(Boolean useCache, ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.SearchHelper.Search(ISearchArgument searchArg)
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindInternal()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FindControlIfNecessary()
+   at Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Click(MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinates)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementation(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.ClickImplementationWrapper(UITestControl control, MouseButtons button, ModifierKeys modifierKeys, Point relativeCoordinate)
+   at Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click(UITestControl control)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.OpenAttachment() in C:\TamTestsGit\TestProject7\UIMap.cs:line 2177
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CheckPremiumInPdfProposal(Double premium) in C:\TamTestsGit\TestProject7\UIMap.cs:line 2095
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CheckPremiumInQuoteDocument(List`1 expectedDocs, Double overridePremium, Double originalPremium) in C:\TamTestsGit\TestProject7\UIMap.cs:line 2035
+   at AppliedSystems.Tam.Ui.Tests.HouseUiTests.HouseAmendRiskNewScheme() in C:\TamTestsGit\TestProject7\HouseUiTests.cs:line 449
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="ICLVDEVTM02\HouseAmendRiskNewScheme.png" />
+      </ResultFiles>
+      <ExtensionResult>Exception has been thrown by the target of an invocation.</ExtensionResult>
+    </UnitTestResult>
+    <UnitTestResult executionId="24f158fe-7ff9-406c-8fb2-74d754e78bb2" testId="ba26e76f-de14-32e4-8ac8-5df322f1fd27" testName="HouseMTAAccept" computerName="ICLVDEVTM02" duration="00:00:00.7058943" startTime="2013-09-24T12:47:50.9554107+01:00" endTime="2013-09-24T12:47:51.9845414+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24f158fe-7ff9-406c-8fb2-74d754e78bb2">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="03508936-8b5f-4074-b7fa-6610b4efc0ef" testId="cc65a43a-9a33-7c83-9bd5-ff01c2ffa61d" testName="MotoCancelAccept" computerName="ICLVDEVTM02" duration="00:00:00.0529607" startTime="2013-09-24T12:47:51.9895420+01:00" endTime="2013-09-24T12:47:52.0595509+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03508936-8b5f-4074-b7fa-6610b4efc0ef">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b5aa051f-fdc9-4501-9f3f-b0b3c10a56a7" testId="75e0255d-1dc3-e4d9-5704-a08715d1f3a6" testName="MotoCopyRiskNew" computerName="ICLVDEVTM02" duration="00:00:00.1136073" startTime="2013-09-24T12:47:52.0670518+01:00" endTime="2013-09-24T12:47:52.1850668+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b5aa051f-fdc9-4501-9f3f-b0b3c10a56a7">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="03d5794d-9854-4068-a18e-b427349a640f" testId="e896f84c-ec6c-92c3-3bd8-d41d57aae4bc" testName="HouseCopyMTA" computerName="ICLVDEVTM02" duration="00:00:00.1187309" startTime="2013-09-24T12:47:52.1925678+01:00" endTime="2013-09-24T12:47:52.3190838+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03d5794d-9854-4068-a18e-b427349a640f">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4f63c24b-1fbc-42c8-ba9b-05700dba14b0" testId="0896610c-4da4-38c0-ce20-352846d79839" testName="HouseOverridePremium" computerName="ICLVDEVTM02" duration="00:00:00.2406228" startTime="2013-09-24T12:47:52.3255847+01:00" endTime="2013-09-24T12:47:52.5871179+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4f63c24b-1fbc-42c8-ba9b-05700dba14b0">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="40cb9ba2-c433-4c1e-ab3d-e2b67b0ddb18" testId="e7ea3675-20d2-cf0b-af85-2890e55fc37d" testName="MotoOverridePremium" computerName="ICLVDEVTM02" duration="00:00:00.0583576" startTime="2013-09-24T12:47:52.5936187+01:00" endTime="2013-09-24T12:47:52.6611273+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="40cb9ba2-c433-4c1e-ab3d-e2b67b0ddb18">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2fffbb52-c84a-434d-9f4e-2130f7f7673c" testId="614fe764-f9f9-c1c7-0af0-55b68bb46c8e" testName="MotoCopyMTA" computerName="ICLVDEVTM02" duration="00:00:00.0572253" startTime="2013-09-24T12:47:52.6686282+01:00" endTime="2013-09-24T12:47:52.7331364+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2fffbb52-c84a-434d-9f4e-2130f7f7673c">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a7a2d0bf-0f3c-434c-bc61-950309027d8d" testId="b84b18ae-6912-43dc-1ce8-659e613146c1" testName="MotoMTAtoMTA" computerName="ICLVDEVTM02" duration="00:00:00.0646275" startTime="2013-09-24T12:47:52.7411374+01:00" endTime="2013-09-24T12:47:52.8111463+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a7a2d0bf-0f3c-434c-bc61-950309027d8d">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a3c3badc-f9fa-42d1-824b-2e4a33daa433" testId="5c9c2876-ef7b-214a-39ca-065818518ce8" testName="HouseCancelAccept" computerName="ICLVDEVTM02" duration="00:00:00.0290755" startTime="2013-09-24T12:47:52.8301487+01:00" endTime="2013-09-24T12:47:52.9401627+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a3c3badc-f9fa-42d1-824b-2e4a33daa433">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a26de58b-dd27-48c7-bf7a-ef9310e9f032" testId="84b504ff-9703-f2ac-6d29-56c44a019f4e" testName="HouseRenewalBefore" computerName="ICLVDEVTM02" duration="00:00:00.0477105" startTime="2013-09-24T12:47:52.9591651+01:00" endTime="2013-09-24T12:47:53.0166724+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a26de58b-dd27-48c7-bf7a-ef9310e9f032">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="594639f5-9ac0-4f49-88f0-8eabfdc2d6c8" testId="b54caa2e-c0b5-ae92-08ad-7881c99df81b" testName="HouseRebrokeRenewNewScheme" computerName="ICLVDEVTM02" duration="00:00:00.0333059" startTime="2013-09-24T12:47:53.0251735+01:00" endTime="2013-09-24T12:47:53.0661787+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="594639f5-9ac0-4f49-88f0-8eabfdc2d6c8">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="cc4b126f-435c-48a4-8997-9d89f03f3ed6" testId="576c4cce-f2fa-69e8-ebd1-c09bc0e1c559" testName="MotoRenewalAfter" computerName="ICLVDEVTM02" duration="00:00:00.0404406" startTime="2013-09-24T12:47:53.0736797+01:00" endTime="2013-09-24T12:47:53.1181853+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cc4b126f-435c-48a4-8997-9d89f03f3ed6">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b35f1cfa-d3d6-48fc-ad77-ce88a938a140" testId="82f80eb4-3d69-14db-4df1-0d43b770c2aa" testName="HouseMTAExit" computerName="ICLVDEVTM02" duration="00:00:00.0464030" startTime="2013-09-24T12:47:53.1256863+01:00" endTime="2013-09-24T12:47:53.1871941+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b35f1cfa-d3d6-48fc-ad77-ce88a938a140">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3dfbe84f-690d-4ded-b030-30d41cce67e7" testId="23806c32-26a6-baf2-e67c-b2710d259613" testName="HouseSaveQuoteWithoutPremium" computerName="ICLVDEVTM02" duration="00:00:00.0543931" startTime="2013-09-24T12:47:53.1996957+01:00" endTime="2013-09-24T12:47:53.2642038+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3dfbe84f-690d-4ded-b030-30d41cce67e7">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="74b216c8-1dcd-4f1c-bf3c-ae5a24004f17" testId="a6b0d3b5-976c-4b22-35f2-21b23c03c32a" testName="MotoRebrokeRenewExistingScheme" computerName="ICLVDEVTM02" duration="00:00:00.0428449" startTime="2013-09-24T12:47:53.2897071+01:00" endTime="2013-09-24T12:47:53.3407136+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="74b216c8-1dcd-4f1c-bf3c-ae5a24004f17">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="996fd433-e0c3-446b-bdb6-b4c5cd9d0683" testId="371ed565-7848-460e-53f8-0d5da86a6d95" testName="MotoRebrokeRenewCurrent" computerName="ICLVDEVTM02" duration="00:00:00.0432703" startTime="2013-09-24T12:47:53.3557155+01:00" endTime="2013-09-24T12:47:53.4047217+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="996fd433-e0c3-446b-bdb6-b4c5cd9d0683">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="63de3d97-6fa9-4e93-a5e8-91d94abe206a" testId="6e105339-dc20-c02c-288a-6cce06bb4251" testName="MotoMTAAccept" computerName="ICLVDEVTM02" duration="00:00:00.0328115" startTime="2013-09-24T12:47:53.4132228+01:00" endTime="2013-09-24T12:47:53.4562282+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="63de3d97-6fa9-4e93-a5e8-91d94abe206a">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8e2551f8-6b9b-4771-8db2-77abf205fdf5" testId="e07608a6-4f59-4278-8d59-5e8ddd012acc" testName="MotoCancelExit" computerName="ICLVDEVTM02" duration="00:00:00.0358105" startTime="2013-09-24T12:47:53.4687298+01:00" endTime="2013-09-24T12:47:53.5117353+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8e2551f8-6b9b-4771-8db2-77abf205fdf5">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="528abc65-1821-46cf-8c3d-8af62d2108de" testId="a117b69c-fc2d-defc-988c-38b2c22b62ba" testName="HouseLapsePolicy" computerName="ICLVDEVTM02" duration="00:00:00.0538671" startTime="2013-09-24T12:47:53.5282374+01:00" endTime="2013-09-24T12:47:53.5952459+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="528abc65-1821-46cf-8c3d-8af62d2108de">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="19748a92-697b-46f3-8350-0ef2b0986c50" testId="62fbdf2e-88f8-1124-e9d6-6f2b028ba869" testName="HouseRebrokeRenewCurrent" computerName="ICLVDEVTM02" duration="00:00:00.0369340" startTime="2013-09-24T12:47:53.6017467+01:00" endTime="2013-09-24T12:47:53.6432520+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="19748a92-697b-46f3-8350-0ef2b0986c50">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="abbec9cb-60ae-4825-aebc-89969fe4bd63" testId="31988f60-6dd2-d7f1-3544-10a47a577690" testName="MotoRenewalBefore" computerName="ICLVDEVTM02" duration="00:00:00.0354434" startTime="2013-09-24T12:47:53.6497528+01:00" endTime="2013-09-24T12:47:53.6912581+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="abbec9cb-60ae-4825-aebc-89969fe4bd63">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d1331e63-9a32-4333-be98-0af570cb86b5" testId="89230cfa-6a19-d3c2-743b-2d2fcea3c803" testName="HouseCopyRiskNew" computerName="ICLVDEVTM02" duration="00:00:00.0432423" startTime="2013-09-24T12:47:53.6997592+01:00" endTime="2013-09-24T12:47:53.7487654+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d1331e63-9a32-4333-be98-0af570cb86b5">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="37545d28-c20f-4cf0-ba13-cf86427f8b4f" testId="327dc295-46f8-d9eb-d13a-04ac8001804a" testName="MotoAmendRiskNewScheme" computerName="ICLVDEVTM02" duration="00:00:00.0287662" startTime="2013-09-24T12:47:53.7582666+01:00" endTime="2013-09-24T12:47:53.7967715+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="37545d28-c20f-4cf0-ba13-cf86427f8b4f">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4b939930-6365-4ac8-81ca-0bcec3f09935" testId="640fd6db-860c-c140-a3d8-d0f055d2eed9" testName="MotoMTAExit" computerName="ICLVDEVTM02" duration="00:00:00.0281505" startTime="2013-09-24T12:47:53.8017721+01:00" endTime="2013-09-24T12:47:53.8347763+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4b939930-6365-4ac8-81ca-0bcec3f09935">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8f30edec-f211-4603-9f06-c002fde03ff8" testId="36d24d45-f602-15e0-0ca5-89a9133049d8" testName="HouseCopyRiskQTE" computerName="ICLVDEVTM02" duration="00:00:00.0274458" startTime="2013-09-24T12:47:53.8407771+01:00" endTime="2013-09-24T12:47:53.8737813+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8f30edec-f211-4603-9f06-c002fde03ff8">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d2c1094e-f80e-4c36-8a6c-cf7e524567b6" testId="3aa144ec-52be-8aa1-dd30-729da149368a" testName="MotoSaveQuoteWithoutPremium" computerName="ICLVDEVTM02" duration="00:00:00.0263466" startTime="2013-09-24T12:47:53.8787819+01:00" endTime="2013-09-24T12:47:53.9112860+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2c1094e-f80e-4c36-8a6c-cf7e524567b6">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1c4b6226-0e71-46ac-84e8-82e9e209a7f6" testId="21ba00c6-09f4-caa5-ac59-791655e24b9d" testName="MotoAWAP" computerName="ICLVDEVTM02" duration="00:00:00.0300381" startTime="2013-09-24T12:47:53.9182869+01:00" endTime="2013-09-24T12:47:53.9547915+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1c4b6226-0e71-46ac-84e8-82e9e209a7f6">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ef9b3f66-f55b-410f-bacb-3acbbf61b802" testId="582fc786-fe70-74aa-52dd-24cf380932df" testName="MotoAmendRiskExistingScheme" computerName="ICLVDEVTM02" duration="00:00:00.0313987" startTime="2013-09-24T12:47:53.9612924+01:00" endTime="2013-09-24T12:47:53.9972969+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ef9b3f66-f55b-410f-bacb-3acbbf61b802">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5afea3b8-5148-4919-8561-5126b749bf59" testId="65dcd85a-ef1f-e29b-3743-f87742e2ed3d" testName="HouseRenewalAfter" computerName="ICLVDEVTM02" duration="00:00:00.0289307" startTime="2013-09-24T12:47:54.0037978+01:00" endTime="2013-09-24T12:47:54.0388022+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5afea3b8-5148-4919-8561-5126b749bf59">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0b412edd-e03d-4650-8860-54f6f7a22cb0" testId="96a60826-dea1-f77f-fc60-00cd6747296c" testName="MotoCreateQuote" computerName="ICLVDEVTM02" duration="00:00:00.0278415" startTime="2013-09-24T12:47:54.0438028+01:00" endTime="2013-09-24T12:47:54.0778072+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0b412edd-e03d-4650-8860-54f6f7a22cb0">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a36a878d-6ba0-4650-9ea0-fb62ed6c6714" testId="c4938c05-03da-60f7-0f88-e65778d3fa19" testName="MotoCopyRiskQte" computerName="ICLVDEVTM02" duration="00:00:00.0278537" startTime="2013-09-24T12:47:54.0853081+01:00" endTime="2013-09-24T12:47:54.1178122+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a36a878d-6ba0-4650-9ea0-fb62ed6c6714">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.MotoUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="71037958-7b62-4326-9ce0-9a46352fb39f" testId="860b3117-58e1-faeb-5039-5d480603d3e0" testName="HouseCreateQuote" computerName="ICLVDEVTM02" duration="00:00:00.0272394" startTime="2013-09-24T12:47:54.1243131+01:00" endTime="2013-09-24T12:47:54.1603176+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="71037958-7b62-4326-9ce0-9a46352fb39f">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method AppliedSystems.Tam.Ui.Tests.HouseUiTests.StartTest threw exception. System.IO.IOException: System.IO.IOException: The process cannot access the file 'C:\Users\testuser\AppData\Local\Temp\201309~1.pdf' because it is being used by another process..</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at AppliedSystems.Tam.Ui.Tests.UIMap.CleanDocuments() in C:\TamTestsGit\TestProject7\UIMap.cs:line 1968
+   at AppliedSystems.Tam.Ui.Tests.BaseUiTest.StartTest() in C:\TamTestsGit\TestProject7\BaseUITest.cs:line 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
