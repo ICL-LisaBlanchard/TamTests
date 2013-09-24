@@ -19,7 +19,7 @@
         [TestMethod]
         public void TestMethod1()
         {
-            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRenewalCurrent, originalPremium: double.Parse("3052.80"));
+            this.House.SelectPolicyQuote();
         }
     }
 }
