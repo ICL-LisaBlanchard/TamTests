@@ -1113,10 +1113,8 @@
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIOKButton2, new Point(46, 16));
-
-            Mouse.Click(uIOKButton3, new Point(47, 24));
-
-            this.SelectTamInsurersAndActivity(selectListItems1: 2);
+         
+            this.SelectTamInsurersAndActivity(selectListItems1: 3);
         }
 
         public void RenewalModuleRenew()
