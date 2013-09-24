@@ -535,15 +535,7 @@
         public void CloseBrowser()
         {
             Playback.PlaybackSettings.ContinueOnError = true;
-            try
-            {
-Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
-            }
-            catch (Exception)
-            {
-    
-            }
-            
+            Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
             Playback.PlaybackSettings.ContinueOnError = false;
         }
 
@@ -698,7 +690,11 @@ Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
 
             Mouse.Click(uIQuoteResultsClient, new Point(30, 30));
 
+            Playback.Wait(1000);
+
             Mouse.Move(new Point(500, 500));
+
+            Playback.Wait(1000);
         }
 
         /// <summary>
@@ -1503,6 +1499,7 @@ Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
 
         public string CheckPolicyPremium()
         {
+            HighlightBillingScreen();
             WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
 
             Assert.AreNotEqual("0.00", uIItemEdit.Text);
@@ -2097,7 +2094,7 @@ Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
         {
             this.OpenAttachment();
 
-            Playback.Wait(5000);
+            Playback.Wait(2500);
 
             Keyboard.SendKeys("Q", ModifierKeys.Control);
 
@@ -2177,11 +2174,7 @@ Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
             WinMenuItem uIViewAttachmentMenuItem = this.UIAttachmentsMenuWindow.UIContextMenu.UIMenuItem("View Attachment");
             Mouse.Click(uIOptionsButton);
             Mouse.Click(uIViewAttachmentMenuItem);
-            try {
-                Mouse.Click(uIOKButton);
-            }
-            catch { }
-            
+            Mouse.Click(uIOKButton);
         }
 
         private void CheckPremiumInWordDoc(double premium)
@@ -2327,10 +2320,7 @@ Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
 
                 if (name.Contains("Select Tam insurer for insurer code"))
                 {
-                    var i = new int[1];
-                    i[0] = 0;
-
-                    uIItemList.SelectedIndices = i;
+                    uIItemList.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString;
                     Mouse.Click(uIOKButton, new Point(21, 16));
                 }
 
@@ -2342,11 +2332,8 @@ Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
 
                 if (name.Contains("Please select WHO to follow up"))
                 {
-                    //uIItemList2.SelectedItemsAsString = String.IsNullOrEmpty(whoToSelect) ? this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString2 : whoToSelect;
-                    var i = new int[1];
-                    i[0] = 0;
+                    uIItemList2.SelectedItemsAsString = String.IsNullOrEmpty(whoToSelect) ? this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString2 : whoToSelect;
 
-                    uIItemList2.SelectedIndices = i;
                     Mouse.Click(uIOKButton2, new Point(33, 13));
                 }
 

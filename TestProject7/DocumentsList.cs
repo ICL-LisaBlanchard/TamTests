@@ -188,7 +188,7 @@
                                new Document("Schedule", 2),
                                new Document("Proposal", 2),
                                new Document("FSA", 2),
-                               new Document("Certificate", 2)
+                               new Document("Certificate", 1)
                            };
             }
         }

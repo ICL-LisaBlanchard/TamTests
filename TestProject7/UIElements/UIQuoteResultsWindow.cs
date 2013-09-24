@@ -17,7 +17,7 @@
             {
                 if ((this.mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, instance: "11", className: "ListView20WndClass");
+                    this.mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
                 }
                 return this.mUIItemWindow;
             }

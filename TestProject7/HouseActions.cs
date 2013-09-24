@@ -1023,11 +1023,7 @@
 
             Playback.Wait(2000);
 
-            Mouse.Click(uIQuotesResultsClient, new Point(30, 30));
-
-            Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
-
-            Mouse.Move(new Point(500, 500));
+            SelectPolicyQuote();
 
             Mouse.Click(uIAcceptButton, new Point(85, 15));
 
@@ -1265,16 +1261,6 @@
             Mouse.Click(uICreateRecordButton, new Point(102, 11));
 
             uIInsurEcomSystemMaintWindow.PerformDialogAction(BrowserDialogAction.Ok);
-        }
-
-        public void HomeSelectPolicy()
-        {
-            WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
-
-            Mouse.Click(uIQuotesResultsClient, new Point(30, 30));
-
-            Playback.Wait(1000);
-            Mouse.Move(new Point(500, 500));
         }
 
         public void HomeRenewalConfirm()
@@ -1658,6 +1644,16 @@
             Mouse.Click(generalNext, new Point(25, 9));
 
             uIHavespecialconditionCheckBox.Checked = this.HouseholdQuoteParams.UIHavespecialconditionCheckBoxChecked;
+        }
+
+        public void HomeSelectPolicy()
+        {
+            WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
+
+            Mouse.Click(uIQuotesResultsClient, new Point(30, 30));
+
+            Playback.Wait(1000);
+            Mouse.Move(new Point(500, 500));
         }
     }
 }
