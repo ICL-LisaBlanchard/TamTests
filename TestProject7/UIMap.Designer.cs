@@ -418,17 +418,7 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UIPolicyrtyertWindow UIPolicyrtyertWindow
-        {
-            get
-            {
-                if ((this.mUIPolicyrtyertWindow == null))
-                {
-                    this.mUIPolicyrtyertWindow = new UIPolicyrtyertWindow();
-                }
-                return this.mUIPolicyrtyertWindow;
-            }
-        }
+
         
         public UISelectTaminsurerforiWindow UISelectTaminsurerforiWindow
         {
@@ -1305,8 +1295,6 @@ namespace AppliedSystems.Tam.Ui.Tests
         private UITransactiontoinsertWindow mUITransactiontoinsertWindow;
 
         private UITamxml7Window mUITamxml7Window;
-        
-        private UIPolicyrtyertWindow mUIPolicyrtyertWindow;
         
         private UISelectTaminsurerforiWindow mUISelectTaminsurerforiWindow;
         
