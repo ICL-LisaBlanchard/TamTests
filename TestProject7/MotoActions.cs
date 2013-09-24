@@ -236,7 +236,7 @@
 
             Mouse.Click(uIawapButton, new Point(50, 14));
 
-            uIItemComboBox.SelectedItem = this.MotoAWAPParams.InsurerSelect;
+            uIItemComboBox.SelectedIndex = 0;
 
             uIItemEdit.Text = this.MotoAWAPParams.ProductDescription;
 
@@ -515,9 +515,9 @@
 
             #endregion
 
-            Mouse.Click(uIQuoteResultsClient, new Point(10, 10));
+            Mouse.Click(uIQuoteResultsClient, new Point(30, 30));
 
-            Keyboard.SendKeys(uIQuoteResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
+            Mouse.Move(new Point(500, 500));
         }
 
         public void MotoSearchCar()
@@ -1073,7 +1073,6 @@
         {
             #region Variable Declarations
 
-            WinClient uIQuoteResultsClient = this.map.UIQuoteResultsWindow.UIItemWindow2.UIClient();
             WinButton uIAcceptButton = this.map.UIQuoteResultsWindow.UIAcceptWindow.UIAcceptButton;
             WinButton uIYesButton = this.map.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinButton uIOKButton = this.map.UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
@@ -1086,9 +1085,7 @@
 
             #endregion
 
-            Mouse.Click(uIQuoteResultsClient, new Point(10, 10));
-
-            Keyboard.SendKeys(uIQuoteResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
+            MotoSelectHighwayPolicy();
 
             Mouse.Click(uIAcceptButton, new Point(51, 11));
 

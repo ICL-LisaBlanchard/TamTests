@@ -688,9 +688,13 @@
 
             #endregion
 
-            Mouse.Click(uIQuoteResultsClient, new Point(295, 127));
+            Mouse.Click(uIQuoteResultsClient, new Point(30, 30));
+
+            Playback.Wait(1000);
 
             Mouse.Move(new Point(500, 500));
+
+            Playback.Wait(1000);
         }
 
         /// <summary>
@@ -1495,6 +1499,7 @@
 
         public string CheckPolicyPremium()
         {
+            HighlightBillingScreen();
             WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
 
             Assert.AreNotEqual("0.00", uIItemEdit.Text);
