@@ -370,7 +370,7 @@
 
             Mouse.Click(uIOKButton1, new Point(45, 15));
 
-            this.SelectTamInsurersAndActivity(selectListItems1: 1);
+            this.SelectTAMActivities1();
 
             Mouse.Click(uICancelButton1, new Point(37, 17));
 
@@ -380,6 +380,8 @@
 
             Mouse.Click(uIItemEdit, new Point(22, 8));
         }
+
+
 
         public void HomeAcceptPolicy()
         {
@@ -532,7 +534,7 @@
 
             Mouse.Click(uIOKButton, new Point(30, 15));
 
-            this.SelectTamInsurersAndActivity(selectListItems1: 2);
+            SelectTAMActivities2();
         }
 
         /// <summary>
@@ -698,7 +700,6 @@
             WinControl uIOKButton5 = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton6 = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
-            WinControl uIOKButton7 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
 
             Playback.PlaybackSettings.ContinueOnError = true;
 
@@ -732,9 +733,7 @@
 
             Mouse.Click(uIOKButton6, new Point(40, 8));
 
-            Mouse.Click(uIOKButton7, new Point(54, 8));
-
-            this.SelectTamInsurersAndActivity(selectListItems1: 2);
+            SelectTAMActivities3();
         }
 
         public void HomeRebrokeSelectAlternative()
@@ -846,7 +845,7 @@
         {
             WinControl uIDetailButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UIDetailWindow.UIDetailButton;
             WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
-
+            System.Diagnostics.Debug.WriteLine("Customer Code : " + this.CustomerCode);
             Mouse.Click(uIDetailButton, new Point(26, 12));
 
             Mouse.Click(uIItemEdit, new Point(25, 5));
@@ -1125,7 +1124,6 @@
             WinControl uIokButton1 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIokButton2 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinControl uIokButton3 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
 
             uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
 
@@ -1145,14 +1143,11 @@
 
             Playback.PlaybackSettings.SearchTimeout = timeout;
 
-            this.WaitForControl(uIAddActivityCheckBox);
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIokButton2, new Point(48, 9));
 
-            Mouse.Click(uIokButton3, new Point(19, 12));
-
-            this.SelectTamInsurersAndActivity(false, onlyOnce: true);
+            SelectTAMActivities3();
         }
 
         public void HomeAmendRenewFinish()
@@ -1177,7 +1172,6 @@
             WinControl uIokButton2 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIokButton3 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinControl uIokButton4 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
 
             Playback.Wait(2000);
 
@@ -1201,9 +1195,7 @@
 
             Mouse.Click(uIokButton3, new Point(60, 17));
 
-            Mouse.Click(uIokButton4, new Point(21, 8));
-
-            this.SelectTamInsurersAndActivity(selectListItems1: 2);
+            SelectTAMActivities3();
         }
 
         public void HomeAcceptQuote()

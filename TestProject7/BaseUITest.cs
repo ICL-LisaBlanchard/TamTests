@@ -1,8 +1,9 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
+    using System;
     using System.Collections.Specialized;
     using System.Diagnostics;
-    using System.IO;
+    using System.Drawing;
     using System.Linq;
 
     using Meyn.TestLink;
@@ -13,14 +14,6 @@
     [CodedUITest]
     public class BaseUiTest
     {
-        protected readonly MotoActions Moto = new MotoActions();
-
-        protected readonly HouseActions House = new HouseActions();
-
-        protected readonly CustomerActions Customer = new CustomerActions();
-
-        protected readonly DocumentsList Docs = new DocumentsList();
-
         protected const string PlanName = "Ver. 12.05";
 
         protected const string ProjectName = "TAM";
@@ -38,6 +31,14 @@
         protected static int TestPlanId;
 
         protected static int BuildId;
+
+        protected readonly MotoActions Moto = new MotoActions();
+
+        protected readonly HouseActions House = new HouseActions();
+
+        protected readonly CustomerActions Customer = new CustomerActions();
+
+        protected readonly DocumentsList Docs = new DocumentsList();
 
         protected string TestName;
 
@@ -74,8 +75,19 @@
         [DeploymentItem(@"RegistrySettings")]
         public void StartTest()
         {
+            // make sure everything is closed before another test is started
+            CloseProcess("TamXML7");
+            CloseProcess("InsureTam");
+            CloseProcess("clntfile");
+            CloseProcess("Homebase");
+            CloseProcess("AcroRd32");
+            CloseProcess("iexplore");
+            CloseProcess("Regress_IETam_Policy");
+            CloseProcess("RLoader");
+
             this.UiMap.CleanDocuments();
             Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
+            //Playback.PlaybackSettings.DelayBetweenActions = 700;
             this.TestName = this.TestContext.TestName;
             this.TestLinkInitialize();
 
@@ -104,6 +116,11 @@
             CloseProcess("InsureTam");
             CloseProcess("clntfile");
             CloseProcess("Homebase");
+            CloseProcess("AcroRd32");
+            CloseProcess("iexplore");
+            CloseProcess("Regress_IETam_Policy");
+            CloseProcess("RLoader");
+            CloseProcess("AppliedSystems.TAM.Client.Accounting.TransactionsUP");
         }
 
         public void SetOurHighwayRegKeys()
@@ -129,8 +146,14 @@
             Process[] processes = Process.GetProcessesByName(name);
             foreach (Process process in processes)
             {
-                process.Kill();
-                process.WaitForExit();
+                try
+                {
+                    process.Kill();
+                    process.WaitForExit();
+                }
+                catch (Exception)
+                {
+                }
             }
         }
 
@@ -162,6 +185,13 @@
         {
             try
             {
+                if (status == TestCaseResultStatus.Fail)
+                {
+                    long expectedDate = DateTime.Now.ToFileTimeUtc();
+                    Image image = UITestControl.Desktop.CaptureImage();
+                    image.Save(Configs.ScreenshotPath + expectedDate + ".jpg");
+                    this.TestContextInstance.AddResultFile(Configs.ScreenshotPath + expectedDate + ".jpg");
+                }
                 Tl.ReportTCResult(Tl.GetTestCaseIDByName(this.TestName)[0].id, TestPlanId, status, PlatformId, buildid: BuildId); // it posts result for testcase.
             }
             catch
@@ -227,7 +257,7 @@
             {
                 this.Moto.MotoCreateSiteRenewal(policyNumber, renewalPremium);
             }
-            
+
             Playback.Wait(5000);
             this.UiMap.CloseBrowser();
             this.UiMap.ChangeDatePolicy();
@@ -242,7 +272,7 @@
             string customerCode = this.RegressApp(policyType);
 
             //renewal loader
-            this.RenewalLoader();   
+            this.RenewalLoader();
 
             // renewal module
             this.RenewalModule(customerCode, policyType);

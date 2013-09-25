@@ -534,9 +534,11 @@
         /// </summary>
         public void CloseBrowser()
         {
-            Playback.PlaybackSettings.ContinueOnError = true;
-            Keyboard.SendKeys(this.UIBlankPageMicrosoftInWindow, "{F4}", ModifierKeys.Alt);
-            Playback.PlaybackSettings.ContinueOnError = false;
+            BaseUiTest.CloseProcess("iexplore");
+            //BaseUiTest.CloseProcess("chrome");
+            //BaseUiTest.CloseProcess("chrome");
+            //BaseUiTest.CloseProcess("chrome");
+            //BaseUiTest.CloseProcess("chrome");
         }
 
         /// <summary>
@@ -580,7 +582,7 @@
 
             Mouse.Click(uIOKButton3, new Point(51, 10));
 
-            this.SelectTamInsurersAndActivity(selectListItems1: 3);
+            SelectTAMActivities3();
         }
 
         /// <summary>
@@ -637,8 +639,8 @@
 
             #endregion
 
-            Playback.Wait(3000);
-            Mouse.Click(uIAcceptButton, new Point(70, 7));
+            Mouse.Click(this.UIQuoteResultsWindow);
+            Mouse.Click(uIAcceptButton);
         }
 
         public void AmendDateBeforeMessage()
@@ -711,7 +713,9 @@
 
             #endregion
 
-            Mouse.Click(uIYesButton, new Point(35, 8));
+            //Mouse.Click(this.UIInsurEtamWindow1);
+
+            Mouse.Click(uIYesButton);
 
             Mouse.Click(uIOKButton, new Point(40, 10));
 
@@ -746,7 +750,7 @@
 
             Mouse.Click(uIOKButton, new Point(34, 11));
 
-            this.SelectTamInsurersAndActivity(selectListItems1: 2);
+            SelectTAMActivities2();
 
             Mouse.Click(uICancelButton, new Point(23, 19));
 
@@ -1041,7 +1045,7 @@
 
             Mouse.Click(uIOKButton, new Point(32, 8));
 
-            this.SelectTamInsurersAndActivity(selectListItems1: 2);
+            SelectTAMActivities2();
         }
 
         public void RetrieveResponse()
@@ -1052,9 +1056,12 @@
 
             #endregion
 
+
+
             Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Click(uIOKButton, new Point(51, 11));
+            System.Diagnostics.Debug.WriteLine("OK button found");
 
             Playback.PlaybackSettings.ContinueOnError = false;
         }
@@ -1113,8 +1120,16 @@
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIOKButton2, new Point(46, 16));
-         
-            this.SelectTamInsurersAndActivity(selectListItems1: 3);
+
+
+            Mouse.Click(uIOKButton3, new Point(47, 24));
+
+            System.Diagnostics.Debug.WriteLine("Yay!");
+
+            SelectTAMActivities3();
+
+
+            System.Diagnostics.Debug.WriteLine("Nay!");
         }
 
         public void RenewalModuleRenew()
@@ -1532,8 +1547,7 @@
             WinControl uIOKButton1 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton2 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinControl uIOKButton3 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-
+           
             #endregion
 
             uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
@@ -1549,9 +1563,8 @@
 
             Mouse.Click(uIOKButton2, new Point(44, 7));
 
-            Mouse.Click(uIOKButton3, new Point(54, 7));
 
-            this.SelectTamInsurersAndActivity(selectListItems1: 2);
+            SelectTAMActivities3();
         }
 
         /// <summary>
@@ -1631,7 +1644,7 @@
 
             Mouse.Click(uIOKButton2, new Point(46, 14));
 
-            this.SelectTamInsurersAndActivity(selectListItems1: 3);
+            SelectTAMActivities3();
         }
 
         /// <summary>
@@ -1675,9 +1688,6 @@
             this.CancelPrint();
         }
 
-        /// <summary>
-        ///     PublicCreditCheckOk
-        /// </summary>
         public void PublicCreditCheckOk()
         {
             #region Variable Declarations
@@ -1689,9 +1699,6 @@
             Mouse.Click(uIOKButton, new Point(49, 10));
         }
 
-        /// <summary>
-        ///     PrintQuote
-        /// </summary>
         public void PrintQuote()
         {
             #region Variable Declarations
@@ -1704,9 +1711,6 @@
             Mouse.Click(uIPrintQuoteButton, new Point(49, 10));
         }
 
-        /// <summary>
-        ///     PostcodeLookup - Use 'PostcodeLookupExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void PostcodeLookup()
         {
             #region Variable Declarations
@@ -1721,9 +1725,6 @@
             Assert.AreEqual(this.PostcodeLookupExpectedValues.AddressLine2, uIItemEdit1.Text);
         }
 
-        /// <summary>
-        ///     MTAMessageBeforeCurrent - Use 'MTAMessageBeforeCurrentExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void MTAMessageBeforeCurrent()
         {
             #region Variable Declarations
@@ -1732,12 +1733,9 @@
 
             #endregion
 
-            Assert.AreEqual(this.MTAMessageBeforeCurrentExpectedValues.UIDateBeforeCurrentMTATextDisplayText, uIDateBeforeCurrentMTAText.DisplayText);
+            Assert.AreEqual(this.MTAMessageBeforeCurrentExpectedValues.UIDateBeforeCurrentMTATextDisplayText, uIDateBeforeCurrentMTAText.DisplayText, uIDateBeforeCurrentMTAText.ToString());
         }
 
-        /// <summary>
-        ///     MTAEffectiveDatesCancel
-        /// </summary>
         public void MTAEffectiveDatesCancel()
         {
             #region Variable Declarations
@@ -1749,10 +1747,6 @@
             Mouse.Click(uICancelButton, new Point(28, 12));
         }
 
-        /// <summary>
-        ///     MTADate - Use 'MTADateParams' to pass parameters into this method.
-        /// </summary>
-        /// <param name="withDate"></param>
         public void MTADate(string withDate)
         {
             #region Variable Declarations
@@ -1767,9 +1761,6 @@
             Mouse.Click(uIOKButton, new Point(39, 10));
         }
 
-        /// <summary>
-        ///     MTACloseMessageBefore
-        /// </summary>
         public void MTACloseMessageBefore()
         {
             #region Variable Declarations
@@ -1809,13 +1800,13 @@
 
             #endregion
 
-            Mouse.Click(uICancelButton, new Point(26, 13));
+            Mouse.Click(uICancelButton);
 
-            Mouse.Click(uIExitButton, new Point(65, 13));
+            Mouse.Click(uIExitButton);
 
-            Mouse.Click(uIYesButton, new Point(46, 9));
+            Mouse.Click(uIYesButton);
 
-            Mouse.Click(uIOKButton, new Point(50, 11));
+            Mouse.Click(uIOKButton);
         }
 
         /// <summary>
@@ -1861,15 +1852,8 @@
                 this.ImportToTamOptionsOnce(whoToSelect);
             }
 
-            try
-            {
-                Mouse.Click(tamXmlButton);
-            }
-            catch (Exception)
-            {
-                this.ImportToTamOptionsOnce(whoToSelect);
-            }
-            
+            Mouse.Click(tamXmlButton);
+
 
             for (int i = 0; i < selectListItems2; i++)
             {
@@ -1905,7 +1889,7 @@
 
             Mouse.Click(uICancelButton);
 
-            Assert.AreEqual(uILvwVListList.Items.Count, expected, "Incorrect number of transactions.");
+            Assert.AreEqual(expected, uILvwVListList.Items.Count, "Incorrect number of transactions.");
 
             Mouse.Click(uICloseButton);
 
@@ -2181,7 +2165,15 @@
             WinMenuItem uIViewAttachmentMenuItem = this.UIAttachmentsMenuWindow.UIContextMenu.UIMenuItem("View Attachment");
             Mouse.Click(uIOptionsButton);
             Mouse.Click(uIViewAttachmentMenuItem);
-            Mouse.Click(uIOKButton);
+            try
+            {
+                Mouse.Click(uIOKButton);
+            }
+            catch (Exception)
+            {
+
+            }
+
         }
 
         private void CheckPremiumInWordDoc(double premium)
@@ -2250,66 +2242,12 @@
 
             Assert.IsTrue(b);
 
-            // Click 'Cancel' button
             Mouse.Click(uICancelButton, new Point(50, 15));
 
-            // Click 'Close' button
             Mouse.Click(uICloseButton, new Point(22, 8));
         }
 
-        private void ImportToTamOptions(string whoToSelect)
-        {
-            WinList uIItemList = this.UISelectTaminsurerforiWindow.UIItemWindow.UIItemList;
-            WinButton uIOKButton = this.UISelectTaminsurerforiWindow.UIItemWindow1.UIClient().UIOKButton;
-            WinList uiTransToInsert = this.UITransactiontoinsertWindow.UIItemWindow.UIItemList;
-            WinButton uIOKButton6 = this.UITransactiontoinsertWindow.UIItemWindow.UIOKButton;
-            WinList uIItemList2 = this.UIPleaseselectWHOtofolWindow.UIItemWindow.UIItemList;
-            WinButton uIOKButton2 = this.UIPleaseselectWHOtofolWindow.UIItemWindow1.UIClient().UIOKButton;
-            WinList uIItemList3 = this.UISelectTamActivityTypWindow.UIItemWindow.UIItemList;
-            WinButton uIOKButton3 = this.UISelectTamActivityTypWindow.UIItemWindow1.UIClient().UIOKButton;
-
-            try
-            {
-                do
-                {
-                    WinWindow win = this.TopWindow;
-                    string name = win.GetProperty("Name").ToString();
-
-                    if (name.Contains("Select Tam insurer for insurer code"))
-                    {
-                        uIItemList.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString;
-                        Mouse.Click(uIOKButton, new Point(21, 16));
-                    }
-
-                    if (name.Contains("Transaction to insert"))
-                    {
-                        uiTransToInsert.SelectedItemsAsString = "NEW";
-                        Mouse.Click(uIOKButton6);
-                    }
-
-                    if (name.Contains("Please select WHO to follow up"))
-                    {
-                        uIItemList2.SelectedItemsAsString = String.IsNullOrEmpty(whoToSelect)
-                                                                ? this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString2
-                                                                : whoToSelect;
-
-                        Mouse.Click(uIOKButton2, new Point(33, 13));
-                    }
-
-                    if (name.Contains("Select Tam Activity Type for FSA "))
-                    {
-                        uIItemList3.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString;
-                        Mouse.Click(uIOKButton3, new Point(27, 8));
-                    }
-                }
-                while (true);
-            }
-            catch (Exception)
-            {
-            }
-        }
-
-        private void ImportToTamOptionsOnce(string whoToSelect)
+        public void ImportToTamOptionsOnce(string whoToSelect)
         {
             WinList uIItemList = this.UISelectTaminsurerforiWindow.UIItemWindow.UIItemList;
             WinButton uIOKButton = this.UISelectTaminsurerforiWindow.UIItemWindow1.UIClient().UIOKButton;
@@ -2324,11 +2262,11 @@
             {
                 WinWindow win = this.TopWindow;
                 string name = win.GetProperty("Name").ToString();
-
+                System.Diagnostics.Debug.WriteLine(name);
                 if (name.Contains("Select Tam insurer for insurer code"))
                 {
-                    uIItemList.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString;
-                    Mouse.Click(uIOKButton, new Point(21, 16));
+                    uIItemList.SelectedItemsAsString = uIItemList.Items.First().Name;
+                    Mouse.Click(uIOKButton);
                 }
 
                 if (name.Contains("Transaction to insert"))
@@ -2339,20 +2277,40 @@
 
                 if (name.Contains("Please select WHO to follow up"))
                 {
-                    uIItemList2.SelectedItemsAsString = String.IsNullOrEmpty(whoToSelect) ? this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString2 : whoToSelect;
+                    uIItemList2.SelectedItemsAsString = uIItemList2.Items.First().Name;
 
-                    Mouse.Click(uIOKButton2, new Point(33, 13));
+                    Mouse.Click(uIOKButton2);
                 }
 
                 if (name.Contains("Select Tam Activity Type for FSA "))
                 {
                     uIItemList3.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString;
-                    Mouse.Click(uIOKButton3, new Point(27, 8));
+                    Mouse.Click(uIOKButton3, new Point(27, 8)); 
                 }
+                
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
+        }
+
+        protected void SelectTAMActivities1()
+        {
+            System.Diagnostics.Debug.WriteLine("SelectTAMActivities1");
+            this.SelectTamInsurersAndActivity(selectListItems1: 1);
+        }
+
+        protected void SelectTAMActivities2()
+        {
+            System.Diagnostics.Debug.WriteLine("SelectTAMActivities2");
+            this.SelectTamInsurersAndActivity(selectListItems1: 2);
+        }
+
+        protected void SelectTAMActivities3()
+        {
+            System.Diagnostics.Debug.WriteLine("SelectTAMActivities3");
+            this.SelectTamInsurersAndActivity(selectListItems1: 3);
         }
     }
 }
