@@ -179,7 +179,7 @@
             WinEdit uIItemEdit2 = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
 
             string policyNo = uIItemEdit.GetProperty("Text").ToString();
-
+            System.Diagnostics.Debug.WriteLine("Customer Code : " + this.CustomerCode + ", Policy No: " + policyNo);
             Mouse.Click(uIItemEdit2, new Point(45, 4));
 
             return policyNo;
@@ -256,7 +256,8 @@
 
             Mouse.Click(uIOKButton3, new Point(56, 6));
 
-            this.SelectTamInsurersAndActivity(selectListItems1: 1);
+            SelectTAMActivities1();
+
         }
 
         public void MotoAmendRiskRenew()
@@ -297,9 +298,7 @@
 
             Mouse.Click(uIOKButton3, new Point(54, 5));
 
-            Mouse.Click(uIOKButton4, new Point(45, 10));
-
-            this.SelectTamInsurersAndActivity(selectListItems1: 2);
+            SelectTAMActivities3();
 
             Mouse.Click(uIExitButton, new Point(48, 12));
 
@@ -330,7 +329,7 @@
 
             Mouse.Click(uIOKButton2, new Point(47, 13));
 
-            this.SelectTamInsurersAndActivity(selectListItems1: 3);
+            SelectTAMActivities3();
 
             this.map.EtamOk();
 
@@ -805,7 +804,7 @@
 
             #endregion
 
-            Mouse.Click(uIQuoteResultsClient, new Point(10,10));
+            Mouse.Click(uIQuoteResultsClient, new Point(10, 10));
 
             Keyboard.SendKeys(uIQuoteResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
@@ -827,7 +826,7 @@
 
             if (action == "cancel")
             {
-                this.SelectTamInsurersAndActivity(selectListItems1: 2);
+                SelectTAMActivities2();
             }
             else
             {
@@ -930,7 +929,7 @@
 
             #endregion
 
-            Mouse.Click(uIQuoteResultsClient, new Point(10,10));
+            Mouse.Click(uIQuoteResultsClient, new Point(10, 10));
 
             Keyboard.SendKeys(uIQuoteResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
@@ -1301,8 +1300,7 @@
             WinControl uIOKButton = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton1 = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
-            WinControl uIOKButton2 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-
+            
             #endregion
 
             uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
@@ -1312,11 +1310,10 @@
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Playback.Wait(2000);
+
             Mouse.Click(uIOKButton1, new Point(41, 15));
 
-            Mouse.Click(uIOKButton2, new Point(42, 14));
-
-            this.SelectTamInsurersAndActivity(selectListItems1: 2);
+            SelectTAMActivities3();
         }
     }
 }

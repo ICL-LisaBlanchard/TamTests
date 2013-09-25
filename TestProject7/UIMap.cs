@@ -535,10 +535,10 @@
         public void CloseBrowser()
         {
             BaseUiTest.CloseProcess("iexplore");
-            BaseUiTest.CloseProcess("chrome");
-            BaseUiTest.CloseProcess("chrome");
-            BaseUiTest.CloseProcess("chrome");
-            BaseUiTest.CloseProcess("chrome");
+            //BaseUiTest.CloseProcess("chrome");
+            //BaseUiTest.CloseProcess("chrome");
+            //BaseUiTest.CloseProcess("chrome");
+            //BaseUiTest.CloseProcess("chrome");
         }
 
         /// <summary>
@@ -582,7 +582,7 @@
 
             Mouse.Click(uIOKButton3, new Point(51, 10));
 
-            this.SelectTamInsurersAndActivity(selectListItems1: 3);
+            SelectTAMActivities3();
         }
 
         /// <summary>
@@ -750,7 +750,7 @@
 
             Mouse.Click(uIOKButton, new Point(34, 11));
 
-            this.SelectTamInsurersAndActivity(selectListItems1: 2);
+            SelectTAMActivities2();
 
             Mouse.Click(uICancelButton, new Point(23, 19));
 
@@ -1045,7 +1045,7 @@
 
             Mouse.Click(uIOKButton, new Point(32, 8));
 
-            this.SelectTamInsurersAndActivity(selectListItems1: 2);
+            SelectTAMActivities2();
         }
 
         public void RetrieveResponse()
@@ -1056,7 +1056,7 @@
 
             #endregion
 
-            
+
 
             Playback.PlaybackSettings.ContinueOnError = true;
 
@@ -1125,8 +1125,8 @@
             Mouse.Click(uIOKButton3, new Point(47, 24));
 
             System.Diagnostics.Debug.WriteLine("Yay!");
-            
-            this.SelectTamInsurersAndActivity(selectListItems1: 3);
+
+            SelectTAMActivities3();
 
 
             System.Diagnostics.Debug.WriteLine("Nay!");
@@ -1312,7 +1312,7 @@
             WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
 
             #endregion
-            
+
             Mouse.Click(uIExitButton, new Point(44, 19));
 
             Mouse.Click(uIYesButton, new Point(44, 14));
@@ -1547,8 +1547,7 @@
             WinControl uIOKButton1 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton2 = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinControl uIOKButton3 = this.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
-
+           
             #endregion
 
             uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
@@ -1564,9 +1563,8 @@
 
             Mouse.Click(uIOKButton2, new Point(44, 7));
 
-            Mouse.Click(uIOKButton3, new Point(54, 7));
 
-            this.SelectTamInsurersAndActivity(selectListItems1: 2);
+            SelectTAMActivities3();
         }
 
         /// <summary>
@@ -1646,7 +1644,7 @@
 
             Mouse.Click(uIOKButton2, new Point(46, 14));
 
-            this.SelectTamInsurersAndActivity(selectListItems1: 3);
+            SelectTAMActivities3();
         }
 
         /// <summary>
@@ -1807,7 +1805,7 @@
             Mouse.Click(uIExitButton);
 
             Mouse.Click(uIYesButton);
-           
+
             Mouse.Click(uIOKButton);
         }
 
@@ -1854,8 +1852,8 @@
                 this.ImportToTamOptionsOnce(whoToSelect);
             }
 
-                Mouse.Click(tamXmlButton);
-           
+            Mouse.Click(tamXmlButton);
+
 
             for (int i = 0; i < selectListItems2; i++)
             {
@@ -2089,8 +2087,7 @@
 
             Playback.Wait(2500);
 
-            BaseUiTest.CloseProcess("AcroRd32");
-            BaseUiTest.CloseProcess("Foxit Reader");
+            Keyboard.SendKeys("Q", ModifierKeys.Control);
 
             string pdfFilePath = Configs.LocalDocsPath + DateTime.Now.Year + DateTime.Now.Month.ToString("00") + "~1.pdf";
 
@@ -2174,9 +2171,9 @@
             }
             catch (Exception)
             {
-    
+
             }
-           
+
         }
 
         private void CheckPremiumInWordDoc(double premium)
@@ -2245,10 +2242,8 @@
 
             Assert.IsTrue(b);
 
-            // Click 'Cancel' button
             Mouse.Click(uICancelButton, new Point(50, 15));
 
-            // Click 'Close' button
             Mouse.Click(uICloseButton, new Point(22, 8));
         }
 
@@ -2271,38 +2266,51 @@
                 if (name.Contains("Select Tam insurer for insurer code"))
                 {
                     uIItemList.SelectedItemsAsString = uIItemList.Items.First().Name;
-                    Mouse.Click(uIOKButton, new Point(21, 16));
-                  
+                    Mouse.Click(uIOKButton);
                 }
 
                 if (name.Contains("Transaction to insert"))
                 {
                     uiTransToInsert.SelectedItemsAsString = "NEW";
                     Mouse.Click(uIOKButton6);
-                    System.Diagnostics.Debug.WriteLine("Transaction to insert");
                 }
 
                 if (name.Contains("Please select WHO to follow up"))
                 {
                     uIItemList2.SelectedItemsAsString = uIItemList2.Items.First().Name;
 
-                    Mouse.Click(uIOKButton2, new Point(33, 13));
-
-                    System.Diagnostics.Debug.WriteLine("Please select WHO to follow up");
+                    Mouse.Click(uIOKButton2);
                 }
 
                 if (name.Contains("Select Tam Activity Type for FSA "))
                 {
                     uIItemList3.SelectedItemsAsString = this.SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString;
-                    Mouse.Click(uIOKButton3, new Point(27, 8));
-                    System.Diagnostics.Debug.WriteLine("Select Tam insurer for insurer code");
+                    Mouse.Click(uIOKButton3, new Point(27, 8)); 
                 }
-                System.Diagnostics.Debug.WriteLine(name);
+                
             }
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
+        }
+
+        protected void SelectTAMActivities1()
+        {
+            System.Diagnostics.Debug.WriteLine("SelectTAMActivities1");
+            this.SelectTamInsurersAndActivity(selectListItems1: 1);
+        }
+
+        protected void SelectTAMActivities2()
+        {
+            System.Diagnostics.Debug.WriteLine("SelectTAMActivities2");
+            this.SelectTamInsurersAndActivity(selectListItems1: 2);
+        }
+
+        protected void SelectTAMActivities3()
+        {
+            System.Diagnostics.Debug.WriteLine("SelectTAMActivities3");
+            this.SelectTamInsurersAndActivity(selectListItems1: 3);
         }
     }
 }

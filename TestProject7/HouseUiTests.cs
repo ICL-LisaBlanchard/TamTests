@@ -280,7 +280,7 @@
 
             this.House.CloseAndOpenPolicyList();
             this.House.RenewalCheckStatus("REN");
-            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRenewalBefore, originalPremium: double.Parse(originalPremium));
+            this.House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhRenewalBefore, originalPremium: double.Parse(originalPremium));
             this.House.OpenTransList(Transactions.GetTransactionDictionary(RenewalPremium, originalPremium));
             this.House.ClosePolicy();
 

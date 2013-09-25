@@ -1,11 +1,9 @@
-﻿using System;
-using System.Drawing;
-
-namespace AppliedSystems.Tam.Ui.Tests
+﻿namespace AppliedSystems.Tam.Ui.Tests
 {
+    using System;
     using System.Collections.Specialized;
     using System.Diagnostics;
-    using System.IO;
+    using System.Drawing;
     using System.Linq;
 
     using Meyn.TestLink;
@@ -16,14 +14,6 @@ namespace AppliedSystems.Tam.Ui.Tests
     [CodedUITest]
     public class BaseUiTest
     {
-        protected readonly MotoActions Moto = new MotoActions();
-
-        protected readonly HouseActions House = new HouseActions();
-
-        protected readonly CustomerActions Customer = new CustomerActions();
-
-        protected readonly DocumentsList Docs = new DocumentsList();
-
         protected const string PlanName = "Ver. 12.05";
 
         protected const string ProjectName = "TAM";
@@ -41,6 +31,14 @@ namespace AppliedSystems.Tam.Ui.Tests
         protected static int TestPlanId;
 
         protected static int BuildId;
+
+        protected readonly MotoActions Moto = new MotoActions();
+
+        protected readonly HouseActions House = new HouseActions();
+
+        protected readonly CustomerActions Customer = new CustomerActions();
+
+        protected readonly DocumentsList Docs = new DocumentsList();
 
         protected string TestName;
 
@@ -89,7 +87,7 @@ namespace AppliedSystems.Tam.Ui.Tests
 
             this.UiMap.CleanDocuments();
             Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
-            Playback.PlaybackSettings.DelayBetweenActions = 700;
+            //Playback.PlaybackSettings.DelayBetweenActions = 700;
             this.TestName = this.TestContext.TestName;
             this.TestLinkInitialize();
 
@@ -123,7 +121,6 @@ namespace AppliedSystems.Tam.Ui.Tests
             CloseProcess("Regress_IETam_Policy");
             CloseProcess("RLoader");
             CloseProcess("AppliedSystems.TAM.Client.Accounting.TransactionsUP");
-
         }
 
         public void SetOurHighwayRegKeys()
@@ -190,10 +187,10 @@ namespace AppliedSystems.Tam.Ui.Tests
             {
                 if (status == TestCaseResultStatus.Fail)
                 {
-                    var expectedDate = DateTime.Now.ToFileTimeUtc();
+                    long expectedDate = DateTime.Now.ToFileTimeUtc();
                     Image image = UITestControl.Desktop.CaptureImage();
                     image.Save(Configs.ScreenshotPath + expectedDate + ".jpg");
-                    TestContextInstance.AddResultFile(Configs.ScreenshotPath + expectedDate + ".jpg");
+                    this.TestContextInstance.AddResultFile(Configs.ScreenshotPath + expectedDate + ".jpg");
                 }
                 Tl.ReportTCResult(Tl.GetTestCaseIDByName(this.TestName)[0].id, TestPlanId, status, PlatformId, buildid: BuildId); // it posts result for testcase.
             }
@@ -260,7 +257,7 @@ namespace AppliedSystems.Tam.Ui.Tests
             {
                 this.Moto.MotoCreateSiteRenewal(policyNumber, renewalPremium);
             }
-            
+
             Playback.Wait(5000);
             this.UiMap.CloseBrowser();
             this.UiMap.ChangeDatePolicy();
@@ -275,7 +272,7 @@ namespace AppliedSystems.Tam.Ui.Tests
             string customerCode = this.RegressApp(policyType);
 
             //renewal loader
-            this.RenewalLoader();   
+            this.RenewalLoader();
 
             // renewal module
             this.RenewalModule(customerCode, policyType);
