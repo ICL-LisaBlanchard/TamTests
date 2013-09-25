@@ -20,7 +20,7 @@
         public void TestMethod1()
         {
 
-            BaseUiTest.CloseProcess("AcroRd32");
+            this.moto.MTACancel();
         }
     }
 }

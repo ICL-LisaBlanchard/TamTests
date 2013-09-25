@@ -1153,7 +1153,7 @@
 
             Mouse.Click(uIokButton3, new Point(19, 12));
 
-            this.SelectTamInsurersAndActivity(false, onlyOnce: true);
+            this.SelectTamInsurersAndActivity(selectListItems1: 2);
         }
 
         public void HomeAmendRenewFinish()

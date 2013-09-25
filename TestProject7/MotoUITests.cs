@@ -162,7 +162,7 @@
             this.CreateMTA();
             this.Moto.MotoMTAOpenQuote();
             this.Moto.MotoMTACheckNewValue(false);
-            this.Moto.CheckCorrectNumberTrans(2);
+            this.Moto.CheckCorrectNumberTrans(4);
             this.Moto.MotoExitMTA();
         }
 

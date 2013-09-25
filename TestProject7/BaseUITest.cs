@@ -1,4 +1,7 @@
-﻿namespace AppliedSystems.Tam.Ui.Tests
+﻿using System;
+using System.Drawing;
+
+namespace AppliedSystems.Tam.Ui.Tests
 {
     using System.Collections.Specialized;
     using System.Diagnostics;
@@ -74,8 +77,19 @@
         [DeploymentItem(@"RegistrySettings")]
         public void StartTest()
         {
+            // make sure everything is closed before another test is started
+            CloseProcess("TamXML7");
+            CloseProcess("InsureTam");
+            CloseProcess("clntfile");
+            CloseProcess("Homebase");
+            CloseProcess("AcroRd32");
+            CloseProcess("iexplore");
+            CloseProcess("Regress_IETam_Policy");
+            CloseProcess("RLoader");
+
             this.UiMap.CleanDocuments();
             Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
+            Playback.PlaybackSettings.DelayBetweenActions = 700;
             this.TestName = this.TestContext.TestName;
             this.TestLinkInitialize();
 
@@ -106,6 +120,10 @@
             CloseProcess("Homebase");
             CloseProcess("AcroRd32");
             CloseProcess("iexplore");
+            CloseProcess("Regress_IETam_Policy");
+            CloseProcess("RLoader");
+            CloseProcess("AppliedSystems.TAM.Client.Accounting.TransactionsUP");
+
         }
 
         public void SetOurHighwayRegKeys()
@@ -131,8 +149,14 @@
             Process[] processes = Process.GetProcessesByName(name);
             foreach (Process process in processes)
             {
-                process.Kill();
-                process.WaitForExit();
+                try
+                {
+                    process.Kill();
+                    process.WaitForExit();
+                }
+                catch (Exception)
+                {
+                }
             }
         }
 
@@ -164,6 +188,13 @@
         {
             try
             {
+                if (status == TestCaseResultStatus.Fail)
+                {
+                    var expectedDate = DateTime.Now.ToFileTimeUtc();
+                    Image image = UITestControl.Desktop.CaptureImage();
+                    image.Save(Configs.ScreenshotPath + expectedDate + ".jpg");
+                    TestContextInstance.AddResultFile(Configs.ScreenshotPath + expectedDate + ".jpg");
+                }
                 Tl.ReportTCResult(Tl.GetTestCaseIDByName(this.TestName)[0].id, TestPlanId, status, PlatformId, buildid: BuildId); // it posts result for testcase.
             }
             catch

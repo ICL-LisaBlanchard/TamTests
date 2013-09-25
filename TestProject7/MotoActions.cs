@@ -515,6 +515,8 @@
 
             #endregion
 
+            Mouse.DoubleClick(uIQuoteResultsClient);
+
             Mouse.Click(uIQuoteResultsClient, new Point(30, 30));
 
             Mouse.Move(new Point(500, 500));
