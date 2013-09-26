@@ -52,9 +52,9 @@
 
             ApplicationUnderTest.Launch(this.LoginParams.ExePath, this.LoginParams.AlternateExePath);
 
-            tbxUserName.Text = this.LoginParams.Username;
-            tbxPassword.Text = this.LoginParams.Password;
-            Mouse.Click(btnOk, new Point(67, 13));
+            tbxUserName.Text = Configs.Username;
+            tbxPassword.Text = Configs.Password;
+            Mouse.Click(btnOk);
         }
 
         public void LoginEnterDate()

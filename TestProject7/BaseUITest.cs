@@ -14,18 +14,6 @@
     [CodedUITest]
     public class BaseUiTest
     {
-        protected const string PlanName = "Ver. 12.05";
-
-        protected const string ProjectName = "TAM";
-
-        //private static string buildName = DateTime.Now.Date.ToShortDateString();
-
-        //private const int PlatformId = 3;  // WIN XP
-        //private const int PlatformId = 4;   // Win7 32
-        protected const int PlatformId = 5; // Win7 64
-
-        protected static string BuildName = "InsureTam.exe v4.0.8 May";
-
         protected static TestLink Tl;
 
         protected static int TestPlanId;
@@ -92,7 +80,6 @@
             this.TestLinkInitialize();
 
             var login = new Login();
-            login.LoginParams.TabKey = Playback.EncryptText("PLUS");
             login.LoginParams.ExePath = "J:\\WINTAM\\HOMEBASE.EXE";
             login.LoginParams.AlternateExePath = "J:\\WINTAM\\HOMEBASE.EXE";
             login.DoLogin();
@@ -162,14 +149,14 @@
             try
             {
                 Tl = new TestLink("f71e80e4c23bba99dfedf1b442bb42f5", "http://172.30.2.44/testlink/lib/api/xmlrpc.php");
-                TestPlanId = Tl.getTestPlanByName(ProjectName, PlanName).id;
+                TestPlanId = Tl.getTestPlanByName(Configs.ProjectName, Configs.PlanName).id;
 
-                if (Tl.GetBuildsForTestPlan(TestPlanId).FirstOrDefault(x => x.name == BuildName) == null)
+                if (Tl.GetBuildsForTestPlan(TestPlanId).FirstOrDefault(x => x.name == Configs.BuildName) == null)
                 {
-                    Tl.CreateBuild(TestPlanId, BuildName, "Build created by script");
+                    Tl.CreateBuild(TestPlanId, Configs.BuildName, "Build created by script");
                 }
 
-                Build firstOrDefault = Tl.GetBuildsForTestPlan(TestPlanId).FirstOrDefault(x => x.name == BuildName);
+                Build firstOrDefault = Tl.GetBuildsForTestPlan(TestPlanId).FirstOrDefault(x => x.name == Configs.BuildName);
                 if (firstOrDefault != null)
                 {
                     BuildId = firstOrDefault.id;
@@ -192,7 +179,7 @@
                     image.Save(Configs.ScreenshotPath + expectedDate + ".jpg");
                     this.TestContextInstance.AddResultFile(Configs.ScreenshotPath + expectedDate + ".jpg");
                 }
-                Tl.ReportTCResult(Tl.GetTestCaseIDByName(this.TestName)[0].id, TestPlanId, status, PlatformId, buildid: BuildId); // it posts result for testcase.
+                Tl.ReportTCResult(Tl.GetTestCaseIDByName(this.TestName)[0].id, TestPlanId, status, Configs.PlatformId, buildid: BuildId); // it posts result for testcase.
             }
             catch
             {
