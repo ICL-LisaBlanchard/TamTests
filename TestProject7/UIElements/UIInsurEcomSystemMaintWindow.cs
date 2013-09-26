@@ -12,19 +12,19 @@
         {
             #region Search Criteria
 
-            this.windowName1 = "insurE-com System Maintenance";
-            this.SearchProperties[PropertyNames.Name] = this.windowName1;
-            this.SearchProperties[PropertyNames.ClassName] = "IEFrame";
-            this.WindowTitles.Add(this.windowName1);
-            this.windowName2 = "Blank Page";
-            this.WindowTitles.Add(this.windowName2);
+            windowName1 = "insurE-com System Maintenance";
+            SearchProperties[PropertyNames.Name] = windowName1;
+            SearchProperties[PropertyNames.ClassName] = "IEFrame";
+            WindowTitles.Add(windowName1);
+            windowName2 = "Blank Page";
+            WindowTitles.Add(windowName2);
 
             #endregion
         }
 
         public void LaunchUrl(Uri url)
         {
-            this.CopyFrom(Launch(url));
+            CopyFrom(Launch(url));
         }
 
         #region Properties
@@ -33,11 +33,11 @@
         {
             get
             {
-                if ((this.mUILeftbarFrame == null))
+                if ((mUILeftbarFrame == null))
                 {
-                    this.mUILeftbarFrame = new UILeftbarFrame(this);
+                    mUILeftbarFrame = new UILeftbarFrame(this);
                 }
-                return this.mUILeftbarFrame;
+                return mUILeftbarFrame;
             }
         }
 
@@ -45,11 +45,11 @@
         {
             get
             {
-                if ((this.mUIContentFrame == null))
+                if ((mUIContentFrame == null))
                 {
-                    this.mUIContentFrame = new UIContentFrame(this);
+                    mUIContentFrame = new UIContentFrame(this);
                 }
-                return this.mUIContentFrame;
+                return mUIContentFrame;
             }
         }
 
@@ -57,11 +57,11 @@
         {
             get
             {
-                if ((this.mUIInsurEcomSystemMaintTitleBar == null))
+                if ((mUIInsurEcomSystemMaintTitleBar == null))
                 {
-                    this.mUIInsurEcomSystemMaintTitleBar = new UITitleBar(this);
+                    mUIInsurEcomSystemMaintTitleBar = new UITitleBar(this);
                 }
-                return this.mUIInsurEcomSystemMaintTitleBar;
+                return mUIInsurEcomSystemMaintTitleBar;
             }
         }
 
@@ -69,11 +69,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "41477");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "41477");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 

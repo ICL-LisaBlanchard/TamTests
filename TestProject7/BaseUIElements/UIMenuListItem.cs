@@ -11,11 +11,11 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = name;
-            this.SearchConfigurations.Add(SearchConfiguration.ExpandWhileSearching);
+            SearchProperties[UITestControl.PropertyNames.Name] = name;
+            SearchConfigurations.Add(SearchConfiguration.ExpandWhileSearching);
             foreach (string windowTitle in searchLimitContainer.WindowTitles)
             {
-                this.WindowTitles.Add(windowTitle);
+                WindowTitles.Add(windowTitle);
             }
 
             #endregion

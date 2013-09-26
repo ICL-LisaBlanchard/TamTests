@@ -12,9 +12,9 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32770";
-            this.WindowTitles.Add("New Policy: AUTOAU1");
-            this.WindowTitles.Add("Policy: autotest autotest");
+            SearchProperties[WinControl.PropertyNames.ControlId] = "32770";
+            WindowTitles.Add("New Policy: AUTOAU1");
+            WindowTitles.Add("Policy: autotest autotest");
 
             #endregion
         }
@@ -29,11 +29,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, instance: "13", className: "ThunderRT6UserControlDC");
+                    mUIItemWindow = new UIItemWindow(this, instance: "13", className: "ThunderRT6UserControlDC");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -41,11 +41,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow(this, controlId: "1", instance: "15");
+                    mUIItemWindow1 = new UIItemWindow(this, controlId: "1", instance: "15");
                 }
-                return this.mUIItemWindow1;
+                return mUIItemWindow1;
             }
         }
 
@@ -53,11 +53,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, controlId: "13");
+                    mUIOKWindow = new UIItemWindow(this, controlId: "13");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 
@@ -65,11 +65,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow2 == null))
+                if ((mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow(this, controlId: "1", instance: "24");
+                    mUIItemWindow2 = new UIItemWindow(this, controlId: "1", instance: "24");
                 }
-                return this.mUIItemWindow2;
+                return mUIItemWindow2;
             }
         }
 
@@ -77,11 +77,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow11 == null))
+                if ((mUIItemWindow11 == null))
                 {
-                    this.mUIItemWindow11 = new UIItemWindow(this, controlId: "1", instance: "25");
+                    mUIItemWindow11 = new UIItemWindow(this, controlId: "1", instance: "25");
                 }
-                return this.mUIItemWindow11;
+                return mUIItemWindow11;
             }
         }
 
@@ -89,11 +89,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUICancelWindow == null))
+                if ((mUICancelWindow == null))
                 {
-                    this.mUICancelWindow = new UIItemWindow(this, controlId: "3");
+                    mUICancelWindow = new UIItemWindow(this, controlId: "3");
                 }
-                return this.mUICancelWindow;
+                return mUICancelWindow;
             }
         }
 
@@ -101,11 +101,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow12 == null))
+                if ((mUIItemWindow12 == null))
                 {
-                    this.mUIItemWindow12 = new UIItemWindow(this, className: "ThunderRT6UserControlDC");
+                    mUIItemWindow12 = new UIItemWindow(this, className: "ThunderRT6UserControlDC");
                 }
-                return this.mUIItemWindow12;
+                return mUIItemWindow12;
             }
         }
 

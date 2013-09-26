@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Find and Goto";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "bosa_sdm_Microsoft Office WordView 11.0";
-            this.WindowTitles.Add("Find and Goto");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Find and Goto";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "bosa_sdm_Microsoft Office WordView 11.0";
+            WindowTitles.Add("Find and Goto");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIFindandGotoDialog == null))
+                if ((mUIFindandGotoDialog == null))
                 {
-                    this.mUIFindandGotoDialog = new UIDialog(this, "Find and Goto", "Dialog");
+                    mUIFindandGotoDialog = new UIDialog(this, "Find and Goto", "Dialog");
                 }
-                return this.mUIFindandGotoDialog;
+                return mUIFindandGotoDialog;
             }
         }
 

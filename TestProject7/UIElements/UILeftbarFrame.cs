@@ -10,15 +10,15 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "leftbar";
-            this.FilterProperties[PropertyNames.AbsolutePath] = null;
-            this.FilterProperties[PropertyNames.PageUrl] = "content/leftbar.asp";
-            this.FilterProperties[HtmlControl.PropertyNames.Title] = null;
-            this.FilterProperties[HtmlControl.PropertyNames.Class] = null;
-            this.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "noResize src=\"content/leftbar.asp\" name=";
-            this.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "2";
-            this.WindowTitles.Add("insurE-com System Maintenance");
+            SearchProperties[HtmlControl.PropertyNames.Id] = null;
+            SearchProperties[UITestControl.PropertyNames.Name] = "leftbar";
+            FilterProperties[PropertyNames.AbsolutePath] = null;
+            FilterProperties[PropertyNames.PageUrl] = "content/leftbar.asp";
+            FilterProperties[HtmlControl.PropertyNames.Title] = null;
+            FilterProperties[HtmlControl.PropertyNames.Class] = null;
+            FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "noResize src=\"content/leftbar.asp\" name=";
+            FilterProperties[HtmlControl.PropertyNames.TagInstance] = "2";
+            WindowTitles.Add("insurE-com System Maintenance");
 
             #endregion
         }
@@ -29,11 +29,11 @@
         {
             get
             {
-                if ((this.mUIInsurEcomLeftbarDocument == null))
+                if ((mUIInsurEcomLeftbarDocument == null))
                 {
-                    this.mUIInsurEcomLeftbarDocument = new UIInsurEcomLeftbarDocument(this);
+                    mUIInsurEcomLeftbarDocument = new UIInsurEcomLeftbarDocument(this);
                 }
-                return this.mUIInsurEcomLeftbarDocument;
+                return mUIInsurEcomLeftbarDocument;
             }
         }
 

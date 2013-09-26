@@ -8,11 +8,11 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         public UIPane(UITestControl uiWindow, string name)
             : base(uiWindow)
         {
-            this.SearchProperties[UITestControl.PropertyNames.Name] = name;
+            SearchProperties[UITestControl.PropertyNames.Name] = name;
 
             foreach (string w in uiWindow.WindowTitles)
             {
-                this.WindowTitles.Add(w);
+                WindowTitles.Add(w);
             }
         }
 

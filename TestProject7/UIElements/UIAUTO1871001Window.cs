@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "-1001", PropertyExpressionOperator.Contains));
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            //this.windowTitle = "AUTO187-1001";
-            //this.WindowTitles.Add(this.windowTitle);
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "-1001", PropertyExpressionOperator.Contains));
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            //windowTitle = "AUTO187-1001";
+            //WindowTitles.Add(windowTitle);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIInviteWindow == null))
+                if ((mUIInviteWindow == null))
                 {
-                    this.mUIInviteWindow = new UIItemWindow(this, name: "&Invite");
+                    mUIInviteWindow = new UIItemWindow(this, name: "&Invite");
                 }
-                return this.mUIInviteWindow;
+                return mUIInviteWindow;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "17");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "17");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                if ((this.mUIRenewPolicyWindow == null))
+                if ((mUIRenewPolicyWindow == null))
                 {
-                    this.mUIRenewPolicyWindow = new UIItemWindow(this, controlId: "10");
+                    mUIRenewPolicyWindow = new UIItemWindow(this, controlId: "10");
                 }
-                return this.mUIRenewPolicyWindow;
+                return mUIRenewPolicyWindow;
             }
         }
 

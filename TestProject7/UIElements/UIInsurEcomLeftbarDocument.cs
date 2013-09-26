@@ -10,13 +10,13 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-            this.SearchProperties[PropertyNames.RedirectingPage] = "False";
-            this.SearchProperties[PropertyNames.FrameDocument] = "True";
-            this.FilterProperties[HtmlControl.PropertyNames.Title] = "insurE-com - Left bar";
-            this.FilterProperties[PropertyNames.AbsolutePath] = "/sysmaint/content/leftbar.asp";
-            this.FilterProperties[PropertyNames.PageUrl] = "https://www.insur-econnect.com/sysmaint/content/leftbar.asp";
-            this.WindowTitles.Add("insurE-com System Maintenance");
+            SearchProperties[HtmlControl.PropertyNames.Id] = null;
+            SearchProperties[PropertyNames.RedirectingPage] = "False";
+            SearchProperties[PropertyNames.FrameDocument] = "True";
+            FilterProperties[HtmlControl.PropertyNames.Title] = "insurE-com - Left bar";
+            FilterProperties[PropertyNames.AbsolutePath] = "/sysmaint/content/leftbar.asp";
+            FilterProperties[PropertyNames.PageUrl] = "https://www.insur-econnect.com/sysmaint/content/leftbar.asp";
+            WindowTitles.Add("insurE-com System Maintenance");
 
             #endregion
         }
@@ -27,27 +27,27 @@
         {
             get
             {
-                if ((this.mUIRenewalsMaintenanceHyperlink == null))
+                if ((mUIRenewalsMaintenanceHyperlink == null))
                 {
-                    this.mUIRenewalsMaintenanceHyperlink = new HtmlHyperlink(this);
+                    mUIRenewalsMaintenanceHyperlink = new HtmlHyperlink(this);
 
                     #region Search Criteria
 
-                    this.mUIRenewalsMaintenanceHyperlink.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-                    this.mUIRenewalsMaintenanceHyperlink.SearchProperties[UITestControl.PropertyNames.Name] = null;
-                    this.mUIRenewalsMaintenanceHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = null;
-                    this.mUIRenewalsMaintenanceHyperlink.SearchProperties[HtmlControl.PropertyNames.InnerText] = "Renewals Maintenance";
-                    this.mUIRenewalsMaintenanceHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/sysmaint/content/leftbar.asp";
-                    this.mUIRenewalsMaintenanceHyperlink.FilterProperties[HtmlControl.PropertyNames.Title] = null;
-                    this.mUIRenewalsMaintenanceHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "https://www.insur-econnect.com/sysmaint/content/leftbar.asp#";
-                    this.mUIRenewalsMaintenanceHyperlink.FilterProperties[HtmlControl.PropertyNames.Class] = null;
-                    this.mUIRenewalsMaintenanceHyperlink.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "style=\"COLOR: white\" href=\"#\"";
-                    this.mUIRenewalsMaintenanceHyperlink.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "39";
-                    this.mUIRenewalsMaintenanceHyperlink.WindowTitles.Add("insurE-com System Maintenance");
+                    mUIRenewalsMaintenanceHyperlink.SearchProperties[HtmlControl.PropertyNames.Id] = null;
+                    mUIRenewalsMaintenanceHyperlink.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    mUIRenewalsMaintenanceHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = null;
+                    mUIRenewalsMaintenanceHyperlink.SearchProperties[HtmlControl.PropertyNames.InnerText] = "Renewals Maintenance";
+                    mUIRenewalsMaintenanceHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/sysmaint/content/leftbar.asp";
+                    mUIRenewalsMaintenanceHyperlink.FilterProperties[HtmlControl.PropertyNames.Title] = null;
+                    mUIRenewalsMaintenanceHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "https://www.insur-econnect.com/sysmaint/content/leftbar.asp#";
+                    mUIRenewalsMaintenanceHyperlink.FilterProperties[HtmlControl.PropertyNames.Class] = null;
+                    mUIRenewalsMaintenanceHyperlink.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "style=\"COLOR: white\" href=\"#\"";
+                    mUIRenewalsMaintenanceHyperlink.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "39";
+                    mUIRenewalsMaintenanceHyperlink.WindowTitles.Add("insurE-com System Maintenance");
 
                     #endregion
                 }
-                return this.mUIRenewalsMaintenanceHyperlink;
+                return mUIRenewalsMaintenanceHyperlink;
             }
         }
 
@@ -55,11 +55,11 @@
         {
             get
             {
-                if ((this.mUIDivRenewalsPane == null))
+                if ((mUIDivRenewalsPane == null))
                 {
-                    this.mUIDivRenewalsPane = new UIDivRenewalsPane(this);
+                    mUIDivRenewalsPane = new UIDivRenewalsPane(this);
                 }
-                return this.mUIDivRenewalsPane;
+                return mUIDivRenewalsPane;
             }
         }
 

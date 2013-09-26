@@ -12,9 +12,9 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32769";
-            this.WindowTitles.Add("New Customer: AUTOAU1");
-            this.WindowTitles.Add("Policy: autotest autotest");
+            SearchProperties[WinControl.PropertyNames.ControlId] = "32769";
+            WindowTitles.Add("New Customer: AUTOAU1");
+            WindowTitles.Add("Policy: autotest autotest");
 
             #endregion
         }
@@ -25,11 +25,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "14");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "14");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -37,11 +37,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow(this, controlId: "1", instance: "15");
+                    mUIItemWindow1 = new UIItemWindow(this, controlId: "1", instance: "15");
                 }
-                return this.mUIItemWindow1;
+                return mUIItemWindow1;
             }
         }
 
@@ -49,11 +49,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, controlId: "23");
+                    mUIOKWindow = new UIItemWindow(this, controlId: "23");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 
@@ -61,11 +61,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUICancelWindow == null))
+                if ((mUICancelWindow == null))
                 {
-                    this.mUICancelWindow = new UIItemWindow(this, controlId: "8");
+                    mUICancelWindow = new UIItemWindow(this, controlId: "8");
                 }
-                return this.mUICancelWindow;
+                return mUICancelWindow;
             }
         }
 

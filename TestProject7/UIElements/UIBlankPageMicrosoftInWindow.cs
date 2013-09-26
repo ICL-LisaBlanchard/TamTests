@@ -12,14 +12,14 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[PropertyNames.ClassName] = "IEFrame";
+            SearchProperties[PropertyNames.ClassName] = "IEFrame";
 
             #endregion
         }
 
         public void LaunchUrl(Uri url)
         {
-            this.CopyFrom(Launch(url));
+            CopyFrom(Launch(url));
         }
 
         #region Properties
@@ -28,11 +28,11 @@
         {
             get
             {
-                if ((this.mUIBlankPageWindowsInteTitleBar == null))
+                if ((mUIBlankPageWindowsInteTitleBar == null))
                 {
-                    this.mUIBlankPageWindowsInteTitleBar = new UITitleBar(this);
+                    mUIBlankPageWindowsInteTitleBar = new UITitleBar(this);
                 }
-                return this.mUIBlankPageWindowsInteTitleBar;
+                return mUIBlankPageWindowsInteTitleBar;
             }
         }
 

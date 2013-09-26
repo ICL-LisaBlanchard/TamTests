@@ -13,11 +13,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIYesWindow == null))
+                if ((mUIYesWindow == null))
                 {
-                    this.mUIYesWindow = new UIItemWindow(this, controlId: "6");
+                    mUIYesWindow = new UIItemWindow(this, controlId: "6");
                 }
-                return this.mUIYesWindow;
+                return mUIYesWindow;
             }
         }
 
@@ -33,9 +33,9 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Verify";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add("Verify");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Verify";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
+            WindowTitles.Add("Verify");
 
             #endregion
         }

@@ -12,12 +12,12 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
 
             if (!string.IsNullOrEmpty(name))
             {
-                this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, name, PropertyExpressionOperator.Contains));
+                SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, name, PropertyExpressionOperator.Contains));
             }
 
             foreach (string w in searchLimitContainer.WindowTitles)
             {
-                this.WindowTitles.Add(w);
+                WindowTitles.Add(w);
             }
 
             #endregion

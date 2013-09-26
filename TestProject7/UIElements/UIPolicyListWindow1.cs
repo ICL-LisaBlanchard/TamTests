@@ -15,11 +15,11 @@
         {
             get
             {
-                if ((this.mUICancelWindow == null))
+                if ((mUICancelWindow == null))
                 {
-                    this.mUICancelWindow = new UIItemWindow(this, controlId: "8");
+                    mUICancelWindow = new UIItemWindow(this, controlId: "8");
                 }
-                return this.mUICancelWindow;
+                return mUICancelWindow;
             }
         }
 
@@ -27,11 +27,11 @@
         {
             get
             {
-                if ((this.mUIOptionsWindow == null))
+                if ((mUIOptionsWindow == null))
                 {
-                    this.mUIOptionsWindow = new UIItemWindow(this, controlId: "7");
+                    mUIOptionsWindow = new UIItemWindow(this, controlId: "7");
                 }
-                return this.mUIOptionsWindow;
+                return mUIOptionsWindow;
             }
         }
 
@@ -39,11 +39,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "2");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "2");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                if ((this.mUIDetailWindow == null))
+                if ((mUIDetailWindow == null))
                 {
-                    this.mUIDetailWindow = new UIItemWindow(this, controlId: "6");
+                    mUIDetailWindow = new UIItemWindow(this, controlId: "6");
                 }
-                return this.mUIDetailWindow;
+                return mUIDetailWindow;
             }
         }
 
@@ -78,8 +78,8 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32769";
-            this.WindowTitles.Add(WindowTitle);
+            SearchProperties[WinControl.PropertyNames.ControlId] = "32769";
+            WindowTitles.Add(WindowTitle);
 
             #endregion
         }

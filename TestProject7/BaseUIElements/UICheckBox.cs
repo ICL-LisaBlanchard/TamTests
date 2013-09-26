@@ -8,8 +8,8 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         public UICheckBox(UITestControl uiItemWindow, string name)
             : base(uiItemWindow)
         {
-            this.SearchProperties[UITestControl.PropertyNames.Name] = name;
-            this.WindowTitles.Add(uiItemWindow.WindowTitles[0]);
+            SearchProperties[UITestControl.PropertyNames.Name] = name;
+            WindowTitles.Add(uiItemWindow.WindowTitles[0]);
         }
     }
 }

@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.windowTitle = "Claims";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add(this.windowTitle);
+            windowTitle = "Claims";
+            SearchProperties[UITestControl.PropertyNames.Name] = windowTitle;
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
+            WindowTitles.Add(windowTitle);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUINoWindow == null))
+                if ((mUINoWindow == null))
                 {
-                    this.mUINoWindow = new UIItemWindow(this, controlId: "7");
+                    mUINoWindow = new UIItemWindow(this, controlId: "7");
                 }
-                return this.mUINoWindow;
+                return mUINoWindow;
             }
         }
 

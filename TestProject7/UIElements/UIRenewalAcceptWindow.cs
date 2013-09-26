@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Renewal Accept";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Renewal Accept");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Renewal Accept";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add("Renewal Accept");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIAlternativeWindow == null))
+                if ((mUIAlternativeWindow == null))
                 {
-                    this.mUIAlternativeWindow = new UIItemWindow(this, "1");
+                    mUIAlternativeWindow = new UIItemWindow(this, "1");
                 }
-                return this.mUIAlternativeWindow;
+                return mUIAlternativeWindow;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, "4");
+                    mUIOKWindow = new UIItemWindow(this, "4");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 

@@ -10,13 +10,13 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-            this.SearchProperties[PropertyNames.RedirectingPage] = "False";
-            this.SearchProperties[PropertyNames.FrameDocument] = "False";
-            this.FilterProperties[HtmlControl.PropertyNames.Title] = null;
-            this.FilterProperties[PropertyNames.AbsolutePath] = "J:/APPS/IEOffice/Data/Xsl/QuoteDetails.htm";
-            this.FilterProperties[PropertyNames.PageUrl] = "file://J:\\APPS\\IEOffice\\Data\\Xsl\\QuoteDetails.htm";
-            this.WindowTitles.Add("View Quote Details");
+            SearchProperties[HtmlControl.PropertyNames.Id] = null;
+            SearchProperties[PropertyNames.RedirectingPage] = "False";
+            SearchProperties[PropertyNames.FrameDocument] = "False";
+            FilterProperties[HtmlControl.PropertyNames.Title] = null;
+            FilterProperties[PropertyNames.AbsolutePath] = "J:/APPS/IEOffice/Data/Xsl/QuoteDetails.htm";
+            FilterProperties[PropertyNames.PageUrl] = "file://J:\\APPS\\IEOffice\\Data\\Xsl\\QuoteDetails.htm";
+            WindowTitles.Add("View Quote Details");
 
             #endregion
         }
@@ -27,11 +27,11 @@
         {
             get
             {
-                if ((this.mUIItemTable == null))
+                if ((mUIItemTable == null))
                 {
-                    this.mUIItemTable = new UIItemTable(this);
+                    mUIItemTable = new UIItemTable(this);
                 }
-                return this.mUIItemTable;
+                return mUIItemTable;
             }
         }
 
@@ -39,11 +39,11 @@
         {
             get
             {
-                if ((this.mUIItemTable1 == null))
+                if ((mUIItemTable1 == null))
                 {
-                    this.mUIItemTable1 = new UIItemTable1(this);
+                    mUIItemTable1 = new UIItemTable1(this);
                 }
-                return this.mUIItemTable1;
+                return mUIItemTable1;
             }
         }
 

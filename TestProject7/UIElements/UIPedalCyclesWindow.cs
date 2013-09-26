@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Pedal Cycles";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Pedal Cycles");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Pedal Cycles";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add("Pedal Cycles");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, "9");
+                    mUIItemWindow = new UIItemWindow(this, "9");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                if ((this.mUINewWindow == null))
+                if ((mUINewWindow == null))
                 {
-                    this.mUINewWindow = new UIItemWindow(this, "4");
+                    mUINewWindow = new UIItemWindow(this, "4");
                 }
-                return this.mUINewWindow;
+                return mUINewWindow;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow(this, "2", "2");
+                    mUIItemWindow1 = new UIItemWindow(this, "2", "2");
                 }
-                return this.mUIItemWindow1;
+                return mUIItemWindow1;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                if ((this.mUITxtModelWindow == null))
+                if ((mUITxtModelWindow == null))
                 {
-                    this.mUITxtModelWindow = new UIItemWindow(this, "8");
+                    mUITxtModelWindow = new UIItemWindow(this, "8");
                 }
-                return this.mUITxtModelWindow;
+                return mUITxtModelWindow;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                if ((this.mUITxtSerialNumberWindow == null))
+                if ((mUITxtSerialNumberWindow == null))
                 {
-                    this.mUITxtSerialNumberWindow = new UIItemWindow(this, "7");
+                    mUITxtSerialNumberWindow = new UIItemWindow(this, "7");
                 }
-                return this.mUITxtSerialNumberWindow;
+                return mUITxtSerialNumberWindow;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow2 == null))
+                if ((mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow(this, "10");
+                    mUIItemWindow2 = new UIItemWindow(this, "10");
                 }
-                return this.mUIItemWindow2;
+                return mUIItemWindow2;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                if ((this.mUISaveWindow == null))
+                if ((mUISaveWindow == null))
                 {
-                    this.mUISaveWindow = new UIItemWindow(this, "11");
+                    mUISaveWindow = new UIItemWindow(this, "11");
                 }
-                return this.mUISaveWindow;
+                return mUISaveWindow;
             }
         }
 
@@ -108,11 +108,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, "14");
+                    mUIOKWindow = new UIItemWindow(this, "14");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 

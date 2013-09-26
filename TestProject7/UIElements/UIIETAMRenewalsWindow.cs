@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Personal Lines Renewals";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.windowName = "IETAM Renewals";
-            this.WindowTitles.Add(this.windowName);
+            SearchProperties[UITestControl.PropertyNames.Name] = "Personal Lines Renewals";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            windowName = "IETAM Renewals";
+            WindowTitles.Add(windowName);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "3");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "3");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, controlId: "2");
+                    mUIOKWindow = new UIItemWindow(this, controlId: "2");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 

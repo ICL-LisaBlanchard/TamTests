@@ -11,7 +11,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Public Credit Check";
+            SearchProperties[UITestControl.PropertyNames.Name] = "Public Credit Check";
 
             #endregion
         }
@@ -22,11 +22,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, "2");
+                    mUIOKWindow = new UIItemWindow(this, "2");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 

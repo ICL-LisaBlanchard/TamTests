@@ -12,8 +12,8 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[WinControl.PropertyNames.ControlId] = "65535";
-            this.WindowTitles.Add("insur-E.tam");
+            SearchProperties[WinControl.PropertyNames.ControlId] = "65535";
+            WindowTitles.Add("insur-E.tam");
 
             #endregion
         }

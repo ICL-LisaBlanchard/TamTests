@@ -20,39 +20,39 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
 
             if (searchLimitContainer.WindowTitles.Count > 0)
             {
-                this.WindowName = searchLimitContainer.WindowTitles[0];
+                WindowName = searchLimitContainer.WindowTitles[0];
             }
 
-            this.WindowTitles.Add(this.WindowName);
+            WindowTitles.Add(WindowName);
 
             if (!string.IsNullOrEmpty(controlId))
             {
-                this.SearchProperties[WinControl.PropertyNames.ControlId] = controlId;
+                SearchProperties[WinControl.PropertyNames.ControlId] = controlId;
             }
 
             if (!string.IsNullOrEmpty(instance))
             {
-                this.SearchProperties[UITestControl.PropertyNames.Instance] = instance;
+                SearchProperties[UITestControl.PropertyNames.Instance] = instance;
             }
 
             if (!string.IsNullOrEmpty(className))
             {
-                this.SearchProperties[UITestControl.PropertyNames.ClassName] = className;
+                SearchProperties[UITestControl.PropertyNames.ClassName] = className;
             }
 
             if (!string.IsNullOrEmpty(accessible))
             {
-                this.SearchProperties[PropertyNames.AccessibleName] = accessible;
+                SearchProperties[PropertyNames.AccessibleName] = accessible;
             }
 
             if (!string.IsNullOrEmpty(name))
             {
-                this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, name, PropertyExpressionOperator.Contains));
+                SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, name, PropertyExpressionOperator.Contains));
             }
 
             if (!string.IsNullOrEmpty(controlName))
             {
-                this.SearchProperties[WinControl.PropertyNames.ControlName] = controlName;
+                SearchProperties[WinControl.PropertyNames.ControlName] = controlName;
             }
 
             #endregion
@@ -62,31 +62,31 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             #region Search Criteria
 
-            this.WindowTitles.Add(this.WindowName);
+            WindowTitles.Add(WindowName);
 
             if (!string.IsNullOrEmpty(controlId))
             {
-                this.SearchProperties[WinControl.PropertyNames.ControlId] = controlId;
+                SearchProperties[WinControl.PropertyNames.ControlId] = controlId;
             }
 
             if (!string.IsNullOrEmpty(instance))
             {
-                this.SearchProperties[UITestControl.PropertyNames.Instance] = instance;
+                SearchProperties[UITestControl.PropertyNames.Instance] = instance;
             }
 
             if (!string.IsNullOrEmpty(className))
             {
-                this.SearchProperties[UITestControl.PropertyNames.ClassName] = className;
+                SearchProperties[UITestControl.PropertyNames.ClassName] = className;
             }
 
             if (!string.IsNullOrEmpty(accessible))
             {
-                this.SearchProperties[PropertyNames.AccessibleName] = accessible;
+                SearchProperties[PropertyNames.AccessibleName] = accessible;
             }
 
             if (!string.IsNullOrEmpty(name))
             {
-                this.SearchProperties[UITestControl.PropertyNames.Name] = name;
+                SearchProperties[UITestControl.PropertyNames.Name] = name;
             }
 
             #endregion
@@ -542,11 +542,11 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             get
             {
-                if ((this.mUIItemTitleBar == null))
+                if ((mUIItemTitleBar == null))
                 {
-                    this.mUIItemTitleBar = new WinTitleBar(this);
+                    mUIItemTitleBar = new WinTitleBar(this);
                 }
-                return this.mUIItemTitleBar;
+                return mUIItemTitleBar;
             }
         }
 

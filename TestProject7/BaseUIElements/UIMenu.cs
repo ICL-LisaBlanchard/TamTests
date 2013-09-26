@@ -10,7 +10,7 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = name;
+            SearchProperties[UITestControl.PropertyNames.Name] = name;
 
             #endregion
         }

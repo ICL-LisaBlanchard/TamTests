@@ -20,11 +20,11 @@
         {
             get
             {
-                if ((this.mLoginParams == null))
+                if ((mLoginParams == null))
                 {
-                    this.mLoginParams = new LoginParams();
+                    mLoginParams = new LoginParams();
                 }
-                return this.mLoginParams;
+                return mLoginParams;
             }
         }
 
@@ -32,11 +32,11 @@
         {
             get
             {
-                if ((this.mLoginEnterDateParams == null))
+                if ((mLoginEnterDateParams == null))
                 {
-                    this.mLoginEnterDateParams = new LoginEnterDateParams();
+                    mLoginEnterDateParams = new LoginEnterDateParams();
                 }
-                return this.mLoginEnterDateParams;
+                return mLoginEnterDateParams;
             }
         }
 
@@ -44,13 +44,13 @@
         {
             #region Variable Declarations
 
-            WinEdit tbxPassword = this.map.UITheAgencyManagerSignWindow.TbxPassword.UIItemEdit;
-            WinEdit tbxUserName = this.map.UITheAgencyManagerSignWindow.TbxUsername.UIItemEdit;
-            WinControl btnOk = this.map.UITheAgencyManagerSignWindow.BtnOk1.UIOKButton;
+            WinEdit tbxPassword = map.UITheAgencyManagerSignWindow.TbxPassword.UIItemEdit;
+            WinEdit tbxUserName = map.UITheAgencyManagerSignWindow.TbxUsername.UIItemEdit;
+            WinControl btnOk = map.UITheAgencyManagerSignWindow.BtnOk1.UIOKButton;
 
             #endregion
 
-            ApplicationUnderTest.Launch(this.LoginParams.ExePath, this.LoginParams.AlternateExePath);
+            ApplicationUnderTest.Launch(LoginParams.ExePath, LoginParams.AlternateExePath);
 
             tbxUserName.Text = Configs.Username;
             tbxPassword.Text = Configs.Password;
@@ -61,17 +61,17 @@
         {
             #region Variable Declarations
 
-            WinComboBox tbxMonth = this.map.UITheAgencyManagerSignWindow.TbxMonth.UIItemComboBox;
-            WinEdit tbxYear = this.map.UITheAgencyManagerSignWindow.TbxYear.UIItemEdit;
-            WinControl btnOk = this.map.UITheAgencyManagerSignWindow.BtnOk2.UIOKButton;
+            WinComboBox tbxMonth = map.UITheAgencyManagerSignWindow.TbxMonth.UIItemComboBox;
+            WinEdit tbxYear = map.UITheAgencyManagerSignWindow.TbxYear.UIItemEdit;
+            WinControl btnOk = map.UITheAgencyManagerSignWindow.BtnOk2.UIOKButton;
 
             #endregion
 
             // Select 'November' in combo box
-            tbxMonth.SelectedItem = this.LoginEnterDateParams.MonthName;
+            tbxMonth.SelectedItem = LoginEnterDateParams.MonthName;
 
             // Type '2012' in text box
-            tbxYear.Text = this.LoginEnterDateParams.Year;
+            tbxYear.Text = LoginEnterDateParams.Year;
 
             // Click '&OK' button
             Mouse.Click(btnOk, new Point(54, 5));
@@ -84,7 +84,7 @@
         {
             //#region Variable Declarations
 
-            //WinControl uIokButton = this.map.UIWarningWindow.UIOKWindow.UIOKButton;
+            //WinControl uIokButton = map.UIWarningWindow.UIOKWindow.UIOKButton;
 
             //#endregion
 

@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Import to TAM";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "TfImportToTam";
-            this.WindowTitles.Add("Import to TAM");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Import to TAM";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "TfImportToTam";
+            WindowTitles.Add("Import to TAM");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIImportOptionsClient == null))
+                if ((mUIImportOptionsClient == null))
                 {
-                    this.mUIImportOptionsClient = new UIClient(this, "Import Options");
+                    mUIImportOptionsClient = new UIClient(this, "Import Options");
                 }
-                return this.mUIImportOptionsClient;
+                return mUIImportOptionsClient;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                if ((this.mUIImporttoTAMClient == null))
+                if ((mUIImporttoTAMClient == null))
                 {
-                    this.mUIImporttoTAMClient = new UIClient(this, "Import to TAM");
+                    mUIImporttoTAMClient = new UIClient(this, "Import to TAM");
                 }
-                return this.mUIImporttoTAMClient;
+                return mUIImporttoTAMClient;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                if ((this.mUIPanel1Client == null))
+                if ((mUIPanel1Client == null))
                 {
-                    this.mUIPanel1Client = new UIClient(this, "Panel1");
+                    mUIPanel1Client = new UIClient(this, "Panel1");
                 }
-                return this.mUIPanel1Client;
+                return mUIPanel1Client;
             }
         }
 

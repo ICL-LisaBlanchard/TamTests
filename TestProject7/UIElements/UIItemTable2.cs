@@ -10,15 +10,15 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-            this.SearchProperties[UITestControl.PropertyNames.Name] = null;
-            this.FilterProperties[HtmlControl.PropertyNames.InnerText] = "Household Quotation For Covea Insurance ";
-            this.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "border=0 width=\"95%\"";
-            this.FilterProperties[PropertyNames.RowCount] = "102";
-            this.FilterProperties[PropertyNames.ColumnCount] = "2";
-            this.FilterProperties[HtmlControl.PropertyNames.Class] = null;
-            this.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "1";
-            this.WindowTitles.Add("C:\\Users\\Lisa Blanchard\\AppData\\Local\\Temp\\HHQuote.htm");
+            SearchProperties[HtmlControl.PropertyNames.Id] = null;
+            SearchProperties[UITestControl.PropertyNames.Name] = null;
+            FilterProperties[HtmlControl.PropertyNames.InnerText] = "Household Quotation For Covea Insurance ";
+            FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "border=0 width=\"95%\"";
+            FilterProperties[PropertyNames.RowCount] = "102";
+            FilterProperties[PropertyNames.ColumnCount] = "2";
+            FilterProperties[HtmlControl.PropertyNames.Class] = null;
+            FilterProperties[HtmlControl.PropertyNames.TagInstance] = "1";
+            WindowTitles.Add("C:\\Users\\Lisa Blanchard\\AppData\\Local\\Temp\\HHQuote.htm");
 
             #endregion
         }
@@ -29,24 +29,24 @@
         {
             get
             {
-                if ((this.mUIItem26652Cell == null))
+                if ((mUIItem26652Cell == null))
                 {
-                    this.mUIItem26652Cell = new HtmlCell(this);
+                    mUIItem26652Cell = new HtmlCell(this);
 
                     #region Search Criteria
 
-                    this.mUIItem26652Cell.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-                    this.mUIItem26652Cell.SearchProperties[UITestControl.PropertyNames.Name] = null;
-                    this.mUIItem26652Cell.SearchProperties[UITestControl.PropertyNames.MaxDepth] = "3";
-                    this.mUIItem26652Cell.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "class=bodyText";
-                    this.mUIItem26652Cell.FilterProperties[HtmlCell.PropertyNames.RowIndex] = "5";
-                    this.mUIItem26652Cell.FilterProperties[HtmlCell.PropertyNames.ColumnIndex] = "1";
-                    this.mUIItem26652Cell.FilterProperties[HtmlControl.PropertyNames.Class] = "bodyText";
-                    this.mUIItem26652Cell.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "10";
+                    mUIItem26652Cell.SearchProperties[HtmlControl.PropertyNames.Id] = null;
+                    mUIItem26652Cell.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    mUIItem26652Cell.SearchProperties[UITestControl.PropertyNames.MaxDepth] = "3";
+                    mUIItem26652Cell.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "class=bodyText";
+                    mUIItem26652Cell.FilterProperties[HtmlCell.PropertyNames.RowIndex] = "5";
+                    mUIItem26652Cell.FilterProperties[HtmlCell.PropertyNames.ColumnIndex] = "1";
+                    mUIItem26652Cell.FilterProperties[HtmlControl.PropertyNames.Class] = "bodyText";
+                    mUIItem26652Cell.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "10";
 
                     #endregion
                 }
-                return this.mUIItem26652Cell;
+                return mUIItem26652Cell;
             }
         }
 
@@ -54,24 +54,24 @@
         {
             get
             {
-                if ((this.mUIItem181873Cell == null))
+                if ((mUIItem181873Cell == null))
                 {
-                    this.mUIItem181873Cell = new HtmlCell(this);
+                    mUIItem181873Cell = new HtmlCell(this);
 
                     #region Search Criteria
 
-                    this.mUIItem181873Cell.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-                    this.mUIItem181873Cell.SearchProperties[UITestControl.PropertyNames.Name] = null;
-                    this.mUIItem181873Cell.SearchProperties[UITestControl.PropertyNames.MaxDepth] = "3";
-                    this.mUIItem181873Cell.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = null;
-                    this.mUIItem181873Cell.FilterProperties[HtmlCell.PropertyNames.RowIndex] = "2";
-                    this.mUIItem181873Cell.FilterProperties[HtmlCell.PropertyNames.ColumnIndex] = "1";
-                    this.mUIItem181873Cell.FilterProperties[HtmlControl.PropertyNames.Class] = null;
-                    this.mUIItem181873Cell.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "9";
+                    mUIItem181873Cell.SearchProperties[HtmlControl.PropertyNames.Id] = null;
+                    mUIItem181873Cell.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    mUIItem181873Cell.SearchProperties[UITestControl.PropertyNames.MaxDepth] = "3";
+                    mUIItem181873Cell.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = null;
+                    mUIItem181873Cell.FilterProperties[HtmlCell.PropertyNames.RowIndex] = "2";
+                    mUIItem181873Cell.FilterProperties[HtmlCell.PropertyNames.ColumnIndex] = "1";
+                    mUIItem181873Cell.FilterProperties[HtmlControl.PropertyNames.Class] = null;
+                    mUIItem181873Cell.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "9";
 
                     #endregion
                 }
-                return this.mUIItem181873Cell;
+                return mUIItem181873Cell;
             }
         }
 
@@ -79,24 +79,24 @@
         {
             get
             {
-                if ((this.mUIMrTestTestCell == null))
+                if ((mUIMrTestTestCell == null))
                 {
-                    this.mUIMrTestTestCell = new HtmlCell(this);
+                    mUIMrTestTestCell = new HtmlCell(this);
 
                     #region Search Criteria
 
-                    this.mUIMrTestTestCell.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-                    this.mUIMrTestTestCell.SearchProperties[UITestControl.PropertyNames.Name] = null;
-                    this.mUIMrTestTestCell.SearchProperties[UITestControl.PropertyNames.MaxDepth] = "3";
-                    this.mUIMrTestTestCell.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = null;
-                    this.mUIMrTestTestCell.FilterProperties[HtmlCell.PropertyNames.RowIndex] = "7";
-                    this.mUIMrTestTestCell.FilterProperties[HtmlCell.PropertyNames.ColumnIndex] = "1";
-                    this.mUIMrTestTestCell.FilterProperties[HtmlControl.PropertyNames.Class] = null;
-                    this.mUIMrTestTestCell.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "14";
+                    mUIMrTestTestCell.SearchProperties[HtmlControl.PropertyNames.Id] = null;
+                    mUIMrTestTestCell.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    mUIMrTestTestCell.SearchProperties[UITestControl.PropertyNames.MaxDepth] = "3";
+                    mUIMrTestTestCell.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = null;
+                    mUIMrTestTestCell.FilterProperties[HtmlCell.PropertyNames.RowIndex] = "7";
+                    mUIMrTestTestCell.FilterProperties[HtmlCell.PropertyNames.ColumnIndex] = "1";
+                    mUIMrTestTestCell.FilterProperties[HtmlControl.PropertyNames.Class] = null;
+                    mUIMrTestTestCell.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "14";
 
                     #endregion
                 }
-                return this.mUIMrTestTestCell;
+                return mUIMrTestTestCell;
             }
         }
 

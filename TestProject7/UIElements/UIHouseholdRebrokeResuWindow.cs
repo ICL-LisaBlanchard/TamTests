@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.windowTitle = "Household Rebroke Results";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add(this.windowTitle);
+            windowTitle = "Household Rebroke Results";
+            SearchProperties[UITestControl.PropertyNames.Name] = windowTitle;
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add(windowTitle);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, controlId: "10");
+                    mUIOKWindow = new UIItemWindow(this, controlId: "10");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
+                    mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                if ((this.mUISelectAlternativeWindow == null))
+                if ((mUISelectAlternativeWindow == null))
                 {
-                    this.mUISelectAlternativeWindow = new UIItemWindow(this, controlId: "12");
+                    mUISelectAlternativeWindow = new UIItemWindow(this, controlId: "12");
                 }
-                return this.mUISelectAlternativeWindow;
+                return mUISelectAlternativeWindow;
             }
         }
 

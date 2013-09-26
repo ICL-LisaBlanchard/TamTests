@@ -13,11 +13,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIClientsFilesWindow == null))
+                if ((mUIClientsFilesWindow == null))
                 {
-                    this.mUIClientsFilesWindow = new UIItemWindow(this, controlId: "8");
+                    mUIClientsFilesWindow = new UIItemWindow(this, controlId: "8");
                 }
-                return this.mUIClientsFilesWindow;
+                return mUIClientsFilesWindow;
             }
         }
 
@@ -25,11 +25,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUITheAgencyManagerTitleBar == null))
+                if ((mUITheAgencyManagerTitleBar == null))
                 {
-                    this.mUITheAgencyManagerTitleBar = new UIItemWindow(this);
+                    mUITheAgencyManagerTitleBar = new UIItemWindow(this);
                 }
-                return this.mUITheAgencyManagerTitleBar;
+                return mUITheAgencyManagerTitleBar;
             }
         }
 
@@ -47,9 +47,9 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Applied TAM 12";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("The Agency Manager");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Applied TAM 12";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add("The Agency Manager");
 
             #endregion
         }

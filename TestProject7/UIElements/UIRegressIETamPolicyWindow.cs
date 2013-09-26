@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.windowName = "Regress IETam Policy";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add(this.windowName);
+            windowName = "Regress IETam Policy";
+            SearchProperties[UITestControl.PropertyNames.Name] = windowName;
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add(windowName);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "8");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "8");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow2 == null))
+                if ((mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow(this, controlId: "11");
+                    mUIItemWindow2 = new UIItemWindow(this, controlId: "11");
                 }
-                return this.mUIItemWindow2;
+                return mUIItemWindow2;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                if ((this.mUIRegressWindow == null))
+                if ((mUIRegressWindow == null))
                 {
-                    this.mUIRegressWindow = new UIItemWindow(this, controlId: "10");
+                    mUIRegressWindow = new UIItemWindow(this, controlId: "10");
                 }
-                return this.mUIRegressWindow;
+                return mUIRegressWindow;
             }
         }
 
@@ -61,11 +61,11 @@
         {
             get
             {
-                if ((this.mUIExitWindow == null))
+                if ((mUIExitWindow == null))
                 {
-                    this.mUIExitWindow = new UIItemWindow(this, controlId: "12");
+                    mUIExitWindow = new UIItemWindow(this, controlId: "12");
                 }
-                return this.mUIExitWindow;
+                return mUIExitWindow;
             }
         }
 
@@ -73,11 +73,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow3 == null))
+                if ((mUIItemWindow3 == null))
                 {
-                    this.mUIItemWindow3 = new UIItemWindow(this, controlId: "9");
+                    mUIItemWindow3 = new UIItemWindow(this, controlId: "9");
                 }
-                return this.mUIItemWindow3;
+                return mUIItemWindow3;
             }
         }
 
@@ -85,11 +85,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow4 == null))
+                if ((mUIItemWindow4 == null))
                 {
-                    this.mUIItemWindow4 = new UIItemWindow(this, controlId: "3");
+                    mUIItemWindow4 = new UIItemWindow(this, controlId: "3");
                 }
-                return this.mUIItemWindow4;
+                return mUIItemWindow4;
             }
         }
 

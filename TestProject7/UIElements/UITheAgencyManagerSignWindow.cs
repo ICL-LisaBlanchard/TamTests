@@ -13,8 +13,8 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("The Agency Manager Signon");
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add("The Agency Manager Signon");
 
             #endregion
         }
@@ -25,11 +25,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mTbxPassword == null))
+                if ((mTbxPassword == null))
                 {
-                    this.mTbxPassword = new UIItemWindow(this, controlId: "7");
+                    mTbxPassword = new UIItemWindow(this, controlId: "7");
                 }
-                return this.mTbxPassword;
+                return mTbxPassword;
             }
         }
 
@@ -37,11 +37,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mTbxUsername == null))
+                if ((mTbxUsername == null))
                 {
-                    this.mTbxUsername = new UIItemWindow(this, controlId: "1");
+                    mTbxUsername = new UIItemWindow(this, controlId: "1");
                 }
-                return this.mTbxUsername;
+                return mTbxUsername;
             }
         }
 
@@ -49,11 +49,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mBtnOk1 == null))
+                if ((mBtnOk1 == null))
                 {
-                    this.mBtnOk1 = new UIItemWindow(this, controlId: "2");
+                    mBtnOk1 = new UIItemWindow(this, controlId: "2");
                 }
-                return this.mBtnOk1;
+                return mBtnOk1;
             }
         }
 
@@ -61,11 +61,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mBtnOk2 == null))
+                if ((mBtnOk2 == null))
                 {
-                    this.mBtnOk2 = new UIItemWindow(this, controlId: "2");
+                    mBtnOk2 = new UIItemWindow(this, controlId: "2");
                 }
-                return this.mBtnOk2;
+                return mBtnOk2;
             }
         }
 
@@ -73,11 +73,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mTbxMonth == null))
+                if ((mTbxMonth == null))
                 {
-                    this.mTbxMonth = new UIItemWindow(this, controlId: "2", instance: "2");
+                    mTbxMonth = new UIItemWindow(this, controlId: "2", instance: "2");
                 }
-                return this.mTbxMonth;
+                return mTbxMonth;
             }
         }
 
@@ -85,11 +85,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mTbxYear == null))
+                if ((mTbxYear == null))
                 {
-                    this.mTbxYear = new UIItemWindow(this, controlId: "1");
+                    mTbxYear = new UIItemWindow(this, controlId: "1");
                 }
-                return this.mTbxYear;
+                return mTbxYear;
             }
         }
 

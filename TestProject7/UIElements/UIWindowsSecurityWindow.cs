@@ -11,8 +11,8 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Windows Security";
-            this.WindowTitles.Add("Windows Security");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Windows Security";
+            WindowTitles.Add("Windows Security");
 
             #endregion
         }
@@ -23,11 +23,11 @@
         {
             get
             {
-                if ((this.mUIItemListItem == null))
+                if ((mUIItemListItem == null))
                 {
-                    this.mUIItemListItem = new UIItemUserDetails(this);
+                    mUIItemListItem = new UIItemUserDetails(this);
                 }
-                return this.mUIItemListItem;
+                return mUIItemListItem;
             }
         }
 
@@ -35,11 +35,11 @@
         {
             get
             {
-                if ((this.mUIWindowsSecurityPane == null))
+                if ((mUIWindowsSecurityPane == null))
                 {
-                    this.mUIWindowsSecurityPane = new UIPane(this, "Windows Security");
+                    mUIWindowsSecurityPane = new UIPane(this, "Windows Security");
                 }
-                return this.mUIWindowsSecurityPane;
+                return mUIWindowsSecurityPane;
             }
         }
 

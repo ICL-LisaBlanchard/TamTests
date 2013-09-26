@@ -10,9 +10,9 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = name;
-            this.SearchProperties[UITestControl.PropertyNames.ControlType] = controlType;
-            this.WindowTitles.Add("Confirm Save As");
+            SearchProperties[UITestControl.PropertyNames.Name] = name;
+            SearchProperties[UITestControl.PropertyNames.ControlType] = controlType;
+            WindowTitles.Add("Confirm Save As");
 
             #endregion
         }

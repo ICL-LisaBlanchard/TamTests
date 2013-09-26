@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.windowName = "Transaction to insert";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
-            this.WindowTitles.Add(this.windowName);
+            windowName = "Transaction to insert";
+            SearchProperties[UITestControl.PropertyNames.Name] = windowName;
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
+            WindowTitles.Add(windowName);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, className: "TPanel");
+                    mUIItemWindow = new UIItemWindow(this, className: "TPanel");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 

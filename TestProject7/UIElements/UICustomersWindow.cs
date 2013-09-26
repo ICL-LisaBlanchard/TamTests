@@ -13,11 +13,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "17");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "17");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow(this, className: "ListView20WndClass");
+                    mUIItemWindow1 = new UIItemWindow(this, className: "ListView20WndClass");
                 }
-                return this.mUIItemWindow1;
+                return mUIItemWindow1;
             }
         }
 
@@ -48,7 +48,7 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32768";
+            SearchProperties[WinControl.PropertyNames.ControlId] = "32768";
 
             #endregion
         }

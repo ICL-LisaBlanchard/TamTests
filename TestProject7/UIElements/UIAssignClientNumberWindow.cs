@@ -15,11 +15,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIPersonalLinesWindow == null))
+                if ((mUIPersonalLinesWindow == null))
                 {
-                    this.mUIPersonalLinesWindow = new UIItemWindow(this, controlId: "11");
+                    mUIPersonalLinesWindow = new UIItemWindow(this, controlId: "11");
                 }
-                return this.mUIPersonalLinesWindow;
+                return mUIPersonalLinesWindow;
             }
         }
 
@@ -27,11 +27,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "9");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "9");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -39,11 +39,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "8");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "8");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -75,11 +75,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, controlId: "4");
+                    mUIOKWindow = new UIItemWindow(this, controlId: "4");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 
@@ -87,11 +87,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mCodeName == null))
+                if ((mCodeName == null))
                 {
-                    this.mCodeName = new UIItemWindow(this, "1", instance: "3");
+                    mCodeName = new UIItemWindow(this, "1", instance: "3");
                 }
-                return this.mCodeName;
+                return mCodeName;
             }
         }
 
@@ -113,9 +113,9 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Assign Client Number";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Assign Client Number");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Assign Client Number";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add("Assign Client Number");
 
             #endregion
         }

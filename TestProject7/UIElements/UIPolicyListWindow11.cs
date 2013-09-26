@@ -15,11 +15,11 @@
         {
             get
             {
-                if ((this.mUIDetailWindow == null))
+                if ((mUIDetailWindow == null))
                 {
-                    this.mUIDetailWindow = new UIItemWindow(this, controlId: "6");
+                    mUIDetailWindow = new UIItemWindow(this, controlId: "6");
                 }
-                return this.mUIDetailWindow;
+                return mUIDetailWindow;
             }
         }
 
@@ -36,8 +36,8 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32769";
-            this.WindowTitles.Add(WindowTitle);
+            SearchProperties[WinControl.PropertyNames.ControlId] = "32769";
+            WindowTitles.Add(WindowTitle);
 
             #endregion
         }

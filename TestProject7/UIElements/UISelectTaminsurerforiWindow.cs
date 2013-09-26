@@ -15,11 +15,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, className: "TListView");
+                    mUIItemWindow = new UIItemWindow(this, className: "TListView");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -27,11 +27,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow(this, className: "TPanel");
+                    mUIItemWindow1 = new UIItemWindow(this, className: "TPanel");
                 }
-                return this.mUIItemWindow1;
+                return mUIItemWindow1;
             }
         }
 
@@ -49,9 +49,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Select Tam insurer for insurer code ", PropertyExpressionOperator.Contains));
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
-            this.WindowTitles.Add(WindowName);
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Select Tam insurer for insurer code ", PropertyExpressionOperator.Contains));
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
+            WindowTitles.Add(WindowName);
 
             #endregion
         }
