@@ -171,7 +171,7 @@
                                new Document("QuotesList", 1),
                                new Document("Quote", 1),
                                new Document("Schedule", 2),
-                               new Document("Proposal", 2),
+                               new Document("Proposal", 1),
                                new Document("FSA", 2),
                                new Document("Notice", 1),
                                new Document("Certificate", 2)
