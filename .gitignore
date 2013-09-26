@@ -5,3 +5,9 @@
 /TestProject7/obj/Debug/*.dll
 /TestProject7/App.config
 /TestProject7/TestResults
+*.trx
+
+TestResults
+/TestProject7/*.config
+bin
+obj

@@ -280,8 +280,9 @@
 
             House.CloseAndOpenPolicyList();
             House.RenewalCheckStatus("REN");
+            var premium = House.CheckPolicyPremium();
             House.CheckPremiumInQuoteDocument(Docs.DocumentsForHhRenewalBefore, originalPremium: double.Parse(originalPremium));
-            House.OpenTransList(Transactions.GetTransactionDictionary(RenewalPremium, originalPremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, originalPremium));
             House.ClosePolicy();
 
             //mta1
@@ -573,7 +574,7 @@
             House.HomeRebrokeSelectPolicy(House.CommonParams.SendEndKeys);
             House.HomeRebrokeSelectAlternative();
             House.HomeRebrokeFinish();
-            House.RenewalModuleInvite(false);
+            House.RenewalModuleInvite(true);
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();
             House.RebrokeAlternativeRenew();

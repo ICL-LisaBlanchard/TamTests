@@ -1063,7 +1063,6 @@
             Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Click(uIOKButton, new Point(51, 11));
-            System.Diagnostics.Debug.WriteLine("OK button found");
 
             Playback.PlaybackSettings.ContinueOnError = false;
         }
@@ -1126,12 +1125,7 @@
 
             Mouse.Click(uIOKButton3, new Point(47, 24));
 
-            System.Diagnostics.Debug.WriteLine("Yay!");
-
             SelectTAMActivities3();
-
-
-            System.Diagnostics.Debug.WriteLine("Nay!");
         }
 
         public void RenewalModuleRenew()
@@ -1956,6 +1950,7 @@
             }
 
             files = Directory.GetFiles(Configs.LocalDocsPath, "*.pdf");
+            BaseUiTest.CloseProcess("AcroRd32");
             foreach (string file in files)
             {
                 File.Delete(file);
@@ -2264,7 +2259,7 @@
             {
                 WinWindow win = TopWindow;
                 string name = win.GetProperty("Name").ToString();
-                System.Diagnostics.Debug.WriteLine(name);
+
                 if (name.Contains("Select Tam insurer for insurer code"))
                 {
                     uIItemList.SelectedItemsAsString = uIItemList.Items.First().Name;
@@ -2293,25 +2288,22 @@
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine(ex.ToString());
+                
             }
         }
 
         protected void SelectTAMActivities1()
         {
-            System.Diagnostics.Debug.WriteLine("SelectTAMActivities1");
             SelectTamInsurersAndActivity(selectListItems1: 1);
         }
 
         protected void SelectTAMActivities2()
         {
-            System.Diagnostics.Debug.WriteLine("SelectTAMActivities2");
             SelectTamInsurersAndActivity(selectListItems1: 2);
         }
 
         protected void SelectTAMActivities3()
         {
-            System.Diagnostics.Debug.WriteLine("SelectTAMActivities3");
             SelectTamInsurersAndActivity(selectListItems1: 3);
         }
 
@@ -2321,7 +2313,7 @@
             WinEdit uIItemEdit2 = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
 
             string policyNo = uIItemEdit.GetProperty("Text").ToString();
-            System.Diagnostics.Debug.WriteLine("Customer Code : " + CustomerCode + ", Policy No: " + policyNo);
+            System.Diagnostics.Debug.WriteLine("Policy No: " + policyNo);
             Mouse.Click(uIItemEdit2, new Point(45, 4));
 
             return policyNo;

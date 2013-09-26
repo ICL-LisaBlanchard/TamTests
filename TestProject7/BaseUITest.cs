@@ -60,7 +60,6 @@
         }
 
         [TestInitialize]
-        [DeploymentItem(@"RegistrySettings")]
         public void StartTest()
         {
             // make sure everything is closed before another test is started
@@ -91,13 +90,14 @@
         [TestCleanup]
         public void FinishTest()
         {
+            
             try
             {
                 PostTestResult(TestContext.CurrentTestOutcome != UnitTestOutcome.Passed ? TestCaseResultStatus.Fail : TestCaseResultStatus.Pass);
             }
             catch
             {
-                // do nothing
+                Debug.WriteLine("Finishing test failed");
             }
             CloseProcess("TamXML7");
             CloseProcess("InsureTam");
@@ -174,16 +174,28 @@
             {
                 if (status == TestCaseResultStatus.Fail)
                 {
-                    long expectedDate = DateTime.Now.ToFileTimeUtc();
+                    string expectedDate = DateTime.Now.ToString("yyyyMMddhhmmss");
                     Image image = UITestControl.Desktop.CaptureImage();
                     image.Save(Configs.ScreenshotPath + expectedDate + ".jpg");
                     TestContextInstance.AddResultFile(Configs.ScreenshotPath + expectedDate + ".jpg");
                 }
+                
+            }
+            catch(Exception ex)
+            {
+                Debug.WriteLine("screenshot failed");
+                Debug.WriteLine(ex.Message);
+            }
+            try
+            {
                 Tl.ReportTCResult(Tl.GetTestCaseIDByName(TestName)[0].id, TestPlanId, status, Configs.PlatformId, buildid: BuildId); // it posts result for testcase.
             }
-            catch
+            catch (Exception ex)
             {
-                //
+
+                Debug.WriteLine("Testlink report failed");
+
+                Debug.WriteLine(ex.Message);
             }
         }
 
