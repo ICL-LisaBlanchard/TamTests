@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            //this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Select Tam Activity Type for FSA", PropertyExpressionOperator.Contains));
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
-            this.WindowTitles.Add("Select Tam Activity Type for FSA 2");
+            //SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Select Tam Activity Type for FSA", PropertyExpressionOperator.Contains));
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
+            WindowTitles.Add("Select Tam Activity Type for FSA 2");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, className: "TListBox");
+                    mUIItemWindow = new UIItemWindow(this, className: "TListBox");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow(this, className: "TPanel");
+                    mUIItemWindow1 = new UIItemWindow(this, className: "TPanel");
                 }
-                return this.mUIItemWindow1;
+                return mUIItemWindow1;
             }
         }
 

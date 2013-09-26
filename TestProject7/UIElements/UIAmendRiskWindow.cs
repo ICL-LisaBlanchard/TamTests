@@ -13,11 +13,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "2", instance: "4");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "2", instance: "4");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIProposerDetailsWindow == null))
+                if ((mUIProposerDetailsWindow == null))
                 {
-                    this.mUIProposerDetailsWindow = new UIItemWindow(this, controlId: "41");
+                    mUIProposerDetailsWindow = new UIItemWindow(this, controlId: "41");
                 }
-                return this.mUIProposerDetailsWindow;
+                return mUIProposerDetailsWindow;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                if ((this.mUICalculateQuoteWindow == null))
+                if ((mUICalculateQuoteWindow == null))
                 {
-                    this.mUICalculateQuoteWindow = new UIItemWindow(this, controlId: "27");
+                    mUICalculateQuoteWindow = new UIItemWindow(this, controlId: "27");
                 }
-                return this.mUICalculateQuoteWindow;
+                return mUICalculateQuoteWindow;
             }
         }
 
@@ -61,9 +61,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Amend Risk";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Amend Risk");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Amend Risk";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add("Amend Risk");
 
             #endregion
         }

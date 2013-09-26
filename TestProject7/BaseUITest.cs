@@ -14,18 +14,6 @@
     [CodedUITest]
     public class BaseUiTest
     {
-        protected const string PlanName = "Ver. 12.05";
-
-        protected const string ProjectName = "TAM";
-
-        //private static string buildName = DateTime.Now.Date.ToShortDateString();
-
-        //private const int PlatformId = 3;  // WIN XP
-        //private const int PlatformId = 4;   // Win7 32
-        protected const int PlatformId = 5; // Win7 64
-
-        protected static string BuildName = "InsureTam.exe v4.0.8 May";
-
         protected static TestLink Tl;
 
         protected static int TestPlanId;
@@ -50,11 +38,11 @@
         {
             get
             {
-                return this.TestContextInstance;
+                return TestContextInstance;
             }
             set
             {
-                this.TestContextInstance = value;
+                TestContextInstance = value;
             }
         }
 
@@ -62,12 +50,12 @@
         {
             get
             {
-                if ((this.Map == null))
+                if ((Map == null))
                 {
-                    this.Map = new UIMap();
+                    Map = new UIMap();
                 }
 
-                return this.Map;
+                return Map;
             }
         }
 
@@ -85,20 +73,19 @@
             CloseProcess("Regress_IETam_Policy");
             CloseProcess("RLoader");
 
-            this.UiMap.CleanDocuments();
+            UiMap.CleanDocuments();
             Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
             //Playback.PlaybackSettings.DelayBetweenActions = 700;
-            this.TestName = this.TestContext.TestName;
-            this.TestLinkInitialize();
+            TestName = TestContext.TestName;
+            TestLinkInitialize();
 
             var login = new Login();
-            login.LoginParams.TabKey = Playback.EncryptText("PLUS");
             login.LoginParams.ExePath = "J:\\WINTAM\\HOMEBASE.EXE";
             login.LoginParams.AlternateExePath = "J:\\WINTAM\\HOMEBASE.EXE";
             login.DoLogin();
             login.LoginEnterDate();
             login.WarningOk();
-            this.UiMap.AppStartedExpectedValues.UITheAgencyManagerWindow1Name = "The Agency Manager";
+            UiMap.AppStartedExpectedValues.UITheAgencyManagerWindow1Name = "The Agency Manager";
         }
 
         [TestCleanup]
@@ -106,7 +93,7 @@
         {
             try
             {
-                this.PostTestResult(this.TestContext.CurrentTestOutcome != UnitTestOutcome.Passed ? TestCaseResultStatus.Fail : TestCaseResultStatus.Pass);
+                PostTestResult(TestContext.CurrentTestOutcome != UnitTestOutcome.Passed ? TestCaseResultStatus.Fail : TestCaseResultStatus.Pass);
             }
             catch
             {
@@ -162,14 +149,14 @@
             try
             {
                 Tl = new TestLink("f71e80e4c23bba99dfedf1b442bb42f5", "http://172.30.2.44/testlink/lib/api/xmlrpc.php");
-                TestPlanId = Tl.getTestPlanByName(ProjectName, PlanName).id;
+                TestPlanId = Tl.getTestPlanByName(Configs.ProjectName, Configs.PlanName).id;
 
-                if (Tl.GetBuildsForTestPlan(TestPlanId).FirstOrDefault(x => x.name == BuildName) == null)
+                if (Tl.GetBuildsForTestPlan(TestPlanId).FirstOrDefault(x => x.name == Configs.BuildName) == null)
                 {
-                    Tl.CreateBuild(TestPlanId, BuildName, "Build created by script");
+                    Tl.CreateBuild(TestPlanId, Configs.BuildName, "Build created by script");
                 }
 
-                Build firstOrDefault = Tl.GetBuildsForTestPlan(TestPlanId).FirstOrDefault(x => x.name == BuildName);
+                Build firstOrDefault = Tl.GetBuildsForTestPlan(TestPlanId).FirstOrDefault(x => x.name == Configs.BuildName);
                 if (firstOrDefault != null)
                 {
                     BuildId = firstOrDefault.id;
@@ -190,9 +177,9 @@
                     long expectedDate = DateTime.Now.ToFileTimeUtc();
                     Image image = UITestControl.Desktop.CaptureImage();
                     image.Save(Configs.ScreenshotPath + expectedDate + ".jpg");
-                    this.TestContextInstance.AddResultFile(Configs.ScreenshotPath + expectedDate + ".jpg");
+                    TestContextInstance.AddResultFile(Configs.ScreenshotPath + expectedDate + ".jpg");
                 }
-                Tl.ReportTCResult(Tl.GetTestCaseIDByName(this.TestName)[0].id, TestPlanId, status, PlatformId, buildid: BuildId); // it posts result for testcase.
+                Tl.ReportTCResult(Tl.GetTestCaseIDByName(TestName)[0].id, TestPlanId, status, Configs.PlatformId, buildid: BuildId); // it posts result for testcase.
             }
             catch
             {
@@ -217,76 +204,76 @@
 
         protected void RenewalModule(string customerCode, string policyType)
         {
-            this.UiMap.RenewalModuleEDI();
-            this.UiMap.RenewalModuleConfirm();
-            this.UiMap.RenewalModuleEdi1(false);
-            this.UiMap.RenewalModuleFilter(policyType);
-            this.UiMap.RenewalModuleSort();
-            this.UiMap.RenewalModuleDisplay(this.UiMap.CommonParams.SendHomeKeys);
-            this.UiMap.RenewalCheckRecord(1, customerCode);
+            UiMap.RenewalModuleEDI();
+            UiMap.RenewalModuleConfirm();
+            UiMap.RenewalModuleEdi1(false);
+            UiMap.RenewalModuleFilter(policyType);
+            UiMap.RenewalModuleSort();
+            UiMap.RenewalModuleDisplay(UiMap.CommonParams.SendHomeKeys);
+            UiMap.RenewalCheckRecord(1, customerCode);
         }
 
         protected string RegressApp(string policyType)
         {
-            this.UiMap.HighlightCustomer();
-            string customerCode = this.UiMap.GetCustomerCode();
-            this.UiMap.RegressApp(customerCode);
-            this.UiMap.RegressAppPolicyTypeSelection(policyType);
-            this.UiMap.RegressAppDate();
-            this.UiMap.RegressAppFinish();
-            this.UiMap.CloseRegressApp();
+            UiMap.HighlightCustomer();
+            string customerCode = UiMap.GetCustomerCode();
+            UiMap.RegressApp(customerCode);
+            UiMap.RegressAppPolicyTypeSelection(policyType);
+            UiMap.RegressAppDate();
+            UiMap.RegressAppFinish();
+            UiMap.CloseRegressApp();
             return customerCode;
         }
 
         protected void RenewalLoader()
         {
-            this.UiMap.RenewalLoaderOpen();
-            this.UiMap.RenewalLoaderRun();
-            this.UiMap.CloseBrowser();
-            this.UiMap.RenewalLoaderClose();
+            UiMap.RenewalLoaderOpen();
+            UiMap.RenewalLoaderRun();
+            UiMap.CloseBrowser();
+            UiMap.RenewalLoaderClose();
         }
 
         protected void SiteForRenewal(string policyNumber, string policyType, string renewalPremium)
         {
-            this.UiMap.OpenBrowser2();
+            UiMap.OpenBrowser2();
             if (policyType == "Household")
             {
-                this.House.HomeSiteRenewal(policyNumber, renewalPremium);
+                House.HomeSiteRenewal(policyNumber, renewalPremium);
             }
             else
             {
-                this.Moto.MotoCreateSiteRenewal(policyNumber, renewalPremium);
+                Moto.MotoCreateSiteRenewal(policyNumber, renewalPremium);
             }
 
             Playback.Wait(5000);
-            this.UiMap.CloseBrowser();
-            this.UiMap.ChangeDatePolicy();
+            UiMap.CloseBrowser();
+            UiMap.ChangeDatePolicy();
         }
 
         protected void Renewals(string policyNumber, string policyType, string renewalPremium)
         {
             //site for renewal
-            this.SiteForRenewal(policyNumber, policyType, renewalPremium);
+            SiteForRenewal(policyNumber, policyType, renewalPremium);
 
             //regress app
-            string customerCode = this.RegressApp(policyType);
+            string customerCode = RegressApp(policyType);
 
             //renewal loader
-            this.RenewalLoader();
+            RenewalLoader();
 
             // renewal module
-            this.RenewalModule(customerCode, policyType);
+            RenewalModule(customerCode, policyType);
         }
 
         protected void RenewalsInvite(bool selectAlternative)
         {
-            this.House.RenewalModuleInvite(selectAlternative);
-            this.House.RenewConfirmInvite();
-            this.House.RenewalModuleInvite1();
-            this.House.RenewalModuleRenew();
-            this.House.RetrieveResponse();
-            this.House.RenewalModuleRenew1();
-            this.House.RenewalModuleClose();
+            House.RenewalModuleInvite(selectAlternative);
+            House.RenewConfirmInvite();
+            House.RenewalModuleInvite1();
+            House.RenewalModuleRenew();
+            House.RetrieveResponse();
+            House.RenewalModuleRenew1();
+            House.RenewalModuleClose();
         }
     }
 }

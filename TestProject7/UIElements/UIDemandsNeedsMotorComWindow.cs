@@ -11,8 +11,8 @@
         {
             #region Search Criteria
 
-            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Demands&Needs(", PropertyExpressionOperator.Contains));
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "OpusApp";
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Demands&Needs(", PropertyExpressionOperator.Contains));
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "OpusApp";
 
             #endregion
         }
@@ -31,11 +31,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, className: "NetUIHWND", accessible: "Ribbon");
+                    mUIItemWindow = new UIItemWindow(this, className: "NetUIHWND", accessible: "Ribbon");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 

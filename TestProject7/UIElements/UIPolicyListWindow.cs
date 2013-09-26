@@ -12,8 +12,8 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32769";
-            this.WindowTitles.Add("Policy: autotest autotest");
+            SearchProperties[WinControl.PropertyNames.ControlId] = "32769";
+            WindowTitles.Add("Policy: autotest autotest");
 
             #endregion
         }
@@ -24,11 +24,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIOptionsWindow == null))
+                if ((mUIOptionsWindow == null))
                 {
-                    this.mUIOptionsWindow = new UIItemWindow(this, "7");
+                    mUIOptionsWindow = new UIItemWindow(this, "7");
                 }
-                return this.mUIOptionsWindow;
+                return mUIOptionsWindow;
             }
         }
 
@@ -36,11 +36,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIDetailWindow == null))
+                if ((mUIDetailWindow == null))
                 {
-                    this.mUIDetailWindow = new UIItemWindow(this, "6");
+                    mUIDetailWindow = new UIItemWindow(this, "6");
                 }
-                return this.mUIDetailWindow;
+                return mUIDetailWindow;
             }
         }
 

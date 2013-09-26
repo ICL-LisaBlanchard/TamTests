@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Attachment Detail";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Attachment Detail");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Attachment Detail";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add("Attachment Detail");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, "1", "3");
+                    mUIItemWindow = new UIItemWindow(this, "1", "3");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                if ((this.mUICancelWindow == null))
+                if ((mUICancelWindow == null))
                 {
-                    this.mUICancelWindow = new UIItemWindow(this, "5");
+                    mUICancelWindow = new UIItemWindow(this, "5");
                 }
-                return this.mUICancelWindow;
+                return mUICancelWindow;
             }
         }
 

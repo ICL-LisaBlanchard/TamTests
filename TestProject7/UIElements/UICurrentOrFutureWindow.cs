@@ -11,9 +11,9 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Current Or Future";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "TfCurrentOrFuture";
-            this.WindowTitles.Add("Current Or Future");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Current Or Future";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "TfCurrentOrFuture";
+            WindowTitles.Add("Current Or Future");
 
             #endregion
         }
@@ -24,11 +24,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUICurrentOrFutureClient == null))
+                if ((mUICurrentOrFutureClient == null))
                 {
-                    this.mUICurrentOrFutureClient = new UIClient(this, "Current Or Future");
+                    mUICurrentOrFutureClient = new UIClient(this, "Current Or Future");
                 }
-                return this.mUICurrentOrFutureClient;
+                return mUICurrentOrFutureClient;
             }
         }
 

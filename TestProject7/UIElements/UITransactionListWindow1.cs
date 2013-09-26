@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Transaction List";
-            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.ClassName, "WindowsForms10.Window", PropertyExpressionOperator.Contains));
-            this.WindowTitles.Add("Transaction List");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Transaction List";
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.ClassName, "WindowsForms10.Window", PropertyExpressionOperator.Contains));
+            WindowTitles.Add("Transaction List");
 
             #endregion
         }
@@ -32,11 +32,11 @@
         {
             get
             {
-                if ((this.mUILvwVListWindow == null))
+                if ((mUILvwVListWindow == null))
                 {
-                    this.mUILvwVListWindow = new UIItemWindow(this, controlName: "lvwVList");
+                    mUILvwVListWindow = new UIItemWindow(this, controlName: "lvwVList");
                 }
-                return this.mUILvwVListWindow;
+                return mUILvwVListWindow;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                if ((this.mUILvwVListList == null))
+                if ((mUILvwVListList == null))
                 {
-                    this.mUILvwVListList = new UIItemList(this, "Enter Code");
+                    mUILvwVListList = new UIItemList(this, "Enter Code");
                 }
-                return this.mUILvwVListList;
+                return mUILvwVListList;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                if ((this.mUICloseWindow == null))
+                if ((mUICloseWindow == null))
                 {
-                    this.mUICloseWindow = new UIItemWindow(this, controlName: "btnExit");
+                    mUICloseWindow = new UIItemWindow(this, controlName: "btnExit");
                 }
-                return this.mUICloseWindow;
+                return mUICloseWindow;
             }
         }
 

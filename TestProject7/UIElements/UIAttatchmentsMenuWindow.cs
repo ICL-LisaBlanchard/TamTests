@@ -11,8 +11,8 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[PropertyNames.AccessibleName] = "Context";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32768";
+            SearchProperties[PropertyNames.AccessibleName] = "Context";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "#32768";
 
             #endregion
         }
@@ -23,11 +23,11 @@
         {
             get
             {
-                if ((this.mUIContextMenu == null))
+                if ((mUIContextMenu == null))
                 {
-                    this.mUIContextMenu = new UIMenu(this, "Context");
+                    mUIContextMenu = new UIMenu(this, "Context");
                 }
-                return this.mUIContextMenu;
+                return mUIContextMenu;
             }
         }
 

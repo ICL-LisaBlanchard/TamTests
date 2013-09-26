@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.windowTitle = "View Quote Details";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add(this.windowTitle);
+            windowTitle = "View Quote Details";
+            SearchProperties[UITestControl.PropertyNames.Name] = windowTitle;
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add(windowTitle);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIItemClient == null))
+                if ((mUIItemClient == null))
                 {
-                    this.mUIItemClient = new UIItemClient1(this);
+                    mUIItemClient = new UIItemClient1(this);
                 }
-                return this.mUIItemClient;
+                return mUIItemClient;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, controlId: "5");
+                    mUIOKWindow = new UIItemWindow(this, controlId: "5");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 

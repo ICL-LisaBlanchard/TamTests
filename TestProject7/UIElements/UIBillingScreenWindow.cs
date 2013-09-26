@@ -12,11 +12,11 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32770";
-            this.windowName1 = "Policy: autotest";
-            this.WindowTitles.Add(this.windowName1);
-            this.windowName2 = "Transaction: autotest";
-            this.WindowTitles.Add(this.windowName2);
+            SearchProperties[WinControl.PropertyNames.ControlId] = "32770";
+            windowName1 = "Policy: autotest";
+            WindowTitles.Add(windowName1);
+            windowName2 = "Transaction: autotest";
+            WindowTitles.Add(windowName2);
 
             #endregion
         }
@@ -27,11 +27,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "25");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "25");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -39,11 +39,11 @@
         {
             get
             {
-                if ((this.mUIDetailWindow == null))
+                if ((mUIDetailWindow == null))
                 {
-                    this.mUIDetailWindow = new UIItemWindow(this, controlId: "6");
+                    mUIDetailWindow = new UIItemWindow(this, controlId: "6");
                 }
-                return this.mUIDetailWindow;
+                return mUIDetailWindow;
             }
         }
 
@@ -59,11 +59,11 @@
         {
             get
             {
-                if ((this.mUICancelWindow == null))
+                if ((mUICancelWindow == null))
                 {
-                    this.mUICancelWindow = new UIItemWindow(this, controlId: "3");
+                    mUICancelWindow = new UIItemWindow(this, controlId: "3");
                 }
-                return this.mUICancelWindow;
+                return mUICancelWindow;
             }
         }
 
@@ -71,11 +71,11 @@
         {
             get
             {
-                if ((this.mUICancelWindow1 == null))
+                if ((mUICancelWindow1 == null))
                 {
-                    this.mUICancelWindow1 = new UIItemWindow(this, controlId: "8");
+                    mUICancelWindow1 = new UIItemWindow(this, controlId: "8");
                 }
-                return this.mUICancelWindow1;
+                return mUICancelWindow1;
             }
         }
 
@@ -83,11 +83,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow(this, controlId: "1", instance: "13");
+                    mUIItemWindow1 = new UIItemWindow(this, controlId: "1", instance: "13");
                 }
-                return this.mUIItemWindow1;
+                return mUIItemWindow1;
             }
         }
 
@@ -95,11 +95,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow2 == null))
+                if ((mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow(this, controlId: "1", instance: "18");
+                    mUIItemWindow2 = new UIItemWindow(this, controlId: "1", instance: "18");
                 }
-                return this.mUIItemWindow2;
+                return mUIItemWindow2;
             }
         }
 
@@ -107,11 +107,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow3 == null))
+                if ((mUIItemWindow3 == null))
                 {
-                    this.mUIItemWindow3 = new UIItemWindow(this, controlId: "2", instance: "3");
+                    mUIItemWindow3 = new UIItemWindow(this, controlId: "2", instance: "3");
                 }
-                return this.mUIItemWindow3;
+                return mUIItemWindow3;
             }
         }
 
@@ -119,11 +119,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, controlId: "13");
+                    mUIOKWindow = new UIItemWindow(this, controlId: "13");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 

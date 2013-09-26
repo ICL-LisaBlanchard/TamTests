@@ -10,14 +10,14 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[HtmlControl.PropertyNames.Id] = "divRenewals";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = null;
-            this.FilterProperties[HtmlControl.PropertyNames.InnerText] = "Create a Motor Test Renewal Invitation\r\n";
-            this.FilterProperties[HtmlControl.PropertyNames.Title] = null;
-            this.FilterProperties[HtmlControl.PropertyNames.Class] = null;
-            this.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "id=divRenewals";
-            this.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "14";
-            this.WindowTitles.Add("insurE-com System Maintenance");
+            SearchProperties[HtmlControl.PropertyNames.Id] = "divRenewals";
+            SearchProperties[UITestControl.PropertyNames.Name] = null;
+            FilterProperties[HtmlControl.PropertyNames.InnerText] = "Create a Motor Test Renewal Invitation\r\n";
+            FilterProperties[HtmlControl.PropertyNames.Title] = null;
+            FilterProperties[HtmlControl.PropertyNames.Class] = null;
+            FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "id=divRenewals";
+            FilterProperties[HtmlControl.PropertyNames.TagInstance] = "14";
+            WindowTitles.Add("insurE-com System Maintenance");
 
             #endregion
         }
@@ -28,28 +28,28 @@
         {
             get
             {
-                if ((this.mUICreateaMotorTestReneHyperlink == null))
+                if ((mUICreateaMotorTestReneHyperlink == null))
                 {
-                    this.mUICreateaMotorTestReneHyperlink = new HtmlHyperlink(this);
+                    mUICreateaMotorTestReneHyperlink = new HtmlHyperlink(this);
 
                     #region Search Criteria
 
-                    this.mUICreateaMotorTestReneHyperlink.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-                    this.mUICreateaMotorTestReneHyperlink.SearchProperties[UITestControl.PropertyNames.Name] = null;
-                    this.mUICreateaMotorTestReneHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = "content";
-                    this.mUICreateaMotorTestReneHyperlink.SearchProperties[HtmlControl.PropertyNames.InnerText] = "Create a Motor Test Renewal Invitation";
-                    this.mUICreateaMotorTestReneHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/sysmaint/content/AddTestRenewalNotice.asp";
-                    this.mUICreateaMotorTestReneHyperlink.FilterProperties[HtmlControl.PropertyNames.Title] = null;
-                    this.mUICreateaMotorTestReneHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] =
+                    mUICreateaMotorTestReneHyperlink.SearchProperties[HtmlControl.PropertyNames.Id] = null;
+                    mUICreateaMotorTestReneHyperlink.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    mUICreateaMotorTestReneHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = "content";
+                    mUICreateaMotorTestReneHyperlink.SearchProperties[HtmlControl.PropertyNames.InnerText] = "Create a Motor Test Renewal Invitation";
+                    mUICreateaMotorTestReneHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/sysmaint/content/AddTestRenewalNotice.asp";
+                    mUICreateaMotorTestReneHyperlink.FilterProperties[HtmlControl.PropertyNames.Title] = null;
+                    mUICreateaMotorTestReneHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] =
                         "https://www.insur-econnect.com/sysmaint/content/AddTestRenewalNotice.asp";
-                    this.mUICreateaMotorTestReneHyperlink.FilterProperties[HtmlControl.PropertyNames.Class] = "itemlink";
-                    this.mUICreateaMotorTestReneHyperlink.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "class=itemlink href=\"AddTestRenewalNotic";
-                    this.mUICreateaMotorTestReneHyperlink.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "1";
-                    this.mUICreateaMotorTestReneHyperlink.WindowTitles.Add("insurE-com System Maintenance");
+                    mUICreateaMotorTestReneHyperlink.FilterProperties[HtmlControl.PropertyNames.Class] = "itemlink";
+                    mUICreateaMotorTestReneHyperlink.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "class=itemlink href=\"AddTestRenewalNotic";
+                    mUICreateaMotorTestReneHyperlink.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "1";
+                    mUICreateaMotorTestReneHyperlink.WindowTitles.Add("insurE-com System Maintenance");
 
                     #endregion
                 }
-                return this.mUICreateaMotorTestReneHyperlink;
+                return mUICreateaMotorTestReneHyperlink;
             }
         }
 
@@ -57,28 +57,28 @@
         {
             get
             {
-                if ((this.mUICreateaHouseholdTestHyperlink == null))
+                if ((mUICreateaHouseholdTestHyperlink == null))
                 {
-                    this.mUICreateaHouseholdTestHyperlink = new HtmlHyperlink(this);
+                    mUICreateaHouseholdTestHyperlink = new HtmlHyperlink(this);
 
                     #region Search Criteria
 
-                    this.mUICreateaHouseholdTestHyperlink.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-                    this.mUICreateaHouseholdTestHyperlink.SearchProperties[UITestControl.PropertyNames.Name] = null;
-                    this.mUICreateaHouseholdTestHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = "content";
-                    this.mUICreateaHouseholdTestHyperlink.SearchProperties[HtmlControl.PropertyNames.InnerText] = "Create a Household Test Renewal Invitation";
-                    this.mUICreateaHouseholdTestHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/sysmaint/content/AddHouseholdTestRenewalNotice.asp";
-                    this.mUICreateaHouseholdTestHyperlink.FilterProperties[HtmlControl.PropertyNames.Title] = null;
-                    this.mUICreateaHouseholdTestHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] =
+                    mUICreateaHouseholdTestHyperlink.SearchProperties[HtmlControl.PropertyNames.Id] = null;
+                    mUICreateaHouseholdTestHyperlink.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    mUICreateaHouseholdTestHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = "content";
+                    mUICreateaHouseholdTestHyperlink.SearchProperties[HtmlControl.PropertyNames.InnerText] = "Create a Household Test Renewal Invitation";
+                    mUICreateaHouseholdTestHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/sysmaint/content/AddHouseholdTestRenewalNotice.asp";
+                    mUICreateaHouseholdTestHyperlink.FilterProperties[HtmlControl.PropertyNames.Title] = null;
+                    mUICreateaHouseholdTestHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] =
                         "https://www.insur-econnect.com/sysmaint/content/AddHouseholdTestRenewalNotice.asp" + "";
-                    this.mUICreateaHouseholdTestHyperlink.FilterProperties[HtmlControl.PropertyNames.Class] = "itemlink";
-                    this.mUICreateaHouseholdTestHyperlink.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "class=itemlink href=\"AddHouseholdTestRen";
-                    this.mUICreateaHouseholdTestHyperlink.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "2";
-                    this.mUICreateaHouseholdTestHyperlink.WindowTitles.Add("insurE-com System Maintenance");
+                    mUICreateaHouseholdTestHyperlink.FilterProperties[HtmlControl.PropertyNames.Class] = "itemlink";
+                    mUICreateaHouseholdTestHyperlink.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "class=itemlink href=\"AddHouseholdTestRen";
+                    mUICreateaHouseholdTestHyperlink.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "2";
+                    mUICreateaHouseholdTestHyperlink.WindowTitles.Add("insurE-com System Maintenance");
 
                     #endregion
                 }
-                return this.mUICreateaHouseholdTestHyperlink;
+                return mUICreateaHouseholdTestHyperlink;
             }
         }
 

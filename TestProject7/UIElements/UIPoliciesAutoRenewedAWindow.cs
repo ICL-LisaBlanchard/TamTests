@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Policies Auto-Renewed & Auto-Lapsed";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Policies Auto-Renewed & Auto-Lapsed");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Policies Auto-Renewed & Auto-Lapsed";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add("Policies Auto-Renewed & Auto-Lapsed");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIExitWindow == null))
+                if ((mUIExitWindow == null))
                 {
-                    this.mUIExitWindow = new UIItemWindow(this, "2");
+                    mUIExitWindow = new UIItemWindow(this, "2");
                 }
-                return this.mUIExitWindow;
+                return mUIExitWindow;
             }
         }
 

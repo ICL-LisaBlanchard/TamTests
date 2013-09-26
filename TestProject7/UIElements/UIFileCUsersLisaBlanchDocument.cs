@@ -10,14 +10,14 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-            this.SearchProperties[PropertyNames.RedirectingPage] = "False";
-            this.SearchProperties[PropertyNames.FrameDocument] = "False";
-            this.FilterProperties[HtmlControl.PropertyNames.Title] = null;
+            SearchProperties[HtmlControl.PropertyNames.Id] = null;
+            SearchProperties[PropertyNames.RedirectingPage] = "False";
+            SearchProperties[PropertyNames.FrameDocument] = "False";
+            FilterProperties[HtmlControl.PropertyNames.Title] = null;
 
-            this.SearchProperties.Add(new PropertyExpression(PropertyNames.AbsolutePath, "Quot", PropertyExpressionOperator.Contains));
-            this.SearchProperties.Add(new PropertyExpression(PropertyNames.PageUrl, "Quot", PropertyExpressionOperator.Contains));
-            this.WindowTitles.Add("Quote.htm");
+            SearchProperties.Add(new PropertyExpression(PropertyNames.AbsolutePath, "Quot", PropertyExpressionOperator.Contains));
+            SearchProperties.Add(new PropertyExpression(PropertyNames.PageUrl, "Quot", PropertyExpressionOperator.Contains));
+            WindowTitles.Add("Quote.htm");
 
             #endregion
         }
@@ -28,11 +28,11 @@
         {
             get
             {
-                if ((this.mUIItemTable == null))
+                if ((mUIItemTable == null))
                 {
-                    this.mUIItemTable = new UIItemTable2(this);
+                    mUIItemTable = new UIItemTable2(this);
                 }
-                return this.mUIItemTable;
+                return mUIItemTable;
             }
         }
 

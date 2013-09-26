@@ -11,11 +11,11 @@
         {
             #region Search Criteria
 
-            this.windowName = "Please select WHO to follow up";
-            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, this.windowName, PropertyExpressionOperator.Contains));
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
-            this.WindowTitles.Add(this.windowName);
+            windowName = "Please select WHO to follow up";
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, windowName, PropertyExpressionOperator.Contains));
+            SearchProperties[UITestControl.PropertyNames.Name] = windowName;
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
+            WindowTitles.Add(windowName);
 
             #endregion
         }
@@ -26,11 +26,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, className: "TPanel");
+                    mUIItemWindow = new UIItemWindow(this, className: "TPanel");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow(this, className: "TListBox");
+                    mUIItemWindow1 = new UIItemWindow(this, className: "TListBox");
                 }
-                return this.mUIItemWindow1;
+                return mUIItemWindow1;
             }
         }
 

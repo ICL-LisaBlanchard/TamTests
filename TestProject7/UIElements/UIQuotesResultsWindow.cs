@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.windowName = "Quotes Results";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add(this.windowName);
+            windowName = "Quotes Results";
+            SearchProperties[UITestControl.PropertyNames.Name] = windowName;
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add(windowName);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
+                    mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                if ((this.mUIAcceptWindow == null))
+                if ((mUIAcceptWindow == null))
                 {
-                    this.mUIAcceptWindow = new UIItemWindow(this, controlId: "2");
+                    mUIAcceptWindow = new UIItemWindow(this, controlId: "2");
                 }
-                return this.mUIAcceptWindow;
+                return mUIAcceptWindow;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                if ((this.mUIExitWindow == null))
+                if ((mUIExitWindow == null))
                 {
-                    this.mUIExitWindow = new UIItemWindow(this, controlId: "6");
+                    mUIExitWindow = new UIItemWindow(this, controlId: "6");
                 }
-                return this.mUIExitWindow;
+                return mUIExitWindow;
             }
         }
 
@@ -61,11 +61,11 @@
         {
             get
             {
-                if ((this.mUIPrintQuoteWindow == null))
+                if ((mUIPrintQuoteWindow == null))
                 {
-                    this.mUIPrintQuoteWindow = new UIItemWindow(this, controlId: "4");
+                    mUIPrintQuoteWindow = new UIItemWindow(this, controlId: "4");
                 }
-                return this.mUIPrintQuoteWindow;
+                return mUIPrintQuoteWindow;
             }
         }
 
@@ -73,11 +73,11 @@
         {
             get
             {
-                if ((this.mUIDemandsNeedsWindow == null))
+                if ((mUIDemandsNeedsWindow == null))
                 {
-                    this.mUIDemandsNeedsWindow = new UIItemWindow(this, controlId: "8");
+                    mUIDemandsNeedsWindow = new UIItemWindow(this, controlId: "8");
                 }
-                return this.mUIDemandsNeedsWindow;
+                return mUIDemandsNeedsWindow;
             }
         }
 
@@ -85,11 +85,11 @@
         {
             get
             {
-                if ((this.mUIPremiumWindow == null))
+                if ((mUIPremiumWindow == null))
                 {
-                    this.mUIPremiumWindow = new UIItemWindow(this, controlId: "15");
+                    mUIPremiumWindow = new UIItemWindow(this, controlId: "15");
                 }
-                return this.mUIPremiumWindow;
+                return mUIPremiumWindow;
             }
         }
 

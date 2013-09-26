@@ -41,11 +41,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUITheAgencyManagerSignWindow == null))
+                if ((mUITheAgencyManagerSignWindow == null))
                 {
-                    this.mUITheAgencyManagerSignWindow = new UITheAgencyManagerSignWindow();
+                    mUITheAgencyManagerSignWindow = new UITheAgencyManagerSignWindow();
                 }
-                return this.mUITheAgencyManagerSignWindow;
+                return mUITheAgencyManagerSignWindow;
             }
         }
 
@@ -53,11 +53,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIPedalCyclesWindow == null))
+                if ((mUIPedalCyclesWindow == null))
                 {
-                    this.mUIPedalCyclesWindow = new UIPedalCyclesWindow();
+                    mUIPedalCyclesWindow = new UIPedalCyclesWindow();
                 }
-                return this.mUIPedalCyclesWindow;
+                return mUIPedalCyclesWindow;
             }
         }
 
@@ -65,11 +65,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIPolicyAttachmentsWindow == null))
+                if ((mUIPolicyAttachmentsWindow == null))
                 {
-                    this.mUIPolicyAttachmentsWindow = new UIPolicyAttachmentsWindow();
+                    mUIPolicyAttachmentsWindow = new UIPolicyAttachmentsWindow();
                 }
-                return this.mUIPolicyAttachmentsWindow;
+                return mUIPolicyAttachmentsWindow;
             }
         }
 
@@ -77,11 +77,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIAttachmentDetailWindow == null))
+                if ((mUIAttachmentDetailWindow == null))
                 {
-                    this.mUIAttachmentDetailWindow = new UIAttachmentDetailWindow();
+                    mUIAttachmentDetailWindow = new UIAttachmentDetailWindow();
                 }
-                return this.mUIAttachmentDetailWindow;
+                return mUIAttachmentDetailWindow;
             }
         }
 
@@ -89,11 +89,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIAttatchmentsMenuWindow == null))
+                if ((mUIAttatchmentsMenuWindow == null))
                 {
-                    this.mUIAttatchmentsMenuWindow = new UIAttatchmentsMenuWindow();
+                    mUIAttatchmentsMenuWindow = new UIAttatchmentsMenuWindow();
                 }
-                return this.mUIAttatchmentsMenuWindow;
+                return mUIAttatchmentsMenuWindow;
             }
         }
 
@@ -101,11 +101,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUITheAgencyManagerWindow1 == null))
+                if ((mUITheAgencyManagerWindow1 == null))
                 {
-                    this.mUITheAgencyManagerWindow1 = new UITheAgencyManagerWindow1();
+                    mUITheAgencyManagerWindow1 = new UITheAgencyManagerWindow1();
                 }
-                return this.mUITheAgencyManagerWindow1;
+                return mUITheAgencyManagerWindow1;
             }
         }
         
@@ -113,11 +113,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUICustomertxt1tdsfsWindow == null))
+                if ((mUICustomertxt1tdsfsWindow == null))
                 {
-                    this.mUICustomertxt1tdsfsWindow = new UICustomertxt1TdsfsWindow();
+                    mUICustomertxt1tdsfsWindow = new UICustomertxt1TdsfsWindow();
                 }
-                return this.mUICustomertxt1tdsfsWindow;
+                return mUICustomertxt1tdsfsWindow;
             }
         }
         
@@ -134,11 +134,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIVerifyWindow == null))
+                if ((mUIVerifyWindow == null))
                 {
-                    this.mUIVerifyWindow = new UIVerifyWindow();
+                    mUIVerifyWindow = new UIVerifyWindow();
                 }
-                return this.mUIVerifyWindow;
+                return mUIVerifyWindow;
             }
         }
         
@@ -146,11 +146,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUISelectaPolicyNumberWindow == null))
+                if ((mUISelectaPolicyNumberWindow == null))
                 {
-                    this.mUISelectaPolicyNumberWindow = new UISelectaPolicyNumberWindow();
+                    mUISelectaPolicyNumberWindow = new UISelectaPolicyNumberWindow();
                 }
-                return this.mUISelectaPolicyNumberWindow;
+                return mUISelectaPolicyNumberWindow;
             }
         }
         
@@ -158,11 +158,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUICurrentOrFutureWindow == null))
+                if ((mUICurrentOrFutureWindow == null))
                 {
-                    this.mUICurrentOrFutureWindow = new UICurrentOrFutureWindow();
+                    mUICurrentOrFutureWindow = new UICurrentOrFutureWindow();
                 }
-                return this.mUICurrentOrFutureWindow;
+                return mUICurrentOrFutureWindow;
             }
         }
         
@@ -170,11 +170,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIProposerTypeWindow == null))
+                if ((mUIProposerTypeWindow == null))
                 {
-                    this.mUIProposerTypeWindow = new UIProposerTypeWindow();
+                    mUIProposerTypeWindow = new UIProposerTypeWindow();
                 }
-                return this.mUIProposerTypeWindow;
+                return mUIProposerTypeWindow;
             }
         }
         
@@ -182,11 +182,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIProposerDetailsWindow == null))
+                if ((mUIProposerDetailsWindow == null))
                 {
-                    this.mUIProposerDetailsWindow = new UIProposerDetailsWindow();
+                    mUIProposerDetailsWindow = new UIProposerDetailsWindow();
                 }
-                return this.mUIProposerDetailsWindow;
+                return mUIProposerDetailsWindow;
             }
         }
         
@@ -194,11 +194,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUISearchResultForB338TWindow == null))
+                if ((mUISearchResultForB338TWindow == null))
                 {
-                    this.mUISearchResultForB338TWindow = new UISearchResultForB338TWindow();
+                    mUISearchResultForB338TWindow = new UISearchResultForB338TWindow();
                 }
-                return this.mUISearchResultForB338TWindow;
+                return mUISearchResultForB338TWindow;
             }
         }
         
@@ -206,11 +206,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIDriverDetailsWindow == null))
+                if ((mUIDriverDetailsWindow == null))
                 {
-                    this.mUIDriverDetailsWindow = new UIDriverDetailsWindow();
+                    mUIDriverDetailsWindow = new UIDriverDetailsWindow();
                 }
-                return this.mUIDriverDetailsWindow;
+                return mUIDriverDetailsWindow;
             }
         }
         
@@ -218,11 +218,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIVehicleLookupWindow == null))
+                if ((mUIVehicleLookupWindow == null))
                 {
-                    this.mUIVehicleLookupWindow = new UIVehicleLookupWindow();
+                    mUIVehicleLookupWindow = new UIVehicleLookupWindow();
                 }
-                return this.mUIVehicleLookupWindow;
+                return mUIVehicleLookupWindow;
             }
         }
         
@@ -230,11 +230,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIInsurEtamWindow == null))
+                if ((mUIInsurEtamWindow == null))
                 {
-                    this.mUIInsurEtamWindow = new UIInsurEtamWindow();
+                    mUIInsurEtamWindow = new UIInsurEtamWindow();
                 }
-                return this.mUIInsurEtamWindow;
+                return mUIInsurEtamWindow;
             }
         }
 
@@ -242,11 +242,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIPersonalLinesDialogWindow == null))
+                if ((mUIPersonalLinesDialogWindow == null))
                 {
-                    this.mUIPersonalLinesDialogWindow = new UIPersonalLinesDialogWindow();
+                    mUIPersonalLinesDialogWindow = new UIPersonalLinesDialogWindow();
                 }
-                return this.mUIPersonalLinesDialogWindow;
+                return mUIPersonalLinesDialogWindow;
             }
         }
 
@@ -254,11 +254,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIPersonalLinesWindow == null))
+                if ((mUIPersonalLinesWindow == null))
                 {
-                    this.mUIPersonalLinesWindow = new UIPersonalLinesWindow();
+                    mUIPersonalLinesWindow = new UIPersonalLinesWindow();
                 }
-                return this.mUIPersonalLinesWindow;
+                return mUIPersonalLinesWindow;
             }
         }
 
@@ -266,11 +266,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUISecondApplicantDetaiWindow == null))
+                if ((mUISecondApplicantDetaiWindow == null))
                 {
-                    this.mUISecondApplicantDetaiWindow = new UISecondApplicantDetaiWindow();
+                    mUISecondApplicantDetaiWindow = new UISecondApplicantDetaiWindow();
                 }
-                return this.mUISecondApplicantDetaiWindow;
+                return mUISecondApplicantDetaiWindow;
             }
         }
 
@@ -278,11 +278,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUISpecifiedItemsInsideWindow == null))
+                if ((mUISpecifiedItemsInsideWindow == null))
                 {
-                    this.mUISpecifiedItemsInsideWindow = new UISpecifiedItemsInsideWindow();
+                    mUISpecifiedItemsInsideWindow = new UISpecifiedItemsInsideWindow();
                 }
-                return this.mUISpecifiedItemsInsideWindow;
+                return mUISpecifiedItemsInsideWindow;
             }
         }
         
@@ -290,11 +290,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUICreditCheckWindow == null))
+                if ((mUICreditCheckWindow == null))
                 {
-                    this.mUICreditCheckWindow = new UICreditCheckWindow();
+                    mUICreditCheckWindow = new UICreditCheckWindow();
                 }
-                return this.mUICreditCheckWindow;
+                return mUICreditCheckWindow;
             }
         }
         
@@ -302,11 +302,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIQuoteResultsWindow == null))
+                if ((mUIQuoteResultsWindow == null))
                 {
-                    this.mUIQuoteResultsWindow = new UIQuoteResultsWindow();
+                    mUIQuoteResultsWindow = new UIQuoteResultsWindow();
                 }
-                return this.mUIQuoteResultsWindow;
+                return mUIQuoteResultsWindow;
             }
         }
         
@@ -314,11 +314,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIInsurEtamWindow1 == null))
+                if ((mUIInsurEtamWindow1 == null))
                 {
-                    this.mUIInsurEtamWindow1 = new UIInsurEtamWindow1();
+                    mUIInsurEtamWindow1 = new UIInsurEtamWindow1();
                 }
-                return this.mUIInsurEtamWindow1;
+                return mUIInsurEtamWindow1;
             }
         }
         
@@ -326,11 +326,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIPaymentMethodsWindow == null))
+                if ((mUIPaymentMethodsWindow == null))
                 {
-                    this.mUIPaymentMethodsWindow = new UIPaymentMethodsWindow();
+                    mUIPaymentMethodsWindow = new UIPaymentMethodsWindow();
                 }
-                return this.mUIPaymentMethodsWindow;
+                return mUIPaymentMethodsWindow;
             }
         }
         
@@ -338,11 +338,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIConfirmDocumentsWindow == null))
+                if ((mUIConfirmDocumentsWindow == null))
                 {
-                    this.mUIConfirmDocumentsWindow = new UIConfirmDocumentsWindow();
+                    mUIConfirmDocumentsWindow = new UIConfirmDocumentsWindow();
                 }
-                return this.mUIConfirmDocumentsWindow;
+                return mUIConfirmDocumentsWindow;
             }
         }
         
@@ -350,11 +350,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIPolicyDateTimeWindow == null))
+                if ((mUIPolicyDateTimeWindow == null))
                 {
-                    this.mUIPolicyDateTimeWindow = new UIPolicyDateTimeWindow();
+                    mUIPolicyDateTimeWindow = new UIPolicyDateTimeWindow();
                 }
-                return this.mUIPolicyDateTimeWindow;
+                return mUIPolicyDateTimeWindow;
             }
         }
         
@@ -362,11 +362,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUISavethefileasWindow == null))
+                if ((mUISavethefileasWindow == null))
                 {
-                    this.mUISavethefileasWindow = new UISavethefileasWindow();
+                    mUISavethefileasWindow = new UISavethefileasWindow();
                 }
-                return this.mUISavethefileasWindow;
+                return mUISavethefileasWindow;
             }
         }
         
@@ -374,11 +374,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIPointOfSaleWindow == null))
+                if ((mUIPointOfSaleWindow == null))
                 {
-                    this.mUIPointOfSaleWindow = new UIPointOfSaleWindow();
+                    mUIPointOfSaleWindow = new UIPointOfSaleWindow();
                 }
-                return this.mUIPointOfSaleWindow;
+                return mUIPointOfSaleWindow;
             }
         }
         
@@ -386,11 +386,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIImporttoTAMWindow == null))
+                if ((mUIImporttoTAMWindow == null))
                 {
-                    this.mUIImporttoTAMWindow = new UIImporttoTAMWindow();
+                    mUIImporttoTAMWindow = new UIImporttoTAMWindow();
                 }
-                return this.mUIImporttoTAMWindow;
+                return mUIImporttoTAMWindow;
             }
         }
         
@@ -398,11 +398,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUITransactiontoinsertWindow == null))
+                if ((mUITransactiontoinsertWindow == null))
                 {
-                    this.mUITransactiontoinsertWindow = new UITransactiontoinsertWindow();
+                    mUITransactiontoinsertWindow = new UITransactiontoinsertWindow();
                 }
-                return this.mUITransactiontoinsertWindow;
+                return mUITransactiontoinsertWindow;
             }
         }
 
@@ -410,11 +410,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUITamxml7Window == null))
+                if ((mUITamxml7Window == null))
                 {
-                    this.mUITamxml7Window = new UITamxml7Window();
+                    mUITamxml7Window = new UITamxml7Window();
                 }
-                return this.mUITamxml7Window;
+                return mUITamxml7Window;
             }
         }
         
@@ -424,11 +424,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUISelectTaminsurerforiWindow == null))
+                if ((mUISelectTaminsurerforiWindow == null))
                 {
-                    this.mUISelectTaminsurerforiWindow = new UISelectTaminsurerforiWindow();
+                    mUISelectTaminsurerforiWindow = new UISelectTaminsurerforiWindow();
                 }
-                return this.mUISelectTaminsurerforiWindow;
+                return mUISelectTaminsurerforiWindow;
             }
         }
         
@@ -436,11 +436,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIPolicyautotestWindow == null))
+                if ((mUIPolicyautotestWindow == null))
                 {
-                    this.mUIPolicyautotestWindow = new UIPolicyautotestWindow();
+                    mUIPolicyautotestWindow = new UIPolicyautotestWindow();
                 }
-                return this.mUIPolicyautotestWindow;
+                return mUIPolicyautotestWindow;
             }
         }
 
@@ -448,11 +448,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUITransactionListWindow == null))
+                if ((mUITransactionListWindow == null))
                 {
-                    this.mUITransactionListWindow = new UITransactionListWindow1();
+                    mUITransactionListWindow = new UITransactionListWindow1();
                 }
-                return this.mUITransactionListWindow;
+                return mUITransactionListWindow;
             }
         }
         
@@ -461,11 +461,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIViewQuoteDetailsWindow == null))
+                if ((mUIViewQuoteDetailsWindow == null))
                 {
-                    this.mUIViewQuoteDetailsWindow = new UIViewQuoteDetailsWindow();
+                    mUIViewQuoteDetailsWindow = new UIViewQuoteDetailsWindow();
                 }
-                return this.mUIViewQuoteDetailsWindow;
+                return mUIViewQuoteDetailsWindow;
             }
         }
         
@@ -473,11 +473,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIDemandsNeedsMotorComWindow == null))
+                if ((mUIDemandsNeedsMotorComWindow == null))
                 {
-                    this.mUIDemandsNeedsMotorComWindow = new UIDemandsNeedsMotorComWindow();
+                    mUIDemandsNeedsMotorComWindow = new UIDemandsNeedsMotorComWindow();
                 }
-                return this.mUIDemandsNeedsMotorComWindow;
+                return mUIDemandsNeedsMotorComWindow;
             }
         }
 
@@ -485,11 +485,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIQuotesResultsWindow == null))
+                if ((mUIQuotesResultsWindow == null))
                 {
-                    this.mUIQuotesResultsWindow = new UIQuotesResultsWindow();
+                    mUIQuotesResultsWindow = new UIQuotesResultsWindow();
                 }
-                return this.mUIQuotesResultsWindow;
+                return mUIQuotesResultsWindow;
             }
         }
         
@@ -497,11 +497,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIBrokerAddonsWindow == null))
+                if ((mUIBrokerAddonsWindow == null))
                 {
-                    this.mUIBrokerAddonsWindow = new UIBrokerAddonsWindow();
+                    mUIBrokerAddonsWindow = new UIBrokerAddonsWindow();
                 }
-                return this.mUIBrokerAddonsWindow;
+                return mUIBrokerAddonsWindow;
             }
         }
         
@@ -509,11 +509,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIPolicyDetailConfirmationWindow == null))
+                if ((mUIPolicyDetailConfirmationWindow == null))
                 {
-                    this.mUIPolicyDetailConfirmationWindow = new UIPolicyDetailConfirmationWindow();
+                    mUIPolicyDetailConfirmationWindow = new UIPolicyDetailConfirmationWindow();
                 }
-                return this.mUIPolicyDetailConfirmationWindow;
+                return mUIPolicyDetailConfirmationWindow;
             }
         }
         
@@ -521,11 +521,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIAcceptWithAnotherProWindow == null))
+                if ((mUIAcceptWithAnotherProWindow == null))
                 {
-                    this.mUIAcceptWithAnotherProWindow = new UIAcceptWithAnotherProWindow();
+                    mUIAcceptWithAnotherProWindow = new UIAcceptWithAnotherProWindow();
                 }
-                return this.mUIAcceptWithAnotherProWindow;
+                return mUIAcceptWithAnotherProWindow;
             }
         }
         
@@ -533,11 +533,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIQuoteSelectListWindow == null))
+                if ((mUIQuoteSelectListWindow == null))
                 {
-                    this.mUIQuoteSelectListWindow = new UIQuoteSelectListWindow();
+                    mUIQuoteSelectListWindow = new UIQuoteSelectListWindow();
                 }
-                return this.mUIQuoteSelectListWindow;
+                return mUIQuoteSelectListWindow;
             }
         }
 
@@ -545,11 +545,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIOverridePremiumWindow == null))
+                if ((mUIOverridePremiumWindow == null))
                 {
-                    this.mUIOverridePremiumWindow = new UIOverridePremiumWindow();
+                    mUIOverridePremiumWindow = new UIOverridePremiumWindow();
                 }
-                return this.mUIOverridePremiumWindow;
+                return mUIOverridePremiumWindow;
             }
         }
         
@@ -557,11 +557,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIWhichpolicywouldyoulWindow == null))
+                if ((mUIWhichpolicywouldyoulWindow == null))
                 {
-                    this.mUIWhichpolicywouldyoulWindow = new UIWhichpolicywouldyoulWindow();
+                    mUIWhichpolicywouldyoulWindow = new UIWhichpolicywouldyoulWindow();
                 }
-                return this.mUIWhichpolicywouldyoulWindow;
+                return mUIWhichpolicywouldyoulWindow;
             }
         }
         
@@ -569,11 +569,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIProductSelectionWindow == null))
+                if ((mUIProductSelectionWindow == null))
                 {
-                    this.mUIProductSelectionWindow = new UIProductSelectionWindow();
+                    mUIProductSelectionWindow = new UIProductSelectionWindow();
                 }
-                return this.mUIProductSelectionWindow;
+                return mUIProductSelectionWindow;
             }
         }
 
@@ -581,11 +581,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIPleaseSelectWhoToFolWindow == null))
+                if ((mUIPleaseSelectWhoToFolWindow == null))
                 {
-                    this.mUIPleaseSelectWhoToFolWindow = new UIPleaseSelectWhoToFolWindow();
+                    mUIPleaseSelectWhoToFolWindow = new UIPleaseSelectWhoToFolWindow();
                 }
-                return this.mUIPleaseSelectWhoToFolWindow;
+                return mUIPleaseSelectWhoToFolWindow;
             }
         }
         
@@ -593,11 +593,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIMidTermAdjustmentsWindow == null))
+                if ((mUIMidTermAdjustmentsWindow == null))
                 {
-                    this.mUIMidTermAdjustmentsWindow = new UIMidTermAdjustmentsWindow();
+                    mUIMidTermAdjustmentsWindow = new UIMidTermAdjustmentsWindow();
                 }
-                return this.mUIMidTermAdjustmentsWindow;
+                return mUIMidTermAdjustmentsWindow;
             }
         }
         
@@ -605,11 +605,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIMTAEffectiveDatesWindow == null))
+                if ((mUIMTAEffectiveDatesWindow == null))
                 {
-                    this.mUIMTAEffectiveDatesWindow = new UIMTAEffectiveDatesWindow();
+                    mUIMTAEffectiveDatesWindow = new UIMTAEffectiveDatesWindow();
                 }
-                return this.mUIMTAEffectiveDatesWindow;
+                return mUIMTAEffectiveDatesWindow;
             }
         }
         
@@ -617,11 +617,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIPolicygdfhdfdfghgdfWindow == null))
+                if ((mUIPolicygdfhdfdfghgdfWindow == null))
                 {
-                    this.mUIPolicygdfhdfdfghgdfWindow = new UIPolicygdfhdfdfghgdfWindow();
+                    mUIPolicygdfhdfdfghgdfWindow = new UIPolicygdfhdfdfghgdfWindow();
                 }
-                return this.mUIPolicygdfhdfdfghgdfWindow;
+                return mUIPolicygdfhdfdfghgdfWindow;
             }
         }
         
@@ -629,11 +629,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIConfirmMTAWindow == null))
+                if ((mUIConfirmMTAWindow == null))
                 {
-                    this.mUIConfirmMTAWindow = new UIConfirmMTAWindow();
+                    mUIConfirmMTAWindow = new UIConfirmMTAWindow();
                 }
-                return this.mUIConfirmMTAWindow;
+                return mUIConfirmMTAWindow;
             }
         }
         
@@ -641,11 +641,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIClaimsWindow == null))
+                if ((mUIClaimsWindow == null))
                 {
-                    this.mUIClaimsWindow = new UIClaimsWindow();
+                    mUIClaimsWindow = new UIClaimsWindow();
                 }
-                return this.mUIClaimsWindow;
+                return mUIClaimsWindow;
             }
         }
         
@@ -653,11 +653,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIOpenWindow == null))
+                if ((mUIOpenWindow == null))
                 {
-                    this.mUIOpenWindow = new UIOpenWindow();
+                    mUIOpenWindow = new UIOpenWindow();
                 }
-                return this.mUIOpenWindow;
+                return mUIOpenWindow;
             }
         }
         
@@ -665,11 +665,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIBlankPageMicrosoftInWindow == null))
+                if ((mUIBlankPageMicrosoftInWindow == null))
                 {
-                    this.mUIBlankPageMicrosoftInWindow = new UIBlankPageMicrosoftInWindow();
+                    mUIBlankPageMicrosoftInWindow = new UIBlankPageMicrosoftInWindow();
                 }
-                return this.mUIBlankPageMicrosoftInWindow;
+                return mUIBlankPageMicrosoftInWindow;
             }
         }
         
@@ -677,11 +677,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIWindowsSecurityWindow == null))
+                if ((mUIWindowsSecurityWindow == null))
                 {
-                    this.mUIWindowsSecurityWindow = new UIWindowsSecurityWindow();
+                    mUIWindowsSecurityWindow = new UIWindowsSecurityWindow();
                 }
-                return this.mUIWindowsSecurityWindow;
+                return mUIWindowsSecurityWindow;
             }
         }
         
@@ -689,11 +689,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIInsurEcomSystemMaintWindow == null))
+                if ((mUIInsurEcomSystemMaintWindow == null))
                 {
-                    this.mUIInsurEcomSystemMaintWindow = new UIInsurEcomSystemMaintWindow();
+                    mUIInsurEcomSystemMaintWindow = new UIInsurEcomSystemMaintWindow();
                 }
-                return this.mUIInsurEcomSystemMaintWindow;
+                return mUIInsurEcomSystemMaintWindow;
             }
         }
         
@@ -701,11 +701,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUISearchResultForBN16BWindow == null))
+                if ((mUISearchResultForBN16BWindow == null))
                 {
-                    this.mUISearchResultForBN16BWindow = new UISearchResultForBN16BWindow();
+                    mUISearchResultForBN16BWindow = new UISearchResultForBN16BWindow();
                 }
-                return this.mUISearchResultForBN16BWindow;
+                return mUISearchResultForBN16BWindow;
             }
         }
         
@@ -713,11 +713,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIRegressIETamPolicyWindow == null))
+                if ((mUIRegressIETamPolicyWindow == null))
                 {
-                    this.mUIRegressIETamPolicyWindow = new UIRegressIETamPolicyWindow();
+                    mUIRegressIETamPolicyWindow = new UIRegressIETamPolicyWindow();
                 }
-                return this.mUIRegressIETamPolicyWindow;
+                return mUIRegressIETamPolicyWindow;
             }
         }
         
@@ -725,11 +725,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIRenewalLoaderWindow == null))
+                if ((mUIRenewalLoaderWindow == null))
                 {
-                    this.mUIRenewalLoaderWindow = new UIRenewalLoaderWindow();
+                    mUIRenewalLoaderWindow = new UIRenewalLoaderWindow();
                 }
-                return this.mUIRenewalLoaderWindow;
+                return mUIRenewalLoaderWindow;
             }
         }
         
@@ -737,11 +737,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIIETAMRenewalsWindow == null))
+                if ((mUIIETAMRenewalsWindow == null))
                 {
-                    this.mUIIETAMRenewalsWindow = new UIIETAMRenewalsWindow();
+                    mUIIETAMRenewalsWindow = new UIIETAMRenewalsWindow();
                 }
-                return this.mUIIETAMRenewalsWindow;
+                return mUIIETAMRenewalsWindow;
             }
         }
         
@@ -749,11 +749,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIPoliciesAutoRenewedAWindow == null))
+                if ((mUIPoliciesAutoRenewedAWindow == null))
                 {
-                    this.mUIPoliciesAutoRenewedAWindow = new UIPoliciesAutoRenewedAWindow();
+                    mUIPoliciesAutoRenewedAWindow = new UIPoliciesAutoRenewedAWindow();
                 }
-                return this.mUIPoliciesAutoRenewedAWindow;
+                return mUIPoliciesAutoRenewedAWindow;
             }
         }
         
@@ -761,11 +761,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIRenewalSearchWindow == null))
+                if ((mUIRenewalSearchWindow == null))
                 {
-                    this.mUIRenewalSearchWindow = new UIRenewalSearchWindow();
+                    mUIRenewalSearchWindow = new UIRenewalSearchWindow();
                 }
-                return this.mUIRenewalSearchWindow;
+                return mUIRenewalSearchWindow;
             }
         }
         
@@ -773,11 +773,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIFilterRenewalRecordsWindow == null))
+                if ((mUIFilterRenewalRecordsWindow == null))
                 {
-                    this.mUIFilterRenewalRecordsWindow = new UIFilterRenewalRecordsWindow();
+                    mUIFilterRenewalRecordsWindow = new UIFilterRenewalRecordsWindow();
                 }
-                return this.mUIFilterRenewalRecordsWindow;
+                return mUIFilterRenewalRecordsWindow;
             }
         }
         
@@ -785,11 +785,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIAUTO1871001Window == null))
+                if ((mUIAUTO1871001Window == null))
                 {
-                    this.mUIAUTO1871001Window = new UIAUTO1871001Window();
+                    mUIAUTO1871001Window = new UIAUTO1871001Window();
                 }
-                return this.mUIAUTO1871001Window;
+                return mUIAUTO1871001Window;
             }
         }
         
@@ -797,11 +797,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIPrintDocumentsWindow == null))
+                if ((mUIPrintDocumentsWindow == null))
                 {
-                    this.mUIPrintDocumentsWindow = new UIPrintDocumentsWindow();
+                    mUIPrintDocumentsWindow = new UIPrintDocumentsWindow();
                 }
-                return this.mUIPrintDocumentsWindow;
+                return mUIPrintDocumentsWindow;
             }
         }
         
@@ -809,11 +809,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIConfirmWindow == null))
+                if ((mUIConfirmWindow == null))
                 {
-                    this.mUIConfirmWindow = new UIConfirmWindow();
+                    mUIConfirmWindow = new UIConfirmWindow();
                 }
-                return this.mUIConfirmWindow;
+                return mUIConfirmWindow;
             }
         }
         
@@ -821,11 +821,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIMTASuccessfulWindow == null))
+                if ((mUIMTASuccessfulWindow == null))
                 {
-                    this.mUIMTASuccessfulWindow = new UIMTASuccessfulWindow();
+                    mUIMTASuccessfulWindow = new UIMTASuccessfulWindow();
                 }
-                return this.mUIMTASuccessfulWindow;
+                return mUIMTASuccessfulWindow;
             }
         }
         
@@ -833,11 +833,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIRebrokeResultsScreenWindow == null))
+                if ((mUIRebrokeResultsScreenWindow == null))
                 {
-                    this.mUIRebrokeResultsScreenWindow = new UIRebrokeResultsScreenWindow();
+                    mUIRebrokeResultsScreenWindow = new UIRebrokeResultsScreenWindow();
                 }
-                return this.mUIRebrokeResultsScreenWindow;
+                return mUIRebrokeResultsScreenWindow;
             }
         }
         
@@ -845,11 +845,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUiautoxxx1000Window == null))
+                if ((mUiautoxxx1000Window == null))
                 {
-                    this.mUiautoxxx1000Window = new Uiautoxxx1000Window();
+                    mUiautoxxx1000Window = new Uiautoxxx1000Window();
                 }
-                return this.mUiautoxxx1000Window;
+                return mUiautoxxx1000Window;
             }
         }
         
@@ -857,11 +857,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIAmendRiskWindow == null))
+                if ((mUIAmendRiskWindow == null))
                 {
-                    this.mUIAmendRiskWindow = new UIAmendRiskWindow();
+                    mUIAmendRiskWindow = new UIAmendRiskWindow();
                 }
-                return this.mUIAmendRiskWindow;
+                return mUIAmendRiskWindow;
             }
         }
         
@@ -869,11 +869,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIAmendRiskResultsWindow == null))
+                if ((mUIAmendRiskResultsWindow == null))
                 {
-                    this.mUIAmendRiskResultsWindow = new UIAmendRiskResultsWindow();
+                    mUIAmendRiskResultsWindow = new UIAmendRiskResultsWindow();
                 }
-                return this.mUIAmendRiskResultsWindow;
+                return mUIAmendRiskResultsWindow;
             }
         }
         
@@ -881,11 +881,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIAUTO2211001Window == null))
+                if ((mUIAUTO2211001Window == null))
                 {
-                    this.mUIAUTO2211001Window = new UIAUTO2211001Window();
+                    mUIAUTO2211001Window = new UIAUTO2211001Window();
                 }
-                return this.mUIAUTO2211001Window;
+                return mUIAUTO2211001Window;
             }
         }
         
@@ -893,11 +893,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIRenewalAcceptWindow == null))
+                if ((mUIRenewalAcceptWindow == null))
                 {
-                    this.mUIRenewalAcceptWindow = new UIRenewalAcceptWindow();
+                    mUIRenewalAcceptWindow = new UIRenewalAcceptWindow();
                 }
-                return this.mUIRenewalAcceptWindow;
+                return mUIRenewalAcceptWindow;
             }
         }
         
@@ -905,11 +905,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIInsurerNoticeRevaluaWindow == null))
+                if ((mUIInsurerNoticeRevaluaWindow == null))
                 {
-                    this.mUIInsurerNoticeRevaluaWindow = new UIInsurerNoticeRevaluaWindow();
+                    mUIInsurerNoticeRevaluaWindow = new UIInsurerNoticeRevaluaWindow();
                 }
-                return this.mUIInsurerNoticeRevaluaWindow;
+                return mUIInsurerNoticeRevaluaWindow;
             }
         }
         
@@ -917,11 +917,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIRenewalsNewBusinessAWindow == null))
+                if ((mUIRenewalsNewBusinessAWindow == null))
                 {
-                    this.mUIRenewalsNewBusinessAWindow = new UIRenewalsNewBusinessAWindow();
+                    mUIRenewalsNewBusinessAWindow = new UIRenewalsNewBusinessAWindow();
                 }
-                return this.mUIRenewalsNewBusinessAWindow;
+                return mUIRenewalsNewBusinessAWindow;
             }
         }
         
@@ -929,11 +929,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIAUTO2251001Window == null))
+                if ((mUIAUTO2251001Window == null))
                 {
-                    this.mUIAUTO2251001Window = new UIAUTO2251001Window();
+                    mUIAUTO2251001Window = new UIAUTO2251001Window();
                 }
-                return this.mUIAUTO2251001Window;
+                return mUIAUTO2251001Window;
             }
         }
         
@@ -941,11 +941,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIHouseholdRenewalsWindow == null))
+                if ((mUIHouseholdRenewalsWindow == null))
                 {
-                    this.mUIHouseholdRenewalsWindow = new UIHouseholdRenewalsWindow();
+                    mUIHouseholdRenewalsWindow = new UIHouseholdRenewalsWindow();
                 }
-                return this.mUIHouseholdRenewalsWindow;
+                return mUIHouseholdRenewalsWindow;
             }
         }
 
@@ -953,11 +953,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIHouseholdRenewalsResultsWindow == null))
+                if ((mUIHouseholdRenewalsResultsWindow == null))
                 {
-                    this.mUIHouseholdRenewalsResultsWindow = new UIHouseholdRenewalsResultsWindow();
+                    mUIHouseholdRenewalsResultsWindow = new UIHouseholdRenewalsResultsWindow();
                 }
-                return this.mUIHouseholdRenewalsResultsWindow;
+                return mUIHouseholdRenewalsResultsWindow;
             }
         }
         
@@ -965,11 +965,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUICreditCheckAtRenewalWindow == null))
+                if ((mUICreditCheckAtRenewalWindow == null))
                 {
-                    this.mUICreditCheckAtRenewalWindow = new UICreditCheckAtRenewalWindow();
+                    mUICreditCheckAtRenewalWindow = new UICreditCheckAtRenewalWindow();
                 }
-                return this.mUICreditCheckAtRenewalWindow;
+                return mUICreditCheckAtRenewalWindow;
             }
         }
 
@@ -977,11 +977,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUiautoWindow == null))
+                if ((mUiautoWindow == null))
                 {
-                    this.mUiautoWindow = new UiautoWindow();
+                    mUiautoWindow = new UiautoWindow();
                 }
-                return this.mUiautoWindow;
+                return mUiautoWindow;
             }
         }
         
@@ -989,11 +989,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIHouseholdRebrokeResuWindow == null))
+                if ((mUIHouseholdRebrokeResuWindow == null))
                 {
-                    this.mUIHouseholdRebrokeResuWindow = new UIHouseholdRebrokeResuWindow();
+                    mUIHouseholdRebrokeResuWindow = new UIHouseholdRebrokeResuWindow();
                 }
-                return this.mUIHouseholdRebrokeResuWindow;
+                return mUIHouseholdRebrokeResuWindow;
             }
         }
         
@@ -1001,11 +1001,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIAUTO2311001Window == null))
+                if ((mUIAUTO2311001Window == null))
                 {
-                    this.mUIAUTO2311001Window = new UIAUTO2311001Window();
+                    mUIAUTO2311001Window = new UIAUTO2311001Window();
                 }
-                return this.mUIAUTO2311001Window;
+                return mUIAUTO2311001Window;
             }
         }
         
@@ -1013,11 +1013,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIRenewalsNewBusinessAWindow1 == null))
+                if ((mUIRenewalsNewBusinessAWindow1 == null))
                 {
-                    this.mUIRenewalsNewBusinessAWindow1 = new UIRenewalsNewBusinessAWindow1();
+                    mUIRenewalsNewBusinessAWindow1 = new UIRenewalsNewBusinessAWindow1();
                 }
-                return this.mUIRenewalsNewBusinessAWindow1;
+                return mUIRenewalsNewBusinessAWindow1;
             }
         }
         
@@ -1025,11 +1025,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIWindowsSecurityWindow1 == null))
+                if ((mUIWindowsSecurityWindow1 == null))
                 {
-                    this.mUIWindowsSecurityWindow1 = new UIWindowsSecurityWindow1();
+                    mUIWindowsSecurityWindow1 = new UIWindowsSecurityWindow1();
                 }
-                return this.mUIWindowsSecurityWindow1;
+                return mUIWindowsSecurityWindow1;
             }
         }
         
@@ -1037,11 +1037,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIWarningWindow == null))
+                if ((mUIWarningWindow == null))
                 {
-                    this.mUIWarningWindow = new UIWarningWindow();
+                    mUIWarningWindow = new UIWarningWindow();
                 }
-                return this.mUIWarningWindow;
+                return mUIWarningWindow;
             }
         }
         
@@ -1049,11 +1049,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIErrorWindow == null))
+                if ((mUIErrorWindow == null))
                 {
-                    this.mUIErrorWindow = new UIErrorWindow();
+                    mUIErrorWindow = new UIErrorWindow();
                 }
-                return this.mUIErrorWindow;
+                return mUIErrorWindow;
             }
         }
 
@@ -1062,11 +1062,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUISelectTamActivityTypWindow == null))
+                if ((mUISelectTamActivityTypWindow == null))
                 {
-                    this.mUISelectTamActivityTypWindow = new UISelectTamActivityTypWindow();
+                    mUISelectTamActivityTypWindow = new UISelectTamActivityTypWindow();
                 }
-                return this.mUISelectTamActivityTypWindow;
+                return mUISelectTamActivityTypWindow;
             }
         }
 
@@ -1074,11 +1074,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIPleaseselectWHOtofolWindow == null))
+                if ((mUIPleaseselectWHOtofolWindow == null))
                 {
-                    this.mUIPleaseselectWHOtofolWindow = new UIPleaseSelectWhoToFolWindow();
+                    mUIPleaseselectWHOtofolWindow = new UIPleaseSelectWhoToFolWindow();
                 }
-                return this.mUIPleaseselectWHOtofolWindow;
+                return mUIPleaseselectWHOtofolWindow;
             }
         }
 
@@ -1086,11 +1086,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mTopWindow == null))
+                if ((mTopWindow == null))
                 {
-                    this.mTopWindow = new TopWindow();
+                    mTopWindow = new TopWindow();
                 }
-                return this.mTopWindow;
+                return mTopWindow;
             }
         }
 
@@ -1098,11 +1098,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIViewAttachmentWindow == null))
+                if ((mUIViewAttachmentWindow == null))
                 {
-                    this.mUIViewAttachmentWindow = new UIViewAttachmentWindow();
+                    mUIViewAttachmentWindow = new UIViewAttachmentWindow();
                 }
-                return this.mUIViewAttachmentWindow;
+                return mUIViewAttachmentWindow;
             }
         }
 
@@ -1110,11 +1110,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIOpenwithWindow == null))
+                if ((mUIOpenwithWindow == null))
                 {
-                    this.mUIOpenwithWindow = new UIOpenwithWindow();
+                    mUIOpenwithWindow = new UIOpenwithWindow();
                 }
-                return this.mUIOpenwithWindow;
+                return mUIOpenwithWindow;
             }
         }
 
@@ -1130,11 +1130,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIItemPdfSecureWindow == null))
+                if ((mUIItemPdfSecureWindow == null))
                 {
-                    this.mUIItemPdfSecureWindow = new UIItemPdfSecureWindow();
+                    mUIItemPdfSecureWindow = new UIItemPdfSecureWindow();
                 }
-                return this.mUIItemPdfSecureWindow;
+                return mUIItemPdfSecureWindow;
             }
         }
 
@@ -1142,11 +1142,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIDocumentPropertiesWindow == null))
+                if ((mUIDocumentPropertiesWindow == null))
                 {
-                    this.mUIDocumentPropertiesWindow = new UIDocumentPropertiesWindow();
+                    mUIDocumentPropertiesWindow = new UIDocumentPropertiesWindow();
                 }
-                return this.mUIDocumentPropertiesWindow;
+                return mUIDocumentPropertiesWindow;
             }
         }
 
@@ -1154,11 +1154,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIDemand2docMicrosoftWWindow == null))
+                if ((mUIDemand2docMicrosoftWWindow == null))
                 {
-                    this.mUIDemand2docMicrosoftWWindow = new UIDemand2DocMicrosoftWWindow();
+                    mUIDemand2docMicrosoftWWindow = new UIDemand2DocMicrosoftWWindow();
                 }
-                return this.mUIDemand2docMicrosoftWWindow;
+                return mUIDemand2docMicrosoftWWindow;
             }
         }
 
@@ -1166,11 +1166,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIFindandGotoWindow == null))
+                if ((mUIFindandGotoWindow == null))
                 {
-                    this.mUIFindandGotoWindow = new UIFindandGotoWindow();
+                    mUIFindandGotoWindow = new UIFindandGotoWindow();
                 }
-                return this.mUIFindandGotoWindow;
+                return mUIFindandGotoWindow;
             }
         }
 
@@ -1178,11 +1178,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIMicrosoftOfficeWordVWindow == null))
+                if ((mUIMicrosoftOfficeWordVWindow == null))
                 {
-                    this.mUIMicrosoftOfficeWordVWindow = new UIMicrosoftOfficeWordVWindow();
+                    mUIMicrosoftOfficeWordVWindow = new UIMicrosoftOfficeWordVWindow();
                 }
-                return this.mUIMicrosoftOfficeWordVWindow;
+                return mUIMicrosoftOfficeWordVWindow;
             }
         }
 
@@ -1190,11 +1190,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIUpdateGeneralTransacWindow == null))
+                if ((mUIUpdateGeneralTransacWindow == null))
                 {
-                    this.mUIUpdateGeneralTransacWindow = new UIUpdateGeneralTransacWindow();
+                    mUIUpdateGeneralTransacWindow = new UIUpdateGeneralTransacWindow();
                 }
-                return this.mUIUpdateGeneralTransacWindow;
+                return mUIUpdateGeneralTransacWindow;
             }
         }
 
@@ -1202,11 +1202,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUICommissionAdjustmentWindow == null))
+                if ((mUICommissionAdjustmentWindow == null))
                 {
-                    this.mUICommissionAdjustmentWindow = new UICommissionAdjustmentWindow();
+                    mUICommissionAdjustmentWindow = new UICommissionAdjustmentWindow();
                 }
-                return this.mUICommissionAdjustmentWindow;
+                return mUICommissionAdjustmentWindow;
             }
         }
 
@@ -1214,11 +1214,11 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-                if ((this.mUIPolicyWindow == null))
+                if ((mUIPolicyWindow == null))
                 {
-                    this.mUIPolicyWindow = new UIPolicyWindow();
+                    mUIPolicyWindow = new UIPolicyWindow();
                 }
-                return this.mUIPolicyWindow;
+                return mUIPolicyWindow;
             }
         }
         #endregion

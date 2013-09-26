@@ -15,11 +15,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, controlId: "1");
+                    mUIOKWindow = new UIItemWindow(this, controlId: "1");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 
@@ -27,11 +27,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "2");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "2");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -39,11 +39,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow2 == null))
+                if ((mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow(this, controlId: "5");
+                    mUIItemWindow2 = new UIItemWindow(this, controlId: "5");
                 }
-                return this.mUIItemWindow2;
+                return mUIItemWindow2;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                if ((this.mUICancelWindow == null))
+                if ((mUICancelWindow == null))
                 {
-                    this.mUICancelWindow = new UIItemWindow(this, controlId: "2");
+                    mUICancelWindow = new UIItemWindow(this, controlId: "2");
                 }
-                return this.mUICancelWindow;
+                return mUICancelWindow;
             }
         }
 
@@ -77,9 +77,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "MTA Effective Dates ";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add(WindowName);
+            SearchProperties[UITestControl.PropertyNames.Name] = "MTA Effective Dates ";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add(WindowName);
 
             #endregion
         }

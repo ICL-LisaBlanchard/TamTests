@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.windowName = "Household Renewals Amend Risk results";
-            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, this.windowName, PropertyExpressionOperator.Contains));
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add(this.windowName);
+            windowName = "Household Renewals Amend Risk results";
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, windowName, PropertyExpressionOperator.Contains));
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add(windowName);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow7 == null))
+                if ((mUIItemWindow7 == null))
                 {
-                    this.mUIItemWindow7 = new UIItemWindow(this, className: "ListView20WndClass");
+                    mUIItemWindow7 = new UIItemWindow(this, className: "ListView20WndClass");
                 }
-                return this.mUIItemWindow7;
+                return mUIItemWindow7;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                if ((this.mUIRenewPolicyWindow == null))
+                if ((mUIRenewPolicyWindow == null))
                 {
-                    this.mUIRenewPolicyWindow = new UIItemWindow(this, controlId: "2");
+                    mUIRenewPolicyWindow = new UIItemWindow(this, controlId: "2");
                 }
-                return this.mUIRenewPolicyWindow;
+                return mUIRenewPolicyWindow;
             }
         }
 

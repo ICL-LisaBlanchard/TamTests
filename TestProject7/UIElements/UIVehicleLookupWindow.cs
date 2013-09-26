@@ -11,9 +11,9 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = WindowName;
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add(WindowName);
+            SearchProperties[UITestControl.PropertyNames.Name] = WindowName;
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add(WindowName);
 
             #endregion
         }
@@ -26,11 +26,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "9");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "9");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -38,11 +38,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIFilterWindow == null))
+                if ((mUIFilterWindow == null))
                 {
-                    this.mUIFilterWindow = new UIItemWindow(this, controlId: "8");
+                    mUIFilterWindow = new UIItemWindow(this, controlId: "8");
                 }
-                return this.mUIFilterWindow;
+                return mUIFilterWindow;
             }
         }
 
@@ -50,11 +50,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, controlId: "18");
+                    mUIOKWindow = new UIItemWindow(this, controlId: "18");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 
@@ -62,11 +62,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow(this, controlId: "10");
+                    mUIItemWindow1 = new UIItemWindow(this, controlId: "10");
                 }
-                return this.mUIItemWindow1;
+                return mUIItemWindow1;
             }
         }
 
@@ -90,11 +90,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIStandardLookupWindow == null))
+                if ((mUIStandardLookupWindow == null))
                 {
-                    this.mUIStandardLookupWindow = new UIItemWindow(this, "6");
+                    mUIStandardLookupWindow = new UIItemWindow(this, "6");
                 }
-                return this.mUIStandardLookupWindow;
+                return mUIStandardLookupWindow;
             }
         }
 
@@ -102,11 +102,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow2 == null))
+                if ((mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow(this, "13");
+                    mUIItemWindow2 = new UIItemWindow(this, "13");
                 }
-                return this.mUIItemWindow2;
+                return mUIItemWindow2;
             }
         }
 
@@ -114,11 +114,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow3 == null))
+                if ((mUIItemWindow3 == null))
                 {
-                    this.mUIItemWindow3 = new UIItemWindow(this, "15");
+                    mUIItemWindow3 = new UIItemWindow(this, "15");
                 }
-                return this.mUIItemWindow3;
+                return mUIItemWindow3;
             }
         }
 
@@ -126,11 +126,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow4 == null))
+                if ((mUIItemWindow4 == null))
                 {
-                    this.mUIItemWindow4 = new UIItemWindow(this, "14");
+                    mUIItemWindow4 = new UIItemWindow(this, "14");
                 }
-                return this.mUIItemWindow4;
+                return mUIItemWindow4;
             }
         }
 
@@ -138,11 +138,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow5 == null))
+                if ((mUIItemWindow5 == null))
                 {
-                    this.mUIItemWindow5 = new UIItemWindow(this, "11");
+                    mUIItemWindow5 = new UIItemWindow(this, "11");
                 }
-                return this.mUIItemWindow5;
+                return mUIItemWindow5;
             }
         }
 
@@ -150,11 +150,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow6 == null))
+                if ((mUIItemWindow6 == null))
                 {
-                    this.mUIItemWindow6 = new UIItemWindow(this, "12");
+                    mUIItemWindow6 = new UIItemWindow(this, "12");
                 }
-                return this.mUIItemWindow6;
+                return mUIItemWindow6;
             }
         }
 

@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.windowName = "Which policy would you like to take the risk details from?";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
-            this.WindowTitles.Add(this.windowName);
+            windowName = "Which policy would you like to take the risk details from?";
+            SearchProperties[UITestControl.PropertyNames.Name] = windowName;
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
+            WindowTitles.Add(windowName);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, className: "TPanel");
+                    mUIItemWindow = new UIItemWindow(this, className: "TPanel");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 

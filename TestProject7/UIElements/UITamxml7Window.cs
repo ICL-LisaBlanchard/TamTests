@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Tamxml7";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "TMessageForm";
-            this.WindowTitles.Add("Tamxml7");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Tamxml7";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "TMessageForm";
+            WindowTitles.Add("Tamxml7");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUITamxml7Client == null))
+                if ((mUITamxml7Client == null))
                 {
-                    this.mUITamxml7Client = new UIClient(this, "Tamxml7");
+                    mUITamxml7Client = new UIClient(this, "Tamxml7");
                 }
-                return this.mUITamxml7Client;
+                return mUITamxml7Client;
             }
         }
 

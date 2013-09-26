@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.windowName = "Rebroke Results Screen";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add(this.windowName);
+            windowName = "Rebroke Results Screen";
+            SearchProperties[UITestControl.PropertyNames.Name] = windowName;
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add(windowName);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, instance: "8", className: "msvb_lib_header");
+                    mUIItemWindow = new UIItemWindow(this, instance: "8", className: "msvb_lib_header");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, controlId: "8");
+                    mUIOKWindow = new UIItemWindow(this, controlId: "8");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow(this, instance: "8", className: "ListView20WndClass");
+                    mUIItemWindow1 = new UIItemWindow(this, instance: "8", className: "ListView20WndClass");
                 }
-                return this.mUIItemWindow1;
+                return mUIItemWindow1;
             }
         }
 
@@ -61,11 +61,11 @@
         {
             get
             {
-                if ((this.mUISelectAlternativeWindow == null))
+                if ((mUISelectAlternativeWindow == null))
                 {
-                    this.mUISelectAlternativeWindow = new UIItemWindow(this, controlId: "6");
+                    mUISelectAlternativeWindow = new UIItemWindow(this, controlId: "6");
                 }
-                return this.mUISelectAlternativeWindow;
+                return mUISelectAlternativeWindow;
             }
         }
 

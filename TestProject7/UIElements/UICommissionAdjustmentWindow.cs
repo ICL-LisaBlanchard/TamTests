@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Commission Adjustment";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add("Commission Adjustment");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Commission Adjustment";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
+            WindowTitles.Add("Commission Adjustment");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, "2");
+                    mUIOKWindow = new UIItemWindow(this, "2");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 
@@ -36,19 +36,19 @@
         {
             get
             {
-                if ((this.mUICommissionAdjustmentDialog == null))
+                if ((mUICommissionAdjustmentDialog == null))
                 {
-                    this.mUICommissionAdjustmentDialog = new WinControl(this);
+                    mUICommissionAdjustmentDialog = new WinControl(this);
 
                     #region Search Criteria
 
-                    this.mUICommissionAdjustmentDialog.SearchProperties[UITestControl.PropertyNames.Name] = "Commission Adjustment";
-                    this.mUICommissionAdjustmentDialog.SearchProperties[UITestControl.PropertyNames.ControlType] = "Dialog";
-                    this.mUICommissionAdjustmentDialog.WindowTitles.Add("Commission Adjustment");
+                    mUICommissionAdjustmentDialog.SearchProperties[UITestControl.PropertyNames.Name] = "Commission Adjustment";
+                    mUICommissionAdjustmentDialog.SearchProperties[UITestControl.PropertyNames.ControlType] = "Dialog";
+                    mUICommissionAdjustmentDialog.WindowTitles.Add("Commission Adjustment");
 
                     #endregion
                 }
-                return this.mUICommissionAdjustmentDialog;
+                return mUICommissionAdjustmentDialog;
             }
         }
 

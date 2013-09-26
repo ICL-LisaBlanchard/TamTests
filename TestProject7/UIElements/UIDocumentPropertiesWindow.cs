@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Document Properties";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add("Document Properties");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Document Properties";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
+            WindowTitles.Add("Document Properties");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, "1211");
+                    mUIItemWindow = new UIItemWindow(this, "1211");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, "1");
+                    mUIOKWindow = new UIItemWindow(this, "1");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 

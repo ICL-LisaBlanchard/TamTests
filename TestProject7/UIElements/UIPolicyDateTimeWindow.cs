@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Policy Date / Time";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Policy Date / Time");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Policy Date / Time";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add("Policy Date / Time");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIConfirmWindow == null))
+                if ((mUIConfirmWindow == null))
                 {
-                    this.mUIConfirmWindow = new UIItemWindow(this, "5");
+                    mUIConfirmWindow = new UIItemWindow(this, "5");
                 }
-                return this.mUIConfirmWindow;
+                return mUIConfirmWindow;
             }
         }
 

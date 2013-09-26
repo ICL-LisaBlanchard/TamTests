@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Accept With Another Product";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add(WindowName);
+            SearchProperties[UITestControl.PropertyNames.Name] = "Accept With Another Product";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add(WindowName);
 
             #endregion
         }
@@ -26,11 +26,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "2");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "2");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow(this, controlId: "3");
+                    mUIItemWindow1 = new UIItemWindow(this, controlId: "3");
                 }
-                return this.mUIItemWindow1;
+                return mUIItemWindow1;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow2 == null))
+                if ((mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow(this, controlId: "1");
+                    mUIItemWindow2 = new UIItemWindow(this, controlId: "1");
                 }
-                return this.mUIItemWindow2;
+                return mUIItemWindow2;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow3 == null))
+                if ((mUIItemWindow3 == null))
                 {
-                    this.mUIItemWindow3 = new UIItemWindow(this, controlId: "1", instance: "2");
+                    mUIItemWindow3 = new UIItemWindow(this, controlId: "1", instance: "2");
                 }
-                return this.mUIItemWindow3;
+                return mUIItemWindow3;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow4 == null))
+                if ((mUIItemWindow4 == null))
                 {
-                    this.mUIItemWindow4 = new UIItemWindow(this, controlId: "1", instance: "3");
+                    mUIItemWindow4 = new UIItemWindow(this, controlId: "1", instance: "3");
                 }
-                return this.mUIItemWindow4;
+                return mUIItemWindow4;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, controlId: "5");
+                    mUIOKWindow = new UIItemWindow(this, controlId: "5");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 

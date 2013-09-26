@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Policy Attachments";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Policy Attachments");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Policy Attachments";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add("Policy Attachments");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
+                    mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                if ((this.mUIOptionsWindow == null))
+                if ((mUIOptionsWindow == null))
                 {
-                    this.mUIOptionsWindow = new UIItemWindow(this, "5");
+                    mUIOptionsWindow = new UIItemWindow(this, "5");
                 }
-                return this.mUIOptionsWindow;
+                return mUIOptionsWindow;
             }
         }
 

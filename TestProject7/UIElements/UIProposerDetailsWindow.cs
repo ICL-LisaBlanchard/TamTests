@@ -15,11 +15,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "2");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "2");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -27,11 +27,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow(this, controlId: "2", instance: "2");
+                    mUIItemWindow1 = new UIItemWindow(this, controlId: "2", instance: "2");
                 }
-                return this.mUIItemWindow1;
+                return mUIItemWindow1;
             }
         }
 
@@ -39,11 +39,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow2 == null))
+                if ((mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow(this, controlId: "1", instance: "4");
+                    mUIItemWindow2 = new UIItemWindow(this, controlId: "1", instance: "4");
                 }
-                return this.mUIItemWindow2;
+                return mUIItemWindow2;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow3 == null))
+                if ((mUIItemWindow3 == null))
                 {
-                    this.mUIItemWindow3 = new UIItemWindow(this, controlId: "1");
+                    mUIItemWindow3 = new UIItemWindow(this, controlId: "1");
                 }
-                return this.mUIItemWindow3;
+                return mUIItemWindow3;
             }
         }
 
@@ -63,11 +63,11 @@
         {
             get
             {
-                if ((this.mUILookupWindow == null))
+                if ((mUILookupWindow == null))
                 {
-                    this.mUILookupWindow = new UIItemWindow(this, controlId: "8");
+                    mUILookupWindow = new UIItemWindow(this, controlId: "8");
                 }
-                return this.mUILookupWindow;
+                return mUILookupWindow;
             }
         }
 
@@ -75,11 +75,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow4 == null))
+                if ((mUIItemWindow4 == null))
                 {
-                    this.mUIItemWindow4 = new UIItemWindow(this, controlId: "7");
+                    mUIItemWindow4 = new UIItemWindow(this, controlId: "7");
                 }
-                return this.mUIItemWindow4;
+                return mUIItemWindow4;
             }
         }
 
@@ -87,11 +87,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow5 == null))
+                if ((mUIItemWindow5 == null))
                 {
-                    this.mUIItemWindow5 = new UIItemWindow(this, controlId: "5");
+                    mUIItemWindow5 = new UIItemWindow(this, controlId: "5");
                 }
-                return this.mUIItemWindow5;
+                return mUIItemWindow5;
             }
         }
 
@@ -99,11 +99,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, controlId: "12");
+                    mUIOKWindow = new UIItemWindow(this, controlId: "12");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 
@@ -133,9 +133,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Proposer Details";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add(WindowName);
+            SearchProperties[UITestControl.PropertyNames.Name] = "Proposer Details";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add(WindowName);
 
             #endregion
         }

@@ -78,5 +78,45 @@
                 return ((int)Reader.GetValue("SearchTimeoutInSeconds", typeof(int))) * 1000;
             }
         }
+
+        public static int PlatformId
+        {
+             get
+             {
+                 return (int)Reader.GetValue("PlatformId", typeof(int));
+             }
+        }
+
+        public static string BuildName
+        {
+            get
+            {
+                return (string)Reader.GetValue("BuildName", typeof(string));
+            }
+        }
+
+        public static string PlanName
+        {
+            get
+            {
+                return (string)Reader.GetValue("PlanName", typeof(string));
+            }
+        }
+
+        public static int DelayBetweenActions
+        {
+            get
+            {
+                return (int)Reader.GetValue("DelayBetweenActions", typeof(int));
+            }
+        }
+
+        public static string ProjectName
+        {
+            get
+            {
+                return (string)Reader.GetValue("ProjectName", typeof(string));
+            }
+        }
     }
 }

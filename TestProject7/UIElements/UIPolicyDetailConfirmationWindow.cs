@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.windowName = "Policy Detail Confirmation";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add(this.windowName);
+            windowName = "Policy Detail Confirmation";
+            SearchProperties[UITestControl.PropertyNames.Name] = windowName;
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add(windowName);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "2");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "2");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                if ((this.mUILookupWindow == null))
+                if ((mUILookupWindow == null))
                 {
-                    this.mUILookupWindow = new UIItemWindow(this, controlId: "8");
+                    mUILookupWindow = new UIItemWindow(this, controlId: "8");
                 }
-                return this.mUILookupWindow;
+                return mUILookupWindow;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                if ((this.mUIConfirmWindow == null))
+                if ((mUIConfirmWindow == null))
                 {
-                    this.mUIConfirmWindow = new UIItemWindow(this, controlId: "5", instance: "2");
+                    mUIConfirmWindow = new UIItemWindow(this, controlId: "5", instance: "2");
                 }
-                return this.mUIConfirmWindow;
+                return mUIConfirmWindow;
             }
         }
 

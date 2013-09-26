@@ -15,11 +15,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, instance: "11", className: "ListView20WndClass");
+                    mUIItemWindow = new UIItemWindow(this, instance: "11", className: "ListView20WndClass");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -27,11 +27,11 @@
         {
             get
             {
-                if ((this.mUIAcceptWindow == null))
+                if ((mUIAcceptWindow == null))
                 {
-                    this.mUIAcceptWindow = new UIItemWindow(this, controlId: "5");
+                    mUIAcceptWindow = new UIItemWindow(this, controlId: "5");
                 }
-                return this.mUIAcceptWindow;
+                return mUIAcceptWindow;
             }
         }
 
@@ -39,11 +39,11 @@
         {
             get
             {
-                if ((this.mUIExitWindow == null))
+                if ((mUIExitWindow == null))
                 {
-                    this.mUIExitWindow = new UIItemWindow(this, controlId: "4");
+                    mUIExitWindow = new UIItemWindow(this, controlId: "4");
                 }
-                return this.mUIExitWindow;
+                return mUIExitWindow;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                if ((this.mUIPrintQuoteWindow == null))
+                if ((mUIPrintQuoteWindow == null))
                 {
-                    this.mUIPrintQuoteWindow = new UIItemWindow(this, controlId: "6");
+                    mUIPrintQuoteWindow = new UIItemWindow(this, controlId: "6");
                 }
-                return this.mUIPrintQuoteWindow;
+                return mUIPrintQuoteWindow;
             }
         }
 
@@ -63,11 +63,11 @@
         {
             get
             {
-                if ((this.mUIDemandsNeedsWindow == null))
+                if ((mUIDemandsNeedsWindow == null))
                 {
-                    this.mUIDemandsNeedsWindow = new UIItemWindow(this, controlId: "8");
+                    mUIDemandsNeedsWindow = new UIItemWindow(this, controlId: "8");
                 }
-                return this.mUIDemandsNeedsWindow;
+                return mUIDemandsNeedsWindow;
             }
         }
 
@@ -75,11 +75,11 @@
         {
             get
             {
-                if ((this.mUIAWAPWindow == null))
+                if ((mUIAWAPWindow == null))
                 {
-                    this.mUIAWAPWindow = new UIItemWindow(this, controlId: "3");
+                    mUIAWAPWindow = new UIItemWindow(this, controlId: "3");
                 }
-                return this.mUIAWAPWindow;
+                return mUIAWAPWindow;
             }
         }
 
@@ -87,11 +87,11 @@
         {
             get
             {
-                if ((this.mUIPremiumWindow == null))
+                if ((mUIPremiumWindow == null))
                 {
-                    this.mUIPremiumWindow = new UIItemWindow(this, controlId: "15");
+                    mUIPremiumWindow = new UIItemWindow(this, controlId: "15");
                 }
-                return this.mUIPremiumWindow;
+                return mUIPremiumWindow;
             }
         }
 
@@ -99,11 +99,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow2 == null))
+                if ((mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow(this, instance: "10", className: "ListView20WndClass");
+                    mUIItemWindow2 = new UIItemWindow(this, instance: "10", className: "ListView20WndClass");
                 }
-                return this.mUIItemWindow2;
+                return mUIItemWindow2;
             }
         }
 
@@ -133,9 +133,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Quote Results";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add(WindowName);
+            SearchProperties[UITestControl.PropertyNames.Name] = "Quote Results";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add(WindowName);
 
             #endregion
         }

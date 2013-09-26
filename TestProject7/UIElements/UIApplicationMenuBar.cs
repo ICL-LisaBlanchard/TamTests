@@ -12,10 +12,10 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = name;
+            SearchProperties[UITestControl.PropertyNames.Name] = name;
             foreach (string windowTitle in searchLimitContainer.WindowTitles)
             {
-                this.WindowTitles.Add(windowTitle);
+                WindowTitles.Add(windowTitle);
             }
 
             #endregion

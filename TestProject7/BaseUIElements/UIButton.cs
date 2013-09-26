@@ -12,17 +12,17 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
             {
                 if (useContains)
                 {
-                    this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, name, PropertyExpressionOperator.Contains));
+                    SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, name, PropertyExpressionOperator.Contains));
                 }
                 else
                 {
-                    this.SearchProperties[UITestControl.PropertyNames.Name] = name;
+                    SearchProperties[UITestControl.PropertyNames.Name] = name;
                 }
             }
 
             foreach (string w in uiItemWindow.WindowTitles)
             {
-                this.WindowTitles.Add(w);
+                WindowTitles.Add(w);
             }
         }
     }

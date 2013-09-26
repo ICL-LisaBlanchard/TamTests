@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "AUTO225-1001";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("AUTO225-1001");
+            SearchProperties[UITestControl.PropertyNames.Name] = "AUTO225-1001";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add("AUTO225-1001");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIAmendRiskWindow == null))
+                if ((mUIAmendRiskWindow == null))
                 {
-                    this.mUIAmendRiskWindow = new UIItemWindow(this, "29");
+                    mUIAmendRiskWindow = new UIItemWindow(this, "29");
                 }
-                return this.mUIAmendRiskWindow;
+                return mUIAmendRiskWindow;
             }
         }
 

@@ -9,9 +9,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Policy: ", PropertyExpressionOperator.Contains));
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6MDIForm";
-            this.WindowTitles.Add("Policy: ");
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Policy: ", PropertyExpressionOperator.Contains));
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6MDIForm";
+            WindowTitles.Add("Policy: ");
 
             #endregion
         }
@@ -22,11 +22,11 @@
         {
             get
             {
-                if ((this.mUIBillingScreenHomeTestWindow == null))
+                if ((mUIBillingScreenHomeTestWindow == null))
                 {
-                    this.mUIBillingScreenHomeTestWindow = new UIBillingScreenHomeTestWindow(this);
+                    mUIBillingScreenHomeTestWindow = new UIBillingScreenHomeTestWindow(this);
                 }
-                return this.mUIBillingScreenHomeTestWindow;
+                return mUIBillingScreenHomeTestWindow;
             }
         }
 

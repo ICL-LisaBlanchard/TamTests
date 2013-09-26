@@ -12,8 +12,8 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Details Pane";
-            this.WindowTitles.Add("Save the file as");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Details Pane";
+            WindowTitles.Add("Save the file as");
 
             #endregion
         }

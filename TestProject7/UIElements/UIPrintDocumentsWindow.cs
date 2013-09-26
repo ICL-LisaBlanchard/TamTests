@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.windowTitle = "Print Documents";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add(this.windowTitle);
+            windowTitle = "Print Documents";
+            SearchProperties[UITestControl.PropertyNames.Name] = windowTitle;
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add(windowTitle);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIDeferPrintingWindow == null))
+                if ((mUIDeferPrintingWindow == null))
                 {
-                    this.mUIDeferPrintingWindow = new UIItemWindow(this, controlId: "4");
+                    mUIDeferPrintingWindow = new UIItemWindow(this, controlId: "4");
                 }
-                return this.mUIDeferPrintingWindow;
+                return mUIDeferPrintingWindow;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, controlId: "6");
+                    mUIOKWindow = new UIItemWindow(this, controlId: "6");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 

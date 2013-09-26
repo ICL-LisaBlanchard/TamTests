@@ -12,9 +12,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32770";
-            this.windowName = "Policy: gdfhdf dfghgdf";
-            this.WindowTitles.Add(this.windowName);
+            SearchProperties[WinControl.PropertyNames.ControlId] = "32770";
+            windowName = "Policy: gdfhdf dfghgdf";
+            WindowTitles.Add(windowName);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "25");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "25");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 

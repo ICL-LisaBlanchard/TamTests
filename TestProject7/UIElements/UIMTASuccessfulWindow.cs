@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "MTA Successful";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add("MTA Successful");
+            SearchProperties[UITestControl.PropertyNames.Name] = "MTA Successful";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
+            WindowTitles.Add("MTA Successful");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIMtaSuccessfullyProcessedWindow == null))
+                if ((mUIMtaSuccessfullyProcessedWindow == null))
                 {
-                    this.mUIMtaSuccessfullyProcessedWindow = new UIItemWindow(this, "65535");
+                    mUIMtaSuccessfullyProcessedWindow = new UIItemWindow(this, "65535");
                 }
-                return this.mUIMtaSuccessfullyProcessedWindow;
+                return mUIMtaSuccessfullyProcessedWindow;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, "2");
+                    mUIOKWindow = new UIItemWindow(this, "2");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 

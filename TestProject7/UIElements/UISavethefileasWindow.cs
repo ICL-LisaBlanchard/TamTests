@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.windowName = "Save the file as";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowName;
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add(this.windowName);
+            windowName = "Save the file as";
+            SearchProperties[UITestControl.PropertyNames.Name] = windowName;
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
+            WindowTitles.Add(windowName);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUICancelWindow == null))
+                if ((mUICancelWindow == null))
                 {
-                    this.mUICancelWindow = new UIItemWindow(this, controlId: "2");
+                    mUICancelWindow = new UIItemWindow(this, controlId: "2");
                 }
-                return this.mUICancelWindow;
+                return mUICancelWindow;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "1001");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "1001");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                if ((this.mUISaveWindow == null))
+                if ((mUISaveWindow == null))
                 {
-                    this.mUISaveWindow = new UIItemWindow(this, controlId: "1");
+                    mUISaveWindow = new UIItemWindow(this, controlId: "1");
                 }
-                return this.mUISaveWindow;
+                return mUISaveWindow;
             }
         }
 
@@ -61,11 +61,11 @@
         {
             get
             {
-                if ((this.mUIDetailsPanePane == null))
+                if ((mUIDetailsPanePane == null))
                 {
-                    this.mUIDetailsPanePane = new UIDetailsPanePane(this);
+                    mUIDetailsPanePane = new UIDetailsPanePane(this);
                 }
-                return this.mUIDetailsPanePane;
+                return mUIDetailsPanePane;
             }
         }
 
@@ -73,17 +73,17 @@
         {
             get
             {
-                if ((this.mUISavethefileasTitleBar == null))
+                if ((mUISavethefileasTitleBar == null))
                 {
-                    this.mUISavethefileasTitleBar = new WinTitleBar(this);
+                    mUISavethefileasTitleBar = new WinTitleBar(this);
 
                     #region Search Criteria
 
-                    this.mUISavethefileasTitleBar.WindowTitles.Add("Save the file as");
+                    mUISavethefileasTitleBar.WindowTitles.Add("Save the file as");
 
                     #endregion
                 }
-                return this.mUISavethefileasTitleBar;
+                return mUISavethefileasTitleBar;
             }
         }
 

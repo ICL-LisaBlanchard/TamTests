@@ -33,7 +33,7 @@
 
                 for (int page = 1; page <= reader.NumberOfPages; page++)
                 {
-                    outFile.Write(this.ExtractTextFromPDFBytes(reader.GetPageContent(page)) + " ");
+                    outFile.Write(ExtractTextFromPDFBytes(reader.GetPageContent(page)) + " ");
 
                     // Write the progress.
                     if (charUnit >= 1.0f)
@@ -93,7 +93,7 @@
 
                 for (int page = 1; page <= reader.NumberOfPages; page++)
                 {
-                    outputText += (this.ExtractTextFromPDFBytes(reader.GetPageContent(page)) + " ");
+                    outputText += (ExtractTextFromPDFBytes(reader.GetPageContent(page)) + " ");
                 }
 
                 reader.Close();

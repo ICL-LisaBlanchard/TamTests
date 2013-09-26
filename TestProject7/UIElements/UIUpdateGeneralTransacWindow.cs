@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Update General Transactions";
-            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.ClassName, "WindowsForms10.Window", PropertyExpressionOperator.Contains));
-            this.WindowTitles.Add("Update General Transactions");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Update General Transactions";
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.ClassName, "WindowsForms10.Window", PropertyExpressionOperator.Contains));
+            WindowTitles.Add("Update General Transactions");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUICancelWindow == null))
+                if ((mUICancelWindow == null))
                 {
-                    this.mUICancelWindow = new UIItemWindow(this, controlName: "btnCancel");
+                    mUICancelWindow = new UIItemWindow(this, controlName: "btnCancel");
                 }
-                return this.mUICancelWindow;
+                return mUICancelWindow;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                if ((this.mUILblTranWindow == null))
+                if ((mUILblTranWindow == null))
                 {
-                    this.mUILblTranWindow = new UIItemWindow(this, controlName: "lblTran");
+                    mUILblTranWindow = new UIItemWindow(this, controlName: "lblTran");
                 }
-                return this.mUILblTranWindow;
+                return mUILblTranWindow;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                if ((this.mUILblBalanceWindow == null))
+                if ((mUILblBalanceWindow == null))
                 {
-                    this.mUILblBalanceWindow = new UIItemWindow(this, controlName: "lblBalance");
+                    mUILblBalanceWindow = new UIItemWindow(this, controlName: "lblBalance");
                 }
-                return this.mUILblBalanceWindow;
+                return mUILblBalanceWindow;
             }
         }
 

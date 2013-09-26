@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Credit Check At Renewal";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("Credit Check At Renewal");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Credit Check At Renewal";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add("Credit Check At Renewal");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIProceedWindow == null))
+                if ((mUIProceedWindow == null))
                 {
-                    this.mUIProceedWindow = new UIItemWindow(this, "1");
+                    mUIProceedWindow = new UIItemWindow(this, "1");
                 }
-                return this.mUIProceedWindow;
+                return mUIProceedWindow;
             }
         }
 

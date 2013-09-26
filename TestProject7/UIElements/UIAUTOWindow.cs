@@ -11,9 +11,9 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "AUTO230-1001";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("AUTO230-1001");
+            SearchProperties[UITestControl.PropertyNames.Name] = "AUTO230-1001";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add("AUTO230-1001");
 
             #endregion
         }
@@ -24,11 +24,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIRebrokeWindow == null))
+                if ((mUIRebrokeWindow == null))
                 {
-                    this.mUIRebrokeWindow = new UIItemWindow(this, "30");
+                    mUIRebrokeWindow = new UIItemWindow(this, "30");
                 }
-                return this.mUIRebrokeWindow;
+                return mUIRebrokeWindow;
             }
         }
 
@@ -36,11 +36,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUILapsePolicyWindow == null))
+                if ((mUILapsePolicyWindow == null))
                 {
-                    this.mUILapsePolicyWindow = new UIItemWindow(this, "26");
+                    mUILapsePolicyWindow = new UIItemWindow(this, "26");
                 }
-                return this.mUILapsePolicyWindow;
+                return mUILapsePolicyWindow;
             }
         }
 

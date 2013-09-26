@@ -8,8 +8,8 @@
         public UIItemList(UITestControl uiItemWindow, string name)
             : base(uiItemWindow)
         {
-            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, name, PropertyExpressionOperator.Contains));
-            this.WindowTitles.Add(uiItemWindow.WindowTitles[0]);
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, name, PropertyExpressionOperator.Contains));
+            WindowTitles.Add(uiItemWindow.WindowTitles[0]);
         }
     }
 }

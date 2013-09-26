@@ -10,8 +10,8 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "Internet Explorer_Server";
-            this.WindowTitles.Add("View Quote Details");
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "Internet Explorer_Server";
+            WindowTitles.Add("View Quote Details");
 
             #endregion
         }
@@ -22,11 +22,11 @@
         {
             get
             {
-                if ((this.mUIFileJAPPSIEOfficeDatDocument == null))
+                if ((mUIFileJAPPSIEOfficeDatDocument == null))
                 {
-                    this.mUIFileJAPPSIEOfficeDatDocument = new UIFileJAPPSIEOfficeDatDocument(this);
+                    mUIFileJAPPSIEOfficeDatDocument = new UIFileJAPPSIEOfficeDatDocument(this);
                 }
-                return this.mUIFileJAPPSIEOfficeDatDocument;
+                return mUIFileJAPPSIEOfficeDatDocument;
             }
         }
 

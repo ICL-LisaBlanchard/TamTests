@@ -11,9 +11,9 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Renewal Loader";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "TfUIMain";
-            this.WindowTitles.Add("Renewal Loader");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Renewal Loader";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "TfUIMain";
+            WindowTitles.Add("Renewal Loader");
 
             #endregion
         }
@@ -24,11 +24,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIRenewalLoaderClient == null))
+                if ((mUIRenewalLoaderClient == null))
                 {
-                    this.mUIRenewalLoaderClient = new UIClient(this, "Renewal Loader");
+                    mUIRenewalLoaderClient = new UIClient(this, "Renewal Loader");
                 }
-                return this.mUIRenewalLoaderClient;
+                return mUIRenewalLoaderClient;
             }
         }
 
@@ -36,11 +36,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIRenewalLoaderTitleBar == null))
+                if ((mUIRenewalLoaderTitleBar == null))
                 {
-                    this.mUIRenewalLoaderTitleBar = new UITitleBar(this);
+                    mUIRenewalLoaderTitleBar = new UITitleBar(this);
                 }
-                return this.mUIRenewalLoaderTitleBar;
+                return mUIRenewalLoaderTitleBar;
             }
         }
 
@@ -48,11 +48,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItem1Window == null))
+                if ((mUIItem1Window == null))
                 {
-                    this.mUIItem1Window = new UIItemWindow(this, "1");
+                    mUIItem1Window = new UIItemWindow(this, "1");
                 }
-                return this.mUIItem1Window;
+                return mUIItem1Window;
             }
         }
 
@@ -60,11 +60,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, className: "TEdit", instance: "3");
+                    mUIItemWindow = new UIItemWindow(this, className: "TEdit", instance: "3");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -72,11 +72,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow2 == null))
+                if ((mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow(this, className: "TEdit", instance: "2");
+                    mUIItemWindow2 = new UIItemWindow(this, className: "TEdit", instance: "2");
                 }
-                return this.mUIItemWindow2;
+                return mUIItemWindow2;
             }
         }
 

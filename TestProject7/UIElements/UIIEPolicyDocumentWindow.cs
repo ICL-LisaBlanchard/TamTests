@@ -10,17 +10,17 @@
         {
             #region Search Criteria
 
-            this.SearchProperties.Add(new PropertyExpression(PropertyNames.Name, "Quote", PropertyExpressionOperator.Contains));
+            SearchProperties.Add(new PropertyExpression(PropertyNames.Name, "Quote", PropertyExpressionOperator.Contains));
 
-            this.SearchProperties[PropertyNames.ClassName] = "IEFrame";
-            //this.WindowTitles.Add("\\HHQuote.htm");
+            SearchProperties[PropertyNames.ClassName] = "IEFrame";
+            //WindowTitles.Add("\\HHQuote.htm");
 
             #endregion
         }
 
         public void LaunchUrl(Uri url)
         {
-            this.CopyFrom(Launch(url));
+            CopyFrom(Launch(url));
         }
 
         #region Properties
@@ -29,11 +29,11 @@
         {
             get
             {
-                if ((this.mUIFileCUsersLisaBlanchDocument == null))
+                if ((mUIFileCUsersLisaBlanchDocument == null))
                 {
-                    this.mUIFileCUsersLisaBlanchDocument = new UIFileCUsersLisaBlanchDocument(this);
+                    mUIFileCUsersLisaBlanchDocument = new UIFileCUsersLisaBlanchDocument(this);
                 }
-                return this.mUIFileCUsersLisaBlanchDocument;
+                return mUIFileCUsersLisaBlanchDocument;
             }
         }
 

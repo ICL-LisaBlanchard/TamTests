@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            //this.SearchProperties[WinWindow.PropertyNames.Name] = "201309~1.pdf (SECURED) - Foxit Reader - [201309~1.pdf (SECURED)]";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "classFoxitReader";
-            //this.WindowTitles.Add("201309~1.pdf (SECURED) - Foxit Reader - [201309~1.pdf (SECURED)]");
+            //SearchProperties[WinWindow.PropertyNames.Name] = "201309~1.pdf (SECURED) - Foxit Reader - [201309~1.pdf (SECURED)]";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "classFoxitReader";
+            //WindowTitles.Add("201309~1.pdf (SECURED) - Foxit Reader - [201309~1.pdf (SECURED)]");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIApplicationMenuBar == null))
+                if ((mUIApplicationMenuBar == null))
                 {
-                    this.mUIApplicationMenuBar = new UIApplicationMenuBar(this, "Application");
+                    mUIApplicationMenuBar = new UIApplicationMenuBar(this, "Application");
                 }
-                return this.mUIApplicationMenuBar;
+                return mUIApplicationMenuBar;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                if ((this.mUITitleBar == null))
+                if ((mUITitleBar == null))
                 {
-                    this.mUITitleBar = new UITitleBar(this);
+                    mUITitleBar = new UITitleBar(this);
                 }
-                return this.mUITitleBar;
+                return mUITitleBar;
             }
         }
 

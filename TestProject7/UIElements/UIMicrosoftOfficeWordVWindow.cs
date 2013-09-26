@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Microsoft Office Word Viewer";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add("Microsoft Office Word Viewer");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Microsoft Office Word Viewer";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
+            WindowTitles.Add("Microsoft Office Word Viewer");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, "2");
+                    mUIOKWindow = new UIItemWindow(this, "2");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 

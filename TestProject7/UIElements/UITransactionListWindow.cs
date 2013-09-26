@@ -12,8 +12,8 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32771";
-            this.WindowTitles.Add("Transaction: autotest");
+            SearchProperties[WinControl.PropertyNames.ControlId] = "32771";
+            WindowTitles.Add("Transaction: autotest");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIDetailWindow == null))
+                if ((mUIDetailWindow == null))
                 {
-                    this.mUIDetailWindow = new UIItemWindow(this, "6");
+                    mUIDetailWindow = new UIItemWindow(this, "6");
                 }
-                return this.mUIDetailWindow;
+                return mUIDetailWindow;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
+                    mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                if ((this.mUIOptionsWindow == null))
+                if ((mUIOptionsWindow == null))
                 {
-                    this.mUIOptionsWindow = new UIItemWindow(this, "7");
+                    mUIOptionsWindow = new UIItemWindow(this, "7");
                 }
-                return this.mUIOptionsWindow;
+                return mUIOptionsWindow;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                if ((this.mUIOptionsWindow == null))
+                if ((mUIOptionsWindow == null))
                 {
-                    this.mUIOptionsWindow = new UIItemWindow(this, "8");
+                    mUIOptionsWindow = new UIItemWindow(this, "8");
                 }
-                return this.mUIOptionsWindow;
+                return mUIOptionsWindow;
             }
         }
 

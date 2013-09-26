@@ -171,7 +171,7 @@
                                new Document("QuotesList", 1),
                                new Document("Quote", 1),
                                new Document("Schedule", 2),
-                               new Document("Proposal", 2),
+                               new Document("Proposal", 1),
                                new Document("FSA", 2),
                                new Document("Notice", 1),
                                new Document("Certificate", 2)
@@ -217,9 +217,9 @@
     {
         public Document(string docName, int expectedCount)
         {
-            this.DocName = docName;
-            this.ExpectedCount = expectedCount;
-            this.ActualCount = 0;
+            DocName = docName;
+            ExpectedCount = expectedCount;
+            ActualCount = 0;
         }
 
         public string DocName { get; set; }

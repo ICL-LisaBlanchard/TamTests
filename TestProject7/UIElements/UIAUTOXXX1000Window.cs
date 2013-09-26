@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "-1001", PropertyExpressionOperator.Contains));
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            //this.WindowTitles.Add("AUTO208-1001");
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "-1001", PropertyExpressionOperator.Contains));
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            //WindowTitles.Add("AUTO208-1001");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIRebrokeWindow == null))
+                if ((mUIRebrokeWindow == null))
                 {
-                    this.mUIRebrokeWindow = new UIItemWindow(this, "5");
+                    mUIRebrokeWindow = new UIItemWindow(this, "5");
                 }
-                return this.mUIRebrokeWindow;
+                return mUIRebrokeWindow;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                if ((this.mUIAmendRiskWindow == null))
+                if ((mUIAmendRiskWindow == null))
                 {
-                    this.mUIAmendRiskWindow = new UIItemWindow(this, "6");
+                    mUIAmendRiskWindow = new UIItemWindow(this, "6");
                 }
-                return this.mUIAmendRiskWindow;
+                return mUIAmendRiskWindow;
             }
         }
 

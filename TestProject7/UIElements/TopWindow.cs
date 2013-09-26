@@ -7,7 +7,7 @@
     {
         public TopWindow()
         {
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "TfSelectItem";
         }
     }
 }

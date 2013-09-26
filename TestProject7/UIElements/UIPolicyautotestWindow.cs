@@ -17,11 +17,11 @@
         {
             get
             {
-                if ((this.mUIPolicyListWindow == null))
+                if ((mUIPolicyListWindow == null))
                 {
-                    this.mUIPolicyListWindow = new UIPolicyListWindow1(this);
+                    mUIPolicyListWindow = new UIPolicyListWindow1(this);
                 }
-                return this.mUIPolicyListWindow;
+                return mUIPolicyListWindow;
             }
         }
 
@@ -29,11 +29,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "32");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "32");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -41,11 +41,11 @@
         {
             get
             {
-                if ((this.mUIPolicyListWindow1 == null))
+                if ((mUIPolicyListWindow1 == null))
                 {
-                    this.mUIPolicyListWindow1 = new UIPolicyListWindow11(this);
+                    mUIPolicyListWindow1 = new UIPolicyListWindow11(this);
                 }
-                return this.mUIPolicyListWindow1;
+                return mUIPolicyListWindow1;
             }
         }
 
@@ -53,11 +53,11 @@
         {
             get
             {
-                if ((this.mUIApplicationMenuBar == null))
+                if ((mUIApplicationMenuBar == null))
                 {
-                    this.mUIApplicationMenuBar = new UIApplicationMenuBar(this, "Application");
+                    mUIApplicationMenuBar = new UIApplicationMenuBar(this, "Application");
                 }
-                return this.mUIApplicationMenuBar;
+                return mUIApplicationMenuBar;
             }
         }
 
@@ -65,17 +65,17 @@
         {
             get
             {
-                if ((this.mUIPolicyautotestTitleBar == null))
+                if ((mUIPolicyautotestTitleBar == null))
                 {
-                    this.mUIPolicyautotestTitleBar = new WinTitleBar(this);
+                    mUIPolicyautotestTitleBar = new WinTitleBar(this);
 
                     #region Search Criteria
 
-                    this.mUIPolicyautotestTitleBar.WindowTitles.Add("Policy: autotest");
+                    mUIPolicyautotestTitleBar.WindowTitles.Add("Policy: autotest");
 
                     #endregion
                 }
-                return this.mUIPolicyautotestTitleBar;
+                return mUIPolicyautotestTitleBar;
             }
         }
 
@@ -83,11 +83,11 @@
         {
             get
             {
-                if ((this.mUIBillingScreenWindow == null))
+                if ((mUIBillingScreenWindow == null))
                 {
-                    this.mUIBillingScreenWindow = new UIBillingScreenWindow(this);
+                    mUIBillingScreenWindow = new UIBillingScreenWindow(this);
                 }
-                return this.mUIBillingScreenWindow;
+                return mUIBillingScreenWindow;
             }
         }
 
@@ -95,11 +95,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow(this, controlId: "26");
+                    mUIItemWindow1 = new UIItemWindow(this, controlId: "26");
                 }
-                return this.mUIItemWindow1;
+                return mUIItemWindow1;
             }
         }
 
@@ -107,11 +107,11 @@
         {
             get
             {
-                if ((this.mUICustomersWindow == null))
+                if ((mUICustomersWindow == null))
                 {
-                    this.mUICustomersWindow = new UICustomersWindow(this);
+                    mUICustomersWindow = new UICustomersWindow(this);
                 }
-                return this.mUICustomersWindow;
+                return mUICustomersWindow;
             }
         }
 
@@ -127,11 +127,11 @@
         {
             get
             {
-                if ((this.mUITransactionListWindow == null))
+                if ((mUITransactionListWindow == null))
                 {
-                    this.mUITransactionListWindow = new UITransactionListWindow(this);
+                    mUITransactionListWindow = new UITransactionListWindow(this);
                 }
-                return this.mUITransactionListWindow;
+                return mUITransactionListWindow;
             }
         }
 
@@ -163,7 +163,7 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6MDIForm";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6MDIForm";
 
             #endregion
         }

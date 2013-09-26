@@ -11,7 +11,7 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Connect to www.insur-econnect.com";
+            SearchProperties[UITestControl.PropertyNames.Name] = "Connect to www.insur-econnect.com";
 
             #endregion
         }
@@ -22,11 +22,11 @@
         {
             get
             {
-                if ((this.mUIItemListItem == null))
+                if ((mUIItemListItem == null))
                 {
-                    this.mUIItemListItem = new UIItemUserDetails(this);
+                    mUIItemListItem = new UIItemUserDetails(this);
                 }
-                return this.mUIItemListItem;
+                return mUIItemListItem;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                if ((this.mUIWindowsSecurityPane == null))
+                if ((mUIWindowsSecurityPane == null))
                 {
-                    this.mUIWindowsSecurityPane = new UIPane(this, "Connect to www.insur-econnect.com");
+                    mUIWindowsSecurityPane = new UIPane(this, "Connect to www.insur-econnect.com");
                 }
-                return this.mUIWindowsSecurityPane;
+                return mUIWindowsSecurityPane;
             }
         }
 

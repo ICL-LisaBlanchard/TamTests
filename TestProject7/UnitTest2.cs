@@ -12,7 +12,7 @@
         public void TestMethod()
         {
             Playback.PlaybackSettings.SearchTimeout = 15000;
-            this.house.HomeAcceptPolicy();
+            house.HomeAcceptPolicy();
         }
     }
 }

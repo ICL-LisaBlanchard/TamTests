@@ -12,8 +12,8 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[WinControl.PropertyNames.ControlId] = "32768";
-            this.WindowTitles.Add("Personal Lines");
+            SearchProperties[WinControl.PropertyNames.ControlId] = "32768";
+            WindowTitles.Add("Personal Lines");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, "86");
+                    mUIItemWindow = new UIItemWindow(this, "86");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((mUIItemWindow1 == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow(this, "85");
+                    mUIItemWindow1 = new UIItemWindow(this, "85");
                 }
-                return this.mUIItemWindow1;
+                return mUIItemWindow1;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                if ((this.mUIIstheapplicationinjoWindow == null))
+                if ((mUIIstheapplicationinjoWindow == null))
                 {
-                    this.mUIIstheapplicationinjoWindow = new UIItemWindow(this, "91");
+                    mUIIstheapplicationinjoWindow = new UIItemWindow(this, "91");
                 }
-                return this.mUIIstheapplicationinjoWindow;
+                return mUIIstheapplicationinjoWindow;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                if ((this.mUIOtherpersonWindow == null))
+                if ((mUIOtherpersonWindow == null))
                 {
-                    this.mUIOtherpersonWindow = new UIItemWindow(this, "90");
+                    mUIOtherpersonWindow = new UIItemWindow(this, "90");
                 }
-                return this.mUIOtherpersonWindow;
+                return mUIOtherpersonWindow;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow2 == null))
+                if ((mUIItemWindow2 == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow(this, "106");
+                    mUIItemWindow2 = new UIItemWindow(this, "106");
                 }
-                return this.mUIItemWindow2;
+                return mUIItemWindow2;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow3 == null))
+                if ((mUIItemWindow3 == null))
                 {
-                    this.mUIItemWindow3 = new UIItemWindow(this, "2", "11");
+                    mUIItemWindow3 = new UIItemWindow(this, "2", "11");
                 }
-                return this.mUIItemWindow3;
+                return mUIItemWindow3;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow4 == null))
+                if ((mUIItemWindow4 == null))
                 {
-                    this.mUIItemWindow4 = new UIItemWindow(this, "2", "12");
+                    mUIItemWindow4 = new UIItemWindow(this, "2", "12");
                 }
-                return this.mUIItemWindow4;
+                return mUIItemWindow4;
             }
         }
 
@@ -108,11 +108,11 @@
         {
             get
             {
-                if ((this.mUINextWindow == null))
+                if ((mUINextWindow == null))
                 {
-                    this.mUINextWindow = new UIItemWindow(this, "82");
+                    mUINextWindow = new UIItemWindow(this, "82");
                 }
-                return this.mUINextWindow;
+                return mUINextWindow;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow5 == null))
+                if ((mUIItemWindow5 == null))
                 {
-                    this.mUIItemWindow5 = new UIItemWindow(this, "2", "13");
+                    mUIItemWindow5 = new UIItemWindow(this, "2", "13");
                 }
-                return this.mUIItemWindow5;
+                return mUIItemWindow5;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow6 == null))
+                if ((mUIItemWindow6 == null))
                 {
-                    this.mUIItemWindow6 = new UIItemWindow(this, "143");
+                    mUIItemWindow6 = new UIItemWindow(this, "143");
                 }
-                return this.mUIItemWindow6;
+                return mUIItemWindow6;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow7 == null))
+                if ((mUIItemWindow7 == null))
                 {
-                    this.mUIItemWindow7 = new UIItemWindow(this, "144");
+                    mUIItemWindow7 = new UIItemWindow(this, "144");
                 }
-                return this.mUIItemWindow7;
+                return mUIItemWindow7;
             }
         }
 
@@ -156,11 +156,11 @@
         {
             get
             {
-                if ((this.mUIAreyouafirsttimebuyeWindow == null))
+                if ((mUIAreyouafirsttimebuyeWindow == null))
                 {
-                    this.mUIAreyouafirsttimebuyeWindow = new UIItemWindow(this, "145");
+                    mUIAreyouafirsttimebuyeWindow = new UIItemWindow(this, "145");
                 }
-                return this.mUIAreyouafirsttimebuyeWindow;
+                return mUIAreyouafirsttimebuyeWindow;
             }
         }
 
@@ -168,11 +168,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow8 == null))
+                if ((mUIItemWindow8 == null))
                 {
-                    this.mUIItemWindow8 = new UIItemWindow(this, "1", "4");
+                    mUIItemWindow8 = new UIItemWindow(this, "1", "4");
                 }
-                return this.mUIItemWindow8;
+                return mUIItemWindow8;
             }
         }
 
@@ -180,11 +180,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow9 == null))
+                if ((mUIItemWindow9 == null))
                 {
-                    this.mUIItemWindow9 = new UIItemWindow(this, "152");
+                    mUIItemWindow9 = new UIItemWindow(this, "152");
                 }
-                return this.mUIItemWindow9;
+                return mUIItemWindow9;
             }
         }
 
@@ -192,11 +192,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow10 == null))
+                if ((mUIItemWindow10 == null))
                 {
-                    this.mUIItemWindow10 = new UIItemWindow(this, "151");
+                    mUIItemWindow10 = new UIItemWindow(this, "151");
                 }
-                return this.mUIItemWindow10;
+                return mUIItemWindow10;
             }
         }
 
@@ -204,11 +204,11 @@
         {
             get
             {
-                if ((this.mUIDoesanypartofthepropWindow == null))
+                if ((mUIDoesanypartofthepropWindow == null))
                 {
-                    this.mUIDoesanypartofthepropWindow = new UIItemWindow(this, "149");
+                    mUIDoesanypartofthepropWindow = new UIItemWindow(this, "149");
                 }
-                return this.mUIDoesanypartofthepropWindow;
+                return mUIDoesanypartofthepropWindow;
             }
         }
 
@@ -216,11 +216,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow11 == null))
+                if ((mUIItemWindow11 == null))
                 {
-                    this.mUIItemWindow11 = new UIItemWindow(this, "2", "15");
+                    mUIItemWindow11 = new UIItemWindow(this, "2", "15");
                 }
-                return this.mUIItemWindow11;
+                return mUIItemWindow11;
             }
         }
 
@@ -228,11 +228,11 @@
         {
             get
             {
-                if ((this.mUINextWindow1 == null))
+                if ((mUINextWindow1 == null))
                 {
-                    this.mUINextWindow1 = new UIItemWindow(this, "136");
+                    mUINextWindow1 = new UIItemWindow(this, "136");
                 }
-                return this.mUINextWindow1;
+                return mUINextWindow1;
             }
         }
 
@@ -240,11 +240,11 @@
         {
             get
             {
-                if ((this.mUIDoesthepropertyhaveaWindow == null))
+                if ((mUIDoesthepropertyhaveaWindow == null))
                 {
-                    this.mUIDoesthepropertyhaveaWindow = new UIItemWindow(this, "127");
+                    mUIDoesthepropertyhaveaWindow = new UIItemWindow(this, "127");
                 }
-                return this.mUIDoesthepropertyhaveaWindow;
+                return mUIDoesthepropertyhaveaWindow;
             }
         }
 
@@ -252,11 +252,11 @@
         {
             get
             {
-                if ((this.mUIArethereapprovedlockWindow == null))
+                if ((mUIArethereapprovedlockWindow == null))
                 {
-                    this.mUIArethereapprovedlockWindow = new UIItemWindow(this, "126");
+                    mUIArethereapprovedlockWindow = new UIItemWindow(this, "126");
                 }
-                return this.mUIArethereapprovedlockWindow;
+                return mUIArethereapprovedlockWindow;
             }
         }
 
@@ -264,11 +264,11 @@
         {
             get
             {
-                if ((this.mUIArethereapprovedlockWindow1 == null))
+                if ((mUIArethereapprovedlockWindow1 == null))
                 {
-                    this.mUIArethereapprovedlockWindow1 = new UIItemWindow(this, "125");
+                    mUIArethereapprovedlockWindow1 = new UIItemWindow(this, "125");
                 }
-                return this.mUIArethereapprovedlockWindow1;
+                return mUIArethereapprovedlockWindow1;
             }
         }
 
@@ -276,11 +276,11 @@
         {
             get
             {
-                if ((this.mUIDoesthepropertyhaveaWindow1 == null))
+                if ((mUIDoesthepropertyhaveaWindow1 == null))
                 {
-                    this.mUIDoesthepropertyhaveaWindow1 = new UIItemWindow(this, "124");
+                    mUIDoesthepropertyhaveaWindow1 = new UIItemWindow(this, "124");
                 }
-                return this.mUIDoesthepropertyhaveaWindow1;
+                return mUIDoesthepropertyhaveaWindow1;
             }
         }
 
@@ -288,11 +288,11 @@
         {
             get
             {
-                if ((this.mUIArethereapprovedlockWindow2 == null))
+                if ((mUIArethereapprovedlockWindow2 == null))
                 {
-                    this.mUIArethereapprovedlockWindow2 = new UIItemWindow(this, "123");
+                    mUIArethereapprovedlockWindow2 = new UIItemWindow(this, "123");
                 }
-                return this.mUIArethereapprovedlockWindow2;
+                return mUIArethereapprovedlockWindow2;
             }
         }
 
@@ -300,11 +300,11 @@
         {
             get
             {
-                if ((this.mUIDoesthepropertyhaveaWindow2 == null))
+                if ((mUIDoesthepropertyhaveaWindow2 == null))
                 {
-                    this.mUIDoesthepropertyhaveaWindow2 = new UIItemWindow(this, "122");
+                    mUIDoesthepropertyhaveaWindow2 = new UIItemWindow(this, "122");
                 }
-                return this.mUIDoesthepropertyhaveaWindow2;
+                return mUIDoesthepropertyhaveaWindow2;
             }
         }
 
@@ -312,11 +312,11 @@
         {
             get
             {
-                if ((this.mUIArethereapprovedlockWindow3 == null))
+                if ((mUIArethereapprovedlockWindow3 == null))
                 {
-                    this.mUIArethereapprovedlockWindow3 = new UIItemWindow(this, "121");
+                    mUIArethereapprovedlockWindow3 = new UIItemWindow(this, "121");
                 }
-                return this.mUIArethereapprovedlockWindow3;
+                return mUIArethereapprovedlockWindow3;
             }
         }
 
@@ -324,11 +324,11 @@
         {
             get
             {
-                if ((this.mUIDoesthepropertyhaveaWindow3 == null))
+                if ((mUIDoesthepropertyhaveaWindow3 == null))
                 {
-                    this.mUIDoesthepropertyhaveaWindow3 = new UIItemWindow(this, "120");
+                    mUIDoesthepropertyhaveaWindow3 = new UIItemWindow(this, "120");
                 }
-                return this.mUIDoesthepropertyhaveaWindow3;
+                return mUIDoesthepropertyhaveaWindow3;
             }
         }
 
@@ -336,11 +336,11 @@
         {
             get
             {
-                if ((this.mUIArethereapprovedlockWindow4 == null))
+                if ((mUIArethereapprovedlockWindow4 == null))
                 {
-                    this.mUIArethereapprovedlockWindow4 = new UIItemWindow(this, "119");
+                    mUIArethereapprovedlockWindow4 = new UIItemWindow(this, "119");
                 }
-                return this.mUIArethereapprovedlockWindow4;
+                return mUIArethereapprovedlockWindow4;
             }
         }
 
@@ -348,11 +348,11 @@
         {
             get
             {
-                if ((this.mUINextWindow2 == null))
+                if ((mUINextWindow2 == null))
                 {
-                    this.mUINextWindow2 = new UIItemWindow(this, "135");
+                    mUINextWindow2 = new UIItemWindow(this, "135");
                 }
-                return this.mUINextWindow2;
+                return mUINextWindow2;
             }
         }
 
@@ -360,11 +360,11 @@
         {
             get
             {
-                if ((this.mUIIncludedinaNeighbourWindow == null))
+                if ((mUIIncludedinaNeighbourWindow == null))
                 {
-                    this.mUIIncludedinaNeighbourWindow = new UIItemWindow(this, "21");
+                    mUIIncludedinaNeighbourWindow = new UIItemWindow(this, "21");
                 }
-                return this.mUIIncludedinaNeighbourWindow;
+                return mUIIncludedinaNeighbourWindow;
             }
         }
 
@@ -372,11 +372,11 @@
         {
             get
             {
-                if ((this.mUIDoesthepropertyhavesWindow == null))
+                if ((mUIDoesthepropertyhavesWindow == null))
                 {
-                    this.mUIDoesthepropertyhavesWindow = new UIItemWindow(this, "17");
+                    mUIDoesthepropertyhavesWindow = new UIItemWindow(this, "17");
                 }
-                return this.mUIDoesthepropertyhavesWindow;
+                return mUIDoesthepropertyhavesWindow;
             }
         }
 
@@ -384,11 +384,11 @@
         {
             get
             {
-                if ((this.mUIDoesthepropertyhaveaWindow4 == null))
+                if ((mUIDoesthepropertyhaveaWindow4 == null))
                 {
-                    this.mUIDoesthepropertyhaveaWindow4 = new UIItemWindow(this, "16");
+                    mUIDoesthepropertyhaveaWindow4 = new UIItemWindow(this, "16");
                 }
-                return this.mUIDoesthepropertyhaveaWindow4;
+                return mUIDoesthepropertyhaveaWindow4;
             }
         }
 
@@ -396,11 +396,11 @@
         {
             get
             {
-                if ((this.mUIIsthereanalarmmainteWindow == null))
+                if ((mUIIsthereanalarmmainteWindow == null))
                 {
-                    this.mUIIsthereanalarmmainteWindow = new UIItemWindow(this, "15");
+                    mUIIsthereanalarmmainteWindow = new UIItemWindow(this, "15");
                 }
-                return this.mUIIsthereanalarmmainteWindow;
+                return mUIIsthereanalarmmainteWindow;
             }
         }
 
@@ -408,11 +408,11 @@
         {
             get
             {
-                if ((this.mUIDoesthepropertyhaveaWindow5 == null))
+                if ((mUIDoesthepropertyhaveaWindow5 == null))
                 {
-                    this.mUIDoesthepropertyhaveaWindow5 = new UIItemWindow(this, "14");
+                    mUIDoesthepropertyhaveaWindow5 = new UIItemWindow(this, "14");
                 }
-                return this.mUIDoesthepropertyhaveaWindow5;
+                return mUIDoesthepropertyhaveaWindow5;
             }
         }
 
@@ -420,11 +420,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow12 == null))
+                if ((mUIItemWindow12 == null))
                 {
-                    this.mUIItemWindow12 = new UIItemWindow(this, "22");
+                    mUIItemWindow12 = new UIItemWindow(this, "22");
                 }
-                return this.mUIItemWindow12;
+                return mUIItemWindow12;
             }
         }
 
@@ -432,11 +432,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow13 == null))
+                if ((mUIItemWindow13 == null))
                 {
-                    this.mUIItemWindow13 = new UIItemWindow(this, "23");
+                    mUIItemWindow13 = new UIItemWindow(this, "23");
                 }
-                return this.mUIItemWindow13;
+                return mUIItemWindow13;
             }
         }
 
@@ -444,11 +444,11 @@
         {
             get
             {
-                if ((this.mUINextWindow3 == null))
+                if ((mUINextWindow3 == null))
                 {
-                    this.mUINextWindow3 = new UIItemWindow(this, "117");
+                    mUINextWindow3 = new UIItemWindow(this, "117");
                 }
-                return this.mUINextWindow3;
+                return mUINextWindow3;
             }
         }
 
@@ -456,11 +456,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow14 == null))
+                if ((mUIItemWindow14 == null))
                 {
-                    this.mUIItemWindow14 = new UIItemWindow(this, "2", "3");
+                    mUIItemWindow14 = new UIItemWindow(this, "2", "3");
                 }
-                return this.mUIItemWindow14;
+                return mUIItemWindow14;
             }
         }
 
@@ -468,11 +468,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow15 == null))
+                if ((mUIItemWindow15 == null))
                 {
-                    this.mUIItemWindow15 = new UIItemWindow(this, "27");
+                    mUIItemWindow15 = new UIItemWindow(this, "27");
                 }
-                return this.mUIItemWindow15;
+                return mUIItemWindow15;
             }
         }
 
@@ -480,11 +480,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow16 == null))
+                if ((mUIItemWindow16 == null))
                 {
-                    this.mUIItemWindow16 = new UIItemWindow(this, "2", "2");
+                    mUIItemWindow16 = new UIItemWindow(this, "2", "2");
                 }
-                return this.mUIItemWindow16;
+                return mUIItemWindow16;
             }
         }
 
@@ -492,11 +492,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow17 == null))
+                if ((mUIItemWindow17 == null))
                 {
-                    this.mUIItemWindow17 = new UIItemWindow(this, "25");
+                    mUIItemWindow17 = new UIItemWindow(this, "25");
                 }
-                return this.mUIItemWindow17;
+                return mUIItemWindow17;
             }
         }
 
@@ -504,11 +504,11 @@
         {
             get
             {
-                if ((this.mUIBuildingCoverDetailsWindow == null))
+                if ((mUIBuildingCoverDetailsWindow == null))
                 {
-                    this.mUIBuildingCoverDetailsWindow = new UIItemWindow(this, "24");
+                    mUIBuildingCoverDetailsWindow = new UIItemWindow(this, "24");
                 }
-                return this.mUIBuildingCoverDetailsWindow;
+                return mUIBuildingCoverDetailsWindow;
             }
         }
 
@@ -516,11 +516,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow18 == null))
+                if ((mUIItemWindow18 == null))
                 {
-                    this.mUIItemWindow18 = new UIItemWindow(this, className: "ThunderRT6UserControlDC", instance: "6");
+                    mUIItemWindow18 = new UIItemWindow(this, className: "ThunderRT6UserControlDC", instance: "6");
                 }
-                return this.mUIItemWindow18;
+                return mUIItemWindow18;
             }
         }
 
@@ -528,11 +528,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow19 == null))
+                if ((mUIItemWindow19 == null))
                 {
-                    this.mUIItemWindow19 = new UIItemWindow(this, "2", "6");
+                    mUIItemWindow19 = new UIItemWindow(this, "2", "6");
                 }
-                return this.mUIItemWindow19;
+                return mUIItemWindow19;
             }
         }
 
@@ -540,11 +540,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow20 == null))
+                if ((mUIItemWindow20 == null))
                 {
-                    this.mUIItemWindow20 = new UIItemWindow(this, "2", "4");
+                    mUIItemWindow20 = new UIItemWindow(this, "2", "4");
                 }
-                return this.mUIItemWindow20;
+                return mUIItemWindow20;
             }
         }
 
@@ -552,11 +552,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow21 == null))
+                if ((mUIItemWindow21 == null))
                 {
-                    this.mUIItemWindow21 = new UIItemWindow(this, "30");
+                    mUIItemWindow21 = new UIItemWindow(this, "30");
                 }
-                return this.mUIItemWindow21;
+                return mUIItemWindow21;
             }
         }
 
@@ -564,11 +564,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow22 == null))
+                if ((mUIItemWindow22 == null))
                 {
-                    this.mUIItemWindow22 = new UIItemWindow(this, "2", "5");
+                    mUIItemWindow22 = new UIItemWindow(this, "2", "5");
                 }
-                return this.mUIItemWindow22;
+                return mUIItemWindow22;
             }
         }
 
@@ -576,11 +576,11 @@
         {
             get
             {
-                if ((this.mUIAnyindividualitemswoWindow == null))
+                if ((mUIAnyindividualitemswoWindow == null))
                 {
-                    this.mUIAnyindividualitemswoWindow = new UIItemWindow(this, "32");
+                    mUIAnyindividualitemswoWindow = new UIItemWindow(this, "32");
                 }
-                return this.mUIAnyindividualitemswoWindow;
+                return mUIAnyindividualitemswoWindow;
             }
         }
 
@@ -588,11 +588,11 @@
         {
             get
             {
-                if ((this.mUIItemsWindow == null))
+                if ((mUIItemsWindow == null))
                 {
-                    this.mUIItemsWindow = new UIItemWindow(this, "31");
+                    mUIItemsWindow = new UIItemWindow(this, "31");
                 }
-                return this.mUIItemsWindow;
+                return mUIItemsWindow;
             }
         }
 
@@ -600,11 +600,11 @@
         {
             get
             {
-                if ((this.mUIDoyourequirecoverforWindow == null))
+                if ((mUIDoyourequirecoverforWindow == null))
                 {
-                    this.mUIDoyourequirecoverforWindow = new UIItemWindow(this, "35");
+                    mUIDoyourequirecoverforWindow = new UIItemWindow(this, "35");
                 }
-                return this.mUIDoyourequirecoverforWindow;
+                return mUIDoyourequirecoverforWindow;
             }
         }
 
@@ -612,11 +612,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow23 == null))
+                if ((mUIItemWindow23 == null))
                 {
-                    this.mUIItemWindow23 = new UIItemWindow(this, "2", "7");
+                    mUIItemWindow23 = new UIItemWindow(this, "2", "7");
                 }
-                return this.mUIItemWindow23;
+                return mUIItemWindow23;
             }
         }
 
@@ -624,11 +624,11 @@
         {
             get
             {
-                if ((this.mUINextWindow4 == null))
+                if ((mUINextWindow4 == null))
                 {
-                    this.mUINextWindow4 = new UIItemWindow(this, "110");
+                    mUINextWindow4 = new UIItemWindow(this, "110");
                 }
-                return this.mUINextWindow4;
+                return mUINextWindow4;
             }
         }
 
@@ -636,11 +636,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow24 == null))
+                if ((mUIItemWindow24 == null))
                 {
-                    this.mUIItemWindow24 = new UIItemWindow(this, "2", "9");
+                    mUIItemWindow24 = new UIItemWindow(this, "2", "9");
                 }
-                return this.mUIItemWindow24;
+                return mUIItemWindow24;
             }
         }
 
@@ -648,11 +648,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow25 == null))
+                if ((mUIItemWindow25 == null))
                 {
-                    this.mUIItemWindow25 = new UIItemWindow(this, "2", "8");
+                    mUIItemWindow25 = new UIItemWindow(this, "2", "8");
                 }
-                return this.mUIItemWindow25;
+                return mUIItemWindow25;
             }
         }
 
@@ -660,11 +660,11 @@
         {
             get
             {
-                if ((this.mUITotalAllRisksOutsideWindow == null))
+                if ((mUITotalAllRisksOutsideWindow == null))
                 {
-                    this.mUITotalAllRisksOutsideWindow = new UIItemWindow(this, "44");
+                    mUITotalAllRisksOutsideWindow = new UIItemWindow(this, "44");
                 }
-                return this.mUITotalAllRisksOutsideWindow;
+                return mUITotalAllRisksOutsideWindow;
             }
         }
 
@@ -672,11 +672,11 @@
         {
             get
             {
-                if ((this.mUIDoyourequirecoverforWindow1 == null))
+                if ((mUIDoyourequirecoverforWindow1 == null))
                 {
-                    this.mUIDoyourequirecoverforWindow1 = new UIItemWindow(this, "43");
+                    mUIDoyourequirecoverforWindow1 = new UIItemWindow(this, "43");
                 }
-                return this.mUIDoyourequirecoverforWindow1;
+                return mUIDoyourequirecoverforWindow1;
             }
         }
 
@@ -684,11 +684,11 @@
         {
             get
             {
-                if ((this.mUICyclesWindow == null))
+                if ((mUICyclesWindow == null))
                 {
-                    this.mUICyclesWindow = new UIItemWindow(this, "42");
+                    mUICyclesWindow = new UIItemWindow(this, "42");
                 }
-                return this.mUICyclesWindow;
+                return mUICyclesWindow;
             }
         }
 
@@ -696,11 +696,11 @@
         {
             get
             {
-                if ((this.mUIDoyourequirecoverforWindow2 == null))
+                if ((mUIDoyourequirecoverforWindow2 == null))
                 {
-                    this.mUIDoyourequirecoverforWindow2 = new UIItemWindow(this, "39");
+                    mUIDoyourequirecoverforWindow2 = new UIItemWindow(this, "39");
                 }
-                return this.mUIDoyourequirecoverforWindow2;
+                return mUIDoyourequirecoverforWindow2;
             }
         }
 
@@ -708,11 +708,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow26 == null))
+                if ((mUIItemWindow26 == null))
                 {
-                    this.mUIItemWindow26 = new UIItemWindow(this, "2", "8");
+                    mUIItemWindow26 = new UIItemWindow(this, "2", "8");
                 }
-                return this.mUIItemWindow26;
+                return mUIItemWindow26;
             }
         }
 
@@ -720,11 +720,11 @@
         {
             get
             {
-                if ((this.mUIDoyourequirecoverforWindow3 == null))
+                if ((mUIDoyourequirecoverforWindow3 == null))
                 {
-                    this.mUIDoyourequirecoverforWindow3 = new UIItemWindow(this, "40");
+                    mUIDoyourequirecoverforWindow3 = new UIItemWindow(this, "40");
                 }
-                return this.mUIDoyourequirecoverforWindow3;
+                return mUIDoyourequirecoverforWindow3;
             }
         }
 
@@ -732,11 +732,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow27 == null))
+                if ((mUIItemWindow27 == null))
                 {
-                    this.mUIItemWindow27 = new UIItemWindow(this, "2", "8");
+                    mUIItemWindow27 = new UIItemWindow(this, "2", "8");
                 }
-                return this.mUIItemWindow27;
+                return mUIItemWindow27;
             }
         }
 
@@ -744,11 +744,11 @@
         {
             get
             {
-                if ((this.mUIDoyourequirecoverforWindow4 == null))
+                if ((mUIDoyourequirecoverforWindow4 == null))
                 {
-                    this.mUIDoyourequirecoverforWindow4 = new UIItemWindow(this, "37");
+                    mUIDoyourequirecoverforWindow4 = new UIItemWindow(this, "37");
                 }
-                return this.mUIDoyourequirecoverforWindow4;
+                return mUIDoyourequirecoverforWindow4;
             }
         }
 
@@ -756,11 +756,11 @@
         {
             get
             {
-                if ((this.mUINextWindow5 == null))
+                if ((mUINextWindow5 == null))
                 {
-                    this.mUINextWindow5 = new UIItemWindow(this, "77");
+                    mUINextWindow5 = new UIItemWindow(this, "77");
                 }
-                return this.mUINextWindow5;
+                return mUINextWindow5;
             }
         }
 
@@ -768,11 +768,11 @@
         {
             get
             {
-                if ((this.mUIGeneralWindow == null))
+                if ((mUIGeneralWindow == null))
                 {
-                    this.mUIGeneralWindow = new UIItemWindow(this, "47");
+                    mUIGeneralWindow = new UIItemWindow(this, "47");
                 }
-                return this.mUIGeneralWindow;
+                return mUIGeneralWindow;
             }
         }
 
@@ -780,11 +780,11 @@
         {
             get
             {
-                if ((this.mUIIsthepropertyusedforWindow == null))
+                if ((mUIIsthepropertyusedforWindow == null))
                 {
-                    this.mUIIsthepropertyusedforWindow = new UIItemWindow(this, "53");
+                    mUIIsthepropertyusedforWindow = new UIItemWindow(this, "53");
                 }
-                return this.mUIIsthepropertyusedforWindow;
+                return mUIIsthepropertyusedforWindow;
             }
         }
 
@@ -792,11 +792,11 @@
         {
             get
             {
-                if ((this.mUIIsthebusinessuseforcWindow == null))
+                if ((mUIIsthebusinessuseforcWindow == null))
                 {
-                    this.mUIIsthebusinessuseforcWindow = new UIItemWindow(this, "50");
+                    mUIIsthebusinessuseforcWindow = new UIItemWindow(this, "50");
                 }
-                return this.mUIIsthebusinessuseforcWindow;
+                return mUIIsthebusinessuseforcWindow;
             }
         }
 
@@ -804,11 +804,11 @@
         {
             get
             {
-                if ((this.mUINextWindow6 == null))
+                if ((mUINextWindow6 == null))
                 {
-                    this.mUINextWindow6 = new UIItemWindow(this, "78");
+                    mUINextWindow6 = new UIItemWindow(this, "78");
                 }
-                return this.mUINextWindow6;
+                return mUINextWindow6;
             }
         }
 
@@ -816,11 +816,11 @@
         {
             get
             {
-                if ((this.mUIHavespecialconditionWindow == null))
+                if ((mUIHavespecialconditionWindow == null))
                 {
-                    this.mUIHavespecialconditionWindow = new UIItemWindow(this, "64");
+                    mUIHavespecialconditionWindow = new UIItemWindow(this, "64");
                 }
-                return this.mUIHavespecialconditionWindow;
+                return mUIHavespecialconditionWindow;
             }
         }
 
@@ -828,11 +828,11 @@
         {
             get
             {
-                if ((this.mUIQuoteWindow == null))
+                if ((mUIQuoteWindow == null))
                 {
-                    this.mUIQuoteWindow = new UIItemWindow(this, "12");
+                    mUIQuoteWindow = new UIItemWindow(this, "12");
                 }
-                return this.mUIQuoteWindow;
+                return mUIQuoteWindow;
             }
         }
 

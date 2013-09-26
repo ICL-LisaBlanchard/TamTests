@@ -16,9 +16,9 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         public UIViewAttachmentWindow()
         {
             #region Search Criteria
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "View Attachment";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add("View Attachment");
+            SearchProperties[UITestControl.PropertyNames.Name] = "View Attachment";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add("View Attachment");
             #endregion
         }
 
@@ -27,11 +27,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, "2");
+                    mUIOKWindow = new UIItemWindow(this, "2");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 

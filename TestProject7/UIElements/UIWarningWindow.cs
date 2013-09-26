@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Warning";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add("Warning");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Warning";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
+            WindowTitles.Add("Warning");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, controlId: "1");
+                    mUIOKWindow = new UIItemWindow(this, controlId: "1");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 

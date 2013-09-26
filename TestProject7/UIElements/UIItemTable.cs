@@ -10,15 +10,15 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-            this.SearchProperties[UITestControl.PropertyNames.Name] = null;
-            this.FilterProperties[HtmlControl.PropertyNames.InnerText] = "Quote ID:949B625E-41E8-DB84-9983-0E83C10";
-            this.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = null;
-            this.FilterProperties[PropertyNames.RowCount] = "29";
-            this.FilterProperties[PropertyNames.ColumnCount] = "2";
-            this.FilterProperties[HtmlControl.PropertyNames.Class] = null;
-            this.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "2";
-            this.WindowTitles.Add("View Quote Details");
+            SearchProperties[HtmlControl.PropertyNames.Id] = null;
+            SearchProperties[UITestControl.PropertyNames.Name] = null;
+            FilterProperties[HtmlControl.PropertyNames.InnerText] = "Quote ID:949B625E-41E8-DB84-9983-0E83C10";
+            FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = null;
+            FilterProperties[PropertyNames.RowCount] = "29";
+            FilterProperties[PropertyNames.ColumnCount] = "2";
+            FilterProperties[HtmlControl.PropertyNames.Class] = null;
+            FilterProperties[HtmlControl.PropertyNames.TagInstance] = "2";
+            WindowTitles.Add("View Quote Details");
 
             #endregion
         }
@@ -29,26 +29,26 @@
         {
             get
             {
-                if ((this.mUIFORDFIESTABLACK16V13Cell == null))
+                if ((mUIFORDFIESTABLACK16V13Cell == null))
                 {
-                    this.mUIFORDFIESTABLACK16V13Cell = new HtmlCell(this);
+                    mUIFORDFIESTABLACK16V13Cell = new HtmlCell(this);
 
                     #region Search Criteria
 
-                    this.mUIFORDFIESTABLACK16V13Cell.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-                    this.mUIFORDFIESTABLACK16V13Cell.SearchProperties[UITestControl.PropertyNames.Name] = null;
-                    this.mUIFORDFIESTABLACK16V13Cell.SearchProperties[UITestControl.PropertyNames.MaxDepth] = "3";
-                    this.mUIFORDFIESTABLACK16V13Cell.FilterProperties[HtmlControl.PropertyNames.InnerText] = "FORD FIESTA BLACK 16V (1388cc) 2003-2003";
-                    this.mUIFORDFIESTABLACK16V13Cell.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = null;
-                    this.mUIFORDFIESTABLACK16V13Cell.FilterProperties[HtmlCell.PropertyNames.RowIndex] = "7";
-                    this.mUIFORDFIESTABLACK16V13Cell.FilterProperties[HtmlCell.PropertyNames.ColumnIndex] = "1";
-                    this.mUIFORDFIESTABLACK16V13Cell.FilterProperties[HtmlControl.PropertyNames.Class] = null;
-                    this.mUIFORDFIESTABLACK16V13Cell.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "16";
-                    this.mUIFORDFIESTABLACK16V13Cell.WindowTitles.Add("View Quote Details");
+                    mUIFORDFIESTABLACK16V13Cell.SearchProperties[HtmlControl.PropertyNames.Id] = null;
+                    mUIFORDFIESTABLACK16V13Cell.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    mUIFORDFIESTABLACK16V13Cell.SearchProperties[UITestControl.PropertyNames.MaxDepth] = "3";
+                    mUIFORDFIESTABLACK16V13Cell.FilterProperties[HtmlControl.PropertyNames.InnerText] = "FORD FIESTA BLACK 16V (1388cc) 2003-2003";
+                    mUIFORDFIESTABLACK16V13Cell.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = null;
+                    mUIFORDFIESTABLACK16V13Cell.FilterProperties[HtmlCell.PropertyNames.RowIndex] = "7";
+                    mUIFORDFIESTABLACK16V13Cell.FilterProperties[HtmlCell.PropertyNames.ColumnIndex] = "1";
+                    mUIFORDFIESTABLACK16V13Cell.FilterProperties[HtmlControl.PropertyNames.Class] = null;
+                    mUIFORDFIESTABLACK16V13Cell.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "16";
+                    mUIFORDFIESTABLACK16V13Cell.WindowTitles.Add("View Quote Details");
 
                     #endregion
                 }
-                return this.mUIFORDFIESTABLACK16V13Cell;
+                return mUIFORDFIESTABLACK16V13Cell;
             }
         }
 

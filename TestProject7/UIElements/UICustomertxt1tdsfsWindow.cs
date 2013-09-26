@@ -11,7 +11,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6MDIForm";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6MDIForm";
 
             #endregion
         }
@@ -22,11 +22,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUICustomersWindow == null))
+                if ((mUICustomersWindow == null))
                 {
-                    this.mUICustomersWindow = new UIItemWindow(this, controlId: "32768");
+                    mUICustomersWindow = new UIItemWindow(this, controlId: "32768");
                 }
-                return this.mUICustomersWindow;
+                return mUICustomersWindow;
             }
         }
 
@@ -34,11 +34,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIAddWindow == null))
+                if ((mUIAddWindow == null))
                 {
-                    this.mUIAddWindow = new UIItemWindow(this, controlId: "14", instance: "2");
+                    mUIAddWindow = new UIItemWindow(this, controlId: "14", instance: "2");
                 }
-                return this.mUIAddWindow;
+                return mUIAddWindow;
             }
         }
 
@@ -46,11 +46,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUINewCustomerDetailWindow == null))
+                if ((mUINewCustomerDetailWindow == null))
                 {
-                    this.mUINewCustomerDetailWindow = new UINewCustomerDetailWindow(this);
+                    mUINewCustomerDetailWindow = new UINewCustomerDetailWindow(this);
                 }
-                return this.mUINewCustomerDetailWindow;
+                return mUINewCustomerDetailWindow;
             }
         }
 
@@ -58,11 +58,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, controlId: "32");
+                    mUIItemWindow = new UIItemWindow(this, controlId: "32");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -70,11 +70,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUINewPolicyDetailWindow == null))
+                if ((mUINewPolicyDetailWindow == null))
                 {
-                    this.mUINewPolicyDetailWindow = new UINewPolicyDetailWindow(this);
+                    mUINewPolicyDetailWindow = new UINewPolicyDetailWindow(this);
                 }
-                return this.mUINewPolicyDetailWindow;
+                return mUINewPolicyDetailWindow;
             }
         }
 
@@ -82,11 +82,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIPolicyListWindow == null))
+                if ((mUIPolicyListWindow == null))
                 {
-                    this.mUIPolicyListWindow = new UIPolicyListWindow(this);
+                    mUIPolicyListWindow = new UIPolicyListWindow(this);
                 }
-                return this.mUIPolicyListWindow;
+                return mUIPolicyListWindow;
             }
         }
 

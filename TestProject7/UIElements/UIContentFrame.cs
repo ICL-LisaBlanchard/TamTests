@@ -10,15 +10,15 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "content";
-            this.FilterProperties[PropertyNames.AbsolutePath] = "content/home.asp";
-            this.FilterProperties[PropertyNames.PageUrl] = "content/home.asp?store=";
-            this.FilterProperties[HtmlControl.PropertyNames.Title] = null;
-            this.FilterProperties[HtmlControl.PropertyNames.Class] = null;
-            this.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "noResize marginHeight=0 src=\"content/hom";
-            this.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "3";
-            this.WindowTitles.Add("insurE-com System Maintenance");
+            SearchProperties[HtmlControl.PropertyNames.Id] = null;
+            SearchProperties[UITestControl.PropertyNames.Name] = "content";
+            FilterProperties[PropertyNames.AbsolutePath] = "content/home.asp";
+            FilterProperties[PropertyNames.PageUrl] = "content/home.asp?store=";
+            FilterProperties[HtmlControl.PropertyNames.Title] = null;
+            FilterProperties[HtmlControl.PropertyNames.Class] = null;
+            FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "noResize marginHeight=0 src=\"content/hom";
+            FilterProperties[HtmlControl.PropertyNames.TagInstance] = "3";
+            WindowTitles.Add("insurE-com System Maintenance");
 
             #endregion
         }
@@ -29,11 +29,11 @@
         {
             get
             {
-                if ((this.mUIInsurEcomMainPageDocument == null))
+                if ((mUIInsurEcomMainPageDocument == null))
                 {
-                    this.mUIInsurEcomMainPageDocument = new UIInsurEcomMainPageDocument(this);
+                    mUIInsurEcomMainPageDocument = new UIInsurEcomMainPageDocument(this);
                 }
-                return this.mUIInsurEcomMainPageDocument;
+                return mUIInsurEcomMainPageDocument;
             }
         }
 
@@ -41,11 +41,11 @@
         {
             get
             {
-                if ((this.mUIInsurEcomMainPageDocument1 == null))
+                if ((mUIInsurEcomMainPageDocument1 == null))
                 {
-                    this.mUIInsurEcomMainPageDocument1 = new UIInsurEcomMainPageDocument1(this);
+                    mUIInsurEcomMainPageDocument1 = new UIInsurEcomMainPageDocument1(this);
                 }
-                return this.mUIInsurEcomMainPageDocument1;
+                return mUIInsurEcomMainPageDocument1;
             }
         }
 

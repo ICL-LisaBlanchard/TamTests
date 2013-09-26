@@ -12,8 +12,8 @@
         {
             #region Search Criteria
 
-            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, " - Microsoft Word Viewer", PropertyExpressionOperator.Contains));
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "OpusApp";
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, " - Microsoft Word Viewer", PropertyExpressionOperator.Contains));
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "OpusApp";
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIMenuBarMenuBar == null))
+                if ((mUIMenuBarMenuBar == null))
                 {
-                    this.mUIMenuBarMenuBar = new UIApplicationMenuBar(this, "Menu Bar");
+                    mUIMenuBarMenuBar = new UIApplicationMenuBar(this, "Menu Bar");
                 }
-                return this.mUIMenuBarMenuBar;
+                return mUIMenuBarMenuBar;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                if ((this.mUIDemand2DocMicrosoftWTitleBar == null))
+                if ((mUIDemand2DocMicrosoftWTitleBar == null))
                 {
-                    this.mUIDemand2DocMicrosoftWTitleBar = new UITitleBar(this);
+                    mUIDemand2DocMicrosoftWTitleBar = new UITitleBar(this);
                 }
-                return this.mUIDemand2DocMicrosoftWTitleBar;
+                return mUIDemand2DocMicrosoftWTitleBar;
             }
         }
 

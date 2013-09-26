@@ -10,15 +10,15 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-            this.SearchProperties[UITestControl.PropertyNames.Name] = null;
-            this.FilterProperties[HtmlControl.PropertyNames.InnerText] = "\r\n\r\ninsurE-com Household Quotation For R";
-            this.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "border=0 width=\"95%\"";
-            this.FilterProperties[PropertyNames.RowCount] = "104";
-            this.FilterProperties[PropertyNames.ColumnCount] = "2";
-            this.FilterProperties[HtmlControl.PropertyNames.Class] = null;
-            this.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "1";
-            this.WindowTitles.Add("View Quote Details");
+            SearchProperties[HtmlControl.PropertyNames.Id] = null;
+            SearchProperties[UITestControl.PropertyNames.Name] = null;
+            FilterProperties[HtmlControl.PropertyNames.InnerText] = "\r\n\r\ninsurE-com Household Quotation For R";
+            FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "border=0 width=\"95%\"";
+            FilterProperties[PropertyNames.RowCount] = "104";
+            FilterProperties[PropertyNames.ColumnCount] = "2";
+            FilterProperties[HtmlControl.PropertyNames.Class] = null;
+            FilterProperties[HtmlControl.PropertyNames.TagInstance] = "1";
+            WindowTitles.Add("View Quote Details");
 
             #endregion
         }
@@ -29,26 +29,26 @@
         {
             get
             {
-                if ((this.mUIItem1989Cell == null))
+                if ((mUIItem1989Cell == null))
                 {
-                    this.mUIItem1989Cell = new HtmlCell(this);
+                    mUIItem1989Cell = new HtmlCell(this);
 
                     #region Search Criteria
 
-                    this.mUIItem1989Cell.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-                    this.mUIItem1989Cell.SearchProperties[UITestControl.PropertyNames.Name] = null;
-                    this.mUIItem1989Cell.SearchProperties[UITestControl.PropertyNames.MaxDepth] = "3";
-                    this.mUIItem1989Cell.FilterProperties[HtmlControl.PropertyNames.InnerText] = "1989";
-                    this.mUIItem1989Cell.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = null;
-                    this.mUIItem1989Cell.FilterProperties[HtmlCell.PropertyNames.RowIndex] = "14";
-                    this.mUIItem1989Cell.FilterProperties[HtmlCell.PropertyNames.ColumnIndex] = "1";
-                    this.mUIItem1989Cell.FilterProperties[HtmlControl.PropertyNames.Class] = null;
-                    this.mUIItem1989Cell.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "28";
-                    this.mUIItem1989Cell.WindowTitles.Add("View Quote Details");
+                    mUIItem1989Cell.SearchProperties[HtmlControl.PropertyNames.Id] = null;
+                    mUIItem1989Cell.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    mUIItem1989Cell.SearchProperties[UITestControl.PropertyNames.MaxDepth] = "3";
+                    mUIItem1989Cell.FilterProperties[HtmlControl.PropertyNames.InnerText] = "1989";
+                    mUIItem1989Cell.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = null;
+                    mUIItem1989Cell.FilterProperties[HtmlCell.PropertyNames.RowIndex] = "14";
+                    mUIItem1989Cell.FilterProperties[HtmlCell.PropertyNames.ColumnIndex] = "1";
+                    mUIItem1989Cell.FilterProperties[HtmlControl.PropertyNames.Class] = null;
+                    mUIItem1989Cell.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "28";
+                    mUIItem1989Cell.WindowTitles.Add("View Quote Details");
 
                     #endregion
                 }
-                return this.mUIItem1989Cell;
+                return mUIItem1989Cell;
             }
         }
 
@@ -56,26 +56,26 @@
         {
             get
             {
-                if ((this.mUIMrTestTestCell == null))
+                if ((mUIMrTestTestCell == null))
                 {
-                    this.mUIMrTestTestCell = new HtmlCell(this);
+                    mUIMrTestTestCell = new HtmlCell(this);
 
                     #region Search Criteria
 
-                    this.mUIMrTestTestCell.SearchProperties[HtmlControl.PropertyNames.Id] = null;
-                    this.mUIMrTestTestCell.SearchProperties[UITestControl.PropertyNames.Name] = null;
-                    this.mUIMrTestTestCell.SearchProperties[UITestControl.PropertyNames.MaxDepth] = "3";
-                    this.mUIMrTestTestCell.FilterProperties[HtmlControl.PropertyNames.InnerText] = "Mr Test Test";
-                    this.mUIMrTestTestCell.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = null;
-                    this.mUIMrTestTestCell.FilterProperties[HtmlCell.PropertyNames.RowIndex] = "7";
-                    this.mUIMrTestTestCell.FilterProperties[HtmlCell.PropertyNames.ColumnIndex] = "1";
-                    this.mUIMrTestTestCell.FilterProperties[HtmlControl.PropertyNames.Class] = null;
-                    this.mUIMrTestTestCell.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "14";
-                    this.mUIMrTestTestCell.WindowTitles.Add("View Quote Details");
+                    mUIMrTestTestCell.SearchProperties[HtmlControl.PropertyNames.Id] = null;
+                    mUIMrTestTestCell.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    mUIMrTestTestCell.SearchProperties[UITestControl.PropertyNames.MaxDepth] = "3";
+                    mUIMrTestTestCell.FilterProperties[HtmlControl.PropertyNames.InnerText] = "Mr Test Test";
+                    mUIMrTestTestCell.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = null;
+                    mUIMrTestTestCell.FilterProperties[HtmlCell.PropertyNames.RowIndex] = "7";
+                    mUIMrTestTestCell.FilterProperties[HtmlCell.PropertyNames.ColumnIndex] = "1";
+                    mUIMrTestTestCell.FilterProperties[HtmlControl.PropertyNames.Class] = null;
+                    mUIMrTestTestCell.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "14";
+                    mUIMrTestTestCell.WindowTitles.Add("View Quote Details");
 
                     #endregion
                 }
-                return this.mUIMrTestTestCell;
+                return mUIMrTestTestCell;
             }
         }
 

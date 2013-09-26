@@ -11,9 +11,9 @@
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Policy";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
-            this.WindowTitles.Add("Policy");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Policy";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
+            WindowTitles.Add("Policy");
 
             #endregion
         }
@@ -24,11 +24,11 @@
         {
             get
             {
-                if ((this.mUIYesWindow == null))
+                if ((mUIYesWindow == null))
                 {
-                    this.mUIYesWindow = new UIItemWindow(this, "6");
+                    mUIYesWindow = new UIItemWindow(this, "6");
                 }
-                return this.mUIYesWindow;
+                return mUIYesWindow;
             }
         }
 

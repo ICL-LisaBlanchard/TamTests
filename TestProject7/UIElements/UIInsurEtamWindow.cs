@@ -9,9 +9,9 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             #region Search Criteria
 
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Personal Lines";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6MDIForm";
-            this.WindowTitles.Add("Personal Lines");
+            SearchProperties[UITestControl.PropertyNames.Name] = "Personal Lines";
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6MDIForm";
+            WindowTitles.Add("Personal Lines");
 
             #endregion
         }
@@ -22,11 +22,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIQuotesWindow == null))
+                if ((mUIQuotesWindow == null))
                 {
-                    this.mUIQuotesWindow = new UIQuotesWindow(this);
+                    mUIQuotesWindow = new UIQuotesWindow(this);
                 }
-                return this.mUIQuotesWindow;
+                return mUIQuotesWindow;
             }
         }
 

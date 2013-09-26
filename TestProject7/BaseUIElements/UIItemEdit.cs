@@ -10,17 +10,17 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
         {
             if (!string.IsNullOrEmpty(name))
             {
-                this.SearchProperties[UITestControl.PropertyNames.Name] = name;
+                SearchProperties[UITestControl.PropertyNames.Name] = name;
             }
 
             if (!string.IsNullOrEmpty(classname))
             {
-                this.SearchProperties[UITestControl.PropertyNames.ClassName] = classname;
+                SearchProperties[UITestControl.PropertyNames.ClassName] = classname;
             }
 
             foreach (string w in uiItemWindow.WindowTitles)
             {
-                this.WindowTitles.Add(w);
+                WindowTitles.Add(w);
             }
         }
     }

@@ -11,10 +11,10 @@
         {
             #region Search Criteria
 
-            this.windowTitle = "Renewals : New Business Accept";
-            this.SearchProperties[UITestControl.PropertyNames.Name] = this.windowTitle;
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            this.WindowTitles.Add(this.windowTitle);
+            windowTitle = "Renewals : New Business Accept";
+            SearchProperties[UITestControl.PropertyNames.Name] = windowTitle;
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            WindowTitles.Add(windowTitle);
 
             #endregion
         }
@@ -25,11 +25,11 @@
         {
             get
             {
-                if ((this.mUIItemWindow == null))
+                if ((mUIItemWindow == null))
                 {
-                    this.mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
+                    mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
                 }
-                return this.mUIItemWindow;
+                return mUIItemWindow;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                if ((this.mUIAcceptWindow == null))
+                if ((mUIAcceptWindow == null))
                 {
-                    this.mUIAcceptWindow = new UIItemWindow(this, controlId: "6");
+                    mUIAcceptWindow = new UIItemWindow(this, controlId: "6");
                 }
-                return this.mUIAcceptWindow;
+                return mUIAcceptWindow;
             }
         }
 

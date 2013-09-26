@@ -11,8 +11,8 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             #region Search Criteria
 
-            this.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Search Result For", PropertyExpressionOperator.Contains));
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Search Result For", PropertyExpressionOperator.Contains));
+            SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
 
             #endregion
         }
@@ -23,11 +23,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
         {
             get
             {
-                if ((this.mUIOKWindow == null))
+                if ((mUIOKWindow == null))
                 {
-                    this.mUIOKWindow = new UIItemWindow(this, "3");
+                    mUIOKWindow = new UIItemWindow(this, "3");
                 }
-                return this.mUIOKWindow;
+                return mUIOKWindow;
             }
         }
 
