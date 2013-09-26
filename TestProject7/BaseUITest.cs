@@ -92,7 +92,6 @@
             this.TestLinkInitialize();
 
             var login = new Login();
-            login.LoginParams.TabKey = Playback.EncryptText("PLUS");
             login.LoginParams.ExePath = "J:\\WINTAM\\HOMEBASE.EXE";
             login.LoginParams.AlternateExePath = "J:\\WINTAM\\HOMEBASE.EXE";
             login.DoLogin();
