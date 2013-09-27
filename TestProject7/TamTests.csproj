@@ -151,7 +151,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrySettings.cs" />
     <Compile Include="Transactions.cs" />
-    <Compile Include="UIElements\UIItemTable1cs.cs" />
+    <Compile Include="UIElements\UIItemTable1.cs" />
     <Compile Include="UIElements\UIPersonalLinesDialogWindow.cs" />
     <Compile Include="UIElements\UIAttachmentDetailWindow.cs" />
     <Compile Include="UIElements\UIAttatchmentsMenuWindow.cs" />

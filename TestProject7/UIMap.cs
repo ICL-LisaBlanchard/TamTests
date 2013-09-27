@@ -1160,9 +1160,13 @@
 
             #endregion
 
-            if (selectAlternative)
+            try
             {
                 Mouse.Click(uiYesButton);
+            }
+            catch (Exception)
+            {
+
             }
 
             Mouse.Click(uIInviteButton, new Point(75, 8));

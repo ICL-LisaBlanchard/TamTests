@@ -395,7 +395,9 @@
 
             Mouse.Move(new Point(500, 500));
 
-            Playback.Wait(500);
+            Playback.Wait(3000);
+
+            Mouse.Click(UIQuotesResultsWindow);
 
             Mouse.Click(uIAcceptButton, new Point(47, 11));
 
