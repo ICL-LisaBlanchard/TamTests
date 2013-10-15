@@ -60,7 +60,6 @@
         }
 
         [TestInitialize]
-        [DeploymentItem(@"RegistrySettings")]
         public void StartTest()
         {
             // make sure everything is closed before another test is started
@@ -91,14 +90,19 @@
         [TestCleanup]
         public void FinishTest()
         {
+            Debug.WriteLine("Test Finished");
             try
             {
+                Debug.WriteLine("1");
                 PostTestResult(TestContext.CurrentTestOutcome != UnitTestOutcome.Passed ? TestCaseResultStatus.Fail : TestCaseResultStatus.Pass);
+                Debug.WriteLine("2");
             }
             catch
             {
-                // do nothing
+                Debug.WriteLine("Finishing test failed");
+                TestContext.WriteLine("Finishing test failed");
             }
+
             CloseProcess("TamXML7");
             CloseProcess("InsureTam");
             CloseProcess("clntfile");
@@ -170,21 +174,46 @@
 
         protected void PostTestResult(TestCaseResultStatus status)
         {
+            Debug.WriteLine("PostTestResult");
+            TestContext.WriteLine("PostTestResult");
             try
             {
+
                 if (status == TestCaseResultStatus.Fail)
                 {
-                    long expectedDate = DateTime.Now.ToFileTimeUtc();
+                    Debug.WriteLine("Attaching Screenshots");
+                    TestContext.WriteLine("Attaching Screenshots");
+                    string expectedDate = DateTime.Now.ToString("yyyyMMddhhmmss");
                     Image image = UITestControl.Desktop.CaptureImage();
                     image.Save(Configs.ScreenshotPath + expectedDate + ".jpg");
                     TestContextInstance.AddResultFile(Configs.ScreenshotPath + expectedDate + ".jpg");
+                    Debug.WriteLine("Screenshots attached " + (Configs.ScreenshotPath + expectedDate + ".jpg"));
+                    TestContext.WriteLine("Screenshots attached " + (Configs.ScreenshotPath + expectedDate + ".jpg"));
                 }
-                Tl.ReportTCResult(Tl.GetTestCaseIDByName(TestName)[0].id, TestPlanId, status, Configs.PlatformId, buildid: BuildId); // it posts result for testcase.
+                
             }
-            catch
+            catch(Exception ex)
             {
-                //
+                Debug.WriteLine("screenshot failed");
+                Debug.WriteLine(ex.Message);
+                TestContext.WriteLine("screenshot failed");
+                TestContext.WriteLine(ex.Message);
             }
+            //try
+            //{
+            //    Tl.ReportTCResult(Tl.GetTestCaseIDByName(TestName)[0].id, TestPlanId, status, Configs.PlatformId, buildid: BuildId); // it posts result for testcase.
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    Debug.WriteLine("Testlink report failed");
+
+            //    Debug.WriteLine(ex.Message);
+
+            //    TestContext.WriteLine("Testlink report failed");
+
+            //    TestContext.WriteLine(ex.Message);
+            //}
         }
 
         protected static NameValueCollection GetTransactionDictionary(string premium, string originalPremium = "")
@@ -272,6 +301,7 @@
             House.RenewalModuleInvite1();
             House.RenewalModuleRenew();
             House.RetrieveResponse();
+
             House.RenewalModuleRenew1();
             House.RenewalModuleClose();
         }

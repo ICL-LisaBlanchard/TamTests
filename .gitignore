@@ -1,7 +1,13 @@
 *.config
-/TestProject7/bin/Debug/*.pdb
+/TestProject7/bin
 /TestProject7/obj
 /TestProject7/obj/Debug/*.pdb
 /TestProject7/obj/Debug/*.dll
 /TestProject7/App.config
+/TestProject7/TestResults
+*.trx
+
 TestResults
+/TestProject7/*.config
+bin
+obj

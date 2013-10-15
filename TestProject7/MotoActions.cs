@@ -593,6 +593,7 @@
         {
             #region Variable Declarations
 
+            WinButton uIProceedButton = this.UICreditCheckAtRenewalWindow.UIProceedWindow.UIProceedButton;
             WinButton uIRebrokeButton = map.Uiautoxxx1000Window.UIRebrokeWindow.UIRebrokeButton;
             WinButton uICancelButton = map.UIQuoteSelectListWindow.UICancelWindow.UICancelButton;
             WinButton uINOButton = map.UICreditCheckWindow.UINoWindow.UINoButton;
@@ -612,7 +613,8 @@
                 Mouse.Click(uIOKButton);
             }
 
-            Mouse.Click(uINOButton, new Point(48, 11));
+            //Mouse.Click(uINOButton, new Point(48, 11));
+            Mouse.Click(uIProceedButton);
         }
 
         /// <summary>

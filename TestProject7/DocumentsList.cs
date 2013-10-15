@@ -158,7 +158,7 @@
                                new Document("Certificate", 2),
                                new Document("FSA", 2),
                                new Document("Notice", 1)
-                           };                
+                           };
             }
         }
 
@@ -213,7 +213,6 @@
     }
 
     public class Document
-
     {
         public Document(string docName, int expectedCount)
         {

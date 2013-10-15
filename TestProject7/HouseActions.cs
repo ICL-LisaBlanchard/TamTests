@@ -1,4 +1,6 @@
-﻿namespace AppliedSystems.Tam.Ui.Tests
+﻿using System.Threading;
+
+namespace AppliedSystems.Tam.Ui.Tests
 {
     using System;
     using System.Drawing;
@@ -387,15 +389,17 @@
         {
             WinControl uIAcceptButton = UIQuotesResultsWindow.UIAcceptWindow.UIAcceptButton;
             WinControl uIYesButton = UIInsurEtamWindow1.UIYesWindow.UIYesButton;
-            WinControl uIOKButton1 = UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
-            WinControl uIOKButton2 = UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
+            WinControl uIPaymentOkButton = UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
+            WinControl uIConfirmDocsButton = UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
             WinEdit uIItemEdit = UIPolicyDetailConfirmationWindow.UIItemWindow.UIItemEdit;
 
             Playback.Wait(3000);
 
             Mouse.Move(new Point(500, 500));
 
-            Playback.Wait(500);
+            Playback.Wait(3000);
+
+            Mouse.Click(UIQuotesResultsWindow);
 
             Mouse.Click(uIAcceptButton, new Point(47, 11));
 
@@ -403,9 +407,9 @@
 
             CancelPrint();
 
-            Mouse.Click(uIOKButton1, new Point(47, 22));
+            Mouse.Click(uIPaymentOkButton, new Point(47, 22));
 
-            Mouse.Click(uIOKButton2, new Point(46, 11));
+            Mouse.Click(uIConfirmDocsButton, new Point(46, 11));
 
             uIItemEdit.Text = ProposerParams.Postcode;
         }
@@ -689,8 +693,8 @@
         public void HomeAcceptQuote1()
         {
             WinControl uIOKButton = UIBrokerAddonsWindow.UIOKWindow.UIOKButton;
-            WinControl uIOKButton1 = UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
-            WinControl uIOKButton2 = UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
+            WinControl uIPaymentOkButton = UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
+            WinControl uIConfirmDocsButton = UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
             WinEdit uIItemEdit = UIPolicyDetailConfirmationWindow.UIItemWindow.UIItemEdit;
             WinControl uILookupButton = UIPolicyDetailConfirmationWindow.UILookupWindow.UILookupButton;
             WinControl uIOKButton3 = UISearchResultForB338TWindow.UIOKWindow.UIOKButton;
@@ -707,9 +711,9 @@
 
             Playback.PlaybackSettings.ContinueOnError = false;
 
-            Mouse.Click(uIOKButton1, new Point(35, 17));
+            Mouse.Click(uIPaymentOkButton, new Point(35, 17));
 
-            Mouse.Click(uIOKButton2, new Point(29, 10));
+            Mouse.Click(uIConfirmDocsButton, new Point(29, 10));
 
             uIItemEdit.Text = ProposerParams.Postcode;
 
@@ -738,6 +742,10 @@
 
         public void HomeRebrokeSelectAlternative()
         {
+            Playback.Wait(1000);
+            Mouse.Move(new Point(500, 500));
+            Playback.Wait(1000);
+            Mouse.Click(UIHouseholdRebrokeResuWindow);
             WinControl uISelectAlternativeButton = UIHouseholdRebrokeResuWindow.UISelectAlternativeWindow.UISelectAlternativeButton;
 
             Mouse.Click(uISelectAlternativeButton, new Point(49, 13));
