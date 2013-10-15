@@ -187,6 +187,8 @@
                     Image image = UITestControl.Desktop.CaptureImage();
                     image.Save(Configs.ScreenshotPath + expectedDate + ".jpg");
                     TestContextInstance.AddResultFile(Configs.ScreenshotPath + expectedDate + ".jpg");
+                    Debug.WriteLine("Screenshots attached " + (Configs.ScreenshotPath + expectedDate + ".jpg"));
+                    TestContext.WriteLine("Screenshots attached " + (Configs.ScreenshotPath + expectedDate + ".jpg"));
                 }
                 
             }
@@ -299,6 +301,7 @@
             House.RenewalModuleInvite1();
             House.RenewalModuleRenew();
             House.RetrieveResponse();
+
             House.RenewalModuleRenew1();
             House.RenewalModuleClose();
         }

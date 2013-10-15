@@ -1103,6 +1103,8 @@
         {
             #region Variable Declarations
 
+            WinControl uIPaymentOkButton = UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
+            WinControl uIConfirmDocsButton = UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIDeferPrintingCheckBox = UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
             WinControl uIOKButton = UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
             WinControl uIOKButton1 = UIInsurEtamWindow1.UIOKWindow.UIOKButton;
@@ -1111,6 +1113,16 @@
             WinControl uIOKButton3 = UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
 
             #endregion
+
+            try
+            {
+                Mouse.Click(uIPaymentOkButton);
+                Mouse.Click(uIConfirmDocsButton);
+            }
+            catch
+            {
+
+            }
 
             uIDeferPrintingCheckBox.Checked = CommonParams.UIDeferPrintingCheckBoxChecked;
 
