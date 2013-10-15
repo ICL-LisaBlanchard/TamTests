@@ -1111,7 +1111,21 @@
             WinControl uIOKButton2 = UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
             WinControl uIOKButton3 = UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
 
+            WinControl uIPaymentOkButton = UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
+            WinControl uIConfirmDocsButton = UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
+
             #endregion
+
+            try
+            {
+                Mouse.Click(uIPaymentOkButton);
+                Mouse.Click(uIConfirmDocsButton);
+            }
+            catch
+            {
+
+            }
+
 
             uIDeferPrintingCheckBox.Checked = CommonParams.UIDeferPrintingCheckBoxChecked;
 
