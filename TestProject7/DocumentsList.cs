@@ -216,9 +216,9 @@
     {
         public Document(string docName, int expectedCount)
         {
-            this.DocName = docName;
-            this.ExpectedCount = expectedCount;
-            this.ActualCount = 0;
+            DocName = docName;
+            ExpectedCount = expectedCount;
+            ActualCount = 0;
         }
 
         public string DocName { get; set; }
