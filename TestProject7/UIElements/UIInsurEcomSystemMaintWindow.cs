@@ -1,6 +1,7 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests.UIElements
 {
     using System;
+    using System.Threading;
 
     using AppliedSystems.Tam.Ui.Tests.BaseUIElements;
 
@@ -24,7 +25,9 @@
 
         public void LaunchUrl(Uri url)
         {
-            CopyFrom(Launch(url));
+            var uri = Launch(url);
+            Thread.Sleep(3000);
+            CopyFrom(uri);
         }
 
         #region Properties

@@ -15,7 +15,6 @@
         [TestMethod]
         public void HouseCreateQuote()
         {
-            Playback.PlaybackSettings.SearchTimeout = 15000;
             SetOfficeRegKeys();
             House.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);

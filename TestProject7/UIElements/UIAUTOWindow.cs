@@ -5,13 +5,14 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    public class UiautoWindow : WinWindow
+    public class UiAutoWindow : WinWindow
     {
-        public UiautoWindow()
+        public UiAutoWindow()
         {
             #region Search Criteria
 
-            SearchProperties[UITestControl.PropertyNames.Name] = "AUTO230-1001";
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "AUTO", PropertyExpressionOperator.Contains));
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "-1001", PropertyExpressionOperator.Contains));
             SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
             WindowTitles.Add("AUTO230-1001");
 

@@ -770,7 +770,7 @@ namespace AppliedSystems.Tam.Ui.Tests
 
         public void HomeRebroke()
         {
-            WinControl uIRebrokeButton = UIAUTOWindow.UIRebrokeWindow.UIRebrokeButton;
+            WinControl uIRebrokeButton = this.UiAutoWindow.UIRebrokeWindow.UIRebrokeButton;
             WinControl uIYesButton = UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinControl uIProceedButton = UICreditCheckAtRenewalWindow.UIProceedWindow.UIProceedButton;
 
