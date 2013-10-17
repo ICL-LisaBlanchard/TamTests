@@ -973,15 +973,15 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
 
-        public UiautoWindow UIAUTOWindow
+        public UiAutoWindow UiAutoWindow
         {
             get
             {
-                if ((mUiautoWindow == null))
+                if ((this.mUiAutoWindow == null))
                 {
-                    mUiautoWindow = new UiautoWindow();
+                    this.mUiAutoWindow = new UiAutoWindow();
                 }
-                return mUiautoWindow;
+                return this.mUiAutoWindow;
             }
         }
         
@@ -1384,7 +1384,7 @@ namespace AppliedSystems.Tam.Ui.Tests
         
         private UICreditCheckAtRenewalWindow mUICreditCheckAtRenewalWindow;
         
-        private UiautoWindow mUiautoWindow;
+        private UiAutoWindow mUiAutoWindow;
         
         private UIHouseholdRebrokeResuWindow mUIHouseholdRebrokeResuWindow;
         

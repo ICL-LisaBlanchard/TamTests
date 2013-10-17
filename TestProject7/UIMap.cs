@@ -6,6 +6,7 @@
     using System.Globalization;
     using System.IO;
     using System.Linq;
+    using System.Threading;
     using System.Windows.Input;
 
     using AppliedSystems.Tam.Ui.Tests.Assertions;
@@ -584,7 +585,7 @@
 
             Mouse.Click(uIOKButton3, new Point(51, 10));
 
-            SelectTAMActivities3();
+            SelectTAMActivities2();
         }
 
         /// <summary>
@@ -1058,12 +1059,9 @@
 
             #endregion
 
-
-
             Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Click(uIOKButton, new Point(51, 11));
-            System.Diagnostics.Debug.WriteLine("OK button found");
 
             Playback.PlaybackSettings.ContinueOnError = false;
         }
@@ -1140,12 +1138,8 @@
 
             Mouse.Click(uIOKButton3, new Point(47, 24));
 
-            System.Diagnostics.Debug.WriteLine("Yay!");
 
-            SelectTAMActivities3();
-
-
-            System.Diagnostics.Debug.WriteLine("Nay!");
+            SelectTAMActivities2();
         }
 
         public void RenewalModuleRenew()
@@ -1620,7 +1614,7 @@
 
             string lapseMessage = "Policy -1001. PolicyNo: " + policyNumber + " successfully lapsed.";
 
-            WinButton uILapsePolicyButton = UIAUTOWindow.UILapsePolicyWindow.UILapsePolicyButton;
+            WinButton uILapsePolicyButton = this.UiAutoWindow.UILapsePolicyWindow.UILapsePolicyButton;
             WinButton uIYesButton = UIPersonalLinesDialogWindow.UIYesWindow.UIYesButton;
             WinText uIPolicy1001PolicyNo81Text = UIPersonalLinesDialogWindow.UIPolicy1001PolicyNo81Window.UIText(lapseMessage);
             WinButton uIOKButton = UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
@@ -2278,7 +2272,6 @@
             {
                 WinWindow win = TopWindow;
                 string name = win.GetProperty("Name").ToString();
-                System.Diagnostics.Debug.WriteLine(name);
                 if (name.Contains("Select Tam insurer for insurer code"))
                 {
                     uIItemList.SelectedItemsAsString = uIItemList.Items.First().Name;
@@ -2313,19 +2306,16 @@
 
         protected void SelectTAMActivities1()
         {
-            System.Diagnostics.Debug.WriteLine("SelectTAMActivities1");
             SelectTamInsurersAndActivity(selectListItems1: 1);
         }
 
         protected void SelectTAMActivities2()
         {
-            System.Diagnostics.Debug.WriteLine("SelectTAMActivities2");
             SelectTamInsurersAndActivity(selectListItems1: 2);
         }
 
         protected void SelectTAMActivities3()
         {
-            System.Diagnostics.Debug.WriteLine("SelectTAMActivities3");
             SelectTamInsurersAndActivity(selectListItems1: 3);
         }
 

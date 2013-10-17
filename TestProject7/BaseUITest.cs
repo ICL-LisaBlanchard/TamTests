@@ -93,25 +93,22 @@
             Debug.WriteLine("Test Finished");
             try
             {
-                Debug.WriteLine("1");
                 PostTestResult(TestContext.CurrentTestOutcome != UnitTestOutcome.Passed ? TestCaseResultStatus.Fail : TestCaseResultStatus.Pass);
-                Debug.WriteLine("2");
             }
             catch
             {
                 Debug.WriteLine("Finishing test failed");
-                TestContext.WriteLine("Finishing test failed");
             }
 
-            CloseProcess("TamXML7");
-            CloseProcess("InsureTam");
-            CloseProcess("clntfile");
-            CloseProcess("Homebase");
-            CloseProcess("AcroRd32");
-            CloseProcess("iexplore");
-            CloseProcess("Regress_IETam_Policy");
-            CloseProcess("RLoader");
-            CloseProcess("AppliedSystems.TAM.Client.Accounting.TransactionsUP");
+            //CloseProcess("TamXML7");
+            //CloseProcess("InsureTam");
+            //CloseProcess("clntfile");
+            //CloseProcess("Homebase");
+            //CloseProcess("AcroRd32");
+            //CloseProcess("iexplore");
+            //CloseProcess("Regress_IETam_Policy");
+            //CloseProcess("RLoader");
+            //CloseProcess("AppliedSystems.TAM.Client.Accounting.TransactionsUP");
         }
 
         public void SetOurHighwayRegKeys()
@@ -174,15 +171,11 @@
 
         protected void PostTestResult(TestCaseResultStatus status)
         {
-            Debug.WriteLine("PostTestResult");
-            TestContext.WriteLine("PostTestResult");
             try
             {
 
                 if (status == TestCaseResultStatus.Fail)
                 {
-                    Debug.WriteLine("Attaching Screenshots");
-                    TestContext.WriteLine("Attaching Screenshots");
                     string expectedDate = DateTime.Now.ToString("yyyyMMddhhmmss");
                     Image image = UITestControl.Desktop.CaptureImage();
                     image.Save(Configs.ScreenshotPath + expectedDate + ".jpg");

@@ -15,7 +15,6 @@
         [TestMethod]
         public void HouseCreateQuote()
         {
-            Playback.PlaybackSettings.SearchTimeout = 15000;
             SetOfficeRegKeys();
             House.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
@@ -574,7 +573,7 @@
             House.HomeRebrokeSelectPolicy(House.CommonParams.SendEndKeys);
             House.HomeRebrokeSelectAlternative();
             House.HomeRebrokeFinish();
-            House.RenewalModuleInvite(true);
+            House.RenewalModuleInvite(false);
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();
             House.RebrokeAlternativeRenew();
