@@ -1,8 +1,7 @@
-﻿using System.Threading;
-
-namespace AppliedSystems.Tam.Ui.Tests
+﻿namespace AppliedSystems.Tam.Ui.Tests
 {
     using System;
+    using System.Diagnostics;
     using System.Drawing;
     using System.Globalization;
     using System.Windows.Input;
@@ -383,8 +382,6 @@ namespace AppliedSystems.Tam.Ui.Tests
             Mouse.Click(uIItemEdit, new Point(22, 8));
         }
 
-
-
         public void HomeAcceptPolicy()
         {
             WinControl uIAcceptButton = UIQuotesResultsWindow.UIAcceptWindow.UIAcceptButton;
@@ -534,11 +531,11 @@ namespace AppliedSystems.Tam.Ui.Tests
 
             Mouse.Click(uIYesButton, new Point(45, 6));
 
-            Mouse.Click(uIAddActivityCheckBox);
+            //Mouse.Click(uIAddActivityCheckBox);
 
             Mouse.Click(uIOKButton, new Point(30, 15));
 
-            SelectTAMActivities2();
+            SelectTAMActivities1();
         }
 
         /// <summary>
@@ -705,11 +702,13 @@ namespace AppliedSystems.Tam.Ui.Tests
             WinCheckBox uIAddActivityCheckBox = UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton6 = UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
 
-            Playback.PlaybackSettings.ContinueOnError = true;
-
-            Mouse.Click(uIOKButton, new Point(35, 13));
-
-            Playback.PlaybackSettings.ContinueOnError = false;
+            try
+            {
+                Mouse.Click(uIOKButton, new Point(35, 13));
+            }
+            catch
+            {
+            }
 
             Mouse.Click(uIPaymentOkButton, new Point(35, 17));
 
@@ -723,11 +722,14 @@ namespace AppliedSystems.Tam.Ui.Tests
 
             Mouse.Click(uIConfirmButton, new Point(26, 9));
 
-            Playback.PlaybackSettings.ContinueOnError = true;
-
-            Mouse.Click(uIOKButton4, new Point(46, 12));
-
-            Playback.PlaybackSettings.ContinueOnError = false;
+            try
+            {
+                Mouse.Click(uIOKButton4, new Point(46, 12));
+            }
+            catch
+            {
+   
+            }
 
             uIDeferPrintingCheckBox.Checked = CommonParams.UIDeferPrintingCheckBoxChecked;
 
@@ -737,7 +739,7 @@ namespace AppliedSystems.Tam.Ui.Tests
 
             Mouse.Click(uIOKButton6, new Point(40, 8));
 
-            SelectTAMActivities3();
+            SelectTAMActivities2();
         }
 
         public void HomeRebrokeSelectAlternative()
@@ -853,7 +855,7 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             WinControl uIDetailButton = UIPolicyautotestWindow.UIPolicyListWindow.UIDetailWindow.UIDetailButton;
             WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
-            System.Diagnostics.Debug.WriteLine("Customer Code : " + CustomerCode);
+            Debug.WriteLine("Customer Code : " + CustomerCode);
             Mouse.Click(uIDetailButton, new Point(26, 12));
 
             Mouse.Click(uIItemEdit, new Point(25, 5));
@@ -1227,8 +1229,7 @@ namespace AppliedSystems.Tam.Ui.Tests
 
         public void HomeSiteRenewal(string policyNumber, string renewalPremium)
         {
-            HtmlHyperlink uICreateaHouseholdTestHyperlink =
-                UIInsurEcomSystemMaintWindow.UILeftbarFrame.UIInsurEcomLeftbarDocument.UIDivRenewalsPane.UICreateaHouseholdTestHyperlink;
+            HtmlHyperlink uICreateaHouseholdTestHyperlink = UIInsurEcomSystemMaintWindow.UILeftbarFrame.UIInsurEcomLeftbarDocument.UIDivRenewalsPane.UICreateaHouseholdTestHyperlink;
             HtmlComboBox uIInsurerIDComboBox = UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UIInsurerIDComboBox;
             HtmlEdit uITxtPolicyNumberEdit = UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UITxtPolicyNumberEdit;
             HtmlEdit uITxtRenewalDateEdit = UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UITxtRenewalDateEdit;
@@ -1335,12 +1336,21 @@ namespace AppliedSystems.Tam.Ui.Tests
             Assert.AreNotEqual(HomeCheckPremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
+        public void HomeSelectPolicy()
+        {
+            WinClient uIQuotesResultsClient = UIQuotesResultsWindow.UIItemWindow.UIClient();
+
+            Mouse.Click(uIQuotesResultsClient, new Point(30, 30));
+
+            Playback.Wait(1000);
+            Mouse.Move(new Point(500, 500));
+        }
+
         private void HomeProposerFullStep1()
         {
             WinComboBox mortgageBuildingSociety = UIPersonalLinesWindow.UIHouseholdQuoteWindow.UIItemWindow.UIItemComboBox;
             WinComboBox previousPaymentPeriod = UIPersonalLinesWindow.UIHouseholdQuoteWindow.UIItemWindow1.UIItemComboBox;
-            WinCheckBox uIIstheapplicationinjoCheckBox =
-                UIPersonalLinesWindow.UIHouseholdQuoteWindow.UIIstheapplicationinjoWindow.UICheckBox("Is the application in joint names?");
+            WinCheckBox uIIstheapplicationinjoCheckBox = UIPersonalLinesWindow.UIHouseholdQuoteWindow.UIIstheapplicationinjoWindow.UICheckBox("Is the application in joint names?");
             WinButton uIOtherpersonButton = UIPersonalLinesWindow.UIHouseholdQuoteWindow.UIOtherpersonWindow.UIButton("Other person...");
             WinComboBox secondApplicantTItle = UISecondApplicantDetaiWindow.UIItemWindow.UIItemComboBox;
             WinEdit secondApplicantFirstName = UISecondApplicantDetaiWindow.UIItemWindow1.UIItemEdit;
@@ -1452,8 +1462,7 @@ namespace AppliedSystems.Tam.Ui.Tests
                 UIPersonalLinesWindow.UIHouseholdQuoteWindow.UIDoesthepropertyhaveaWindow4.UICheckBox("Does the property have a burglar alarm?");
             WinCheckBox uIIsthereanalarmmainteCheckBox =
                 UIPersonalLinesWindow.UIHouseholdQuoteWindow.UIIsthereanalarmmainteWindow.UICheckBox("Is there an alarm maintenance agreement? ");
-            WinCheckBox uIDoesthepropertyhaveaCheckBox5 =
-                UIPersonalLinesWindow.UIHouseholdQuoteWindow.UIDoesthepropertyhaveaWindow5.UICheckBox("Does the property have a safe?");
+            WinCheckBox uIDoesthepropertyhaveaCheckBox5 = UIPersonalLinesWindow.UIHouseholdQuoteWindow.UIDoesthepropertyhaveaWindow5.UICheckBox("Does the property have a safe?");
             WinComboBox alarmType = UIPersonalLinesWindow.UIHouseholdQuoteWindow.UIItemWindow12.UIItemComboBox;
             WinComboBox safeType = UIPersonalLinesWindow.UIHouseholdQuoteWindow.UIItemWindow13.UIItemComboBox;
             WinButton uINextButton3 = UIPersonalLinesWindow.UIHouseholdQuoteWindow.UINextWindow3.UINextButton;
@@ -1627,8 +1636,7 @@ namespace AppliedSystems.Tam.Ui.Tests
 
         private void HomeProposerFullStep6()
         {
-            WinCheckBox uIIsthepropertyusedforCheckBox =
-                UIPersonalLinesWindow.UIHouseholdQuoteWindow.UIIsthepropertyusedforWindow.UICheckBox("Is the property used for business?");
+            WinCheckBox uIIsthepropertyusedforCheckBox = UIPersonalLinesWindow.UIHouseholdQuoteWindow.UIIsthepropertyusedforWindow.UICheckBox("Is the property used for business?");
             WinCheckBox uIIsthebusinessuseforcCheckBox =
                 UIPersonalLinesWindow.UIHouseholdQuoteWindow.UIIsthebusinessuseforcWindow.UICheckBox("Is the business use for clerical purposes only?");
             WinButton generalNext = UIPersonalLinesWindow.UIHouseholdQuoteWindow.UINextWindow6.UINextButton;
@@ -1642,16 +1650,6 @@ namespace AppliedSystems.Tam.Ui.Tests
             Mouse.Click(generalNext, new Point(25, 9));
 
             uIHavespecialconditionCheckBox.Checked = HouseholdQuoteParams.UIHavespecialconditionCheckBoxChecked;
-        }
-
-        public void HomeSelectPolicy()
-        {
-            WinClient uIQuotesResultsClient = UIQuotesResultsWindow.UIItemWindow.UIClient();
-
-            Mouse.Click(uIQuotesResultsClient, new Point(30, 30));
-
-            Playback.Wait(1000);
-            Mouse.Move(new Point(500, 500));
         }
     }
 }

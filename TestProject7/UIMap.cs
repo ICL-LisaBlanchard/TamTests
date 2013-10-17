@@ -2291,7 +2291,7 @@
                     Mouse.Click(uIOKButton2);
                 }
 
-                if (name.Contains("Select Tam Activity Type for FSA "))
+                if (name.Contains("Select Tam Activity Type"))
                 {
                     uIItemList3.SelectedItemsAsString = SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString;
                     Mouse.Click(uIOKButton3, new Point(27, 8)); 
