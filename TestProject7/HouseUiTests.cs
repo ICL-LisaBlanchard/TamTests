@@ -52,17 +52,17 @@
         [TestMethod]
         public void HouseOverridePremium()
         {
-            const int OverridePremium = 19999;
+            const int overridePremium = 19999;
             SetOfficeRegKeys();
             House.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
-            House.HomeChangePremium(OverridePremium);
+            House.HomeChangePremium(overridePremium);
             SetPolicyDetails();
             House.HomeCheckNewPremium();
 
             House.OpenTransList(Transactions.GetTransactionDictionary("18866.98"));
-            House.CheckPremiumInQuoteDocument(Docs.DocumentsForHhNewBusinessQuote, OverridePremium);
+            House.CheckPremiumInQuoteDocument(Docs.DocumentsForHhNewBusinessQuote, overridePremium);
         }
 
         [TestMethod]
@@ -81,7 +81,7 @@
         }
 
         [TestMethod]
-        public void HouseCopyRiskQTE()
+        public void HouseCopyRiskQte()
         {
             SetOfficeRegKeys();
             House.CustomerCode = Customer.AddPolicy();
@@ -94,7 +94,7 @@
         }
 
         [TestMethod]
-        public void HouseMTAExit()
+        public void HouseMtaExit()
         {
             SetOfficeRegKeys();
             House.CustomerCode = Customer.AddPolicy();
@@ -112,7 +112,7 @@
         }
 
         [TestMethod]
-        public void HouseMTAAccept()
+        public void HouseMtaAccept()
         {
             SetOfficeRegKeys();
             House.CustomerCode = Customer.AddPolicy();
@@ -133,7 +133,7 @@
         }
 
         [TestMethod]
-        public void HouseCopyMTA()
+        public void HouseCopyMta()
         {
             SetOfficeRegKeys();
             House.CustomerCode = Customer.AddPolicy();
@@ -153,7 +153,7 @@
         }
 
         [TestMethod]
-        public void HouseMTAtoMTA()
+        public void HouseMtAtoMta()
         {
             SetOfficeRegKeys();
             // create new policy
