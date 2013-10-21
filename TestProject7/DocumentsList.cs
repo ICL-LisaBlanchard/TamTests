@@ -34,6 +34,22 @@
             }
         }
 
+        public List<Document> DocumentsForHhDirectDebit
+        {
+            get
+            {
+                return new List<Document>
+                           {
+                               new Document("HHQuotesList", 1),
+                               new Document("HHQuote", 1),
+                               new Document("Schedule", 1),
+                               new Document("Proposal", 1),
+                               new Document("FSA", 1),
+                               new Document("Direct Debit", 1)
+                           };
+            }
+        }
+
         public List<Document> DocumentsForHouseAmendRiskNewScheme
         {
             get
@@ -92,6 +108,23 @@
                                new Document("Proposal", 1),
                                new Document("Certificate", 1),
                                new Document("FSA", 1)
+                           };
+            }
+        }
+
+        public List<Document> DocumentsForMotoNewBusinessQuoteDd
+        {
+            get
+            {
+                return new List<Document>
+                           {
+                               new Document("QuotesList", 1),
+                               new Document("Quote", 1),
+                               new Document("Schedule", 1),
+                               new Document("Proposal", 1),
+                               new Document("Certificate", 1),
+                               new Document("FSA", 1),
+                               new Document("Direct Debit", 1)
                            };
             }
         }

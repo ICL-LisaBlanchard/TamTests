@@ -34,6 +34,8 @@
 
         protected UIMap Map;
 
+        protected ExpectedAddress ExpectedAddress;
+
         public TestContext TestContext
         {
             get
@@ -72,9 +74,10 @@
             CloseProcess("Regress_IETam_Policy");
             CloseProcess("RLoader");
 
+            Tests.Renewals.CleanRenewals();
+
             UiMap.CleanDocuments();
             Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
-            //Playback.PlaybackSettings.DelayBetweenActions = 700;
             TestName = TestContext.TestName;
             TestLinkInitialize();
 
@@ -115,18 +118,49 @@
         {
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ourhighway");
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ourhighway");
+            SetAddressInsurecom();
         }
 
         public void SetOurMMaRegKeys()
         {
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ourmma");
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ourmma");
+            SetAddressDummy();
         }
 
         public void SetOfficeRegKeys()
         {
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "office");
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "office");
+            SetAddressDummy();
+        }
+
+        public void SetOurAxaRegKeys()
+        {
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ouraxa");
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ouraxa");
+            SetAddressDummy();
+        }
+
+        public void SetOurAllianzRegKeys()
+        {
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ourcornhill");
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ourcornhill");
+            SetAddressDummy();
+        }
+
+        public void SetOurAnsvarRegKeys()
+        {
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ouransvar");
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ouransvar");
+            SetAddressDummy();
+        }
+
+        public void SetOurZurichRegKeys()
+        {
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ourzurich");
+            RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ourzurich");
+            SetAddressDummy();
         }
 
         public static void CloseProcess(string name)
@@ -235,16 +269,14 @@
             UiMap.RenewalCheckRecord(1, customerCode);
         }
 
-        protected string RegressApp(string policyType)
+        protected void RegressApp(string policyType)
         {
             UiMap.HighlightCustomer();
-            string customerCode = UiMap.GetCustomerCode();
-            UiMap.RegressApp(customerCode);
+            UiMap.RegressApp(Moto.CustomerCode);
             UiMap.RegressAppPolicyTypeSelection(policyType);
             UiMap.RegressAppDate();
             UiMap.RegressAppFinish();
             UiMap.CloseRegressApp();
-            return customerCode;
         }
 
         protected void RenewalLoader()
@@ -255,16 +287,16 @@
             UiMap.RenewalLoaderClose();
         }
 
-        protected void SiteForRenewal(string policyNumber, string policyType, string renewalPremium)
+        protected void SiteForRenewal(string policyNumber, string policyType, string renewalPremium, string insurer = "")
         {
             UiMap.OpenBrowser2();
             if (policyType == "Household")
             {
-                House.HomeSiteRenewal(policyNumber, renewalPremium);
+                House.HomeSiteRenewal(policyNumber, renewalPremium, insurer);
             }
             else
             {
-                Moto.MotoCreateSiteRenewal(policyNumber, renewalPremium);
+                Moto.MotoCreateSiteRenewal(policyNumber, renewalPremium, insurer);
             }
 
             Playback.Wait(5000);
@@ -272,19 +304,12 @@
             UiMap.ChangeDatePolicy();
         }
 
-        protected void Renewals(string policyNumber, string policyType, string renewalPremium)
+        protected void Renewals(string policyNumber, string policyType, string renewalPremium, string insurer = "")
         {
-            //site for renewal
-            SiteForRenewal(policyNumber, policyType, renewalPremium);
-
-            //regress app
-            string customerCode = RegressApp(policyType);
-
-            //renewal loader
+            this.SiteForRenewal(policyNumber, policyType, renewalPremium, insurer);
+            RegressApp(policyType);
             RenewalLoader();
-
-            // renewal module
-            RenewalModule(customerCode, policyType);
+            RenewalModule(Moto.CustomerCode, policyType);
         }
 
         protected void RenewalsInvite(bool selectAlternative)
@@ -297,6 +322,16 @@
 
             House.RenewalModuleRenew1();
             House.RenewalModuleClose();
+        }
+
+        private void SetAddressInsurecom()
+        {
+            ExpectedAddress = new ExpectedAddress("Insurecom Ltd", "171-173 Preston Road");
+        }
+
+        private void SetAddressDummy()
+        {
+            ExpectedAddress = new ExpectedAddress("Red House", "Blue Square");
         }
     }
 }

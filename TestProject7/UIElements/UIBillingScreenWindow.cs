@@ -23,13 +23,25 @@
 
         #region Properties
 
-        public UIItemWindow UIItemWindow
+        public UIItemWindow UIItemWindowCashBilling
         {
             get
             {
                 if ((mUIItemWindow == null))
                 {
                     mUIItemWindow = new UIItemWindow(this, controlId: "1", instance: "25");
+                }
+                return mUIItemWindow;
+            }
+        }
+
+        public UIItemWindow UIItemWindowDdBilling
+        {
+            get
+            {
+                if ((mUIItemWindow == null))
+                {
+                    mUIItemWindow = new UIItemWindow(this, "1", "26");
                 }
                 return mUIItemWindow;
             }

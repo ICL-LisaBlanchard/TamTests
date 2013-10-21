@@ -2,11 +2,11 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics;
     using System.Drawing;
     using System.Globalization;
     using System.IO;
     using System.Linq;
-    using System.Threading;
     using System.Windows.Input;
 
     using AppliedSystems.Tam.Ui.Tests.Assertions;
@@ -672,13 +672,16 @@
         {
             #region Variable Declarations
 
-            WinButton uICancelButton = UICustomertxt1tdsfsWindow.UINewCustomerDetailWindow.UICancelWindow.UICancelButton;
-            WinButton uIItemButton = UICustomertxt1tdsfsWindow.UIItemWindow.UIItemButton;
-            WinButton uIDetailButton = UICustomertxt1tdsfsWindow.UIPolicyListWindow.UIDetailWindow.UIDetailButton;
+            WinButton uICancelButton = this.UICustomerListWindow.UINewCustomerDetailWindow.UICancelWindow.UICancelButton;
+            WinButton uIItemButton = this.UICustomerListWindow.UIPoliciesWindow.UIItemButton;
+            WinButton uIDetailButton = this.UICustomerListWindow.UIPolicyListWindow.UIDetailWindow.UIDetailButton;
+            WinEdit uIItemEdit = this.UICustomerListWindow.UISearchWindow.UIItemEdit;
 
             #endregion
 
             Mouse.Click(uICancelButton, new Point(31, 15));
+
+            uIItemEdit.Text = CustomerCode;
 
             Mouse.Click(uIItemButton, new Point(27, 23));
 
@@ -689,12 +692,21 @@
         {
             #region Variable Declarations
 
-            WinClient uIQuoteResultsClient = UIQuoteResultsWindow.UIItemWindow.UIClient();
+            WinClient uIQuoteResultsClient1 = UIQuoteResultsWindow.UIItemWindow.UIClient();
+            WinClient uIQuoteResultsClient2 = UIQuoteResultsWindow.UIItemWindow2.UIClient();
 
             #endregion
 
-            Mouse.Click(uIQuoteResultsClient, new Point(30, 60));
-
+            try
+            {
+                Mouse.Click(uIQuoteResultsClient1, new Point(224, 39));
+            }
+            catch (Exception)
+            {
+                 Mouse.Click(uIQuoteResultsClient2, new Point(224, 39));
+              
+            }
+           
             Playback.Wait(1000);
 
             Mouse.Move(new Point(500, 500));
@@ -705,22 +717,20 @@
         /// <summary>
         ///     FinishQuote
         /// </summary>
-        public void FinishQuote()
+        /// <param name="paymentType"></param>
+        public void FinishQuote(string paymentType)
         {
             #region Variable Declarations
 
             WinControl uIYesButton = UIInsurEtamWindow1.UIYesWindow.UIYesButton;
-            WinControl uIOKButton = UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
             WinControl uIOKButton1 = UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
             WinControl uIConfirmButton = UIPolicyDateTimeWindow.UIConfirmWindow.UIConfirmButton;
 
             #endregion
 
-            //Mouse.Click(UIInsurEtamWindow1);
-
             Mouse.Click(uIYesButton);
 
-            Mouse.Click(uIOKButton, new Point(40, 10));
+            PaymentMethod(paymentType);
 
             Mouse.Click(uIOKButton1, new Point(54, 10));
 
@@ -818,6 +828,19 @@
             #endregion
 
             Mouse.Click(uIExitButton, new Point(35, 20));
+        }
+
+        public void PaymentMethod(string type)
+        {
+            WinControl uIPaymentOkButton = UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
+            WinRadioButton uIDirectDebitRadioButton = this.UIPaymentMethodsWindow.UIDirectDebitWindow.UIRadioButton("Direct Debit");
+
+            if (type == "dd")
+            {
+                Mouse.Click(uIDirectDebitRadioButton);
+            }
+
+            Mouse.Click(uIPaymentOkButton);
         }
 
         public void ClosePolicy()
@@ -949,7 +972,7 @@
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = UICustomertxt1tdsfsWindow.UINewPolicyDetailWindow.UIItemWindow11.UIItemEdit;
+            WinEdit uIItemEdit = this.UICustomerListWindow.UINewPolicyDetailWindow.UIItemWindow11.UIItemEdit;
 
             #endregion
 
@@ -960,7 +983,7 @@
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = UICustomertxt1tdsfsWindow.UINewPolicyDetailWindow.UIItemWindow11.UIItemEdit;
+            WinEdit uIItemEdit = this.UICustomerListWindow.UINewPolicyDetailWindow.UIItemWindow11.UIItemEdit;
 
             #endregion
 
@@ -984,8 +1007,8 @@
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = UICustomertxt1tdsfsWindow.UINewPolicyDetailWindow.UIItemWindow1.UIItemEdit;
-            WinControl uIOKButton = UICustomertxt1tdsfsWindow.UINewPolicyDetailWindow.UIOKWindow.UIOKButton;
+            WinEdit uIItemEdit = this.UICustomerListWindow.UINewPolicyDetailWindow.UIItemWindow1.UIItemEdit;
+            WinControl uIOKButton = this.UICustomerListWindow.UINewPolicyDetailWindow.UIOKWindow.UIOKButton;
 
             #endregion
 
@@ -1019,8 +1042,8 @@
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = UICustomertxt1tdsfsWindow.UINewPolicyDetailWindow.UIItemWindow1.UIItemEdit;
-            WinControl uIOKButton = UICustomertxt1tdsfsWindow.UINewPolicyDetailWindow.UIOKWindow.UIOKButton;
+            WinEdit uIItemEdit = this.UICustomerListWindow.UINewPolicyDetailWindow.UIItemWindow1.UIItemEdit;
+            WinControl uIOKButton = this.UICustomerListWindow.UINewPolicyDetailWindow.UIOKWindow.UIOKButton;
 
             #endregion
 
@@ -1121,9 +1144,7 @@
             }
             catch
             {
-
             }
-
 
             uIDeferPrintingCheckBox.Checked = CommonParams.UIDeferPrintingCheckBoxChecked;
 
@@ -1135,9 +1156,7 @@
 
             Mouse.Click(uIOKButton2, new Point(46, 16));
 
-
             Mouse.Click(uIOKButton3, new Point(47, 24));
-
 
             SelectTAMActivities2();
         }
@@ -1219,13 +1238,15 @@
 
             if (continueOnError)
             {
-                Playback.PlaybackSettings.ContinueOnError = true;
+                try
+                {
+                    Mouse.Click(uIOKButton, new Point(36, 13));
 
-                Mouse.Click(uIOKButton, new Point(36, 13));
-
-                Mouse.Click(uIExitButton, new Point(33, 11));
-
-                Playback.PlaybackSettings.ContinueOnError = false;
+                    Mouse.Click(uIExitButton, new Point(33, 11));
+                }
+                catch
+                {
+                }
             }
 
             Mouse.Click(uIediMatchButton, new Point(59, 10));
@@ -1234,13 +1255,15 @@
 
             Mouse.Click(uIOKButton, new Point(46, 21));
 
-            Playback.PlaybackSettings.ContinueOnError = true;
+            try
+            {
+                Mouse.Click(uILogandClearButton, new Point(50, 15));
 
-            Mouse.Click(uILogandClearButton, new Point(50, 15));
-
-            Mouse.Click(uIOKButton, new Point(50, 7));
-
-            Playback.PlaybackSettings.ContinueOnError = false;
+                Mouse.Click(uIOKButton, new Point(50, 7));
+            }
+            catch
+            {
+            }
         }
 
         /// <summary>
@@ -1304,11 +1327,13 @@
 
             #endregion
 
-            Playback.PlaybackSettings.ContinueOnError = true;
-
-            Mouse.Click(uIOKButton, new Point(45, 13));
-
-            Playback.PlaybackSettings.ContinueOnError = false;
+            try
+            {
+                Mouse.Click(uIOKButton);
+            }
+            catch
+            {
+            }
         }
 
         /// <summary>
@@ -1513,7 +1538,7 @@
             #region Variable Declarations
 
             //WinEdit uIItemEdit = UIPolicyrtyertWindow.UIBillingScreenMotoTestWindow.UIItemWindow.UIItemEdit;
-            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
+            var uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow;
 
             #endregion
 
@@ -1521,10 +1546,20 @@
             Mouse.Click(uIItemEdit, new Point(45, 4));
         }
 
-        public string CheckPolicyPremium()
+        public string CheckPolicyPremium(string paymentType)
         {
-            HighlightBillingScreen();
-            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
+            //HighlightBillingScreen();
+            WinEdit uIItemEdit;
+            switch (paymentType)
+            {
+                case "dd":
+                    uIItemEdit = (WinEdit) UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowDdBilling.GetChildren()[3];
+                    Mouse.Click(uIItemEdit);
+                    break;
+                default:
+                    uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowCashBilling.UIItemEdit;
+                    break;
+            }
 
             Assert.AreNotEqual("0.00", uIItemEdit.Text);
 
@@ -1557,7 +1592,7 @@
             WinControl uIOKButton1 = UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton2 = UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-           
+
             #endregion
 
             uIDeferPrintingCheckBox.Checked = CommonParams.UIDeferPrintingCheckBoxChecked;
@@ -1572,7 +1607,6 @@
             uIAddActivityCheckBox.Checked = CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIOKButton2, new Point(44, 7));
-
 
             SelectTAMActivities3();
         }
@@ -1721,20 +1755,6 @@
             Mouse.Click(uIPrintQuoteButton, new Point(49, 10));
         }
 
-        public void PostcodeLookup()
-        {
-            #region Variable Declarations
-
-            WinEdit uIItemEdit = UIProposerDetailsWindow.UIItemWindow4.UIItemEdit;
-            WinEdit uIItemEdit1 = UIProposerDetailsWindow.UIItemWindow5.UIItemEdit;
-
-            #endregion
-
-            Assert.AreEqual(PostcodeLookupExpectedValues.AddressLine1, uIItemEdit.Text);
-
-            Assert.AreEqual(PostcodeLookupExpectedValues.AddressLine2, uIItemEdit1.Text);
-        }
-
         public void MTAMessageBeforeCurrent()
         {
             #region Variable Declarations
@@ -1743,7 +1763,8 @@
 
             #endregion
 
-            Assert.AreEqual(MTAMessageBeforeCurrentExpectedValues.UIDateBeforeCurrentMTATextDisplayText, uIDateBeforeCurrentMTAText.DisplayText, uIDateBeforeCurrentMTAText.ToString());
+            Assert.AreEqual(
+                MTAMessageBeforeCurrentExpectedValues.UIDateBeforeCurrentMTATextDisplayText, uIDateBeforeCurrentMTAText.DisplayText, uIDateBeforeCurrentMTAText.ToString());
         }
 
         public void MTAEffectiveDatesCancel()
@@ -1833,7 +1854,7 @@
             Mouse.Click(uIOKButton, new Point(40, 5));
         }
 
-        public void RegressApp(string customer)
+        public void RegressApp(string customerCode)
         {
             #region Variable Declarations
 
@@ -1844,7 +1865,7 @@
 
             ApplicationUnderTest.Launch(RegressAppParams.ExePath, RegressAppParams.AlternateExePath);
 
-            uIItemEdit.Text = customer;
+            uIItemEdit.Text = customerCode;
 
             uIItemEdit1.Text = RegressAppParams.UIItemEditText1;
         }
@@ -1863,7 +1884,6 @@
             }
 
             Mouse.Click(tamXmlButton);
-
 
             for (int i = 0; i < selectListItems2; i++)
             {
@@ -1970,10 +1990,20 @@
             }
         }
 
-        public void CheckPremiumInQuoteDocument(List<Document> expectedDocs, double overridePremium = 0.00, double originalPremium = 0.00)
+        public void CheckPremiumInQuoteDocument(List<Document> expectedDocs, string paymentType, double overridePremium = 0.00, double originalPremium = 0.00)
         {
             WinClient uIBillingScreenClient = UIPolicyautotestWindow.UIBillingScreenWindow.UIPolicyDocumentsWindow.UIClient();
-            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit;
+            switch (paymentType)
+            {
+                case "dd":
+                    uIItemEdit = (WinEdit)UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowDdBilling.GetChildren()[3];
+                    break;
+                default:
+                    uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowCashBilling.UIItemEdit;
+                    break;
+            }
+
             WinClient uIPolicyAttachmentsClient = UIPolicyAttachmentsWindow.UIItemWindow.UIClient();
 
             WinButton uIDetailButton = UIPolicyAttachmentsWindow.UIOptionsWindow.UIDetailButton;
@@ -2049,12 +2079,13 @@
         public void CheckCorrectDocumentPresent(List<Document> expectedDocs)
         {
             WinClient uIBillingScreenClient = UIPolicyautotestWindow.UIBillingScreenWindow.UIPolicyDocumentsWindow.UIClient();
-            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowCashBilling.UIItemEdit;
             WinClient uIPolicyAttachmentsClient = UIPolicyAttachmentsWindow.UIItemWindow.UIClient();
 
             WinButton uIDetailButton = UIPolicyAttachmentsWindow.UIOptionsWindow.UIDetailButton;
             WinEdit checkFileName = UIAttachmentDetailWindow.UIItemWindow.UIItemEdit;
             WinButton uICancelButton = UIAttachmentDetailWindow.UICancelWindow.UICancelButton;
+            WinButton uICancelButton2 = UIPolicyAttachmentsWindow.UIOptionsWindow.UICancelButton;
 
             Mouse.Click(uIItemEdit);
 
@@ -2080,6 +2111,8 @@
             }
 
             CheckDocsList(expectedDocs);
+
+            Mouse.Click(uICancelButton2);
         }
 
         public void CheckDocsList(IEnumerable<Document> expectedDocs)
@@ -2125,6 +2158,89 @@
             }
             Image image = UIInsurEtamWindow.UIQuotesWindow.CaptureImage();
             image.Save(Configs.ScreenshotPath + expectedDate + ".jpg");
+        }
+
+        public void ImportToTamOptionsOnce(string whoToSelect)
+        {
+            WinList uIItemList = UISelectTaminsurerforiWindow.UIItemWindow.UIItemList;
+            WinButton uIOKButton = UISelectTaminsurerforiWindow.UIItemWindow1.UIClient().UIOKButton;
+            WinList uiTransToInsert = UITransactiontoinsertWindow.UIItemWindow.UIItemList;
+            WinButton uIOKButton6 = UITransactiontoinsertWindow.UIItemWindow.UIOKButton;
+            WinList uIItemList2 = UIPleaseselectWHOtofolWindow.UIItemWindow.UIItemList;
+            WinButton uIOKButton2 = UIPleaseselectWHOtofolWindow.UIItemWindow1.UIClient().UIOKButton;
+            WinList uIItemList3 = UISelectTamActivityTypWindow.UIItemWindow.UIItemList;
+            WinButton uIOKButton3 = UISelectTamActivityTypWindow.UIItemWindow1.UIClient().UIOKButton;
+
+            try
+            {
+                WinWindow win = TopWindow;
+                string name = win.GetProperty("Name").ToString();
+                if (name.Contains("Select Tam insurer for insurer code"))
+                {
+                    uIItemList.SelectedItemsAsString = uIItemList.Items.First().Name;
+                    Mouse.Click(uIOKButton);
+                }
+
+                if (name.Contains("Transaction to insert"))
+                {
+                    uiTransToInsert.SelectedItemsAsString = "NEW";
+                    Mouse.Click(uIOKButton6);
+                }
+
+                if (name.Contains("Please select WHO to follow up"))
+                {
+                    uIItemList2.SelectedItemsAsString = uIItemList2.Items.First().Name;
+
+                    Mouse.Click(uIOKButton2);
+                }
+
+                if (name.Contains("Select Tam Activity Type"))
+                {
+                    uIItemList3.SelectedItemsAsString = SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString;
+                    Mouse.Click(uIOKButton3, new Point(27, 8));
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
+        }
+
+        public string GetPolicyNumber()
+        {
+            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow2.UIItemEdit;
+            WinEdit uIItemEdit2 = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowCashBilling.UIItemEdit;
+
+            string policyNo = uIItemEdit.GetProperty("Text").ToString();
+            Debug.WriteLine("Customer Code : " + CustomerCode + ", Policy No: " + policyNo);
+            Mouse.Click(uIItemEdit2, new Point(45, 4));
+
+            return policyNo;
+        }
+
+        public void AmendedRenewalWindow()
+        {
+            WinButton uISaveButton = this.UISupercededRenewalInvWindow.UISaveWindow.UISaveButton;
+            WinButton uICancelButton = this.UISavetheamendedrenewaWindow.UICancelWindow.UICancelButton;
+
+            Mouse.Click(uISaveButton, new Point(43, 13));
+
+            Mouse.Click(uICancelButton, new Point(34, 16));
+        }
+
+        protected void SelectTAMActivities1()
+        {
+            SelectTamInsurersAndActivity(selectListItems1: 1);
+        }
+
+        protected void SelectTAMActivities2()
+        {
+            SelectTamInsurersAndActivity(selectListItems1: 2);
+        }
+
+        protected void SelectTAMActivities3()
+        {
+            SelectTamInsurersAndActivity(selectListItems1: 3);
         }
 
         private static void IncreaseDocsListCount(IEnumerable<Document> expectedDocs, string docName)
@@ -2181,9 +2297,7 @@
             }
             catch (Exception)
             {
-
             }
-
         }
 
         private void CheckPremiumInWordDoc(double premium)
@@ -2255,80 +2369,6 @@
             Mouse.Click(uICancelButton, new Point(50, 15));
 
             Mouse.Click(uICloseButton, new Point(22, 8));
-        }
-
-        public void ImportToTamOptionsOnce(string whoToSelect)
-        {
-            WinList uIItemList = UISelectTaminsurerforiWindow.UIItemWindow.UIItemList;
-            WinButton uIOKButton = UISelectTaminsurerforiWindow.UIItemWindow1.UIClient().UIOKButton;
-            WinList uiTransToInsert = UITransactiontoinsertWindow.UIItemWindow.UIItemList;
-            WinButton uIOKButton6 = UITransactiontoinsertWindow.UIItemWindow.UIOKButton;
-            WinList uIItemList2 = UIPleaseselectWHOtofolWindow.UIItemWindow.UIItemList;
-            WinButton uIOKButton2 = UIPleaseselectWHOtofolWindow.UIItemWindow1.UIClient().UIOKButton;
-            WinList uIItemList3 = UISelectTamActivityTypWindow.UIItemWindow.UIItemList;
-            WinButton uIOKButton3 = UISelectTamActivityTypWindow.UIItemWindow1.UIClient().UIOKButton;
-
-            try
-            {
-                WinWindow win = TopWindow;
-                string name = win.GetProperty("Name").ToString();
-                if (name.Contains("Select Tam insurer for insurer code"))
-                {
-                    uIItemList.SelectedItemsAsString = uIItemList.Items.First().Name;
-                    Mouse.Click(uIOKButton);
-                }
-
-                if (name.Contains("Transaction to insert"))
-                {
-                    uiTransToInsert.SelectedItemsAsString = "NEW";
-                    Mouse.Click(uIOKButton6);
-                }
-
-                if (name.Contains("Please select WHO to follow up"))
-                {
-                    uIItemList2.SelectedItemsAsString = uIItemList2.Items.First().Name;
-
-                    Mouse.Click(uIOKButton2);
-                }
-
-                if (name.Contains("Select Tam Activity Type"))
-                {
-                    uIItemList3.SelectedItemsAsString = SelectTamInsurersAndActivityParams.UIItemListSelectedItemsAsString;
-                    Mouse.Click(uIOKButton3, new Point(27, 8)); 
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine(ex.ToString());
-            }
-        }
-
-        protected void SelectTAMActivities1()
-        {
-            SelectTamInsurersAndActivity(selectListItems1: 1);
-        }
-
-        protected void SelectTAMActivities2()
-        {
-            SelectTamInsurersAndActivity(selectListItems1: 2);
-        }
-
-        protected void SelectTAMActivities3()
-        {
-            SelectTamInsurersAndActivity(selectListItems1: 3);
-        }
-
-        public string GetPolicyNumber()
-        {
-            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow2.UIItemEdit;
-            WinEdit uIItemEdit2 = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
-
-            string policyNo = uIItemEdit.GetProperty("Text").ToString();
-            System.Diagnostics.Debug.WriteLine("Customer Code : " + CustomerCode + ", Policy No: " + policyNo);
-            Mouse.Click(uIItemEdit2, new Point(45, 4));
-
-            return policyNo;
         }
     }
 }

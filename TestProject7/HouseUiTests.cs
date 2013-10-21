@@ -2,6 +2,8 @@
 {
     using System;
 
+    using AppliedSystems.Tam.Ui.Tests.Assertions;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -12,6 +14,8 @@
 
         private const string RenewalPremium = "1232";
 
+        private readonly AddressLookupExpectedValues addressLookupParams = new AddressLookupExpectedValues();
+
         [TestMethod]
         public void HouseCreateQuote()
         {
@@ -19,8 +23,8 @@
             House.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             string premium = CreateNewPolicy();
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium));
-            House.CheckPremiumInQuoteDocument(Docs.DocumentsForHhNewBusinessQuote);
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash"));
+            House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhNewBusinessQuote, "cash");
         }
 
         [TestMethod]
@@ -46,7 +50,7 @@
             House.HomeAcceptQuote1();
             House.HomeCloseOpenPolicyList();
             House.HomeOpenPolicy();
-            House.CheckPolicyPremium();
+            House.CheckPolicyPremium("cash");
         }
 
         [TestMethod]
@@ -61,8 +65,8 @@
             SetPolicyDetails();
             House.HomeCheckNewPremium();
 
-            House.OpenTransList(Transactions.GetTransactionDictionary("18866.98"));
-            House.CheckPremiumInQuoteDocument(Docs.DocumentsForHhNewBusinessQuote, OverridePremium);
+            House.OpenTransList(Transactions.GetTransactionDictionary("18866.98", "cash"));
+            House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhNewBusinessQuote, "cash", overridePremium: OverridePremium);
         }
 
         [TestMethod]
@@ -72,7 +76,7 @@
             House.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
-            House.HomeAcceptPolicy();
+            House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
             House.HomeCloseOpenPolicyList();
             House.HomeCopyRisk();
@@ -100,7 +104,7 @@
             House.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
-            House.HomeAcceptPolicy();
+            House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
             House.HomeCloseOpenPolicyList();
             House.HomeOpenQuote();
@@ -118,7 +122,7 @@
             House.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
-            House.HomeAcceptPolicy();
+            House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
             House.HomeCloseOpenPolicyList();
             House.HomeOpenQuote();
@@ -139,7 +143,7 @@
             House.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
-            House.HomeAcceptPolicy();
+            House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
             House.HomeCloseOpenPolicyList();
             House.HomeOpenQuote();
@@ -160,7 +164,7 @@
             House.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
-            House.HomeAcceptPolicy();
+            House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
             House.HomeCloseOpenPolicyList();
             //MTA
@@ -196,7 +200,7 @@
             House.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
-            House.HomeAcceptPolicy();
+            House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
             House.HomeCloseOpenPolicyList();
             //cancel policy
@@ -222,7 +226,7 @@
             House.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
-            House.HomeAcceptPolicy();
+            House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
             House.HomeCloseOpenPolicyList();
             //cancel policy
@@ -257,7 +261,7 @@
             House.PublicCreditCheckOk();
             House.HomeSelectPolicy();
             SetPolicyDetails();
-            string originalPremium = House.CheckPolicyPremium();
+            string originalPremium = House.CheckPolicyPremium("cash");
             string policyNumber = Moto.GetPolicyNumber();
 
             //site for renewal
@@ -268,20 +272,20 @@
             House.ChangeDatePolicy();
 
             //regress app
-            string customerCode = RegressApp(PolicyType);
+            RegressApp(PolicyType);
 
             //renewal loader
             RenewalLoader();
 
             //  renewal module
-            RenewalModule(customerCode, PolicyType);
+            RenewalModule(Moto.CustomerCode, PolicyType);
             RenewalsInvite(false);
 
             House.CloseAndOpenPolicyList();
             House.RenewalCheckStatus("REN");
-            var premium = House.CheckPolicyPremium();
-            House.CheckPremiumInQuoteDocument(Docs.DocumentsForHhRenewalBefore, originalPremium: double.Parse(originalPremium));
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, originalPremium));
+            var premium = House.CheckPolicyPremium("cash");
+            House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhRenewalBefore, "cash", originalPremium: double.Parse(originalPremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalPremium));
             House.ClosePolicy();
 
             //mta1
@@ -428,8 +432,8 @@
             House.PublicCreditCheckOk();
             House.HomeSelectPolicy();
             SetPolicyDetails();
-            string originalpremium = House.CheckPolicyPremium();
-            string policyNumber = Moto.GetPolicyNumber();
+            string originalpremium = House.CheckPolicyPremium("cash");
+            string policyNumber = House.GetPolicyNumber();
 
             Renewals(policyNumber, PolicyType, RenewalPremium);
 
@@ -438,6 +442,7 @@
             House.HomeAmendSelecPolicy(true);
             House.HomeAmendRenewFinish();
             //house.EtamOk();
+            House.PaymentMethod("cash");
             House.ConfirmDocuments();
             House.RetrieveResponse();
             House.HomeAmendRenewFinish1();
@@ -445,9 +450,9 @@
 
             House.RenewalModuleClose();
             House.CloseAndOpenPolicyList();
-            House.CheckPremiumInQuoteDocument(Docs.DocumentsForHouseAmendRiskNewScheme, originalPremium: double.Parse(originalpremium));
-            string premium = House.CheckPolicyPremium();
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, originalpremium));
+            House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
+            string premium = House.CheckPolicyPremium("cash");
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalpremium));
             House.RenewalCheckStatus("REW");
             House.ClosePolicy();
 
@@ -520,7 +525,7 @@
             SetPolicyDetails();
 
             string policyNumber = Moto.GetPolicyNumber();
-            string originalpremium = House.CheckPolicyPremium();
+            string originalpremium = House.CheckPolicyPremium("cash");
             Renewals(policyNumber, PolicyType, RenewalPremium);
 
             House.HomeRebroke();
@@ -541,9 +546,9 @@
             House.RenewalModuleClose();
             House.CloseAndOpenPolicyList();
             House.RenewalCheckStatus("REW");
-            House.CheckPremiumInQuoteDocument(Docs.DocumentsForHouseAmendRiskNewScheme, originalPremium: double.Parse(originalpremium));
-            string premium = House.CheckPolicyPremium();
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, originalpremium));
+            House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
+            string premium = House.CheckPolicyPremium("cash");
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalpremium));
             House.ClosePolicy();
         }
 
@@ -585,9 +590,9 @@
             House.RenewalModuleClose();
             Moto.CloseAndOpenPolicyList();
 
-            House.CheckPremiumInQuoteDocument(Docs.DocumentsForHouseAmendRiskNewScheme, originalPremium: double.Parse(originalpremium));
-            string premium = House.CheckPolicyPremium();
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, originalpremium));
+            House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
+            string premium = House.CheckPolicyPremium("cash");
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalpremium));
             House.RenewalCheckStatus("REW");
             House.ClosePolicy();
         }
@@ -628,13 +633,13 @@
         {
             House.HomeSelectPolicy();
             SetPolicyDetails();
-            string premium = House.CheckPolicyPremium();
+            string premium = House.CheckPolicyPremium("cash");
             return premium;
         }
 
         private void SetPolicyDetails()
         {
-            House.HomeAcceptPolicy();
+            House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
             House.HomeCloseOpenPolicyList();
             House.HomeOpenPolicy();
@@ -652,7 +657,8 @@
             }
             else
             {
-                House.HomeAddressLookup();
+
+                House.HomeAddressLookup(addressLookupParams.AddressLine1, addressLookupParams.AddressLine2);
                 House.HomeCreatePolicy();
             }
 
