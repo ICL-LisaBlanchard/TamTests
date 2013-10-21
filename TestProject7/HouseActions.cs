@@ -327,7 +327,7 @@
             WinControl uICancelButton1 = UIPolicyautotestWindow.UIPolicyListWindow.UICancelWindow.UICancelButton;
             WinControl uIItemButton = UIPolicyautotestWindow.UIItemWindow.UIItemButton;
             WinControl uIDetailButton = UIPolicyautotestWindow.UIPolicyListWindow1.UIDetailWindow.UIDetailButton;
-            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowCashBilling.UIItemEdit;
 
             Mouse.Click(uICancelButton, new Point(41, 14));
 
@@ -382,11 +382,10 @@
             Mouse.Click(uIItemEdit, new Point(22, 8));
         }
 
-        public void HomeAcceptPolicy()
+        public void HomeAcceptPolicy(string paymentType)
         {
             WinControl uIAcceptButton = UIQuotesResultsWindow.UIAcceptWindow.UIAcceptButton;
             WinControl uIYesButton = UIInsurEtamWindow1.UIYesWindow.UIYesButton;
-            WinControl uIPaymentOkButton = UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
             WinControl uIConfirmDocsButton = UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
             WinEdit uIItemEdit = UIPolicyDetailConfirmationWindow.UIItemWindow.UIItemEdit;
 
@@ -404,7 +403,7 @@
 
             CancelPrint();
 
-            Mouse.Click(uIPaymentOkButton, new Point(47, 22));
+            PaymentMethod(paymentType);
 
             Mouse.Click(uIConfirmDocsButton, new Point(46, 11));
 
@@ -430,14 +429,14 @@
 
         public void HomeCheckZeroPremium()
         {
-            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowCashBilling.UIItemEdit;
 
             Assert.AreEqual(HomeCheckZeroPremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
 
         public void HomeClickPremium()
         {
-            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowCashBilling.UIItemEdit;
 
             Mouse.Click(uIItemEdit, new Point(24, 5));
         }
@@ -677,14 +676,14 @@
             Assert.AreEqual(HomeMTACopyCheckExpectedValues.JobSector, uIItemComboBox.SelectedItem);
         }
 
-        public void HomeAddressLookup()
+        public void HomeAddressLookup(string addressLine1, string addressLine2)
         {
             WinEdit uIItemEdit = UIInsurEtamWindow.UIQuotesWindow.UIItemWindow6.UIItemEdit;
             WinEdit uIItemEdit1 = UIInsurEtamWindow.UIQuotesWindow.UIItemWindow7.UIItemEdit;
 
-            Assert.AreEqual(AddressLookupExpectedValues.AddressLine1, uIItemEdit.Text);
+            Assert.AreEqual(addressLine1, uIItemEdit.Text);
 
-            Assert.AreEqual(AddressLookupExpectedValues.AddressLine2, uIItemEdit1.Text);
+            Assert.AreEqual(addressLine2, uIItemEdit1.Text);
         }
 
         public void HomeAcceptQuote1()
@@ -710,7 +709,7 @@
             {
             }
 
-            Mouse.Click(uIPaymentOkButton, new Point(35, 17));
+            PaymentMethod("cash");
 
             Mouse.Click(uIConfirmDocsButton, new Point(29, 10));
 
@@ -854,7 +853,7 @@
         public void HomeOpenPolicy()
         {
             WinControl uIDetailButton = UIPolicyautotestWindow.UIPolicyListWindow.UIDetailWindow.UIDetailButton;
-            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowCashBilling.UIItemEdit;
             Debug.WriteLine("Customer Code : " + CustomerCode);
             Mouse.Click(uIDetailButton, new Point(26, 12));
 
@@ -922,7 +921,7 @@
         public void HomeCreatePolicy()
         {
             WinControl uINextButton = UIInsurEtamWindow.UIQuotesWindow.UINextWindow.UINextButton;
-            WinEdit uIItemEdit = UIInsurEtamWindow.UIQuotesWindow.UIItemWindow8.UIItemEdit;
+            WinEdit uiYearPropertyBuilt = UIInsurEtamWindow.UIQuotesWindow.UIItemWindow8.UIItemEdit;
             WinControl uINextButton1 = UIInsurEtamWindow.UIQuotesWindow.UINextWindow1.UINextButton;
             WinControl uINextButton2 = UIInsurEtamWindow.UIQuotesWindow.UINextWindow2.UINextButton;
             WinControl uINextButton3 = UIInsurEtamWindow.UIQuotesWindow.UINextWindow3.UINextButton;
@@ -934,26 +933,30 @@
             WinControl uINextButton6 = UIInsurEtamWindow.UIQuotesWindow.UINextWindow6.UINextButton;
             WinControl uIQuoteButton = UIInsurEtamWindow.UIQuotesWindow.UIQuoteWindow.UIQuoteButton;
             WinControl uInoButton = UICreditCheckWindow.UINoWindow.UINoButton;
+            WinComboBox uiMortgageComboBox = this.UIPersonalLinesWindow.UIHouseholdQuoteWindow.UIItemWindow7.UIItemComboBox;
 
-            Mouse.Click(uINextButton, new Point(19, 6));
+            Mouse.Click(uINextButton);
+      
+            uiMortgageComboBox.SelectedIndex = 5;
 
-            uIItemEdit.Text = HomeCreatePolicyParams.UIItemEditText;
+            uiYearPropertyBuilt.Text = HomeCreatePolicyParams.UIItemEditText;
 
-            Mouse.Click(uINextButton1, new Point(39, 18));
 
-            Mouse.Click(uINextButton2, new Point(39, 18));
+            Mouse.Click(uINextButton1);
 
-            Mouse.Click(uINextButton3, new Point(39, 18));
+            Mouse.Click(uINextButton2);
+
+            Mouse.Click(uINextButton3);
 
             uIItemEdit1.Text = HomeCreatePolicyParams.UIItemEditText1;
 
             uIItemEdit2.Text = HomeCreatePolicyParams.UIItemEditText2;
 
-            Mouse.Click(uINextButton4, new Point(42, 17));
+            Mouse.Click(uINextButton4);
 
             uIItemEdit4.Text = HomeCreatePolicyParams.UIItemEditText4;
 
-            Mouse.Click(uINextButton5, new Point(16, 13));
+            Mouse.Click(uINextButton5);
 
             Mouse.Click(uINextButton6, new Point(31, 11));
 
@@ -1092,7 +1095,7 @@
 
         public void HomeAmendRisk()
         {
-            WinControl uIAmendRiskButton = UIAUTO2251001Window.UIAmendRiskWindow.UIAmendRiskButton;
+            WinControl uIAmendRiskButton = this.UiAuto1Window.UIAmendRiskWindow.UIAmendRiskButton;
             WinEdit uIItemEdit = UIHouseholdRenewalsWindow.UIItemWindow.UIItemEdit;
             WinControl uINextButton = UIHouseholdRenewalsWindow.UINextWindow.UINextButton;
             WinControl uINextButton1 = UIHouseholdRenewalsWindow.UINextWindow1.UINextButton;
@@ -1160,16 +1163,38 @@
             SelectTAMActivities3();
         }
 
-        public void HomeAmendRenewFinish()
+        public void HomeAmendRenewFinish(string paymentType = "cash")
         {
             WinControl uIRenewPolicyButton = UIHouseholdRenewalsResultsWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinControl uIYesButton = UIConfirmWindow.UIYesWindow.UIYesButton;
+            WinControl uIokButton = UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
+            WinCheckBox uIDeferPrintingCheckBox = UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
+            WinControl uIokButton1 = UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
+            WinControl uIokButton2 = UIInsurEtamWindow1.UIOKWindow.UIOKButton;
+            WinCheckBox uIAddActivityCheckBox = UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
+            WinControl uIokButton3 = UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
 
-            Mouse.Click(uIRenewPolicyButton, new Point(52, 9));
+            Mouse.Click(uIRenewPolicyButton);
 
-            Mouse.Click(uIYesButton, new Point(55, 11));
+            Mouse.Click(uIYesButton);
 
-            CancelPrint();
+            PaymentMethod(paymentType);
+
+            Mouse.Click(uIYesButton);
+
+            Mouse.Click(uIokButton);
+
+            uIDeferPrintingCheckBox.Checked = CommonParams.UIDeferPrintingCheckBoxChecked;
+
+            Mouse.Click(uIokButton1, new Point(74, 19));
+
+            Mouse.Click(uIokButton2, new Point(64, 14));
+
+            uIAddActivityCheckBox.Checked = CommonParams.UIAddActivityCheckBoxChecked;
+
+            Mouse.Click(uIokButton3, new Point(60, 17));
+
+            SelectTAMActivities2();
         }
 
         public void HomeAmendRenew()
@@ -1196,8 +1221,6 @@
             uIDeferPrintingCheckBox.Checked = CommonParams.UIDeferPrintingCheckBoxChecked;
 
             Mouse.Click(uIokButton1, new Point(74, 19));
-
-            Mouse.Move(new Point(500, 500));
 
             Mouse.Click(uIokButton2, new Point(64, 14));
 
@@ -1227,7 +1250,7 @@
             uIItemEdit.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
         }
 
-        public void HomeSiteRenewal(string policyNumber, string renewalPremium)
+        public void HomeSiteRenewal(string policyNumber, string renewalPremium, string insurer = "")
         {
             HtmlHyperlink uICreateaHouseholdTestHyperlink = UIInsurEcomSystemMaintWindow.UILeftbarFrame.UIInsurEcomLeftbarDocument.UIDivRenewalsPane.UICreateaHouseholdTestHyperlink;
             HtmlComboBox uIInsurerIDComboBox = UIInsurEcomSystemMaintWindow.UIContentFrame.UIInsurEcomMainPageDocument1.UIInsurerIDComboBox;
@@ -1243,7 +1266,8 @@
 
             Mouse.Click(uICreateaHouseholdTestHyperlink, new Point(48, 20));
 
-            uIInsurerIDComboBox.SelectedItem = CommonParams.UIInsurerIDComboBoxSelectedItem;
+            uIInsurerIDComboBox.SelectedItem = insurer == "" ? this.CommonParams.UIInsurerIDComboBoxSelectedItem : insurer;
+            
 
             uITxtPolicyNumberEdit.Text = policyNumber;
 
@@ -1331,7 +1355,7 @@
 
         public void HomeCheckPremium()
         {
-            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowCashBilling.UIItemEdit;
 
             Assert.AreNotEqual(HomeCheckPremiumExpectedValues.UIItemEditText, uIItemEdit.Text);
         }

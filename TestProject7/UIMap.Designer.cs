@@ -49,6 +49,30 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
 
+        public UISupercededRenewalInvWindow UISupercededRenewalInvWindow
+        {
+            get
+            {
+                if ((this.mUISupercededRenewalInvWindow == null))
+                {
+                    this.mUISupercededRenewalInvWindow = new UISupercededRenewalInvWindow();
+                }
+                return this.mUISupercededRenewalInvWindow;
+            }
+        }
+
+        public UISavetheamendedrenewaWindow UISavetheamendedrenewaWindow
+        {
+            get
+            {
+                if ((this.mUISavetheamendedrenewaWindow == null))
+                {
+                    this.mUISavetheamendedrenewaWindow = new UISavetheamendedrenewaWindow();
+                }
+                return this.mUISavetheamendedrenewaWindow;
+            }
+        }
+
         public UIPedalCyclesWindow UIPedalCyclesWindow
         {
             get
@@ -109,15 +133,15 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UICustomertxt1TdsfsWindow UICustomertxt1tdsfsWindow
+        public UICustomerListWindow UICustomerListWindow
         {
             get
             {
-                if ((mUICustomertxt1tdsfsWindow == null))
+                if ((this.mUICustomerListWindow == null))
                 {
-                    mUICustomertxt1tdsfsWindow = new UICustomertxt1TdsfsWindow();
+                    this.mUICustomerListWindow = new UICustomerListWindow();
                 }
-                return mUICustomertxt1tdsfsWindow;
+                return this.mUICustomerListWindow;
             }
         }
         
@@ -925,15 +949,15 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UIAUTO2251001Window UIAUTO2251001Window
+        public UiAuto1Window UiAuto1Window
         {
             get
             {
-                if ((mUIAUTO2251001Window == null))
+                if ((this.mUiAuto1Window == null))
                 {
-                    mUIAUTO2251001Window = new UIAUTO2251001Window();
+                    this.mUiAuto1Window = new UiAuto1Window();
                 }
-                return mUIAUTO2251001Window;
+                return this.mUiAuto1Window;
             }
         }
         
@@ -1248,7 +1272,7 @@ namespace AppliedSystems.Tam.Ui.Tests
         
         private UITheAgencyManagerWindow1 mUITheAgencyManagerWindow1;
         
-        private UICustomertxt1TdsfsWindow mUICustomertxt1tdsfsWindow;
+        private UICustomerListWindow mUICustomerListWindow;
                
         private UIVerifyWindow mUIVerifyWindow;
         
@@ -1378,7 +1402,7 @@ namespace AppliedSystems.Tam.Ui.Tests
         
         private UIRenewalsNewBusinessAWindow mUIRenewalsNewBusinessAWindow;
         
-        private UIAUTO2251001Window mUIAUTO2251001Window;
+        private UiAuto1Window mUiAuto1Window;
         
         private UIHouseholdRenewalsWindow mUIHouseholdRenewalsWindow;
         
@@ -1421,6 +1445,10 @@ namespace AppliedSystems.Tam.Ui.Tests
         private UIAttachmentDetailWindow mUIAttachmentDetailWindow;
 
         private UIPolicyWindow mUIPolicyWindow;
+
+        private UISupercededRenewalInvWindow mUISupercededRenewalInvWindow;
+
+        private UISavetheamendedrenewaWindow mUISavetheamendedrenewaWindow;
         #endregion
     }
 }

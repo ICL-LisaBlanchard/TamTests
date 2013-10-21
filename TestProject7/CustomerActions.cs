@@ -18,8 +18,8 @@
             #region Variable Declarations
 
             WinControl uIClientsFilesButton = map.UITheAgencyManagerWindow1.UIClientsFilesWindow.UIClientsFilesButton;
-            WinComboBox uIItemComboBox = map.UICustomertxt1tdsfsWindow.UICustomersWindow.ItemWindow(map.UICustomertxt1tdsfsWindow, "", "1").UIItemComboBox;
-            WinControl uIAddButton = map.UICustomertxt1tdsfsWindow.UIAddWindow.UIAddButton;
+            WinComboBox uIItemComboBox = map.UICustomerListWindow.UICustomersWindow.ItemWindow(map.UICustomerListWindow, "", "1").UIItemComboBox;
+            WinControl uIAddButton = map.UICustomerListWindow.UIAddWindow.UIAddButton;
             //WinEdit uiFirstname = map.UIAssignClientNumberWindow.Firstname.UIItemEdit;
             WinEdit uiLastname = map.UIAssignClientNumberWindow.Lastname.UIItemEdit;
             //WinEdit uiIntial = map.UIAssignClientNumberWindow.Initial.UIItemEdit;
@@ -27,10 +27,10 @@
             //WinRadioButton rbSuffix = map.UIAssignClientNumberWindow.Suffix.UISuffixRadioButton;
             WinControl uIOKButton = map.UIAssignClientNumberWindow.UIOKWindow.UIOKButton;
             WinControl uIYesButton = map.UIVerifyWindow.UIYesWindow.UIYesButton;
-            WinEdit uIItemEdit1 = map.UICustomertxt1tdsfsWindow.UINewCustomerDetailWindow.UIItemWindow.UIItemEdit;
-            WinEdit uIItemEdit2 = map.UICustomertxt1tdsfsWindow.UINewCustomerDetailWindow.UIItemWindow1.UIItemEdit;
-            WinControl uIOKButton1 = map.UICustomertxt1tdsfsWindow.UINewCustomerDetailWindow.UIOKWindow.UIOKButton;
-            WinControl uIItemButton = map.UICustomertxt1tdsfsWindow.UIItemWindow.UIItemButton;
+            WinEdit uIItemEdit1 = map.UICustomerListWindow.UINewCustomerDetailWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit2 = map.UICustomerListWindow.UINewCustomerDetailWindow.UIItemWindow1.UIItemEdit;
+            WinControl uIOKButton1 = map.UICustomerListWindow.UINewCustomerDetailWindow.UIOKWindow.UIOKButton;
+            WinControl uIItemButton = map.UICustomerListWindow.UIPoliciesWindow.UIItemButton;
             WinControl uIOKButton2 = map.UISelectaPolicyNumberWindow.UIOKWindow.UIOKButton;
             WinEdit codeName = map.UIAssignClientNumberWindow.CodeName.UIItemEdit;
 

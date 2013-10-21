@@ -5,9 +5,9 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    public class UICustomertxt1TdsfsWindow : WinWindow
+    public class UICustomerListWindow : WinWindow
     {
-        public UICustomertxt1TdsfsWindow()
+        public UICustomerListWindow()
         {
             #region Search Criteria
 
@@ -54,7 +54,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UIItemWindow UIItemWindow
+        public UIItemWindow UIPoliciesWindow
         {
             get
             {
@@ -87,6 +87,14 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                     mUIPolicyListWindow = new UIPolicyListWindow(this);
                 }
                 return mUIPolicyListWindow;
+            }
+        }
+
+        public UIItemWindow UISearchWindow
+        {
+            get
+            {
+                return new UIItemWindow("17");
             }
         }
 

@@ -5,13 +5,14 @@
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    public class UIAUTO2251001Window : WinWindow
+    public class UiAuto1Window : WinWindow
     {
-        public UIAUTO2251001Window()
+        public UiAuto1Window()
         {
             #region Search Criteria
 
-            SearchProperties[UITestControl.PropertyNames.Name] = "AUTO225-1001";
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "AUTO", PropertyExpressionOperator.Contains));
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "-1001", PropertyExpressionOperator.Contains));
             SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
             WindowTitles.Add("AUTO225-1001");
 

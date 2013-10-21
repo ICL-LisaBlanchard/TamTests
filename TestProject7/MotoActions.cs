@@ -39,7 +39,7 @@
 
         private MotoMTACheckCarExpectedValues mMotoMTACheckCarExpectedValues;
 
- public virtual MotoAWAPParams MotoAWAPParams
+        public virtual MotoAWAPParams MotoAWAPParams
         {
             get
             {
@@ -171,7 +171,7 @@
             }
         }
 
-        public void MotoCreateSiteRenewal(string policyNumber, string renewalPremium)
+        public void MotoCreateSiteRenewal(string policyNumber, string renewalPremium, string insurer = "")
         {
             #region Variable Declarations
 
@@ -189,8 +189,8 @@
 
             Mouse.Click(uICreateaMotorTestReneHyperlink, new Point(50, 22));
 
-            uiInsurerIdComboBox.SelectedItem = map.MotoCreateSiteRenewalParams.UIInsurerIDComboBoxSelectedItem;
-
+            uiInsurerIdComboBox.SelectedItem = insurer == "" ? this.map.MotoCreateSiteRenewalParams.UIInsurerIDComboBoxSelectedItem : insurer;
+     
             uITxtPolicyNumberEdit.Text = policyNumber;
 
             uITxtPremiumEdit.Text = renewalPremium;
@@ -213,7 +213,6 @@
             WinEdit uIItemEdit2 = map.UIAcceptWithAnotherProWindow.UIItemWindow3.UIItemEdit;
             WinEdit uIItemEdit3 = map.UIAcceptWithAnotherProWindow.UIItemWindow4.UIItemEdit;
             WinButton uIOKButton = map.UIAcceptWithAnotherProWindow.UIOKWindow.UIOKButton;
-            WinButton uIOKButton1 = map.UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = map.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinButton uIOKButton2 = map.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
             WinButton uIOKButton3 = map.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
@@ -234,7 +233,7 @@
 
             Mouse.Click(uIOKButton, new Point(49, 9));
 
-            Mouse.Click(uIOKButton1, new Point(45, 11));
+            PaymentMethod("cash");
 
             uIAddActivityCheckBox.Checked = CommonParams.UIAddActivityCheckBoxChecked;
 
@@ -243,7 +242,6 @@
             Mouse.Click(uIOKButton3, new Point(56, 6));
 
             SelectTAMActivities1();
-
         }
 
         public void MotoAmendRiskRenew()
@@ -258,7 +256,6 @@
             WinButton uIOKButton2 = map.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = map.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinButton uIOKButton3 = map.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-            WinButton uIOKButton4 = map.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
             WinButton uIExitButton = map.UIInsurEtamWindow.UIQuotesWindow.UIExitWindow1.UIExitButton;
             WinButton uIYesButton1 = map.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
 
@@ -384,7 +381,7 @@
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = map.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = map.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowCashBilling.UIItemEdit;
 
             #endregion
 
@@ -395,7 +392,7 @@
         {
             #region Variable Declarations
 
-            WinEdit uIItemEdit = map.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow.UIItemEdit;
+            WinEdit uIItemEdit = map.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowCashBilling.UIItemEdit;
 
             #endregion
 
@@ -444,7 +441,7 @@
             Mouse.Click(uICalculateQuoteButton, new Point(69, 13));
         }
 
-        public void MotoAmendRiskNew()
+        public void MotoAmendRiskNew(string paymentMethod)
         {
             #region Variable Declarations
 
@@ -457,6 +454,8 @@
             Mouse.Click(uIRenewPolicyButton, new Point(51, 9));
 
             Mouse.Click(uIYesButton, new Point(60, 14));
+
+            PaymentMethod(paymentMethod);
 
             CancelPrint();
 
@@ -473,7 +472,7 @@
             WinEdit uIItemEdit1 = map.UIProposerDetailsWindow.UIItemWindow.UIItemEdit;
             WinButton uIOKButton = map.UIProposerDetailsWindow.UIOKWindow.UIOKButton;
             WinButton uICalculateQuoteButton = map.UIAmendRiskWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
-            WinButton uINOButton = map.UICreditCheckWindow.UINoWindow.UINoButton;
+             WinButton uIProceedButton = this.UICreditCheckAtRenewalWindow.UIProceedWindow.UIProceedButton;
 
             #endregion
 
@@ -489,7 +488,7 @@
 
             Mouse.Click(uICalculateQuoteButton, new Point(58, 6));
 
-            Mouse.Click(uINOButton, new Point(50, 0));
+            Mouse.Click(uIProceedButton, new Point(50, 0));
         }
 
         public void MotoSelectHighwayPolicy()
@@ -596,7 +595,6 @@
             WinButton uIProceedButton = this.UICreditCheckAtRenewalWindow.UIProceedWindow.UIProceedButton;
             WinButton uIRebrokeButton = map.Uiautoxxx1000Window.UIRebrokeWindow.UIRebrokeButton;
             WinButton uICancelButton = map.UIQuoteSelectListWindow.UICancelWindow.UICancelButton;
-            WinButton uINOButton = map.UICreditCheckWindow.UINoWindow.UINoButton;
             WinButton uIOKButton = UIConfirmWindow.UIOKWindow.UIOKButton;
 
             #endregion
@@ -613,7 +611,6 @@
                 Mouse.Click(uIOKButton);
             }
 
-            //Mouse.Click(uINOButton, new Point(48, 11));
             Mouse.Click(uIProceedButton);
         }
 
@@ -1160,8 +1157,7 @@
             #region Variable Declarations
 
             WinButton uIOptionsButton = map.UIPolicyautotestWindow.UIPolicyListWindow.UIOptionsWindow.UIOptionsButton;
-            WinMenuItem uICopyRiskMenuItem =
-                map.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegratMenuItem.UICopyRiskMenuItem;
+            WinMenuItem uICopyRiskMenuItem = map.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegratMenuItem.UICopyRiskMenuItem;
             WinButton uIOKButton = map.UIWhichpolicywouldyoulWindow.UIItemWindow.UIClient().UIOKButton;
             WinButton uIOKButton1 = map.UIProductSelectionWindow.UIOKWindow.UIOKButton;
 
@@ -1288,8 +1284,10 @@
             WinControl uIOKButton = UIPointOfSaleWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton1 = UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
-            
+
             #endregion
+
+            Playback.Wait(2000);
 
             uIDeferPrintingCheckBox.Checked = CommonParams.UIDeferPrintingCheckBoxChecked;
 
@@ -1302,6 +1300,54 @@
             Mouse.Click(uIOKButton1, new Point(41, 15));
 
             SelectTAMActivities3();
+        }
+
+        public void CreateMTA()
+        {
+            MotoMTA();
+            MotoMTAAccept();
+            MotoMTAConfirmDate();
+            MotoMTAConfirmPolicy("mta");
+        }
+
+        public void AcceptAndFinishQuote(string paymentType)
+        {
+            AcceptQuote();
+            this.FinishQuote(paymentType);
+            CancelPrint();
+            MotoFinishQuote();
+        }
+
+        public void CreateNewBusinessPolicy(ExpectedAddress expectedAddress)
+        {
+            MotoPolicyPerson();
+            this.PostcodeLookup(expectedAddress);
+            QuoteResults();
+            QuoteResults1();
+            PublicCreditCheckOk();
+        }
+
+        public void TamMotorSteps(CustomerActions customer)
+        {
+            CustomerCode = customer.AddPolicy();
+            SelectMotoPolicy();
+            SelectMenu();
+            Links();
+        }
+
+
+        public void PostcodeLookup(ExpectedAddress expectedAddress)
+        {
+            #region Variable Declarations
+
+            WinEdit uIItemEdit = UIProposerDetailsWindow.UIItemWindow4.UIItemEdit;
+            WinEdit uIItemEdit1 = UIProposerDetailsWindow.UIItemWindow5.UIItemEdit;
+
+            #endregion
+
+            Assert.AreEqual(expectedAddress.AddressLine1, uIItemEdit.Text);
+
+            Assert.AreEqual(expectedAddress.AddressLine2, uIItemEdit1.Text);
         }
     }
 }

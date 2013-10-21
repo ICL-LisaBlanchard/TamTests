@@ -33,6 +33,18 @@
             }
         }
 
+        public UIItemWindow UIDirectDebitWindow
+        {
+            get
+            {
+                if ((this.mUIDirectDebitWindow == null))
+                {
+                    this.mUIDirectDebitWindow = new UIItemWindow(this, controlId:"9");
+                }
+                return this.mUIDirectDebitWindow;
+            }
+        }
+
         #endregion
 
         #region Fields
@@ -40,6 +52,8 @@
         private readonly string windowTitle;
 
         private UIItemWindow mUIOKWindow;
+
+        private UIItemWindow mUIDirectDebitWindow;
 
         #endregion
     }

@@ -4,19 +4,26 @@
 
     public class Transactions
     {
-        public static List<Transaction> GetTransactionDictionary(string premium, string originalPremium = "")
+        public static List<Transaction> GetTransactionDictionary(string premium, string paymentType, string originalPremium = "")
         {
             var dict = new List<Transaction>();
-            double tax = double.Parse(premium) * 0.06;
 
-            dict.Add(new Transaction { TransType = "TAX", Premium = tax.ToString("0.00") });
+            if (paymentType == "cash")
+            {
+                double tax = double.Parse(premium) * 0.06;
+                dict.Add(new Transaction { TransType = "TAX", Premium = tax.ToString("0.00") });
+            }
+        
             dict.Add(new Transaction { TransType = "NEW", Premium = premium });
 
             if (!string.IsNullOrEmpty(originalPremium))
             {
-                double oTax = double.Parse(originalPremium) / 100 * 6;
+                if (paymentType == "cash")
+                {
+                    double oTax = double.Parse(originalPremium) / 100 * 6;
+                    dict.Add(new Transaction { TransType = "TAX", Premium = oTax.ToString("0.00") });
+                }
 
-                dict.Add(new Transaction { TransType = "TAX", Premium = oTax.ToString("0.00") });
                 dict.Add(new Transaction { TransType = "NEW", Premium = originalPremium });
             }
             return dict;

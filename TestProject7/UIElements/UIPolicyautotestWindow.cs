@@ -83,11 +83,7 @@
         {
             get
             {
-                if ((mUIBillingScreenWindow == null))
-                {
-                    mUIBillingScreenWindow = new UIBillingScreenWindow(this);
-                }
-                return mUIBillingScreenWindow;
+                return new UIBillingScreenWindow(this);
             }
         }
 
