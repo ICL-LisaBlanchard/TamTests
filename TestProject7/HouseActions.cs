@@ -531,7 +531,7 @@
 
             Mouse.Click(uIYesButton, new Point(45, 6));
 
-            //Mouse.Click(uIAddActivityCheckBox);
+            uIAddActivityCheckBox.Checked = false;
 
             Mouse.Click(uIOKButton, new Point(30, 15));
 
