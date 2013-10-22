@@ -274,7 +274,7 @@
             this.SiteForRenewal(policyNumber, PolicyType, RenewalPremium);
             RegressApp(PolicyType);
             RenewalLoader();
-            RenewalModule(Moto.CustomerCode, PolicyType);
+            RenewalModule(Map.CustomerCode, PolicyType);
             RenewalsInvite(false);
             Moto.CloseAndOpenPolicyList();
             Moto.RenewalCheckStatus("REN");

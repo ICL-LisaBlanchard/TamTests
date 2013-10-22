@@ -11,3 +11,5 @@ TestResults
 /TestProject7/*.config
 bin
 obj
+*.user
+*.suo

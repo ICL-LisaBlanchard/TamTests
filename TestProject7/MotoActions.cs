@@ -312,7 +312,7 @@
 
             Mouse.Click(uIOKButton2, new Point(47, 13));
 
-            SelectTAMActivities3();
+            SelectTAMActivities2();
 
             map.EtamOk();
 

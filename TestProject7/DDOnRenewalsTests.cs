@@ -72,5 +72,40 @@
             House.OpenTransList(Transactions.GetTransactionDictionary(premium, "dd", originalPremium: originalPremium));
             Moto.ClosePolicy();
         }
+
+        [TestMethod]
+        public void MotoRebrokeDirectDebit()
+        {
+            SetOurZurichRegKeys();
+            Moto.TamMotorSteps(Customer);
+            Moto.CreateNewBusinessPolicy(ExpectedAddress);
+            Moto.AssertSelectPolicyForm();
+            Moto.SelectPolicyQuote();
+            Moto.AcceptAndFinishQuote("dd");
+            Moto.CloseAndOpenPolicyList();
+
+            string originalPremium = Moto.CheckPolicyPremium("dd");
+            Moto.OpenTransList(Transactions.GetTransactionDictionary(originalPremium, "dd"));
+            Moto.CheckCorrectDocumentPresent(this.Docs.DocumentsForMotoNewBusinessQuoteDd);
+
+            string policyNumber = Moto.GetPolicyNumber();
+            Renewals(policyNumber, "Motor", RenewalPremium, "Zurich");
+
+            Moto.MotoRebroke(false, false);
+
+            //rebroke
+
+            //invite
+
+            //renew
+
+            //payment
+
+            //NB
+
+            //Lapsed
+
+            //Tamxml
+        }
     }
 }

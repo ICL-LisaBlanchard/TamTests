@@ -278,7 +278,7 @@
             RenewalLoader();
 
             //  renewal module
-            RenewalModule(Moto.CustomerCode, PolicyType);
+            RenewalModule(Map.CustomerCode, PolicyType);
             RenewalsInvite(false);
 
             House.CloseAndOpenPolicyList();
