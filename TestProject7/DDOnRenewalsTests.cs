@@ -77,7 +77,7 @@
         public void MotoRebrokeDirectDebit()
         {
             SetOurZurichRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.CreateNewBusinessPolicy(ExpectedAddress);
             Moto.AssertSelectPolicyForm();
             Moto.SelectPolicyQuote();
@@ -92,12 +92,18 @@
             Renewals(policyNumber, "Motor", RenewalPremium, "Zurich");
 
             Moto.MotoRebroke(false, false);
+            Moto.PublicCreditCheckOk();
+            Moto.MotoRebrokeSelectScheme("{home}");
+            Moto.RebrokeSelectAlternative();
+            Moto.MotoRebrokeCurrent(false);
 
-            //rebroke
+            Moto.ImportToTamOptionsOnce("");
 
-            //invite
+            Moto.RenewalModuleInvite(false);
 
-            //renew
+            Moto.RenewalModuleInvite1();
+
+            Moto.RebrokeAlternativeRenew("dd");
 
             //payment
 

@@ -1,6 +1,7 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
     using System;
+
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -8,18 +9,20 @@
     public class MotoUiTests : BaseUiTest
     {
         private const string PolicyType = "Motor";
+
         private const string RenewalPremium = "1357";
+
         [TestMethod]
         public void MotoCreateQuote()
         {
             SetOfficeRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.CreateNewBusinessPolicy(ExpectedAddress);
             Moto.AssertSelectPolicyForm();
             Moto.SelectPolicyQuote();
             Moto.AcceptAndFinishQuote("cash");
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
-            
+
             string premium = Moto.CheckPolicyPremium("cash");
             Moto.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash"));
             Moto.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoNewBusinessQuote, "cash");
@@ -29,7 +32,7 @@
         public void MotoSaveQuoteWithoutPremium()
         {
             SetOfficeRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.CreateNewBusinessPolicy(ExpectedAddress);
             Moto.SaveWithoutPremium();
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
@@ -75,7 +78,7 @@
         public void MotoAWAP()
         {
             SetOfficeRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.CreateNewBusinessPolicy(ExpectedAddress);
             const string Premium = "17777.00";
             Moto.MotoAwap(Premium);
@@ -91,7 +94,7 @@
             const string OverridePremiumGross = "3393.06";
             const string OverridePremiumNet = "3201.00";
             SetOfficeRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.CreateNewBusinessPolicy(ExpectedAddress);
             Moto.AssertSelectPolicyForm();
             Moto.SelectPolicyQuote();
@@ -101,7 +104,7 @@
             Moto.HighlightBillingScreen();
             Moto.MotoCheckChangedPremium(OverridePremiumNet);
 
-            Moto.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoOverridePremium, "cash", overridePremium: double.Parse(OverridePremiumNet));
+            Moto.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoOverridePremium, "cash", double.Parse(OverridePremiumNet));
             Moto.OpenTransList(Transactions.GetTransactionDictionary(OverridePremiumNet, "cash"));
         }
 
@@ -109,7 +112,7 @@
         public void MotoCopyRiskNew()
         {
             SetOfficeRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.CreateNewBusinessPolicy(ExpectedAddress);
             Moto.SelectPolicyQuote();
             Moto.AcceptAndFinishQuote("cash");
@@ -124,7 +127,7 @@
         public void MotoCopyRiskQte()
         {
             SetOfficeRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.CreateNewBusinessPolicy(ExpectedAddress);
             Moto.SaveWithoutPremium();
             Moto.MotoCopyFinishedRisk();
@@ -138,7 +141,7 @@
         public void MotoMTAExit()
         {
             SetOfficeRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.CreateNewBusinessPolicy(ExpectedAddress);
             Moto.SelectPolicyQuote();
             Moto.AcceptAndFinishQuote("cash");
@@ -153,7 +156,7 @@
         public void MotoMTAAccept()
         {
             SetOfficeRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.CreateNewBusinessPolicy(ExpectedAddress);
             Moto.SelectPolicyQuote();
             Moto.AcceptAndFinishQuote("cash");
@@ -168,7 +171,7 @@
         public void MotoCopyMTA()
         {
             SetOfficeRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.CreateNewBusinessPolicy(ExpectedAddress);
             Moto.SelectPolicyQuote();
             Moto.AcceptAndFinishQuote("cash");
@@ -185,7 +188,7 @@
         public void MotoMTAtoMTA()
         {
             SetOfficeRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.CreateNewBusinessPolicy(ExpectedAddress);
             Moto.SelectPolicyQuote();
             Moto.AcceptAndFinishQuote("cash");
@@ -211,7 +214,7 @@
         public void MotoCancelExit()
         {
             SetOfficeRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.CreateNewBusinessPolicy(ExpectedAddress);
             Moto.AssertSelectPolicyForm();
             Moto.SelectPolicyQuote();
@@ -233,7 +236,7 @@
         public void MotoCancelAccept()
         {
             SetOfficeRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.CreateNewBusinessPolicy(ExpectedAddress);
             Moto.AssertSelectPolicyForm();
             Moto.SelectPolicyQuote();
@@ -257,7 +260,7 @@
         public void MotoRenewalBefore()
         {
             SetOurHighwayRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.MotoPostcodeLookup();
             Moto.MotoSearchCar();
             Moto.MotoInceptionDate();
@@ -280,7 +283,7 @@
             Moto.RenewalCheckStatus("REN");
             string premium = Moto.CheckPolicyPremium("cash");
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRenewalBefore, "cash", originalPremium: double.Parse(originalPremium));
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalPremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium));
             Moto.ClosePolicy();
 
             //mta1
@@ -307,7 +310,7 @@
         public void MotoRenewalAfter()
         {
             SetOurHighwayRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.MotoPostcodeLookup();
             Moto.MotoSearchCar();
 
@@ -366,7 +369,7 @@
         public void MotoAmendRiskExistingScheme()
         {
             SetOurHighwayRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.MotoPostcodeLookup();
             Moto.MotoSearchCar();
             Moto.MotoInceptionDate();
@@ -389,7 +392,7 @@
             Moto.HighlightBillingScreen();
             string premium = Moto.CheckPolicyPremium("cash");
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoMotoAmendRiskExistingScheme, "cash", originalPremium: double.Parse(originalPremium));
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalPremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash",  originalPremium));
             Moto.RenewalCheckStatus("REN");
             Moto.ClosePolicy();
         }
@@ -398,7 +401,7 @@
         public void MotoAmendRiskNewScheme()
         {
             SetOurHighwayRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.MotoPostcodeLookup();
             Moto.MotoSearchCar();
             Moto.MotoInceptionDate();
@@ -424,7 +427,7 @@
             string premium = Moto.CheckPolicyPremium("cash");
             Moto.RenewalCheckStatus("REW");
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoAmendRiskNew, "cash", originalPremium: double.Parse(originalPremium));
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalPremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash",  originalPremium));
             Moto.ClosePolicy();
 
             //mta1
@@ -449,7 +452,7 @@
         public void MotoRebrokeRenewCurrent()
         {
             SetOurHighwayRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.MotoPostcodeLookup();
             Moto.MotoSearchCar();
             Moto.MotoInceptionDate();
@@ -471,7 +474,7 @@
             string premium = Moto.CheckPolicyPremium("cash");
             Moto.RenewalCheckStatus("REN");
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRenewalCurrent, "cash", originalPremium: double.Parse(originalPremium));
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalPremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash",  originalPremium));
             Moto.ClosePolicy();
         }
 
@@ -479,7 +482,7 @@
         public void MotoRebrokeRenewExistingScheme()
         {
             SetOurHighwayRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.MotoPostcodeLookup();
             Moto.MotoSearchCar();
             Moto.MotoInceptionDate();
@@ -489,7 +492,7 @@
             Moto.MotoSelectHighwayPolicy();
             Moto.AcceptAndFinishQuote("cash");
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
-    
+
             string policyNumber = Moto.GetPolicyNumber();
             string originalPremium = Moto.CheckPolicyPremium("cash");
 
@@ -510,7 +513,7 @@
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
             string premium = Moto.CheckPolicyPremium("cash");
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRebrokeRenewExistingScheme, "cash", originalPremium: double.Parse(originalPremium));
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalPremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash",  originalPremium));
             Moto.RenewalCheckStatus("REW");
             Moto.ClosePolicy();
         }
@@ -519,7 +522,7 @@
         public void MotoRebrokeRenewNewScheme()
         {
             SetOurHighwayRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.MotoPostcodeLookup();
             Moto.MotoSearchCar();
             Moto.MotoInceptionDate();
@@ -550,7 +553,7 @@
             Moto.HighlightBillingScreen();
             string premium = Moto.CheckPolicyPremium("cash");
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoRebrokeRenewExistingScheme, "cash", originalPremium: double.Parse(originalPremium));
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalPremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash",  originalPremium));
             Moto.RenewalCheckStatus("REW");
             Moto.ClosePolicy();
         }
@@ -559,7 +562,7 @@
         public void MotoLapsePolicy()
         {
             SetOurHighwayRegKeys();
-            Moto.TamMotorSteps(Customer);
+            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.MotoPostcodeLookup();
             Moto.MotoSearchCar();
             Moto.MotoInceptionDate();
@@ -570,10 +573,8 @@
             Moto.AcceptAndFinishQuote("cash");
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
             string policyNumber = Moto.GetPolicyNumber();
-            string originalPremium = Moto.CheckPolicyPremium("cash");
 
             Renewals(policyNumber, PolicyType, RenewalPremium);
-
 
             Moto.RenewalModuleInvite(false);
             Moto.RenewConfirmInvite();
@@ -586,8 +587,6 @@
         }
 
         #region Private Functions
-
-
 
         #endregion
     }

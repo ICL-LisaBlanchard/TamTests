@@ -271,7 +271,7 @@
 
         protected void RegressApp(string policyType)
         {
-            UiMap.HighlightCustomer();
+           // UiMap.HighlightCustomer();
             UiMap.RegressApp(UiMap.CustomerCode);
             UiMap.RegressAppPolicyTypeSelection(policyType);
             UiMap.RegressAppDate();

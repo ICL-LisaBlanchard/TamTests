@@ -23,8 +23,11 @@
             UiMap.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             string premium = CreateNewPolicy();
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash"));
+
+            var passed = House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash"));
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhNewBusinessQuote, "cash");
+
+            Assert.IsTrue(passed, "Failed on getting premium");
         }
 
         [TestMethod]
@@ -533,10 +536,11 @@
             House.HomeRebrokeSelectPolicy(House.CommonParams.SendHomeKeys);
             House.HomeRebrokeSelectAlternative();
             House.HomeRebrokeFinish();
+            House.ImportToTamOptionsOnce("");
             House.RenewalModuleInvite(false);
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();
-            House.RebrokeAlternativeRenew();
+            House.RebrokeAlternativeRenew("cash");
             House.EtamOk();
             //house.LapseOk();
             House.EtamYes();
@@ -578,10 +582,11 @@
             House.HomeRebrokeSelectPolicy(House.CommonParams.SendEndKeys);
             House.HomeRebrokeSelectAlternative();
             House.HomeRebrokeFinish();
+            House.ImportToTamOptionsOnce("");
             House.RenewalModuleInvite(false);
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();
-            House.RebrokeAlternativeRenew();
+            House.RebrokeAlternativeRenew("cash");
             House.EtamOk();
             House.EtamYes();
             House.ConfirmDocuments();
