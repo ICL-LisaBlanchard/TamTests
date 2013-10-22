@@ -668,7 +668,7 @@
             Assert.AreEqual(ExitEnabledExpectedValues.UIExitButtonEnabled, uIExitButton.Enabled);
         }
 
-        public void CloseAndOpenPolicyList()
+        public void CloseAndOpenPolicyList(string customerCode)
         {
             #region Variable Declarations
 
@@ -681,7 +681,7 @@
 
             Mouse.Click(uICancelButton, new Point(31, 15));
 
-            uIItemEdit.Text = CustomerCode;
+            uIItemEdit.Text = customerCode;
 
             Mouse.Click(uIItemButton, new Point(27, 23));
 

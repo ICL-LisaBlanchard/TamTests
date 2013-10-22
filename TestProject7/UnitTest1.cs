@@ -9,11 +9,17 @@ namespace AppliedSystems.Tam.Ui.Tests
     public class UnitTest1
     {
         protected readonly MotoActions Moto = new MotoActions();
+        protected readonly HouseActions House = new HouseActions();
+        protected readonly UIMap UiMap = new UIMap();
+        protected readonly DocumentsList Docs = new DocumentsList();
+
         [TestMethod]
         public void TestMethod1()
         {
-            Moto.CustomerCode = "AUTO120";
-            Moto.CloseAndOpenPolicyList();
+            var premium = House.CheckPolicyPremium("cash");
+            House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhRenewalBefore, "cash", originalPremium: double.Parse("251.43"));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: "251.43"));
+            House.ClosePolicy();
         }
     }
 }

@@ -272,7 +272,7 @@
         protected void RegressApp(string policyType)
         {
             UiMap.HighlightCustomer();
-            UiMap.RegressApp(Map.CustomerCode);
+            UiMap.RegressApp(UiMap.CustomerCode);
             UiMap.RegressAppPolicyTypeSelection(policyType);
             UiMap.RegressAppDate();
             UiMap.RegressAppFinish();
@@ -309,7 +309,7 @@
             this.SiteForRenewal(policyNumber, policyType, renewalPremium, insurer);
             RegressApp(policyType);
             RenewalLoader();
-            RenewalModule(Map.CustomerCode, policyType);
+            RenewalModule(UiMap.CustomerCode, policyType);
         }
 
         protected void RenewalsInvite(bool selectAlternative)
