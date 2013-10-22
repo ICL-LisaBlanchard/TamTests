@@ -5,9 +5,9 @@
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-    public class UIAUTO1871001Window : WinWindow
+    public class UIAutoPolicyWindow : WinWindow
     {
-        public UIAUTO1871001Window()
+        public UIAutoPolicyWindow()
         {
             #region Search Criteria
 

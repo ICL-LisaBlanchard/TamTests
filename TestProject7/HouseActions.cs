@@ -743,9 +743,6 @@
 
         public void HomeRebrokeSelectAlternative()
         {
-            Playback.Wait(1000);
-            Mouse.Move(new Point(500, 500));
-            Playback.Wait(1000);
             Mouse.Click(UIHouseholdRebrokeResuWindow);
             WinControl uISelectAlternativeButton = UIHouseholdRebrokeResuWindow.UISelectAlternativeWindow.UISelectAlternativeButton;
 

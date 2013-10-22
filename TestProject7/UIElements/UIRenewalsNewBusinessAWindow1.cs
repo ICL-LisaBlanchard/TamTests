@@ -21,17 +21,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         #region Properties
 
-        public UIItemWindow UIItemWindow
-        {
-            get
-            {
-                if ((mUIItemWindow == null))
-                {
-                    mUIItemWindow = new UIItemWindow(this, instance: "2", className: "ListView20WndClass");
-                }
-                return mUIItemWindow;
-            }
-        }
+
 
         public UIItemWindow UIAcceptWindow
         {

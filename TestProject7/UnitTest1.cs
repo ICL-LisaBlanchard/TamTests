@@ -16,9 +16,14 @@ namespace AppliedSystems.Tam.Ui.Tests
         [TestMethod]
         public void TestMethod1()
         {
-            var premium = House.CheckPolicyPremium("cash");
-            House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhRenewalBefore, "cash", originalPremium: double.Parse("251.43"));
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: "251.43"));
+
+            House.RebrokeAlternativeRenew1();
+            House.RenewalModuleClose();
+            House.CloseAndOpenPolicyList(UiMap.CustomerCode);
+            House.RenewalCheckStatus("REW");
+            //House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
+            //string premium = House.CheckPolicyPremium("cash");
+            //House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalpremium));
             House.ClosePolicy();
         }
     }

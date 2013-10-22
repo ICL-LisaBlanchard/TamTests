@@ -805,15 +805,15 @@ namespace AppliedSystems.Tam.Ui.Tests
             }
         }
         
-        public UIAUTO1871001Window UIAUTO1871001Window
+        public UIAutoPolicyWindow UIAutoPolicyWindow
         {
             get
             {
-                if ((mUIAUTO1871001Window == null))
+                if ((this.mUIAutoPolicyWindow == null))
                 {
-                    mUIAUTO1871001Window = new UIAUTO1871001Window();
+                    this.mUIAutoPolicyWindow = new UIAutoPolicyWindow();
                 }
-                return mUIAUTO1871001Window;
+                return this.mUIAutoPolicyWindow;
             }
         }
         
@@ -898,18 +898,6 @@ namespace AppliedSystems.Tam.Ui.Tests
                     mUIAmendRiskResultsWindow = new UIAmendRiskResultsWindow();
                 }
                 return mUIAmendRiskResultsWindow;
-            }
-        }
-        
-        public UIAUTO2211001Window UIAUTO2211001Window
-        {
-            get
-            {
-                if ((mUIAUTO2211001Window == null))
-                {
-                    mUIAUTO2211001Window = new UIAUTO2211001Window();
-                }
-                return mUIAUTO2211001Window;
             }
         }
         
@@ -1020,31 +1008,7 @@ namespace AppliedSystems.Tam.Ui.Tests
                 return mUIHouseholdRebrokeResuWindow;
             }
         }
-        
-        public UIAUTO2311001Window UIAUTO2311001Window
-        {
-            get
-            {
-                if ((mUIAUTO2311001Window == null))
-                {
-                    mUIAUTO2311001Window = new UIAUTO2311001Window();
-                }
-                return mUIAUTO2311001Window;
-            }
-        }
-        
-        public UIRenewalsNewBusinessAWindow1 UIRenewalsNewBusinessAWindow1
-        {
-            get
-            {
-                if ((mUIRenewalsNewBusinessAWindow1 == null))
-                {
-                    mUIRenewalsNewBusinessAWindow1 = new UIRenewalsNewBusinessAWindow1();
-                }
-                return mUIRenewalsNewBusinessAWindow1;
-            }
-        }
-        
+                
         public UIWindowsSecurityWindow1 UIWindowsSecurityWindow1
         {
             get
@@ -1378,7 +1342,7 @@ namespace AppliedSystems.Tam.Ui.Tests
         
         private UIFilterRenewalRecordsWindow mUIFilterRenewalRecordsWindow;
         
-        private UIAUTO1871001Window mUIAUTO1871001Window;
+        private UIAutoPolicyWindow mUIAutoPolicyWindow;
         
         private UIPrintDocumentsWindow mUIPrintDocumentsWindow;
         
@@ -1393,8 +1357,6 @@ namespace AppliedSystems.Tam.Ui.Tests
         private UIAmendRiskWindow mUIAmendRiskWindow;
         
         private UIAmendRiskResultsWindow mUIAmendRiskResultsWindow;
-        
-        private UIAUTO2211001Window mUIAUTO2211001Window;
         
         private UIRenewalAcceptWindow mUIRenewalAcceptWindow;
         
@@ -1411,10 +1373,6 @@ namespace AppliedSystems.Tam.Ui.Tests
         private UiAutoWindow mUiAutoWindow;
         
         private UIHouseholdRebrokeResuWindow mUIHouseholdRebrokeResuWindow;
-        
-        private UIAUTO2311001Window mUIAUTO2311001Window;
-        
-        private UIRenewalsNewBusinessAWindow1 mUIRenewalsNewBusinessAWindow1;
         
         private UIWindowsSecurityWindow1 mUIWindowsSecurityWindow1;
         

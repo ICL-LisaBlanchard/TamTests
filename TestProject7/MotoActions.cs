@@ -1327,12 +1327,13 @@
             PublicCreditCheckOk();
         }
 
-        public void TamMotorSteps(CustomerActions customer)
+        public string TamMotorSteps(CustomerActions customer)
         {
             CustomerCode = customer.AddPolicy();
             SelectMotoPolicy();
             SelectMenu();
             Links();
+            return CustomerCode;
         }
 
 

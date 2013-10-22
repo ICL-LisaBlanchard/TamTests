@@ -12,7 +12,9 @@
             #region Search Criteria
 
             windowTitle = "Renewals : New Business Accept";
-            SearchProperties[UITestControl.PropertyNames.Name] = windowTitle;
+            
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "New Business Accept", PropertyExpressionOperator.Contains));
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Renewals", PropertyExpressionOperator.Contains));
             SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
             WindowTitles.Add(windowTitle);
 
@@ -21,13 +23,25 @@
 
         #region Properties
 
-        public UIItemWindow UIItemWindow
+        public UIItemWindow UIPolicyListWindow
         {
             get
             {
                 if ((mUIItemWindow == null))
                 {
                     mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
+                }
+                return mUIItemWindow;
+            }
+        }
+
+        public UIItemWindow UIItemWindow
+        {
+            get
+            {
+                if ((mUIItemWindow == null))
+                {
+                    mUIItemWindow = new UIItemWindow(this, instance: "2", className: "ListView20WndClass");
                 }
                 return mUIItemWindow;
             }

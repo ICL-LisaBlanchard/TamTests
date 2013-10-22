@@ -476,7 +476,7 @@
         {
             #region Variable Declarations
 
-            WinWindow uIauto1871001Window = UIAUTO1871001Window;
+            WinWindow uIauto1871001Window = this.UIAutoPolicyWindow;
 
             #endregion
 
@@ -589,50 +589,52 @@
         }
 
         /// <summary>
-        ///     RenewalModuleInvite_1 - Use 'RenewalModuleInvite_1Params' to pass parameters into this method.
+        ///     Confirm Docs --> OK
+        ///     Defer print -- >
+        ///     Import to Tam (only OK button)
         /// </summary>
         public void RenewalModuleInvite1()
         {
             #region Variable Declarations
 
-            WinControl uIOKButton = UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
+            WinControl btnConfirmDocs = UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIDeferPrintingCheckBox = UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
-            WinControl uIOKButton1 = UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
+            WinControl btnDeferPrint = UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
             WinCheckBox uIAddActivityCheckBox = UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
-            WinControl uIOKButton2 = UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
+            WinControl btnImportToTam = UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
 
             #endregion
 
-            WaitForControl(uIOKButton);
-            Mouse.Click(uIOKButton, new Point(50, 16));
+            WaitForControl(btnConfirmDocs);
+            Mouse.Click(btnConfirmDocs, new Point(50, 16));
 
             RetrieveResponse();
 
             uIDeferPrintingCheckBox.Checked = CommonParams.UIDeferPrintingCheckBoxChecked;
 
-            Mouse.Click(uIOKButton1, new Point(72, 10));
+            Mouse.Click(btnDeferPrint);
 
             uIAddActivityCheckBox.Checked = CommonParams.UIAddActivityCheckBoxChecked;
 
-            Mouse.Click(uIOKButton2, new Point(24, 12));
+            Mouse.Click(btnImportToTam);
 
             SelectTamInsurersAndActivity(selectListItems1: 0);
         }
 
-        /// <summary>
-        ///     HighlightCustomer
-        /// </summary>
-        public void HighlightCustomer()
-        {
-            #region Variable Declarations
+        ///// <summary>
+        /////     HighlightCustomer
+        ///// </summary>
+        //public void HighlightCustomer()
+        //{
+        //    #region Variable Declarations
 
-            WinClient uIcustomersClient = UIPolicyautotestWindow.UICustomersWindow.UIItemWindow1.UIClient();
+        //    WinClient uIcustomersClient = UIPolicyautotestWindow.UICustomersWindow.UIItemWindow1.UIClient();
 
-            #endregion
+        //    #endregion
 
-            Mouse.Click(uIcustomersClient, new Point(31, 25));
-            Mouse.Click(uIcustomersClient, new Point(31, 25));
-        }
+        //    Mouse.Click(uIcustomersClient, new Point(31, 25));
+        //    Mouse.Click(uIcustomersClient, new Point(31, 25));
+        //}
 
         public void AcceptQuote()
         {
@@ -1165,7 +1167,7 @@
         {
             #region Variable Declarations
 
-            WinControl uIRenewPolicyButton = UIAUTO1871001Window.UIRenewPolicyWindow.UIRenewPolicyButton;
+            WinControl uIRenewPolicyButton = this.UIAutoPolicyWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinControl uIYesButton = UIConfirmWindow.UIYesWindow.UIYesButton;
             WinControl uIOKButton = UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
 
@@ -1190,7 +1192,7 @@
         {
             #region Variable Declarations
 
-            WinControl uIInviteButton = UIAUTO1871001Window.UIInviteWindow.UIInviteButton;
+            WinControl uIInviteButton = this.UIAutoPolicyWindow.UIInviteWindow.UIInviteButton;
             WinControl uiYesButton = UIPersonalLinesDialogWindow.UIYesWindow.UIYesButton;
 
             #endregion
@@ -1616,18 +1618,17 @@
         /// <summary>
         ///     RebrokeAlternativeRenew - Use 'RebrokeAlternativeRenewParams' to pass parameters into this method.
         /// </summary>
-        public void RebrokeAlternativeRenew()
+        /// <param name="paymentType"></param>
+        public void RebrokeAlternativeRenew(string paymentType)
         {
-            #region Variable Declarations
 
-            WinControl uIRenewPolicyButton = UIAUTO2311001Window.UIRenewPolicyWindow.UIRenewPolicyButton;
+            WinControl uIRenewPolicyButton = this.UIAutoPolicyWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinRadioButton uIAlternativeRadioButton = UIRenewalAcceptWindow.UIAlternativeWindow.UIAlternativeRadioButton;
             WinControl uIOKButton = UIRenewalAcceptWindow.UIOKWindow.UIOKButton;
             WinControl uIOKButton1 = UIInsurerNoticeRevaluaWindow.UIOKWindow.UIOKButton;
-            WinClient uIRenewalsNewBusinessAClient = UIRenewalsNewBusinessAWindow1.UIItemWindow.UIClient();
-            WinControl uIAcceptButton = UIRenewalsNewBusinessAWindow1.UIAcceptWindow.UIAcceptButton;
+            WinControl uIAcceptButton = UIRenewalsNewBusinessAWindow.UIAcceptWindow.UIAcceptButton; 
 
-            #endregion
+            WinClient uIRenewalsNewBusinessAClient = paymentType == "cash" ? this.UIRenewalsNewBusinessAWindow.UIItemWindow.UIClient() : this.UIRenewalsNewBusinessAWindow.UIPolicyListWindow.UIClient();
 
             Mouse.Click(uIRenewPolicyButton, new Point(48, 13));
 
@@ -1635,9 +1636,11 @@
 
             Mouse.Click(uIOKButton, new Point(52, 20));
 
+            PaymentMethod(paymentType);
+
             Mouse.Click(uIOKButton1, new Point(36, 11));
 
-            Mouse.Click(uIRenewalsNewBusinessAClient, new Point(433, 51));
+            Mouse.Click(uIRenewalsNewBusinessAClient, new Point(154, 25));
 
             Mouse.Click(uIAcceptButton, new Point(45, 17));
 
@@ -1700,11 +1703,11 @@
         {
             #region Variable Declarations
 
-            WinControl uIRenewPolicyButton = UIAUTO2211001Window.UIRenewPolicyWindow.UIRenewPolicyButton;
+            WinControl uIRenewPolicyButton = UIAutoPolicyWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinRadioButton uIAlternativeRadioButton = UIRenewalAcceptWindow.UIAlternativeWindow.UIAlternativeRadioButton;
             WinControl uIOKButton = UIRenewalAcceptWindow.UIOKWindow.UIOKButton;
             WinControl uIOKButton1 = UIInsurerNoticeRevaluaWindow.UIOKWindow.UIOKButton;
-            WinClient uIItemClient = UIRenewalsNewBusinessAWindow.UIItemWindow.UIClient();
+            WinClient uIItemClient = UIRenewalsNewBusinessAWindow.UIPolicyListWindow.UIClient();
             WinControl uIAcceptButton = UIRenewalsNewBusinessAWindow.UIAcceptWindow.UIAcceptButton;
             WinControl uIYesButton = UIInsurEtamWindow1.UIYesWindow.UIYesButton;
             WinControl uIOKButton2 = UIConfirmDocumentsWindow.UIOKWindow.UIOKButton;
@@ -1928,7 +1931,7 @@
             Mouse.Click(uiCancelButton2);
         }
 
-        public void OpenTransList(List<Transaction> expectedRows)
+        public bool OpenTransList(List<Transaction> expectedRows)
         {
             #region Variable Declarations
 
@@ -1943,6 +1946,12 @@
             WinList uILvwVListList = UITransactionListWindow.UILvwVListWindow.UIList("Enter Code");
 
             #endregion
+
+            if (expectedRows.Count > 0)
+            {
+                return false;
+            }
+
 
             Mouse.Click(uIInvoicesButton);
 
@@ -1975,6 +1984,8 @@
             Mouse.Click(uICloseButton);
 
             Mouse.Click(uiCancelButton2);
+
+            return true;
         }
 
         public void CleanDocuments()

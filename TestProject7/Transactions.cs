@@ -1,12 +1,19 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
     using System.Collections.Generic;
+    using System.Diagnostics;
 
     public class Transactions
     {
         public static List<Transaction> GetTransactionDictionary(string premium, string paymentType, string originalPremium = "")
         {
             var dict = new List<Transaction>();
+
+            if (string.IsNullOrEmpty(premium))
+            {
+                Debug.WriteLine("Problem getting premium " + paymentType);
+                return dict;
+            }
 
             if (paymentType == "cash")
             {

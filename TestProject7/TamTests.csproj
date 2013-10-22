@@ -175,14 +175,12 @@
     <Compile Include="UIElements\UIAmendRiskWindow.cs" />
     <Compile Include="UIElements\UIApplicationMenuBar.cs" />
     <Compile Include="UIElements\UIAssignClientNumberWindow.cs" />
-    <Compile Include="UIElements\UIAUTO1871001Window.cs">
+    <Compile Include="UIElements\UIAutoPolicyWindow.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="UIElements\UIAUTOXXX1000Window.cs" />
-    <Compile Include="UIElements\UIAUTO2211001Window.cs" />
     <Compile Include="UIElements\UIAUTO1Window.cs" />
     <Compile Include="UIElements\UIAUTOWindow.cs" />
-    <Compile Include="UIElements\UIAUTO2311001Window.cs" />
     <Compile Include="UIElements\UIBillingScreenHomeTestWindow.cs" />
     <Compile Include="UIElements\UIBillingScreenWindow.cs" />
     <Compile Include="UIElements\UIBlankPageMicrosoftInWindow.cs" />
@@ -263,7 +261,6 @@
     <Compile Include="UIElements\UIRenewalLoaderWindow.cs" />
     <Compile Include="UIElements\UIRenewalSearchWindow.cs" />
     <Compile Include="UIElements\UIRenewalsNewBusinessAWindow.cs" />
-    <Compile Include="UIElements\UIRenewalsNewBusinessAWindow1.cs" />
     <Compile Include="UIElements\UISavetheamendedrenewaWindow.cs" />
     <Compile Include="UIElements\UISavethefileasWindow.cs" />
     <Compile Include="UIElements\UISearchResultForB338TWindow.cs" />
