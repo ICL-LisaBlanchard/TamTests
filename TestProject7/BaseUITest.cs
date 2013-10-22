@@ -317,7 +317,7 @@
             House.RenewalModuleInvite(selectAlternative);
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();
-            House.RenewalModuleRenew();
+            House.RenewalModuleRenew("cash");
             House.RetrieveResponse();
 
             House.RenewalModuleRenew1();

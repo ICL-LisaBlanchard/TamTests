@@ -1161,7 +1161,7 @@
             SelectTAMActivities2();
         }
 
-        public void RenewalModuleRenew()
+        public void RenewalModuleRenew(string paymentType)
         {
             #region Variable Declarations
 
@@ -1172,6 +1172,8 @@
             #endregion
 
             Mouse.Click(uIRenewPolicyButton, new Point(46, 10));
+
+            PaymentMethod(paymentType);
 
             Mouse.Click(uIYesButton, new Point(55, 14));
 
