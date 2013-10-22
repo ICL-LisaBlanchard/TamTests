@@ -505,7 +505,7 @@
             Moto.RenewalModuleInvite(false);
             Moto.RenewConfirmInvite();
             Moto.RenewalModuleInvite1();
-            Moto.RebrokeAlternativeFinish();
+            Moto.RebrokeAlternativeFinish("cash");
             Moto.RetrieveResponse();
             Moto.CancelPrint();
             Moto.RebrokeAlternativeFinish1();
@@ -544,7 +544,7 @@
             Moto.RenewalModuleInvite(false);
             Moto.RenewConfirmInvite();
             Moto.RenewalModuleInvite1();
-            Moto.RebrokeAlternativeFinish();
+            Moto.RebrokeAlternativeFinish("cash");
             Moto.RetrieveResponse();
             Moto.CancelPrint();
             Moto.RebrokeAlternativeFinish1();

@@ -72,46 +72,5 @@
             House.OpenTransList(Transactions.GetTransactionDictionary(premium, "dd", originalPremium: originalPremium));
             Moto.ClosePolicy();
         }
-
-        [TestMethod]
-        public void MotoRebrokeDirectDebit()
-        {
-            SetOurZurichRegKeys();
-            UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
-            Moto.CreateNewBusinessPolicy(ExpectedAddress);
-            Moto.AssertSelectPolicyForm();
-            Moto.SelectPolicyQuote();
-            Moto.AcceptAndFinishQuote("dd");
-            Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
-
-            string originalPremium = Moto.CheckPolicyPremium("dd");
-            Moto.OpenTransList(Transactions.GetTransactionDictionary(originalPremium, "dd"));
-            Moto.CheckCorrectDocumentPresent(this.Docs.DocumentsForMotoNewBusinessQuoteDd);
-
-            string policyNumber = Moto.GetPolicyNumber();
-            Renewals(policyNumber, "Motor", RenewalPremium, "Zurich");
-
-            Moto.MotoRebroke(false, false);
-            Moto.PublicCreditCheckOk();
-            Moto.MotoRebrokeSelectScheme("{home}");
-            Moto.RebrokeSelectAlternative();
-            Moto.MotoRebrokeCurrent(false);
-
-            Moto.ImportToTamOptionsOnce("");
-
-            Moto.RenewalModuleInvite(false);
-
-            Moto.RenewalModuleInvite1();
-
-            Moto.RebrokeAlternativeRenew("dd");
-
-            //payment
-
-            //NB
-
-            //Lapsed
-
-            //Tamxml
-        }
     }
 }

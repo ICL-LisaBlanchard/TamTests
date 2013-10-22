@@ -385,6 +385,7 @@
 
             #endregion
 
+            Mouse.Click(uIItemEdit);
             Assert.AreEqual(overridePremium, uIItemEdit.Text);
         }
 
@@ -576,6 +577,14 @@
             #endregion
 
             Mouse.Click(uIOKButton, new Point(50, 10));
+
+            try
+            {
+                ImportToTamOptionsOnce("");
+            }
+            catch
+            {
+            }
 
             if (withYesButton)
             {
@@ -1299,7 +1308,7 @@
 
             Mouse.Click(uIOKButton1, new Point(41, 15));
 
-            SelectTAMActivities3();
+            SelectTAMActivities2();
         }
 
         public void CreateMTA()

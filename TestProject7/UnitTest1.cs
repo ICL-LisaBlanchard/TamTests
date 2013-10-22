@@ -17,14 +17,9 @@ namespace AppliedSystems.Tam.Ui.Tests
         public void TestMethod1()
         {
 
-            House.RebrokeAlternativeRenew1();
-            House.RenewalModuleClose();
-            House.CloseAndOpenPolicyList(UiMap.CustomerCode);
-            House.RenewalCheckStatus("REW");
-            //House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
-            //string premium = House.CheckPolicyPremium("cash");
-            //House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalpremium));
-            House.ClosePolicy();
+            string premium = Moto.CheckPolicyPremium("cash");
+            Moto.RenewalCheckStatus("REN");
+          
         }
     }
 }
