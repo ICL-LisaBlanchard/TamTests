@@ -20,7 +20,7 @@
         public void HouseCreateQuote()
         {
             SetOfficeRegKeys();
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             string premium = CreateNewPolicy();
             House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash"));
@@ -31,7 +31,7 @@
         public void HouseSaveQuoteWithoutPremium()
         {
             SetOfficeRegKeys();
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeExitWithoutPolicy();
             House.HomeCloseOpenPolicy();
@@ -58,7 +58,7 @@
         {
             const int OverridePremium = 19999;
             SetOfficeRegKeys();
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeChangePremium(OverridePremium);
@@ -73,7 +73,7 @@
         public void HouseCopyRiskNew()
         {
             SetOfficeRegKeys();
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
@@ -88,7 +88,7 @@
         public void HouseCopyRiskQTE()
         {
             SetOfficeRegKeys();
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeExitWithoutPolicy();
             House.HomeCloseOpenPolicyList();
@@ -101,7 +101,7 @@
         public void HouseMTAExit()
         {
             SetOfficeRegKeys();
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
@@ -119,7 +119,7 @@
         public void HouseMTAAccept()
         {
             SetOfficeRegKeys();
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
@@ -140,7 +140,7 @@
         public void HouseCopyMTA()
         {
             SetOfficeRegKeys();
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
@@ -161,7 +161,7 @@
         {
             SetOfficeRegKeys();
             // create new policy
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
@@ -197,7 +197,7 @@
         {
             SetOfficeRegKeys();
             //create policy
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
@@ -223,7 +223,7 @@
         {
             SetOfficeRegKeys();
             //add policy
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
@@ -250,7 +250,7 @@
         {
             SetOurMMaRegKeys();
             //add policy
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
             House.Links();
@@ -320,7 +320,7 @@
             // change registry to ourhighway
             SetOurMMaRegKeys();
             //add policy
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
             House.Links();
@@ -393,7 +393,7 @@
             // change registry to ourhighway
             SetOurMMaRegKeys();
             //add policy
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
             House.Links();
@@ -422,7 +422,7 @@
             // change registry to ourhighway
             SetOurMMaRegKeys();
             //add policy
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
             House.Links();
@@ -483,7 +483,7 @@
             // change registry to ourhighway
             SetOurMMaRegKeys();
             //add policy
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
             House.Links();
@@ -513,7 +513,7 @@
             // change registry to ourhighway
             SetOurMMaRegKeys();
             //add policy
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
             House.Links();
@@ -559,7 +559,7 @@
             SetOurMMaRegKeys();
 
             //add policy
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
             House.Links();
@@ -603,7 +603,7 @@
             // change registry to ourhighway
             SetOurMMaRegKeys();
             //add policy
-            House.CustomerCode = Customer.AddPolicy();
+            Map.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
             House.Links();
