@@ -132,7 +132,7 @@
         {
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "office");
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "office");
-            SetAddressDummy();
+            SetAddressInsurecom();
         }
 
         public void SetOurAxaRegKeys()
