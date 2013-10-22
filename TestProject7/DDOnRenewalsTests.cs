@@ -49,7 +49,7 @@
             Moto.AssertSelectPolicyForm();
             Moto.SelectPolicyQuote();
             Moto.AcceptAndFinishQuote("dd");
-            Moto.CloseAndOpenPolicyList();
+            Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
 
             string originalPremium = Moto.CheckPolicyPremium("dd");
             Moto.OpenTransList(Transactions.GetTransactionDictionary(originalPremium, "dd"));
@@ -64,7 +64,7 @@
             Moto.MotoAmendRiskNew("dd");
             Moto.RetrieveResponse();
             Moto.MotoAmendRiskNew1();
-            Moto.CloseAndOpenPolicyList();
+            Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
             Moto.HighlightBillingScreen();
 
             string premium = Moto.CheckPolicyPremium("dd");
@@ -82,7 +82,7 @@
             Moto.AssertSelectPolicyForm();
             Moto.SelectPolicyQuote();
             Moto.AcceptAndFinishQuote("dd");
-            Moto.CloseAndOpenPolicyList();
+            Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
 
             string originalPremium = Moto.CheckPolicyPremium("dd");
             Moto.OpenTransList(Transactions.GetTransactionDictionary(originalPremium, "dd"));
