@@ -37,7 +37,7 @@
             UiMap.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeExitWithoutPolicy();
-            House.HomeCloseOpenPolicy();
+            House.CloseOpenPolicy();
             House.HomeClickPremium();
             House.HomeCheckZeroPremium();
             House.HomeExitWithPolicy();
@@ -51,7 +51,7 @@
             House.HomeAcceptQuote();
             House.CancelPrint();
             House.HomeAcceptQuote1();
-            House.HomeCloseOpenPolicyList();
+            House.CloseOpenPolicyList();
             House.HomeOpenPolicy();
             House.CheckPolicyPremium("cash");
         }
@@ -81,7 +81,7 @@
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
-            House.HomeCloseOpenPolicyList();
+            House.CloseOpenPolicyList();
             House.HomeCopyRisk();
             House.HomeCopyCheckData();
             House.HomeCancelCopy();
@@ -94,7 +94,7 @@
             UiMap.CustomerCode = Customer.AddPolicy();
             CreatePolicy(false);
             House.HomeExitWithoutPolicy();
-            House.HomeCloseOpenPolicyList();
+            House.CloseOpenPolicyList();
             House.HomeCopyRisk();
             House.HomeCopyCheckData();
             House.HomeCancelCopy();
@@ -109,7 +109,7 @@
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
-            House.HomeCloseOpenPolicyList();
+            House.CloseOpenPolicyList();
             House.HomeOpenQuote();
             House.HomeMTAChange();
             House.HomeMTACancel();
@@ -127,7 +127,7 @@
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
-            House.HomeCloseOpenPolicyList();
+            House.CloseOpenPolicyList();
             House.HomeOpenQuote();
             House.HomeMTAChange();
             House.HomeMTAAccept(false);
@@ -148,7 +148,7 @@
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
-            House.HomeCloseOpenPolicyList();
+            House.CloseOpenPolicyList();
             House.HomeOpenQuote();
             House.HomeMTAChange();
             House.HomeMTAAccept(false);
@@ -169,7 +169,7 @@
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
-            House.HomeCloseOpenPolicyList();
+            House.CloseOpenPolicyList();
             //MTA
             House.HomeOpenQuote();
             House.HomeMTAChange();
@@ -185,7 +185,7 @@
             House.HomeMTAEnterDate("30/09/12");
             House.HomeMTACoverDate();
             House.HomeMTACheckMessage();
-            House.HomeMTACloseMessage();
+            House.EtamOk();
             House.HomeMTAEnterDate();
             House.HomeMTACoverDate();
             House.HomeMTASelectQuote();
@@ -205,7 +205,7 @@
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
-            House.HomeCloseOpenPolicyList();
+            House.CloseOpenPolicyList();
             //cancel policy
             House.HomeOpenQuote();
             House.HomeCancelPolicy();
@@ -215,7 +215,7 @@
             House.HomeCancelPolicyQuote1();
             House.HomeCancelPolicyExit();
             //check status
-            House.HomeCloseOpenPolicyList();
+            House.CloseOpenPolicyList();
             House.HomeOpenPolicy();
             House.HomeCheckStatusExpectedValues.UIItemEditText = "NEW";
             House.HomeCheckStatus();
@@ -231,7 +231,7 @@
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
-            House.HomeCloseOpenPolicyList();
+            House.CloseOpenPolicyList();
             //cancel policy
             House.HomeOpenQuote();
             House.HomeCancelPolicy();
@@ -240,7 +240,7 @@
             House.HomeCancelPolicyQuote1();
             House.HomeCancelPolicyAccept();
             //check status
-            House.HomeCloseOpenPolicyList();
+            House.CloseOpenPolicyList();
             House.HomeOpenPolicy();
             House.HomeCheckStatusExpectedValues.UIItemEditText = "CAN";
             House.HomeCheckStatus();
@@ -303,16 +303,16 @@
 
             ////mta2
             House.HomeOpenQuote();
-            House.HomeRenewalConfirm();
+            House.EtamYes();
             House.HomeMTAChange();
             House.HomeMTAAccept(false);
             House.MTADate(DateTime.Now.ToString("dd/MM/yy"));
             House.MTAMessageBeforeCurrent();
-            House.MTACloseMessageBefore();
+            House.EtamOk();
 
             House.MTADate(DateTime.Now.AddDays(10).ToString("dd/MM/yy"));
             Moto.MotoMTAMessageAfterDate();
-            House.MTACloseMessageAfter();
+            House.EtamOk();
             House.MTAEffectiveDatesCancel();
             House.HomeMTACancel1();
         }
@@ -357,7 +357,7 @@
             House.HomeMTAAccept(false);
             House.MTADate(DateTime.Now.AddDays(13).ToString("dd/MM/yy"));
             House.MTAMessageBeforeCurrent();
-            House.MTACloseMessageBefore();
+            House.EtamOk();
             House.MTAEffectiveDatesCancel();
             House.HomeMTACancel1();
 
@@ -369,7 +369,7 @@
 
             House.MTADate(DateTime.Now.AddDays(9).ToString("dd/MM/yy"));
             Moto.MotoMTAMessageAfterDate();
-            House.MTACloseMessageAfter();
+            House.EtamOk();
 
             House.MTADate(DateTime.Now.AddDays(1).ToString("dd/MM/yy"));
             House.HomeRenewalBeforeAccept();
@@ -377,15 +377,15 @@
 
             //mta4
             House.HomeOpenQuote();
-            House.HomeRenewalConfirm();
+            House.EtamYes();
             House.HomeMTAChange();
             House.HomeMTAAccept(false);
             House.MTADate(DateTime.Now.ToString("dd/MM/yy"));
             House.MTAMessageBeforeCurrent();
-            House.MTACloseMessageBefore();
+            House.EtamOk();
             House.MTADate(DateTime.Now.AddDays(11).ToString("dd/MM/yy"));
             Moto.MotoMTAMessageAfterDate();
-            House.MTACloseMessageAfter();
+            House.EtamOk();
             House.MTAEffectiveDatesCancel();
             House.HomeMTACancel1();
         }
@@ -465,7 +465,7 @@
             House.HomeMTAAccept(false);
             House.MTADate(DateTime.Now.AddDays(1).ToString("dd/MM/yy"));
             House.AmendDateBeforeMessage();
-            House.MTACloseMessageBefore();
+            House.EtamOk();
             House.MTADate(DateTime.Now.AddDays(14).ToString("dd/MM/yy"));
             House.HomeMTASelectQuote();
 
@@ -475,7 +475,7 @@
             House.HomeMTAAccept(false);
             House.MTADate(DateTime.Now.AddDays(13).ToString("dd/MM/yy"));
             House.MTAMessageBeforeCurrent();
-            House.MTACloseMessageBefore();
+            House.EtamOk();
             House.MTAEffectiveDatesCancel();
             House.HomeMTACancel1();
         }
@@ -646,7 +646,7 @@
         {
             House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
-            House.HomeCloseOpenPolicyList();
+            House.CloseOpenPolicyList();
             House.HomeOpenPolicy();
         }
 

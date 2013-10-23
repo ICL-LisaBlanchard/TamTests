@@ -25,7 +25,7 @@
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("dd");
             House.HomeFinishQuote();
-            House.HomeCloseOpenPolicyList();
+            House.CloseOpenPolicyList();
             House.HomeOpenPolicy();
             House.CheckPolicyPremium("dd");
             House.CheckCorrectDocumentPresent(Docs.DocumentsForHhDirectDebit);
