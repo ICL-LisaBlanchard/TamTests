@@ -563,15 +563,13 @@
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl btnImportToTam = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
 
-            ConfirmDocuments();
+            this.ConfirmDocuments();
 
             this.RetrieveResponse();
 
             this.DeferPrinting();
 
-            uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
-
-            Mouse.Click(btnImportToTam);
+            ImportToTam();
 
             this.SelectTamInsurersAndActivity(selectListItems1: 0);
         }
@@ -657,10 +655,9 @@
         /// <param name="paymentType"></param>
         public void FinishQuote(string paymentType)
         {
-            
             WinControl uIConfirmButton = this.UIPolicyDateTimeWindow.UIConfirmWindow.UIConfirmButton;
 
-            EtamYes();
+            this.EtamYes();
 
             this.PaymentMethod(paymentType);
 
@@ -681,14 +678,12 @@
 
         public void CloseOpenPolicy()
         {
-
             WinControl uIDetailButton = this.UIPolicyautotestWindow.UIPolicyListWindow1.UIDetailWindow.UIDetailButton;
 
-            CloseOpenPolicyList();
+            this.CloseOpenPolicyList();
 
             Mouse.Click(uIDetailButton, new Point(44, 16));
         }
-
 
         /// <summary>
         ///     Exit1 - Use 'Exit1Params' to pass parameters into this method.
@@ -700,7 +695,7 @@
             Playback.Wait(5000);
             Mouse.Click(uIExitButton);
 
-            EtamYes();
+            this.EtamYes();
 
             this.ImportToTam();
 
@@ -912,10 +907,10 @@
         public void SaveWithoutPremium()
         {
             WinControl uIExitButton = this.UIQuoteResultsWindow.UIExitWindow.UIExitButton;
-            
+
             Mouse.Click(uIExitButton);
 
-            EtamYes();
+            this.EtamYes();
 
             this.ImportToTam();
 
@@ -962,8 +957,8 @@
         {
             try
             {
-                PaymentMethod("cash");
-                ConfirmDocuments();
+                this.PaymentMethod("cash");
+                this.ConfirmDocuments();
                 this.WriteToReport("RenewalModuleRenew1 line 1147: " + this.TestContext.TestName);
             }
             catch
@@ -976,18 +971,15 @@
 
             this.EtamOk();
 
-            ImportToTam();
+            this.ImportToTam();
 
-            ImportToTamOptionsOnce("");
-
-            this.SelectTAMActivities2();
+            this.SelectTAMActivities3();
         }
 
         public void RenewalModuleRenew(string paymentType)
         {
             WinControl uIRenewPolicyButton = this.UIAutoPolicyWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
-      
 
             Mouse.Click(uIRenewPolicyButton);
 
@@ -997,7 +989,7 @@
 
             try
             {
-                ConfirmDocuments();
+                this.ConfirmDocuments();
                 this.WriteToReport("RenewalModuleRenew line 1182: " + this.TestContext.TestName);
             }
             catch
@@ -1142,10 +1134,9 @@
         {
             WinControl uIExitButton = this.UIInsurEtamWindow.UIQuotesWindow.UIExitWindow1.UIExitButton;
 
-
             Mouse.Click(uIExitButton);
 
-            EtamYes();
+            this.EtamYes();
         }
 
         /// <summary>
@@ -1301,7 +1292,6 @@
 
         public string CheckPolicyPremium(string paymentType)
         {
-
             WinEdit uIItemEdit;
             switch (paymentType)
             {
@@ -1432,7 +1422,6 @@
             WinClient uIItemClient = this.UIRenewalsNewBusinessAWindow.UIPolicyListWindow.UIClient();
             WinControl uIAcceptButton = this.UIRenewalsNewBusinessAWindow.UIAcceptWindow.UIAcceptButton;
 
-
             Mouse.Click(uIRenewPolicyButton);
 
             uIAlternativeRadioButton.Selected = this.CommonParams.UIAlternativeRadioButtonSelected;
@@ -1449,7 +1438,7 @@
 
             Mouse.Click(uIAcceptButton);
 
-            EtamYes();
+            this.EtamYes();
 
             this.CancelPrint();
         }
@@ -1508,7 +1497,7 @@
 
             Mouse.Click(uIExitButton);
 
-            EtamYes();
+            this.EtamYes();
 
             Mouse.Click(uIOKButton);
         }
@@ -1551,7 +1540,7 @@
                 this.ImportToTamOptionsOnce(whoToSelect);
             }
 
-            if (selectListItems2 > 0)
+            if (selectListItems2 > -1)
             {
                 Mouse.Click(tamXmlButton);
             }
@@ -1836,6 +1825,8 @@
             WinList uIItemList3 = this.UISelectTamActivityTypWindow.UIItemWindow.UIItemList;
             WinButton uIOKButton3 = this.UISelectTamActivityTypWindow.UIItemWindow1.UIClient().UIOKButton;
 
+            var timeout = Playback.PlaybackSettings.SearchTimeout;
+            Playback.PlaybackSettings.SearchTimeout = 2000;
             try
             {
                 WinWindow win = this.TopWindow;
@@ -1869,6 +1860,7 @@
             {
                 Debug.WriteLine(ex.ToString());
             }
+            Playback.PlaybackSettings.SearchTimeout = timeout;
         }
 
         public string GetPolicyNumber()
@@ -1901,20 +1893,56 @@
             file.Close();
         }
 
-        protected void DeferPrinting()
+        public void DeferPrinting()
         {
-            int timeout = Playback.PlaybackSettings.SearchTimeout;
+            WinCheckBox uIDeferPrintingCheckBox = null;
+            WinControl uIOKButton = null;
+            for (int i = 0; i < 30; i++)
+            {
+                var win = new WinWindow();
+                win.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
 
-            WinCheckBox uIDeferPrintingCheckBox = this.UIPointOfSaleWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
-            WinControl uIOKButton = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
+                string name = win.GetProperty("Name").ToString();
 
-            Playback.PlaybackSettings.SearchTimeout = 120000;
 
-            uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
+                switch (name)
+                {
+                    case "Point Of Sale":
+                        uIDeferPrintingCheckBox = this.UIPointOfSaleWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
+                        uIOKButton = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
+                        break;
+                    case "Print Documents":
+                        uIDeferPrintingCheckBox = this.UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
+                        uIOKButton = this.UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
+                        break;
+                }
 
-            Playback.PlaybackSettings.SearchTimeout = timeout;
+                try
+                {
+                    uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
+                    Mouse.Click(uIOKButton);
+                    return;
+                }
+                catch
+                {
+                }
+            }
 
-            Mouse.Click(uIOKButton);
+            try
+            {
+                uIDeferPrintingCheckBox = this.UIPointOfSaleWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
+                uIOKButton = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
+                uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
+                Mouse.Click(uIOKButton);
+
+            }
+            catch (Exception)
+            {
+                uIDeferPrintingCheckBox = this.UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
+                uIOKButton = this.UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
+                uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
+                Mouse.Click(uIOKButton);
+            }
         }
 
         protected void ImportToTam()

@@ -16,7 +16,7 @@ namespace AppliedSystems.Tam.Ui.Tests
         [TestMethod]
         public void TestMethod1()
         {
-            Moto.WriteToReport("RenewalModuleEdi1 line 1268: " + TestContext.TestName);
+            Moto.DeferPrinting();
         }
 
         private TestContext testContextInstance;

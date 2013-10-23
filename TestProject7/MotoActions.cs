@@ -728,7 +728,7 @@ DeferPrinting();
 
             ImportToTam();
 
-            SelectTamInsurersAndActivity(selectListItems1: 1, selectListItems2: 1);
+            SelectTamInsurersAndActivity(selectListItems1: 0, selectListItems2: 0);
         }
 
         /// <summary>
@@ -1022,13 +1022,13 @@ DeferPrinting();
 
         public void MotoFinishQuote()
         {
-            Playback.Wait(2000);
+            //Playback.Wait(2000);
 
             DeferPrinting();
 
             ImportToTam();
 
-            SelectTAMActivities2();
+            SelectTAMActivities1();
         }
 
         public void CreateMTA()
