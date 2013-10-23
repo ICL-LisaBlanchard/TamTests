@@ -198,7 +198,7 @@
             Moto.MtaEffectiveDate("13/10/12");
             Moto.MotoMTAConfirmDate();
             Moto.CoverDateBackCheck();
-            Moto.MotoMTACloseMessage();
+            Moto.EtamOk();
             string coverDate = "MotoMTAtoMTA_" + Moto.MtaEffectiveDate();
             Moto.MotoMTAConfirmDate();
             Moto.MotoMTAConfirmPolicy("mta");
@@ -299,10 +299,10 @@
             Moto.MotoMTABefore2();
             Moto.MTADate(DateTime.Now.ToString("dd/MM/yy"));
             Moto.MTAMessageBeforeCurrent();
-            Moto.MTACloseMessageBefore();
+            Moto.EtamOk();
             Moto.MTADate(DateTime.Now.AddDays(10).ToString("dd/MM/yy"));
             Moto.MotoMTAMessageAfterDate();
-            Moto.MTACloseMessageAfter();
+            Moto.EtamOk();
             Moto.MTACancel();
         }
 
@@ -339,14 +339,14 @@
             Moto.RenewalAfterMTA1();
             Moto.MTADate(DateTime.Now.AddDays(13).ToString("dd/MM/yy"));
             Moto.MTAMessageBeforeCurrent();
-            Moto.MTACloseMessageBefore();
+            Moto.EtamOk();
             Moto.MTACancel();
             //MTA3
             Moto.SelectMenu();
             Moto.MotoMTABefore();
             Moto.MTADate(DateTime.Now.AddDays(9).ToString("dd/MM/yy"));
             Moto.MotoMTAMessageAfterDate();
-            Moto.MTACloseMessageAfter();
+            Moto.EtamOk();
 
             Moto.MTADate(DateTime.Now.AddDays(1).ToString("dd/MM/yy"));
             Moto.MotoMTABeforeAccept();
@@ -357,11 +357,11 @@
 
             Moto.MTADate(DateTime.Now.ToString("dd/MM/yy"));
             Moto.MTAMessageBeforeCurrent();
-            Moto.MTACloseMessageBefore();
+            Moto.EtamOk();
 
             Moto.MTADate(DateTime.Now.AddDays(11).ToString("dd/MM/yy"));
             Moto.MotoMTAMessageAfterDate();
-            Moto.MTACloseMessageAfter();
+            Moto.EtamOk();
             Moto.MTACancel();
         }
 
@@ -435,7 +435,7 @@
             Moto.MotoMTAAccept();
             Moto.MTADate(DateTime.Now.AddDays(5).ToString("dd/MM/yy"));
             Moto.AmendDateBeforeMessage();
-            Moto.MTACloseMessageBefore();
+            Moto.EtamOk();
             Moto.MTADate(DateTime.Now.AddDays(12).ToString("dd/MM/yy"));
             Moto.MotoFinishMTA();
 
@@ -444,7 +444,7 @@
             Moto.MotoMTAAccept();
             Moto.MTADate(DateTime.Now.AddDays(9).ToString("dd/MM/yy"));
             Moto.MTAMessageBeforeCurrent();
-            Moto.MTACloseMessageBefore();
+            Moto.EtamOk();
             Moto.MTACancel();
         }
 

@@ -16,10 +16,24 @@ namespace AppliedSystems.Tam.Ui.Tests
         [TestMethod]
         public void TestMethod1()
         {
+            Moto.WriteToReport("RenewalModuleEdi1 line 1268: " + TestContext.TestName);
+        }
 
-            string premium = Moto.CheckPolicyPremium("cash");
-            Moto.RenewalCheckStatus("REN");
-          
+        private TestContext testContextInstance;
+        /// <summary>
+        ///Gets or sets the test context which provides
+        ///information about and functionality for the current test run.
+        ///</summary>
+        public TestContext TestContext
+        {
+            get
+            {
+                return testContextInstance;
+            }
+            set
+            {
+                testContextInstance = value;
+            }
         }
     }
 }
