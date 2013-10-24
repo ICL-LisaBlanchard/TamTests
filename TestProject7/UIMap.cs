@@ -1018,8 +1018,7 @@
             WinControl uiRenewalSearchWindowOkButton = this.UIRenewalSearchWindow.UIOKWindow.UIOKButton;
             WinControl uILogandClearButton = this.UIInsurEtamWindow.UIQuotesWindow.UILogandClearWindow.UILogandClearButton;
 
-            if (continueOnError)
-            {
+
                 try
                 {
                     this.EtamOk();
@@ -1029,7 +1028,7 @@
                 catch
                 {
                 }
-            }
+          
 
             Mouse.Click(uIediMatchButton);
 
@@ -1382,7 +1381,6 @@
             ConfirmDocuments();
             RetrieveResponse();
             CancelPrint();
-
 
             this.DeferPrinting();
 
