@@ -9,9 +9,8 @@
 
 TestResults
 /TestProject7/*.config
-/TestProject7/*.suo
 bin
 obj
 *.user
 *.suo
-suo
+*.suo
