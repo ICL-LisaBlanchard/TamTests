@@ -1028,7 +1028,7 @@ DeferPrinting();
 
             ImportToTam();
 
-            SelectTAMActivities1();
+            SelectTAMActivities2();
         }
 
         public void CreateMTA()
