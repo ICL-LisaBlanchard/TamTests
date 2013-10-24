@@ -16,7 +16,13 @@ namespace AppliedSystems.Tam.Ui.Tests
         [TestMethod]
         public void TestMethod1()
         {
-            Moto.DeferPrinting();
+            UiMap.RenewalModuleEDI();
+            UiMap.RenewalModuleConfirm();
+            UiMap.RenewalModuleEdi1(false);
+            UiMap.RenewalModuleFilter("Household");
+            UiMap.RenewalModuleSort();
+            UiMap.RenewalModuleDisplay(UiMap.CommonParams.SendHomeKeys);
+            UiMap.RenewalCheckRecord(1, "AUTO201");
         }
 
         private TestContext testContextInstance;
