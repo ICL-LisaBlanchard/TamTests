@@ -560,9 +560,6 @@
         /// </summary>
         public void RenewalModuleInvite1()
         {
-            WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
-            WinControl btnImportToTam = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
-
             this.ConfirmDocuments();
 
             this.RetrieveResponse();
@@ -573,21 +570,6 @@
 
             this.SelectTamInsurersAndActivity(selectListItems1: 0);
         }
-
-        ///// <summary>
-        /////     HighlightCustomer
-        ///// </summary>
-        //public void HighlightCustomer()
-        //{
-        //    
-
-        //    WinClient uIcustomersClient = UIPolicyautotestWindow.UICustomersWindow.UIItemWindow1.UIClient();
-
-        //    
-
-        //    Mouse.Click(uIcustomersClient, new Point(31, 25));
-        //    Mouse.Click(uIcustomersClient, new Point(31, 25));
-        //}
 
         public void AcceptQuote()
         {
@@ -1825,7 +1807,7 @@
             WinList uIItemList3 = this.UISelectTamActivityTypWindow.UIItemWindow.UIItemList;
             WinButton uIOKButton3 = this.UISelectTamActivityTypWindow.UIItemWindow1.UIClient().UIOKButton;
 
-            var timeout = Playback.PlaybackSettings.SearchTimeout;
+            int timeout = Playback.PlaybackSettings.SearchTimeout;
             Playback.PlaybackSettings.SearchTimeout = 2000;
             try
             {
@@ -1899,33 +1881,42 @@
             WinControl uIOKButton = null;
             for (int i = 0; i < 30; i++)
             {
-                var win = new WinWindow();
-                win.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-
-                string name = win.GetProperty("Name").ToString();
-
-
-                switch (name)
-                {
-                    case "Point Of Sale":
-                        uIDeferPrintingCheckBox = this.UIPointOfSaleWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
-                        uIOKButton = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
-                        break;
-                    case "Print Documents":
-                        uIDeferPrintingCheckBox = this.UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
-                        uIOKButton = this.UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
-                        break;
-                }
-
                 try
                 {
-                    uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
-                    Mouse.Click(uIOKButton);
-                    return;
+                    var win = new WinWindow();
+                    win.SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
+
+                    string name = win.GetProperty("Name").ToString();
+
+                    bool b = false;
+                    switch (name)
+                    {
+                        case "Point Of Sale":
+                            uIDeferPrintingCheckBox = this.UIPointOfSaleWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
+                            uIOKButton = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
+                            b = true;
+                            break;
+                        case "Print Documents":
+                            uIDeferPrintingCheckBox = this.UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
+                            uIOKButton = this.UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
+                            b = true;
+                            break;
+                    }
+
+                    if (b)
+                    {
+                        uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
+                        Mouse.Click(uIOKButton);
+                        return;
+                    }
                 }
-                catch
+                catch (Exception)
                 {
+                    Playback.Wait(1000);
+
                 }
+              
+                
             }
 
             try
@@ -1934,7 +1925,6 @@
                 uIOKButton = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
                 uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
                 Mouse.Click(uIOKButton);
-
             }
             catch (Exception)
             {

@@ -585,9 +585,5 @@
             Moto.RenewalCheckStatus("LAP");
             Moto.ClosePolicy();
         }
-
-        #region Private Functions
-
-        #endregion
     }
 }
