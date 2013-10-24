@@ -617,7 +617,6 @@
             try
             {
                 Mouse.Click(uIQuoteResultsClient1, new Point(224, 39));
-                this.WriteToReport("SelectPolicyQuote line 706: " + this.TestContext.TestName);
             }
             catch (Exception)
             {
@@ -941,7 +940,6 @@
             {
                 this.PaymentMethod("cash");
                 this.ConfirmDocuments();
-                this.WriteToReport("RenewalModuleRenew1 line 1147: " + this.TestContext.TestName);
             }
             catch
             {
@@ -972,7 +970,6 @@
             try
             {
                 this.ConfirmDocuments();
-                this.WriteToReport("RenewalModuleRenew line 1182: " + this.TestContext.TestName);
             }
             catch
             {
@@ -1023,7 +1020,6 @@
                 {
                     this.EtamOk();
                     Mouse.Click(uIExitButton);
-                    this.WriteToReport("RenewalModuleEdi1 line 1252: " + this.TestContext.TestName);
                 }
                 catch
                 {
@@ -1041,8 +1037,6 @@
                 Mouse.Click(uILogandClearButton);
 
                 this.EtamOk();
-
-                this.WriteToReport("RenewalModuleEdi1 line 1268: " + this.TestContext.TestName);
             }
             catch
             {
@@ -1101,7 +1095,6 @@
             try
             {
                 Mouse.Click(uIOKButton);
-                this.WriteToReport("RenewalModuleEdi1 line 1334: " + this.TestContext.TestName);
             }
             catch
             {
@@ -1573,7 +1566,7 @@
             WinButton uiCancelButton2 = this.UIPolicyautotestWindow.UITransactionListWindow.UICancelWindow.UICancelButton;
             WinList uILvwVListList = this.UITransactionListWindow.UILvwVListWindow.UIList("Enter Code");
 
-            if (expectedRows.Count > 0)
+            if (expectedRows.Count == 0)
             {
                 return false;
             }
@@ -1584,7 +1577,6 @@
             try
             {
                 Mouse.Click(uIYesButton);
-                this.WriteToReport("RenewalModuleEdi1 line 1972: " + this.TestContext.TestName);
             }
             catch (Exception)
             {
@@ -1868,14 +1860,6 @@
             Mouse.Click(uISaveButton);
 
             Mouse.Click(uICancelButton);
-        }
-
-        public void WriteToReport(string message)
-        {
-            var file = new StreamWriter(@"c:\screenshots\report.txt", true);
-            file.WriteLine(message);
-
-            file.Close();
         }
 
         public void DeferPrinting()

@@ -477,7 +477,7 @@
             try
             {
                 ImportToTamOptionsOnce("");
-                WriteToReport("MotoRebrokeCurrent line 583: " + TestContext.TestName);
+
             }
             catch
             {
@@ -1009,15 +1009,24 @@
             Mouse.Click(uIOKButton, new Point(17, 7));
         }
 
-        public void MotoFinishQuote()
+        public void MotoFinishQuote(int importToTam)
         {
-            //Playback.Wait(2000);
-
             DeferPrinting();
 
             ImportToTam();
 
-            SelectTAMActivities2();
+            switch (importToTam)
+            {
+                case 2: 
+                    SelectTAMActivities2();
+                    break;
+                case 3: 
+                    SelectTAMActivities3();
+                    break;
+                default:
+                    SelectTAMActivities3();
+                    break;
+            }
         }
 
         public void CreateMTA()
@@ -1028,12 +1037,12 @@
             MotoMTAConfirmPolicy("mta");
         }
 
-        public void AcceptAndFinishQuote(string paymentType)
+        public void AcceptAndFinishQuote(string paymentType, int importToTam)
         {
             AcceptQuote();
             this.FinishQuote(paymentType);
             CancelPrint();
-            MotoFinishQuote();
+            this.MotoFinishQuote(importToTam);
         }
 
         public void CreateNewBusinessPolicy(ExpectedAddress expectedAddress)

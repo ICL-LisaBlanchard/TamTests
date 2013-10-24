@@ -652,7 +652,6 @@
             try
             {
                 Mouse.Click(uIOKButton, new Point(35, 13));
-                this.WriteToReport("HomeAcceptQuote1 line 705: " + this.TestContext.TestName);
             }
             catch
             {
@@ -673,7 +672,6 @@
             try
             {
                 this.EtamOk();
-                this.WriteToReport("HomeAcceptQuote1 line 726: " + this.TestContext.TestName);
             }
             catch
             {
