@@ -14,7 +14,7 @@
         public void HouseAmendQuoteDirectDebit()
         {
             this.SetOurAnsvarRegKeys();
-            House.CustomerCode = Customer.AddPolicy();
+            UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
             House.Links();
@@ -44,7 +44,7 @@
         public void MotoAmendQuoteDirectDebit()
         {
             SetOurZurichRegKeys();
-            Moto.TamMotorSteps(Customer);
+           UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
             Moto.CreateNewBusinessPolicy(ExpectedAddress);
             Moto.AssertSelectPolicyForm();
             Moto.SelectPolicyQuote();
