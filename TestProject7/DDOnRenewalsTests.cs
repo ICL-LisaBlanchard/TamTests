@@ -48,7 +48,7 @@
             Moto.CreateNewBusinessPolicy(ExpectedAddress);
             Moto.AssertSelectPolicyForm();
             Moto.SelectPolicyQuote();
-            Moto.AcceptAndFinishQuote("dd");
+            Moto.AcceptAndFinishQuote("dd", 2);
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
 
             string originalPremium = Moto.CheckPolicyPremium("dd");
