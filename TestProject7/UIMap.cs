@@ -1379,6 +1379,11 @@
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uiImporttoTAMWindowOkButton = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
 
+            ConfirmDocuments();
+            RetrieveResponse();
+            CancelPrint();
+
+
             this.DeferPrinting();
 
             this.EtamOk();
