@@ -14,15 +14,13 @@
 
         private const string RenewalPremium = "1232";
 
-        private readonly AddressLookupExpectedValues addressLookupParams = new AddressLookupExpectedValues();
-
         [TestMethod]
         public void HouseCreateQuote()
         {
             SetOfficeRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
-            CreatePolicy(false);
-            string premium = CreateNewPolicy();
+            House.CreatePolicy(false);
+            string premium = House.CreateNewPolicy();
 
             var passed = House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash"));
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhNewBusinessQuote, "cash");
@@ -35,7 +33,7 @@
         {
             SetOfficeRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
-            CreatePolicy(false);
+            House.CreatePolicy(false);
             House.HomeExitWithoutPolicy();
             House.CloseOpenPolicy();
             House.HomeClickPremium();
@@ -62,10 +60,10 @@
             const int OverridePremium = 19999;
             SetOfficeRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
-            CreatePolicy(false);
+            House.CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeChangePremium(OverridePremium);
-            SetPolicyDetails();
+            House.SetPolicyDetails();
             House.HomeCheckNewPremium();
 
             House.OpenTransList(Transactions.GetTransactionDictionary("18866.98", "cash"));
@@ -77,7 +75,7 @@
         {
             SetOfficeRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
-            CreatePolicy(false);
+            House.CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
@@ -92,7 +90,7 @@
         {
             SetOfficeRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
-            CreatePolicy(false);
+            House.CreatePolicy(false);
             House.HomeExitWithoutPolicy();
             House.CloseOpenPolicyList();
             House.HomeCopyRisk();
@@ -105,7 +103,7 @@
         {
             SetOfficeRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
-            CreatePolicy(false);
+            House.CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
@@ -123,7 +121,7 @@
         {
             SetOfficeRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
-            CreatePolicy(false);
+            House.CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
@@ -144,7 +142,7 @@
         {
             SetOfficeRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
-            CreatePolicy(false);
+            House.CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
@@ -165,7 +163,7 @@
             SetOfficeRegKeys();
             // create new policy
             UiMap.CustomerCode = Customer.AddPolicy();
-            CreatePolicy(false);
+            House.CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
@@ -201,7 +199,7 @@
             SetOfficeRegKeys();
             //create policy
             UiMap.CustomerCode = Customer.AddPolicy();
-            CreatePolicy(false);
+            House.CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
@@ -227,7 +225,7 @@
             SetOfficeRegKeys();
             //add policy
             UiMap.CustomerCode = Customer.AddPolicy();
-            CreatePolicy(false);
+            House.CreatePolicy(false);
             House.HomeSelectPolicy();
             House.HomeAcceptPolicy("cash");
             House.HomeFinishQuote();
@@ -252,7 +250,7 @@
         public void HouseRenewalBefore()
         {
             SetOurMMaRegKeys();
-            //add policy
+            //SetOfficeRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
@@ -263,7 +261,7 @@
             House.HomeCreatePolicy();
             House.PublicCreditCheckOk();
             House.HomeSelectPolicy();
-            SetPolicyDetails();
+            House.SetPolicyDetails();
             string originalPremium = House.CheckPolicyPremium("cash");
             string policyNumber = Moto.GetPolicyNumber();
 
@@ -332,7 +330,7 @@
             House.HomeCreatePolicy();
             House.PublicCreditCheckOk();
 
-            CreateNewPolicy();
+            House.CreateNewPolicy();
             string policyNumber = Moto.GetPolicyNumber();
 
             Renewals(policyNumber, PolicyType, RenewalPremium);
@@ -405,7 +403,7 @@
             House.HomeCreatePolicy();
             House.PublicCreditCheckOk();
 
-            CreateNewPolicy();
+            House.CreateNewPolicy();
             string policyNumber = Moto.GetPolicyNumber();
             Renewals(policyNumber, PolicyType, RenewalPremium);
 
@@ -434,7 +432,7 @@
             House.HomeCreatePolicy();
             House.PublicCreditCheckOk();
             House.HomeSelectPolicy();
-            SetPolicyDetails();
+            House.SetPolicyDetails();
             string originalpremium = House.CheckPolicyPremium("cash");
             string policyNumber = House.GetPolicyNumber();
 
@@ -484,7 +482,7 @@
         public void HouseRebrokeRenewCurrent()
         {
             // change registry to ourhighway
-            SetOurMMaRegKeys();
+            SetOfficeRegKeys();
             //add policy
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
@@ -496,7 +494,7 @@
             House.HomeProposer();
             House.HomeCreatePolicy();
             House.PublicCreditCheckOk();
-            CreateNewPolicy();
+            House.CreateNewPolicy();
             string policyNumber = Moto.GetPolicyNumber();
 
             Renewals(policyNumber, PolicyType, RenewalPremium);
@@ -525,7 +523,7 @@
             House.HomeCreatePolicy();
             House.PublicCreditCheckOk();
             House.HomeSelectPolicy();
-            SetPolicyDetails();
+            House.SetPolicyDetails();
 
             string policyNumber = Moto.GetPolicyNumber();
             string originalpremium = House.CheckPolicyPremium("cash");
@@ -572,7 +570,7 @@
             House.HomeCreatePolicy();
             House.PublicCreditCheckOk();
 
-            string originalpremium = CreateNewPolicy();
+            string originalpremium = House.CreateNewPolicy();
             string policyNumber = Moto.GetPolicyNumber();
 
             Renewals(policyNumber, PolicyType, RenewalPremium);
@@ -605,9 +603,7 @@
         [TestMethod]
         public void HouseLapsePolicy()
         {
-            // change registry to ourhighway
             SetOurMMaRegKeys();
-            //add policy
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
@@ -617,7 +613,7 @@
             House.HomeCreatePolicy();
             House.PublicCreditCheckOk();
 
-            CreateNewPolicy();
+            House.CreateNewPolicy();
             string policyNumber = Moto.GetPolicyNumber();
 
             Renewals(policyNumber, PolicyType, RenewalPremium);
@@ -631,45 +627,5 @@
             House.RenewalCheckStatus("LAP");
             House.ClosePolicy();
         }
-
-        #region Private Functions
-
-        private string CreateNewPolicy()
-        {
-            House.HomeSelectPolicy();
-            SetPolicyDetails();
-            string premium = House.CheckPolicyPremium("cash");
-            return premium;
-        }
-
-        private void SetPolicyDetails()
-        {
-            House.HomeAcceptPolicy("cash");
-            House.HomeFinishQuote();
-            House.CloseOpenPolicyList();
-            House.HomeOpenPolicy();
-        }
-
-        private void CreatePolicy(bool full)
-        {
-            House.SelectHomeType();
-            House.SelectMenu();
-            House.Links();
-            House.HomeProposer();
-            if (full)
-            {
-                House.HomeProposerFull();
-            }
-            else
-            {
-
-                House.HomeAddressLookup(addressLookupParams.AddressLine1, addressLookupParams.AddressLine2);
-                House.HomeCreatePolicy();
-            }
-
-            House.PublicCreditCheckOk();
-        }
-
-        #endregion
     }
 }

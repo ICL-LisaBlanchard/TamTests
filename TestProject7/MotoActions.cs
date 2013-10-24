@@ -235,19 +235,25 @@
 
         public void MotoAmendRiskRenew()
         {
-
- 
-            
             WinButton uIExitButton = map.UIInsurEtamWindow.UIQuotesWindow.UIExitWindow1.UIExitButton;
+            WinButton uIYesButton = this.map.UIConfirmWindow.UIYesWindow.UIYesButton;
 
+            RenewPolicy();
 
-   RenewPolicy();
+            try
+            {
+                PaymentMethod("cash");
+                Mouse.Click(uIYesButton);
+            }
+            catch
+            {
+            }
 
             ConfirmDocuments();
 
             RetrieveResponse();
 
-DeferPrinting();
+            DeferPrinting();
 
             EtamOk();
 
@@ -261,10 +267,9 @@ DeferPrinting();
 
         public void MotoAmendRiskNew1()
         {
-            
             WinButton uIExitButton = map.UIInsurEtamWindow.UIQuotesWindow.UIExitWindow1.UIExitButton;
 
-DeferPrinting();
+            DeferPrinting();
 
             EtamOk();
 
@@ -375,16 +380,6 @@ DeferPrinting();
             ConfirmDocuments();
         }
 
-        private void RenewPolicy()
-        {
-            WinButton uIRenewPolicyButton = this.map.UIAmendRiskResultsWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
-            WinButton uIYesButton = this.map.UIConfirmWindow.UIYesWindow.UIYesButton;
-
-            Mouse.Click(uIRenewPolicyButton, new Point(51, 9));
-
-            Mouse.Click(uIYesButton, new Point(60, 14));
-        }
-
         public void MotoAmendRisk()
         {
             WinButton uIAmendRiskButton = map.Uiautoxxx1000Window.UIAmendRiskWindow.UIAmendRiskButton;
@@ -476,7 +471,6 @@ DeferPrinting();
         public void MotoRebrokeCurrent(bool withYesButton)
         {
             WinButton uIOKButton = map.UIRebrokeResultsScreenWindow.UIOKWindow.UIOKButton;
-
 
             Mouse.Click(uIOKButton, new Point(50, 10));
 
@@ -613,7 +607,7 @@ DeferPrinting();
 
             Mouse.Click(uIExitButton, new Point(70, 10));
 
-           EtamYes();
+            EtamYes();
 
             Mouse.Click(uIOKButton1, new Point(39, 15));
         }
@@ -658,14 +652,13 @@ DeferPrinting();
             WinClient uIQuoteResultsClient = map.UIQuoteResultsWindow.UIItemWindow2.UIClient();
             WinButton uIAcceptButton = map.UIQuoteResultsWindow.UIAcceptWindow.UIAcceptButton;
 
-            
             Mouse.Click(uIQuoteResultsClient, new Point(10, 10));
 
             Keyboard.SendKeys(uIQuoteResultsClient, CommonParams.SendHomeKeys, ModifierKeys.None);
 
             Mouse.Click(uIAcceptButton, new Point(54, 8));
 
-           EtamYes();
+            EtamYes();
 
             ConfirmDocuments();
 
@@ -692,7 +685,6 @@ DeferPrinting();
             Mouse.Click(uIOKButton, new Point(21, 17));
         }
 
-  
         public void MotoMTACheckNewValue(bool needScreenshot, string expectedDate = "")
         {
             WinEdit uIItemEdit = map.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow.UIItemEdit;
@@ -738,8 +730,7 @@ DeferPrinting();
         {
             WinClient uIQuoteResultsClient = map.UIQuoteResultsWindow.UIItemWindow2.UIClient();
             WinButton uIAcceptButton = map.UIQuoteResultsWindow.UIAcceptWindow.UIAcceptButton;
-          
-            
+
             Mouse.Click(uIQuoteResultsClient, new Point(10, 10));
 
             Keyboard.SendKeys(uIQuoteResultsClient, CommonParams.SendHomeKeys, ModifierKeys.None);
@@ -759,7 +750,7 @@ DeferPrinting();
         public void MotoMTABefore2()
         {
             WinButton uIOKButton = map.UICurrentOrFutureWindow.UIClient.UIOKButton;
-             WinButton uIMTAButton = map.UIInsurEtamWindow.UIQuotesWindow.UIMTAWindow.UIMTAButton;
+            WinButton uIMTAButton = map.UIInsurEtamWindow.UIQuotesWindow.UIMTAWindow.UIMTAButton;
             WinComboBox uIItemComboBox = map.UIMidTermAdjustmentsWindow.UIItemWindow.UIItemComboBox;
             WinButton uIOKButton1 = map.UIMidTermAdjustmentsWindow.UIOKWindow.UIOKButton;
             WinEdit uIItemEdit = map.UIInsurEtamWindow.UIQuotesWindow.UICarRegistrationWindow.UIItemEdit;
@@ -827,7 +818,6 @@ DeferPrinting();
             Mouse.Click(uICalculateQuoteButton, new Point(68, 4));
         }
 
-
         public void MotoMTA()
         {
             WinButton uIOptionsButton = map.UIPolicyautotestWindow.UIPolicyListWindow.UIOptionsWindow.UIOptionsButton;
@@ -845,7 +835,6 @@ DeferPrinting();
             Mouse.Click(uIMTAButton, new Point(67, 11));
         }
 
- 
         public void MotoInceptionDate()
         {
             WinEdit uIItemEdit = map.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow13.UIItemEdit;
@@ -856,14 +845,14 @@ DeferPrinting();
         public void MotoFinishMTA()
         {
             WinButton uIAcceptButton = map.UIQuoteResultsWindow.UIAcceptWindow.UIAcceptButton;
-  
+
             WinClient uIPointOfSaleClient = map.UIPointOfSaleWindow.UIPointOfSaleClient;
 
             MotoSelectHighwayPolicy();
 
             Mouse.Click(uIAcceptButton, new Point(51, 11));
 
-           EtamYes();
+            EtamYes();
 
             ConfirmDocuments();
 
@@ -888,7 +877,7 @@ DeferPrinting();
 
             Mouse.Click(uIExitButton, new Point(51, 10));
 
-           EtamYes();
+            EtamYes();
             Mouse.Click(uIOKButton, new Point(55, 12));
         }
 
@@ -1073,6 +1062,16 @@ DeferPrinting();
             Assert.AreEqual(expectedAddress.AddressLine1, uIItemEdit.Text);
 
             Assert.AreEqual(expectedAddress.AddressLine2, uIItemEdit1.Text);
+        }
+
+        private void RenewPolicy()
+        {
+            WinButton uIRenewPolicyButton = this.map.UIAmendRiskResultsWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
+            WinButton uIYesButton = this.map.UIConfirmWindow.UIYesWindow.UIYesButton;
+
+            Mouse.Click(uIRenewPolicyButton, new Point(51, 9));
+
+            Mouse.Click(uIYesButton, new Point(60, 14));
         }
     }
 }

@@ -17,6 +17,8 @@
 
     public class HouseActions : UIMap
     {
+        private readonly AddressLookupExpectedValues addressLookupParams = new AddressLookupExpectedValues();
+
         private HomeCheckPremiumExpectedValues mHomeCheckPremiumExpectedValues;
 
         private HomeCheckPrintExpectedValues mHomeCheckPrintExpectedValues;
@@ -1547,6 +1549,42 @@
             Mouse.Click(generalNext, new Point(25, 9));
 
             uIHavespecialconditionCheckBox.Checked = this.HouseholdQuoteParams.UIHavespecialconditionCheckBoxChecked;
+        }
+
+        public string CreateNewPolicy()
+        {
+            HomeSelectPolicy();
+            SetPolicyDetails();
+            string premium = CheckPolicyPremium("cash");
+            return premium;
+        }
+
+        public void SetPolicyDetails()
+        {
+            HomeAcceptPolicy("cash");
+            HomeFinishQuote();
+            CloseOpenPolicyList();
+            HomeOpenPolicy();
+        }
+
+        public void CreatePolicy(bool full)
+        {
+            SelectHomeType();
+            SelectMenu();
+            Links();
+            HomeProposer();
+            if (full)
+            {
+                HomeProposerFull();
+            }
+            else
+            {
+
+                HomeAddressLookup(addressLookupParams.AddressLine1, addressLookupParams.AddressLine2);
+                HomeCreatePolicy();
+            }
+
+            PublicCreditCheckOk();
         }
     }
 }
