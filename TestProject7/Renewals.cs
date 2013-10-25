@@ -6,8 +6,8 @@
     {
         public static void CleanRenewals()
         {
-            const string ConnStr = Configs.OledbConnection;
-            var con = new OleDbConnection(ConnStr);
+            string connStr = Configs.OledbConnection;
+            var con = new OleDbConnection(connStr);
             var com = new OleDbCommand("Delete from MotorRenewals", con);
             var com2 = new OleDbCommand("Delete from HouseholdRenewals", con);
             con.Open();    

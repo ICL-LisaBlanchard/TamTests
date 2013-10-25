@@ -11,9 +11,8 @@
         {
             #region Search Criteria
 
-            windowName = "Save the file as";
-            SearchProperties[UITestControl.PropertyNames.Name] = windowName;
-            SearchProperties[UITestControl.PropertyNames.ClassName] = "#32770";
+            windowName = "Save";
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Save", PropertyExpressionOperator.Contains));
             WindowTitles.Add(windowName);
 
             #endregion
