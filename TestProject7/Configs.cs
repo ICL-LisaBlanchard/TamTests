@@ -94,5 +94,13 @@
                 return (string)Reader.GetValue("ProjectName", typeof(string));
             }
         }
+
+        public static string OledbConnection
+        {
+            get
+            {
+                return (string)Reader.GetValue("OLEDBConnection", typeof(string));
+            }
+        }
     }
 }

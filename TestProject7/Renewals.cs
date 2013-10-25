@@ -6,7 +6,7 @@
     {
         public static void CleanRenewals()
         {
-            const string ConnStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=J:\APPS\IEOFFICE\DATA\TamRenewals.mdb;";
+            const string ConnStr = Configs.OledbConnection;
             var con = new OleDbConnection(ConnStr);
             var com = new OleDbCommand("Delete from MotorRenewals", con);
             var com2 = new OleDbCommand("Delete from HouseholdRenewals", con);
