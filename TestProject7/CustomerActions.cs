@@ -15,7 +15,24 @@
         /// </summary>
         public string AddPolicy()
         {
-            #region Variable Declarations
+            string agcy;
+            string brch;
+
+            switch (Configs.PlanName)
+            {
+                case "Ver. 10.2":
+                    agcy = "7";
+                    brch = "8";
+                    break;
+                case "11":
+                    agcy = "7";
+                    brch = "8";
+                    break;
+                default:
+                    agcy = "14";
+                    brch = "15";
+                    break;
+            }
 
             WinControl uIClientsFilesButton = map.UITheAgencyManagerWindow1.UIClientsFilesWindow.UIClientsFilesButton;
             WinComboBox uIItemComboBox = map.UICustomerListWindow.UICustomersWindow.ItemWindow(map.UICustomerListWindow, "", "1").UIItemComboBox;
@@ -27,14 +44,12 @@
             //WinRadioButton rbSuffix = map.UIAssignClientNumberWindow.Suffix.UISuffixRadioButton;
             WinControl uIOKButton = map.UIAssignClientNumberWindow.UIOKWindow.UIOKButton;
             WinControl uIYesButton = map.UIVerifyWindow.UIYesWindow.UIYesButton;
-            WinEdit uIItemEdit1 = map.UICustomerListWindow.UINewCustomerDetailWindow.UIItemWindow.UIItemEdit;
-            WinEdit uIItemEdit2 = map.UICustomerListWindow.UINewCustomerDetailWindow.UIItemWindow1.UIItemEdit;
+            WinEdit uIItemEdit1 = map.UICustomerListWindow.UINewCustomerDetailWindow.UIItemWindow(agcy).UIItemEdit;
+            WinEdit uIItemEdit2 = map.UICustomerListWindow.UINewCustomerDetailWindow.UIItemWindow(brch).UIItemEdit;
             WinControl uIOKButton1 = map.UICustomerListWindow.UINewCustomerDetailWindow.UIOKWindow.UIOKButton;
             WinControl uIItemButton = map.UICustomerListWindow.UIPoliciesWindow.UIItemButton;
             WinControl uIOKButton2 = map.UISelectaPolicyNumberWindow.UIOKWindow.UIOKButton;
             WinEdit codeName = map.UIAssignClientNumberWindow.CodeName.UIItemEdit;
-
-            #endregion
 
             Thread.Sleep(1000);
 

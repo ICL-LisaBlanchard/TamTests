@@ -21,7 +21,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
         #region Properties
 
-        public UIItemWindow UIItemWindow
+        public UIItemWindow UIItemWindow14
         {
             get
             {
@@ -33,7 +33,7 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
             }
         }
 
-        public UIItemWindow UIItemWindow1
+        public UIItemWindow UIItemWindow15
         {
             get
             {
@@ -43,6 +43,11 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
                 }
                 return mUIItemWindow1;
             }
+        }
+
+        public UIItemWindow UIItemWindow(string instanceId)
+        {
+            return new UIItemWindow(this, controlId: "1", instance: instanceId);
         }
 
         public UIItemWindow UIOKWindow
