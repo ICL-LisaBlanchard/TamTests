@@ -24,7 +24,7 @@
                     agcy = "7";
                     brch = "8";
                     break;
-                case "11":
+                case "Ver. 11.1":
                     agcy = "7";
                     brch = "8";
                     break;
