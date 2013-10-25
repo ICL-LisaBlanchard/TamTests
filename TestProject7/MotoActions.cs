@@ -336,6 +336,7 @@
         {
             WinEdit uIItemEdit = map.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowCashBilling.UIItemEdit;
 
+            Mouse.Click(uIItemEdit);
             Assert.AreEqual(expectedPremium, uIItemEdit.Text);
         }
 

@@ -829,12 +829,16 @@
         {
             WinEdit uIItemEdit = this.UICustomerListWindow.UINewPolicyDetailWindow.UIItemWindow11.UIItemEdit;
 
+            Mouse.Click(uIItemEdit);
+
             Assert.AreEqual("0.00", uIItemEdit.Text);
         }
 
         public void AssertMethod1()
         {
             WinEdit uIItemEdit = this.UICustomerListWindow.UINewPolicyDetailWindow.UIItemWindow11.UIItemEdit;
+
+            Mouse.Click(uIItemEdit);
 
             Assert.AreNotEqual("0", uIItemEdit.Text);
         }

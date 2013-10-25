@@ -31,30 +31,6 @@
             }
         }
 
-        public static string OurHighWayPath
-        {
-            get
-            {
-                return Directory.GetCurrentDirectory() + "/" + (string)Reader.GetValue("OurHighwayPath", typeof(string));
-            }
-        }
-
-        public static string OurMMaReg
-        {
-            get
-            {
-                return Directory.GetCurrentDirectory() + "/" + (string)Reader.GetValue("OurMMaPath", typeof(string));
-            }
-        }
-
-        public static string OfficePath
-        {
-            get
-            {
-                return Directory.GetCurrentDirectory() + "/" + (string)Reader.GetValue("OfficePath", typeof(string));
-            }
-        }
-
         public static string ScreenshotPath
         {
             get
