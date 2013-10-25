@@ -17,7 +17,7 @@
             FilterProperties[HtmlControl.PropertyNames.Class] = null;
             FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "id=divRenewals";
             FilterProperties[HtmlControl.PropertyNames.TagInstance] = "14";
-            WindowTitles.Add("insurE-com System Maintenance");
+            WindowTitles.Add("Applied Systems UK - System Maintenance");
 
             #endregion
         }
@@ -45,7 +45,7 @@
                     mUICreateaMotorTestReneHyperlink.FilterProperties[HtmlControl.PropertyNames.Class] = "itemlink";
                     mUICreateaMotorTestReneHyperlink.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "class=itemlink href=\"AddTestRenewalNotic";
                     mUICreateaMotorTestReneHyperlink.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "1";
-                    mUICreateaMotorTestReneHyperlink.WindowTitles.Add("insurE-com System Maintenance");
+                    mUICreateaMotorTestReneHyperlink.WindowTitles.Add("Applied Systems UK - System Maintenance");
 
                     #endregion
                 }
@@ -74,7 +74,7 @@
                     mUICreateaHouseholdTestHyperlink.FilterProperties[HtmlControl.PropertyNames.Class] = "itemlink";
                     mUICreateaHouseholdTestHyperlink.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "class=itemlink href=\"AddHouseholdTestRen";
                     mUICreateaHouseholdTestHyperlink.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "2";
-                    mUICreateaHouseholdTestHyperlink.WindowTitles.Add("insurE-com System Maintenance");
+                    mUICreateaHouseholdTestHyperlink.WindowTitles.Add("Applied Systems UK - System Maintenance");
 
                     #endregion
                 }

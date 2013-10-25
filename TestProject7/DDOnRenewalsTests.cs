@@ -37,7 +37,7 @@
             House.HomeAmendRisk();
             House.PublicCreditCheckOk();
             House.HomeAmendSelecPolicy(false);
-            House.HomeAmendRenewFinish();
+            House.HomeAmendRenewFinish("dd");
         }
 
         [TestMethod]
@@ -69,7 +69,7 @@
 
             string premium = Moto.CheckPolicyPremium("dd");
             House.CheckCorrectDocumentPresent(this.Docs.DocumentsForMotoAmendRiskNew);
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "dd", originalPremium: originalPremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "dd", originalPremium));
             Moto.ClosePolicy();
         }
     }

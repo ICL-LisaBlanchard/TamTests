@@ -16,7 +16,7 @@
             FilterProperties[HtmlControl.PropertyNames.Title] = "insurE-com - Main Page";
             FilterProperties[PropertyNames.AbsolutePath] = "/sysmaint/content/AddTestRenewalNotice.asp";
             FilterProperties[PropertyNames.PageUrl] = "https://www.insur-econnect.com/sysmaint/content/AddTestRenewalNotice.asp";
-            WindowTitles.Add("insurE-com System Maintenance");
+            WindowTitles.Add("Applied Systems UK - System Maintenance");
 
             #endregion
         }
@@ -42,7 +42,7 @@
                     mUIInsurerIDComboBox.FilterProperties[HtmlControl.PropertyNames.Class] = null;
                     mUIInsurerIDComboBox.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "id=InsurerID onchange=selectInsurer() na";
                     mUIInsurerIDComboBox.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "1";
-                    mUIInsurerIDComboBox.WindowTitles.Add("insurE-com System Maintenance");
+                    mUIInsurerIDComboBox.WindowTitles.Add("Applied Systems UK - System Maintenance");
 
                     #endregion
                 }
@@ -66,7 +66,7 @@
                     mUITxtPremiumEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
                     mUITxtPremiumEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=txtPremium align=left value=500.00 ";
                     mUITxtPremiumEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "3";
-                    mUITxtPremiumEdit.WindowTitles.Add("insurE-com System Maintenance");
+                    mUITxtPremiumEdit.WindowTitles.Add("Applied Systems UK - System Maintenance");
                     #endregion
                 }
                 return mUITxtPremiumEdit;
@@ -91,7 +91,7 @@
                     mUITxtPolicyNumberEdit.FilterProperties[HtmlControl.PropertyNames.Class] = null;
                     mUITxtPolicyNumberEdit.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "name=txtPolicyNumber align=left size=15";
                     mUITxtPolicyNumberEdit.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "1";
-                    mUITxtPolicyNumberEdit.WindowTitles.Add("insurE-com System Maintenance");
+                    mUITxtPolicyNumberEdit.WindowTitles.Add("Applied Systems UK - System Maintenance");
 
                     #endregion
                 }
@@ -117,7 +117,7 @@
                     mUITxtAutoLapseDateEdit1.FilterProperties[HtmlControl.PropertyNames.Class] = null;
                     mUITxtAutoLapseDateEdit1.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "name=txtAutoLapseDate maxLength=10 value";
                     mUITxtAutoLapseDateEdit1.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "8";
-                    mUITxtAutoLapseDateEdit1.WindowTitles.Add("insurE-com System Maintenance");
+                    mUITxtAutoLapseDateEdit1.WindowTitles.Add("Applied Systems UK - System Maintenance");
 
                     #endregion
                 }
@@ -143,7 +143,7 @@
                     mUICreateRecordButton.FilterProperties[HtmlControl.PropertyNames.Class] = null;
                     mUICreateRecordButton.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "id=buttonCreate title=\"Click to create t";
                     mUICreateRecordButton.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "10";
-                    mUICreateRecordButton.WindowTitles.Add("insurE-com System Maintenance");
+                    mUICreateRecordButton.WindowTitles.Add("Applied Systems UK - System Maintenance");
 
                     #endregion
                 }
@@ -169,7 +169,7 @@
                     mUITxtRenewalDateEdit.FilterProperties[HtmlControl.PropertyNames.Class] = null;
                     mUITxtRenewalDateEdit.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "name=txtRenewalDate value=12/11/2012 siz";
                     mUITxtRenewalDateEdit.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "6";
-                    mUITxtRenewalDateEdit.WindowTitles.Add("insurE-com System Maintenance");
+                    mUITxtRenewalDateEdit.WindowTitles.Add("Applied Systems UK - System Maintenance");
 
                     #endregion
                 }

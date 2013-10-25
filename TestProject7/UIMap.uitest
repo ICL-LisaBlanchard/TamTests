@@ -8472,17 +8472,17 @@ insurE-com Household Quotation For R</PropertyCondition>
             </UIObject>
           </Descendants>
         </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UIInsurEcomSystemMaintWindow" FriendlyName="insurE-com System Maintenance - Microsoft Internet..." SpecialControlType="BrowserWindow" SessionId="10158502">
+        <TopLevelWindow ControlType="Window" Id="UIInsurEcomSystemMaintWindow" FriendlyName="Applied Systems UK - System Maintenance - Microsoft Internet..." SpecialControlType="BrowserWindow" SessionId="10158502">
           <TechnologyName>MSAA</TechnologyName>
           <WindowTitles>
-            <WindowTitle>insurE-com System Maintenance</WindowTitle>
+            <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
             <WindowTitle>Blank Page</WindowTitle>
           </WindowTitles>
           <SearchConfigurations>
             <SearchConfiguration>VisibleOnly</SearchConfiguration>
           </SearchConfigurations>
           <AndCondition Id="SearchCondition">
-            <PropertyCondition Name="Name">insurE-com System Maintenance</PropertyCondition>
+            <PropertyCondition Name="Name">Applied Systems UK - System Maintenance</PropertyCondition>
             <PropertyCondition Name="ClassName">IEFrame</PropertyCondition>
             <PropertyCondition Name="ControlType">Window</PropertyCondition>
           </AndCondition>
@@ -8491,7 +8491,7 @@ insurE-com Household Quotation For R</PropertyCondition>
             <UIObject ControlType="Frame" Id="UILeftbarFrame" FriendlyName="leftbar" SpecialControlType="None">
               <TechnologyName>Web</TechnologyName>
               <WindowTitles>
-                <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
               </WindowTitles>
               <AndCondition Id="SearchCondition">
                 <AndCondition Id="Primary">
@@ -8514,7 +8514,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                 <UIObject ControlType="Document" Id="UIInsurEcomLeftbarDocument" FriendlyName="insurE-com - Left bar" SpecialControlType="None">
                   <TechnologyName>Web</TechnologyName>
                   <WindowTitles>
-                    <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                    <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                   </WindowTitles>
                   <AndCondition Id="SearchCondition">
                     <AndCondition Id="Primary">
@@ -8535,7 +8535,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                     <UIObject ControlType="Hyperlink" Id="UIRenewalsMaintenanceHyperlink" FriendlyName="Renewals Maintenance" SpecialControlType="None">
                       <TechnologyName>Web</TechnologyName>
                       <WindowTitles>
-                        <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                        <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                       </WindowTitles>
                       <AndCondition Id="SearchCondition">
                         <AndCondition Id="Primary">
@@ -8563,7 +8563,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                 <UIObject ControlType="Document" Id="UIInsurEcomLeftbarDocument1" FriendlyName="insurE-com - Left bar" SpecialControlType="None">
                   <TechnologyName>Web</TechnologyName>
                   <WindowTitles>
-                    <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                    <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                   </WindowTitles>
                   <AndCondition Id="SearchCondition">
                     <AndCondition Id="Primary">
@@ -8584,7 +8584,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                     <UIObject ControlType="Pane" Id="UIDivRenewalsPane" FriendlyName="divRenewals" SpecialControlType="None">
                       <TechnologyName>Web</TechnologyName>
                       <WindowTitles>
-                        <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                        <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                       </WindowTitles>
                       <AndCondition Id="SearchCondition">
                         <AndCondition Id="Primary">
@@ -8607,7 +8607,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                         <UIObject ControlType="Hyperlink" Id="UICreateaMotorTestReneHyperlink" FriendlyName="Create a Motor Test Renewal Invitation" SpecialControlType="None">
                           <TechnologyName>Web</TechnologyName>
                           <WindowTitles>
-                            <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                            <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                           </WindowTitles>
                           <AndCondition Id="SearchCondition">
                             <AndCondition Id="Primary">
@@ -8633,7 +8633,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                         <UIObject ControlType="Hyperlink" Id="UICreateaHouseholdTestHyperlink" FriendlyName="Create a Household Test Renewal Invitation" SpecialControlType="None">
                           <TechnologyName>Web</TechnologyName>
                           <WindowTitles>
-                            <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                            <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                           </WindowTitles>
                           <AndCondition Id="SearchCondition">
                             <AndCondition Id="Primary">
@@ -8665,7 +8665,7 @@ insurE-com Household Quotation For R</PropertyCondition>
             <UIObject ControlType="Frame" Id="UIContentFrame" FriendlyName="content" SpecialControlType="None">
               <TechnologyName>Web</TechnologyName>
               <WindowTitles>
-                <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
               </WindowTitles>
               <AndCondition Id="SearchCondition">
                 <AndCondition Id="Primary">
@@ -8688,7 +8688,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                 <UIObject ControlType="Document" Id="UIInsurEcomMainPageDocument" FriendlyName="insurE-com - Main Page" SpecialControlType="None">
                   <TechnologyName>Web</TechnologyName>
                   <WindowTitles>
-                    <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                    <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                   </WindowTitles>
                   <AndCondition Id="SearchCondition">
                     <AndCondition Id="Primary">
@@ -8709,7 +8709,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                     <UIObject ControlType="ComboBox" Id="UIInsurerIDComboBox" FriendlyName="InsurerID" SpecialControlType="None">
                       <TechnologyName>Web</TechnologyName>
                       <WindowTitles>
-                        <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                        <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                       </WindowTitles>
                       <AndCondition Id="SearchCondition">
                         <AndCondition Id="Primary">
@@ -8734,7 +8734,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                     <UIObject ControlType="Edit" Id="UITxtPolicyNumberEdit" FriendlyName="txtPolicyNumber" SpecialControlType="None">
                       <TechnologyName>Web</TechnologyName>
                       <WindowTitles>
-                        <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                        <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                       </WindowTitles>
                       <AndCondition Id="SearchCondition">
                         <AndCondition Id="Primary">
@@ -8758,7 +8758,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                     <UIObject ControlType="Edit" Id="UITxtAutoLapseDateEdit1" FriendlyName="txtAutoLapseDate" SpecialControlType="None">
                       <TechnologyName>Web</TechnologyName>
                       <WindowTitles>
-                        <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                        <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                       </WindowTitles>
                       <AndCondition Id="SearchCondition">
                         <AndCondition Id="Primary">
@@ -8782,7 +8782,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                     <UIObject ControlType="Button" Id="UICreateRecordButton" FriendlyName="  Create Record  " SpecialControlType="None">
                       <TechnologyName>Web</TechnologyName>
                       <WindowTitles>
-                        <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                        <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                       </WindowTitles>
                       <AndCondition Id="SearchCondition">
                         <AndCondition Id="Primary">
@@ -8806,7 +8806,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                     <UIObject ControlType="Edit" Id="UITxtRenewalDateEdit" FriendlyName="txtRenewalDate" SpecialControlType="None">
                       <TechnologyName>Web</TechnologyName>
                       <WindowTitles>
-                        <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                        <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                       </WindowTitles>
                       <AndCondition Id="SearchCondition">
                         <AndCondition Id="Primary">
@@ -8832,7 +8832,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                 <UIObject ControlType="Document" Id="UIInsurEcomMainPageDocument1" FriendlyName="insurE-com - Main Page" SpecialControlType="None">
                   <TechnologyName>Web</TechnologyName>
                   <WindowTitles>
-                    <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                    <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                   </WindowTitles>
                   <AndCondition Id="SearchCondition">
                     <AndCondition Id="Primary">
@@ -8853,7 +8853,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                     <UIObject ControlType="ComboBox" Id="UIInsurerIDComboBox" FriendlyName="InsurerID" SpecialControlType="None">
                       <TechnologyName>Web</TechnologyName>
                       <WindowTitles>
-                        <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                        <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                       </WindowTitles>
                       <AndCondition Id="SearchCondition">
                         <AndCondition Id="Primary">
@@ -8878,7 +8878,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                     <UIObject ControlType="Edit" Id="UITxtPolicyNumberEdit" FriendlyName="txtPolicyNumber" SpecialControlType="None">
                       <TechnologyName>Web</TechnologyName>
                       <WindowTitles>
-                        <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                        <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                       </WindowTitles>
                       <AndCondition Id="SearchCondition">
                         <AndCondition Id="Primary">
@@ -8902,7 +8902,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                     <UIObject ControlType="Edit" Id="UITxtClientXmlEdit" FriendlyName="txtClientXml" SpecialControlType="None">
                       <TechnologyName>Web</TechnologyName>
                       <WindowTitles>
-                        <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                        <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                       </WindowTitles>
                       <AndCondition Id="SearchCondition">
                         <AndCondition Id="Primary">
@@ -8925,7 +8925,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                     <UIObject ControlType="Button" Id="UIGetXMLfromServerButton" FriendlyName="Get XML from Server" SpecialControlType="None">
                       <TechnologyName>Web</TechnologyName>
                       <WindowTitles>
-                        <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                        <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                       </WindowTitles>
                       <AndCondition Id="SearchCondition">
                         <AndCondition Id="Primary">
@@ -8949,7 +8949,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                     <UIObject ControlType="Button" Id="UICreateRecordButton" FriendlyName="  Create Record  " SpecialControlType="None">
                       <TechnologyName>Web</TechnologyName>
                       <WindowTitles>
-                        <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                        <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                       </WindowTitles>
                       <AndCondition Id="SearchCondition">
                         <AndCondition Id="Primary">
@@ -8973,7 +8973,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                     <UIObject ControlType="Edit" Id="UITxtRenewalDateEdit" FriendlyName="txtRenewalDate" SpecialControlType="None">
                       <TechnologyName>Web</TechnologyName>
                       <WindowTitles>
-                        <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                        <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                       </WindowTitles>
                       <AndCondition Id="SearchCondition">
                         <AndCondition Id="Primary">
@@ -8997,7 +8997,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                     <UIObject ControlType="Edit" Id="UITxtAutoLapseDateEdit" FriendlyName="txtAutoLapseDate" SpecialControlType="None">
                       <TechnologyName>Web</TechnologyName>
                       <WindowTitles>
-                        <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                        <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                       </WindowTitles>
                       <AndCondition Id="SearchCondition">
                         <AndCondition Id="Primary">
@@ -9022,10 +9022,10 @@ insurE-com Household Quotation For R</PropertyCondition>
                 </UIObject>
               </Descendants>
             </UIObject>
-            <UIObject ControlType="TitleBar" Id="UIInsurEcomSystemMaintTitleBar" FriendlyName="insurE-com System Maintenance - Windows Internet E..." SpecialControlType="None">
+            <UIObject ControlType="TitleBar" Id="UIInsurEcomSystemMaintTitleBar" FriendlyName="Applied Systems UK - System Maintenance - Windows Internet E..." SpecialControlType="None">
               <TechnologyName>MSAA</TechnologyName>
               <WindowTitles>
-                <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
               </WindowTitles>
               <SearchConfigurations>
                 <SearchConfiguration>VisibleOnly</SearchConfiguration>
@@ -9038,7 +9038,7 @@ insurE-com Household Quotation For R</PropertyCondition>
                 <UIObject ControlType="Button" Id="UICloseButton" FriendlyName="Close" SpecialControlType="None">
                   <TechnologyName>MSAA</TechnologyName>
                   <WindowTitles>
-                    <WindowTitle>insurE-com System Maintenance</WindowTitle>
+                    <WindowTitle>Applied Systems UK - System Maintenance</WindowTitle>
                   </WindowTitles>
                   <SearchConfigurations>
                     <SearchConfiguration>VisibleOnly</SearchConfiguration>

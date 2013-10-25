@@ -18,7 +18,7 @@
             FilterProperties[HtmlControl.PropertyNames.Class] = null;
             FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "noResize marginHeight=0 src=\"content/hom";
             FilterProperties[HtmlControl.PropertyNames.TagInstance] = "3";
-            WindowTitles.Add("insurE-com System Maintenance");
+            WindowTitles.Add("Applied Systems UK - System Maintenance");
 
             #endregion
         }

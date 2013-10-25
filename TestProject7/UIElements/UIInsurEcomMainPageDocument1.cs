@@ -16,7 +16,7 @@
             FilterProperties[HtmlControl.PropertyNames.Title] = "insurE-com - Main Page";
             FilterProperties[PropertyNames.AbsolutePath] = "/sysmaint/content/AddHouseholdTestRenewalNotice.asp";
             FilterProperties[PropertyNames.PageUrl] = "https://www.insur-econnect.com/sysmaint/content/AddHouseholdTestRenewalNotice.asp" + "";
-            WindowTitles.Add("insurE-com System Maintenance");
+            WindowTitles.Add("Applied Systems UK - System Maintenance");
 
             #endregion
         }
@@ -42,7 +42,7 @@
                     mUIInsurerIDComboBox.FilterProperties[HtmlControl.PropertyNames.Class] = null;
                     mUIInsurerIDComboBox.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "id=InsurerID onchange=selectInsurer() na";
                     mUIInsurerIDComboBox.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "1";
-                    mUIInsurerIDComboBox.WindowTitles.Add("insurE-com System Maintenance");
+                    mUIInsurerIDComboBox.WindowTitles.Add("Applied Systems UK - System Maintenance");
 
                     #endregion
                 }
@@ -68,7 +68,7 @@
                     mUITxtPolicyNumberEdit.FilterProperties[HtmlControl.PropertyNames.Class] = null;
                     mUITxtPolicyNumberEdit.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "onchange=enableButtons() name=txtPolicyN";
                     mUITxtPolicyNumberEdit.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "1";
-                    mUITxtPolicyNumberEdit.WindowTitles.Add("insurE-com System Maintenance");
+                    mUITxtPolicyNumberEdit.WindowTitles.Add("Applied Systems UK - System Maintenance");
 
                     #endregion
                 }
@@ -93,7 +93,7 @@
                     mUITxtClientXmlEdit.FilterProperties[HtmlControl.PropertyNames.Class] = null;
                     mUITxtClientXmlEdit.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "onchange=enableButtons() wrap=off cols=5";
                     mUITxtClientXmlEdit.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "1";
-                    mUITxtClientXmlEdit.WindowTitles.Add("insurE-com System Maintenance");
+                    mUITxtClientXmlEdit.WindowTitles.Add("Applied Systems UK - System Maintenance");
 
                     #endregion
                 }
@@ -117,7 +117,7 @@
                     mUITxtPremiumEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
                     mUITxtPremiumEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "onchange=enableButtons() name=txtPremium";
                     mUITxtPremiumEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "3";
-                    mUITxtPremiumEdit.WindowTitles.Add("insurE-com System Maintenance");
+                    mUITxtPremiumEdit.WindowTitles.Add("Applied Systems UK - System Maintenance");
                     #endregion
                 }
                 return mUITxtPremiumEdit;
@@ -142,7 +142,7 @@
                     mUIGetXMLfromServerButton.FilterProperties[HtmlControl.PropertyNames.Class] = null;
                     mUIGetXMLfromServerButton.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "id=getXmlButton title=\"Click to get xml ";
                     mUIGetXMLfromServerButton.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "5";
-                    mUIGetXMLfromServerButton.WindowTitles.Add("insurE-com System Maintenance");
+                    mUIGetXMLfromServerButton.WindowTitles.Add("Applied Systems UK - System Maintenance");
 
                     #endregion
                 }
@@ -168,7 +168,7 @@
                     mUICreateRecordButton.FilterProperties[HtmlControl.PropertyNames.Class] = null;
                     mUICreateRecordButton.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "id=buttonCreate title=\"Click to create t";
                     mUICreateRecordButton.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "6";
-                    mUICreateRecordButton.WindowTitles.Add("insurE-com System Maintenance");
+                    mUICreateRecordButton.WindowTitles.Add("Applied Systems UK - System Maintenance");
 
                     #endregion
                 }
@@ -194,7 +194,7 @@
                     mUITxtRenewalDateEdit.FilterProperties[HtmlControl.PropertyNames.Class] = null;
                     mUITxtRenewalDateEdit.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "onchange=enableButtons() name=txtRenewal";
                     mUITxtRenewalDateEdit.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "2";
-                    mUITxtRenewalDateEdit.WindowTitles.Add("insurE-com System Maintenance");
+                    mUITxtRenewalDateEdit.WindowTitles.Add("Applied Systems UK - System Maintenance");
 
                     #endregion
                 }
@@ -220,7 +220,7 @@
                     mUITxtAutoLapseDateEdit.FilterProperties[HtmlControl.PropertyNames.Class] = null;
                     mUITxtAutoLapseDateEdit.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "onchange=enableButtons() name=txtAutoLap";
                     mUITxtAutoLapseDateEdit.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "4";
-                    mUITxtAutoLapseDateEdit.WindowTitles.Add("insurE-com System Maintenance");
+                    mUITxtAutoLapseDateEdit.WindowTitles.Add("Applied Systems UK - System Maintenance");
 
                     #endregion
                 }
