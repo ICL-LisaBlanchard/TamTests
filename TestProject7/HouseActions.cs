@@ -671,7 +671,7 @@
 
             try
             {
-                this.EtamOk();
+                this.EtamOk(true);
             }
             catch
             {
@@ -817,7 +817,7 @@
 
             this.ConfirmDocuments();
 
-            this.EtamOk();
+            this.EtamOk(true);
 
             this.DeferPrinting();
 
@@ -961,7 +961,7 @@
 
             this.ConfirmDocuments();
 
-            this.EtamOk();
+            this.EtamOk(true);
 
             this.DeferPrinting();
 
@@ -1056,7 +1056,7 @@
 
             Mouse.Move(new Point(500, 500));
 
-            this.EtamOk();
+            this.EtamOk(true);
 
             Playback.PlaybackSettings.ContinueOnError = false;
 
@@ -1084,7 +1084,7 @@
 
             this.DeferPrinting();
 
-            this.EtamOk();
+            this.EtamOk(false);
 
             this.ImportToTam();
 
@@ -1101,7 +1101,7 @@
 
             this.DeferPrinting();
 
-            this.EtamOk();
+            this.EtamOk(true);
 
             this.ImportToTam();
 
@@ -1199,7 +1199,7 @@
 
             this.ConfirmDocuments();
 
-            this.EtamOk();
+            this.EtamOk(true);
         }
 
         public void HomeRebrokeSelectPolicy(string withKeys)

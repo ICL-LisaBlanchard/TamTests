@@ -183,7 +183,7 @@
             House.HomeMTAEnterDate("30/09/12");
             House.HomeMTACoverDate();
             House.HomeMTACheckMessage();
-            House.EtamOk();
+            House.EtamOk(true);
             House.HomeMTAEnterDate();
             House.HomeMTACoverDate();
             House.HomeMTASelectQuote();
@@ -306,11 +306,11 @@
             House.HomeMTAAccept(false);
             House.MTADate(DateTime.Now.ToString("dd/MM/yy"));
             House.MTAMessageBeforeCurrent();
-            House.EtamOk();
+            House.EtamOk(true);
 
             House.MTADate(DateTime.Now.AddDays(10).ToString("dd/MM/yy"));
             Moto.MotoMTAMessageAfterDate();
-            House.EtamOk();
+            House.EtamOk(true);
             House.MTAEffectiveDatesCancel();
             House.HomeMTACancel1();
         }
@@ -355,7 +355,7 @@
             House.HomeMTAAccept(false);
             House.MTADate(DateTime.Now.AddDays(13).ToString("dd/MM/yy"));
             House.MTAMessageBeforeCurrent();
-            House.EtamOk();
+            House.EtamOk(true);
             House.MTAEffectiveDatesCancel();
             House.HomeMTACancel1();
 
@@ -367,7 +367,7 @@
 
             House.MTADate(DateTime.Now.AddDays(9).ToString("dd/MM/yy"));
             Moto.MotoMTAMessageAfterDate();
-            House.EtamOk();
+            House.EtamOk(true);
 
             House.MTADate(DateTime.Now.AddDays(1).ToString("dd/MM/yy"));
             House.HomeRenewalBeforeAccept();
@@ -380,10 +380,10 @@
             House.HomeMTAAccept(false);
             House.MTADate(DateTime.Now.ToString("dd/MM/yy"));
             House.MTAMessageBeforeCurrent();
-            House.EtamOk();
+            House.EtamOk(true);
             House.MTADate(DateTime.Now.AddDays(11).ToString("dd/MM/yy"));
             Moto.MotoMTAMessageAfterDate();
-            House.EtamOk();
+            House.EtamOk(true);
             House.MTAEffectiveDatesCancel();
             House.HomeMTACancel1();
         }
@@ -447,7 +447,7 @@
             House.ConfirmDocuments();
             House.RetrieveResponse();
             House.HomeAmendRenewFinish1();
-            House.EtamOk();
+            House.EtamOk(true);
 
             House.RenewalModuleClose();
             House.CloseAndOpenPolicyList(UiMap.CustomerCode);
@@ -463,7 +463,7 @@
             House.HomeMTAAccept(false);
             House.MTADate(DateTime.Now.AddDays(1).ToString("dd/MM/yy"));
             House.AmendDateBeforeMessage();
-            House.EtamOk();
+            House.EtamOk(true);
             House.MTADate(DateTime.Now.AddDays(14).ToString("dd/MM/yy"));
             House.HomeMTASelectQuote();
 
@@ -473,7 +473,7 @@
             House.HomeMTAAccept(false);
             House.MTADate(DateTime.Now.AddDays(13).ToString("dd/MM/yy"));
             House.MTAMessageBeforeCurrent();
-            House.EtamOk();
+            House.EtamOk(true);
             House.MTAEffectiveDatesCancel();
             House.HomeMTACancel1();
         }
@@ -539,7 +539,7 @@
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();
             House.RebrokeAlternativeRenew("cash");
-            House.EtamOk();
+            House.EtamOk(true);
             //house.LapseOk();
             House.EtamYes();
             House.ConfirmDocuments();
@@ -585,7 +585,7 @@
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();
             House.RebrokeAlternativeRenew("cash");
-            House.EtamOk();
+            House.EtamOk(true);
             House.EtamYes();
             House.ConfirmDocuments();
             House.RetrieveResponse();
