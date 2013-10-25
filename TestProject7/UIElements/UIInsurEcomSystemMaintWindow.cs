@@ -13,7 +13,7 @@
         {
             #region Search Criteria
 
-            windowName1 = "insurE-com System Maintenance";
+            windowName1 = "Applied Systems UK - System Maintenance";
             SearchProperties[PropertyNames.Name] = windowName1;
             SearchProperties[PropertyNames.ClassName] = "IEFrame";
             WindowTitles.Add(windowName1);

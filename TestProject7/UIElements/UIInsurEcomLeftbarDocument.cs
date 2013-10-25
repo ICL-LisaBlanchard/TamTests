@@ -16,7 +16,7 @@
             FilterProperties[HtmlControl.PropertyNames.Title] = "insurE-com - Left bar";
             FilterProperties[PropertyNames.AbsolutePath] = "/sysmaint/content/leftbar.asp";
             FilterProperties[PropertyNames.PageUrl] = "https://www.insur-econnect.com/sysmaint/content/leftbar.asp";
-            WindowTitles.Add("insurE-com System Maintenance");
+            WindowTitles.Add("Applied Systems UK - System Maintenance");
 
             #endregion
         }
@@ -43,7 +43,7 @@
                     mUIRenewalsMaintenanceHyperlink.FilterProperties[HtmlControl.PropertyNames.Class] = null;
                     mUIRenewalsMaintenanceHyperlink.FilterProperties[HtmlControl.PropertyNames.ControlDefinition] = "style=\"COLOR: white\" href=\"#\"";
                     mUIRenewalsMaintenanceHyperlink.FilterProperties[HtmlControl.PropertyNames.TagInstance] = "39";
-                    mUIRenewalsMaintenanceHyperlink.WindowTitles.Add("insurE-com System Maintenance");
+                    mUIRenewalsMaintenanceHyperlink.WindowTitles.Add("Applied Systems UK - System Maintenance");
 
                     #endregion
                 }

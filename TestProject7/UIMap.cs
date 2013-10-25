@@ -1807,7 +1807,7 @@
             WinButton uIOKButton3 = this.UISelectTamActivityTypWindow.UIItemWindow1.UIClient().UIOKButton;
 
             int timeout = Playback.PlaybackSettings.SearchTimeout;
-            Playback.PlaybackSettings.SearchTimeout = 2000;
+            Playback.PlaybackSettings.SearchTimeout = 5000;
             try
             {
                 WinWindow win = this.TopWindow;
