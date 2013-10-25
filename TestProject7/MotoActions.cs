@@ -255,7 +255,7 @@
 
             DeferPrinting();
 
-            EtamOk();
+            this.EtamOk(true);
 
             ImportToTam();
             SelectTAMActivities3();
@@ -271,13 +271,13 @@
 
             DeferPrinting();
 
-            EtamOk();
+            this.EtamOk(true);
 
             ImportToTam();
 
             SelectTAMActivities2();
 
-            map.EtamOk();
+            map.EtamOk(true);
 
             Mouse.Click(uIExitButton, new Point(47, 18));
 
@@ -663,7 +663,7 @@
 
             ConfirmDocuments();
 
-            EtamOk();
+            this.EtamOk(true);
 
             DeferPrinting();
 
@@ -742,7 +742,7 @@
 
             ConfirmDocuments();
 
-            EtamOk();
+            this.EtamOk(true);
         }
 
         /// <summary>
@@ -857,7 +857,7 @@
 
             ConfirmDocuments();
 
-            EtamOk();
+            this.EtamOk(true);
 
             Mouse.Click(uIPointOfSaleClient, new Point(477, 239));
 

@@ -448,7 +448,7 @@
             Playback.PlaybackSettings.ContinueOnError = false;
         }
 
-        public void EtamOk()
+        public void EtamOk(bool continueOnError)
         {
             WinControl uIOKButton1 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             Playback.PlaybackSettings.ContinueOnError = true;
@@ -953,7 +953,7 @@
 
             this.CancelPrint();
 
-            this.EtamOk();
+            this.EtamOk(true);
 
             this.ImportToTam();
 
@@ -1022,7 +1022,7 @@
 
                 try
                 {
-                    this.EtamOk();
+                    this.EtamOk(true);
                     Mouse.Click(uIExitButton);
                 }
                 catch
@@ -1034,13 +1034,13 @@
 
             Mouse.Click(uiRenewalSearchWindowOkButton);
 
-            this.EtamOk();
+            this.EtamOk(true);
 
             try
             {
                 Mouse.Click(uILogandClearButton);
 
-                this.EtamOk();
+                this.EtamOk(true);
             }
             catch
             {
@@ -1310,7 +1310,7 @@
             this.DeferPrinting();
 
             //Check is lapse here.
-            this.EtamOk();
+            this.EtamOk(true);
 
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
@@ -1381,8 +1381,8 @@
 
             this.DeferPrinting();
 
-            this.EtamOk();
-            this.EtamOk();
+            this.EtamOk(true);
+            this.EtamOk(true);
 
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
