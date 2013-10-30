@@ -29,8 +29,6 @@
 
         private HomeCopyCheckDataExpectedValues mHomeCopyCheckDataExpectedValues;
 
-        private HomeCheckPolicyPremiumExpectedValues mHomeCheckPolicyPremiumExpectedValues;
-
         private HomeMTAChangeParams mHomeMtaChangeParams;
 
         private HomeMTACheckCancelledExpectedValues mHomeMTACheckCancelledExpectedValues;
@@ -40,8 +38,6 @@
         private HomeMTACheckMessageExpectedValues mHomeMTACheckMessageExpectedValues;
 
         private HomeMTACopyCheckExpectedValues mHomeMTACopyCheckExpectedValues;
-
-        private AddressLookupExpectedValues mAddressLookupExpectedValues;
 
         private HomeCreatePolicyParams mHomeCreatePolicyParams;
 
@@ -98,18 +94,6 @@
                     this.mHomeCopyCheckDataExpectedValues = new HomeCopyCheckDataExpectedValues();
                 }
                 return this.mHomeCopyCheckDataExpectedValues;
-            }
-        }
-
-        public virtual HomeCheckPolicyPremiumExpectedValues HomeCheckPolicyPremiumExpectedValues
-        {
-            get
-            {
-                if ((this.mHomeCheckPolicyPremiumExpectedValues == null))
-                {
-                    this.mHomeCheckPolicyPremiumExpectedValues = new HomeCheckPolicyPremiumExpectedValues();
-                }
-                return this.mHomeCheckPolicyPremiumExpectedValues;
             }
         }
 
@@ -170,18 +154,6 @@
                     this.mHomeMTACopyCheckExpectedValues = new HomeMTACopyCheckExpectedValues();
                 }
                 return this.mHomeMTACopyCheckExpectedValues;
-            }
-        }
-
-        public virtual AddressLookupExpectedValues AddressLookupExpectedValues
-        {
-            get
-            {
-                if ((this.mAddressLookupExpectedValues == null))
-                {
-                    this.mAddressLookupExpectedValues = new AddressLookupExpectedValues();
-                }
-                return this.mAddressLookupExpectedValues;
             }
         }
 
@@ -260,35 +232,14 @@
         public void HomePrintQuote1()
         {
             WinControl uIOKButton = this.UICurrentOrFutureWindow.UIClient.UIOKButton;
-            WinControl uINextButton = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow.UINextButton;
-            WinControl uINextButton1 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow1.UINextButton;
-            WinControl uINextButton2 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow2.UINextButton;
-            WinControl uINextButton3 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow3.UINextButton;
-            WinControl uINextButton4 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow4.UINextButton;
-            WinControl uINextButton5 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow5.UINextButton;
-            WinControl uINextButton6 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow6.UINextButton;
-            WinControl uIQuoteButton = this.UIInsurEtamWindow.UIQuotesWindow.UIQuoteWindow.UIQuoteButton;
+
             WinControl uINOButton = this.UICreditCheckWindow.UINoWindow.UINoButton;
             WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
             WinControl uIPrintQuoteButton = this.UIQuotesResultsWindow.UIPrintQuoteWindow.UIPrintQuoteButton;
 
             Mouse.Click(uIOKButton, new Point(40, 5));
 
-            Mouse.Click(uINextButton, new Point(31, 17));
-
-            Mouse.Click(uINextButton1, new Point(39, 17));
-
-            Mouse.Click(uINextButton2, new Point(39, 17));
-
-            Mouse.Click(uINextButton3, new Point(39, 17));
-
-            Mouse.Click(uINextButton4, new Point(39, 17));
-
-            Mouse.Click(uINextButton5, new Point(39, 17));
-
-            Mouse.Click(uINextButton6, new Point(39, 17));
-
-            Mouse.Click(uIQuoteButton, new Point(39, 17));
+            this.HomeResubmitQuote(false);
 
             Mouse.Click(uINOButton, new Point(9, 9));
 
@@ -310,14 +261,7 @@
             WinMenuItem uIQuoteSelectListMenuItem =
                 this.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegratMenuItem.UIQuoteSelectListMenuItem;
             WinControl uIOKButton = this.UICurrentOrFutureWindow.UIClient.UIOKButton;
-            WinControl uINextButton = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow.UINextButton;
-            WinControl uINextButton1 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow1.UINextButton;
-            WinControl uINextButton2 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow2.UINextButton;
-            WinControl uINextButton3 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow3.UINextButton;
-            WinControl uINextButton4 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow4.UINextButton;
-            WinControl uINextButton5 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow5.UINextButton;
-            WinControl uINextButton6 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow6.UINextButton;
-            WinControl uIQuoteButton = this.UIInsurEtamWindow.UIQuotesWindow.UIQuoteWindow.UIQuoteButton;
+           
             WinControl uINOButton = this.UICreditCheckWindow.UINoWindow.UINoButton;
             WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
             WinControl uIExitButton = this.UIQuotesResultsWindow.UIExitWindow.UIExitButton;
@@ -335,21 +279,7 @@
 
             Mouse.Click(uIOKButton, new Point(33, 10));
 
-            Mouse.Click(uINextButton, new Point(38, 13));
-
-            Mouse.Click(uINextButton1, new Point(46, 13));
-
-            Mouse.Click(uINextButton2, new Point(46, 13));
-
-            Mouse.Click(uINextButton3, new Point(46, 13));
-
-            Mouse.Click(uINextButton4, new Point(46, 13));
-
-            Mouse.Click(uINextButton5, new Point(46, 13));
-
-            Mouse.Click(uINextButton6, new Point(46, 13));
-
-            Mouse.Click(uIQuoteButton, new Point(46, 13));
+            this.HomeResubmitQuote(false);
 
             Mouse.Click(uINOButton, new Point(48, 3));
 
@@ -507,7 +437,7 @@
         /// </summary>
         /// <param name="needScreenshot"></param>
         /// <param name="expectedDate"></param>
-        public void HomeMTAAccept(bool needScreenshot, string expectedDate = "")
+        public void HomeResubmitQuote(bool needScreenshot, string expectedDate = "")
         {
             WinControl uINextButton = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow.UINextButton;
             WinControl uINextButton1 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow1.UINextButton;
@@ -1099,8 +1029,6 @@
             this.RenewPolicy();
 
             this.PaymentMethod("cash");
-
-            Confirm();
 
             this.ConfirmDocuments();
 
