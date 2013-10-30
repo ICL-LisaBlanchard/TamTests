@@ -1100,8 +1100,6 @@
 
             this.PaymentMethod("cash");
 
-            Confirm();
-
             this.ConfirmDocuments();
 
             this.DeferPrinting();
