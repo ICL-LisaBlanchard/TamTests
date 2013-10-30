@@ -1575,7 +1575,11 @@
             Mouse.DoubleClick(uIBillingScreenClient, new Point(40, 14));
 
             string filename = String.Empty;
-            for (int i = 20; i < 300; i = i + 18)
+            int quoteCnt = 0;
+            int scheduleCnt = 0;
+            int fsaCnt = 0;
+
+            for (int i = 20; i < 500; i = i + 18)
             {
                 this.CleanDocuments();
 
@@ -1597,35 +1601,23 @@
                 switch (filename)
                 {
                     case "HHQuote":
-                        if (overridePremium > 0.0)
-                        {
-                            if (originalPremium > 0.0)
-                            {
-                                this.CheckPremiumInQuote(originalPremium, false);
-                            }
-                            break;
-                        }
-                        this.CheckPremiumInQuote(premium, true);
+                        this.CheckPremiumInQuote(quoteCnt == 0 ? premium : originalPremium , true);
+                        quoteCnt++;
                         break;
                     case "Quote":
-                        if (overridePremium > 0.0)
-                        {
-                            if (originalPremium > 0.0)
-                            {
-                                this.CheckPremiumInQuote(originalPremium, false);
-                            }
-                            break;
-                        }
-                        this.CheckPremiumInQuote(premium, false);
+                        this.CheckPremiumInQuote(quoteCnt == 0 ? premium : originalPremium, false);
+                        quoteCnt++;
                         break;
                     case "Schedule":
-                        this.CheckPremiumInPdfProposal(premium);
+                        this.CheckPremiumInPdfProposal(scheduleCnt == 0 ? premium : originalPremium);
+                        scheduleCnt++;
                         break;
                     case "FSA":
-                        this.CheckPremiumInWordDoc(premium);
-                        premium = originalPremium;
+                        this.CheckPremiumInWordDoc(fsaCnt == 0 ? premium : originalPremium);
+                        fsaCnt++;
                         break;
                 }
+                
             }
 
             this.CheckDocsList(expectedDocs);
@@ -1881,6 +1873,11 @@
 
         private static bool CheckStringForPremium(string text, double premium)
         {
+            if (premium <= 0.0)
+            {
+                return false;
+            }
+
             return text.Contains(premium.ToString("0.00")) || text.Contains((premium + 0.01).ToString("0.00")) || text.Contains((premium - 0.01).ToString("0.00"));
         }
 
@@ -1889,7 +1886,7 @@
             this.OpenAttachment();
 
             Playback.Wait(5000);
-            Keyboard.SendKeys("Q", ModifierKeys.Control);
+            CloseBrowser();
 
             string file;
             if (isHouse)
@@ -1964,7 +1961,7 @@
                 Mouse.Click(uIFindNextButton);
 
                 int defaultTimeout = Playback.PlaybackSettings.SearchTimeout;
-                Playback.PlaybackSettings.SearchTimeout = 2000;
+                Playback.PlaybackSettings.SearchTimeout = 1000;
                 try
                 {
                     b = !this.UIMicrosoftOfficeWordVWindow.UIOKWindow.Exists;
