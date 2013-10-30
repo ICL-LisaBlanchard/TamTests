@@ -1007,7 +1007,7 @@
 
             this.PaymentMethod(paymentType);
 
-            Mouse.Click(uIYesButton);
+            Playback.Wait(10000);
 
             this.ConfirmDocuments();
 
@@ -1027,6 +1027,8 @@
             this.RenewPolicy();
 
             this.PaymentMethod("cash");
+
+            this.EtamYes();
 
             this.ConfirmDocuments();
 

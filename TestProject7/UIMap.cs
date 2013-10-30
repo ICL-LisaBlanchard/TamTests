@@ -682,11 +682,14 @@
             WinControl uIPaymentOkButton = this.UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
             WinRadioButton uIDirectDebitRadioButton = this.UIPaymentMethodsWindow.UIDirectDebitWindow.UIRadioButton("Direct Debit");
 
+            WaitForControl(UIPaymentMethodsWindow);
+
             if (type == "dd")
             {
                 Mouse.Click(uIDirectDebitRadioButton);
             }
 
+            
             Mouse.Click(uIPaymentOkButton);
         }
 
@@ -1443,10 +1446,15 @@
 
         public void WaitForControl(UITestControl control)
         {
-            int timeout = Playback.PlaybackSettings.SearchTimeout;
-            Playback.PlaybackSettings.SearchTimeout = 120000;
+            for (int i = 0; i < 30; i++)
+            {
+                if (control.Exists)
+                {
+                    return;
+                }
+                Playback.Wait(1000);
+            }
             Assert.IsTrue(control.Exists, "Control: " + control.Name + " does not exist");
-            Playback.PlaybackSettings.SearchTimeout = timeout;
         }
 
         public void CheckCorrectNumberTrans(int expected)
