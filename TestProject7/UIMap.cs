@@ -609,9 +609,9 @@
             WinControl uICancelButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UICancelWindow.UICancelButton;
             WinControl uIItemButton = this.UIPolicyautotestWindow.UIItemWindow.UIItemButton;
 
-            Mouse.Click(uICancelButton, new Point(47, 19));
+            Mouse.Click(uICancelButton);
 
-            Mouse.Click(uIItemButton, new Point(21, 14));
+            Mouse.Click(uIItemButton);
         }
 
         public void CloseOpenPolicy()
@@ -620,7 +620,7 @@
 
             this.CloseOpenPolicyList();
 
-            Mouse.Click(uIDetailButton, new Point(44, 16));
+            Mouse.Click(uIDetailButton);
         }
 
         public void Exit1()
@@ -1312,7 +1312,7 @@
 
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
-            Mouse.Click(uiImporttoTAMWindowOkButton, new Point(46, 14));
+            Mouse.Click(uiImporttoTAMWindowOkButton);
 
             this.SelectTAMActivities3();
         }

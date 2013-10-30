@@ -1,9 +1,6 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
     using System;
-
-    using AppliedSystems.Tam.Ui.Tests.Assertions;
-
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -67,7 +64,7 @@
             House.HomeCheckNewPremium();
 
             House.OpenTransList(Transactions.GetTransactionDictionary("18866.98", "cash"));
-            House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhNewBusinessQuote, "cash", overridePremium: OverridePremium);
+            House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhNewBusinessQuote, "cash", OverridePremium);
         }
 
         [TestMethod]
@@ -286,7 +283,7 @@
             House.RenewalCheckStatus("REN");
             var premium = House.CheckPolicyPremium("cash");
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhRenewalBefore, "cash", originalPremium: double.Parse(originalPremium));
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalPremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium));
             House.ClosePolicy();
 
             //mta1
@@ -447,7 +444,7 @@
             House.CloseAndOpenPolicyList(UiMap.CustomerCode);
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
             string premium = House.CheckPolicyPremium("cash");
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalpremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalpremium));
             House.RenewalCheckStatus("REW");
             House.ClosePolicy();
 
@@ -475,10 +472,8 @@
         [TestMethod]
         public void HouseRebrokeRenewCurrent()
         {
-            // change registry to ourhighway
-            base.SetOurMMaRegKeys();
 
-            //add policy
+            SetOurMMaRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
@@ -545,7 +540,7 @@
             House.RenewalCheckStatus("REW");
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
             string premium = House.CheckPolicyPremium("cash");
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalpremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalpremium));
             House.ClosePolicy();
         }
 
@@ -590,7 +585,7 @@
 
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
             string premium = House.CheckPolicyPremium("cash");
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalpremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalpremium));
             House.RenewalCheckStatus("REW");
             House.ClosePolicy();
         }

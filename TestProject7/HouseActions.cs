@@ -237,11 +237,11 @@
             WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
             WinControl uIPrintQuoteButton = this.UIQuotesResultsWindow.UIPrintQuoteWindow.UIPrintQuoteButton;
 
-            Mouse.Click(uIOKButton, new Point(40, 5));
+            Mouse.Click(uIOKButton);
 
             this.HomeResubmitQuote(false);
 
-            Mouse.Click(uINOButton, new Point(9, 9));
+            Mouse.Click(uINOButton);
 
             this.PublicCreditCheckOk();
 
@@ -253,7 +253,7 @@
 
             Playback.Wait(3000);
 
-            Mouse.Click(uIPrintQuoteButton, new Point(65, 11));
+            Mouse.Click(uIPrintQuoteButton);
         }
 
         public void HomeExitWithPolicy()
@@ -272,17 +272,17 @@
 
             WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowCashBilling.UIItemEdit;
 
-            Mouse.Click(uICancelButton, new Point(41, 14));
+            Mouse.Click(uICancelButton);
 
-            Mouse.Click(uIOptionsButton, new Point(49, 4));
+            Mouse.Click(uIOptionsButton);
 
             Mouse.Click(uIQuoteSelectListMenuItem, new Point(89, 11));
 
-            Mouse.Click(uIOKButton, new Point(33, 10));
+            Mouse.Click(uIOKButton);
 
             this.HomeResubmitQuote(false);
 
-            Mouse.Click(uINOButton, new Point(48, 3));
+            Mouse.Click(uINOButton);
 
             this.PublicCreditCheckOk();
 
@@ -292,7 +292,7 @@
 
             Mouse.Move(new Point(500, 500));
 
-            Mouse.Click(uIExitButton, new Point(46, 13));
+            Mouse.Click(uIExitButton);
 
             this.EtamYes();
 
@@ -319,7 +319,7 @@
 
             Mouse.Click(this.UIQuotesResultsWindow);
 
-            Mouse.Click(uIAcceptButton, new Point(47, 11));
+            Mouse.Click(uIAcceptButton);
 
             this.EtamYes();
 
@@ -368,9 +368,9 @@
             WinControl uICloseButton = this.UIInsurEtamWindow.UIQuotesWindow.UICancelWindow.UICloseButton;
             WinControl uIokButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
-            Mouse.Click(uICloseButton, new Point(33, 13));
+            Mouse.Click(uICloseButton);
 
-            Mouse.Click(uIokButton, new Point(36, 14));
+            Mouse.Click(uIokButton);
         }
 
         public void HomeCopyCheckData()
@@ -397,11 +397,11 @@
             WinRadioButton uIHouseholdRadioButton = this.UIProductSelectionWindow.UIHouseholdWindow.UIHouseholdRadioButton;
             WinControl uIOKButton1 = this.UIProductSelectionWindow.UIOKWindow.UIOKButton;
 
-            Mouse.Click(uIOptionsButton, new Point(26, 9));
+            Mouse.Click(uIOptionsButton);
 
             Mouse.Click(uICopyRiskMenuItem, new Point(93, 8));
 
-            Mouse.Click(uIOKButton, new Point(54, 10));
+            Mouse.Click(uIOKButton);
 
             uIHouseholdRadioButton.Selected = this.CommonParams.UIHouseholdRadioButtonSelected;
 
@@ -413,16 +413,16 @@
             WinControl uIokButton = this.UIViewQuoteDetailsWindow.UIOKWindow.UIOKButton;
             WinControl uIDemandsNeedsButton = this.UIQuotesResultsWindow.UIDemandsNeedsWindow.UIDemandsNeedsButton;
 
-            Mouse.Click(uIokButton, new Point(36, 9));
+            Mouse.Click(uIokButton);
 
-            Mouse.Click(uIDemandsNeedsButton, new Point(59, 13));
+            Mouse.Click(uIDemandsNeedsButton);
         }
 
         public void HomeExitWithoutPolicy()
         {
             WinControl uIExitButton = this.UIQuotesResultsWindow.UIExitWindow.UIExitButton;
 
-            Mouse.Click(uIExitButton, new Point(54, 9));
+            Mouse.Click(uIExitButton);
 
             this.EtamYes();
 
@@ -447,7 +447,7 @@
             WinControl uINextButton6 = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow6.UINextButton;
             WinControl uIQuoteButton = this.UIInsurEtamWindow.UIQuotesWindow.UIQuoteWindow.UIQuoteButton;
 
-            Mouse.Click(uINextButton, new Point(39, 12));
+            Mouse.Click(uINextButton);
 
             Mouse.Click(uINextButton1, new Point(47, 12));
 
@@ -466,21 +466,21 @@
                 this.CreateScreenshot(expectedDate);
             }
 
-            Mouse.Click(uIQuoteButton, new Point(47, 12));
+            Mouse.Click(uIQuoteButton);
         }
 
         public void HomeMTAAfter()
         {
             WinControl uIAfterButton = this.UIMidTermAdjustmentsWindow.UIOKWindow.UIAfterButton;
 
-            Mouse.Click(uIAfterButton, new Point(38, 10));
+            Mouse.Click(uIAfterButton);
         }
 
         public void HomeMTABefore()
         {
             WinControl uIBeforeButton = this.UIMidTermAdjustmentsWindow.UIItemWindow.UIBeforeButton;
 
-            Mouse.Click(uIBeforeButton, new Point(27, 12));
+            Mouse.Click(uIBeforeButton);
         }
 
         public void HomeMTACancel()
@@ -488,10 +488,10 @@
             WinControl uICancelButton = this.UIInsurEtamWindow.UIQuotesWindow.UICancelWindow.UICancelButton;
             WinControl uIOKButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
-            Mouse.Click(uICancelButton, new Point(42, 13));
+            Mouse.Click(uICancelButton);
 
             this.EtamYes();
-            Mouse.Click(uIOKButton, new Point(46, 14));
+            Mouse.Click(uIOKButton);
         }
 
         public void HomeMTACancel1()
@@ -500,10 +500,10 @@
 
             WinControl uIOKButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
-            Mouse.Click(uICancelButton, new Point(37, 17));
+            Mouse.Click(uICancelButton);
 
             this.EtamYes();
-            Mouse.Click(uIOKButton, new Point(49, 13));
+            Mouse.Click(uIOKButton);
         }
 
         public void HomeMTAChange()
@@ -514,11 +514,11 @@
             WinEdit uIItemEdit = this.UIInsurEtamWindow.UIQuotesWindow.TbxFirstname.UIItemEdit;
 
             Playback.Wait(2000);
-            Mouse.Click(uIMTAButton, new Point(45, 12));
+            Mouse.Click(uIMTAButton);
 
             uIItemComboBox.SelectedItem = this.HomeMTAChangeParams.UIItemComboBoxSelectedItem;
 
-            Mouse.Click(uIOKButton, new Point(35, 15));
+            Mouse.Click(uIOKButton);
 
             uIItemEdit.Text = this.HomeMTAChangeParams.UIItemEditText;
         }
@@ -580,7 +580,7 @@
 
             try
             {
-                Mouse.Click(uIOKButton, new Point(35, 13));
+                Mouse.Click(uIOKButton);
             }
             catch
             {
@@ -592,11 +592,11 @@
 
             uIItemEdit.Text = this.ProposerParams.Postcode;
 
-            Mouse.Click(uILookupButton, new Point(25, 13));
+            Mouse.Click(uILookupButton);
 
             Mouse.Click(uIOKButton3, new Point(20, 19));
 
-            Mouse.Click(uIConfirmButton, new Point(26, 9));
+            Mouse.Click(uIConfirmButton);
 
             try
             {
@@ -618,21 +618,21 @@
             Mouse.Click(this.UIHouseholdRebrokeResuWindow);
             WinControl uISelectAlternativeButton = this.UIHouseholdRebrokeResuWindow.UISelectAlternativeWindow.UISelectAlternativeButton;
 
-            Mouse.Click(uISelectAlternativeButton, new Point(49, 13));
+            Mouse.Click(uISelectAlternativeButton);
         }
 
         public void HomeRebrokeFinish()
         {
             WinControl uIokButton = this.UIHouseholdRebrokeResuWindow.UIOKWindow.UIOKButton;
 
-            Mouse.Click(uIokButton, new Point(36, 13));
+            Mouse.Click(uIokButton);
         }
 
         public void HomeRebrokeCurrent()
         {
             WinControl uIokButton = this.UIHouseholdRebrokeResuWindow.UIOKWindow.UIOKButton;
 
-            Mouse.Click(uIokButton, new Point(60, 9));
+            Mouse.Click(uIokButton);
 
             this.EtamYes();
         }
@@ -643,11 +643,11 @@
 
             WinControl uIProceedButton = this.UICreditCheckAtRenewalWindow.UIProceedWindow.UIProceedButton;
 
-            Mouse.Click(uIRebrokeButton, new Point(55, 11));
+            Mouse.Click(uIRebrokeButton);
 
             this.EtamYes();
 
-            Mouse.Click(uIProceedButton, new Point(61, 11));
+            Mouse.Click(uIProceedButton);
         }
 
         public void HomeProposer()
@@ -675,9 +675,9 @@
 
             txbPostcode.Text = this.ProposerParams.Postcode;
 
-            Mouse.Click(uILookupButton, new Point(28, 13));
+            Mouse.Click(uILookupButton);
 
-            Mouse.Click(uIokButton, new Point(43, 7));
+            Mouse.Click(uIokButton);
         }
 
         public void HomeProposerFull()
@@ -691,14 +691,14 @@
             this.HomeProposerFullStep5();
             this.HomeProposerFullStep6();
 
-            Mouse.Click(uIQuoteButton, new Point(14, 11));
+            Mouse.Click(uIQuoteButton);
         }
 
         public void HomePrintQuote()
         {
             WinControl uICancelButton = this.UIPolicyautotestWindow.UIBillingScreenWindow.UICancelWindow.UICancelButton;
 
-            Mouse.Click(uICancelButton, new Point(19, 8));
+            Mouse.Click(uICancelButton);
         }
 
         public void HomeOpenQuote()
@@ -708,14 +708,14 @@
                 this.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegratMenuItem.UIQuoteSelectListMenuItem;
             WinControl uIokButton = this.UICurrentOrFutureWindow.UIClient.UIOKButton;
 
-            Mouse.Click(uIOptionsButton, new Point(31, 8));
+            Mouse.Click(uIOptionsButton);
 
             Mouse.Click(uIQuoteSelectListMenuItem, new Point(123, 7));
 
             Mouse.Move(new Point(500, 500));
 
             this.WaitForControl(uIokButton);
-            Mouse.Click(uIokButton, new Point(44, 13));
+            Mouse.Click(uIokButton);
         }
 
         public void HomeOpenPolicy()
@@ -723,7 +723,7 @@
             WinControl uIDetailButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UIDetailWindow.UIDetailButton;
             WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindowCashBilling.UIItemEdit;
             Debug.WriteLine("Customer Code : " + this.CustomerCode);
-            Mouse.Click(uIDetailButton, new Point(26, 12));
+            Mouse.Click(uIDetailButton);
 
             Mouse.Click(uIItemEdit, new Point(25, 5));
         }
@@ -740,9 +740,9 @@
 
             Mouse.Move(new Point(500, 500));
 
-            Mouse.Click(uIAcceptButton, new Point(64, 11));
+            Mouse.Click(uIAcceptButton);
 
-            Mouse.Click(uIokButton, new Point(37, 8));
+            Mouse.Click(uIokButton);
 
             this.ConfirmDocuments();
 
@@ -769,7 +769,7 @@
             WinControl uIokButton = this.UIMTAEffectiveDatesWindow.UIOKWindow.UIOKButton;
 
             string mtaDate = uIMTADate.Text.Replace(" ", "_") + "_" + uIMTATime.Text.Replace(":", "");
-            Mouse.Click(uIokButton, new Point(46, 8));
+            Mouse.Click(uIokButton);
 
             return mtaDate;
         }
@@ -815,9 +815,9 @@
 
             Mouse.Click(uINextButton6, new Point(31, 11));
 
-            Mouse.Click(uIQuoteButton, new Point(31, 11));
+            Mouse.Click(uIQuoteButton);
 
-            Mouse.Click(uInoButton, new Point(56, 12));
+            Mouse.Click(uInoButton);
         }
 
         public void HomeCheckNewPremium()
@@ -836,13 +836,13 @@
 
             Mouse.Move(new Point(500, 500));
 
-            Mouse.Click(uIPremiumButton, new Point(38, 11));
+            Mouse.Click(uIPremiumButton);
 
             uIItemEdit.Text = overridePremium.ToString(CultureInfo.InvariantCulture);
 
             uIItemEdit1.Text = this.HomeChangePremiumParams.UIItemEditText1;
 
-            Mouse.Click(uIokButton, new Point(52, 15));
+            Mouse.Click(uIokButton);
         }
 
         public void HomeCancelPolicyQuote1()
@@ -850,16 +850,16 @@
             WinControl uIokButton = this.UIMTAEffectiveDatesWindow.UIOKWindow.UIOKButton;
             WinControl uInoButton = this.UIClaimsWindow.UINoWindow.UINoButton;
 
-            Mouse.Click(uIokButton, new Point(52, 9));
+            Mouse.Click(uIokButton);
 
-            Mouse.Click(uInoButton, new Point(43, 18));
+            Mouse.Click(uInoButton);
         }
 
         public void HomeCancelPolicyQuote()
         {
             WinControl uIQuoteButton = this.UIInsurEtamWindow.UIQuotesWindow.UIQuoteWindow.UIQuoteButton;
 
-            Mouse.Click(uIQuoteButton, new Point(41, 7));
+            Mouse.Click(uIQuoteButton);
         }
 
         public void HomeCancelPolicyExit()
@@ -868,11 +868,11 @@
             WinControl uIokButton = this.UIInsurEtamWindow1.UIOKWindow1.UIOKButton;
             WinControl uICancelButton = this.UIOpenWindow.UICancelWindow.UICancelButton;
 
-            Mouse.Click(uIExitButton, new Point(58, 11));
+            Mouse.Click(uIExitButton);
 
-            Mouse.Click(uIokButton, new Point(40, 10));
+            Mouse.Click(uIokButton);
 
-            Mouse.Click(uICancelButton, new Point(54, 12));
+            Mouse.Click(uICancelButton);
         }
 
         public void HomeCancelPolicyAccept()
@@ -884,9 +884,9 @@
 
             this.HomeSelectPolicy();
 
-            Mouse.Click(uIAcceptButton, new Point(85, 15));
+            Mouse.Click(uIAcceptButton);
 
-            Mouse.Click(uIokButton, new Point(65, 9));
+            Mouse.Click(uIokButton);
 
             this.ConfirmDocuments();
 
@@ -906,11 +906,11 @@
             WinControl uIOKButton = this.UIMidTermAdjustmentsWindow.UIOKWindow.UIOKButton;
 
             Playback.Wait(5000);
-            Mouse.Click(uIMTAButton, new Point(35, 8));
+            Mouse.Click(uIMTAButton);
 
             uIItemComboBox.SelectedItem = this.CancelPolicyParams.UIItemComboBoxSelectedItem;
 
-            Mouse.Click(uIOKButton, new Point(31, 11));
+            Mouse.Click(uIOKButton);
         }
 
         public void HomeCancelCopy()
@@ -918,12 +918,12 @@
             WinControl uICancelButton = this.UIInsurEtamWindow.UIQuotesWindow.UICancelWindow.UICancelButton;
             WinControl uIOKButton = this.UITamxml7Window.UITamxml7Client.UIOKButton;
 
-            Mouse.Click(uICancelButton, new Point(42, 12));
+            Mouse.Click(uICancelButton);
 
             this.EtamYes();
             this.EtamYes();
 
-            Mouse.Click(uIOKButton, new Point(49, 15));
+            Mouse.Click(uIOKButton);
         }
 
         public void HomeAmendSelecPolicy(bool newPolicy)
@@ -950,11 +950,11 @@
             WinControl uIQuoteButton = this.UIHouseholdRenewalsWindow.UIQuoteWindow.UIQuoteButton;
             WinControl uIProceedButton = this.UICreditCheckAtRenewalWindow.UIProceedWindow.UIProceedButton;
 
-            Mouse.Click(uIAmendRiskButton, new Point(67, 17));
+            Mouse.Click(uIAmendRiskButton);
 
             uIItemEdit.Text = this.HomeAmendRiskParams.UIItemEditText;
 
-            Mouse.Click(uINextButton, new Point(36, 13));
+            Mouse.Click(uINextButton);
 
             Mouse.Click(uINextButton1, new Point(44, 13));
 
@@ -968,9 +968,9 @@
 
             Mouse.Click(uINextButton6, new Point(44, 13));
 
-            Mouse.Click(uIQuoteButton, new Point(44, 13));
+            Mouse.Click(uIQuoteButton);
 
-            Mouse.Click(uIProceedButton, new Point(59, 15));
+            Mouse.Click(uIProceedButton);
         }
 
         public void HomeAmendRenewFinish1()
@@ -1047,7 +1047,7 @@
 
             Mouse.Move(new Point(500, 500));
 
-            Mouse.Click(uIAcceptButton, new Point(33, 15));
+            Mouse.Click(uIAcceptButton);
 
             this.EtamYes();
         }
@@ -1088,9 +1088,9 @@
 
             Mouse.Click(uITxtClientXmlEdit, new Point(284, 43));
 
-            Mouse.Click(uIGetXMLfromServerButton, new Point(114, 9));
+            Mouse.Click(uIGetXMLfromServerButton);
 
-            Mouse.Click(uICreateRecordButton, new Point(102, 11));
+            Mouse.Click(uICreateRecordButton);
 
             uIInsurEcomSystemMaintWindow.PerformDialogAction(BrowserDialogAction.Ok);
         }
@@ -1106,7 +1106,7 @@
         {
             WinControl uIOKButton = this.UIMTASuccessfulWindow.UIOKWindow.UIOKButton;
 
-            Mouse.Click(uIOKButton, new Point(49, 11));
+            Mouse.Click(uIOKButton);
 
             this.DeferPrinting();
             this.ImportToTam();
@@ -1126,9 +1126,9 @@
 
             Mouse.Move(new Point(500, 500));
 
-            Mouse.Click(uIAcceptButton, new Point(75, 10));
+            Mouse.Click(uIAcceptButton);
 
-            Mouse.Click(uIokButton, new Point(36, 16));
+            Mouse.Click(uIokButton);
 
             this.ConfirmDocuments();
 
@@ -1166,13 +1166,13 @@
             WinControl uIRenewPolicyButton = this.UIHouseholdRenewalsResultsWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
 
-            Mouse.Click(uIRenewPolicyButton, new Point(36, 18));
+            Mouse.Click(uIRenewPolicyButton);
 
-            Mouse.Click(uIYesButton, new Point(50, 20));
+            Mouse.Click(uIYesButton);
 
             try
             {
-                Mouse.Click(uIYesButton, new Point(65, 18));
+                Mouse.Click(uIYesButton);
             }
             catch
             {
@@ -1241,7 +1241,7 @@
 
             uIIstheapplicationinjoCheckBox.Checked = this.HouseholdQuoteParams.UIIstheapplicationinjoCheckBoxChecked;
 
-            Mouse.Click(uIOtherpersonButton, new Point(45, 10));
+            Mouse.Click(uIOtherpersonButton);
 
             secondApplicantTItle.SelectedItem = this.HouseholdQuoteParams.SecondApplicantTItle;
 
@@ -1259,7 +1259,7 @@
 
             secondApplicantJobSector.SelectedItem = this.HouseholdQuoteParams.SecondApplicantJobSector;
 
-            Mouse.Click(uIOKButton, new Point(17, 13));
+            Mouse.Click(uIOKButton);
 
             telephone.Text = this.HouseholdQuoteParams.Telephone;
 
@@ -1267,7 +1267,7 @@
 
             childen.Text = this.HouseholdQuoteParams.Childen;
 
-            Mouse.Click(uINextButton, new Point(33, 11));
+            Mouse.Click(uINextButton);
         }
 
         private void HomeProposerFullStep2()
@@ -1425,9 +1425,9 @@
 
             uIAnyindividualitemswoCheckBox.Checked = this.HouseholdQuoteParams.UIAnyindividualitemswoCheckBoxChecked;
 
-            Mouse.Click(uIItemsButton, new Point(56, 11));
+            Mouse.Click(uIItemsButton);
 
-            Mouse.Click(uINewButton, new Point(16, 17));
+            Mouse.Click(uINewButton);
 
             Mouse.Click(uIItemGroup, new Point(115, 20));
 
@@ -1437,7 +1437,7 @@
 
             extraInsiteItemsFreeText.Text = this.HouseholdQuoteParams.ExtraInsiteItemsFreeText;
 
-            Mouse.Click(uISaveButton, new Point(33, 11));
+            Mouse.Click(uISaveButton);
 
             Mouse.Click(uIOKButton1, new Point(33, 15));
 
@@ -1475,7 +1475,7 @@
 
             uIDoyourequirecoverforCheckBox1.Checked = this.HouseholdQuoteParams.UIDoyourequirecoverforCheckBoxChecked1;
 
-            Mouse.Click(uICyclesButton, new Point(47, 15));
+            Mouse.Click(uICyclesButton);
 
             Mouse.Click(pedalCyclesNew, new Point(31, 13));
 
