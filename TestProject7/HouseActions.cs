@@ -251,6 +251,8 @@
 
             Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendEndKeys, ModifierKeys.None);
 
+            Playback.Wait(3000);
+
             Mouse.Click(uIPrintQuoteButton, new Point(65, 11));
         }
 
@@ -261,11 +263,10 @@
             WinMenuItem uIQuoteSelectListMenuItem =
                 this.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegratMenuItem.UIQuoteSelectListMenuItem;
             WinControl uIOKButton = this.UICurrentOrFutureWindow.UIClient.UIOKButton;
-           
+
             WinControl uINOButton = this.UICreditCheckWindow.UINoWindow.UINoButton;
             WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
             WinControl uIExitButton = this.UIQuotesResultsWindow.UIExitWindow.UIExitButton;
-
 
             WinControl uIDetailButton = this.UIPolicyautotestWindow.UIPolicyListWindow1.UIDetailWindow.UIDetailButton;
 
@@ -361,8 +362,6 @@
 
             Mouse.Click(uIItemEdit, new Point(24, 5));
         }
-
- 
 
         public void HomeClosePolicy()
         {
@@ -1023,7 +1022,6 @@
 
         public void HomeAmendRenew()
         {
-
             Playback.Wait(2000);
 
             this.RenewPolicy();
@@ -1174,10 +1172,44 @@
             {
                 Mouse.Click(uIYesButton, new Point(65, 18));
             }
-            catch { 
-            
+            catch
+            {
             }
-            
+        }
+
+        public string CreateNewPolicy()
+        {
+            HomeSelectPolicy();
+            SetPolicyDetails();
+            string premium = CheckPolicyPremium("cash");
+            return premium;
+        }
+
+        public void SetPolicyDetails()
+        {
+            HomeAcceptPolicy("cash");
+            HomeFinishQuote();
+            CloseOpenPolicyList();
+            HomeOpenPolicy();
+        }
+
+        public void CreatePolicy(bool full)
+        {
+            SelectHomeType();
+            SelectMenu();
+            Links();
+            HomeProposer();
+            if (full)
+            {
+                HomeProposerFull();
+            }
+            else
+            {
+                HomeAddressLookup(addressLookupParams.AddressLine1, addressLookupParams.AddressLine2);
+                HomeCreatePolicy();
+            }
+
+            PublicCreditCheckOk();
         }
 
         private void HomeProposerFullStep1()
@@ -1487,42 +1519,6 @@
             Mouse.Click(generalNext, new Point(25, 9));
 
             uIHavespecialconditionCheckBox.Checked = this.HouseholdQuoteParams.UIHavespecialconditionCheckBoxChecked;
-        }
-
-        public string CreateNewPolicy()
-        {
-            HomeSelectPolicy();
-            SetPolicyDetails();
-            string premium = CheckPolicyPremium("cash");
-            return premium;
-        }
-
-        public void SetPolicyDetails()
-        {
-            HomeAcceptPolicy("cash");
-            HomeFinishQuote();
-            CloseOpenPolicyList();
-            HomeOpenPolicy();
-        }
-
-        public void CreatePolicy(bool full)
-        {
-            SelectHomeType();
-            SelectMenu();
-            Links();
-            HomeProposer();
-            if (full)
-            {
-                HomeProposerFull();
-            }
-            else
-            {
-
-                HomeAddressLookup(addressLookupParams.AddressLine1, addressLookupParams.AddressLine2);
-                HomeCreatePolicy();
-            }
-
-            PublicCreditCheckOk();
         }
     }
 }
