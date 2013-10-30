@@ -406,15 +406,8 @@
             }
         }
 
-        /// <summary>
-        ///     Gets or sets the test context which provides
-        ///     information about and functionality for the current test run.
-        /// </summary>
         public TestContext TestContext { get; set; }
 
-        /// <summary>
-        ///     MTAEffectiveDate - Use 'MTAEffectiveDateParams' to pass parameters into this method.
-        /// </summary>
         public string MtaEffectiveDate(string withDate = "")
         {
             WinEdit uIMTADate = this.UIMTAEffectiveDatesWindow.UIMTADate.UIItemEdit;
@@ -424,10 +417,6 @@
             return uIMTADate.Text.Replace("/", "_") + "_" + uIMTATime.Text.Replace(":", "");
         }
 
-        /// <summary>
-        ///     _
-        ///     GetCustomerCode
-        /// </summary>
         public string GetCustomerCode()
         {
             WinEdit uIItemEdit = this.UIPolicyautotestWindow.UICustomersWindow.UIItemWindow.UIItemEdit;
@@ -435,14 +424,9 @@
             return uIItemEdit.GetProperty("Text").ToString();
         }
 
-        /// <summary>
-        ///     CloseDemandsMoto
-        /// </summary>
         public void CloseDemands()
         {
             WinClient uiDemandsNeedsMotorComClient = this.UIDemandsNeedsMotorComWindow.UIDemandsNeedsMotorComClient;
-
-            // Click 'Close' button
             Playback.PlaybackSettings.ContinueOnError = true;
             Keyboard.SendKeys(uiDemandsNeedsMotorComClient, "{F4}", ModifierKeys.Alt);
             Playback.PlaybackSettings.ContinueOnError = false;
@@ -462,11 +446,6 @@
             Mouse.Click(uIOKButton);
         }
 
-        /// <summary>
-        ///     MotoRenewalCheckRecord - Use 'MotoRenewalCheckRecordExpectedValues' to pass parameters into this method.
-        /// </summary>
-        /// <param name="policyType"></param>
-        /// <param name="customerCode"></param>
         public void RenewalCheckRecord(int policyType, string customerCode)
         {
             WinWindow uIauto1871001Window = this.UIAutoPolicyWindow;
@@ -482,9 +461,6 @@
             Playback.PlaybackSettings.ContinueOnError = false;
         }
 
-        /// <summary>
-        ///     OpenBrowser2 - Use 'OpenBrowser2Params' to pass parameters into this method.
-        /// </summary>
         public void OpenBrowser2()
         {
             WinControl okButXp = this.UIWindowsSecurityWindow1.UIWindowsSecurityPane.UIOKButton;
@@ -519,21 +495,11 @@
             Mouse.Click(uIRenewalsMaintenanceHyperlink);
         }
 
-        /// <summary>
-        ///     CloseBrowser
-        /// </summary>
         public void CloseBrowser()
         {
             BaseUiTest.CloseProcess("iexplore");
-            //BaseUiTest.CloseProcess("chrome");
-            //BaseUiTest.CloseProcess("chrome");
-            //BaseUiTest.CloseProcess("chrome");
-            //BaseUiTest.CloseProcess("chrome");
         }
 
-        /// <summary>
-        ///     HomeFinishQuote - Use 'HomeFinishQuoteParams' to pass parameters into this method.
-        /// </summary>
         public void HomeFinishQuote()
         {
             WinControl uILookupButton = this.UIPolicyDetailConfirmationWindow.UILookupWindow.UILookupButton;
@@ -553,11 +519,6 @@
             this.SelectTAMActivities2();
         }
 
-        /// <summary>
-        ///     Confirm Docs --> OK
-        ///     Defer print -- >
-        ///     Import to Tam (only OK button)
-        /// </summary>
         public void RenewalModuleInvite1()
         {
             this.ConfirmDocuments();
@@ -630,10 +591,6 @@
             Playback.Wait(1000);
         }
 
-        /// <summary>
-        ///     FinishQuote
-        /// </summary>
-        /// <param name="paymentType"></param>
         public void FinishQuote(string paymentType)
         {
             WinControl uIConfirmButton = this.UIPolicyDateTimeWindow.UIConfirmWindow.UIConfirmButton;
@@ -666,9 +623,6 @@
             Mouse.Click(uIDetailButton, new Point(44, 16));
         }
 
-        /// <summary>
-        ///     Exit1 - Use 'Exit1Params' to pass parameters into this method.
-        /// </summary>
         public void Exit1()
         {
             WinControl uIExitButton = this.UIQuoteResultsWindow.UIExitWindow.UIExitButton;
@@ -926,9 +880,6 @@
             Playback.PlaybackSettings.ContinueOnError = false;
         }
 
-        /// <summary>
-        ///     RenewalModuleSort
-        /// </summary>
         public void RenewalModuleSort()
         {
             WinClient uIInsurEtamRenewalsClient = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow12.UIClient();
@@ -936,9 +887,6 @@
             Mouse.Click(uIInsurEtamRenewalsClient, new Point(24, 8));
         }
 
-        /// <summary>
-        ///     RenewalModuleRenew_1 - Use 'RenewalModuleRenew_1Params' to pass parameters into this method.
-        /// </summary>
         public void RenewalModuleRenew1()
 
         {
@@ -1065,9 +1013,6 @@
             }
         }
 
-        /// <summary>
-        ///     RenewalModuleEDI - Use 'RenewalModuleEDIParams' to pass parameters into this method.
-        /// </summary>
         public void RenewalModuleEDI()
         {
             WinControl uIOptionsButton = this.UIPolicyautotestWindow.UIPolicyListWindow.UIOptionsWindow.UIOptionsButton;
@@ -1091,10 +1036,6 @@
             Mouse.Click(uiIETamRenewalsWindowOkButton);
         }
 
-        /// <summary>
-        ///     RenewalModuleDisplay - Use 'RenewalModuleDisplayParams' to pass parameters into this method.
-        /// </summary>
-        /// <param name="keyToSend"></param>
         public void RenewalModuleDisplay(string keyToSend)
         {
             WinClient uIInsurETAMRenewalsClient = this.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow10.UIClient();
@@ -1107,9 +1048,6 @@
             Mouse.Click(uIDisplayRecordButton);
         }
 
-        /// <summary>
-        ///     RenewalModuleConfirm
-        /// </summary>
         public void RenewalModuleConfirm()
         {
             WinControl uIOKButton = this.UIConfirmWindow.UIOKWindow.UIOKButton;
@@ -1123,9 +1061,6 @@
             }
         }
 
-        /// <summary>
-        ///     RenewalModuleClose
-        /// </summary>
         public void RenewalModuleClose()
         {
             WinControl uIExitButton = this.UIInsurEtamWindow.UIQuotesWindow.UIExitWindow1.UIExitButton;
@@ -1135,9 +1070,6 @@
             this.EtamYes();
         }
 
-        /// <summary>
-        ///     RenewalLoaderRun - Use 'RenewalLoaderRunParams' to pass parameters into this method.
-        /// </summary>
         public void RenewalLoaderRun()
         {
             WinTitleBar uIRenewalLoaderTitleBar = this.UIRenewalLoaderWindow.UIRenewalLoaderTitleBar;
@@ -1154,9 +1086,6 @@
             Mouse.Click(uIRunButton);
         }
 
-        /// <summary>
-        ///     RenewalLoaderOpen
-        /// </summary>
         public void RenewalLoaderOpen()
         {
             WinControl uIItemButton = this.UIPolicyautotestWindow.UIItemWindow.UIItemButton;
@@ -1177,9 +1106,6 @@
             Mouse.Click(uIRenewalsLoaderMenuItem, new Point(111, 11));
         }
 
-        /// <summary>
-        ///     RenewalLoaderClose
-        /// </summary>
         public void RenewalLoaderClose()
         {
             WinTitleBar uIRenewalLoaderTitleBar = this.UIRenewalLoaderWindow.UIRenewalLoaderTitleBar;
@@ -1190,21 +1116,13 @@
             Mouse.Click(uICloseButton);
         }
 
-        /// <summary>
-        ///     RenewalCheckStatus - Use 'RenewalCheckStatusExpectedValues' to pass parameters into this method.
-        /// </summary>
-        /// <param name="expectedStatus"></param>
         public void RenewalCheckStatus(string expectedStatus)
         {
             WinEdit uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow.UIItemWindow1.UIItemEdit;
 
-            // Verify that the 'Text' property of text box equals 'REN'
             Assert.AreEqual(expectedStatus, uIItemEdit.Text);
         }
 
-        /// <summary>
-        ///     RenewalAfterMTA1 - Use 'RenewalAfterMTA1Params' to pass parameters into this method.
-        /// </summary>
         public void RenewalAfterMTA1()
         {
             WinControl uIOKButton = this.UICurrentOrFutureWindow.UIClient.UIOKButton;
@@ -1256,9 +1174,6 @@
             Mouse.Click(uIRegressButton);
         }
 
-        /// <summary>
-        ///     RecordedMethod4_1
-        /// </summary>
         public void ClickOkButton()
         {
             WinControl uIOKButton = this.UICurrentOrFutureWindow.UIClient.UIOKButton;
@@ -1266,9 +1181,6 @@
             Mouse.Click(uIOKButton);
         }
 
-        /// <summary>
-        ///     RecordedMethod4
-        /// </summary>
         public void CancelBillingScreen()
         {
             WinControl uICancelButton = this.UIPolicyautotestWindow.UIBillingScreenWindow.UICancelWindow.UICancelButton;
@@ -1276,9 +1188,6 @@
             Mouse.Click(uICancelButton);
         }
 
-        /// <summary>
-        ///     RecordedMethod1
-        /// </summary>
         public void HighlightBillingScreen()
         {
             UIBillingScreenWindow uIItemEdit = this.UIPolicyautotestWindow.UIBillingScreenWindow;
@@ -1307,9 +1216,6 @@
             return uIItemEdit.Text;
         }
 
-        /// <summary>
-        ///     RebrokeSelectAlternative
-        /// </summary>
         public void RebrokeSelectAlternative()
         {
             WinControl uISelectAlternativeButton = this.UIRebrokeResultsScreenWindow.UISelectAlternativeWindow.UISelectAlternativeButton;
@@ -1317,9 +1223,6 @@
             Mouse.Click(uISelectAlternativeButton);
         }
 
-        /// <summary>
-        ///     RebrokeAlternativeRenew_1 - Use 'RebrokeAlternativeRenew_1Params' to pass parameters into this method.
-        /// </summary>
         public void RebrokeAlternativeRenew1()
         {
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
@@ -1327,7 +1230,7 @@
 
             this.DeferPrinting();
 
-            this.EtamOk(true);
+            this.EtamOk(false);
 
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
@@ -1336,10 +1239,6 @@
             this.SelectTAMActivities3();
         }
 
-        /// <summary>
-        ///     RebrokeAlternativeRenew - Use 'RebrokeAlternativeRenewParams' to pass parameters into this method.
-        /// </summary>
-        /// <param name="paymentType"></param>
         public void RebrokeAlternativeRenew(string paymentType)
         {
             WinControl uIRenewPolicyButton = this.UIAutoPolicyWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
@@ -1415,10 +1314,6 @@
             this.SelectTAMActivities3();
         }
 
-        /// <summary>
-        ///     RebrokeAlternativeFinish - Use 'RebrokeAlternativeFinishParams' to pass parameters into this method.
-        /// </summary>
-        /// <param name="paymentType"></param>
         public void RebrokeAlternativeFinish(string paymentType)
         {
             WinControl uIRenewPolicyButton = this.UIAutoPolicyWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
@@ -1489,9 +1384,6 @@
             Mouse.Click(uIOKButton);
         }
 
-        /// <summary>
-        ///     MTACancel
-        /// </summary>
         public void MTACancel()
         {
             WinControl uICancelButton = this.UIMTAEffectiveDatesWindow.UICancelWindow.UICancelButton;
@@ -1508,9 +1400,6 @@
             Mouse.Click(uIOKButton);
         }
 
-        /// <summary>
-        ///     Links_1
-        /// </summary>
         public void Links()
         {
             WinControl uIOKButton = this.UICurrentOrFutureWindow.UIClient.UIOKButton;

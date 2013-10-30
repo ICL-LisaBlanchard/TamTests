@@ -128,7 +128,7 @@
             House.CloseOpenPolicyList();
             House.HomeOpenQuote();
             House.HomeMTAChange();
-            House.HomeMTAAccept(false);
+            House.HomeResubmitQuote(false);
             House.HomeMTACoverDate();
             House.HomeMTASelectQuote();
             House.HomeOpenQuote();
@@ -149,7 +149,7 @@
             House.CloseOpenPolicyList();
             House.HomeOpenQuote();
             House.HomeMTAChange();
-            House.HomeMTAAccept(false);
+            House.HomeResubmitQuote(false);
             House.HomeMTACoverDate();
             House.HomeMTASelectQuote();
             House.HomeCopyRisk();
@@ -171,14 +171,14 @@
             //MTA
             House.HomeOpenQuote();
             House.HomeMTAChange();
-            House.HomeMTAAccept(false);
+            House.HomeResubmitQuote(false);
             string coverDate = "HouseMTAtoMTA_" + House.HomeMTACoverDate();
             House.HomeMTASelectQuote();
             //new MTA
             House.HomeOpenQuote();
             House.HomeMTAChangeParams.UIItemEditText = "NewestMTA";
             House.HomeMTAChange();
-            House.HomeMTAAccept(true, coverDate);
+            House.HomeResubmitQuote(true, coverDate);
 
             House.HomeMTAEnterDate("30/09/12");
             House.HomeMTACoverDate();
@@ -293,7 +293,7 @@
             House.HomeOpenQuote();
             House.HomeMTABefore();
             House.HomeMTAChange();
-            House.HomeMTAAccept(false);
+            House.HomeResubmitQuote(false);
             House.MTADate(DateTime.Now.AddDays(2).ToString("dd/MM/yy"));
             House.HomeRenewalBeforeAccept();
             House.HomeRenewalCancelledCheck();
@@ -303,7 +303,7 @@
             House.HomeOpenQuote();
             House.EtamYes();
             House.HomeMTAChange();
-            House.HomeMTAAccept(false);
+            House.HomeResubmitQuote(false);
             House.MTADate(DateTime.Now.ToString("dd/MM/yy"));
             House.MTAMessageBeforeCurrent();
             House.EtamOk(true);
@@ -344,7 +344,7 @@
             House.HomeOpenQuote();
             House.HomeMTAAfter();
             House.HomeMTAChange();
-            House.HomeMTAAccept(false);
+            House.HomeResubmitQuote(false);
             House.MTADate(DateTime.Now.AddDays(14).ToString("dd/MM/yy"));
             House.HomeMTASelectQuote();
 
@@ -352,7 +352,7 @@
             House.HomeOpenQuote();
             House.HomeMTAAfter();
             House.HomeMTAChange();
-            House.HomeMTAAccept(false);
+            House.HomeResubmitQuote(false);
             House.MTADate(DateTime.Now.AddDays(13).ToString("dd/MM/yy"));
             House.MTAMessageBeforeCurrent();
             House.EtamOk(true);
@@ -363,7 +363,7 @@
             House.HomeOpenQuote();
             House.HomeMTABefore();
             House.HomeMTAChange();
-            House.HomeMTAAccept(false);
+            House.HomeResubmitQuote(false);
 
             House.MTADate(DateTime.Now.AddDays(9).ToString("dd/MM/yy"));
             Moto.MotoMTAMessageAfterDate();
@@ -377,7 +377,7 @@
             House.HomeOpenQuote();
             House.EtamYes();
             House.HomeMTAChange();
-            House.HomeMTAAccept(false);
+            House.HomeResubmitQuote(false);
             House.MTADate(DateTime.Now.ToString("dd/MM/yy"));
             House.MTAMessageBeforeCurrent();
             House.EtamOk(true);
@@ -454,7 +454,7 @@
             //MTA1
             House.HomeOpenQuote();
             House.HomeMTAChange();
-            House.HomeMTAAccept(false);
+            House.HomeResubmitQuote(false);
             House.MTADate(DateTime.Now.AddDays(1).ToString("dd/MM/yy"));
             House.AmendDateBeforeMessage();
             House.EtamOk(true);
@@ -464,7 +464,7 @@
             //MTA2
             House.HomeOpenQuote();
             House.HomeMTAChange();
-            House.HomeMTAAccept(false);
+            House.HomeResubmitQuote(false);
             House.MTADate(DateTime.Now.AddDays(13).ToString("dd/MM/yy"));
             House.MTAMessageBeforeCurrent();
             House.EtamOk(true);
