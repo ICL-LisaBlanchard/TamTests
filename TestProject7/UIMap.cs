@@ -451,7 +451,7 @@
         public void EtamOk(bool continueOnError)
         {
             WinControl uIOKButton1 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
-            Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = continueOnError;
             Mouse.Click(uIOKButton1, new Point(47, 12));
             Playback.PlaybackSettings.ContinueOnError = false;
         }
@@ -778,16 +778,18 @@
 
         public void CancelPrint()
         {
-            WinTitleBar uISavethefileasTitleBar = this.UISavethefileasWindow.UISavethefileasTitleBar;
-            WinControl uICancelButton = this.UISavethefileasWindow.UICancelWindow.UICancelButton;
+            //WinTitleBar uISavethefileasTitleBar = this.UISavethefileasWindow.UISavethefileasTitleBar;
+            //WinControl uICancelButton = this.UISavethefileasWindow.UICancelWindow.UICancelButton;
 
-            Playback.PlaybackSettings.ContinueOnError = true;
+            //Playback.PlaybackSettings.ContinueOnError = true;
 
-            Mouse.Click(uISavethefileasTitleBar, new Point(339, 17));
+            //Mouse.Click(uISavethefileasTitleBar, new Point(339, 17));
 
-            Mouse.Click(uICancelButton);
+            //Mouse.Click(uICancelButton);
 
-            Playback.PlaybackSettings.ContinueOnError = false;
+            //Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.Wait(3000);
+            BaseUiTest.CloseProcess("splwow64");
         }
 
         public void CancelFilter()
@@ -1019,16 +1021,32 @@
             WinControl uiRenewalSearchWindowOkButton = this.UIRenewalSearchWindow.UIOKWindow.UIOKButton;
             WinControl uILogandClearButton = this.UIInsurEtamWindow.UIQuotesWindow.UILogandClearWindow.UILogandClearButton;
 
+            Playback.PlaybackSettings.SearchTimeout = 2000;
+            try
+            {
+                this.EtamOk(true);
+            }
+            catch
+            {
+            }
 
-                try
-                {
-                    this.EtamOk(true);
-                    Mouse.Click(uIExitButton);
-                }
-                catch
-                {
-                }
-          
+            try
+            {
+                this.EtamOk(true);
+            }
+            catch
+            {
+            }
+
+            try
+            {
+                Mouse.Click(uIExitButton);
+            }
+            catch
+            {
+            }
+
+            Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
 
             Mouse.Click(uIediMatchButton);
 
@@ -1129,9 +1147,9 @@
 
             Mouse.Click(uIRenewalLoaderTitleBar, new Point(103, 8));
 
-            uIItemEdit.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            uIItemEdit.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
 
-            uIItemEdit1.Text = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            uIItemEdit1.Text = DateTime.Now.AddDays(8).ToString("dd/MM/yyyy");
 
             Mouse.Click(uIRunButton);
         }
@@ -1309,7 +1327,6 @@
 
             this.DeferPrinting();
 
-            //Check is lapse here.
             this.EtamOk(true);
 
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
@@ -1329,8 +1346,8 @@
             WinRadioButton uIAlternativeRadioButton = this.UIRenewalAcceptWindow.UIAlternativeWindow.UIAlternativeRadioButton;
             WinControl uIOKButton = this.UIRenewalAcceptWindow.UIOKWindow.UIOKButton;
             WinControl uiInsurerNoticeRevaluaWindowOkButton = this.UIInsurerNoticeRevaluaWindow.UIOKWindow.UIOKButton;
-            WinControl uIAcceptButton = this.UIRenewalsNewBusinessAWindow.UIAcceptWindow.UIAcceptButton;
-
+            WinControl uIAcceptButton = this.UIRenewalsNewBusinessAWindow.UIItemWindow.UIAcceptButton;
+            WinControl uIAcceptButton2 = this.UIRenewalsNewBusinessAWindow.UIAcceptWindow.UIAcceptButton;
             WinClient uIRenewalsNewBusinessAClient = paymentType == "cash"
                                                          ? this.UIRenewalsNewBusinessAWindow.UIItemWindow.UIClient()
                                                          : this.UIRenewalsNewBusinessAWindow.UIPolicyListWindow.UIClient();
@@ -1345,9 +1362,16 @@
 
             Mouse.Click(uiInsurerNoticeRevaluaWindowOkButton);
 
-            Mouse.Click(uIRenewalsNewBusinessAClient, new Point(154, 25));
+            Mouse.Click(uIRenewalsNewBusinessAClient, new Point(154, 28));
 
-            Mouse.Click(uIAcceptButton);
+            try
+            {
+                Mouse.Click(uIAcceptButton);
+            }
+            catch (Exception)
+            {
+                Mouse.Click(uIAcceptButton2);
+            }
 
             this.CancelPrint();
         }
@@ -1904,10 +1928,7 @@
                 catch (Exception)
                 {
                     Playback.Wait(1000);
-
                 }
-              
-                
             }
 
             try

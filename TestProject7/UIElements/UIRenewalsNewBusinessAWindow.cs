@@ -11,12 +11,9 @@
         {
             #region Search Criteria
 
-            windowTitle = "Renewals : New Business Accept";
-            
             SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "New Business Accept", PropertyExpressionOperator.Contains));
             SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Renewals", PropertyExpressionOperator.Contains));
             SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            WindowTitles.Add(windowTitle);
 
             #endregion
         }

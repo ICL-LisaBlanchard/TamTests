@@ -25,13 +25,7 @@
         [TestMethod]
         public void TestMethod1()
         {
-            UiMap.OpenBrowser2();
-
-            House.HomeSiteRenewal("1234", "121", "");
-
-            Playback.Wait(5000);
-            UiMap.CloseBrowser();
-            UiMap.ChangeDatePolicy();
+            House.EtamOk(true);
         }
     }
 }
