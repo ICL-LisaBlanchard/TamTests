@@ -8,6 +8,7 @@
     using System.IO;
     using System.Linq;
     using System.Windows.Input;
+    using System.Threading;
 
     using AppliedSystems.Tam.Ui.Tests.Assertions;
     using AppliedSystems.Tam.Ui.Tests.Params;
@@ -450,8 +451,13 @@
 
         public void EtamOk(bool continueOnError)
         {
+            if (!continueOnError)
+            {
+                Playback.Wait(5000);
+            }
+
             WinControl uIOKButton1 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
-            Playback.PlaybackSettings.ContinueOnError = true;
+            Playback.PlaybackSettings.ContinueOnError = continueOnError;
             Mouse.Click(uIOKButton1, new Point(47, 12));
             Playback.PlaybackSettings.ContinueOnError = false;
         }
@@ -980,6 +986,12 @@
             }
         }
 
+        public void Confirm()
+        {
+            WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
+            Mouse.Click(uIYesButton);
+        }
+
         public void RenewalModuleInvite(bool selectAlternative)
         {
             WinControl uIInviteButton = this.UIAutoPolicyWindow.UIInviteWindow.UIInviteButton;
@@ -1129,9 +1141,9 @@
 
             Mouse.Click(uIRenewalLoaderTitleBar, new Point(103, 8));
 
-            uIItemEdit.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            uIItemEdit.Text = DateTime.Now.ddDays(7).ToString("dd/MM/yyyy");
 
-            uIItemEdit1.Text = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
+            uIItemEdit1.Text = DateTime.Now.AddDays(8).ToString("dd/MM/yyyy");
 
             Mouse.Click(uIRunButton);
         }
@@ -1312,6 +1324,7 @@
             //Check is lapse here.
             this.EtamOk(true);
 
+
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uiImporttoTAMWindowOkButton);
@@ -1347,9 +1360,9 @@
 
             Mouse.Click(uIRenewalsNewBusinessAClient, new Point(154, 25));
 
-            Mouse.Click(uIAcceptButton);
+            Assert.IsTrue(UIRenewalsNewBusinessAWindow.UIAcceptWindow.Exists);
 
-            this.CancelPrint();
+            Mouse.Click(uIAcceptButton);
         }
 
         public void LapsePolicy(string policyNumber)
@@ -1727,7 +1740,7 @@
             Mouse.DoubleClick(uIBillingScreenClient, new Point(40, 14));
 
             string filename = String.Empty;
-            for (int i = 16; i < 1000; i = i + 18)
+            for (int i = 18; i < 1000; i = i + 18)
             {
                 Mouse.Click(uIPolicyAttachmentsClient, new Point(10, i));
                 Mouse.Click(uIDetailButton);
@@ -1926,33 +1939,34 @@
             }
         }
 
-        protected void ImportToTam()
+        public void ImportToTam()
         {
+            Playback.Wait(10000);
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
-
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
             Mouse.Click(uIOKButton);
         }
 
-        protected void SelectTAMActivities1()
+        public void SelectTAMActivities1()
         {
             this.SelectTamInsurersAndActivity(selectListItems1: 1);
         }
 
-        protected void SelectTAMActivities2()
+        public void SelectTAMActivities2()
         {
             this.SelectTamInsurersAndActivity(selectListItems1: 2);
         }
 
-        protected void SelectTAMActivities3()
+        public void SelectTAMActivities3()
         {
             this.SelectTamInsurersAndActivity(selectListItems1: 3);
         }
 
         private static void IncreaseDocsListCount(IEnumerable<Document> expectedDocs, string docName)
         {
+           
             foreach (Document doc in expectedDocs.Where(doc => doc.DocName == docName))
             {
                 doc.ActualCount++;

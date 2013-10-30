@@ -442,13 +442,7 @@
             House.PublicCreditCheckOk();
             House.HomeAmendSelecPolicy(true);
             House.HomeAmendRenewFinish();
-            //house.EtamOk();
-            House.PaymentMethod("cash");
-            House.ConfirmDocuments();
-            House.RetrieveResponse();
-            House.HomeAmendRenewFinish1();
-            House.EtamOk(true);
-
+           
             House.RenewalModuleClose();
             House.CloseAndOpenPolicyList(UiMap.CustomerCode);
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
@@ -482,7 +476,8 @@
         public void HouseRebrokeRenewCurrent()
         {
             // change registry to ourhighway
-            SetOfficeRegKeys();
+            base.SetOurMMaRegKeys();
+
             //add policy
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();

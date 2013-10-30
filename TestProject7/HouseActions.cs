@@ -1093,15 +1093,20 @@
 
         public void HomeAmendRenew()
         {
+
             Playback.Wait(2000);
 
             this.RenewPolicy();
+
+            this.PaymentMethod("cash");
+
+            Confirm();
 
             this.ConfirmDocuments();
 
             this.DeferPrinting();
 
-            this.EtamOk(true);
+            this.EtamOk(false);
 
             this.ImportToTam();
 
@@ -1228,7 +1233,7 @@
             Mouse.Move(new Point(500, 500));
         }
 
-        private void RenewPolicy()
+        public void RenewPolicy()
         {
             WinControl uIRenewPolicyButton = this.UIHouseholdRenewalsResultsWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
@@ -1237,7 +1242,14 @@
 
             Mouse.Click(uIYesButton, new Point(50, 20));
 
-            Mouse.Click(uIYesButton, new Point(65, 18));
+            try
+            {
+                Mouse.Click(uIYesButton, new Point(65, 18));
+            }
+            catch { 
+            
+            }
+            
         }
 
         private void HomeProposerFullStep1()

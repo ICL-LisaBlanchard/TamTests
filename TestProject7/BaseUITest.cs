@@ -103,15 +103,15 @@
                 Debug.WriteLine("Finishing test failed");
             }
 
-            CloseProcess("TamXML7");
-            CloseProcess("InsureTam");
-            CloseProcess("clntfile");
-            CloseProcess("Homebase");
-            CloseProcess("AcroRd32");
-            CloseProcess("iexplore");
-            CloseProcess("Regress_IETam_Policy");
-            CloseProcess("RLoader");
-            CloseProcess("AppliedSystems.TAM.Client.Accounting.TransactionsUP");
+            //CloseProcess("TamXML7");
+            //CloseProcess("InsureTam");
+            //CloseProcess("clntfile");
+            //CloseProcess("Homebase");
+            //CloseProcess("AcroRd32");
+            //CloseProcess("iexplore");
+            //CloseProcess("Regress_IETam_Policy");
+            //CloseProcess("RLoader");
+            //CloseProcess("AppliedSystems.TAM.Client.Accounting.TransactionsUP");
         }
 
         public void SetOurHighwayRegKeys()

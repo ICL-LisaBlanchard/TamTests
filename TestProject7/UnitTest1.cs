@@ -25,13 +25,21 @@
         [TestMethod]
         public void TestMethod1()
         {
-            UiMap.OpenBrowser2();
+            var originalpremium = "1234";
+            House.RebrokeAlternativeRenew("cash");
+            //House.EtamOk(true);
+            //House.EtamYes();
+            //House.ConfirmDocuments();
+            //House.RetrieveResponse();
+            //House.RebrokeAlternativeRenew1();
+            //House.RenewalModuleClose();
+            //Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
 
-            House.HomeSiteRenewal("1234", "121", "");
-
-            Playback.Wait(5000);
-            UiMap.CloseBrowser();
-            UiMap.ChangeDatePolicy();
+            //House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
+            //string premium = House.CheckPolicyPremium("cash");
+            //House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalpremium));
+            //House.RenewalCheckStatus("REW");
+            //House.ClosePolicy();
         }
     }
 }
