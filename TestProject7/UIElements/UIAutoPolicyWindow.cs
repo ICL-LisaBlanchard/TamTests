@@ -61,8 +61,6 @@
 
         #region Fields
 
-        private readonly string windowTitle;
-
         private UIItemWindow mUIInviteWindow;
 
         private UITestControl mUIItemWindow;

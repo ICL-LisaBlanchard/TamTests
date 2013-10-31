@@ -1,6 +1,11 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
+    using System;
+    using System.Diagnostics;
+
+    using Microsoft.VisualStudio.TestTools.UITest.Extension;
     using Microsoft.VisualStudio.TestTools.UITesting;
+    using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [CodedUITest]
@@ -25,7 +30,7 @@
         [TestMethod]
         public void TestMethod1()
         {
-            House.EtamOk(true);
+            House.RebrokeAlternativeRenew("cash");
         }
     }
 }

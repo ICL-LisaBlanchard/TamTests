@@ -61,6 +61,8 @@
             }
         }
 
+        public string InsurerName { get; private set; }
+
         [TestInitialize]
         public void StartTest()
         {
@@ -118,6 +120,7 @@
         {
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ourhighway");
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ourhighway");
+            InsurerName = "Highway Insurance";
             SetAddressInsurecom();
         }
 
@@ -125,6 +128,7 @@
         {
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ourmma");
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ourmma");
+            InsurerName = "Covea Insurace plc (formally MMA)";
             SetAddressDummy();
         }
 
@@ -139,6 +143,7 @@
         {
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ouraxa");
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ouraxa");
+            InsurerName = "AXA Insurance Plc";
             SetAddressDummy();
         }
 
@@ -146,6 +151,7 @@
         {
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ourcornhill");
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ourcornhill");
+            InsurerName = "Allianz plc";
             SetAddressDummy();
         }
 
@@ -153,6 +159,7 @@
         {
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ouransvar");
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ouransvar");
+            InsurerName = "Ansvar Insurance";
             SetAddressDummy();
         }
 
@@ -160,6 +167,7 @@
         {
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ourzurich");
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ourzurich");
+            InsurerName = "Zurich";
             SetAddressDummy();
         }
 
@@ -287,16 +295,16 @@
             UiMap.RenewalLoaderClose();
         }
 
-        protected void SiteForRenewal(string policyNumber, string policyType, string renewalPremium, string insurer = "")
+        protected void SiteForRenewal(string policyNumber, string policyType, string renewalPremium)
         {
-            UiMap.OpenBrowser2();
+            UiMap.OpenBrowser();
             if (policyType == "Household")
             {
-                House.HomeSiteRenewal(policyNumber, renewalPremium, insurer);
+                House.HomeSiteRenewal(policyNumber, renewalPremium, InsurerName);
             }
             else
             {
-                Moto.MotoCreateSiteRenewal(policyNumber, renewalPremium, insurer);
+                Moto.MotoCreateSiteRenewal(policyNumber, renewalPremium, InsurerName);
             }
 
             Playback.Wait(5000);
@@ -306,7 +314,7 @@
 
         protected void Renewals(string policyNumber, string policyType, string renewalPremium, string insurer = "")
         {
-            this.SiteForRenewal(policyNumber, policyType, renewalPremium, insurer);
+            this.SiteForRenewal(policyNumber, policyType, renewalPremium);
             RegressApp(policyType);
             RenewalLoader();
             RenewalModule(UiMap.CustomerCode, policyType);
@@ -318,7 +326,7 @@
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();
             House.RenewalModuleRenew("cash");
-            House.RetrieveResponse();
+            House.ContinueToRetrieveResponse();
 
             House.RenewalModuleRenew1();
             House.RenewalModuleClose();

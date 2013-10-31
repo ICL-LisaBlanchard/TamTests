@@ -60,8 +60,6 @@
 
         #region Fields
 
-        private readonly string windowTitle;
-
         private UIItemWindow mUIItemWindow;
 
         private UIItemWindow mUIAcceptWindow;

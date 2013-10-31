@@ -53,11 +53,11 @@
 
             Thread.Sleep(1000);
 
-            Mouse.Click(uIClientsFilesButton, new Point(38, 30));
+            Mouse.Click(uIClientsFilesButton);
 
             uIItemComboBox.SelectedItem = map.AddPolicyParams.SelectCustomers;
 
-            Mouse.Click(uIAddButton, new Point(175, 7));
+            Mouse.Click(uIAddButton);
 
             //uiFirstname.Text = map.AddPolicyParams.FirstName;
 
@@ -73,9 +73,9 @@
 
             string code = codeName.Text;
 
-            Mouse.Click(uIOKButton, new Point(41, 15));
+            Mouse.Click(uIOKButton);
 
-            Mouse.Click(uIYesButton, new Point(44, 11));
+            Mouse.Click(uIYesButton);
 
             uIItemEdit1.Text = map.AddPolicyParams.Agency;
 
@@ -83,9 +83,9 @@
 
             Mouse.Click(uIOKButton1, new Point(24, 17));
 
-            Mouse.Click(uIItemButton, new Point(10, 15));
+            Mouse.Click(uIItemButton);
 
-            Mouse.Click(uIAddButton, new Point(94, 10));
+            Mouse.Click(uIAddButton);
 
             Mouse.Click(uIOKButton2, new Point(37, 13));
 

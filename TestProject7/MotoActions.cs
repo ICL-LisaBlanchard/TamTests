@@ -193,7 +193,7 @@
 
             uITxtAutoLapseDateEdit1.Text = uITxtRenewalDateEdit.GetProperty("Text").ToString();
 
-            Mouse.Click(uICreateRecordButton, new Point(112, 11));
+            Mouse.Click(uICreateRecordButton);
 
             uIInsurEcomSystemMaintWindow.PerformDialogAction(BrowserDialogAction.Ok);
         }
@@ -210,7 +210,7 @@
 
             WinButton uIOKButton3 = map.UITransactiontoinsertWindow.UIItemWindow.UIClient().UIOKButton;
 
-            Mouse.Click(uIawapButton, new Point(50, 14));
+            Mouse.Click(uIawapButton);
 
             uIItemComboBox.SelectedIndex = 0;
 
@@ -222,7 +222,7 @@
 
             uIItemEdit3.Text = MotoAWAPParams.VolExcess;
 
-            Mouse.Click(uIOKButton, new Point(49, 9));
+            Mouse.Click(uIOKButton);
 
             PaymentMethod("cash");
 
@@ -240,18 +240,18 @@
 
             RenewPolicy();
 
-            try
-            {
-                PaymentMethod("cash");
-                Mouse.Click(uIYesButton);
-            }
-            catch
-            {
-            }
+            //try
+            //{
+            //    PaymentMethod("cash");
+            //    Mouse.Click(uIYesButton);
+            //}
+            //catch
+            //{
+            //}
 
             ConfirmDocuments();
 
-            RetrieveResponse();
+            this.ContinueToRetrieveResponse();
 
             DeferPrinting();
 
@@ -260,7 +260,7 @@
             ImportToTam();
             SelectTAMActivities3();
 
-            Mouse.Click(uIExitButton, new Point(48, 12));
+            Mouse.Click(uIExitButton);
 
             EtamYes();
         }
@@ -279,7 +279,7 @@
 
             map.EtamOk(true);
 
-            Mouse.Click(uIExitButton, new Point(47, 18));
+            Mouse.Click(uIExitButton);
 
             EtamYes();
         }
@@ -314,7 +314,7 @@
         {
             WinButton uICancelButton = map.UIPolicyautotestWindow.UIBillingScreenWindow.UICancelWindow.UICancelButton;
 
-            Mouse.Click(uICancelButton, new Point(32, 12));
+            Mouse.Click(uICancelButton);
         }
 
         public void MotoCheckPolicyStatus()
@@ -345,9 +345,9 @@
             WinButton uIOKButton = map.UIMTAEffectiveDatesWindow.UIOKWindow.UIOKButton;
             WinButton uINOButton = map.UIClaimsWindow.UINoWindow.UINoButton;
 
-            Mouse.Click(uIOKButton, new Point(39, 9));
+            Mouse.Click(uIOKButton);
 
-            Mouse.Click(uINOButton, new Point(22, 18));
+            Mouse.Click(uINOButton);
         }
 
         public void MotoCancelPolicy()
@@ -358,25 +358,25 @@
 
             uIItemComboBox.SelectedItem = CancelPolicyParams.UIItemComboBoxSelectedItem;
 
-            Mouse.Click(uIOKButton, new Point(34, 12));
+            Mouse.Click(uIOKButton);
 
-            Mouse.Click(uICalculateQuoteButton, new Point(67, 12));
+            Mouse.Click(uICalculateQuoteButton);
         }
 
         public void MotoCalculate()
         {
             WinButton uICalculateQuoteButton = map.UIInsurEtamWindow.UIQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
 
-            Mouse.Click(uICalculateQuoteButton, new Point(69, 13));
+            Mouse.Click(uICalculateQuoteButton);
         }
 
         public void MotoAmendRiskNew(string paymentMethod)
         {
             this.RenewPolicy();
 
-            PaymentMethod(paymentMethod);
+            //PaymentMethod(paymentMethod);
 
-            CancelPrint();
+            //CancelPrint();
 
             ConfirmDocuments();
         }
@@ -391,19 +391,19 @@
             WinButton uICalculateQuoteButton = map.UIAmendRiskWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
             WinButton uIProceedButton = this.UICreditCheckAtRenewalWindow.UIProceedWindow.UIProceedButton;
 
-            Mouse.Click(uIAmendRiskButton, new Point(80, 11));
+            Mouse.Click(uIAmendRiskButton);
 
             uIItemEdit.Text = MotoAmendRiskParams.VehicleCostNew;
 
-            Mouse.Click(uIProposerDetailsButton, new Point(66, 12));
+            Mouse.Click(uIProposerDetailsButton);
 
             uIItemEdit1.Text = MotoAmendRiskParams.SurnameNew;
 
-            Mouse.Click(uIOKButton, new Point(50, 11));
+            Mouse.Click(uIOKButton);
 
-            Mouse.Click(uICalculateQuoteButton, new Point(58, 6));
+            Mouse.Click(uICalculateQuoteButton);
 
-            Mouse.Click(uIProceedButton, new Point(50, 0));
+            Mouse.Click(uIProceedButton);
         }
 
         public void MotoSelectHighwayPolicy()
@@ -431,7 +431,7 @@
             WinEdit uIItemEdit1 = map.UIInsurEtamWindow.UIQuotesWindow.UICarRegistrationWindow.UIItemEdit;
             WinEdit uIItemEdit2 = map.UIInsurEtamWindow.UIQuotesWindow.UIItemWindow.UIItemEdit;
 
-            Mouse.Click(uIOKButton, new Point(40, 9));
+            Mouse.Click(uIOKButton);
 
             uIItemComboBox.SelectedItem = QuoteResultsParams.JobTitle;
 
@@ -445,7 +445,7 @@
 
             uIItemComboBox3.EditableItem = VehicleLookupParams.CarModel;
 
-            Mouse.Click(uIFilterButton, new Point(29, 9));
+            Mouse.Click(uIFilterButton);
 
             Mouse.Click(uIOKButton2, new Point(24, 10));
 
@@ -458,22 +458,17 @@
         {
             WinClient uIItemClient = map.UIRebrokeResultsScreenWindow.UIItemWindow1.UIClient();
 
-            // Click client
+
             Mouse.Click(uIItemClient, new Point(271, 102));
 
-            // Type '{Home}' in client
             Keyboard.SendKeys(uIItemClient, withSendKeys, ModifierKeys.None);
         }
 
-        /// <summary>
-        ///     MotoRebrokeCurrent
-        /// </summary>
-        /// <param name="withYesButton"></param>
         public void MotoRebrokeCurrent(bool withYesButton)
         {
             WinButton uIOKButton = map.UIRebrokeResultsScreenWindow.UIOKWindow.UIOKButton;
 
-            Mouse.Click(uIOKButton, new Point(50, 10));
+            Mouse.Click(uIOKButton);
 
             try
             {
@@ -490,11 +485,6 @@
             }
         }
 
-        /// <summary>
-        ///     MotoRebroke
-        /// </summary>
-        /// <param name="withCancel"></param>
-        /// <param name="withConfim"></param>
         public void MotoRebroke(bool withCancel, bool withConfim)
         {
             WinButton uIProceedButton = this.UICreditCheckAtRenewalWindow.UIProceedWindow.UIProceedButton;
@@ -502,11 +492,11 @@
             WinButton uICancelButton = map.UIQuoteSelectListWindow.UICancelWindow.UICancelButton;
             WinButton uIOKButton = UIConfirmWindow.UIOKWindow.UIOKButton;
 
-            Mouse.Click(uIRebrokeButton, new Point(86, 12));
+            Mouse.Click(uIRebrokeButton);
 
             if (withCancel)
             {
-                Mouse.Click(uICancelButton, new Point(48, 17));
+                Mouse.Click(uICancelButton);
             }
 
             if (withConfim)
@@ -517,9 +507,6 @@
             Mouse.Click(uIProceedButton);
         }
 
-        /// <summary>
-        ///     MotoPostcodeLookup - Use 'MotoPostcodeLookupParams' to pass parameters into this method.
-        /// </summary>
         public void MotoPostcodeLookup()
         {
             WinButton uIOKButton = map.UIProposerTypeWindow.UIOKWindow.UIOKButton;
@@ -530,7 +517,7 @@
             WinButton uILookupButton = map.UIProposerDetailsWindow.UILookupWindow.UILookupButton;
             WinButton uIOKButton1 = map.UISearchResultForBN16BWindow.UIOKWindow.UIOKButton;
 
-            Mouse.Click(uIOKButton, new Point(41, 13));
+            Mouse.Click(uIOKButton);
 
             uIItemEdit.Text = ProposerParams.Firstname;
 
@@ -540,42 +527,11 @@
 
             uIItemEdit3.Text = ProposerParams.Postcode;
 
-            Mouse.Click(uILookupButton, new Point(9, 12));
+            Mouse.Click(uILookupButton);
 
             Mouse.Click(uIOKButton1, new Point(37, 9));
         }
 
-        /// <summary>
-        ///     MotoPolicyPerson - Use 'MotoPolicyPersonParams' to pass parameters into this method.
-        /// </summary>
-        public void MotoPolicyPerson()
-        {
-            WinButton uIOKButton = map.UIProposerTypeWindow.UIOKWindow.UIOKButton;
-            WinEdit uIItemEdit = map.UIProposerDetailsWindow.UIItemWindow.UIItemEdit;
-            WinEdit uIItemEdit1 = map.UIProposerDetailsWindow.UIItemWindow1.UIItemEdit;
-            WinEdit uIItemEdit2 = map.UIProposerDetailsWindow.UIItemWindow2.UIItemEdit;
-            WinEdit uIItemEdit3 = map.UIProposerDetailsWindow.UIItemWindow3.UIItemEdit;
-            WinButton uILookupButton = map.UIProposerDetailsWindow.UILookupWindow.UILookupButton;
-            WinButton uIOKButton1 = map.UISearchResultForB338TWindow.UIOKWindow.UIOKButton;
-
-            Mouse.Click(uIOKButton, new Point(52, 17));
-
-            uIItemEdit.Text = ProposerParams.Firstname;
-
-            uIItemEdit1.Text = ProposerParams.Lastname;
-
-            uIItemEdit2.Text = ProposerParams.DateOfBirth;
-
-            uIItemEdit3.Text = ProposerParams.Postcode;
-
-            Mouse.Click(uILookupButton, new Point(34, 13));
-
-            Mouse.Click(uIOKButton1, new Point(38, 12));
-        }
-
-        /// <summary>
-        ///     MotoMTAOpenQuote
-        /// </summary>
         public void MotoMTAOpenQuote()
         {
             WinButton uIOptionsButton = map.UIPolicyautotestWindow.UIPolicyListWindow.UIOptionsWindow.UIOptionsButton;
@@ -583,16 +539,13 @@
                 map.UIPolicyautotestWindow.UIApplicationMenuBar.UIOptionsMenuItem.UILinksMenuItem.UIItem3RdPartyIntegratMenuItem.UIQuoteSelectListMenuItem;
             WinButton uIOKButton = map.UICurrentOrFutureWindow.UIClient.UIOKButton;
 
-            Mouse.Click(uIOptionsButton, new Point(33, 12));
+            Mouse.Click(uIOptionsButton);
 
             Mouse.Click(uIQuoteSelectListMenuItem, new Point(116, 15));
 
-            Mouse.Click(uIOKButton, new Point(29, 10));
+            Mouse.Click(uIOKButton);
         }
 
-        /// <summary>
-        ///     MotoMTANoSave - Use 'MotoMTANoSaveParams' to pass parameters into this method.
-        /// </summary>
         public void MotoMTANoSave()
         {
             WinComboBox uIItemComboBox = map.UIMidTermAdjustmentsWindow.UIItemWindow.UIItemComboBox;
@@ -604,18 +557,15 @@
             // Select 'Change of Driver' in combo box
             uIItemComboBox.SelectedItem = MotoMTAParams.UIChangeOfVehicle;
 
-            Mouse.Click(uIOKButton, new Point(42, 16));
+            Mouse.Click(uIOKButton);
 
-            Mouse.Click(uIExitButton, new Point(70, 10));
+            Mouse.Click(uIExitButton);
 
             EtamYes();
 
             Mouse.Click(uIOKButton1, new Point(39, 15));
         }
 
-        /// <summary>
-        ///     MotoMTAMessageCancelled - Use 'MotoMTAMessageCancelledExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void MotoMTAMessageCancelled()
         {
             WinText uImtAsuccessfullyproceText = map.UIMTASuccessfulWindow.UIMtaSuccessfullyProcessedWindow.UIMtaSuccessfullyProcessedText;
@@ -623,31 +573,20 @@
             StringAssert.Contains(uImtAsuccessfullyproceText.DisplayText, MotoMTAMessageCancelledExpectedValues.UIMTAsuccessfullyproceTextDisplayText);
         }
 
-        /// <summary>
-        ///     MotoMTAMessageAfterDate - Use 'MotoMTAMessageAfterDateExpectedValues' to pass parameters into this method.
-        /// </summary>
         public void MotoMTAMessageAfterDate()
         {
             WinText uIAdjustmentdatetimecaText = map.UIInsurEtamWindow1.UIAcceptthisquoteNotOvWindow.UIAdjustmentdatetimecaText;
 
-            // Verify that the 'DisplayText' property of 'Adjustment date/time cannot be after the policy ef...' label contains 'Adjustment date/time cannot be after the policy effective end date/time'
             StringAssert.Contains(uIAdjustmentdatetimecaText.DisplayText, MotoMTAMessageAfterDateExpectedValues.UIAdjustmentdatetimecaTextDisplayText);
         }
 
-        /// <summary>
-        ///     MotoMTAConfirmPolicy_1
-        /// </summary>
         public void MotoMTAConfirmPolicy1()
         {
             WinButton uIOKButton = map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
-            Mouse.Click(uIOKButton, new Point(37, 25));
+            Mouse.Click(uIOKButton);
         }
 
-        /// <summary>
-        ///     MotoMTAConfirmPolicy - Use 'MotoMTAConfirmPolicyParams' to pass parameters into this method.
-        /// </summary>
-        /// <param name="action"></param>
         public void MotoMTAConfirmPolicy(string action)
         {
             WinClient uIQuoteResultsClient = map.UIQuoteResultsWindow.UIItemWindow2.UIClient();
@@ -657,7 +596,7 @@
 
             Keyboard.SendKeys(uIQuoteResultsClient, CommonParams.SendHomeKeys, ModifierKeys.None);
 
-            Mouse.Click(uIAcceptButton, new Point(54, 8));
+            Mouse.Click(uIAcceptButton);
 
             EtamYes();
 
@@ -683,7 +622,7 @@
         {
             WinButton uIOKButton = map.UIMTAEffectiveDatesWindow.UIOKWindow.UIOKButton;
 
-            Mouse.Click(uIOKButton, new Point(21, 17));
+            Mouse.Click(uIOKButton);
         }
 
         public void MotoMTACheckNewValue(bool needScreenshot, string expectedDate = "")
@@ -708,14 +647,11 @@
             Assert.AreEqual(MotoMTACheckCarExpectedValues.UIItemEditText1, uIItemEdit1.Text);
         }
 
-        /// <summary>
-        ///     MotoMTABeforeFinish - Use 'MotoMTABeforeFinishParams' to pass parameters into this method.
-        /// </summary>
         public void MotoMTABeforeFinish()
         {
             WinButton uIOKButton = map.UIMTASuccessfulWindow.UIOKWindow.UIOKButton;
 
-            Mouse.Click(uIOKButton, new Point(28, 8));
+            Mouse.Click(uIOKButton);
 
             DeferPrinting();
 
@@ -724,9 +660,6 @@
             SelectTamInsurersAndActivity(selectListItems1: 0, selectListItems2: 0);
         }
 
-        /// <summary>
-        ///     MotoMTABeforeAccept - Use 'MotoMTABeforeAcceptParams' to pass parameters into this method.
-        /// </summary>
         public void MotoMTABeforeAccept()
         {
             WinClient uIQuoteResultsClient = map.UIQuoteResultsWindow.UIItemWindow2.UIClient();
@@ -736,7 +669,7 @@
 
             Keyboard.SendKeys(uIQuoteResultsClient, CommonParams.SendHomeKeys, ModifierKeys.None);
 
-            Mouse.Click(uIAcceptButton, new Point(56, 12));
+            Mouse.Click(uIAcceptButton);
 
             EtamYes();
 
@@ -745,9 +678,6 @@
             this.EtamOk(true);
         }
 
-        /// <summary>
-        ///     MotoMTABefore2 - Use 'MotoMTABefore2Params' to pass parameters into this method.
-        /// </summary>
         public void MotoMTABefore2()
         {
             WinButton uIOKButton = map.UICurrentOrFutureWindow.UIClient.UIOKButton;
@@ -757,11 +687,11 @@
             WinEdit uIItemEdit = map.UIInsurEtamWindow.UIQuotesWindow.UICarRegistrationWindow.UIItemEdit;
             WinButton uICalculateQuoteButton = map.UIInsurEtamWindow.UIQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
 
-            Mouse.Click(uIOKButton, new Point(44, 11));
+            Mouse.Click(uIOKButton);
 
             EtamYes();
 
-            Mouse.Click(uIMTAButton, new Point(53, 9));
+            Mouse.Click(uIMTAButton);
 
             uIItemComboBox.SelectedItem = MotoMTAParams.UIChangeOfVehicle;
 
@@ -769,12 +699,9 @@
 
             uIItemEdit.Text = MotoMTAParams.VehicleRegistration1;
 
-            Mouse.Click(uICalculateQuoteButton, new Point(59, 11));
+            Mouse.Click(uICalculateQuoteButton);
         }
 
-        /// <summary>
-        ///     MotoMTABefore - Use 'MotoMTABeforeParams' to pass parameters into this method.
-        /// </summary>
         public void MotoMTABefore()
         {
             WinButton uIOKButton = map.UICurrentOrFutureWindow.UIClient.UIOKButton;
@@ -785,11 +712,11 @@
             WinEdit uIItemEdit = map.UIInsurEtamWindow.UIQuotesWindow.UICarRegistrationWindow.UIItemEdit;
             WinButton uICalculateQuoteButton = map.UIInsurEtamWindow.UIQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
 
-            Mouse.Click(uIOKButton, new Point(35, 10));
+            Mouse.Click(uIOKButton);
 
-            Mouse.Click(uIBeforeButton, new Point(19, 16));
+            Mouse.Click(uIBeforeButton);
 
-            Mouse.Click(uIMTAButton, new Point(44, 11));
+            Mouse.Click(uIMTAButton);
 
             uIItemComboBox.SelectedItem = MotoMTAParams.UIChangeOfVehicle;
 
@@ -797,12 +724,9 @@
 
             uIItemEdit.Text = MotoMTAParams.VehicleRegistration2;
 
-            Mouse.Click(uICalculateQuoteButton, new Point(61, 15));
+            Mouse.Click(uICalculateQuoteButton);
         }
 
-        /// <summary>
-        ///     MotoMTAAccept - Use 'MotoMTAAcceptParams' to pass parameters into this method.
-        /// </summary>
         public void MotoMTAAccept()
         {
             WinComboBox uIItemComboBox = map.UIMidTermAdjustmentsWindow.UIItemWindow.UIItemComboBox;
@@ -812,11 +736,11 @@
 
             uIItemComboBox.SelectedItem = MotoMTAParams.UIChangeOfVehicle;
 
-            Mouse.Click(uIOKButton, new Point(28, 12));
+            Mouse.Click(uIOKButton);
 
             uIItemEdit.Text = MotoMTAParams.CostOfVehicle;
 
-            Mouse.Click(uICalculateQuoteButton, new Point(68, 4));
+            Mouse.Click(uICalculateQuoteButton);
         }
 
         public void MotoMTA()
@@ -827,13 +751,13 @@
             WinButton uIOKButton = map.UICurrentOrFutureWindow.UIClient.UIOKButton;
             WinButton uIMTAButton = map.UIInsurEtamWindow.UIQuotesWindow.UIMTAWindow.UIMTAButton;
 
-            Mouse.Click(uIOptionsButton, new Point(37, 10));
+            Mouse.Click(uIOptionsButton);
 
             Mouse.Click(uIQuoteSelectListMenuItem, new Point(80, 15));
 
-            Mouse.Click(uIOKButton, new Point(41, 10));
+            Mouse.Click(uIOKButton);
 
-            Mouse.Click(uIMTAButton, new Point(67, 11));
+            Mouse.Click(uIMTAButton);
         }
 
         public void MotoInceptionDate()
@@ -851,7 +775,7 @@
 
             MotoSelectHighwayPolicy();
 
-            Mouse.Click(uIAcceptButton, new Point(51, 11));
+            Mouse.Click(uIAcceptButton);
 
             EtamYes();
 
@@ -868,49 +792,37 @@
             SelectTamInsurersAndActivity(selectListItems1: 1, selectListItems2: 1);
         }
 
-        /// <summary>
-        ///     MotoExitMTA
-        /// </summary>
         public void MotoExitMTA()
         {
             WinButton uIExitButton = map.UIInsurEtamWindow.UIQuotesWindow.UIExitWindow.UIExitButton;
             WinButton uIOKButton = map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
-            Mouse.Click(uIExitButton, new Point(51, 10));
+            Mouse.Click(uIExitButton);
 
             EtamYes();
-            Mouse.Click(uIOKButton, new Point(55, 12));
+            Mouse.Click(uIOKButton);
         }
 
-        /// <summary>
-        ///     MotoCopyRiskProposerOk
-        /// </summary>
         public void MotoCopyRiskProposerOk()
         {
             WinButton uIOKButton = map.UIProposerDetailsWindow.UIOKWindow.UIOKButton;
 
-            Mouse.Click(uIOKButton, new Point(44, 7));
+            Mouse.Click(uIOKButton);
         }
 
-        /// <summary>
-        ///     MotoCopyRiskExit
-        /// </summary>
         public void MotoCopyRiskExit()
         {
             WinButton uIExitButton = map.UIInsurEtamWindow.UIQuotesWindow.UIExitWindow.UIExitButton;
             WinButton uINOButton = map.UIInsurEtamWindow1.UINoWindow.UINoButton;
             WinButton uIOKButton = map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
-            Mouse.Click(uIExitButton, new Point(66, 10));
+            Mouse.Click(uIExitButton);
 
-            Mouse.Click(uINOButton, new Point(47, 10));
+            Mouse.Click(uINOButton);
 
-            Mouse.Click(uIOKButton, new Point(34, 11));
+            Mouse.Click(uIOKButton);
         }
 
-        /// <summary>
-        ///     MotoCopyFinishedRisk
-        /// </summary>
         public void MotoCopyFinishedRisk()
         {
             WinButton uIOptionsButton = map.UIPolicyautotestWindow.UIPolicyListWindow.UIOptionsWindow.UIOptionsButton;
@@ -918,11 +830,11 @@
             WinButton uIOKButton = map.UIWhichpolicywouldyoulWindow.UIItemWindow.UIClient().UIOKButton;
             WinButton uIOKButton1 = map.UIProductSelectionWindow.UIOKWindow.UIOKButton;
 
-            Mouse.Click(uIOptionsButton, new Point(29, 12));
+            Mouse.Click(uIOptionsButton);
 
             Mouse.Click(uICopyRiskMenuItem, new Point(79, 13));
 
-            Mouse.Click(uIOKButton, new Point(57, 15));
+            Mouse.Click(uIOKButton);
 
             Mouse.Click(uIOKButton1, new Point(31, 15));
         }
@@ -936,10 +848,10 @@
 
             WinButton uIOKButton = map.UITamxml7Window.UITamxml7Client.UIOKButton;
 
-            Mouse.Click(uIExitButton, new Point(59, 16));
+            Mouse.Click(uIExitButton);
             EtamYes();
 
-            Mouse.Click(uIOKButton, new Point(53, 10));
+            Mouse.Click(uIOKButton);
         }
 
         /// <summary>
@@ -956,7 +868,7 @@
             WinControl uICalculateQuoteButton = UIInsurEtamWindow.UIQuotesWindow.UICalculateQuoteWindow.UICalculateQuoteButton;
             WinEdit uIItemEdit3 = map.UIInsurEtamWindow.UIQuotesWindow.UICarRegistrationWindow.UIItemEdit;
 
-            Mouse.Click(uIOKButton, new Point(44, 12));
+            Mouse.Click(uIOKButton);
 
             uIItemComboBox.SelectedItem = QuoteResultsParams.JobTitle;
 
@@ -972,7 +884,7 @@
 
             uIItemEdit3.Text = QuoteResultsParams.CarRegFordFiesta;
 
-            Mouse.Click(uICalculateQuoteButton, new Point(25, 13));
+            Mouse.Click(uICalculateQuoteButton);
         }
 
         /// <summary>
@@ -982,7 +894,7 @@
         {
             WinControl uINOButton = UICreditCheckWindow.UINoWindow.UINoButton;
 
-            Mouse.Click(uINOButton, new Point(28, 10));
+            Mouse.Click(uINOButton);
         }
 
         public void VehicleLookup()
@@ -1006,8 +918,8 @@
             uIItemEdit2.Text = VehicleLookupParams.YearBuilt;
             uIItemComboBox2.SelectedItem = VehicleLookupParams.FuelType;
             uIItemComboBox3.SelectedItem = VehicleLookupParams.TransmissionType;
-            Mouse.Click(uIFilterButton, new Point(29, 16));
-            Mouse.Click(uIOKButton, new Point(17, 7));
+            Mouse.Click(uIFilterButton);
+            Mouse.Click(uIOKButton);
         }
 
         public void MotoFinishQuote(int importToTam)
@@ -1048,7 +960,7 @@
 
         public void CreateNewBusinessPolicy(ExpectedAddress expectedAddress)
         {
-            MotoPolicyPerson();
+            MotoPostcodeLookup();
             this.PostcodeLookup(expectedAddress);
             QuoteResults();
             QuoteResults1();
@@ -1079,9 +991,9 @@
             WinButton uIRenewPolicyButton = this.map.UIAmendRiskResultsWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinButton uIYesButton = this.map.UIConfirmWindow.UIYesWindow.UIYesButton;
 
-            Mouse.Click(uIRenewPolicyButton, new Point(51, 9));
+            Mouse.Click(uIRenewPolicyButton);
 
-            Mouse.Click(uIYesButton, new Point(60, 14));
+            Mouse.Click(uIYesButton);
         }
     }
 }

@@ -1,9 +1,6 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
     using System;
-
-    using AppliedSystems.Tam.Ui.Tests.Assertions;
-
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -67,7 +64,7 @@
             House.HomeCheckNewPremium();
 
             House.OpenTransList(Transactions.GetTransactionDictionary("18866.98", "cash"));
-            House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhNewBusinessQuote, "cash", overridePremium: OverridePremium);
+            House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhNewBusinessQuote, "cash", OverridePremium);
         }
 
         [TestMethod]
@@ -249,8 +246,7 @@
         [TestMethod]
         public void HouseRenewalBefore()
         {
-            SetOurMMaRegKeys();
-            //SetOfficeRegKeys();
+            SetOurAxaRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
@@ -266,8 +262,8 @@
             string policyNumber = Moto.GetPolicyNumber();
 
             //site for renewal
-            House.OpenBrowser2();
-            House.HomeSiteRenewal(policyNumber, RenewalPremium);
+            House.OpenBrowser();
+            House.HomeSiteRenewal(policyNumber, RenewalPremium, InsurerName);
             Playback.Wait(5000);
             House.CloseBrowser();
             House.ChangeDatePolicy();
@@ -286,7 +282,7 @@
             House.RenewalCheckStatus("REN");
             var premium = House.CheckPolicyPremium("cash");
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHhRenewalBefore, "cash", originalPremium: double.Parse(originalPremium));
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalPremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium));
             House.ClosePolicy();
 
             //mta1
@@ -318,9 +314,7 @@
         [TestMethod]
         public void HouseRenewalAfter()
         {
-            // change registry to ourhighway
-            SetOurMMaRegKeys();
-            //add policy
+            SetOurAxaRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
@@ -329,7 +323,6 @@
             House.HomeProposer();
             House.HomeCreatePolicy();
             House.PublicCreditCheckOk();
-
             House.CreateNewPolicy();
             string policyNumber = Moto.GetPolicyNumber();
 
@@ -391,9 +384,7 @@
         [TestMethod]
         public void HouseAmendRiskExistingScheme()
         {
-            // change registry to ourhighway
-            SetOurMMaRegKeys();
-            //add policy
+            SetOurAxaRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
@@ -420,9 +411,7 @@
         [TestMethod]
         public void HouseAmendRiskNewScheme()
         {
-            // change registry to ourhighway
-            SetOurMMaRegKeys();
-            //add policy
+            SetOurAxaRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
@@ -447,7 +436,7 @@
             House.CloseAndOpenPolicyList(UiMap.CustomerCode);
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
             string premium = House.CheckPolicyPremium("cash");
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalpremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalpremium));
             House.RenewalCheckStatus("REW");
             House.ClosePolicy();
 
@@ -475,10 +464,8 @@
         [TestMethod]
         public void HouseRebrokeRenewCurrent()
         {
-            // change registry to ourhighway
-            base.SetOurMMaRegKeys();
 
-            //add policy
+            SetOurAxaRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
@@ -507,7 +494,7 @@
         public void HouseRebrokeRenewExistingScheme()
         {
             // change registry to ourhighway
-            SetOurMMaRegKeys();
+            SetOurAxaRegKeys();
             //add policy
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
@@ -529,23 +516,23 @@
             House.HomeRebrokeSelectPolicy(House.CommonParams.SendHomeKeys);
             House.HomeRebrokeSelectAlternative();
             House.HomeRebrokeFinish();
-            House.ImportToTamOptionsOnce("");
+            //House.ImportToTamOptionsOnce("");
             House.RenewalModuleInvite(false);
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();
             House.RebrokeAlternativeRenew("cash");
-            House.EtamOk(true);
+            //House.EtamOk(true);
             //house.LapseOk();
             House.EtamYes();
             House.ConfirmDocuments();
-            House.RetrieveResponse();
+            House.ContinueToRetrieveResponse();
             House.RebrokeAlternativeRenew1();
             House.RenewalModuleClose();
             House.CloseAndOpenPolicyList(UiMap.CustomerCode);
             House.RenewalCheckStatus("REW");
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
             string premium = House.CheckPolicyPremium("cash");
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalpremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalpremium));
             House.ClosePolicy();
         }
 
@@ -553,7 +540,7 @@
         public void HouseRebrokeRenewNewScheme()
         {
             // change registry to ourhighway
-            SetOurMMaRegKeys();
+            SetOurAxaRegKeys();
 
             //add policy
             UiMap.CustomerCode = Customer.AddPolicy();
@@ -575,7 +562,7 @@
             House.HomeRebrokeSelectPolicy(House.CommonParams.SendEndKeys);
             House.HomeRebrokeSelectAlternative();
             House.HomeRebrokeFinish();
-            House.ImportToTamOptionsOnce("");
+            //House.ImportToTamOptionsOnce("");
             House.RenewalModuleInvite(false);
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();
@@ -583,14 +570,14 @@
             House.EtamOk(true);
             House.EtamYes();
             House.ConfirmDocuments();
-            House.RetrieveResponse();
+            House.ContinueToRetrieveResponse();
             House.RebrokeAlternativeRenew1();
             House.RenewalModuleClose();
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
 
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
             string premium = House.CheckPolicyPremium("cash");
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalPremium: originalpremium));
+            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash", originalpremium));
             House.RenewalCheckStatus("REW");
             House.ClosePolicy();
         }
@@ -598,7 +585,7 @@
         [TestMethod]
         public void HouseLapsePolicy()
         {
-            SetOurMMaRegKeys();
+            SetOurAxaRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();

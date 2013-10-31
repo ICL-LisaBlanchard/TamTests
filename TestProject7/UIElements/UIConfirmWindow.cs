@@ -47,8 +47,6 @@
 
         private readonly string windowTitle;
 
-        private UIItemWindow mUIYesWindow;
-
         private UIItemWindow mUIOKWindow;
 
         #endregion

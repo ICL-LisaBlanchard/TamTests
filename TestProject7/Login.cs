@@ -92,7 +92,7 @@
             //Playback.PlaybackSettings.ContinueOnError = true;
 
             //// Click 'OK' button
-            //Mouse.Click(uIokButton, new Point(50, 10));
+            //Mouse.Click(uIokButton);
 
             //// Reset flag to ensure that play back stops if there is an error.
             //Playback.PlaybackSettings.ContinueOnError = false;
