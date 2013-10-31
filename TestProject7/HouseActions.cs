@@ -307,6 +307,10 @@
 
         public void HomeAcceptPolicy(string paymentType)
         {
+            Mouse.Move(new Point(500, 500));
+
+            Mouse.Click(this.UIQuotesResultsWindow);
+
             WinControl uIAcceptButton = this.UIQuotesResultsWindow.UIAcceptWindow.UIAcceptButton;
 
             WinEdit uIItemEdit = this.UIPolicyDetailConfirmationWindow.UIItemWindow.UIItemEdit;
