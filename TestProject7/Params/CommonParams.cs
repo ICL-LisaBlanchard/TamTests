@@ -11,6 +11,8 @@
 
         public string SendEndKeys = "{End}";
 
+        public string SendEnterKey = "{Enter}";
+
         public bool UIDeferPrintingCheckBoxChecked = true;
 
         public bool UIAddActivityCheckBoxChecked = false;

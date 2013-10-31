@@ -246,8 +246,7 @@
         [TestMethod]
         public void HouseRenewalBefore()
         {
-            SetOurMMaRegKeys();
-            //SetOfficeRegKeys();
+            SetOurAxaRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
@@ -263,8 +262,8 @@
             string policyNumber = Moto.GetPolicyNumber();
 
             //site for renewal
-            House.OpenBrowser2();
-            House.HomeSiteRenewal(policyNumber, RenewalPremium);
+            House.OpenBrowser();
+            House.HomeSiteRenewal(policyNumber, RenewalPremium, InsurerName);
             Playback.Wait(5000);
             House.CloseBrowser();
             House.ChangeDatePolicy();
@@ -315,9 +314,7 @@
         [TestMethod]
         public void HouseRenewalAfter()
         {
-            // change registry to ourhighway
-            SetOurMMaRegKeys();
-            //add policy
+            SetOurAxaRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
@@ -326,7 +323,6 @@
             House.HomeProposer();
             House.HomeCreatePolicy();
             House.PublicCreditCheckOk();
-
             House.CreateNewPolicy();
             string policyNumber = Moto.GetPolicyNumber();
 
@@ -388,9 +384,7 @@
         [TestMethod]
         public void HouseAmendRiskExistingScheme()
         {
-            // change registry to ourhighway
-            SetOurMMaRegKeys();
-            //add policy
+            SetOurAxaRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
@@ -417,9 +411,7 @@
         [TestMethod]
         public void HouseAmendRiskNewScheme()
         {
-            // change registry to ourhighway
-            SetOurMMaRegKeys();
-            //add policy
+            SetOurAxaRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
@@ -473,7 +465,7 @@
         public void HouseRebrokeRenewCurrent()
         {
 
-            SetOurMMaRegKeys();
+            SetOurAxaRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
@@ -502,7 +494,7 @@
         public void HouseRebrokeRenewExistingScheme()
         {
             // change registry to ourhighway
-            SetOurMMaRegKeys();
+            SetOurAxaRegKeys();
             //add policy
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
@@ -524,16 +516,16 @@
             House.HomeRebrokeSelectPolicy(House.CommonParams.SendHomeKeys);
             House.HomeRebrokeSelectAlternative();
             House.HomeRebrokeFinish();
-            House.ImportToTamOptionsOnce("");
+            //House.ImportToTamOptionsOnce("");
             House.RenewalModuleInvite(false);
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();
             House.RebrokeAlternativeRenew("cash");
-            House.EtamOk(true);
+            //House.EtamOk(true);
             //house.LapseOk();
             House.EtamYes();
             House.ConfirmDocuments();
-            House.RetrieveResponse();
+            House.ContinueToRetrieveResponse();
             House.RebrokeAlternativeRenew1();
             House.RenewalModuleClose();
             House.CloseAndOpenPolicyList(UiMap.CustomerCode);
@@ -548,7 +540,7 @@
         public void HouseRebrokeRenewNewScheme()
         {
             // change registry to ourhighway
-            SetOurMMaRegKeys();
+            SetOurAxaRegKeys();
 
             //add policy
             UiMap.CustomerCode = Customer.AddPolicy();
@@ -570,7 +562,7 @@
             House.HomeRebrokeSelectPolicy(House.CommonParams.SendEndKeys);
             House.HomeRebrokeSelectAlternative();
             House.HomeRebrokeFinish();
-            House.ImportToTamOptionsOnce("");
+            //House.ImportToTamOptionsOnce("");
             House.RenewalModuleInvite(false);
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();
@@ -578,7 +570,7 @@
             House.EtamOk(true);
             House.EtamYes();
             House.ConfirmDocuments();
-            House.RetrieveResponse();
+            House.ContinueToRetrieveResponse();
             House.RebrokeAlternativeRenew1();
             House.RenewalModuleClose();
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
@@ -593,7 +585,7 @@
         [TestMethod]
         public void HouseLapsePolicy()
         {
-            SetOurMMaRegKeys();
+            SetOurAxaRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();

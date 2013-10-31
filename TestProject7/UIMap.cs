@@ -7,6 +7,7 @@
     using System.Globalization;
     using System.IO;
     using System.Linq;
+    using System.Threading;
     using System.Windows.Input;
 
     using AppliedSystems.Tam.Ui.Tests.Assertions;
@@ -461,7 +462,7 @@
             Playback.PlaybackSettings.ContinueOnError = false;
         }
 
-        public void OpenBrowser2()
+        public void OpenBrowser()
         {
             WinControl okButXp = this.UIWindowsSecurityWindow1.UIWindowsSecurityPane.UIOKButton;
             HtmlHyperlink uIRenewalsMaintenanceHyperlink = this.UIInsurEcomSystemMaintWindow.UILeftbarFrame.UIInsurEcomLeftbarDocument.UIRenewalsMaintenanceHyperlink;
@@ -472,6 +473,7 @@
             WinWindow w;
 
             this.UIInsurEcomSystemMaintWindow.LaunchUrl(new Uri(this.OpenBrowser2Params.UIInsurEcomSystemMaintWindowUrl));
+            //BrowserWindow.Launch(this.OpenBrowser2Params.UIInsurEcomSystemMaintWindowUrl);
 
             if (w7.Exists)
             {
@@ -523,7 +525,7 @@
         {
             this.ConfirmDocuments();
 
-            this.RetrieveResponse();
+            this.ContinueToRetrieveResponse();
 
             this.DeferPrinting();
 
@@ -641,9 +643,15 @@
 
         public void EtamYes()
         {
-            WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
+            try
+            {
+                WinControl uIYesButton = this.UIInsurEtamWindow1.UIYesWindow.UIYesButton;
 
-            Mouse.Click(uIYesButton);
+                Mouse.Click(uIYesButton);
+            }
+            catch
+            {
+            }
         }
 
         public void DemandsAndNeeds()
@@ -682,14 +690,13 @@
             WinControl uIPaymentOkButton = this.UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
             WinRadioButton uIDirectDebitRadioButton = this.UIPaymentMethodsWindow.UIDirectDebitWindow.UIRadioButton("Direct Debit");
 
-            WaitForControl(UIPaymentMethodsWindow);
+            WaitForControl(uIPaymentOkButton);
 
             if (type == "dd")
             {
                 Mouse.Click(uIDirectDebitRadioButton);
             }
 
-            
             Mouse.Click(uIPaymentOkButton);
         }
 
@@ -735,17 +742,17 @@
 
         public void CancelPrint()
         {
-            //WinTitleBar uISavethefileasTitleBar = this.UISavethefileasWindow.UISavethefileasTitleBar;
-            //WinControl uICancelButton = this.UISavethefileasWindow.UICancelWindow.UICancelButton;
+            for (int i = 0; i < 30; i++)
+            {
+                Process[] pname = Process.GetProcessesByName("splwow64");
 
-            //Playback.PlaybackSettings.ContinueOnError = true;
+                if (pname.Length > 0)
+                {
+                    break;
+                }
+                Thread.Sleep(1000);
+            }
 
-            //Mouse.Click(uISavethefileasTitleBar, new Point(339, 17));
-
-            //Mouse.Click(uICancelButton);
-
-            //Playback.PlaybackSettings.ContinueOnError = false;
-            Playback.Wait(3000);
             BaseUiTest.CloseProcess("splwow64");
         }
 
@@ -861,15 +868,18 @@
             this.SelectTAMActivities2();
         }
 
-        public void RetrieveResponse()
+        public void ContinueToRetrieveResponse()
         {
             WinControl uIOKButton = this.UIInsurEtamWindow1.UIOKWindow1.UIOKButton;
 
-            Playback.PlaybackSettings.ContinueOnError = true;
+            try
+            {
 
-            Mouse.Click(uIOKButton);
-
-            Playback.PlaybackSettings.ContinueOnError = false;
+                Mouse.Click(uIOKButton);
+            }
+            catch
+            {
+            }
         }
 
         public void RenewConfirmInvite()
@@ -893,18 +903,18 @@
         public void RenewalModuleRenew1()
 
         {
-            try
-            {
-                this.PaymentMethod("cash");
-                this.ConfirmDocuments();
-            }
-            catch
-            {
-            }
+            //try
+            //{
+            //    this.PaymentMethod("cash");
+            //    this.ConfirmDocuments();
+            //}
+            //catch
+            //{
+            //}
 
             this.DeferPrinting();
 
-            this.CancelPrint();
+            //this.CancelPrint();
 
             this.EtamOk(true);
 
@@ -920,7 +930,7 @@
 
             Mouse.Click(uIRenewPolicyButton);
 
-            this.PaymentMethod(paymentType);
+            //this.PaymentMethod(paymentType);
 
             Mouse.Click(uIYesButton);
 
@@ -972,32 +982,32 @@
             WinControl uiRenewalSearchWindowOkButton = this.UIRenewalSearchWindow.UIOKWindow.UIOKButton;
             WinControl uILogandClearButton = this.UIInsurEtamWindow.UIQuotesWindow.UILogandClearWindow.UILogandClearButton;
 
-            Playback.PlaybackSettings.SearchTimeout = 2000;
-            try
-            {
-                this.EtamOk(true);
-            }
-            catch
-            {
-            }
+            //Playback.PlaybackSettings.SearchTimeout = 2000;
+            //try
+            //{
+            //    this.EtamOk(true);
+            //}
+            //catch
+            //{
+            //}
 
-            try
-            {
-                this.EtamOk(true);
-            }
-            catch
-            {
-            }
+            //try
+            //{
+            //    this.EtamOk(true);
+            //}
+            //catch
+            //{
+            //}
 
-            try
-            {
-                Mouse.Click(uIExitButton);
-            }
-            catch
-            {
-            }
+            //try
+            //{
+            //    Mouse.Click(uIExitButton);
+            //}
+            //catch
+            //{
+            //}
 
-            Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
+            //Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
 
             Mouse.Click(uIediMatchButton);
 
@@ -1260,7 +1270,7 @@
 
             Mouse.Click(uIOKButton);
 
-            this.PaymentMethod(paymentType);
+            //this.PaymentMethod(paymentType);
 
             Mouse.Click(uiInsurerNoticeRevaluaWindowOkButton);
 
@@ -1302,7 +1312,7 @@
             WinControl uiImporttoTAMWindowOkButton = this.UIImporttoTAMWindow.UIPanel1Client.UIOKButton;
 
             ConfirmDocuments();
-            RetrieveResponse();
+            this.ContinueToRetrieveResponse();
             CancelPrint();
 
             this.DeferPrinting();
@@ -1332,7 +1342,7 @@
 
             Mouse.Click(uIOKButton);
 
-            this.PaymentMethod(paymentType);
+            //this.PaymentMethod(paymentType);
 
             Mouse.Click(uIOKButton1, new Point(27, 13));
 
@@ -1452,8 +1462,9 @@
                 {
                     return;
                 }
-                Playback.Wait(1000);
+                Thread.Sleep(1000);
             }
+
             Assert.IsTrue(control.Exists, "Control: " + control.Name + " does not exist");
         }
 
@@ -1601,7 +1612,7 @@
                 switch (filename)
                 {
                     case "HHQuote":
-                        this.CheckPremiumInQuote(quoteCnt == 0 ? premium : originalPremium , true);
+                        this.CheckPremiumInQuote(quoteCnt == 0 ? premium : originalPremium, true);
                         quoteCnt++;
                         break;
                     case "Quote":
@@ -1617,7 +1628,6 @@
                         fsaCnt++;
                         break;
                 }
-                
             }
 
             this.CheckDocsList(expectedDocs);
@@ -1686,14 +1696,7 @@
 
             string text = parser.ExtractText(pdfFilePath).Replace(" ", String.Empty);
 
-            if (text.Contains("Cancellation"))
-            {
-                Assert.IsTrue(CheckStringForPremium(text, 0 - premium));
-            }
-            else
-            {
-                Assert.IsTrue(CheckStringForPremium(text, premium));
-            }
+            Assert.IsTrue(text.Contains("Cancellation") ? CheckStringForPremium(text, 0 - premium) : CheckStringForPremium(text, premium));
 
             Playback.Wait(5000);
         }

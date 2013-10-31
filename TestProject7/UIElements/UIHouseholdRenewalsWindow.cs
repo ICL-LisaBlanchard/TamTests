@@ -141,6 +141,30 @@
             }
         }
 
+        public UIItemWindow UIUnspecifiedItemsWindow
+        {
+           get
+           {
+               return  new UIItemWindow(this, "2", "9");
+           }
+        }
+
+        public UIItemWindow UIItemsTotalWindow
+        {
+            get
+            {
+                return new UIItemWindow(this, "2", "8");
+            }
+        }
+
+        public UIItemWindow UIItemsPropertyValueWindow
+        {
+            get
+            {
+                return new UIItemWindow(this, "2", "14");
+            }
+        }
+
         #endregion
 
         #region Fields

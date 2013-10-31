@@ -86,10 +86,7 @@
             string outputText = string.Empty;
             try
             {
-                // Create a reader for the given PDF file
                 var reader = new PdfReader(inFileName);
-
-                const int TotalLen = 68;
 
                 for (int page = 1; page <= reader.NumberOfPages; page++)
                 {

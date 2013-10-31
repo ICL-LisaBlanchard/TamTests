@@ -145,8 +145,6 @@
 
         private WinTitleBar mUIPolicyautotestTitleBar;
 
-        private UIBillingScreenWindow mUIBillingScreenWindow;
-
         private UITestControl mUIItemWindow1;
 
         private UICustomersWindow mUICustomersWindow;

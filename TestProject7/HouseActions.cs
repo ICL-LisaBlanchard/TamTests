@@ -311,13 +311,7 @@
 
             WinEdit uIItemEdit = this.UIPolicyDetailConfirmationWindow.UIItemWindow.UIItemEdit;
 
-            Playback.Wait(3000);
-
-            Mouse.Move(new Point(500, 500));
-
-            Playback.Wait(3000);
-
-            Mouse.Click(this.UIQuotesResultsWindow);
+            WaitForControl(uIAcceptButton);
 
             Mouse.Click(uIAcceptButton);
 
@@ -431,11 +425,6 @@
             this.SelectTAMActivities1();
         }
 
-        /// <summary>
-        ///     HomeMTAAccept
-        /// </summary>
-        /// <param name="needScreenshot"></param>
-        /// <param name="expectedDate"></param>
         public void HomeResubmitQuote(bool needScreenshot, string expectedDate = "")
         {
             WinControl uINextButton = this.UIInsurEtamWindow.UIQuotesWindow.UINextWindow.UINextButton;
@@ -949,6 +938,9 @@
             WinControl uINextButton6 = this.UIHouseholdRenewalsWindow.UINextWindow6.UINextButton;
             WinControl uIQuoteButton = this.UIHouseholdRenewalsWindow.UIQuoteWindow.UIQuoteButton;
             WinControl uIProceedButton = this.UICreditCheckAtRenewalWindow.UIProceedWindow.UIProceedButton;
+            WinEdit uIUnspecifiedItemsEdit = this.UIHouseholdRenewalsWindow.UIUnspecifiedItemsWindow.UIItemEdit;
+            WinEdit uIUnspecifiedItemsTotalEdit = this.UIHouseholdRenewalsWindow.UIItemsTotalWindow.UIItemEdit;
+            WinEdit uIPropertyValueItemEdit = this.UIHouseholdRenewalsWindow.UIItemsPropertyValueWindow.UIItemEdit;
 
             Mouse.Click(uIAmendRiskButton);
 
@@ -956,17 +948,23 @@
 
             Mouse.Click(uINextButton);
 
-            Mouse.Click(uINextButton1, new Point(44, 13));
+            Mouse.Click(uINextButton1);
 
-            Mouse.Click(uINextButton2, new Point(44, 13));
+            Mouse.Click(uINextButton2);
 
-            Mouse.Click(uINextButton3, new Point(44, 13));
+            Mouse.Click(uINextButton3);
 
-            Mouse.Click(uINextButton4, new Point(44, 13));
+            uIPropertyValueItemEdit.Text = HomeCreatePolicyParams.UIItemEditText1;
+      
+            Mouse.Click(uINextButton4);
 
-            Mouse.Click(uINextButton5, new Point(44, 13));
+            Mouse.Click(uIUnspecifiedItemsEdit);
 
-            Mouse.Click(uINextButton6, new Point(44, 13));
+            Mouse.Click(uIUnspecifiedItemsTotalEdit);
+
+            Mouse.Click(uINextButton5);
+
+            Mouse.Click(uINextButton6);
 
             Mouse.Click(uIQuoteButton);
 
@@ -1005,9 +1003,10 @@
 
             Mouse.Click(uIYesButton);
 
-            this.PaymentMethod(paymentType);
+            //this.PaymentMethod(paymentType);
 
-            Playback.Wait(10000);
+            //Playback.Wait(10000);
+            this.CancelPrint();
 
             this.ConfirmDocuments();
 
@@ -1026,11 +1025,15 @@
 
             this.RenewPolicy();
 
-            this.PaymentMethod("cash");
+            //this.PaymentMethod("cash");
 
-            this.EtamYes();
+            //this.EtamYes();
+
+            //this.CancelPrint();
 
             this.ConfirmDocuments();
+
+            //this.EtamYes();
 
             this.DeferPrinting();
 
@@ -1059,7 +1062,7 @@
             uIItemEdit.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
         }
 
-        public void HomeSiteRenewal(string policyNumber, string renewalPremium, string insurer = "")
+        public void HomeSiteRenewal(string policyNumber, string renewalPremium, string insurer)
         {
             HtmlHyperlink uICreateaHouseholdTestHyperlink =
                 this.UIInsurEcomSystemMaintWindow.UILeftbarFrame.UIInsurEcomLeftbarDocument.UIDivRenewalsPane.UICreateaHouseholdTestHyperlink;
@@ -1139,9 +1142,9 @@
         {
             WinClient uIHouseholdRebrokeResuClient = this.UIHouseholdRebrokeResuWindow.UIItemWindow.UIClient();
 
-            Mouse.Click(uIHouseholdRebrokeResuClient, new Point(208, 85));
+            Mouse.Click(uIHouseholdRebrokeResuClient, new Point(208, 65));
 
-            // Keyboard.SendKeys(uIHouseholdRebrokeResuClient, withKeys, ModifierKeys.None);
+            Keyboard.SendKeys(uIHouseholdRebrokeResuClient, withKeys, ModifierKeys.None);
         }
 
         public void HomeCheckPremium()
@@ -1157,8 +1160,11 @@
 
             Mouse.Click(uIQuotesResultsClient, new Point(30, 30));
 
-            Playback.Wait(1000);
-            Mouse.Move(new Point(500, 500));
+            //Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
+
+            //Mouse.Move(uIQuotesResultsClient, new Point(100,100));
+
+            //Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendEnterKey, ModifierKeys.None);
         }
 
         public void RenewPolicy()

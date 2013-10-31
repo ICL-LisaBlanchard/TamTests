@@ -307,7 +307,7 @@
         }
 
         [TestMethod]
-        public void MotoRenewalAfter()
+        public void otoRenewalAfter()
         {
             SetOurHighwayRegKeys();
             UiMap.CustomerCode = Moto.TamMotorSteps(Customer);
@@ -420,7 +420,7 @@
             Moto.CommonParams.SendHomeKeys = "{End}";
             Moto.AmendSelectQuote();
             Moto.MotoAmendRiskNew("cash");
-            Moto.RetrieveResponse();
+            Moto.ContinueToRetrieveResponse();
             Moto.MotoAmendRiskNew1();
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
             Moto.HighlightBillingScreen();
@@ -506,7 +506,7 @@
             Moto.RenewConfirmInvite();
             Moto.RenewalModuleInvite1();
             Moto.RebrokeAlternativeFinish("cash");
-            Moto.RetrieveResponse();
+            Moto.ContinueToRetrieveResponse();
             Moto.CancelPrint();
             Moto.RebrokeAlternativeFinish1();
             Moto.RenewalModuleClose();
@@ -545,7 +545,7 @@
             Moto.RenewConfirmInvite();
             Moto.RenewalModuleInvite1();
             Moto.RebrokeAlternativeFinish("cash");
-            Moto.RetrieveResponse();
+            Moto.ContinueToRetrieveResponse();
             Moto.CancelPrint();
             Moto.RebrokeAlternativeFinish1();
             Moto.RenewalModuleClose();

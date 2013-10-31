@@ -670,8 +670,6 @@ namespace AppliedSystems.Tam.Ui.Tests.BaseUIElements
 
         #region Fields
 
-        private WinList mUIItemList;
-
         private WinTitleBar mUIItemTitleBar;
 
         #endregion

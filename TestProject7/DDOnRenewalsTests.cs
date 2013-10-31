@@ -62,7 +62,7 @@
             Moto.CommonParams.SendHomeKeys = "{End}";
             Moto.AmendSelectQuote();
             Moto.MotoAmendRiskNew("dd");
-            Moto.RetrieveResponse();
+            Moto.ContinueToRetrieveResponse();
             Moto.MotoAmendRiskNew1();
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
             Moto.HighlightBillingScreen();

@@ -240,18 +240,18 @@
 
             RenewPolicy();
 
-            try
-            {
-                PaymentMethod("cash");
-                Mouse.Click(uIYesButton);
-            }
-            catch
-            {
-            }
+            //try
+            //{
+            //    PaymentMethod("cash");
+            //    Mouse.Click(uIYesButton);
+            //}
+            //catch
+            //{
+            //}
 
             ConfirmDocuments();
 
-            RetrieveResponse();
+            this.ContinueToRetrieveResponse();
 
             DeferPrinting();
 
@@ -374,9 +374,9 @@
         {
             this.RenewPolicy();
 
-            PaymentMethod(paymentMethod);
+            //PaymentMethod(paymentMethod);
 
-            CancelPrint();
+            //CancelPrint();
 
             ConfirmDocuments();
         }
