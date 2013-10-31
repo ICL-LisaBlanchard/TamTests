@@ -682,7 +682,7 @@
             WinControl uIPaymentOkButton = this.UIPaymentMethodsWindow.UIOKWindow.UIOKButton;
             WinRadioButton uIDirectDebitRadioButton = this.UIPaymentMethodsWindow.UIDirectDebitWindow.UIRadioButton("Direct Debit");
 
-            WaitForControl(UIPaymentMethodsWindow);
+            WaitForControl(uIPaymentOkButton);
 
             if (type == "dd")
             {
@@ -1601,15 +1601,15 @@
                 switch (filename)
                 {
                     case "HHQuote":
-                        this.CheckPremiumInQuote(quoteCnt == 0 ? premium : originalPremium , true);
+                        this.CheckPremiumInQuote(premium, originalPremium , true);
                         quoteCnt++;
                         break;
                     case "Quote":
-                        this.CheckPremiumInQuote(quoteCnt == 0 ? premium : originalPremium, false);
+                        this.CheckPremiumInQuote(premium, originalPremium, false);
                         quoteCnt++;
                         break;
                     case "Schedule":
-                        this.CheckPremiumInPdfProposal(scheduleCnt == 0 ? premium : originalPremium);
+                        this.CheckPremiumInPdfProposal(premium, originalPremium);
                         scheduleCnt++;
                         break;
                     case "FSA":
@@ -1672,7 +1672,7 @@
             }
         }
 
-        public void CheckPremiumInPdfProposal(double premium)
+        public void CheckPremiumInPdfProposal(double premium, double originalPremium)
         {
             this.OpenAttachment();
 
@@ -1688,11 +1688,11 @@
 
             if (text.Contains("Cancellation"))
             {
-                Assert.IsTrue(CheckStringForPremium(text, 0 - premium));
+                Assert.IsTrue(CheckStringForPremium(text, 0 - premium, 0 - originalPremium));
             }
             else
             {
-                Assert.IsTrue(CheckStringForPremium(text, premium));
+                Assert.IsTrue(CheckStringForPremium(text, premium, originalPremium));
             }
 
             Playback.Wait(5000);
@@ -1871,17 +1871,23 @@
             }
         }
 
-        private static bool CheckStringForPremium(string text, double premium)
+        private static bool CheckStringForPremium(string text, double premium, double originalPremium)
         {
-            if (premium <= 0.0)
+            if (premium <= 0.0 && originalPremium <= 0.0)
             {
                 return false;
             }
 
-            return text.Contains(premium.ToString("0.00")) || text.Contains((premium + 0.01).ToString("0.00")) || text.Contains((premium - 0.01).ToString("0.00"));
+            return text.Contains(premium.ToString("0.00")) || 
+                text.Contains((premium + 0.01).ToString("0.00")) || 
+                text.Contains((premium - 0.01).ToString("0.00")) ||
+                text.Contains(originalPremium.ToString("0.00")) ||
+                text.Contains((originalPremium + 0.01).ToString("0.00")) ||
+                text.Contains((originalPremium - 0.01).ToString("0.00")) 
+                ;
         }
 
-        private void CheckPremiumInQuote(double premium, bool isHouse)
+        private void CheckPremiumInQuote(double premium, double originalPremium, bool isHouse)
         {
             this.OpenAttachment();
 
@@ -1904,7 +1910,7 @@
                 body = reader.ReadToEnd();
             }
 
-            Assert.IsTrue(CheckStringForPremium(body, premium), " Premium : " + premium + ", Body : " + body);
+            Assert.IsTrue(CheckStringForPremium(body, premium, originalPremium), " Premium : " + premium + ", Original Premium: " + originalPremium + ", Body : " + body);
         }
 
         private void OpenAttachment()
