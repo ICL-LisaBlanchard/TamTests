@@ -240,14 +240,14 @@
 
             RenewPolicy();
 
-            //try
-            //{
-            //    PaymentMethod("cash");
-            //    Mouse.Click(uIYesButton);
-            //}
-            //catch
-            //{
-            //}
+            try
+            {
+                //PaymentMethod("cash");
+                Mouse.Click(uIYesButton);
+            }
+            catch
+            {
+            }
 
             ConfirmDocuments();
 
