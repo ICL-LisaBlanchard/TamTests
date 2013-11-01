@@ -1586,11 +1586,9 @@
             Mouse.DoubleClick(uIBillingScreenClient, new Point(40, 14));
 
             string filename = String.Empty;
-            int quoteCnt = 0;
-            int scheduleCnt = 0;
             int fsaCnt = 0;
 
-            for (int i = 20; i < 500; i = i + 18)
+            for (int i = 21; i < 500; i = i + 17)
             {
                 this.CleanDocuments();
 
@@ -1613,15 +1611,12 @@
                 {
                     case "HHQuote":
                         this.CheckPremiumInQuote(premium, originalPremium , true);
-                        quoteCnt++;
                         break;
                     case "Quote":
                         this.CheckPremiumInQuote(premium, originalPremium, false);
-                        quoteCnt++;
                         break;
                     case "Schedule":
                         this.CheckPremiumInPdfProposal(premium, originalPremium);
-                        scheduleCnt++;
                         break;
                     case "FSA":
                         this.CheckPremiumInWordDoc(fsaCnt == 0 ? premium : originalPremium);
@@ -1650,7 +1645,7 @@
             Mouse.DoubleClick(uIBillingScreenClient, new Point(40, 14));
 
             string filename = String.Empty;
-            for (int i = 16; i < 1000; i = i + 18)
+            for (int i = 21; i < 1000; i = i + 17)
             {
                 Mouse.Click(uIPolicyAttachmentsClient, new Point(10, i));
                 Mouse.Click(uIDetailButton);
@@ -1663,7 +1658,7 @@
 
                 filename = checkFileName.Text;
 
-                IncreaseDocsListCount(expectedDocs, filename);
+                //IncreaseDocsListCount(expectedDocs, filename);
 
                 Mouse.Click(uICancelButton);
             }

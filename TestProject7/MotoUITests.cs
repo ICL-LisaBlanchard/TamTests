@@ -307,7 +307,7 @@
         }
 
         [TestMethod]
-        public void otoRenewalAfter()
+        public void MotoRenewalAfter()
         {
             SetOurHighwayRegKeys();
             UiMap.CustomerCode = Moto.TamMotorSteps(Customer);

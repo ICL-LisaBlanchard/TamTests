@@ -30,7 +30,8 @@
         [TestMethod]
         public void TestMethod1()
         {
-            House.CreateNewPolicy();
+            Moto.CheckCorrectDocumentPresent(Docs.DocumentsForMotoNewBusinessCancelAccept);
+
         }
     }
 }
