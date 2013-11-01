@@ -251,7 +251,7 @@
 
             Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendEndKeys, ModifierKeys.None);
 
-            Playback.Wait(3000);
+            WaitForControl(uIPrintQuoteButton);
 
             Mouse.Click(uIPrintQuoteButton);
         }

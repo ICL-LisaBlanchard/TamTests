@@ -376,7 +376,7 @@
 
             //PaymentMethod(paymentMethod);
 
-            //CancelPrint();
+            CancelPrint();
 
             ConfirmDocuments();
         }
