@@ -30,8 +30,7 @@
         [TestMethod]
         public void TestMethod1()
         {
-            Moto.CheckCorrectDocumentPresent(Docs.DocumentsForMotoNewBusinessCancelAccept);
-
+            Moto.MotoSelectHighwayPolicy();
         }
     }
 }

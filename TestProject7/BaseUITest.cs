@@ -287,7 +287,7 @@
             UiMap.CloseRegressApp();
         }
 
-        protected void RenewalLoader()
+        public void RenewalLoader()
         {
             UiMap.RenewalLoaderOpen();
             UiMap.RenewalLoaderRun();
@@ -312,7 +312,7 @@
             UiMap.ChangeDatePolicy();
         }
 
-        protected void Renewals(string policyNumber, string policyType, string renewalPremium, string insurer = "")
+        public void Renewals(string policyNumber, string policyType, string renewalPremium, string insurer = "")
         {
             this.SiteForRenewal(policyNumber, policyType, renewalPremium);
             RegressApp(policyType);

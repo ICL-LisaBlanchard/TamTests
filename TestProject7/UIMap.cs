@@ -982,32 +982,17 @@
             WinControl uiRenewalSearchWindowOkButton = this.UIRenewalSearchWindow.UIOKWindow.UIOKButton;
             WinControl uILogandClearButton = this.UIInsurEtamWindow.UIQuotesWindow.UILogandClearWindow.UILogandClearButton;
 
-            //Playback.PlaybackSettings.SearchTimeout = 2000;
-            //try
-            //{
-            //    this.EtamOk(true);
-            //}
-            //catch
-            //{
-            //}
+            Playback.PlaybackSettings.SearchTimeout = 2000;
+            try
+            {
+                this.EtamOk(true);
+                this.EtamOk(true);
+            }
+            catch
+            {
+            }
 
-            //try
-            //{
-            //    this.EtamOk(true);
-            //}
-            //catch
-            //{
-            //}
-
-            //try
-            //{
-            //    Mouse.Click(uIExitButton);
-            //}
-            //catch
-            //{
-            //}
-
-            //Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
+            Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
 
             Mouse.Click(uIediMatchButton);
 

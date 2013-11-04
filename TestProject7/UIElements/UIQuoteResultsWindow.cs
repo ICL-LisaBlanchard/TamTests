@@ -107,6 +107,14 @@
             }
         }
 
+        public UIItemWindow UIPolicySummaryWindow
+        {
+            get
+            {
+                return new UIItemWindow(this, "9");
+            }
+        }
+
         #endregion
 
         #region Fields

@@ -1124,8 +1124,6 @@ return new UITheAgencyManagerSignWindow();
         
         #region Fields
 
-        private UIPersonalLinesDialogWindow mUIPersonalLinesDialogWindow;
-
         private UICommissionAdjustmentWindow mUICommissionAdjustmentWindow;
 
         private UIUpdateGeneralTransacWindow mUIUpdateGeneralTransacWindow;
@@ -1141,45 +1139,6 @@ return new UITheAgencyManagerSignWindow();
         private UIItemPdfSecureWindow mUIItemPdfSecureWindow;
 
         private UIDocumentPropertiesWindow mUIDocumentPropertiesWindow;
-
-  
-        private UITheAgencyManagerSignWindow mUITheAgencyManagerSignWindow;
-        
-        private UITheAgencyManagerWindow1 mUITheAgencyManagerWindow1;
-        
-        private UICustomerListWindow mUICustomerListWindow;
-               
-        private UIVerifyWindow mUIVerifyWindow;
-        
-        private UISelectaPolicyNumberWindow mUISelectaPolicyNumberWindow;
-        
-        private UICurrentOrFutureWindow mUICurrentOrFutureWindow;
-        
-        private UIProposerTypeWindow mUIProposerTypeWindow;
-        
-        private UIProposerDetailsWindow mUIProposerDetailsWindow;
-        
-        private UISearchResultForB338TWindow mUISearchResultForB338TWindow;
-        
-        private UIDriverDetailsWindow mUIDriverDetailsWindow;
-        
-        private UIVehicleLookupWindow mUIVehicleLookupWindow;
-        
-        private UIInsurEtamWindow mUIInsurEtamWindow;
-
-        private UIPersonalLinesWindow mUIPersonalLinesWindow;
-
-        private UISecondApplicantDetaiWindow mUISecondApplicantDetaiWindow;
-
-        private UISpecifiedItemsInsideWindow mUISpecifiedItemsInsideWindow;
-        
-        private UICreditCheckWindow mUICreditCheckWindow;
-        
-        private UIQuoteResultsWindow mUIQuoteResultsWindow;
-        
-        private UIInsurEtamWindow1 mUIInsurEtamWindow1;
-        
-        private UIPaymentMethodsWindow mUIPaymentMethodsWindow;
         
         private UIConfirmDocumentsWindow mUIConfirmDocumentsWindow;
         
@@ -1188,9 +1147,7 @@ return new UITheAgencyManagerSignWindow();
         private UISavethefileasWindow mUISavethefileasWindow;
         
         private UIPointOfSaleWindow mUIPointOfSaleWindow;
-        
-        private UIImporttoTAMWindow mUIImporttoTAMWindow;
-        
+
         private UITransactiontoinsertWindow mUITransactiontoinsertWindow;
 
         private UITamxml7Window mUITamxml7Window;
@@ -1289,8 +1246,6 @@ return new UITheAgencyManagerSignWindow();
         
         private UIErrorWindow mUIErrorWindow;
 
-        private UIPedalCyclesWindow mUIPedalCyclesWindow;
-
         private SelectTamInsurersAndActivityParams mSelectTamInsurersAndActivityParams;
 
         private UISelectTamActivityTypWindow mUISelectTamActivityTypWindow;
@@ -1301,21 +1256,12 @@ return new UITheAgencyManagerSignWindow();
 
         private UIHouseholdRenewalsResultsWindow mUIHouseholdRenewalsResultsWindow;
 
-        private UIPolicyAttachmentsWindow mUIPolicyAttachmentsWindow;
-
         private UIViewAttachmentWindow mUIViewAttachmentWindow;
 
         private UIOpenwithWindow mUIOpenwithWindow;
 
-        private UIAttatchmentsMenuWindow mUIAttatchmentsMenuWindow;
-
-        private UIAttachmentDetailWindow mUIAttachmentDetailWindow;
-
         private UIPolicyWindow mUIPolicyWindow;
 
-        private UISupercededRenewalInvWindow mUISupercededRenewalInvWindow;
-
-        private UISavetheamendedrenewaWindow mUISavetheamendedrenewaWindow;
         #endregion
     }
 }
