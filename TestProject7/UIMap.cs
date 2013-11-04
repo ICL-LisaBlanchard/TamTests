@@ -552,7 +552,13 @@
 
                 try
                 {
-                    Mouse.Click(uIOKButton);
+                    Process[] pname = Process.GetProcessesByName("splwow64");
+
+                    if (pname.Length == 0)
+                    {
+                        Mouse.Click(uIOKButton);
+                    }
+
                     break;
                 }
                 catch
