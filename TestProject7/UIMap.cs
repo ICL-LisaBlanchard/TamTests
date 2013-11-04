@@ -541,21 +541,25 @@
 
             Mouse.Click(this.UIQuoteResultsWindow);
             Mouse.Click(uIAcceptButton);
-
-            this.CancelTestNoPolicyDocsDialog();
         }
 
         public void CancelTestNoPolicyDocsDialog()
         {
             WinButton uIOKButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
-            Playback.PlaybackSettings.SearchTimeout = 3000;
-            try
+            Playback.PlaybackSettings.SearchTimeout = 1000;
+            for (int i = 0; i < 10; i++)
             {
-                Mouse.Click(uIOKButton);
+
+                try
+                {
+                    Mouse.Click(uIOKButton);
+                    break;
+                }
+                catch
+                {
+                }
             }
-            catch
-            {
-            }
+
             Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
         }
 
@@ -621,6 +625,8 @@
             this.ConfirmDocuments();
 
             Mouse.Click(uIConfirmButton);
+
+            this.CancelTestNoPolicyDocsDialog();
         }
 
         public void CloseOpenPolicyList()
