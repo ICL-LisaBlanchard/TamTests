@@ -1643,7 +1643,7 @@
 
                 filename = checkFileName.Text;
 
-                //IncreaseDocsListCount(expectedDocs, filename);
+                IncreaseDocsListCount(expectedDocs, filename);
 
                 Mouse.Click(uICancelButton);
             }
