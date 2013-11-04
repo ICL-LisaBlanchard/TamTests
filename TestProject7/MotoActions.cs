@@ -408,7 +408,7 @@
             Mouse.Click(uIProceedButton);
         }
 
-        public void MotoSelectHighwayPolicy()
+        public void MotoSelectHighwayPolicy(bool firstChoice)
         {
             WinClient uIQuoteResultsClient = map.UIQuoteResultsWindow.UIItemWindow2.UIClient();
             WinButton uIPolicySummaryButton = this.UIQuoteResultsWindow.UIPolicySummaryWindow.UIPolicySummaryButton;
@@ -416,38 +416,46 @@
 
             Mouse.DoubleClick(uIQuoteResultsClient);
 
-            
-            for (int i = 25; i < 150; i=i+18)
+            if (firstChoice)
             {
-                Mouse.Click(uIQuoteResultsClient, new Point(30, i));
-                Playback.Wait(2000);
-                Mouse.Move(new Point(500, 500));
-                Mouse.Click(uIPolicySummaryButton);
-
-                bool isTest = true;
-                for (int j = 0; j < 5; j++)
+                for (int i = 25; i < 150; i = i + 18)
                 {
-                    Process[] pname = Process.GetProcessesByName("splwow64");
+                    Mouse.Click(uIQuoteResultsClient, new Point(30, i));
+                    Playback.Wait(2000);
+                    Mouse.Move(new Point(500, 500));
+                    Mouse.Click(uIPolicySummaryButton);
 
-                    if (pname.Length > 0)
+                    bool isTest = true;
+                    for (int j = 0; j < 5; j++)
                     {
-                        isTest = false;
+                        Process[] pname = Process.GetProcessesByName("splwow64");
+
+                        if (pname.Length > 0)
+                        {
+                            isTest = false;
+                            break;
+                        }
+                        Thread.Sleep(1000);
+                    }
+
+                    if (isTest)
+                    {
+
+                        uIOKButton.WaitForControlExist(5000);
+                        Mouse.Click(uIOKButton);
+                    }
+                    else
+                    {
+                        BaseUiTest.CloseProcess("splwow64");
                         break;
                     }
-                    Thread.Sleep(1000);
                 }
-
-                if(isTest)
-                {
-
-                    uIOKButton.WaitForControlExist(5000);
-                    Mouse.Click(uIOKButton);
-                }
-                else
-                {
-                    BaseUiTest.CloseProcess("splwow64");
-                    break;
-                }
+            }
+            else
+            {
+                Mouse.Click(uIQuoteResultsClient, new Point(30, 30));
+                Playback.Wait(2000);
+                Mouse.Move(new Point(500, 500));
             }
         }
 
@@ -807,7 +815,7 @@
 
             WinClient uIPointOfSaleClient = map.UIPointOfSaleWindow.UIPointOfSaleClient;
 
-            MotoSelectHighwayPolicy();
+            this.MotoSelectHighwayPolicy(false);
 
             Mouse.Click(uIAcceptButton);
 

@@ -30,7 +30,6 @@
         [TestMethod]
         public void TestMethod1()
         {
-            Moto.MotoSelectHighwayPolicy();
         }
     }
 }

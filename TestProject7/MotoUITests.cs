@@ -267,7 +267,7 @@
             Moto.MotoCalculate();
             Moto.QuoteResults1();
             Moto.PublicCreditCheckOk();
-            Moto.MotoSelectHighwayPolicy();
+            Moto.MotoSelectHighwayPolicy(true);
             Moto.AcceptAndFinishQuote("cash", 2);
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
             Moto.HighlightBillingScreen();
@@ -319,7 +319,7 @@
             //moto.CancelFilter();
             Moto.QuoteResults1();
             Moto.PublicCreditCheckOk();
-            Moto.MotoSelectHighwayPolicy();
+            Moto.MotoSelectHighwayPolicy(true);
             Moto.AcceptAndFinishQuote("cash", 2);
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
             string policyNumber = Moto.GetPolicyNumber();
@@ -376,7 +376,7 @@
             Moto.MotoCalculate();
             Moto.QuoteResults1();
             Moto.PublicCreditCheckOk();
-            Moto.MotoSelectHighwayPolicy();
+            Moto.MotoSelectHighwayPolicy(true);
             Moto.AcceptAndFinishQuote("cash", 2);
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
             string policyNumber = Moto.GetPolicyNumber();
@@ -408,7 +408,7 @@
             Moto.MotoCalculate();
             Moto.QuoteResults1();
             Moto.PublicCreditCheckOk();
-            Moto.MotoSelectHighwayPolicy();
+            Moto.MotoSelectHighwayPolicy(true);
             Moto.AcceptAndFinishQuote("cash", 2);
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
             string policyNumber = Moto.GetPolicyNumber();
@@ -459,7 +459,7 @@
             Moto.MotoCalculate();
             Moto.QuoteResults1();
             Moto.PublicCreditCheckOk();
-            Moto.MotoSelectHighwayPolicy();
+            Moto.MotoSelectHighwayPolicy(true);
             Moto.AcceptAndFinishQuote("cash", 2);
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
             string policyNumber = Moto.GetPolicyNumber();
@@ -489,7 +489,7 @@
             Moto.MotoCalculate();
             Moto.QuoteResults1();
             Moto.PublicCreditCheckOk();
-            Moto.MotoSelectHighwayPolicy();
+            Moto.MotoSelectHighwayPolicy(true);
             Moto.AcceptAndFinishQuote("cash", 3);
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
 
@@ -529,7 +529,7 @@
             Moto.MotoCalculate();
             Moto.QuoteResults1();
             Moto.PublicCreditCheckOk();
-            Moto.MotoSelectHighwayPolicy();
+            Moto.MotoSelectHighwayPolicy(true);
             Moto.AcceptAndFinishQuote("cash", 2);
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
             string policyNumber = Moto.GetPolicyNumber();
@@ -569,7 +569,7 @@
             Moto.MotoCalculate();
             Moto.QuoteResults1();
             Moto.PublicCreditCheckOk();
-            Moto.MotoSelectHighwayPolicy();
+            Moto.MotoSelectHighwayPolicy(true);
             Moto.AcceptAndFinishQuote("cash", 2);
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
             string policyNumber = Moto.GetPolicyNumber();
