@@ -8,6 +8,7 @@
 
     using Meyn.TestLink;
 
+    using Microsoft.VisualStudio.TestTools.UITest.Extension;
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -80,6 +81,7 @@
 
             UiMap.CleanDocuments();
             Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
+            Playback.PlaybackSettings.SmartMatchOptions = SmartMatchOptions.None;
             TestName = TestContext.TestName;
             TestLinkInitialize();
 

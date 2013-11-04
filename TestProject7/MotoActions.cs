@@ -416,47 +416,51 @@
 
             Mouse.DoubleClick(uIQuoteResultsClient);
 
-            if (firstChoice)
-            {
-                for (int i = 25; i < 150; i = i + 18)
-                {
-                    Mouse.Click(uIQuoteResultsClient, new Point(30, i));
-                    Playback.Wait(2000);
-                    Mouse.Move(new Point(500, 500));
-                    Mouse.Click(uIPolicySummaryButton);
+            Mouse.Click(uIQuoteResultsClient, new Point(30, 30));
+            Playback.Wait(2000);
+            Mouse.Move(new Point(500, 500));
 
-                    bool isTest = true;
-                    for (int j = 0; j < 5; j++)
-                    {
-                        Process[] pname = Process.GetProcessesByName("splwow64");
+            //if (firstChoice)
+            //{
+            //    for (int i = 25; i < 150; i = i + 18)
+            //    {
+            //        Mouse.Click(uIQuoteResultsClient, new Point(30, i));
+            //        Playback.Wait(2000);
+            //        Mouse.Move(new Point(500, 500));
+            //        Mouse.Click(uIPolicySummaryButton);
 
-                        if (pname.Length > 0)
-                        {
-                            isTest = false;
-                            break;
-                        }
-                        Thread.Sleep(1000);
-                    }
+            //        bool isTest = true;
+            //        for (int j = 0; j < 5; j++)
+            //        {
+            //            Process[] pname = Process.GetProcessesByName("splwow64");
 
-                    if (isTest)
-                    {
+            //            if (pname.Length > 0)
+            //            {
+            //                isTest = false;
+            //                break;
+            //            }
+            //            Thread.Sleep(1000);
+            //        }
 
-                        uIOKButton.WaitForControlExist(5000);
-                        Mouse.Click(uIOKButton);
-                    }
-                    else
-                    {
-                        BaseUiTest.CloseProcess("splwow64");
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                Mouse.Click(uIQuoteResultsClient, new Point(30, 30));
-                Playback.Wait(2000);
-                Mouse.Move(new Point(500, 500));
-            }
+            //        if (isTest)
+            //        {
+
+            //            uIOKButton.WaitForControlExist(5000);
+            //            Mouse.Click(uIOKButton);
+            //        }
+            //        else
+            //        {
+            //            BaseUiTest.CloseProcess("splwow64");
+            //            break;
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    Mouse.Click(uIQuoteResultsClient, new Point(30, 30));
+            //    Playback.Wait(2000);
+            //    Mouse.Move(new Point(500, 500));
+            //}
         }
 
         public void MotoSearchCar()
@@ -640,6 +644,8 @@
 
             Mouse.Click(uIAcceptButton);
 
+            this.CancelTestNoPolicyDocsDialog();
+
             EtamYes();
 
             ConfirmDocuments();
@@ -712,6 +718,8 @@
             Keyboard.SendKeys(uIQuoteResultsClient, CommonParams.SendHomeKeys, ModifierKeys.None);
 
             Mouse.Click(uIAcceptButton);
+
+            this.CancelTestNoPolicyDocsDialog();
 
             EtamYes();
 
@@ -818,6 +826,8 @@
             this.MotoSelectHighwayPolicy(false);
 
             Mouse.Click(uIAcceptButton);
+
+            this.CancelTestNoPolicyDocsDialog();
 
             EtamYes();
 
@@ -1036,6 +1046,8 @@
             Mouse.Click(uIRenewPolicyButton);
 
             Mouse.Click(uIYesButton);
+
+            this.CancelTestNoPolicyDocsDialog();
         }
     }
 }

@@ -538,8 +538,25 @@
         {
             WinControl uIAcceptButton = this.UIQuoteResultsWindow.UIAcceptWindow.UIAcceptButton;
 
+
             Mouse.Click(this.UIQuoteResultsWindow);
             Mouse.Click(uIAcceptButton);
+
+            this.CancelTestNoPolicyDocsDialog();
+        }
+
+        public void CancelTestNoPolicyDocsDialog()
+        {
+            WinButton uIOKButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
+            Playback.PlaybackSettings.SearchTimeout = 3000;
+            try
+            {
+                Mouse.Click(uIOKButton);
+            }
+            catch
+            {
+            }
+            Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
         }
 
         public void AmendDateBeforeMessage()
@@ -1270,6 +1287,8 @@
                 Mouse.Click(uIAcceptButton2);
             }
 
+            this.CancelTestNoPolicyDocsDialog();
+
             this.CancelPrint();
         }
 
@@ -1336,6 +1355,8 @@
             Keyboard.SendKeys(uIItemClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
             Mouse.Click(uIAcceptButton);
+
+            this.CancelTestNoPolicyDocsDialog();
 
             this.EtamYes();
 

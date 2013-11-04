@@ -319,6 +319,8 @@
 
             Mouse.Click(uIAcceptButton);
 
+            this.CancelTestNoPolicyDocsDialog();
+
             this.EtamYes();
 
             this.CancelPrint();
@@ -735,6 +737,8 @@
 
             Mouse.Click(uIAcceptButton);
 
+            this.CancelTestNoPolicyDocsDialog();
+
             Mouse.Click(uIokButton);
 
             this.ConfirmDocuments();
@@ -878,6 +882,8 @@
             this.HomeSelectPolicy();
 
             Mouse.Click(uIAcceptButton);
+
+            this.CancelTestNoPolicyDocsDialog();
 
             Mouse.Click(uIokButton);
 
@@ -1056,6 +1062,8 @@
 
             Mouse.Click(uIAcceptButton);
 
+            this.CancelTestNoPolicyDocsDialog();
+
             this.EtamYes();
         }
 
@@ -1134,6 +1142,8 @@
             Mouse.Move(new Point(500, 500));
 
             Mouse.Click(uIAcceptButton);
+
+            this.CancelTestNoPolicyDocsDialog();
 
             Mouse.Click(uIokButton);
 
