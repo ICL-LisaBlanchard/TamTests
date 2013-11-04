@@ -538,8 +538,40 @@
         {
             WinControl uIAcceptButton = this.UIQuoteResultsWindow.UIAcceptWindow.UIAcceptButton;
 
+
             Mouse.Click(this.UIQuoteResultsWindow);
             Mouse.Click(uIAcceptButton);
+        }
+
+        public void CancelTestNoPolicyDocsDialog()
+        {
+            WinButton uIOKButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
+<<<<<<< HEAD
+            Playback.PlaybackSettings.SearchTimeout = 5000;
+            try
+            {
+                Mouse.Click(uIOKButton);
+            }
+            catch
+            {
+                Debug.WriteLine("Not test scheme");
+=======
+            Playback.PlaybackSettings.SearchTimeout = 1000;
+            for (int i = 0; i < 10; i++)
+            {
+
+                try
+                {
+                    Mouse.Click(uIOKButton);
+                    break;
+                }
+                catch
+                {
+                }
+>>>>>>> origin/4.0.9
+            }
+
+            Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
         }
 
         public void AmendDateBeforeMessage()
@@ -604,6 +636,8 @@
             this.ConfirmDocuments();
 
             Mouse.Click(uIConfirmButton);
+
+            this.CancelTestNoPolicyDocsDialog();
         }
 
         public void CloseOpenPolicyList()
@@ -982,32 +1016,17 @@
             WinControl uiRenewalSearchWindowOkButton = this.UIRenewalSearchWindow.UIOKWindow.UIOKButton;
             WinControl uILogandClearButton = this.UIInsurEtamWindow.UIQuotesWindow.UILogandClearWindow.UILogandClearButton;
 
-            //Playback.PlaybackSettings.SearchTimeout = 2000;
-            //try
-            //{
-            //    this.EtamOk(true);
-            //}
-            //catch
-            //{
-            //}
+            Playback.PlaybackSettings.SearchTimeout = 2000;
+            try
+            {
+                this.EtamOk(true);
+                this.EtamOk(true);
+            }
+            catch
+            {
+            }
 
-            //try
-            //{
-            //    this.EtamOk(true);
-            //}
-            //catch
-            //{
-            //}
-
-            //try
-            //{
-            //    Mouse.Click(uIExitButton);
-            //}
-            //catch
-            //{
-            //}
-
-            //Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
+            Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
 
             Mouse.Click(uIediMatchButton);
 
@@ -1285,6 +1304,8 @@
                 Mouse.Click(uIAcceptButton2);
             }
 
+            this.CancelTestNoPolicyDocsDialog();
+
             this.CancelPrint();
         }
 
@@ -1351,6 +1372,8 @@
             Keyboard.SendKeys(uIItemClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
             Mouse.Click(uIAcceptButton);
+
+            this.CancelTestNoPolicyDocsDialog();
 
             this.EtamYes();
 
@@ -1586,11 +1609,9 @@
             Mouse.DoubleClick(uIBillingScreenClient, new Point(40, 14));
 
             string filename = String.Empty;
-            int quoteCnt = 0;
-            int scheduleCnt = 0;
             int fsaCnt = 0;
 
-            for (int i = 20; i < 500; i = i + 18)
+            for (int i = 21; i < 500; i = i + 17)
             {
                 this.CleanDocuments();
 
@@ -1612,20 +1633,13 @@
                 switch (filename)
                 {
                     case "HHQuote":
-<<<<<<< HEAD
                         this.CheckPremiumInQuote(premium, originalPremium , true);
-=======
-                        this.CheckPremiumInQuote(quoteCnt == 0 ? premium : originalPremium, true);
->>>>>>> origin/master
-                        quoteCnt++;
                         break;
                     case "Quote":
                         this.CheckPremiumInQuote(premium, originalPremium, false);
-                        quoteCnt++;
                         break;
                     case "Schedule":
                         this.CheckPremiumInPdfProposal(premium, originalPremium);
-                        scheduleCnt++;
                         break;
                     case "FSA":
                         this.CheckPremiumInWordDoc(fsaCnt == 0 ? premium : originalPremium);
@@ -1654,7 +1668,7 @@
             Mouse.DoubleClick(uIBillingScreenClient, new Point(40, 14));
 
             string filename = String.Empty;
-            for (int i = 16; i < 1000; i = i + 18)
+            for (int i = 21; i < 1000; i = i + 17)
             {
                 Mouse.Click(uIPolicyAttachmentsClient, new Point(10, i));
                 Mouse.Click(uIDetailButton);
@@ -1700,7 +1714,6 @@
 
             string text = parser.ExtractText(pdfFilePath).Replace(" ", String.Empty);
 
-<<<<<<< HEAD
             if (text.Contains("Cancellation"))
             {
                 Assert.IsTrue(CheckStringForPremium(text, 0 - premium, 0 - originalPremium));
@@ -1709,9 +1722,6 @@
             {
                 Assert.IsTrue(CheckStringForPremium(text, premium, originalPremium));
             }
-=======
-            Assert.IsTrue(text.Contains("Cancellation") ? CheckStringForPremium(text, 0 - premium) : CheckStringForPremium(text, premium));
->>>>>>> origin/master
 
             Playback.Wait(5000);
         }
