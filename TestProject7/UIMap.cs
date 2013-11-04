@@ -548,13 +548,14 @@
         public void CancelTestNoPolicyDocsDialog()
         {
             WinButton uIOKButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
-            Playback.PlaybackSettings.SearchTimeout = 3000;
+            Playback.PlaybackSettings.SearchTimeout = 5000;
             try
             {
                 Mouse.Click(uIOKButton);
             }
             catch
             {
+                Debug.WriteLine("Not test scheme");
             }
             Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
         }
