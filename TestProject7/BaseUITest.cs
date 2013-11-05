@@ -130,7 +130,7 @@
         {
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerLogin", "ourmma");
             RegistrySettings.WriteToRegistry("Software\\VB and VBA Program Settings\\WorkCentre\\Settings", "BrokerPassword", "ourmma");
-            InsurerName = "Covea Insurace plc (formally MMA)";
+            InsurerName = "Covea Insurance plc (formerly MMA)";
             SetAddressDummy();
         }
 
@@ -268,7 +268,7 @@
             return dict;
         }
 
-        protected void RenewalModule(string customerCode, string policyType)
+        public void RenewalModule(string customerCode, string policyType)
         {
             UiMap.RenewalModuleEDI();
             UiMap.RenewalModuleConfirm();

@@ -559,6 +559,8 @@
                         Mouse.Click(uIOKButton);
                     }
 
+                    BaseUiTest.CloseProcess("splwow64");
+
                     break;
                 }
                 catch
@@ -1011,7 +1013,7 @@
             WinControl uiRenewalSearchWindowOkButton = this.UIRenewalSearchWindow.UIOKWindow.UIOKButton;
             WinControl uILogandClearButton = this.UIInsurEtamWindow.UIQuotesWindow.UILogandClearWindow.UILogandClearButton;
 
-            Playback.PlaybackSettings.SearchTimeout = 2000;
+            Playback.PlaybackSettings.SearchTimeout = 5000;
             try
             {
                 this.EtamOk(true);
@@ -1258,6 +1260,7 @@
             this.DeferPrinting();
 
             this.EtamOk(false);
+            this.EtamOk(true);
 
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
@@ -1290,6 +1293,8 @@
 
             Mouse.Click(uIRenewalsNewBusinessAClient, new Point(154, 28));
 
+            Mouse.Move(new Point(500, 500));
+
             try
             {
                 Mouse.Click(uIAcceptButton);
@@ -1300,8 +1305,6 @@
             }
 
             this.CancelTestNoPolicyDocsDialog();
-
-            this.CancelPrint();
         }
 
         public void LapsePolicy(string policyNumber)

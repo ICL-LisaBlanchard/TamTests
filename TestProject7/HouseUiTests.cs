@@ -494,7 +494,7 @@
         public void HouseRebrokeRenewExistingScheme()
         {
             // change registry to ourhighway
-            SetOurAxaRegKeys();
+            SetOurMMaRegKeys();
             //add policy
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
@@ -540,7 +540,7 @@
         public void HouseRebrokeRenewNewScheme()
         {
             // change registry to ourhighway
-            SetOurAxaRegKeys();
+            SetOurMMaRegKeys();
 
             //add policy
             UiMap.CustomerCode = Customer.AddPolicy();

@@ -318,12 +318,9 @@
             WaitForControl(uIAcceptButton);
 
             Mouse.Click(uIAcceptButton);
-
-            this.CancelTestNoPolicyDocsDialog();
-
             this.EtamYes();
 
-            this.CancelPrint();
+            this.CancelTestNoPolicyDocsDialog();
 
             this.PaymentMethod(paymentType);
 
@@ -965,7 +962,7 @@
             Mouse.Click(uINextButton3);
 
             uIPropertyValueItemEdit.Text = HomeCreatePolicyParams.UIItemEditText1;
-      
+
             Mouse.Click(uINextButton4);
 
             Mouse.Click(uIUnspecifiedItemsEdit);
