@@ -468,8 +468,8 @@
             Renewals(policyNumber, PolicyType, RenewalPremium);
             Moto.MotoRebroke(false, false);
             Moto.PublicCreditCheckOk();
-            Moto.MotoRebrokeCurrent(false);
-            RenewalsInvite(true);
+            Moto.MotoRebrokeCurrent(true);
+            RenewalsInvite(false);
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
             string premium = Moto.CheckPolicyPremium("cash");
             Moto.RenewalCheckStatus("REN");

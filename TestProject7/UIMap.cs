@@ -1291,7 +1291,7 @@
 
             Mouse.Click(uIOKButton);
 
-            //this.PaymentMethod(paymentType);
+            this.PaymentMethod(paymentType);
 
             Mouse.Click(uiInsurerNoticeRevaluaWindowOkButton);
 
@@ -1367,7 +1367,7 @@
 
             Mouse.Click(uIOKButton);
 
-            //this.PaymentMethod(paymentType);
+            this.PaymentMethod(paymentType);
 
             Mouse.Click(uIOKButton1, new Point(27, 13));
 
