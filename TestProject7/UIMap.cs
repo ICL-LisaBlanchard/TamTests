@@ -945,7 +945,7 @@
 
             this.DeferPrinting();
 
-            //this.CancelPrint();
+            this.CancelPrint();
 
             this.EtamOk(true);
 
@@ -961,7 +961,7 @@
 
             Mouse.Click(uIRenewPolicyButton);
 
-            //this.PaymentMethod(paymentType);
+            this.PaymentMethod(paymentType);
 
             Mouse.Click(uIYesButton);
 
