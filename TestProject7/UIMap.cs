@@ -560,7 +560,7 @@
                     }
 
                     BaseUiTest.CloseProcess("splwow64");
-
+                    Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
                     break;
                 }
                 catch
@@ -1483,14 +1483,17 @@
 
         public void WaitForControl(UITestControl control)
         {
+            Playback.PlaybackSettings.SearchTimeout = 1000;
             for (int i = 0; i < 30; i++)
             {
                 if (control.Exists)
                 {
+                    Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
                     return;
                 }
-                Thread.Sleep(1000);
+                //Thread.Sleep(1000);
             }
+            Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
 
             Assert.IsTrue(control.Exists, "Control: " + control.Name + " does not exist");
         }
@@ -1868,7 +1871,7 @@
             }
         }
 
-        protected void ImportToTam()
+        public void ImportToTam()
         {
             WinCheckBox uIAddActivityCheckBox = this.UIImporttoTAMWindow.UIImportOptionsClient.UIAddActivityCheckBox;
             WinControl uIOKButton = this.UIImporttoTAMWindow.UIImporttoTAMClient.UIOKButton;
