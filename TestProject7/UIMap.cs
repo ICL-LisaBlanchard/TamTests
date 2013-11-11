@@ -934,14 +934,14 @@
         public void RenewalModuleRenew1()
 
         {
-            //try
-            //{
-            //    this.PaymentMethod("cash");
-            //    this.ConfirmDocuments();
-            //}
-            //catch
-            //{
-            //}
+            try
+            {
+                this.PaymentMethod("cash");
+                this.ConfirmDocuments();
+            }
+            catch
+            {
+            }
 
             this.DeferPrinting();
 
