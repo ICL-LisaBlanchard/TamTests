@@ -30,7 +30,7 @@
         [TestMethod]
         public void TestMethod1()
         {
-            House.HomeAmendRenewFinish("dd");
+            House.ImportToTam();
         }
     }
 }
