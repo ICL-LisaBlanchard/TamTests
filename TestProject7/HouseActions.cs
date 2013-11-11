@@ -1010,9 +1010,12 @@
 
             Mouse.Click(uIYesButton);
 
-            //this.PaymentMethod(paymentType);
+            this.PaymentMethod(paymentType);
 
-            //Playback.Wait(10000);
+            Mouse.Click(uIYesButton);
+
+            Playback.Wait(10000);
+
             this.CancelPrint();
 
             this.ConfirmDocuments();
@@ -1028,13 +1031,18 @@
 
         public void HomeAmendRenew()
         {
+            WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
+
             Playback.Wait(2000);
 
             this.RenewPolicy();
 
-            //this.PaymentMethod("cash");
+            // 4.1.0
+            this.PaymentMethod("cash");
 
-            //this.EtamYes();
+            Mouse.Click(uIYesButton);
+
+            // 4.1.0 End
 
             //this.CancelPrint();
 

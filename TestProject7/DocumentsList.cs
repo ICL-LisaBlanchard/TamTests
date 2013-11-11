@@ -228,6 +228,26 @@
             }
         }
 
+        public List<Document> DocumentsForMotoAmendRiskNewDd
+        {
+            get
+            {
+                return new List<Document>
+                           {
+                               new Document("QuotesList", 2),
+                               new Document("Quote", 2),
+                               new Document("Policy Summary", 1),
+                               new Document("Direct Debit", 2),
+                               new Document("Certificate", 2),
+                               new Document("Schedule", 2),
+                               new Document("Cover Note", 1),
+                               new Document("Proposal", 2),
+                               new Document("FSA", 2)
+                           };
+            }
+        }
+
+
         public List<Document> DocumentsForMotoMotoAmendRiskExistingScheme
         {
             get

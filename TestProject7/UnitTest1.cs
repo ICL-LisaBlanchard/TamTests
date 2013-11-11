@@ -30,10 +30,7 @@
         [TestMethod]
         public void TestMethod1()
         {
-            var b = new BaseUiTest();
-            House.RegressApp("AUTO328");
-           b.RenewalLoader();
-           b.RenewalModule("AUTO328", "Household");
+            House.HomeAmendRenewFinish("dd");
         }
     }
 }

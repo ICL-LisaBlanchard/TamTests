@@ -376,7 +376,7 @@
         {
             this.RenewPolicy();
 
-            //PaymentMethod(paymentMethod);
+            PaymentMethod(paymentMethod);
 
             CancelPrint();
 
