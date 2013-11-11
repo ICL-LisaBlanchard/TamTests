@@ -57,7 +57,7 @@
                 return new List<Document>
                            {
                                new Document("HHQuotesList", 2),
-                               new Document("HHQuote", 2),
+                               new Document("HHQuote", 1),
                                new Document("Schedule", 2),
                                new Document("Proposal", 2),
                                new Document("FSA", 2)

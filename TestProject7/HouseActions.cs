@@ -1008,6 +1008,8 @@
 
             Mouse.Click(uIRenewPolicyButton);
 
+            this.EtamOk(true);
+
             Mouse.Click(uIYesButton);
 
             this.PaymentMethod(paymentType);
@@ -1019,6 +1021,17 @@
             this.CancelPrint();
 
             this.ConfirmDocuments();
+
+            Playback.Wait(30000);
+
+            try
+            {
+                Playback.PlaybackSettings.SearchTimeout = 120000;
+                this.EtamYes();
+                Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
+            }
+
+            catch { }
 
             this.DeferPrinting();
 

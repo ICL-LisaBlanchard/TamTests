@@ -437,7 +437,7 @@
         {
             WinControl uIOKButton1 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
             Playback.PlaybackSettings.ContinueOnError = continueOnError;
-            Mouse.Click(uIOKButton1, new Point(47, 12));
+            Mouse.Click(uIOKButton1);
             Playback.PlaybackSettings.ContinueOnError = false;
         }
 
@@ -902,7 +902,7 @@
         public void ContinueToRetrieveResponse()
         {
             WinControl uIOKButton = this.UIInsurEtamWindow1.UIOKWindow1.UIOKButton;
-
+            Playback.PlaybackSettings.SearchTimeout = 300000;
             try
             {
 
@@ -1259,8 +1259,12 @@
 
             this.DeferPrinting();
 
+            Playback.Wait(5000);
+
             this.EtamOk(false);
             this.EtamOk(true);
+
+            this.EtamYes();
 
             uIAddActivityCheckBox.Checked = this.CommonParams.UIAddActivityCheckBoxChecked;
 
@@ -1290,6 +1294,8 @@
             //this.PaymentMethod(paymentType);
 
             Mouse.Click(uiInsurerNoticeRevaluaWindowOkButton);
+
+            Playback.Wait(20000);
 
             Mouse.Click(uIRenewalsNewBusinessAClient, new Point(154, 28));
 
