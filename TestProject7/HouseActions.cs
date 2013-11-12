@@ -290,6 +290,8 @@
 
             Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
 
+            Playback.Wait(2000);
+
             Mouse.Move(new Point(500, 500));
 
             Mouse.Click(uIExitButton);
@@ -1065,7 +1067,7 @@
 
             this.DeferPrinting();
 
-            this.EtamOk(false);
+            this.EtamOk(true);
 
             this.ImportToTam();
 

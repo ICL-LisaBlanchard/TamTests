@@ -516,7 +516,7 @@
             House.HomeRebrokeSelectPolicy(House.CommonParams.SendHomeKeys);
             House.HomeRebrokeSelectAlternative();
             House.HomeRebrokeFinish();
-            //House.ImportToTamOptionsOnce("");
+            House.ImportToTamOptionsOnce("");
             House.RenewalModuleInvite(false);
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();
@@ -562,7 +562,7 @@
             House.HomeRebrokeSelectPolicy(House.CommonParams.SendEndKeys);
             House.HomeRebrokeSelectAlternative();
             House.HomeRebrokeFinish();
-            //House.ImportToTamOptionsOnce("");
+            House.ImportToTamOptionsOnce("");
             House.RenewalModuleInvite(false);
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();

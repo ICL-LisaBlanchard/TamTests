@@ -244,7 +244,7 @@
 
             try
             {
-                //PaymentMethod("cash");
+                PaymentMethod("cash");
                 Mouse.Click(uIYesButton);
             }
             catch
