@@ -7,14 +7,14 @@
 
     public class UIAutoPolicyWindow : WinWindow
     {
-        public UIAutoPolicyWindow()
+        public UIAutoPolicyWindow(string customerCode)
         {
             #region Search Criteria
 
-            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "-1001", PropertyExpressionOperator.Contains));
+            var windowName = customerCode + "-1001";
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, windowName, PropertyExpressionOperator.Contains));
             SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            //windowTitle = "AUTO187-1001";
-            //WindowTitles.Add(windowTitle);
+            WindowTitles.Add(windowName);
 
             #endregion
         }

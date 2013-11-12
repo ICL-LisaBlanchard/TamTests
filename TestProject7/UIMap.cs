@@ -99,14 +99,6 @@
             }
         }
 
-        public virtual MotoRenewalCheckRecordExpectedValues RenewalCheckRecordExpectedValues
-        {
-            get
-            {
-                return new MotoRenewalCheckRecordExpectedValues();
-            }
-        }
-
         public virtual MotoCreateSiteRenewalParams MotoCreateSiteRenewalParams
         {
             get

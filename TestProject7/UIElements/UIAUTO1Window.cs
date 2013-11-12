@@ -7,14 +7,15 @@
 
     public class UiAuto1Window : WinWindow
     {
-        public UiAuto1Window()
+        public UiAuto1Window(string customerCode)
         {
             #region Search Criteria
 
-            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "AUTO", PropertyExpressionOperator.Contains));
-            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "-1001", PropertyExpressionOperator.Contains));
+            var windowName = customerCode + "-1001";
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, windowName, PropertyExpressionOperator.Contains));
+
             SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            WindowTitles.Add("AUTO225-1001");
+            WindowTitles.Add(windowName);
 
             #endregion
         }
