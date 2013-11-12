@@ -7,14 +7,14 @@ namespace AppliedSystems.Tam.Ui.Tests.UIElements
 
     public class UiAutoWindow : WinWindow
     {
-        public UiAutoWindow()
+        public UiAutoWindow(string customerCode)
         {
             #region Search Criteria
 
-            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "AUTO", PropertyExpressionOperator.Contains));
-            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "-1001", PropertyExpressionOperator.Contains));
+            var windowTitle = customerCode + "-1001";
+            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, windowTitle, PropertyExpressionOperator.Contains));
             SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
-            WindowTitles.Add("AUTO230-1001");
+            WindowTitles.Add(windowTitle);
 
             #endregion
         }

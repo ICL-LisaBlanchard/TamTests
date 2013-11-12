@@ -722,7 +722,7 @@ return new UITheAgencyManagerSignWindow();
             {
                 if ((this.mUIAutoPolicyWindow == null))
                 {
-                    this.mUIAutoPolicyWindow = new UIAutoPolicyWindow();
+                    this.mUIAutoPolicyWindow = new UIAutoPolicyWindow(this.CustomerCode);
                 }
                 return this.mUIAutoPolicyWindow;
             }
@@ -782,7 +782,7 @@ return new UITheAgencyManagerSignWindow();
             {
                 if ((mUiautoxxx1000Window == null))
                 {
-                    mUiautoxxx1000Window = new Uiautoxxx1000Window();
+                    mUiautoxxx1000Window = new Uiautoxxx1000Window(this.CustomerCode);
                 }
                 return mUiautoxxx1000Window;
             }
@@ -854,7 +854,7 @@ return new UITheAgencyManagerSignWindow();
             {
                 if ((this.mUiAuto1Window == null))
                 {
-                    this.mUiAuto1Window = new UiAuto1Window();
+                    this.mUiAuto1Window = new UiAuto1Window(this.CustomerCode);
                 }
                 return this.mUiAuto1Window;
             }
@@ -902,7 +902,7 @@ return new UITheAgencyManagerSignWindow();
             {
                 if ((this.mUiAutoWindow == null))
                 {
-                    this.mUiAutoWindow = new UiAutoWindow();
+                    this.mUiAutoWindow = new UiAutoWindow(this.CustomerCode);
                 }
                 return this.mUiAutoWindow;
             }
