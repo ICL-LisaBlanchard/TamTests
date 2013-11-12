@@ -99,14 +99,6 @@
             }
         }
 
-        public virtual MotoRenewalCheckRecordExpectedValues RenewalCheckRecordExpectedValues
-        {
-            get
-            {
-                return new MotoRenewalCheckRecordExpectedValues();
-            }
-        }
-
         public virtual MotoCreateSiteRenewalParams MotoCreateSiteRenewalParams
         {
             get
@@ -547,6 +539,7 @@
         {
             WinButton uIOKButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
             Playback.PlaybackSettings.SearchTimeout = 1000;
+            Playback.Wait(3000);
             for (int i = 0; i < 10; i++)
             {
 
