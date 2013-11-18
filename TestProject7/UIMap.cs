@@ -428,9 +428,14 @@
         public void EtamOk(bool continueOnError)
         {
             WinControl uIOKButton1 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
-            Playback.PlaybackSettings.ContinueOnError = continueOnError;
-            Mouse.Click(uIOKButton1);
-            Playback.PlaybackSettings.ContinueOnError = false;
+            try
+            {Mouse.Click(uIOKButton1);
+            }
+            catch { 
+            
+            }
+            
+            
         }
 
         public void LapseOk()

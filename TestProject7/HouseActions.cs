@@ -251,9 +251,9 @@
 
             Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendEndKeys, ModifierKeys.None);
 
-            WaitForControl(uIPrintQuoteButton);
+            //WaitForControl(uIPrintQuoteButton);
 
-            Mouse.Click(uIPrintQuoteButton);
+            //Mouse.Click(uIPrintQuoteButton);
         }
 
         public void HomeExitWithPolicy()
@@ -1007,6 +1007,7 @@
         {
             WinControl uIRenewPolicyButton = this.UIHouseholdRenewalsResultsWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
+            WinButton uIRenewedButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
 
             Mouse.Click(uIRenewPolicyButton);
 
@@ -1037,7 +1038,9 @@
 
             this.DeferPrinting();
 
-            this.EtamOk(false);
+            this.EtamOk(true);
+
+            Mouse.Click(uIRenewedButton);
 
             this.ImportToTam();
 
@@ -1047,6 +1050,7 @@
         public void HomeAmendRenew()
         {
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
+            WinButton uiOkButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
 
             Playback.Wait(2000);
 
@@ -1064,10 +1068,15 @@
             this.ConfirmDocuments();
 
             //this.EtamYes();
+            this.EtamOk(true);
 
             this.DeferPrinting();
 
-            this.EtamOk(true);
+            Playback.Wait(120000);
+
+            this.EtamOk(false);
+
+            this.EtamOk(false);
 
             this.ImportToTam();
 

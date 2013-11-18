@@ -516,14 +516,12 @@
 
             Mouse.Click(uIOKButton);
 
-            try
-            {
+            Playback.Wait(10000);
+
+
                 ImportToTamOptionsOnce("");
 
-            }
-            catch
-            {
-            }
+
 
             if (withYesButton)
             {

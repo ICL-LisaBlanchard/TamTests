@@ -40,9 +40,6 @@
             House.HomePrintQuote();
             House.SelectMenu();
             House.HomePrintQuote1();
-            House.HomeCheckPrint();
-            House.HomeDemands();
-            House.CloseDemands();
             House.HomeAcceptQuote();
             House.CancelPrint();
             House.HomeAcceptQuote1();
