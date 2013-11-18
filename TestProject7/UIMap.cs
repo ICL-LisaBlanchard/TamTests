@@ -537,7 +537,7 @@
         public void CancelTestNoPolicyDocsDialog()
         {
             WinButton uIOKButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
-            Playback.PlaybackSettings.SearchTimeout = 1000;
+            Playback.PlaybackSettings.SearchTimeout = 5000;
             for (int i = 0; i < 10; i++)
             {
                 try

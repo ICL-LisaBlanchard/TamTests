@@ -13,7 +13,7 @@
         [TestMethod]
         public void HouseAmendQuoteDirectDebit()
         {
-            this.SetOurAnsvarRegKeys();
+            this.SetOurZurichRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
