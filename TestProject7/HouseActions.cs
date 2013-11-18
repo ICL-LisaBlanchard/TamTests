@@ -984,19 +984,13 @@
         {
             this.DeferPrinting();
 
-            int timeout = Playback.PlaybackSettings.SearchTimeout;
-
             Playback.PlaybackSettings.SearchTimeout = 120000;
-
-            Playback.PlaybackSettings.ContinueOnError = true;
 
             Mouse.Move(new Point(500, 500));
 
             this.EtamOk(true);
 
-            Playback.PlaybackSettings.ContinueOnError = false;
-
-            Playback.PlaybackSettings.SearchTimeout = timeout;
+            Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
 
             this.ImportToTam();
 
@@ -1027,14 +1021,7 @@
 
             Playback.Wait(30000);
 
-            try
-            {
-                Playback.PlaybackSettings.SearchTimeout = 120000;
-                this.EtamYes();
-                Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
-            }
-
-            catch { }
+            this.EtamYes();
 
             this.DeferPrinting();
 

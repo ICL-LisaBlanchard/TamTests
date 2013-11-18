@@ -535,7 +535,6 @@
         {
             WinControl uIAcceptButton = this.UIQuoteResultsWindow.UIAcceptWindow.UIAcceptButton;
 
-
             Mouse.Click(this.UIQuoteResultsWindow);
             Mouse.Click(uIAcceptButton);
         }
@@ -546,7 +545,6 @@
             Playback.PlaybackSettings.SearchTimeout = 1000;
             for (int i = 0; i < 10; i++)
             {
-
                 try
                 {
                     Process[] pname = Process.GetProcessesByName("splwow64");
@@ -902,21 +900,25 @@
             Playback.PlaybackSettings.SearchTimeout = 300000;
             try
             {
-
                 Mouse.Click(uIOKButton);
             }
             catch
             {
             }
+            Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
         }
 
         public void RenewConfirmInvite()
         {
             WinControl uIOKButton = this.UIConfirmWindow.UIOKWindow.UIOKButton;
 
-            Playback.PlaybackSettings.ContinueOnError = true;
-
-            Mouse.Click(uIOKButton);
+            try
+            {
+                Mouse.Click(uIOKButton);
+            }
+            catch
+            {
+            }
 
             Playback.PlaybackSettings.ContinueOnError = false;
         }
@@ -1005,20 +1007,14 @@
 
         public void RenewalModuleEdi1(bool continueOnError)
         {
-            WinControl uIExitButton = this.UIPoliciesAutoRenewedAWindow.UIExitWindow.UIExitButton;
             WinControl uIediMatchButton = this.UIInsurEtamWindow.UIQuotesWindow.UIEDIMatchWindow.UIEDIMatchButton;
             WinControl uiRenewalSearchWindowOkButton = this.UIRenewalSearchWindow.UIOKWindow.UIOKButton;
             WinControl uILogandClearButton = this.UIInsurEtamWindow.UIQuotesWindow.UILogandClearWindow.UILogandClearButton;
 
             Playback.PlaybackSettings.SearchTimeout = 5000;
-            try
-            {
-                this.EtamOk(true);
-                this.EtamOk(true);
-            }
-            catch
-            {
-            }
+
+            this.EtamOk(true);
+            this.EtamOk(true);
 
             Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
 
@@ -1488,7 +1484,7 @@
                     Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
                     return;
                 }
-                //Thread.Sleep(1000);
+
             }
             Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
 
@@ -1637,7 +1633,7 @@
                 switch (filename)
                 {
                     case "HHQuote":
-                        this.CheckPremiumInQuote(premium, originalPremium , true);
+                        this.CheckPremiumInQuote(premium, originalPremium, true);
                         break;
                     case "Quote":
                         this.CheckPremiumInQuote(premium, originalPremium, false);
@@ -1718,14 +1714,7 @@
 
             string text = parser.ExtractText(pdfFilePath).Replace(" ", String.Empty);
 
-            if (text.Contains("Cancellation"))
-            {
-                Assert.IsTrue(CheckStringForPremium(text, 0 - premium, 0 - originalPremium));
-            }
-            else
-            {
-                Assert.IsTrue(CheckStringForPremium(text, premium, originalPremium));
-            }
+            Assert.IsTrue(text.Contains("Cancellation") ? CheckStringForPremium(text, 0 - premium, 0 - originalPremium) : CheckStringForPremium(text, premium, originalPremium));
 
             Playback.Wait(5000);
         }
@@ -1751,7 +1740,6 @@
             WinList uIItemList3 = this.UISelectTamActivityTypWindow.UIItemWindow.UIItemList;
             WinButton uIOKButton3 = this.UISelectTamActivityTypWindow.UIItemWindow1.UIClient().UIOKButton;
 
-            int timeout = Playback.PlaybackSettings.SearchTimeout;
             Playback.PlaybackSettings.SearchTimeout = 5000;
             try
             {
@@ -1786,7 +1774,7 @@
             {
                 Debug.WriteLine(ex.ToString());
             }
-            Playback.PlaybackSettings.SearchTimeout = timeout;
+            Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
         }
 
         public string GetPolicyNumber()
@@ -1910,13 +1898,9 @@
                 return false;
             }
 
-            return text.Contains(premium.ToString("0.00")) || 
-                text.Contains((premium + 0.01).ToString("0.00")) || 
-                text.Contains((premium - 0.01).ToString("0.00")) ||
-                text.Contains(originalPremium.ToString("0.00")) ||
-                text.Contains((originalPremium + 0.01).ToString("0.00")) ||
-                text.Contains((originalPremium - 0.01).ToString("0.00")) 
-                ;
+            return text.Contains(premium.ToString("0.00")) || text.Contains((premium + 0.01).ToString("0.00")) || text.Contains((premium - 0.01).ToString("0.00"))
+                   || text.Contains(originalPremium.ToString("0.00")) || text.Contains((originalPremium + 0.01).ToString("0.00"))
+                   || text.Contains((originalPremium - 0.01).ToString("0.00"));
         }
 
         private void CheckPremiumInQuote(double premium, double originalPremium, bool isHouse)
@@ -1948,17 +1932,17 @@
         private void OpenAttachment()
         {
             WinButton uIOptionsButton = this.UIPolicyAttachmentsWindow.UIOptionsWindow.UIOptionsButton;
-            WinButton uIOKButton = this.UIViewAttachmentWindow.UIOKWindow.UIOKButton;
+            //WinButton uIOKButton = this.UIViewAttachmentWindow.UIOKWindow.UIOKButton;
             WinMenuItem uIViewAttachmentMenuItem = this.UIAttachmentsMenuWindow.UIContextMenu.UIMenuItem("View Attachment");
             Mouse.Click(uIOptionsButton);
             Mouse.Click(uIViewAttachmentMenuItem);
-            try
-            {
-                Mouse.Click(uIOKButton);
-            }
-            catch (Exception)
-            {
-            }
+            //try
+            //{
+            //    Mouse.Click(uIOKButton);
+            //}
+            //catch (Exception)
+            //{
+            //}
         }
 
         private void CheckPremiumInWordDoc(double premium)
@@ -1998,7 +1982,6 @@
 
                 Mouse.Click(uIFindNextButton);
 
-                int defaultTimeout = Playback.PlaybackSettings.SearchTimeout;
                 Playback.PlaybackSettings.SearchTimeout = 1000;
                 try
                 {
@@ -2008,7 +1991,7 @@
                 {
                     b = true;
                 }
-                Playback.PlaybackSettings.SearchTimeout = defaultTimeout;
+                Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
             }
 
             if (!b)
