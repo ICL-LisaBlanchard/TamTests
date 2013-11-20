@@ -12,7 +12,7 @@
             #region Search Criteria
 
             SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "New Business Accept", PropertyExpressionOperator.Contains));
-            SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Renewals", PropertyExpressionOperator.Contains));
+            //SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name, "Renewals", PropertyExpressionOperator.Contains));
             SearchProperties[UITestControl.PropertyNames.ClassName] = "ThunderRT6FormDC";
 
             #endregion
@@ -24,11 +24,7 @@
         {
             get
             {
-                if ((mUIItemWindow == null))
-                {
-                    mUIItemWindow = new UIItemWindow(this, className: "ListView20WndClass");
-                }
-                return mUIItemWindow;
+                return  new UIItemWindow(this, className: "ListView20WndClass");
             }
         }
 

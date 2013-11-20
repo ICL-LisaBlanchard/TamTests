@@ -840,11 +840,7 @@ return new UITheAgencyManagerSignWindow();
         {
             get
             {
-                if ((mUIRenewalsNewBusinessAWindow == null))
-                {
-                    mUIRenewalsNewBusinessAWindow = new UIRenewalsNewBusinessAWindow();
-                }
-                return mUIRenewalsNewBusinessAWindow;
+                return  new UIRenewalsNewBusinessAWindow();
             }
         }
         

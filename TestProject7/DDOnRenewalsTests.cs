@@ -13,7 +13,7 @@
         [TestMethod]
         public void HouseAmendQuoteDirectDebit()
         {
-            this.SetOurZurichRegKeys();
+            this.SetOurAnsvarRegKeys();
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
             House.SelectMenu();
@@ -32,7 +32,7 @@
 
             string policyNumber = House.GetPolicyNumber();
 
-            Renewals(policyNumber, PolicyType, RenewalPremium, "Ansvar Insurance");
+            Renewals(policyNumber, PolicyType, RenewalPremium);
 
             House.HomeAmendRisk();
             House.PublicCreditCheckOk();
