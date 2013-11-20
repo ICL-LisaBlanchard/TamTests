@@ -428,12 +428,23 @@
         public void EtamOk(bool continueOnError)
         {
             WinControl uIOKButton1 = this.UIInsurEtamWindow1.UIOKWindow.UIOKButton;
-            try
-            {Mouse.Click(uIOKButton1);
+
+            if (continueOnError)
+            {
+                try
+                {
+                    Mouse.Click(uIOKButton1);
+                }
+                catch
+                {
+
+                }
             }
-            catch { 
-            
+            else {
+
+                Mouse.Click(uIOKButton1);
             }
+
             
             
         }
@@ -993,12 +1004,15 @@
             WinEdit uIItemEdit1 = this.UIFilterRenewalRecordsWindow.UIItemWindow1.UIItemEdit;
             WinComboBox uIItemComboBox = this.UIFilterRenewalRecordsWindow.UIItemWindow2.UIItemComboBox;
             WinControl uIOKButton = this.UIFilterRenewalRecordsWindow.UIOKWindow.UIOKButton;
+            WinRadioButton uIEDImatchedRadioButton = this.UIFilterRenewalRecordsWindow.UIEDImatchedWindow.UIRadioButton("EDI matched");
 
             Mouse.Click(uIFilterButton);
 
             uIItemEdit.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
 
             uIItemEdit1.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
+
+            Mouse.Click(uIEDImatchedRadioButton);
 
             uIItemComboBox.SelectedItem = houseOrMoto;
 
@@ -1570,13 +1584,36 @@
             string[] files = Directory.GetFiles(Configs.LocalDocsPath, "*.htm");
             foreach (string file in files)
             {
-                File.Delete(file);
+                for (int i = 0; i < 5; i++)
+                {
+                    try
+                    {
+                        File.Delete(file);
+                        break;
+                    }
+                    catch
+                    {
+                        Thread.Sleep(1000);
+                    }
+                }
             }
 
             files = Directory.GetFiles(Configs.LocalDocsPath, "*.pdf");
             foreach (string file in files)
             {
-                File.Delete(file);
+                for (int i = 0; i < 5; i++)
+                {
+                    try 
+                    { 
+                        File.Delete(file);
+                        break;
+                    }
+                    catch {
+                        Thread.Sleep(1000);
+                    }
+                }
+
+                
             }
         }
 

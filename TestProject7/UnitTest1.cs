@@ -17,14 +17,14 @@
 
         protected readonly UIMap UiMap = new UIMap();
 
+        protected readonly DocumentsList Docs = new DocumentsList();
 
         protected readonly CustomerActions cust = new CustomerActions();
 
         [TestMethod]
         public void TestMethod1()
         {
-
-            House.EtamOk(true);
+            Moto.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoNewBusinessQuote, "cash");
         }
     }
 }

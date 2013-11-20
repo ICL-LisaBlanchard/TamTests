@@ -1019,15 +1019,26 @@
 
             this.ConfirmDocuments();
 
-            Playback.Wait(30000);
+            Playback.Wait(5000);
+
 
             this.EtamYes();
 
             this.DeferPrinting();
 
+            Playback.Wait(5000);
+
+            
+            WinWindow win = this.UiAutoWindow;
+
+            Mouse.Click(win, new Point(500, 500));
+
+
             this.EtamOk(true);
 
-            Mouse.Click(uIRenewedButton);
+            
+            Playback.Wait(5000);
+
 
             this.ImportToTam();
 
@@ -1059,9 +1070,9 @@
 
             this.DeferPrinting();
 
-            Playback.Wait(120000);
+            WinWindow win = this.UiAutoWindow;
 
-            this.EtamOk(false);
+            Mouse.Click(win, new Point(500, 500));
 
             this.EtamOk(false);
 
