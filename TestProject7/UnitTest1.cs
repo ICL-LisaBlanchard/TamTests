@@ -9,7 +9,7 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [CodedUITest]
-    public class UnitTest1
+    public class UnitTest1 
     {
         protected readonly MotoActions Moto = new MotoActions();
 
@@ -21,16 +21,10 @@
 
         protected readonly CustomerActions cust = new CustomerActions();
 
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext { get; set; }
-
         [TestMethod]
         public void TestMethod1()
         {
-            House.RebrokeAlternativeFinish("cash");
+            Moto.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoNewBusinessQuote, "cash");
         }
     }
 }

@@ -244,7 +244,7 @@
 
             try
             {
-                //PaymentMethod("cash");
+                PaymentMethod("cash");
                 Mouse.Click(uIYesButton);
             }
             catch
@@ -516,14 +516,12 @@
 
             Mouse.Click(uIOKButton);
 
-            try
-            {
+            Playback.Wait(10000);
+
+
                 ImportToTamOptionsOnce("");
 
-            }
-            catch
-            {
-            }
+
 
             if (withYesButton)
             {

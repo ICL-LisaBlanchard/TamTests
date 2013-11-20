@@ -40,9 +40,6 @@
             House.HomePrintQuote();
             House.SelectMenu();
             House.HomePrintQuote1();
-            House.HomeCheckPrint();
-            House.HomeDemands();
-            House.CloseDemands();
             House.HomeAcceptQuote();
             House.CancelPrint();
             House.HomeAcceptQuote1();
@@ -516,7 +513,7 @@
             House.HomeRebrokeSelectPolicy(House.CommonParams.SendHomeKeys);
             House.HomeRebrokeSelectAlternative();
             House.HomeRebrokeFinish();
-            //House.ImportToTamOptionsOnce("");
+            House.ImportToTamOptionsOnce("");
             House.RenewalModuleInvite(false);
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();
@@ -562,7 +559,7 @@
             House.HomeRebrokeSelectPolicy(House.CommonParams.SendEndKeys);
             House.HomeRebrokeSelectAlternative();
             House.HomeRebrokeFinish();
-            //House.ImportToTamOptionsOnce("");
+            House.ImportToTamOptionsOnce("");
             House.RenewalModuleInvite(false);
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();

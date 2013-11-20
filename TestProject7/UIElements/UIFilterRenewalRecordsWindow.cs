@@ -69,6 +69,14 @@
             }
         }
 
+        public UIItemWindow UIEDImatchedWindow
+        {
+            get
+            {
+                return new UIItemWindow(this, controlId: "3");
+            }
+        }
+
         #endregion
 
         #region Fields

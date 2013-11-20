@@ -251,9 +251,9 @@
 
             Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendEndKeys, ModifierKeys.None);
 
-            WaitForControl(uIPrintQuoteButton);
+            //WaitForControl(uIPrintQuoteButton);
 
-            Mouse.Click(uIPrintQuoteButton);
+            //Mouse.Click(uIPrintQuoteButton);
         }
 
         public void HomeExitWithPolicy()
@@ -289,6 +289,8 @@
             Mouse.Click(uIQuotesResultsClient, new Point(30, 30));
 
             Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
+
+            Playback.Wait(2000);
 
             Mouse.Move(new Point(500, 500));
 
@@ -999,6 +1001,7 @@
         {
             WinControl uIRenewPolicyButton = this.UIHouseholdRenewalsResultsWindow.UIRenewPolicyWindow.UIRenewPolicyButton;
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
+            WinButton uIRenewedButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
 
             Mouse.Click(uIRenewPolicyButton);
 
@@ -1016,13 +1019,26 @@
 
             this.ConfirmDocuments();
 
-            Playback.Wait(30000);
+            Playback.Wait(5000);
+
 
             this.EtamYes();
 
             this.DeferPrinting();
 
-            this.EtamOk(false);
+            Playback.Wait(5000);
+
+            
+            WinWindow win = this.UiAutoWindow;
+
+            Mouse.Click(win, new Point(500, 500));
+
+
+            this.EtamOk(true);
+
+            
+            Playback.Wait(5000);
+
 
             this.ImportToTam();
 
@@ -1032,6 +1048,7 @@
         public void HomeAmendRenew()
         {
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
+            WinButton uiOkButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
 
             Playback.Wait(2000);
 
@@ -1049,8 +1066,13 @@
             this.ConfirmDocuments();
 
             //this.EtamYes();
+            this.EtamOk(true);
 
             this.DeferPrinting();
+
+            WinWindow win = this.UiAutoWindow;
+
+            Mouse.Click(win, new Point(500, 500));
 
             this.EtamOk(false);
 
