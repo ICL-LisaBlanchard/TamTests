@@ -552,6 +552,7 @@
 
         public void CancelTestNoPolicyDocsDialog()
         {
+            Playback.Wait(5000);
             WinButton uIOKButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
             Playback.PlaybackSettings.SearchTimeout = 5000;
             for (int i = 0; i < 10; i++)
@@ -1004,7 +1005,7 @@
             WinEdit uIItemEdit1 = this.UIFilterRenewalRecordsWindow.UIItemWindow1.UIItemEdit;
             WinComboBox uIItemComboBox = this.UIFilterRenewalRecordsWindow.UIItemWindow2.UIItemComboBox;
             WinControl uIOKButton = this.UIFilterRenewalRecordsWindow.UIOKWindow.UIOKButton;
-            WinRadioButton uIEDImatchedRadioButton = this.UIFilterRenewalRecordsWindow.UIEDImatchedWindow.UIRadioButton("EDI matched");
+            WinRadioButton uIedImatchedRadioButton = this.UIFilterRenewalRecordsWindow.UIEDImatchedWindow.UIRadioButton("EDI matched");
 
             Mouse.Click(uIFilterButton);
 
@@ -1012,7 +1013,7 @@
 
             uIItemEdit1.Text = DateTime.Now.AddDays(7).ToString("dd/MM/yy");
 
-            Mouse.Click(uIEDImatchedRadioButton);
+            Mouse.Click(uIedImatchedRadioButton);
 
             uIItemComboBox.SelectedItem = houseOrMoto;
 
@@ -1969,90 +1970,29 @@
         private void OpenAttachment()
         {
             WinButton uIOptionsButton = this.UIPolicyAttachmentsWindow.UIOptionsWindow.UIOptionsButton;
-            //WinButton uIOKButton = this.UIViewAttachmentWindow.UIOKWindow.UIOKButton;
             WinMenuItem uIViewAttachmentMenuItem = this.UIAttachmentsMenuWindow.UIContextMenu.UIMenuItem("View Attachment");
             Mouse.Click(uIOptionsButton);
             Mouse.Click(uIViewAttachmentMenuItem);
-            //try
-            //{
-            //    Mouse.Click(uIOKButton);
-            //}
-            //catch (Exception)
-            //{
-            //}
         }
 
         private void CheckPremiumInWordDoc(double premium)
         {
             WinButton uIOptionsButton = this.UIPolicyAttachmentsWindow.UIOptionsWindow.UIOptionsButton;
-            WinMenuItem uIViewAttachmentMenuItem = this.UIAttachmentsMenuWindow.UIContextMenu.UIMenuItem("View Attachment");
-            WinMenuItem uIFindMenuItem = this.UIDemand2docMicrosoftWWindow.UIMenuBarMenuBar.UIEditMenuItem.UIFindMenuItem;
-            WinEdit uIFindwhatEdit = this.UIFindandGotoWindow.UIFindandGotoDialog.UIEdit("Find what:");
-            WinButton uIFindNextButton = this.UIFindandGotoWindow.UIFindandGotoDialog.UIButton("Find Next");
-            WinButton uIOkButton = this.UIMicrosoftOfficeWordVWindow.UIOKWindow.UIOKButton;
-            WinButton uICancelButton = this.UIFindandGotoWindow.UIFindandGotoDialog.UICancelButton;
+            WinMenuItem uIViewAttachmentMenuItem = this.UIAttachmentsMenuWindow.UIContextMenu.UIMenuItem("View Attachment");      
             WinButton uICloseButton = this.UIDemand2docMicrosoftWWindow.UIDemand2DocMicrosoftWTitleBar.UICloseButton;
 
             Mouse.Click(uIOptionsButton);
             Mouse.Click(uIViewAttachmentMenuItem);
 
-            Mouse.Click(uIFindMenuItem, new Point(36, 6));
-
-            uIFindwhatEdit.Text = (premium).ToString(CultureInfo.InvariantCulture);
-
-            Mouse.Click(uIFindNextButton);
-
-            bool b;
-            try
-            {
-                b = !this.UIMicrosoftOfficeWordVWindow.UIOKWindow.Exists;
-            }
-            catch (Exception)
-            {
-                b = true;
-            }
-
-            if (!b)
-            {
-                Mouse.Click(uIOkButton);
-                uIFindwhatEdit.Text = (premium + 0.01).ToString(CultureInfo.InvariantCulture);
-
-                Mouse.Click(uIFindNextButton);
-
-                Playback.PlaybackSettings.SearchTimeout = 1000;
-                try
-                {
-                    b = !this.UIMicrosoftOfficeWordVWindow.UIOKWindow.Exists;
-                }
-                catch (Exception)
-                {
-                    b = true;
-                }
-                Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
-            }
-
-            if (!b)
-            {
-                Mouse.Click(uIOkButton);
-                uIFindwhatEdit.Text = (premium + 0.01).ToString(CultureInfo.InvariantCulture);
-
-                Mouse.Click(uIFindNextButton);
-
-                try
-                {
-                    b = !this.UIMicrosoftOfficeWordVWindow.UIOKWindow.Exists;
-                }
-                catch (Exception)
-                {
-                    b = true;
-                }
-            }
-
-            Assert.IsTrue(b);
-
-            Mouse.Click(uICancelButton);
 
             Mouse.Click(uICloseButton);
+
+            var d = new Documents();
+
+            d.CheckWordDoc(Configs.LocalDocsPath + @"\Demand~1.doc", premium.ToString(CultureInfo.InvariantCulture));
+
         }
+
+
     }
 }

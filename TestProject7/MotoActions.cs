@@ -1004,7 +1004,6 @@
         {
             AcceptQuote();
             this.FinishQuote(paymentType);
-            CancelPrint();
             this.MotoFinishQuote(importToTam);
         }
 

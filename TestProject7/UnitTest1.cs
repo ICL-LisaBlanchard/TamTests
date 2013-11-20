@@ -21,6 +21,8 @@
 
         protected readonly CustomerActions cust = new CustomerActions();
 
+        protected readonly Documents d = new Documents();
+
         [TestMethod]
         public void TestMethod1()
         {
