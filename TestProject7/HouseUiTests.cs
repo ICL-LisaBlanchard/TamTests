@@ -522,6 +522,7 @@
             House.RenewalModuleInvite(false);
             House.RenewConfirmInvite();
             House.RenewalModuleInvite1();
+
             House.RebrokeAlternativeRenew("cash");
             //House.EtamOk(true);
             //house.LapseOk();
