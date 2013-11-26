@@ -322,7 +322,7 @@
             Mouse.Click(uIAcceptButton);
             this.EtamYes();
 
-            this.CancelTestNoPolicyDocsDialog();
+            //this.CancelTestNoPolicyDocsDialog();
 
             this.PaymentMethod(paymentType);
 
@@ -929,7 +929,7 @@
             Playback.Wait(2000);
             WinClient uIHouseholdRenewalsAmeClient = this.UIHouseholdRenewalsResultsWindow.UIItemWindow.UIClient();
 
-            Mouse.Click(uIHouseholdRenewalsAmeClient, newPolicy ? new Point(101, 60) : new Point(101, 31));
+            Mouse.Click(uIHouseholdRenewalsAmeClient, newPolicy ? new Point(101, 65) : new Point(101, 31));
 
             Mouse.Move(new Point(500, 500));
         }
@@ -1003,6 +1003,10 @@
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
             WinButton uIRenewedButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
 
+            Playback.Wait(5000);
+
+            Mouse.Click(this.UIHouseholdRenewalsResultsWindow);
+
             Mouse.Click(uIRenewPolicyButton);
 
             this.EtamOk(true);
@@ -1011,18 +1015,28 @@
 
             this.PaymentMethod(paymentType);
 
-            Mouse.Click(uIYesButton);
+            try
+            {
+                Mouse.Click(uIYesButton);
 
-            Playback.Wait(10000);
+                Playback.Wait(10000);
 
+                
+            }
+            catch
+            {
+            }
             this.CancelPrint();
+
+            this.ContinueToRetrieveResponse();
 
             this.ConfirmDocuments();
 
             Playback.Wait(5000);
 
-
             this.EtamYes();
+
+            this.ContinueToRetrieveResponse();
 
             this.DeferPrinting();
 

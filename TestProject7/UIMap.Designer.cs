@@ -1224,8 +1224,6 @@ return new UITheAgencyManagerSignWindow();
         
         private UIInsurerNoticeRevaluaWindow mUIInsurerNoticeRevaluaWindow;
         
-        private UIRenewalsNewBusinessAWindow mUIRenewalsNewBusinessAWindow;
-        
         private UiAuto1Window mUiAuto1Window;
         
         private UIHouseholdRenewalsWindow mUIHouseholdRenewalsWindow;

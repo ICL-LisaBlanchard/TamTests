@@ -76,6 +76,7 @@
             CloseProcess("iexplore");
             CloseProcess("Regress_IETam_Policy");
             CloseProcess("RLoader");
+            CloseProcess("letter32");
 
             Tests.Renewals.CleanRenewals();
 

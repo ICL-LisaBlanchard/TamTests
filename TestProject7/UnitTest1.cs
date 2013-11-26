@@ -26,7 +26,7 @@
         [TestMethod]
         public void TestMethod1()
         {
-            Moto.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoNewBusinessQuote, "cash");
+            House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse("296.29"));
         }
     }
 }

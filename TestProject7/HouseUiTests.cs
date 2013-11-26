@@ -428,8 +428,13 @@
             House.PublicCreditCheckOk();
             House.HomeAmendSelecPolicy(true);
             House.HomeAmendRenewFinish();
-           
+
+            House.LapseOk();
+
             House.RenewalModuleClose();
+
+            House.LapseOk();
+
             House.CloseAndOpenPolicyList(UiMap.CustomerCode);
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
             string premium = House.CheckPolicyPremium("cash");
@@ -491,7 +496,7 @@
         public void HouseRebrokeRenewExistingScheme()
         {
             // change registry to ourhighway
-            SetOurMMaRegKeys();
+            SetOurAxaRegKeys();
             //add policy
             UiMap.CustomerCode = Customer.AddPolicy();
             House.SelectHomeType();
@@ -537,7 +542,7 @@
         public void HouseRebrokeRenewNewScheme()
         {
             // change registry to ourhighway
-            SetOurMMaRegKeys();
+            SetOurAxaRegKeys();
 
             //add policy
             UiMap.CustomerCode = Customer.AddPolicy();
