@@ -428,6 +428,8 @@
             House.PublicCreditCheckOk();
             House.HomeAmendSelecPolicy(true);
             House.HomeAmendRenewFinish();
+
+            House.LapseOk();
            
             House.RenewalModuleClose();
             House.CloseAndOpenPolicyList(UiMap.CustomerCode);

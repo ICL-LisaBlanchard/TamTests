@@ -1011,10 +1011,18 @@
 
             this.PaymentMethod(paymentType);
 
-            Mouse.Click(uIYesButton);
+            try
+            {
+                Mouse.Click(uIYesButton);
 
-            Playback.Wait(10000);
+                Playback.Wait(10000);
 
+  
+            }
+            catch
+            {
+            }
+              
             this.CancelPrint();
 
             this.ConfirmDocuments();
