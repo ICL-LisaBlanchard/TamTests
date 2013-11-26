@@ -430,8 +430,14 @@
             House.HomeAmendRenewFinish();
 
             House.LapseOk();
+<<<<<<< HEAD
+           
+=======
 
+>>>>>>> origin/4.1.0
             House.RenewalModuleClose();
+
+            House.LapseOk();
 
             House.CloseAndOpenPolicyList(UiMap.CustomerCode);
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));

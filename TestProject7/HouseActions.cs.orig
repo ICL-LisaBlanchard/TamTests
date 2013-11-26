@@ -1021,11 +1021,19 @@
 
                 Playback.Wait(10000);
 
+<<<<<<< HEAD
+  
+=======
                 
+>>>>>>> origin/4.1.0
             }
             catch
             {
             }
+<<<<<<< HEAD
+              
+=======
+>>>>>>> origin/4.1.0
             this.CancelPrint();
 
             this.ContinueToRetrieveResponse();

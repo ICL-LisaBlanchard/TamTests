@@ -451,8 +451,13 @@
 
         public void LapseOk()
         {
-            WinButton uIOKButton = this.UIPersonalLinesWindow.UIOKWindow.UIOKButton;
-            Mouse.Click(uIOKButton);
+            try
+            {
+                WinButton uIOKButton = this.UIPersonalLinesWindow.UIOKWindow.UIOKButton;
+                Mouse.Click(uIOKButton);
+            }
+            catch { }
+
         }
 
         public void RenewalCheckRecord(int policyType, string customerCode)
@@ -1616,6 +1621,26 @@
 
                 
             }
+
+            files = Directory.GetFiles(Configs.LocalDocsPath, "*.doc");
+            foreach (string file in files)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    try
+                    {
+                        File.Delete(file);
+                        Debug.WriteLine(file + " deleted");
+                        break;
+                    }
+                    catch
+                    {
+                        Thread.Sleep(1000);
+                    }
+                }
+
+
+            }
         }
 
         public void CheckPremiumInQuoteDocument(List<Document> expectedDocs, string paymentType, double overridePremium = 0.00, double originalPremium = 0.00)
@@ -1680,7 +1705,7 @@
                         this.CheckPremiumInPdfProposal(premium, originalPremium);
                         break;
                     case "FSA":
-                        this.CheckPremiumInWordDoc(fsaCnt == 0 ? premium : originalPremium);
+                        this.CheckPremiumInWordDoc(premium, originalPremium);
                         fsaCnt++;
                         break;
                 }
@@ -1887,10 +1912,14 @@
             }
             catch (Exception)
             {
-                uIDeferPrintingCheckBox = this.UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
-                uIOKButton = this.UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
-                uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
-                Mouse.Click(uIOKButton);
+                try
+                {
+                    uIDeferPrintingCheckBox = this.UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
+                    uIOKButton = this.UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
+                    uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
+                    Mouse.Click(uIOKButton);
+                }
+                catch { }
             }
         }
 
@@ -1975,21 +2004,21 @@
             Mouse.Click(uIViewAttachmentMenuItem);
         }
 
-        private void CheckPremiumInWordDoc(double premium)
+        private void CheckPremiumInWordDoc(double premium, double originalPremium)
         {
             WinButton uIOptionsButton = this.UIPolicyAttachmentsWindow.UIOptionsWindow.UIOptionsButton;
             WinMenuItem uIViewAttachmentMenuItem = this.UIAttachmentsMenuWindow.UIContextMenu.UIMenuItem("View Attachment");      
             WinButton uICloseButton = this.UIDemand2docMicrosoftWWindow.UIDemand2DocMicrosoftWTitleBar.UICloseButton;
 
             Mouse.Click(uIOptionsButton);
-            Mouse.Click(uIViewAttachmentMenuItem);
 
+            Mouse.Click(uIViewAttachmentMenuItem);
 
             Mouse.Click(uICloseButton);
 
             var d = new Documents();
 
-            d.CheckWordDoc(Configs.LocalDocsPath + @"\Demand~1.doc", premium.ToString(CultureInfo.InvariantCulture));
+            d.CheckWordDoc(Configs.LocalDocsPath + @"\Demand~1.doc", premium, originalPremium);
 
         }
 
