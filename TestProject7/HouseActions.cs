@@ -322,7 +322,7 @@
             Mouse.Click(uIAcceptButton);
             this.EtamYes();
 
-            //this.CancelTestNoPolicyDocsDialog();
+            this.CancelTestNoPolicyDocsDialog();
 
             this.PaymentMethod(paymentType);
 
@@ -1064,7 +1064,7 @@
             WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
             WinButton uiOkButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
 
-            Playback.Wait(2000);
+            this.ContinueToRetrieveResponse();
 
             this.RenewPolicy();
 

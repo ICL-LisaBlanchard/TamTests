@@ -50,7 +50,7 @@
 
             #endregion
 
-            ApplicationUnderTest.Launch(LoginParams.ExePath, LoginParams.AlternateExePath);
+            ApplicationUnderTest.Launch(Configs.ExePath, LoginParams.AlternateExePath);
 
             tbxUserName.Text = Configs.Username;
             tbxPassword.Text = Configs.Password;

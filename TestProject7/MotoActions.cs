@@ -414,53 +414,15 @@
             WinButton uIPolicySummaryButton = this.UIQuoteResultsWindow.UIPolicySummaryWindow.UIPolicySummaryButton;
             WinButton uIOKButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
 
-            Mouse.DoubleClick(uIQuoteResultsClient);
+            //Mouse.DoubleClick(uIQuoteResultsClient);
+            Assert.IsNull(uIQuoteResultsClient.Exists, "uIQuoteResultsClient does not exist");
 
-            Mouse.Click(uIQuoteResultsClient, new Point(30, 30));
+            Mouse.Click(uIQuoteResultsClient, new Point(30, 55));
             Playback.Wait(2000);
             Mouse.Move(new Point(500, 500));
 
-            //if (firstChoice)
-            //{
-            //    for (int i = 25; i < 150; i = i + 18)
-            //    {
-            //        Mouse.Click(uIQuoteResultsClient, new Point(30, i));
-            //        Playback.Wait(2000);
-            //        Mouse.Move(new Point(500, 500));
-            //        Mouse.Click(uIPolicySummaryButton);
-
-            //        bool isTest = true;
-            //        for (int j = 0; j < 5; j++)
-            //        {
-            //            Process[] pname = Process.GetProcessesByName("splwow64");
-
-            //            if (pname.Length > 0)
-            //            {
-            //                isTest = false;
-            //                break;
-            //            }
-            //            Thread.Sleep(1000);
-            //        }
-
-            //        if (isTest)
-            //        {
-
-            //            uIOKButton.WaitForControlExist(5000);
-            //            Mouse.Click(uIOKButton);
-            //        }
-            //        else
-            //        {
-            //            BaseUiTest.CloseProcess("splwow64");
-            //            break;
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //    Mouse.Click(uIQuoteResultsClient, new Point(30, 30));
-            //    Playback.Wait(2000);
-            //    Mouse.Move(new Point(500, 500));
-            //}
+            Mouse.Click(uIQuoteResultsClient, new Point(30, 55));
+            Playback.Wait(2000);
         }
 
         public void MotoSearchCar()

@@ -87,8 +87,8 @@
             TestLinkInitialize();
 
             var login = new Login();
-            login.LoginParams.ExePath = "J:\\WINTAM\\HOMEBASE.EXE";
-            login.LoginParams.AlternateExePath = "J:\\WINTAM\\HOMEBASE.EXE";
+            login.LoginParams.ExePath = Configs.ExePath;
+            login.LoginParams.AlternateExePath = Configs.ExePath;
             login.DoLogin();
             login.LoginEnterDate();
             login.WarningOk();
