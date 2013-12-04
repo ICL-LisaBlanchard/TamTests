@@ -13,6 +13,9 @@
         /// <summary>
         ///     AddPolicy - Use 'AddPolicyParams' to pass parameters into this method.
         /// </summary>
+        /// 
+        private UIMap uiMap = new UIMap();
+
         public string AddPolicy()
         {
             string agcy;

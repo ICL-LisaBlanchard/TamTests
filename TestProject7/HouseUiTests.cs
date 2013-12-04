@@ -429,9 +429,15 @@
             House.HomeAmendSelecPolicy(true);
             House.HomeAmendRenewFinish();
 
+            Playback.Wait(60000);
+
             House.LapseOk();
 
+            Playback.Wait(60000);
+
+
             House.RenewalModuleClose();
+
 
             House.CloseAndOpenPolicyList(UiMap.CustomerCode);
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
