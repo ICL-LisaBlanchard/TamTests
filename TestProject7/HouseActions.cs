@@ -1011,7 +1011,11 @@
 
             this.EtamOk(true);
 
-            Mouse.Click(uIYesButton);
+            try { Mouse.Click(uIYesButton); }
+            catch 
+            { 
+            }
+            
 
             this.PaymentMethod(paymentType);
 
@@ -1214,12 +1218,6 @@
             WinClient uIQuotesResultsClient = this.UIQuotesResultsWindow.UIItemWindow.UIClient();
 
             Mouse.Click(uIQuotesResultsClient, new Point(30, 30));
-
-            //Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendHomeKeys, ModifierKeys.None);
-
-            //Mouse.Move(uIQuotesResultsClient, new Point(100,100));
-
-            //Keyboard.SendKeys(uIQuotesResultsClient, this.CommonParams.SendEnterKey, ModifierKeys.None);
         }
 
         public void RenewPolicy()
@@ -1230,6 +1228,8 @@
             Mouse.Click(uIRenewPolicyButton);
 
             Mouse.Click(uIYesButton);
+
+            this.ContinueToRetrieveResponse();
 
             try
             {

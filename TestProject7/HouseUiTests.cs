@@ -398,7 +398,7 @@
             House.HomeAmendRisk();
             House.PublicCreditCheckOk();
             House.HomeAmendSelecPolicy(false);
-            House.HomeAmendRenew();
+            House.HomeAmendRenewFinish();
             House.RenewalModuleClose();
             Moto.CloseAndOpenPolicyList(UiMap.CustomerCode);
             House.RenewalCheckStatus("REN");
@@ -429,15 +429,9 @@
             House.HomeAmendSelecPolicy(true);
             House.HomeAmendRenewFinish();
 
-            Playback.Wait(60000);
-
             House.LapseOk();
 
-            Playback.Wait(60000);
-
-
             House.RenewalModuleClose();
-
 
             House.CloseAndOpenPolicyList(UiMap.CustomerCode);
             House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForHouseAmendRiskNewScheme, "cash", originalPremium: double.Parse(originalpremium));
@@ -546,7 +540,6 @@
         [TestMethod]
         public void HouseRebrokeRenewNewScheme()
         {
-            // change registry to ourhighway
             SetOurAxaRegKeys();
 
             //add policy
