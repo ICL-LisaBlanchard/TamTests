@@ -453,7 +453,8 @@
         {
 
             try
-            { WinButton uIOKButton = this.UIPersonalLinesWindow.UIOKWindow.UIOKButton;
+            {
+                WinButton uIOKButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
                 Mouse.Click(uIOKButton);
             }
             catch {           
@@ -989,7 +990,11 @@
 
             Mouse.Click(uIRenewPolicyButton);
 
+            this.ContinueToRetrieveResponse();
+
             this.PaymentMethod(paymentType);
+
+            this.ContinueToRetrieveResponse();
 
             Mouse.Click(uIYesButton);
 
@@ -1703,6 +1708,11 @@
                 Mouse.Click(uIPolicyAttachmentsClient, new Point(10, i));
                 Mouse.Click(uIDetailButton);
 
+                if (checkFileName == null)
+                {
+                    break;
+                }
+
                 if (filename == checkFileName.Text)
                 {
                     Mouse.Click(uICancelButton);
@@ -1855,9 +1865,8 @@
                     Mouse.Click(uIOKButton3, new Point(27, 8));
                 }
             }
-            catch (Exception ex)
+            catch 
             {
-                Debug.WriteLine(ex.ToString());
             }
             Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
         }
