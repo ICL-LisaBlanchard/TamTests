@@ -415,7 +415,7 @@
             WinButton uIOKButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
 
             //Mouse.DoubleClick(uIQuoteResultsClient);
-            Assert.IsNull(uIQuoteResultsClient.Exists, "uIQuoteResultsClient does not exist");
+            Assert.IsTrue(uIQuoteResultsClient.Exists, "uIQuoteResultsClient does not exist");
 
             Mouse.Click(uIQuoteResultsClient, new Point(30, 55));
             Playback.Wait(2000);
