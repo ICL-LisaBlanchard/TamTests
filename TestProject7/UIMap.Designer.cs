@@ -41,8 +41,7 @@ namespace AppliedSystems.Tam.Ui.Tests
         {
             get
             {
-return new UITheAgencyManagerSignWindow();
-            
+                return new UITheAgencyManagerSignWindow();
             }
         }
 
@@ -739,7 +738,19 @@ return new UITheAgencyManagerSignWindow();
                 return mUIPrintDocumentsWindow;
             }
         }
-        
+
+        public UIProcessQuotesResultsWindow UIProcessQuotesResultsWindow
+        {
+            get
+            {
+                if ((mUIPrintDocumentsWindow == null))
+                {
+                    mUIProcessQuotesResultsWindow = new UIProcessQuotesResultsWindow();
+                }
+                return mUIProcessQuotesResultsWindow;
+            }
+        }
+
         public UIConfirmWindow UIConfirmWindow
         {
             get
@@ -1127,6 +1138,8 @@ return new UITheAgencyManagerSignWindow();
         private UITransactionListWindow1 mUITransactionListWindow;
 
         private UIDemand2DocMicrosoftWWindow mUIDemand2docMicrosoftWWindow;
+
+        private UIProcessQuotesResultsWindow mUIProcessQuotesResultsWindow;
 
         private UIFindandGotoWindow mUIFindandGotoWindow;
 

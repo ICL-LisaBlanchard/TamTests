@@ -26,30 +26,7 @@
         [TestMethod]
         public void TestMethod1()
         {
-
-Moto.HighlightBillingScreen();
-            string premium = Moto.CheckPolicyPremium("cash");
-            Moto.RenewalCheckStatus("REW");
-            House.CheckPremiumInQuoteDocument(this.Docs.DocumentsForMotoAmendRiskNew, "cash", originalPremium: double.Parse("0:00"));
-            House.OpenTransList(Transactions.GetTransactionDictionary(premium, "cash",  "0"));
-            Moto.ClosePolicy();
-
-            //mta1
-            Moto.MotoMTA();
-            Moto.MotoMTAAccept();
-            Moto.MTADate(DateTime.Now.AddDays(5).ToString("dd/MM/yy"));
-            Moto.AmendDateBeforeMessage();
-            Moto.EtamOk(true);
-            Moto.MTADate(DateTime.Now.AddDays(12).ToString("dd/MM/yy"));
-            Moto.MotoFinishMTA();
-
-            //mta2
-            Moto.MotoMTA();
-            Moto.MotoMTAAccept();
-            Moto.MTADate(DateTime.Now.AddDays(9).ToString("dd/MM/yy"));
-            Moto.MTAMessageBeforeCurrent();
-            Moto.EtamOk(true);
-            Moto.MTACancel();
+            Moto.AcceptQuote();
         }
     }
 }

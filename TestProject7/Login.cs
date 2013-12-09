@@ -1,5 +1,6 @@
 ﻿namespace AppliedSystems.Tam.Ui.Tests
 {
+    using System;
     using System.Drawing;
 
     using AppliedSystems.Tam.UI.Tests.Params;
@@ -67,7 +68,8 @@
 
             #endregion
 
-            // Select 'November' in combo box
+            map.UITheAgencyManagerSignWindow.BtnOk2.UIItemEdit.Text = DateTime.Now.ToString("dd/MM/yyyy");
+
             tbxMonth.SelectedItem = LoginEnterDateParams.MonthName;
 
             // Type '2012' in text box
@@ -75,27 +77,19 @@
 
             // Click '&OK' button
             Mouse.Click(btnOk, new Point(54, 5));
+
+            this.WarningOk();
         }
 
-        /// <summary>
-        /// WarningOk
-        /// </summary>
         public void WarningOk()
         {
-            //#region Variable Declarations
 
-            //WinControl uIokButton = map.UIWarningWindow.UIOKWindow.UIOKButton;
-
-            //#endregion
-
-            //// Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
-            //Playback.PlaybackSettings.ContinueOnError = true;
-
-            //// Click 'OK' button
-            //Mouse.Click(uIokButton);
-
-            //// Reset flag to ensure that play back stops if there is an error.
-            //Playback.PlaybackSettings.ContinueOnError = false;
+            WinControl uIokButton = map.UIWarningWindow.UIOKWindow.UIOKButton;
+            Playback.PlaybackSettings.SearchTimeout = 2000;
+            Playback.PlaybackSettings.ContinueOnError = true;
+            Mouse.Click(uIokButton);
+            Playback.PlaybackSettings.ContinueOnError = false;
+            Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
         }
     }
 }

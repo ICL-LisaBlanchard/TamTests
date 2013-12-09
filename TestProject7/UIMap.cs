@@ -14,6 +14,7 @@
     using AppliedSystems.Tam.Ui.Tests.Params;
     using AppliedSystems.Tam.Ui.Tests.UIElements;
 
+    using Microsoft.VisualStudio.TestTools.UITest.Extension;
     using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UITesting.HtmlControls;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
@@ -437,31 +438,24 @@
                 }
                 catch
                 {
-
                 }
             }
-            else {
-
+            else
+            {
                 Mouse.Click(uIOKButton1);
             }
-
-            
-            
         }
 
         public void LapseOk()
         {
-
             try
             {
                 WinButton uIOKButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
                 Mouse.Click(uIOKButton);
             }
-            catch {           
-            
+            catch
+            {
             }
-     
-           
         }
 
         public void RenewalCheckRecord(int policyType, string customerCode)
@@ -790,26 +784,27 @@
 
         public void CancelPrint()
         {
-        //    for (int i = 0; i < 30; i++)
-        //    {
-        //        Process[] pname = Process.GetProcessesByName("splwow64");
+            //    for (int i = 0; i < 30; i++)
+            //    {
+            //        Process[] pname = Process.GetProcessesByName("splwow64");
 
-        //        if (pname.Length > 0)
-        //        {
-        //            break;
-        //        }
-        //        Thread.Sleep(1000);
-        //    }
+            //        if (pname.Length > 0)
+            //        {
+            //            break;
+            //        }
+            //        Thread.Sleep(1000);
+            //    }
 
-        //    BaseUiTest.CloseProcess("splwow64");
+            //    BaseUiTest.CloseProcess("splwow64");
             WinControl cnlButton = this.UISavethefileasWindow.UICancelWindow.UICancelButton;
             Playback.Wait(5000);
             try
-            { 
+            {
                 Mouse.Click(cnlButton);
             }
-            catch { }
-           
+            catch
+            {
+            }
         }
 
         public void CancelFilter()
@@ -927,14 +922,26 @@
         public void ContinueToRetrieveResponse()
         {
             WinControl uIOKButton = this.UIInsurEtamWindow1.UIOKWindow1.UIOKButton;
-            Playback.PlaybackSettings.SearchTimeout = 300000;
-            try
+            WinControl uIProcessQuoteWindow = this.UIProcessQuotesResultsWindow;
+
+            Playback.PlaybackSettings.SearchTimeout = 100;
+
+            Playback.PlaybackSettings.ShouldSearchFailFast = true;
+
+            if (uIProcessQuoteWindow.Exists)
             {
-                Mouse.Click(uIOKButton);
+                try
+                {
+                    Playback.PlaybackSettings.ShouldSearchFailFast = false;
+                    Playback.PlaybackSettings.SearchTimeout = 30000;
+                    Mouse.Click(uIOKButton);
+                }
+                catch
+                {
+                }
             }
-            catch
-            {
-            }
+            Playback.PlaybackSettings.ShouldSearchFailFast = false;
+
             Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
         }
 
@@ -1523,7 +1530,6 @@
                     Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
                     return;
                 }
-
             }
             Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
 
@@ -1636,17 +1642,16 @@
             {
                 for (int i = 0; i < 5; i++)
                 {
-                    try 
-                    { 
+                    try
+                    {
                         File.Delete(file);
                         break;
                     }
-                    catch {
+                    catch
+                    {
                         Thread.Sleep(1000);
                     }
                 }
-
-                
             }
 
             files = Directory.GetFiles(Configs.LocalDocsPath, "*.doc");
@@ -1665,8 +1670,6 @@
                         Thread.Sleep(1000);
                     }
                 }
-
-
             }
         }
 
@@ -1865,7 +1868,7 @@
                     Mouse.Click(uIOKButton3, new Point(27, 8));
                 }
             }
-            catch 
+            catch
             {
             }
             Playback.PlaybackSettings.SearchTimeout = Configs.SearchTimeout;
@@ -1930,28 +1933,30 @@
                 }
                 catch (Exception)
                 {
-                    Playback.Wait(1000);
+                    Thread.Sleep(1000);
                 }
             }
 
-            try
-            {
-                uIDeferPrintingCheckBox = this.UIPointOfSaleWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
-                uIOKButton = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
-                uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
-                Mouse.Click(uIOKButton);
-            }
-            catch (Exception)
-            {
-                try
-                {
-                    uIDeferPrintingCheckBox = this.UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
-                    uIOKButton = this.UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
-                    uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
-                    Mouse.Click(uIOKButton);
-                }
-                catch { }
-            }
+            //try
+            //{
+            //    uIDeferPrintingCheckBox = this.UIPointOfSaleWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
+            //    uIOKButton = this.UIPointOfSaleWindow.UIOKWindow.UIOKButton;
+            //    uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
+            //    Mouse.Click(uIOKButton);
+            //}
+            //catch (Exception)
+            //{
+            //    try
+            //    {
+            //        uIDeferPrintingCheckBox = this.UIPrintDocumentsWindow.UIDeferPrintingWindow.UIDeferPrintingCheckBox;
+            //        uIOKButton = this.UIPrintDocumentsWindow.UIOKWindow.UIOKButton;
+            //        uIDeferPrintingCheckBox.Checked = this.CommonParams.UIDeferPrintingCheckBoxChecked;
+            //        Mouse.Click(uIOKButton);
+            //    }
+            //    catch
+            //    {
+            //    }
+            //}
         }
 
         public void ImportToTam()
@@ -2038,7 +2043,7 @@
         private void CheckPremiumInWordDoc(double premium, double originalPremium)
         {
             WinButton uIOptionsButton = this.UIPolicyAttachmentsWindow.UIOptionsWindow.UIOptionsButton;
-            WinMenuItem uIViewAttachmentMenuItem = this.UIAttachmentsMenuWindow.UIContextMenu.UIMenuItem("View Attachment");      
+            WinMenuItem uIViewAttachmentMenuItem = this.UIAttachmentsMenuWindow.UIContextMenu.UIMenuItem("View Attachment");
             WinButton uICloseButton = this.UIDemand2docMicrosoftWWindow.UIDemand2DocMicrosoftWTitleBar.UICloseButton;
 
             Mouse.Click(uIOptionsButton);
@@ -2050,9 +2055,6 @@
             var d = new Documents();
 
             d.CheckWordDoc(Configs.LocalDocsPath + @"\Demand~1.doc", premium, originalPremium);
-
         }
-
-
     }
 }

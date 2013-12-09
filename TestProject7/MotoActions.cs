@@ -417,11 +417,11 @@
             //Mouse.DoubleClick(uIQuoteResultsClient);
             Assert.IsTrue(uIQuoteResultsClient.Exists, "uIQuoteResultsClient does not exist");
 
-            Mouse.Click(uIQuoteResultsClient, new Point(30, 55));
+            Mouse.Click(uIQuoteResultsClient, new Point(14, 45));
             Playback.Wait(2000);
             Mouse.Move(new Point(500, 500));
 
-            Mouse.Click(uIQuoteResultsClient, new Point(30, 55));
+            Mouse.Click(uIQuoteResultsClient, new Point(14, 45));
             Playback.Wait(2000);
         }
 

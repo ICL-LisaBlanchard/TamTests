@@ -566,19 +566,10 @@
 
         public void HomeAcceptQuote1()
         {
-            WinControl uIOKButton = this.UIBrokerAddonsWindow.UIOKWindow.UIOKButton;
             WinEdit uIItemEdit = this.UIPolicyDetailConfirmationWindow.UIItemWindow.UIItemEdit;
             WinControl uILookupButton = this.UIPolicyDetailConfirmationWindow.UILookupWindow.UILookupButton;
             WinControl uIOKButton3 = this.UISearchResultForB338TWindow.UIOKWindow.UIOKButton;
             WinControl uIConfirmButton = this.UIPolicyDetailConfirmationWindow.UIConfirmWindow.UIConfirmButton;
-
-            try
-            {
-                Mouse.Click(uIOKButton);
-            }
-            catch
-            {
-            }
 
             this.PaymentMethod("cash");
 
@@ -1061,42 +1052,6 @@
             this.ImportToTam();
 
             this.SelectTAMActivities2();
-        }
-
-        public void HomeAmendRenew()
-        {
-            WinControl uIYesButton = this.UIConfirmWindow.UIYesWindow.UIYesButton;
-            WinButton uiOkButton = this.UIPersonalLinesDialogWindow.UIOKWindow.UIOKButton;
-
-            this.ContinueToRetrieveResponse();
-
-            this.RenewPolicy();
-
-            // 4.1.0
-            this.PaymentMethod("cash");
-
-            Mouse.Click(uIYesButton);
-
-            // 4.1.0 End
-
-            //this.CancelPrint();
-
-            this.ConfirmDocuments();
-
-            //this.EtamYes();
-            this.EtamOk(true);
-
-            this.DeferPrinting();
-
-            WinWindow win = this.UiAutoWindow;
-
-            Mouse.Click(win, new Point(500, 500));
-
-            this.EtamOk(false);
-
-            this.ImportToTam();
-
-            this.SelectTAMActivities3();
         }
 
         public void HomeAcceptQuote()
